@@ -2,18 +2,21 @@
 #include "board.h"
 #include "controller.h"
 
-#define MINv 0
-#define MAXv MAX
-
 #define match(a, b) (strcmp(a, b) == 0)
-#define in_range(x) (x < MAXv && x > MINV)
 
 #define LOOPS 2 
-#define LOOPSINIT {CTRL_INIT, CTRL_INIT}
+#define ADC_EOC_IRQS 3  // = (1 << 0)|(1<<1)|..|(1<<LOOPS-1)
 
-struct ctrl loops[LOOPS] = LOOPSINIT;
+static struct ctrl loops[LOOPS] = {{0}};
 
-void init();
+static struct {
+	ctrlio_t min;
+	ctrlio_t max;
+	ctrlio_t yinit;
+	ctrlio_t uinit;
+} conf[LOOPS] = {{0}};
+
+static void init();
 
 int main() 
 {
@@ -21,9 +24,9 @@ int main()
 	char opt[8];
 	char cmd;
 
-	int arg[3];
+	int argc;
+	int argv[3];
 	unsigned id = 0;
-	unsigned off = 0;
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
@@ -51,11 +54,9 @@ int main()
 		switch ((cmd=*line)) {
 			case 's':
 			case 'g':
-				// get ID (space for main setting, 0-9 for loop setting)
-				if (line[1] == ' ')
-					id = 0;
-				else if (line[1]-'0' < LOOPS)
-					id = line[1]-'0' + 1;
+				// get ID (0-9 for loop setting)
+				if (line[1]-'0' < LOOPS)
+					id = line[1]-'0';
 				else {
 					puts("? id");
 					break;
@@ -64,61 +65,69 @@ int main()
 				line = line+2;
 
 				// get option (max 7 characters)
-				if (sscanf(line, "%s%n", opt, &off) == 0) {
+				if (sscanf(line, "%s", opt) != 1) {
 					puts("? opt");
 					break;
 				}
 
-				line = line+off;
+				// get arguments (3)
+				argc = sscanf(line, "%i%i%i", argv, argv+1, argv+2);
 
 				// check option
 				if (match("mode", opt)) {
 					if (cmd == 's') {
-						if (sscanf(line, "%u", arg) == 0) {
+						if (argc < 1) {
 							puts("? arg");
 							break;
 						}
-						if (*arg > STOP || *arg < OFF)
-							*arg = OFF;				
-						loops[id-1].mode = *arg;
+						if (*argv > STOP || *argv < OFF)
+							*argv = OFF;				
+						mode(*argv, &loops[id]);
 					}
-					printf("%u\n", loops[id-1].mode);
+					printf("%u\n", loops[id].mode);
 				}
 				else if (match("sp", opt)) {
 					if (cmd == 's') {
-						if (sscanf(line, "%u", arg) == 0) {
+						if (argc < 1) {
 							puts("? arg");
 							break;
 						}
-						if (*arg < MINv)
-							*arg = MINv;
-						else if (*arg > MAXv)
-							*arg = MAXv;
-						loops[id-1].SP = *arg;
+						loops[id].SP = LIMIT(*argv, conf[id].min, conf[id].max);
 					}
-					printf("%u\n", loops[id-1].SP);
+					printf("%u\n", loops[id].SP);
 				}
 				else if (match("pv", opt)) {
 					if (cmd == 's')
 						puts("? read-only");
-					printf("%u\n", loops[id-1]._x);
+					printf("%u\n", loops[id]._x);
 				}
 				else if (match("error", opt)) {
 					if (cmd == 's')
 						puts("? read-only");
-					printf("%u\n", loops[id-1]._e);
+					printf("%u\n", loops[id]._e);
 				}
 				else if (match("k", opt)) {
 					if (cmd == 's') {
-						if (sscanf(line, "%u%u%u", arg, arg+1, arg+2) != 3) {
+						if (argc < 3) {
 							puts("? arg");
 							break;
 						}
-						loops[id-1].Kp = arg[0];
-						loops[id-1].Ki = arg[1];
-						loops[id-1].Kd = arg[2];
+						loops[id].Kp = argv[0];
+						loops[id].Ki = argv[1];
+						loops[id].Kd = argv[2];
 					}
-					printf("%u %u %u\n", loops[id-1].Kp, loops[id-1].Ki, loops[id-1].Kd);
+					printf("%u %u %u\n", loops[id].Kp, loops[id].Ki, loops[id].Kd);
+				}
+				if (match("limit", opt)) {
+					if (cmd == 's') {
+						if (argc < 2) {
+							puts("? arg");
+							break;
+						}
+						conf[id].min = argv[0] < argv[1] ? argv[0] : argv[1];
+						conf[id].max = argv[0] < argv[1] ? argv[1] : argv[0];
+					}
+					printf("%u %u\n", conf[id].min, conf[id].max);
 				}
 				else 
 					puts("? opt");
@@ -129,41 +138,48 @@ int main()
 			default:
 				puts("? cmd");
 		}
-	/*	if (sscanf(line, "%s%n", &cmd, &n) == 1) {
-			if (strcmp(cmd, "set") == 0) {
-				if (sscanf(line+n, "%u%n", &id, &n) == 1 && n <= LOOPS) {
-
-				}
-				else 
-					puts("? num");
-			}
-			else if (strcmp(cmd, "get") == 0) {
-				if (sscanf(line+n, "%u%n", &id, &n) == 1 && n <= LOOPS) {
-
-				}
-				else 
-					puts("? num");
-			}
-			else if (strcmp(cmd, "stop") == 0) {
-			}
-			else if (strcmp(cmd, "start") == 0) {
-			}
-			else if (strcmp(cmd, "ramp") == 0) {
-			}
-			else if (*cmd == 'c' || *cmd == 'q') {
-			}
-			else
-				puts("? cmd");
-
-		}
-		else 
-			puts("?");*/
 	}
 	return 0;
 }
 
 void TC1_IrqHandler()
 {
+	uint8_t i;
+	struct ctrl *loop = loops;
+
+	for (i=0; i < LOOPS; i++, loop++) {
+		if ((ADC->ADC_CHSR & (1<<i)) == 0 && loop->mode > OFF)
+			ADC->ADC_CHER = (1<<i); // enable channel
+	}
+	ADC_StartConversion(ADC);
+}
+
+void ADC_IrqHandler(void)
+{
+	uint8_t i;
+	uint8_t msk;
+    uint32_t status;
+	struct ctrl *loop = loops;
+	ctrlio_t x;
+
+    status = ADC_GetStatus(ADC);
+
+	for (i=0, msk=1; i < LOOPS; i++, msk<<=1, loop++) {
+		if (!((status & msk) == msk)) // check End of Conversion flag for channel i
+			continue;
+			
+		x = (ctrlio_t) *(ADC->ADC_CDR+i); // read channel data
+		x = LIMIT(x, conf[i].min, conf[i].max);
+
+		if (loop->mode > OFF) {
+			control(x, loop);    // run controller
+			// write output here
+		}
+		else {
+			ADC->ADC_CHDR = msk; // disable channel
+			// reset output here
+		}
+	}
 }
 
 void init()
@@ -185,6 +201,16 @@ void init()
 
 	/* Tick Config */
 	TimeTick_Configure(BOARD_MCK);
+
+    /* Initialize ADC */
+    ADC_Initialize( ADC, ID_ADC );
+
+    /* startup = 15, prescal = 4, ADC clock = 6.4 MHz */
+    ADC_cfgFrequency( ADC, 15, 4 );
+
+    /* Enable ADC interrupt */
+    NVIC_EnableIRQ(ADC_IRQn);
+    ADC->ADC_IER = ADC_EOC_IRQS;
 
 	/* LED PIO Config */
 	LEDs_configure();

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cctKeetR.s 			page 1
+ARM GAS  /tmp/ccBki9CX.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
   30:libusb/include/CDCDSerialDriver.h **** /**
   31:libusb/include/CDCDSerialDriver.h ****  * \file
   32:libusb/include/CDCDSerialDriver.h ****  *
-ARM GAS  /tmp/cctKeetR.s 			page 2
+ARM GAS  /tmp/ccBki9CX.s 			page 2
 
 
   33:libusb/include/CDCDSerialDriver.h ****  * \section Purpose
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
   87:libusb/include/CDCDSerialDriver.h **** 
   88:libusb/include/CDCDSerialDriver.h **** /**
   89:libusb/include/CDCDSerialDriver.h ****  * \typedef CDCDSerialDriverConfigurationDescriptors
-ARM GAS  /tmp/cctKeetR.s 			page 3
+ARM GAS  /tmp/ccBki9CX.s 			page 3
 
 
   90:libusb/include/CDCDSerialDriver.h ****  * \brief Configuration descriptor list for a device implementing a
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  144:libusb/include/CDCDSerialDriver.h ****     USBEndpointDescriptor dataOut;
  145:libusb/include/CDCDSerialDriver.h ****     /** Data IN endpoint descriptor. */
  146:libusb/include/CDCDSerialDriver.h ****     USBEndpointDescriptor dataIn;
-ARM GAS  /tmp/cctKeetR.s 			page 4
+ARM GAS  /tmp/ccBki9CX.s 			page 4
 
 
  147:libusb/include/CDCDSerialDriver.h **** 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
   42 0008 B960     		str	r1, [r7, #8]
   43 000a 7A60     		str	r2, [r7, #4]
   44 000c 3B60     		str	r3, [r7, #0]
-ARM GAS  /tmp/cctKeetR.s 			page 5
+ARM GAS  /tmp/ccBki9CX.s 			page 5
 
 
  185:libusb/include/CDCDSerialDriver.h ****     return CDCDSerial_Write(data, size, callback, argument);
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
   79 0004 00AF     		add	r7, sp, #0
   80              	.LCFI5:
   81              		.cfi_def_cfa_register 7
-ARM GAS  /tmp/cctKeetR.s 			page 6
+ARM GAS  /tmp/ccBki9CX.s 			page 6
 
 
   82 0006 F860     		str	r0, [r7, #12]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
   26:libchip/cmsis/core_cm3.h **** 
   27:libchip/cmsis/core_cm3.h **** /** @addtogroup CMSIS_CM3_core_LintCinfiguration CMSIS CM3 Core Lint Configuration
   28:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/cctKeetR.s 			page 7
+ARM GAS  /tmp/ccBki9CX.s 			page 7
 
 
   29:libchip/cmsis/core_cm3.h ****  * List of Lint messages which will be suppressed and not shown:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
   83:libchip/cmsis/core_cm3.h **** 
   84:libchip/cmsis/core_cm3.h **** #define __CM3_CMSIS_VERSION_MAIN  (0x01)                                                       /*!<
   85:libchip/cmsis/core_cm3.h **** #define __CM3_CMSIS_VERSION_SUB   (0x30)                                                       /*!<
-ARM GAS  /tmp/cctKeetR.s 			page 8
+ARM GAS  /tmp/ccBki9CX.s 			page 8
 
 
   86:libchip/cmsis/core_cm3.h **** #define __CM3_CMSIS_VERSION       ((__CM3_CMSIS_VERSION_MAIN << 16) | __CM3_CMSIS_VERSION_SUB) /*!<
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  140:libchip/cmsis/core_cm3.h ****   __IO uint32_t ICPR[8];                      /*!< Offset: 0x180  Interrupt Clear Pending Register 
  141:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED3[24];
  142:libchip/cmsis/core_cm3.h ****   __IO uint32_t IABR[8];                      /*!< Offset: 0x200  Interrupt Active bit Register    
-ARM GAS  /tmp/cctKeetR.s 			page 9
+ARM GAS  /tmp/ccBki9CX.s 			page 9
 
 
  143:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED4[56];
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  197:libchip/cmsis/core_cm3.h **** 
  198:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSVCLR_Pos             27                                             /*!< SCB 
  199:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSVCLR_Msk             (1ul << SCB_ICSR_PENDSVCLR_Pos)                /*!< SCB 
-ARM GAS  /tmp/cctKeetR.s 			page 10
+ARM GAS  /tmp/ccBki9CX.s 			page 10
 
 
  200:libchip/cmsis/core_cm3.h **** 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  254:libchip/cmsis/core_cm3.h **** 
  255:libchip/cmsis/core_cm3.h **** #define SCB_SCR_SLEEPDEEP_Pos               2                                             /*!< SCB 
  256:libchip/cmsis/core_cm3.h **** #define SCB_SCR_SLEEPDEEP_Msk              (1ul << SCB_SCR_SLEEPDEEP_Pos)                 /*!< SCB 
-ARM GAS  /tmp/cctKeetR.s 			page 11
+ARM GAS  /tmp/ccBki9CX.s 			page 11
 
 
  257:libchip/cmsis/core_cm3.h **** 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  311:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_SVCALLACT_Pos             7                                             /*!< SCB 
  312:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_SVCALLACT_Msk            (1ul << SCB_SHCSR_SVCALLACT_Pos)               /*!< SCB 
  313:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/cctKeetR.s 			page 12
+ARM GAS  /tmp/ccBki9CX.s 			page 12
 
 
  314:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_USGFAULTACT_Pos           3                                             /*!< SCB 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  368:libchip/cmsis/core_cm3.h ****   __IO uint32_t LOAD;                         /*!< Offset: 0x04  SysTick Reload Value Register     
  369:libchip/cmsis/core_cm3.h ****   __IO uint32_t VAL;                          /*!< Offset: 0x08  SysTick Current Value Register    
  370:libchip/cmsis/core_cm3.h ****   __I  uint32_t CALIB;                        /*!< Offset: 0x0C  SysTick Calibration Register      
-ARM GAS  /tmp/cctKeetR.s 			page 13
+ARM GAS  /tmp/ccBki9CX.s 			page 13
 
 
  371:libchip/cmsis/core_cm3.h **** } SysTick_Type;
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  425:libchip/cmsis/core_cm3.h ****   __IO uint32_t IWR;                          /*!< Offset:       ITM Integration Write Register    
  426:libchip/cmsis/core_cm3.h ****   __IO uint32_t IRR;                          /*!< Offset:       ITM Integration Read Register     
  427:libchip/cmsis/core_cm3.h ****   __IO uint32_t IMCR;                         /*!< Offset:       ITM Integration Mode Control Regis
-ARM GAS  /tmp/cctKeetR.s 			page 14
+ARM GAS  /tmp/ccBki9CX.s 			page 14
 
 
  428:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED4[43];
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  482:libchip/cmsis/core_cm3.h **** 
  483:libchip/cmsis/core_cm3.h **** /* ITM Integration Mode Control Register Definitions */
  484:libchip/cmsis/core_cm3.h **** #define ITM_IMCR_INTEGRATION_Pos            0                                             /*!< ITM 
-ARM GAS  /tmp/cctKeetR.s 			page 15
+ARM GAS  /tmp/ccBki9CX.s 			page 15
 
 
  485:libchip/cmsis/core_cm3.h **** #define ITM_IMCR_INTEGRATION_Msk           (1ul << ITM_IMCR_INTEGRATION_Pos)              /*!< ITM 
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  539:libchip/cmsis/core_cm3.h ****   __IO uint32_t RNR;                          /*!< Offset: 0x08  MPU Region RNRber Register        
  540:libchip/cmsis/core_cm3.h ****   __IO uint32_t RBAR;                         /*!< Offset: 0x0C  MPU Region Base Address Register  
  541:libchip/cmsis/core_cm3.h ****   __IO uint32_t RASR;                         /*!< Offset: 0x10  MPU Region Attribute and Size Regi
-ARM GAS  /tmp/cctKeetR.s 			page 16
+ARM GAS  /tmp/ccBki9CX.s 			page 16
 
 
  542:libchip/cmsis/core_cm3.h ****   __IO uint32_t RBAR_A1;                      /*!< Offset: 0x14  MPU Alias 1 Region Base Address Re
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  596:libchip/cmsis/core_cm3.h **** 
  597:libchip/cmsis/core_cm3.h **** #define MPU_RASR_C_Pos                     17                                             /*!< MPU 
  598:libchip/cmsis/core_cm3.h **** #define MPU_RASR_C_Msk                     (1ul << MPU_RASR_C_Pos)                        /*!< MPU 
-ARM GAS  /tmp/cctKeetR.s 			page 17
+ARM GAS  /tmp/ccBki9CX.s 			page 17
 
 
  599:libchip/cmsis/core_cm3.h **** 
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  653:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_MASKINTS_Pos      3                                             /*!< Core
  654:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_MASKINTS_Msk     (1ul << CoreDebug_DHCSR_C_MASKINTS_Pos)        /*!< Core
  655:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/cctKeetR.s 			page 18
+ARM GAS  /tmp/ccBki9CX.s 			page 18
 
 
  656:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_STEP_Pos          2                                             /*!< Core
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  710:libchip/cmsis/core_cm3.h **** #define CoreDebug_DEMCR_VC_CORERESET_Msk   (1ul << CoreDebug_DEMCR_VC_CORERESET_Pos)      /*!< Core
  711:libchip/cmsis/core_cm3.h **** /*@}*/ /* end of group CMSIS_CM3_CoreDebug */
  712:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/cctKeetR.s 			page 19
+ARM GAS  /tmp/ccBki9CX.s 			page 19
 
 
  713:libchip/cmsis/core_cm3.h **** 
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  767:libchip/cmsis/core_cm3.h **** 
  768:libchip/cmsis/core_cm3.h **** #define __NOP                             __nop
  769:libchip/cmsis/core_cm3.h **** #define __WFI                             __wfi
-ARM GAS  /tmp/cctKeetR.s 			page 20
+ARM GAS  /tmp/ccBki9CX.s 			page 20
 
 
  770:libchip/cmsis/core_cm3.h **** #define __WFE                             __wfe
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  824:libchip/cmsis/core_cm3.h ****  *
  825:libchip/cmsis/core_cm3.h ****  * Assign the value mainStackPointer to the MSP
  826:libchip/cmsis/core_cm3.h ****  * (main stack pointer) Cortex processor register
-ARM GAS  /tmp/cctKeetR.s 			page 21
+ARM GAS  /tmp/ccBki9CX.s 			page 21
 
 
  827:libchip/cmsis/core_cm3.h ****  */
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  881:libchip/cmsis/core_cm3.h ****  * @return PriMask
  882:libchip/cmsis/core_cm3.h ****  *
  883:libchip/cmsis/core_cm3.h ****  * Return state of the priority mask bit from the priority mask register
-ARM GAS  /tmp/cctKeetR.s 			page 22
+ARM GAS  /tmp/ccBki9CX.s 			page 22
 
 
  884:libchip/cmsis/core_cm3.h ****  */
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  938:libchip/cmsis/core_cm3.h ****  */
  939:libchip/cmsis/core_cm3.h **** #define __CLREX                           __clrex
  940:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/cctKeetR.s 			page 23
+ARM GAS  /tmp/ccBki9CX.s 			page 23
 
 
  941:libchip/cmsis/core_cm3.h **** /**
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  995:libchip/cmsis/core_cm3.h ****  *
  996:libchip/cmsis/core_cm3.h ****  * @return FaultMask
  997:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/cctKeetR.s 			page 24
+ARM GAS  /tmp/ccBki9CX.s 			page 24
 
 
  998:libchip/cmsis/core_cm3.h ****  * Return the content of the fault mask register
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
 1052:libchip/cmsis/core_cm3.h **** #define __enable_irq                              __enable_interrupt        /*!< global Interrupt e
 1053:libchip/cmsis/core_cm3.h **** #define __disable_irq                             __disable_interrupt       /*!< global Interrupt d
 1054:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/cctKeetR.s 			page 25
+ARM GAS  /tmp/ccBki9CX.s 			page 25
 
 
 1055:libchip/cmsis/core_cm3.h **** static __INLINE void __enable_fault_irq( void )   { __ASM ("cpsie f"); }
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
 1109:libchip/cmsis/core_cm3.h ****  * @param  topOfMainStack  Main Stack Pointer
 1110:libchip/cmsis/core_cm3.h ****  *
 1111:libchip/cmsis/core_cm3.h ****  * Assign the value mainStackPointer to the MSP
-ARM GAS  /tmp/cctKeetR.s 			page 26
+ARM GAS  /tmp/ccBki9CX.s 			page 26
 
 
 1112:libchip/cmsis/core_cm3.h ****  * (main stack pointer) Cortex processor register
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
 1166:libchip/cmsis/core_cm3.h **** /**
 1167:libchip/cmsis/core_cm3.h ****  * @brief  STR Exclusive (8 bit)
 1168:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/cctKeetR.s 			page 27
+ARM GAS  /tmp/ccBki9CX.s 			page 27
 
 
 1169:libchip/cmsis/core_cm3.h ****  * @param  value  value to store
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
 1223:libchip/cmsis/core_cm3.h ****  * @return ProcessStackPointer
 1224:libchip/cmsis/core_cm3.h ****  *
 1225:libchip/cmsis/core_cm3.h ****  * Return the actual process stack pointer
-ARM GAS  /tmp/cctKeetR.s 			page 28
+ARM GAS  /tmp/ccBki9CX.s 			page 28
 
 
 1226:libchip/cmsis/core_cm3.h ****  */
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
 1280:libchip/cmsis/core_cm3.h ****  * @return PriMask
 1281:libchip/cmsis/core_cm3.h ****  *
 1282:libchip/cmsis/core_cm3.h ****  * Return state of the priority mask bit from the priority mask register
-ARM GAS  /tmp/cctKeetR.s 			page 29
+ARM GAS  /tmp/ccBki9CX.s 			page 29
 
 
 1283:libchip/cmsis/core_cm3.h ****  */
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
 1337:libchip/cmsis/core_cm3.h ****  * Reverse byte order in integer value
 1338:libchip/cmsis/core_cm3.h ****  */
 1339:libchip/cmsis/core_cm3.h **** extern uint32_t __REV(uint32_t value);
-ARM GAS  /tmp/cctKeetR.s 			page 30
+ARM GAS  /tmp/ccBki9CX.s 			page 30
 
 
 1340:libchip/cmsis/core_cm3.h **** 
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
 1394:libchip/cmsis/core_cm3.h ****  * @param  *addr  address pointer
 1395:libchip/cmsis/core_cm3.h ****  * @return        value of (*address)
 1396:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/cctKeetR.s 			page 31
+ARM GAS  /tmp/ccBki9CX.s 			page 31
 
 
 1397:libchip/cmsis/core_cm3.h ****  * Exclusive LDR command for 32 bit values
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
 1451:libchip/cmsis/core_cm3.h ****   - Core Reset Functions
 1452:libchip/cmsis/core_cm3.h **** */
 1453:libchip/cmsis/core_cm3.h **** /*@{*/
-ARM GAS  /tmp/cctKeetR.s 			page 32
+ARM GAS  /tmp/ccBki9CX.s 			page 32
 
 
 1454:libchip/cmsis/core_cm3.h **** 
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  113              		@ link register save eliminated.
  114 0000 80B4     		push	{r7}
  115              	.LCFI6:
-ARM GAS  /tmp/cctKeetR.s 			page 33
+ARM GAS  /tmp/ccBki9CX.s 			page 33
 
 
  116              		.cfi_def_cfa_offset 4
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  164              		.type	pinVbus, %object
  165              		.size	pinVbus, 12
  166              	pinVbus:
-ARM GAS  /tmp/cctKeetR.s 			page 34
+ARM GAS  /tmp/ccBki9CX.s 			page 34
 
 
  167 0000 00000001 		.word	16777216
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
   27:board/usb_console.c **** static volatile uint32_t _rxCount = 0;
   28:board/usb_console.c **** static volatile uint32_t _txCount = 0;
   29:board/usb_console.c **** 
-ARM GAS  /tmp/cctKeetR.s 			page 35
+ARM GAS  /tmp/ccBki9CX.s 			page 35
 
 
   30:board/usb_console.c **** static volatile uint8_t _cfgdone = 0;
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
   52:board/usb_console.c ****         USBD_Connect();
  219              		.loc 3 52 0
  220 0034 FFF7FEFF 		bl	USBD_Connect
-ARM GAS  /tmp/cctKeetR.s 			page 36
+ARM GAS  /tmp/ccBki9CX.s 			page 36
 
 
  221 0038 0EE0     		b	.L4
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
   67:board/usb_console.c **** 
   68:board/usb_console.c ****     /* Configure PIO */
   69:board/usb_console.c ****     PIO_Configure(&pinVbus, 1);
-ARM GAS  /tmp/cctKeetR.s 			page 37
+ARM GAS  /tmp/ccBki9CX.s 			page 37
 
 
  261              		.loc 3 69 0
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
   83:board/usb_console.c **** 
   84:board/usb_console.c **** /**
   85:board/usb_console.c ****  * Configure 48MHz Clock for USB
-ARM GAS  /tmp/cctKeetR.s 			page 38
+ARM GAS  /tmp/ccBki9CX.s 			page 38
 
 
   86:board/usb_console.c ****  */
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  344              		.global	USBDCallbacks_Initialized
  345              		.thumb
  346              		.thumb_func
-ARM GAS  /tmp/cctKeetR.s 			page 39
+ARM GAS  /tmp/ccBki9CX.s 			page 39
 
 
  347              		.type	USBDCallbacks_Initialized, %function
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  383              	.LCFI18:
  384              		.cfi_def_cfa_offset 8
  385              		.cfi_offset 14, -4
-ARM GAS  /tmp/cctKeetR.s 			page 40
+ARM GAS  /tmp/ccBki9CX.s 			page 40
 
 
  386              		.cfi_offset 7, -8
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  430              		.loc 3 125 0
  431 0008 7868     		ldr	r0, [r7, #4]
  432 000a FFF7FEFF 		bl	CDCDSerialDriver_RequestHandler
-ARM GAS  /tmp/cctKeetR.s 			page 41
+ARM GAS  /tmp/ccBki9CX.s 			page 41
 
 
  126:board/usb_console.c **** }
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  472 0010 FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
  473 0012 002B     		cmp	r3, #0
  474 0014 06D1     		bne	.L16
-ARM GAS  /tmp/cctKeetR.s 			page 42
+ARM GAS  /tmp/ccBki9CX.s 			page 42
 
 
  137:board/usb_console.c **** 		_txCount = transferred;
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  512              		@ args = 0, pretend = 0, frame = 16
  513              		@ frame_needed = 1, uses_anonymous_args = 0
  514 0000 80B5     		push	{r7, lr}
-ARM GAS  /tmp/cctKeetR.s 			page 43
+ARM GAS  /tmp/ccBki9CX.s 			page 43
 
 
  515              	.LCFI27:
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  561      63652044 
  561      72697665 
  562              		.section	.text.USBC_isConfigured,"ax",%progbits
-ARM GAS  /tmp/cctKeetR.s 			page 44
+ARM GAS  /tmp/ccBki9CX.s 			page 44
 
 
  563              		.align	2
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  602 0034 FFF7FEFF 		bl	fiprintf
  170:board/usb_console.c **** 			_cfgdone = 1;
  603              		.loc 3 170 0
-ARM GAS  /tmp/cctKeetR.s 			page 45
+ARM GAS  /tmp/ccBki9CX.s 			page 45
 
 
  604 0038 40F20003 		movw	r3, #:lower16:_cfgdone
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  642 0000 80B4     		push	{r7}
  643              	.LCFI32:
  644              		.cfi_def_cfa_offset 4
-ARM GAS  /tmp/cctKeetR.s 			page 46
+ARM GAS  /tmp/ccBki9CX.s 			page 46
 
 
  645              		.cfi_offset 7, -4
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  690              		.loc 3 195 0
  691 0008 40F20003 		movw	r3, #:lower16:_xferTimeout
  692 000c C0F20003 		movt	r3, #:upper16:_xferTimeout
-ARM GAS  /tmp/cctKeetR.s 			page 47
+ARM GAS  /tmp/ccBki9CX.s 			page 47
 
 
  693 0010 7A68     		ldr	r2, [r7, #4]
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  735 001a FFF7FEFF 		bl	fiprintf
  204:board/usb_console.c **** 	PIO_InitializeInterrupts(0);
  736              		.loc 3 204 0
-ARM GAS  /tmp/cctKeetR.s 			page 48
+ARM GAS  /tmp/ccBki9CX.s 			page 48
 
 
  737 001e 4FF00000 		mov	r0, #0
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  775              		.cfi_def_cfa_register 7
  217:board/usb_console.c **** 	if(CDCDSerialDriver_Read(_rxBuffer, RXBUFFERSIZE, (TransferCallback) UsbReadDone, 0)
  776              		.loc 3 217 0
-ARM GAS  /tmp/cctKeetR.s 			page 49
+ARM GAS  /tmp/ccBki9CX.s 			page 49
 
 
  777 0004 40F20003 		movw	r3, #:lower16:UsbReadDone
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  821              	.LFB48:
  224:board/usb_console.c **** 
  225:board/usb_console.c **** /*
-ARM GAS  /tmp/cctKeetR.s 			page 50
+ARM GAS  /tmp/ccBki9CX.s 			page 50
 
 
  226:board/usb_console.c ****  * Read input (blocking).
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  861 0032 C0F20003 		movt	r3, #:upper16:_xferTimeout
  862 0036 1B68     		ldr	r3, [r3, #0]
  863 0038 9A42     		cmp	r2, r3
-ARM GAS  /tmp/cctKeetR.s 			page 51
+ARM GAS  /tmp/ccBki9CX.s 			page 51
 
 
  864 003a 0FD9     		bls	.L34
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  910 009c 0346     		mov	r3, r0
  911 009e 0846     		mov	r0, r1
  912 00a0 1146     		mov	r1, r2
-ARM GAS  /tmp/cctKeetR.s 			page 52
+ARM GAS  /tmp/ccBki9CX.s 			page 52
 
 
  913 00a2 1A46     		mov	r2, r3
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  959 0108 2D572D20 		.ascii	"-W- USBC Puts timed out.\012\000"
  959      55534243 
  959      20507574 
-ARM GAS  /tmp/cctKeetR.s 			page 53
+ARM GAS  /tmp/ccBki9CX.s 			page 53
 
 
  959      73207469 
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  998 0024 4FF00002 		mov	r2, #0
  999 0028 1A60     		str	r2, [r3, #0]
  270:board/usb_console.c **** 	if(CDCDSerialDriver_Write(ptr, len, (TransferCallback) UsbWriteDone, 0)
-ARM GAS  /tmp/cctKeetR.s 			page 54
+ARM GAS  /tmp/ccBki9CX.s 			page 54
 
 
  1000              		.loc 3 270 0
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  281:board/usb_console.c **** 			return -1;
  1044              		.loc 3 281 0
  1045 0090 4FF0FF33 		mov	r3, #-1
-ARM GAS  /tmp/cctKeetR.s 			page 55
+ARM GAS  /tmp/ccBki9CX.s 			page 55
 
 
  1046 0094 0BE0     		b	.L42
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1096 0029 02       		.uleb128 0x2
  1097 002a 01       		.byte	0x1
  1098 002b 06       		.byte	0x6
-ARM GAS  /tmp/cctKeetR.s 			page 56
+ARM GAS  /tmp/ccBki9CX.s 			page 56
 
 
  1099 002c 6D030000 		.4byte	.LASF0
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1153 0093 C8010000 		.4byte	.LASF11
  1154 0097 05       		.byte	0x5
  1155 0098 48       		.byte	0x48
-ARM GAS  /tmp/cctKeetR.s 			page 57
+ARM GAS  /tmp/ccBki9CX.s 			page 57
 
 
  1156 0099 7E000000 		.4byte	0x7e
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1210 0102 04       		.byte	0x4
  1211 0103 07       		.byte	0x7
  1212 0104 A9060000 		.4byte	.LASF18
-ARM GAS  /tmp/cctKeetR.s 			page 58
+ARM GAS  /tmp/ccBki9CX.s 			page 58
 
 
  1213 0108 0D       		.uleb128 0xd
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1267 0166 00       		.byte	0
  1268 0167 0F       		.uleb128 0xf
  1269 0168 04       		.byte	0x4
-ARM GAS  /tmp/cctKeetR.s 			page 59
+ARM GAS  /tmp/ccBki9CX.s 			page 59
 
 
  1270 0169 08010000 		.4byte	0x108
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1324 01cf 0B       		.uleb128 0xb
  1325 01d0 6B0E0000 		.4byte	.LASF30
  1326 01d4 07       		.byte	0x7
-ARM GAS  /tmp/cctKeetR.s 			page 60
+ARM GAS  /tmp/ccBki9CX.s 			page 60
 
 
  1327 01d5 3B       		.byte	0x3b
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1381 0237 07       		.byte	0x7
  1382 0238 4B       		.byte	0x4b
  1383 0239 F6000000 		.4byte	0xf6
-ARM GAS  /tmp/cctKeetR.s 			page 61
+ARM GAS  /tmp/ccBki9CX.s 			page 61
 
 
  1384 023d 03       		.byte	0x3
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1438 02a2 03       		.byte	0x3
  1439 02a3 23       		.byte	0x23
  1440 02a4 8801     		.uleb128 0x88
-ARM GAS  /tmp/cctKeetR.s 			page 62
+ARM GAS  /tmp/ccBki9CX.s 			page 62
 
 
  1441 02a6 00       		.byte	0
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1495 030d 7F01     		.2byte	0x17f
  1496 030f 45000000 		.4byte	0x45
  1497 0313 02       		.byte	0x2
-ARM GAS  /tmp/cctKeetR.s 			page 63
+ARM GAS  /tmp/ccBki9CX.s 			page 63
 
 
  1498 0314 23       		.byte	0x23
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1552 0378 45000000 		.4byte	0x45
  1553 037c 02       		.byte	0x2
  1554 037d 23       		.byte	0x23
-ARM GAS  /tmp/cctKeetR.s 			page 64
+ARM GAS  /tmp/ccBki9CX.s 			page 64
 
 
  1555 037e 1C       		.uleb128 0x1c
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1609 03e5 02       		.byte	0x2
  1610 03e6 23       		.byte	0x23
  1611 03e7 38       		.uleb128 0x38
-ARM GAS  /tmp/cctKeetR.s 			page 65
+ARM GAS  /tmp/ccBki9CX.s 			page 65
 
 
  1612 03e8 13       		.uleb128 0x13
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1666 0450 23       		.byte	0x23
  1667 0451 E401     		.uleb128 0xe4
  1668 0453 13       		.uleb128 0x13
-ARM GAS  /tmp/cctKeetR.s 			page 66
+ARM GAS  /tmp/ccBki9CX.s 			page 66
 
 
  1669 0454 EC0E0000 		.4byte	.LASF67
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1723 04b8 02       		.byte	0x2
  1724 04b9 23       		.byte	0x23
  1725 04ba 0C       		.uleb128 0xc
-ARM GAS  /tmp/cctKeetR.s 			page 67
+ARM GAS  /tmp/ccBki9CX.s 			page 67
 
 
  1726 04bb 0B       		.uleb128 0xb
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1780 051b 23       		.byte	0x23
  1781 051c 28       		.uleb128 0x28
  1782 051d 0B       		.uleb128 0xb
-ARM GAS  /tmp/cctKeetR.s 			page 68
+ARM GAS  /tmp/ccBki9CX.s 			page 68
 
 
  1783 051e E30A0000 		.4byte	.LASF77
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1837 057e 47       		.uleb128 0x47
  1838 057f 0E       		.uleb128 0xe
  1839 0580 5F6C6200 		.ascii	"_lb\000"
-ARM GAS  /tmp/cctKeetR.s 			page 69
+ARM GAS  /tmp/ccBki9CX.s 			page 69
 
 
  1840 0584 07       		.byte	0x7
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1894 05e4 F4000000 		.4byte	0xf4
  1895 05e8 16       		.uleb128 0x16
  1896 05e9 F3050000 		.4byte	0x5f3
-ARM GAS  /tmp/cctKeetR.s 			page 70
+ARM GAS  /tmp/ccBki9CX.s 			page 70
 
 
  1897 05ed 16       		.uleb128 0x16
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  1951 0665 16       		.uleb128 0x16
  1952 0666 74040000 		.4byte	0x474
  1953 066a 16       		.uleb128 0x16
-ARM GAS  /tmp/cctKeetR.s 			page 71
+ARM GAS  /tmp/ccBki9CX.s 			page 71
 
 
  1954 066b F4000000 		.4byte	0xf4
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2008 06dc 00       		.byte	0
  2009 06dd 0F       		.uleb128 0xf
  2010 06de 04       		.byte	0x4
-ARM GAS  /tmp/cctKeetR.s 			page 72
+ARM GAS  /tmp/ccBki9CX.s 			page 72
 
 
  2011 06df A2060000 		.4byte	0x6a2
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2065 074a 5F01     		.2byte	0x15f
  2066 074c 8D070000 		.4byte	0x78d
  2067 0750 13       		.uleb128 0x13
-ARM GAS  /tmp/cctKeetR.s 			page 73
+ARM GAS  /tmp/ccBki9CX.s 			page 73
 
 
  2068 0751 1E0F0000 		.4byte	.LASF97
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2122 07bb 02       		.byte	0x2
  2123 07bc 23       		.byte	0x23
  2124 07bd 04       		.uleb128 0x4
-ARM GAS  /tmp/cctKeetR.s 			page 74
+ARM GAS  /tmp/ccBki9CX.s 			page 74
 
 
  2125 07be 13       		.uleb128 0x13
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2179 0825 23       		.byte	0x23
  2180 0826 38       		.uleb128 0x38
  2181 0827 13       		.uleb128 0x13
-ARM GAS  /tmp/cctKeetR.s 			page 75
+ARM GAS  /tmp/ccBki9CX.s 			page 75
 
 
  2182 0828 B7090000 		.4byte	.LASF111
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2236 0893 04       		.byte	0x4
  2237 0894 93070000 		.4byte	0x793
  2238 0898 04       		.uleb128 0x4
-ARM GAS  /tmp/cctKeetR.s 			page 76
+ARM GAS  /tmp/ccBki9CX.s 			page 76
 
 
  2239 0899 79030000 		.4byte	.LASF113
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2293 0907 09       		.byte	0x9
  2294 0908 5001     		.2byte	0x150
  2295 090a 98080000 		.4byte	0x898
-ARM GAS  /tmp/cctKeetR.s 			page 77
+ARM GAS  /tmp/ccBki9CX.s 			page 77
 
 
  2296 090e 02       		.byte	0x2
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2350 0971 5E01     		.2byte	0x15e
  2351 0973 98080000 		.4byte	0x898
  2352 0977 02       		.byte	0x2
-ARM GAS  /tmp/cctKeetR.s 			page 78
+ARM GAS  /tmp/ccBki9CX.s 			page 78
 
 
  2353 0978 23       		.byte	0x23
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2407 09df 13       		.uleb128 0x13
  2408 09e0 D70D0000 		.4byte	.LASF120
  2409 09e4 09       		.byte	0x9
-ARM GAS  /tmp/cctKeetR.s 			page 79
+ARM GAS  /tmp/ccBki9CX.s 			page 79
 
 
  2410 09e5 8501     		.2byte	0x185
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2464 0a4c 09       		.byte	0x9
  2465 0a4d 9701     		.2byte	0x197
  2466 0a4f CC0A0000 		.4byte	0xacc
-ARM GAS  /tmp/cctKeetR.s 			page 80
+ARM GAS  /tmp/ccBki9CX.s 			page 80
 
 
  2467 0a53 13       		.uleb128 0x13
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2521 0aba 23       		.byte	0x23
  2522 0abb 07       		.uleb128 0x7
  2523 0abc 13       		.uleb128 0x13
-ARM GAS  /tmp/cctKeetR.s 			page 81
+ARM GAS  /tmp/ccBki9CX.s 			page 81
 
 
  2524 0abd 2F0F0000 		.4byte	.LASF141
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2578 0b1d 1C01     		.2byte	0x11c
  2579 0b1f A3080000 		.4byte	0x8a3
  2580 0b23 02       		.byte	0x2
-ARM GAS  /tmp/cctKeetR.s 			page 82
+ARM GAS  /tmp/ccBki9CX.s 			page 82
 
 
  2581 0b24 10       		.byte	0x10
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2635 0b89 06       		.sleb128 6
  2636 0b8a 1C       		.uleb128 0x1c
  2637 0b8b BB060000 		.4byte	.LASF158
-ARM GAS  /tmp/cctKeetR.s 			page 83
+ARM GAS  /tmp/ccBki9CX.s 			page 83
 
 
  2638 0b8f 07       		.sleb128 7
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2692 0bfd 54       		.byte	0x54
  2693 0bfe 810C0000 		.4byte	0xc81
  2694 0c02 02       		.byte	0x2
-ARM GAS  /tmp/cctKeetR.s 			page 84
+ARM GAS  /tmp/ccBki9CX.s 			page 84
 
 
  2695 0c03 23       		.byte	0x23
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2749 0c60 970C0000 		.4byte	0xc97
  2750 0c64 02       		.byte	0x2
  2751 0c65 23       		.byte	0x23
-ARM GAS  /tmp/cctKeetR.s 			page 85
+ARM GAS  /tmp/ccBki9CX.s 			page 85
 
 
  2752 0c66 20       		.uleb128 0x20
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2806 0cd5 1C       		.uleb128 0x1c
  2807 0cd6 CB070000 		.4byte	.LASF181
  2808 0cda 75       		.sleb128 -11
-ARM GAS  /tmp/cctKeetR.s 			page 86
+ARM GAS  /tmp/ccBki9CX.s 			page 86
 
 
  2809 0cdb 1C       		.uleb128 0x1c
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2863 0d47 1C       		.uleb128 0x1c
  2864 0d48 030D0000 		.4byte	.LASF200
  2865 0d4c 0E       		.sleb128 14
-ARM GAS  /tmp/cctKeetR.s 			page 87
+ARM GAS  /tmp/ccBki9CX.s 			page 87
 
 
  2866 0d4d 1C       		.uleb128 0x1c
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2920 0db9 00       		.byte	0
  2921 0dba 04       		.uleb128 0x4
  2922 0dbb 23070000 		.4byte	.LASF219
-ARM GAS  /tmp/cctKeetR.s 			page 88
+ARM GAS  /tmp/ccBki9CX.s 			page 88
 
 
  2923 0dbf 0E       		.byte	0xe
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  2977 0e23 23       		.byte	0x23
  2978 0e24 A002     		.uleb128 0x120
  2979 0e26 0B       		.uleb128 0xb
-ARM GAS  /tmp/cctKeetR.s 			page 89
+ARM GAS  /tmp/ccBki9CX.s 			page 89
 
 
  2980 0e27 7A010000 		.4byte	.LASF226
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3034 0e8c 801C     		.uleb128 0xe00
  3035 0e8e 00       		.byte	0
  3036 0e8f 08       		.uleb128 0x8
-ARM GAS  /tmp/cctKeetR.s 			page 90
+ARM GAS  /tmp/ccBki9CX.s 			page 90
 
 
  3037 0e90 AE080000 		.4byte	0x8ae
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3091 0f0f 01010000 		.4byte	0x101
  3092 0f13 17       		.uleb128 0x17
  3093 0f14 0E0F0000 		.4byte	0xf0e
-ARM GAS  /tmp/cctKeetR.s 			page 91
+ARM GAS  /tmp/ccBki9CX.s 			page 91
 
 
  3094 0f18 08       		.uleb128 0x8
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3148 0f8c 02       		.byte	0x2
  3149 0f8d 23       		.byte	0x23
  3150 0f8e 08       		.uleb128 0x8
-ARM GAS  /tmp/cctKeetR.s 			page 92
+ARM GAS  /tmp/ccBki9CX.s 			page 92
 
 
  3151 0f8f 13       		.uleb128 0x13
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3205 0ff6 23       		.byte	0x23
  3206 0ff7 24       		.uleb128 0x24
  3207 0ff8 13       		.uleb128 0x13
-ARM GAS  /tmp/cctKeetR.s 			page 93
+ARM GAS  /tmp/ccBki9CX.s 			page 93
 
 
  3208 0ff9 88020000 		.4byte	.LASF243
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3262 1060 40       		.uleb128 0x40
  3263 1061 13       		.uleb128 0x13
  3264 1062 F9070000 		.4byte	.LASF250
-ARM GAS  /tmp/cctKeetR.s 			page 94
+ARM GAS  /tmp/ccBki9CX.s 			page 94
 
 
  3265 1066 0E       		.byte	0xe
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3319 10ca 13       		.uleb128 0x13
  3320 10cb CE030000 		.4byte	.LASF257
  3321 10cf 0E       		.byte	0xe
-ARM GAS  /tmp/cctKeetR.s 			page 95
+ARM GAS  /tmp/ccBki9CX.s 			page 95
 
 
  3322 10d0 F906     		.2byte	0x6f9
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3376 1135 42090000 		.4byte	.LASF264
  3377 1139 0E       		.byte	0xe
  3378 113a 0007     		.2byte	0x700
-ARM GAS  /tmp/cctKeetR.s 			page 96
+ARM GAS  /tmp/ccBki9CX.s 			page 96
 
 
  3379 113c 0E0F0000 		.4byte	0xf0e
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3433 11a9 0E       		.byte	0xe
  3434 11aa 0707     		.2byte	0x707
  3435 11ac 0E0F0000 		.4byte	0xf0e
-ARM GAS  /tmp/cctKeetR.s 			page 97
+ARM GAS  /tmp/ccBki9CX.s 			page 97
 
 
  3436 11b0 03       		.byte	0x3
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3490 121a 0E07     		.2byte	0x70e
  3491 121c 32140000 		.4byte	0x1432
  3492 1220 03       		.byte	0x3
-ARM GAS  /tmp/cctKeetR.s 			page 98
+ARM GAS  /tmp/ccBki9CX.s 			page 98
 
 
  3493 1221 23       		.byte	0x23
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3547 128c 130F0000 		.4byte	0xf13
  3548 1290 03       		.byte	0x3
  3549 1291 23       		.byte	0x23
-ARM GAS  /tmp/cctKeetR.s 			page 99
+ARM GAS  /tmp/ccBki9CX.s 			page 99
 
 
  3550 1292 D801     		.uleb128 0xd8
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3604 1300 03       		.byte	0x3
  3605 1301 23       		.byte	0x23
  3606 1302 8402     		.uleb128 0x104
-ARM GAS  /tmp/cctKeetR.s 			page 100
+ARM GAS  /tmp/ccBki9CX.s 			page 100
 
 
  3607 1304 13       		.uleb128 0x13
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3661 1371 23       		.byte	0x23
  3662 1372 E802     		.uleb128 0x168
  3663 1374 13       		.uleb128 0x13
-ARM GAS  /tmp/cctKeetR.s 			page 101
+ARM GAS  /tmp/ccBki9CX.s 			page 101
 
 
  3664 1375 60040000 		.4byte	.LASF300
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3718 13e2 8403     		.uleb128 0x184
  3719 13e4 13       		.uleb128 0x13
  3720 13e5 35100000 		.4byte	.LASF307
-ARM GAS  /tmp/cctKeetR.s 			page 102
+ARM GAS  /tmp/ccBki9CX.s 			page 102
 
 
  3721 13e9 0E       		.byte	0xe
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3775 1462 0F100000 		.4byte	.LASF309
  3776 1466 0E       		.byte	0xe
  3777 1467 460D     		.2byte	0xd46
-ARM GAS  /tmp/cctKeetR.s 			page 103
+ARM GAS  /tmp/ccBki9CX.s 			page 103
 
 
  3778 1469 0E0F0000 		.4byte	0xf0e
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3832 14cf 0E       		.byte	0xe
  3833 14d0 4D0D     		.2byte	0xd4d
  3834 14d2 6D160000 		.4byte	0x166d
-ARM GAS  /tmp/cctKeetR.s 			page 104
+ARM GAS  /tmp/ccBki9CX.s 			page 104
 
 
  3835 14d6 02       		.byte	0x2
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3889 1539 540D     		.2byte	0xd54
  3890 153b 0E0F0000 		.4byte	0xf0e
  3891 153f 02       		.byte	0x2
-ARM GAS  /tmp/cctKeetR.s 			page 105
+ARM GAS  /tmp/ccBki9CX.s 			page 105
 
 
  3892 1540 23       		.byte	0x23
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  3946 15a4 130F0000 		.4byte	0xf13
  3947 15a8 02       		.byte	0x2
  3948 15a9 23       		.byte	0x23
-ARM GAS  /tmp/cctKeetR.s 			page 106
+ARM GAS  /tmp/ccBki9CX.s 			page 106
 
 
  3949 15aa 6C       		.uleb128 0x6c
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4003 1613 03       		.byte	0x3
  4004 1614 23       		.byte	0x23
  4005 1615 EC01     		.uleb128 0xec
-ARM GAS  /tmp/cctKeetR.s 			page 107
+ARM GAS  /tmp/ccBki9CX.s 			page 107
 
 
  4006 1617 13       		.uleb128 0x13
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4060 168a 02       		.byte	0x2
  4061 168b 00       		.byte	0
  4062 168c 1D       		.uleb128 0x1d
-ARM GAS  /tmp/cctKeetR.s 			page 108
+ARM GAS  /tmp/ccBki9CX.s 			page 108
 
 
  4063 168d 7C160000 		.4byte	0x167c
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4117 16fc B0       		.byte	0xb0
  4118 16fd 98080000 		.4byte	0x898
  4119 1701 02       		.byte	0x2
-ARM GAS  /tmp/cctKeetR.s 			page 109
+ARM GAS  /tmp/ccBki9CX.s 			page 109
 
 
  4120 1702 23       		.byte	0x23
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4174 176b 6E0F0000 		.4byte	.LASF342
  4175 176f 01       		.byte	0x1
  4176 1770 B7       		.byte	0xb7
-ARM GAS  /tmp/cctKeetR.s 			page 110
+ARM GAS  /tmp/ccBki9CX.s 			page 110
 
 
  4177 1771 F4000000 		.4byte	0xf4
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4231 17db 36000000 		.4byte	.LFE20
  4232 17df 70000000 		.4byte	.LLST2
  4233 17e3 F7170000 		.4byte	0x17f7
-ARM GAS  /tmp/cctKeetR.s 			page 111
+ARM GAS  /tmp/ccBki9CX.s 			page 111
 
 
  4234 17e7 26       		.uleb128 0x26
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4288 185a 00000000 		.4byte	.LFB38
  4289 185e 0E000000 		.4byte	.LFE38
  4290 1862 38010000 		.4byte	.LLST6
-ARM GAS  /tmp/cctKeetR.s 			page 112
+ARM GAS  /tmp/ccBki9CX.s 			page 112
 
 
  4291 1866 2A       		.uleb128 0x2a
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4345 18de 03       		.byte	0x3
  4346 18df 83       		.byte	0x83
  4347 18e0 AE080000 		.4byte	0x8ae
-ARM GAS  /tmp/cctKeetR.s 			page 113
+ARM GAS  /tmp/ccBki9CX.s 			page 113
 
 
  4348 18e4 02       		.byte	0x2
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4402 1947 150F0000 		.4byte	.LASF360
  4403 194b 03       		.byte	0x3
  4404 194c 93       		.byte	0x93
-ARM GAS  /tmp/cctKeetR.s 			page 114
+ARM GAS  /tmp/ccBki9CX.s 			page 114
 
 
  4405 194d AE080000 		.4byte	0x8ae
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4459 19c1 03       		.byte	0x3
  4460 19c2 C9       		.byte	0xc9
  4461 19c3 01       		.byte	0x1
-ARM GAS  /tmp/cctKeetR.s 			page 115
+ARM GAS  /tmp/ccBki9CX.s 			page 115
 
 
  4462 19c4 00000000 		.4byte	.LFB46
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4516 1a3c 74       		.sleb128 -12
  4517 1a3d 00       		.byte	0
  4518 1a3e 30       		.uleb128 0x30
-ARM GAS  /tmp/cctKeetR.s 			page 116
+ARM GAS  /tmp/ccBki9CX.s 			page 116
 
 
  4519 1a3f 01       		.byte	0x1
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4573 1ab1 11       		.byte	0x11
  4574 1ab2 B30C0000 		.4byte	0xcb3
  4575 1ab6 01       		.byte	0x1
-ARM GAS  /tmp/cctKeetR.s 			page 117
+ARM GAS  /tmp/ccBki9CX.s 			page 117
 
 
  4576 1ab7 01       		.byte	0x1
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4630 1b29 03       		.byte	0x3
  4631 1b2a 00000000 		.4byte	pinVbus
  4632 1b2e 33       		.uleb128 0x33
-ARM GAS  /tmp/cctKeetR.s 			page 118
+ARM GAS  /tmp/ccBki9CX.s 			page 118
 
 
  4633 1b2f 34020000 		.4byte	.LASF370
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4687 001f 00       		.byte	0
  4688 0020 03       		.uleb128 0x3
  4689 0021 24       		.uleb128 0x24
-ARM GAS  /tmp/cctKeetR.s 			page 119
+ARM GAS  /tmp/ccBki9CX.s 			page 119
 
 
  4690 0022 00       		.byte	0
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4744 0058 0B       		.uleb128 0xb
  4745 0059 3B       		.uleb128 0x3b
  4746 005a 0B       		.uleb128 0xb
-ARM GAS  /tmp/cctKeetR.s 			page 120
+ARM GAS  /tmp/ccBki9CX.s 			page 120
 
 
  4747 005b 49       		.uleb128 0x49
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4801 0091 0B       		.uleb128 0xb
  4802 0092 00       		.byte	0
  4803 0093 00       		.byte	0
-ARM GAS  /tmp/cctKeetR.s 			page 121
+ARM GAS  /tmp/ccBki9CX.s 			page 121
 
 
  4804 0094 0D       		.uleb128 0xd
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4858 00ca 11       		.uleb128 0x11
  4859 00cb 15       		.uleb128 0x15
  4860 00cc 00       		.byte	0
-ARM GAS  /tmp/cctKeetR.s 			page 122
+ARM GAS  /tmp/ccBki9CX.s 			page 122
 
 
  4861 00cd 27       		.uleb128 0x27
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4915 0103 49       		.uleb128 0x49
  4916 0104 13       		.uleb128 0x13
  4917 0105 01       		.uleb128 0x1
-ARM GAS  /tmp/cctKeetR.s 			page 123
+ARM GAS  /tmp/ccBki9CX.s 			page 123
 
 
  4918 0106 13       		.uleb128 0x13
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  4972 013c 0C       		.uleb128 0xc
  4973 013d 0B       		.uleb128 0xb
  4974 013e 38       		.uleb128 0x38
-ARM GAS  /tmp/cctKeetR.s 			page 124
+ARM GAS  /tmp/ccBki9CX.s 			page 124
 
 
  4975 013f 0A       		.uleb128 0xa
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5029 0175 00       		.byte	0
  5030 0176 00       		.byte	0
  5031 0177 20       		.uleb128 0x20
-ARM GAS  /tmp/cctKeetR.s 			page 125
+ARM GAS  /tmp/ccBki9CX.s 			page 125
 
 
  5032 0178 13       		.uleb128 0x13
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5086 01ae 01       		.uleb128 0x1
  5087 01af 40       		.uleb128 0x40
  5088 01b0 06       		.uleb128 0x6
-ARM GAS  /tmp/cctKeetR.s 			page 126
+ARM GAS  /tmp/ccBki9CX.s 			page 126
 
 
  5089 01b1 01       		.uleb128 0x1
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5143 01e7 00       		.byte	0
  5144 01e8 27       		.uleb128 0x27
  5145 01e9 2E       		.uleb128 0x2e
-ARM GAS  /tmp/cctKeetR.s 			page 127
+ARM GAS  /tmp/ccBki9CX.s 			page 127
 
 
  5146 01ea 01       		.byte	0x1
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5200 0220 01       		.uleb128 0x1
  5201 0221 40       		.uleb128 0x40
  5202 0222 06       		.uleb128 0x6
-ARM GAS  /tmp/cctKeetR.s 			page 128
+ARM GAS  /tmp/ccBki9CX.s 			page 128
 
 
  5203 0223 00       		.byte	0
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5257 0259 0E       		.uleb128 0xe
  5258 025a 3A       		.uleb128 0x3a
  5259 025b 0B       		.uleb128 0xb
-ARM GAS  /tmp/cctKeetR.s 			page 129
+ARM GAS  /tmp/ccBki9CX.s 			page 129
 
 
  5260 025c 3B       		.uleb128 0x3b
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5314 0292 00       		.byte	0
  5315 0293 03       		.uleb128 0x3
  5316 0294 0E       		.uleb128 0xe
-ARM GAS  /tmp/cctKeetR.s 			page 130
+ARM GAS  /tmp/ccBki9CX.s 			page 130
 
 
  5317 0295 3A       		.uleb128 0x3a
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5371 02cb 0E       		.uleb128 0xe
  5372 02cc 3A       		.uleb128 0x3a
  5373 02cd 0B       		.uleb128 0xb
-ARM GAS  /tmp/cctKeetR.s 			page 131
+ARM GAS  /tmp/ccBki9CX.s 			page 131
 
 
  5374 02ce 3B       		.uleb128 0x3b
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5428 0016 7D       		.byte	0x7d
  5429 0017 08       		.sleb128 8
  5430 0018 04000000 		.4byte	.LCFI1
-ARM GAS  /tmp/cctKeetR.s 			page 132
+ARM GAS  /tmp/ccBki9CX.s 			page 132
 
 
  5431 001c 06000000 		.4byte	.LCFI2
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5485 009f 10       		.sleb128 16
  5486 00a0 00000000 		.4byte	0
  5487 00a4 00000000 		.4byte	0
-ARM GAS  /tmp/cctKeetR.s 			page 133
+ARM GAS  /tmp/ccBki9CX.s 			page 133
 
 
  5488              	.LLST3:
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5542 012c 0200     		.2byte	0x2
  5543 012e 77       		.byte	0x77
  5544 012f 04       		.sleb128 4
-ARM GAS  /tmp/cctKeetR.s 			page 134
+ARM GAS  /tmp/ccBki9CX.s 			page 134
 
 
  5545 0130 00000000 		.4byte	0
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5599 01b4 04000000 		.4byte	.LCFI22
  5600 01b8 06000000 		.4byte	.LCFI23
  5601 01bc 0200     		.2byte	0x2
-ARM GAS  /tmp/cctKeetR.s 			page 135
+ARM GAS  /tmp/ccBki9CX.s 			page 135
 
 
  5602 01be 7D       		.byte	0x7d
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5656 0240 00000000 		.4byte	0
  5657              	.LLST11:
  5658 0244 00000000 		.4byte	.LFB43
-ARM GAS  /tmp/cctKeetR.s 			page 136
+ARM GAS  /tmp/ccBki9CX.s 			page 136
 
 
  5659 0248 02000000 		.4byte	.LCFI30
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5713 02cb 10       		.sleb128 16
  5714 02cc 00000000 		.4byte	0
  5715 02d0 00000000 		.4byte	0
-ARM GAS  /tmp/cctKeetR.s 			page 137
+ARM GAS  /tmp/ccBki9CX.s 			page 137
 
 
  5716              	.LLST14:
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5770 0358 0200     		.2byte	0x2
  5771 035a 77       		.byte	0x77
  5772 035b 18       		.sleb128 24
-ARM GAS  /tmp/cctKeetR.s 			page 138
+ARM GAS  /tmp/ccBki9CX.s 			page 138
 
 
  5773 035c 00000000 		.4byte	0
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5827 0064 46000000 		.4byte	.LFE42-.LFB42
  5828 0068 00000000 		.4byte	.LFB43
  5829 006c 66000000 		.4byte	.LFE43-.LFB43
-ARM GAS  /tmp/cctKeetR.s 			page 139
+ARM GAS  /tmp/ccBki9CX.s 			page 139
 
 
  5830 0070 00000000 		.4byte	.LFB44
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5884              		.section	.debug_line,"",%progbits
  5885              	.Ldebug_line0:
  5886 0000 DA030000 		.section	.debug_str,"MS",%progbits,1
-ARM GAS  /tmp/cctKeetR.s 			page 140
+ARM GAS  /tmp/ccBki9CX.s 			page 140
 
 
  5886      02000E02 
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5912      425200
  5913              	.LASF76:
  5914 007e 5F777269 		.ascii	"_write\000"
-ARM GAS  /tmp/cctKeetR.s 			page 141
+ARM GAS  /tmp/ccBki9CX.s 			page 141
 
 
  5914      746500
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5940      6261636B 
  5940      00
  5941              	.LASF83:
-ARM GAS  /tmp/cctKeetR.s 			page 142
+ARM GAS  /tmp/ccBki9CX.s 			page 142
 
 
  5942 012d 5F6C6F63 		.ascii	"_lock\000"
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5970      53434452 
  5970      00
  5971              	.LASF265:
-ARM GAS  /tmp/cctKeetR.s 			page 143
+ARM GAS  /tmp/ccBki9CX.s 			page 143
 
 
  5972 01bd 50494F5F 		.ascii	"PIO_IFSCSR\000"
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  5998      435F5355 
  5998      43434553 
  5998      5300
-ARM GAS  /tmp/cctKeetR.s 			page 144
+ARM GAS  /tmp/ccBki9CX.s 			page 144
 
 
  5999              	.LASF45:
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6024      5200
  6025              	.LASF279:
  6026 02e4 50494F5F 		.ascii	"PIO_ESR\000"
-ARM GAS  /tmp/cctKeetR.s 			page 145
+ARM GAS  /tmp/ccBki9CX.s 			page 145
 
 
  6026      45535200 
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6051              	.LASF303:
  6052 038b 50494F5F 		.ascii	"PIO_RNPR\000"
  6052      524E5052 
-ARM GAS  /tmp/cctKeetR.s 			page 146
+ARM GAS  /tmp/ccBki9CX.s 			page 146
 
 
  6052      00
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6079              	.LASF347:
  6080 0423 7050696E 		.ascii	"pPin\000"
  6080      00
-ARM GAS  /tmp/cctKeetR.s 			page 147
+ARM GAS  /tmp/ccBki9CX.s 			page 147
 
 
  6081              	.LASF225:
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6110      72766564 
  6110      313300
  6111              	.LASF151:
-ARM GAS  /tmp/cctKeetR.s 			page 148
+ARM GAS  /tmp/ccBki9CX.s 			page 148
 
 
  6112 04b5 55534252 		.ascii	"USBRC_FALSE\000"
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6136 054e 504D435F 		.ascii	"PMC_OCR\000"
  6136      4F435200 
  6137              	.LASF215:
-ARM GAS  /tmp/cctKeetR.s 			page 149
+ARM GAS  /tmp/ccBki9CX.s 			page 149
 
 
  6138 0556 50574D5F 		.ascii	"PWM_IRQn\000"
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6164 05fa 5F776473 		.ascii	"_wds\000"
  6164      00
  6165              	.LASF192:
-ARM GAS  /tmp/cctKeetR.s 			page 150
+ARM GAS  /tmp/ccBki9CX.s 			page 150
 
 
  6166 05ff 504D435F 		.ascii	"PMC_IRQn\000"
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6194 0687 4E6F6E4D 		.ascii	"NonMaskableInt_IRQn\000"
  6194      61736B61 
  6194      626C6549 
-ARM GAS  /tmp/cctKeetR.s 			page 151
+ARM GAS  /tmp/ccBki9CX.s 			page 151
 
 
  6194      6E745F49 
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6219              	.LASF325:
  6220 072d 504D435F 		.ascii	"PMC_IMR\000"
  6220      494D5200 
-ARM GAS  /tmp/cctKeetR.s 			page 152
+ARM GAS  /tmp/ccBki9CX.s 			page 152
 
 
  6221              	.LASF8:
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6246      7000
  6247              	.LASF181:
  6248 07cb 42757346 		.ascii	"BusFault_IRQn\000"
-ARM GAS  /tmp/cctKeetR.s 			page 153
+ARM GAS  /tmp/ccBki9CX.s 			page 153
 
 
  6248      61756C74 
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6272      69635265 
  6272      71756573 
  6272      7400
-ARM GAS  /tmp/cctKeetR.s 			page 154
+ARM GAS  /tmp/ccBki9CX.s 			page 154
 
 
  6273              	.LASF368:
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6302 08f8 694D616E 		.ascii	"iManufacturer\000"
  6302      75666163 
  6302      74757265 
-ARM GAS  /tmp/cctKeetR.s 			page 155
+ARM GAS  /tmp/ccBki9CX.s 			page 155
 
 
  6302      7200
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6328 0994 624E756D 		.ascii	"bNumInterfaces\000"
  6328      496E7465 
  6328      72666163 
-ARM GAS  /tmp/cctKeetR.s 			page 156
+ARM GAS  /tmp/ccBki9CX.s 			page 156
 
 
  6328      657300
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6355              	.LASF366:
  6356 0a31 646F6E65 		.ascii	"done\000"
  6356      00
-ARM GAS  /tmp/cctKeetR.s 			page 157
+ARM GAS  /tmp/ccBki9CX.s 			page 157
 
 
  6357              	.LASF160:
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6383              	.LASF330:
  6384 0ac7 504D435F 		.ascii	"PMC_WPSR\000"
  6384      57505352 
-ARM GAS  /tmp/cctKeetR.s 			page 158
+ARM GAS  /tmp/ccBki9CX.s 			page 158
 
 
  6384      00
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6411              	.LASF344:
  6412 0b67 43444344 		.ascii	"CDCDSerialDriver_Read\000"
  6412      53657269 
-ARM GAS  /tmp/cctKeetR.s 			page 159
+ARM GAS  /tmp/ccBki9CX.s 			page 159
 
 
  6412      616C4472 
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6440      69677572 
  6440      6174696F 
  6440      6E7300
-ARM GAS  /tmp/cctKeetR.s 			page 160
+ARM GAS  /tmp/ccBki9CX.s 			page 160
 
 
  6441              	.LASF81:
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6469              	.LASF276:
  6470 0c92 50494F5F 		.ascii	"PIO_AIMDR\000"
  6470      41494D44 
-ARM GAS  /tmp/cctKeetR.s 			page 161
+ARM GAS  /tmp/ccBki9CX.s 			page 161
 
 
  6470      5200
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6499              	.LASF244:
  6500 0d23 52657365 		.ascii	"Reserved3\000"
  6500      72766564 
-ARM GAS  /tmp/cctKeetR.s 			page 162
+ARM GAS  /tmp/ccBki9CX.s 			page 162
 
 
  6500      3300
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6526      2F737475 
  6526      6469756D 
  6527              	.LASF120:
-ARM GAS  /tmp/cctKeetR.s 			page 163
+ARM GAS  /tmp/ccBki9CX.s 			page 163
 
 
  6528 0dd7 62446576 		.ascii	"bDeviceClass\000"
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6554 0e6b 5F5F746D 		.ascii	"__tm_year\000"
  6554      5F796561 
  6554      7200
-ARM GAS  /tmp/cctKeetR.s 			page 164
+ARM GAS  /tmp/ccBki9CX.s 			page 164
 
 
  6555              	.LASF203:
@@ -9838,7 +9838,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6586 0efa 50494F5F 		.ascii	"PIO_PCMR\000"
  6586      50434D52 
  6586      00
-ARM GAS  /tmp/cctKeetR.s 			page 165
+ARM GAS  /tmp/ccBki9CX.s 			page 165
 
 
  6587              	.LASF206:
@@ -9898,7 +9898,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6614      52516E00 
  6615              	.LASF110:
  6616 0f8c 5F6D6273 		.ascii	"_mbsrtowcs_state\000"
-ARM GAS  /tmp/cctKeetR.s 			page 166
+ARM GAS  /tmp/ccBki9CX.s 			page 166
 
 
  6616      72746F77 
@@ -9958,7 +9958,7 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6644      53434552 
  6644      00
  6645              	.LASF272:
-ARM GAS  /tmp/cctKeetR.s 			page 167
+ARM GAS  /tmp/ccBki9CX.s 			page 167
 
 
  6646 1018 50494F5F 		.ascii	"PIO_OWDR\000"
@@ -9977,67 +9977,67 @@ ARM GAS  /tmp/cctKeetR.s 			page 1
  6652      50544352 
  6652      00
  6653              		.ident	"GCC: (Sourcery CodeBench Lite 2011.09-69) 4.6.1"
-ARM GAS  /tmp/cctKeetR.s 			page 168
+ARM GAS  /tmp/ccBki9CX.s 			page 168
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usb_console.c
-     /tmp/cctKeetR.s:19     .text.CDCDSerialDriver_Write:00000000 $t
-     /tmp/cctKeetR.s:23     .text.CDCDSerialDriver_Write:00000000 CDCDSerialDriver_Write
-     /tmp/cctKeetR.s:61     .text.CDCDSerialDriver_Read:00000000 $t
-     /tmp/cctKeetR.s:65     .text.CDCDSerialDriver_Read:00000000 CDCDSerialDriver_Read
-     /tmp/cctKeetR.s:102    .text.NVIC_EnableIRQ:00000000 $t
-     /tmp/cctKeetR.s:106    .text.NVIC_EnableIRQ:00000000 NVIC_EnableIRQ
-     /tmp/cctKeetR.s:145    .data:00000000 $d
-     /tmp/cctKeetR.s:148    .data:00000000 _xferTimeout
-     /tmp/cctKeetR.s:151    .bss:00000000 $d
-     /tmp/cctKeetR.s:152    .bss:00000000 _rxCount
-     /tmp/cctKeetR.s:155    .bss:00000004 _txCount
-     /tmp/cctKeetR.s:157    .bss:00000008 _cfgdone
-     /tmp/cctKeetR.s:160    .bss:0000000c _rxBuffer
-     /tmp/cctKeetR.s:163    .rodata:00000000 $d
-     /tmp/cctKeetR.s:166    .rodata:00000000 pinVbus
-     /tmp/cctKeetR.s:174    .rodata:0000000c .LC0
-     /tmp/cctKeetR.s:177    .rodata:00000024 .LC1
-     /tmp/cctKeetR.s:180    .text.ISR_Vbus:00000000 $t
-     /tmp/cctKeetR.s:184    .text.ISR_Vbus:00000000 ISR_Vbus
-     /tmp/cctKeetR.s:243    .text.VBus_Configure:00000000 $t
-     /tmp/cctKeetR.s:247    .text.VBus_Configure:00000000 VBus_Configure
-     /tmp/cctKeetR.s:296    .text.ConfigureUsbClock:00000000 $t
-     /tmp/cctKeetR.s:300    .text.ConfigureUsbClock:00000000 ConfigureUsbClock
-     /tmp/cctKeetR.s:343    .text.USBDCallbacks_Initialized:00000000 $t
-     /tmp/cctKeetR.s:348    .text.USBDCallbacks_Initialized:00000000 USBDCallbacks_Initialized
-     /tmp/cctKeetR.s:371    .text.USBDDriverCallbacks_ConfigurationChanged:00000000 $t
-     /tmp/cctKeetR.s:376    .text.USBDDriverCallbacks_ConfigurationChanged:00000000 USBDDriverCallbacks_ConfigurationChanged
-     /tmp/cctKeetR.s:407    .text.USBDCallbacks_RequestReceived:00000000 $t
-     /tmp/cctKeetR.s:412    .text.USBDCallbacks_RequestReceived:00000000 USBDCallbacks_RequestReceived
-     /tmp/cctKeetR.s:442    .rodata:00000040 .LC2
-     /tmp/cctKeetR.s:445    .text.UsbWriteDone:00000000 $t
-     /tmp/cctKeetR.s:449    .text.UsbWriteDone:00000000 UsbWriteDone
-     /tmp/cctKeetR.s:501    .rodata:00000060 .LC3
-     /tmp/cctKeetR.s:504    .text.UsbReadDone:00000000 $t
-     /tmp/cctKeetR.s:508    .text.UsbReadDone:00000000 UsbReadDone
-     /tmp/cctKeetR.s:560    .rodata:00000080 .LC4
-     /tmp/cctKeetR.s:563    .text.USBC_isConfigured:00000000 $t
-     /tmp/cctKeetR.s:568    .text.USBC_isConfigured:00000000 USBC_isConfigured
-     /tmp/cctKeetR.s:762    .text.USBC_StartListening:00000000 USBC_StartListening
-     /tmp/cctKeetR.s:630    .text.USBC_hasData:00000000 $t
-     /tmp/cctKeetR.s:635    .text.USBC_hasData:00000000 USBC_hasData
-     /tmp/cctKeetR.s:667    .text.USBC_SetTimeout:00000000 $t
-     /tmp/cctKeetR.s:672    .text.USBC_SetTimeout:00000000 USBC_SetTimeout
-     /tmp/cctKeetR.s:705    .rodata:000000a8 .LC5
-     /tmp/cctKeetR.s:708    .text.USBC_Configure:00000000 $t
-     /tmp/cctKeetR.s:713    .text.USBC_Configure:00000000 USBC_Configure
-     /tmp/cctKeetR.s:754    .rodata:000000d0 .LC6
-     /tmp/cctKeetR.s:757    .text.USBC_StartListening:00000000 $t
-     /tmp/cctKeetR.s:812    .rodata:000000ec .LC7
-     /tmp/cctKeetR.s:815    .text.USBC_Gets:00000000 $t
-     /tmp/cctKeetR.s:820    .text.USBC_Gets:00000000 USBC_Gets
-     /tmp/cctKeetR.s:958    .rodata:00000108 .LC8
-     /tmp/cctKeetR.s:961    .text.USBC_Puts:00000000 $t
-     /tmp/cctKeetR.s:966    .text.USBC_Puts:00000000 USBC_Puts
+     /tmp/ccBki9CX.s:19     .text.CDCDSerialDriver_Write:00000000 $t
+     /tmp/ccBki9CX.s:23     .text.CDCDSerialDriver_Write:00000000 CDCDSerialDriver_Write
+     /tmp/ccBki9CX.s:61     .text.CDCDSerialDriver_Read:00000000 $t
+     /tmp/ccBki9CX.s:65     .text.CDCDSerialDriver_Read:00000000 CDCDSerialDriver_Read
+     /tmp/ccBki9CX.s:102    .text.NVIC_EnableIRQ:00000000 $t
+     /tmp/ccBki9CX.s:106    .text.NVIC_EnableIRQ:00000000 NVIC_EnableIRQ
+     /tmp/ccBki9CX.s:145    .data:00000000 $d
+     /tmp/ccBki9CX.s:148    .data:00000000 _xferTimeout
+     /tmp/ccBki9CX.s:151    .bss:00000000 $d
+     /tmp/ccBki9CX.s:152    .bss:00000000 _rxCount
+     /tmp/ccBki9CX.s:155    .bss:00000004 _txCount
+     /tmp/ccBki9CX.s:157    .bss:00000008 _cfgdone
+     /tmp/ccBki9CX.s:160    .bss:0000000c _rxBuffer
+     /tmp/ccBki9CX.s:163    .rodata:00000000 $d
+     /tmp/ccBki9CX.s:166    .rodata:00000000 pinVbus
+     /tmp/ccBki9CX.s:174    .rodata:0000000c .LC0
+     /tmp/ccBki9CX.s:177    .rodata:00000024 .LC1
+     /tmp/ccBki9CX.s:180    .text.ISR_Vbus:00000000 $t
+     /tmp/ccBki9CX.s:184    .text.ISR_Vbus:00000000 ISR_Vbus
+     /tmp/ccBki9CX.s:243    .text.VBus_Configure:00000000 $t
+     /tmp/ccBki9CX.s:247    .text.VBus_Configure:00000000 VBus_Configure
+     /tmp/ccBki9CX.s:296    .text.ConfigureUsbClock:00000000 $t
+     /tmp/ccBki9CX.s:300    .text.ConfigureUsbClock:00000000 ConfigureUsbClock
+     /tmp/ccBki9CX.s:343    .text.USBDCallbacks_Initialized:00000000 $t
+     /tmp/ccBki9CX.s:348    .text.USBDCallbacks_Initialized:00000000 USBDCallbacks_Initialized
+     /tmp/ccBki9CX.s:371    .text.USBDDriverCallbacks_ConfigurationChanged:00000000 $t
+     /tmp/ccBki9CX.s:376    .text.USBDDriverCallbacks_ConfigurationChanged:00000000 USBDDriverCallbacks_ConfigurationChanged
+     /tmp/ccBki9CX.s:407    .text.USBDCallbacks_RequestReceived:00000000 $t
+     /tmp/ccBki9CX.s:412    .text.USBDCallbacks_RequestReceived:00000000 USBDCallbacks_RequestReceived
+     /tmp/ccBki9CX.s:442    .rodata:00000040 .LC2
+     /tmp/ccBki9CX.s:445    .text.UsbWriteDone:00000000 $t
+     /tmp/ccBki9CX.s:449    .text.UsbWriteDone:00000000 UsbWriteDone
+     /tmp/ccBki9CX.s:501    .rodata:00000060 .LC3
+     /tmp/ccBki9CX.s:504    .text.UsbReadDone:00000000 $t
+     /tmp/ccBki9CX.s:508    .text.UsbReadDone:00000000 UsbReadDone
+     /tmp/ccBki9CX.s:560    .rodata:00000080 .LC4
+     /tmp/ccBki9CX.s:563    .text.USBC_isConfigured:00000000 $t
+     /tmp/ccBki9CX.s:568    .text.USBC_isConfigured:00000000 USBC_isConfigured
+     /tmp/ccBki9CX.s:762    .text.USBC_StartListening:00000000 USBC_StartListening
+     /tmp/ccBki9CX.s:630    .text.USBC_hasData:00000000 $t
+     /tmp/ccBki9CX.s:635    .text.USBC_hasData:00000000 USBC_hasData
+     /tmp/ccBki9CX.s:667    .text.USBC_SetTimeout:00000000 $t
+     /tmp/ccBki9CX.s:672    .text.USBC_SetTimeout:00000000 USBC_SetTimeout
+     /tmp/ccBki9CX.s:705    .rodata:000000a8 .LC5
+     /tmp/ccBki9CX.s:708    .text.USBC_Configure:00000000 $t
+     /tmp/ccBki9CX.s:713    .text.USBC_Configure:00000000 USBC_Configure
+     /tmp/ccBki9CX.s:754    .rodata:000000d0 .LC6
+     /tmp/ccBki9CX.s:757    .text.USBC_StartListening:00000000 $t
+     /tmp/ccBki9CX.s:812    .rodata:000000ec .LC7
+     /tmp/ccBki9CX.s:815    .text.USBC_Gets:00000000 $t
+     /tmp/ccBki9CX.s:820    .text.USBC_Gets:00000000 USBC_Gets
+     /tmp/ccBki9CX.s:958    .rodata:00000108 .LC8
+     /tmp/ccBki9CX.s:961    .text.USBC_Puts:00000000 $t
+     /tmp/ccBki9CX.s:966    .text.USBC_Puts:00000000 USBC_Puts
                      .debug_frame:00000010 $d
-ARM GAS  /tmp/cctKeetR.s 			page 169
+ARM GAS  /tmp/ccBki9CX.s 			page 169
 
 
 
