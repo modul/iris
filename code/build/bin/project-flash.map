@@ -1,39 +1,39 @@
 Archive member included because of file (symbol)
 
-../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                               build/obj/flash_startup.o (USBD_IrqHandler)
-../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                              ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (USBEndpointDescriptor_GetNumber)
-../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                              ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (USBD_SuspendHandler)
-../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
-                              ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o) (USBDCallbacks_Reset)
-../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                              ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o) (USBD_GetDriver)
-../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                              libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (USBEndpointDescriptor_GetNumber)
+libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                              libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (USBD_SuspendHandler)
+libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                              libusb/lib/libusb_sam3s_rel.a(release-USBD.o) (USBDCallbacks_Reset)
+libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                              libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o) (USBD_GetDriver)
+libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                               build/obj/flash_usb_console.o (CDCDSerial_Read)
-../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
-                              ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o) (USBDDriverCallbacks_InterfaceSettingChanged)
-../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+                              libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o) (USBDDriverCallbacks_InterfaceSettingChanged)
+libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
                               build/obj/flash_usb_console.o (CDCDSerialDriver_Initialize)
-../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                              ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o) (USBGenericRequest_GetRequest)
-../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                              ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o) (CDCDSerialPort_Initialize)
-../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
-                              ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o) (CDCLineCoding_Initialize)
-../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                              libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o) (USBGenericRequest_GetRequest)
+libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                              libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o) (CDCDSerialPort_Initialize)
+libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+                              libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o) (CDCLineCoding_Initialize)
+libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                               build/obj/flash_startup.o (PIOA_IrqHandler)
-../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                               build/obj/flash_startup.o (IrqHandlerNotUsed)
-../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
                               build/obj/flash_uart_console.o (PIO_Configure)
-../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
-                              ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (PMC_EnablePeripheral)
-../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                              libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (PMC_EnablePeripheral)
+libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
                               build/obj/flash_led.o (TC_Configure)
-../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
-                              ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o) (PIO_CaptureHandler)
+libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                              libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o) (PIO_CaptureHandler)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
                               build/obj/flash_led.o (__assert_func)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fiprintf.o)
@@ -41,9 +41,9 @@ Archive member included because of file (symbol)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fprintf.o)
                               build/obj/flash_main.o (fprintf)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputc.o)
-                              ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (fputc)
+                              libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (fputc)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputs.o)
-                              ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (fputs)
+                              libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (fputs)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputs.o) (__sfvwrite_r)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwrite.o)
@@ -253,130 +253,153 @@ Discarded input sections
  .text          0x00000000        0x0 build/obj/flash_main.o
  .data          0x00000000        0x0 build/obj/flash_main.o
  .bss           0x00000000        0x0 build/obj/flash_main.o
- .text          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .data          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .text          0x00000000        0x0 build/obj/flash_controller.o
+ .data          0x00000000        0x0 build/obj/flash_controller.o
+ .bss           0x00000000        0x0 build/obj/flash_controller.o
+ .text.pid      0x00000000       0xc4 build/obj/flash_controller.o
+ .text.update   0x00000000       0x90 build/obj/flash_controller.o
+ .text.mode     0x00000000       0xd0 build/obj/flash_controller.o
+ .text.control  0x00000000       0xbc build/obj/flash_controller.o
+ .rodata        0x00000000       0x34 build/obj/flash_controller.o
+ .text.tristate
+                0x00000000       0x7c build/obj/flash_controller.o
+ .text.tris     0x00000000       0x98 build/obj/flash_controller.o
+ .debug_info    0x00000000      0x3ac build/obj/flash_controller.o
+ .debug_abbrev  0x00000000      0x161 build/obj/flash_controller.o
+ .debug_loc     0x00000000      0x150 build/obj/flash_controller.o
+ .debug_aranges
+                0x00000000       0x48 build/obj/flash_controller.o
+ .debug_ranges  0x00000000       0x38 build/obj/flash_controller.o
+ .debug_line    0x00000000      0x1b8 build/obj/flash_controller.o
+ .debug_str     0x00000000      0x176 build/obj/flash_controller.o
+ .comment       0x00000000       0x31 build/obj/flash_controller.o
+ .ARM.attributes
+                0x00000000       0x33 build/obj/flash_controller.o
+ .debug_frame   0x00000000       0xc4 build/obj/flash_controller.o
+ .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.USBD_HAL_SetupMblTransfer
-                0x00000000       0x60 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00000000       0x60 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.USBD_HAL_RemoteWakeUp
-                0x00000000       0x34 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .text          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .data          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .bss           0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00000000       0x34 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .bss           0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
  .text.USBEndpointDescriptor_GetInterval
-                0x00000000        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00000000        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
  .text.USBConfigurationDescriptor_GetNumInterfaces
-                0x00000000        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .text          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .data          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00000000        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
  .text.USBD_IsHalted
-                0x00000000       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00000000       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
  .text.USBD_RemoteWakeUp
-                0x00000000       0x20 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .text          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .data          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .bss           0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                0x00000000       0x20 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .bss           0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
  .text.USBDCallbacks_Initialized
-                0x00000000        0x2 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                0x00000000        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
  .text.USBDCallbacks_RequestReceived
-                0x00000000       0x18 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .text          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .data          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x00000000       0x18 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
  .text.USBDDriver_IsRemoteWakeUpEnabled
-                0x00000000        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x00000000        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
  .text.USBDDriver_returnOTGFeatures
-                0x00000000        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x00000000        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
  .text.USBDDriver_clearOTGFeatures
-                0x00000000        0x6 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .text          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .data          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00000000        0x6 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
  .text.CDCDSerial_GetControlLineState
-                0x00000000       0x14 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00000000       0x14 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
  .text.CDCDSerial_GetLineCoding
-                0x00000000       0x14 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00000000       0x14 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
  .text.CDCDSerial_GetSerialState
-                0x00000000       0x14 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00000000       0x14 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
  .text.CDCDSerial_SetSerialState
-                0x00000000       0x14 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .text          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .data          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .bss           0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+                0x00000000       0x14 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .bss           0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
  .text.USBDDriverCallbacks_ConfigurationChanged
-                0x00000000        0x2 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .text          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .data          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .bss           0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .text          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .data          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .bss           0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00000000        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .bss           0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .bss           0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
  .text.USBFeatureRequest_GetTestSelector
-                0x00000000       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .text          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .data          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00000000       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
  .text.CDCDSerialPort_GetControlLineState
-                0x00000000        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00000000        0x4 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
  .text.CDCDSerialPort_GetLineCoding
-                0x00000000       0x18 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00000000       0x18 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
  .text.CDCDSerialPort_GetSerialState
-                0x00000000        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00000000        0x4 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
  .text.CDCDSerialPort_SetSerialState
-                0x00000000       0x30 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .text          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .data          0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .bss           0x00000000        0x0 ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .text          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .data          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00000000       0x30 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .bss           0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .text          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .data          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
  .text.PIO_DisableIt
-                0x00000000       0x2c ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .text          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .data          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .bss           0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00000000       0x2c libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .text          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .data          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .bss           0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
  .text.SysTick_Handler
-                0x00000000        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00000000        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
  .text.PIOA_IrqHandler
-                0x00000000        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00000000        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
  .text.PIOB_IrqHandler
-                0x00000000        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00000000        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
  .text.PIOC_IrqHandler
-                0x00000000        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00000000        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
  .text.TC0_IrqHandler
-                0x00000000        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00000000        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
  .text.USBD_IrqHandler
-                0x00000000        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .text          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .data          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .bss           0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .text.PIO_Set  0x00000000        0x8 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+                0x00000000        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .text          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .data          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .bss           0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .text.PIO_Set  0x00000000        0x8 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
  .text.PIO_Clear
-                0x00000000        0x8 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+                0x00000000        0x8 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
  .text.PIO_GetOutputDataStatus
-                0x00000000       0x10 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+                0x00000000       0x10 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
  .text.PIO_SetDebounceFilter
-                0x00000000       0x1e ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .text          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .data          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .bss           0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x00000000       0x1e libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .text          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .data          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .bss           0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
  .text.PMC_EnableAllPeripherals
-                0x00000000       0x2c ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x00000000       0x2c libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
  .text.PMC_DisableAllPeripherals
-                0x00000000       0x2c ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .text          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .data          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .bss           0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .text          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
- .data          0x00000000        0x0 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                0x00000000       0x2c libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .text          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .data          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .bss           0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .text          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .data          0x00000000        0x0 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
  .text.PIO_CaptureDisableIt
-                0x00000000        0xc ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                0x00000000        0xc libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
  .text.PIO_CaptureEnableIt
-                0x00000000        0xc ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                0x00000000        0xc libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
  .text.PIO_CaptureEnable
-                0x00000000       0x28 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                0x00000000       0x28 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
  .text.PIO_CaptureDisable
-                0x00000000       0x14 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                0x00000000       0x14 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
  .text.PIO_CaptureInit
-                0x00000000       0xf4 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
- .rodata        0x00000000       0x10 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                0x00000000       0xf4 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .rodata        0x00000000       0x10 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
  .rodata.str1.1
-                0x00000000       0x7d ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                0x00000000       0x7d libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
  .data          0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
  .bss           0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
  .data          0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fiprintf.o)
@@ -587,8 +610,9 @@ LOAD build/obj/flash_timetick.o
 LOAD build/obj/flash_startup.o
 LOAD build/obj/flash_usb_device_descriptor.o
 LOAD build/obj/flash_main.o
-LOAD ../libusb/lib/libusb_sam3s_rel.a
-LOAD ../libchip/lib/libchip_sam3s4_rel.a
+LOAD build/obj/flash_controller.o
+LOAD libusb/lib/libusb_sam3s_rel.a
+LOAD libchip/lib/libchip_sam3s4_rel.a
 START GROUP
 LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a
 LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a
@@ -734,441 +758,441 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
  .text.main     0x004013e0      0x2a8 build/obj/flash_main.o
                 0x004013e0                main
  .text.UDP_EndOfTransfer
-                0x00401688       0x70 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00401688       0x70 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.UDP_ClearRxFlag
-                0x004016f8       0x80 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004016f8       0x80 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.UDP_WritePayload
-                0x00401778       0x44 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00401778       0x44 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.UDP_EnablePeripheralClock
-                0x004017bc       0x20 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004017bc       0x20 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.UDP_MblWriteFifo
-                0x004017dc      0x128 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004017dc      0x128 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.USBD_IrqHandler
-                0x00401904      0x600 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00401904      0x600 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x00401904                USBD_IrqHandler
  .text.USBD_HAL_ResetEPs
-                0x00401f04       0xc0 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00401f04       0xc0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x00401f04                USBD_HAL_ResetEPs
  .text.USBD_HAL_CancelIo
-                0x00401fc4       0x54 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00401fc4       0x54 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x00401fc4                USBD_HAL_CancelIo
  .text.USBD_HAL_ConfigureEP
-                0x00402018       0xf0 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402018       0xf0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x00402018                USBD_HAL_ConfigureEP
  .text.USBD_HAL_SetTransferCallback
-                0x00402108       0x20 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402108       0x20 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x00402108                USBD_HAL_SetTransferCallback
  .text.USBD_HAL_Write
-                0x00402128      0x188 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402128      0x188 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x00402128                USBD_HAL_Write
  .text.USBD_HAL_Read
-                0x004022b0       0x40 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004022b0       0x40 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x004022b0                USBD_HAL_Read
  .text.USBD_HAL_Connect
-                0x004022f0       0x28 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004022f0       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x004022f0                USBD_HAL_Connect
  .text.USBD_HAL_Disconnect
-                0x00402318       0x28 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402318       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x00402318                USBD_HAL_Disconnect
  .text.USBD_HAL_SetAddress
-                0x00402340       0x1c ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402340       0x1c libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x00402340                USBD_HAL_SetAddress
  .text.USBD_HAL_SetConfiguration
-                0x0040235c       0x18 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x0040235c       0x18 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x0040235c                USBD_HAL_SetConfiguration
  .text.USBD_HAL_Init
-                0x00402374       0x40 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402374       0x40 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x00402374                USBD_HAL_Init
  .text.USBD_HAL_Stall
-                0x004023b4       0x60 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004023b4       0x60 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x004023b4                USBD_HAL_Stall
  .text.USBD_HAL_Halt
-                0x00402414       0xc4 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402414       0xc4 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x00402414                USBD_HAL_Halt
  .text.USBD_HAL_IsHighSpeed
-                0x004024d8        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004024d8        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x004024d8                USBD_HAL_IsHighSpeed
  .text.USBD_HAL_Suspend
-                0x004024dc       0x28 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004024dc       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x004024dc                USBD_HAL_Suspend
  .text.USBD_HAL_Activate
-                0x00402504       0x24 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402504       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                 0x00402504                USBD_HAL_Activate
  .text.USBGenericDescriptor_GetLength
-                0x00402528        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00402528        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                 0x00402528                USBGenericDescriptor_GetLength
  .text.USBGenericDescriptor_GetType
-                0x0040252c        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x0040252c        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                 0x0040252c                USBGenericDescriptor_GetType
  .text.USBGenericDescriptor_GetNextDescriptor
-                0x00402530       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00402530       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                 0x00402530                USBGenericDescriptor_GetNextDescriptor
  .text.USBGenericDescriptor_Parse
-                0x00402540       0x4c ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00402540       0x4c libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                 0x00402540                USBGenericDescriptor_Parse
  .text.USBEndpointDescriptor_GetNumber
-                0x0040258c        0x8 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x0040258c        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                 0x0040258c                USBEndpointDescriptor_GetNumber
  .text.USBEndpointDescriptor_GetDirection
-                0x00402594        0x6 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00402594        0x6 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                 0x00402594                USBEndpointDescriptor_GetDirection
  .text.USBEndpointDescriptor_GetType
-                0x0040259a        0x8 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x0040259a        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                 0x0040259a                USBEndpointDescriptor_GetType
  .text.USBEndpointDescriptor_GetMaxPacketSize
-                0x004025a2        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x004025a2        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                 0x004025a2                USBEndpointDescriptor_GetMaxPacketSize
  .text.USBConfigurationDescriptor_GetTotalLength
-                0x004025a6        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x004025a6        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                 0x004025a6                USBConfigurationDescriptor_GetTotalLength
  .text.USBConfigurationDescriptor_IsSelfPowered
-                0x004025aa        0x8 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x004025aa        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                 0x004025aa                USBConfigurationDescriptor_IsSelfPowered
  *fill*         0x004025b2        0x2 00
  .text.USBConfigurationDescriptor_Parse
-                0x004025b4       0x78 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x004025b4       0x78 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                 0x004025b4                USBConfigurationDescriptor_Parse
  .text.USBD_SuspendHandler
-                0x0040262c       0x24 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x0040262c       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x0040262c                USBD_SuspendHandler
  .text.USBD_ResumeHandler
-                0x00402650       0x28 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00402650       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x00402650                USBD_ResumeHandler
  .text.USBD_RequestHandler
-                0x00402678       0x2c ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00402678       0x2c libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x00402678                USBD_RequestHandler
  .text.USBD_ConfigureEndpoint
-                0x004026a4        0xc ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004026a4        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x004026a4                USBD_ConfigureEndpoint
  .text.USBD_ResetHandler
-                0x004026b0       0x38 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004026b0       0x38 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x004026b0                USBD_ResetHandler
  .text.USBD_Write
-                0x004026e8       0x24 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004026e8       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x004026e8                USBD_Write
  .text.USBD_Read
-                0x0040270c       0x24 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x0040270c       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x0040270c                USBD_Read
  .text.USBD_Halt
-                0x00402730       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00402730       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x00402730                USBD_Halt
  .text.USBD_Unhalt
-                0x00402740       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00402740       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x00402740                USBD_Unhalt
  .text.USBD_IsHighSpeed
-                0x00402750        0xc ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00402750        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x00402750                USBD_IsHighSpeed
  .text.USBD_Stall
-                0x0040275c        0xc ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x0040275c        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x0040275c                USBD_Stall
  .text.USBD_SetAddress
-                0x00402768       0x20 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00402768       0x20 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x00402768                USBD_SetAddress
  .text.USBD_SetConfiguration
-                0x00402788       0x30 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00402788       0x30 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x00402788                USBD_SetConfiguration
  .text.USBD_Connect
-                0x004027b8        0xc ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004027b8        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x004027b8                USBD_Connect
  .text.USBD_Disconnect
-                0x004027c4       0x28 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004027c4       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x004027c4                USBD_Disconnect
  .text.USBD_Init
-                0x004027ec       0x24 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004027ec       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x004027ec                USBD_Init
  .text.USBD_GetState
-                0x00402810        0xc ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00402810        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                 0x00402810                USBD_GetState
  .text.USBDCallbacks_Reset
-                0x0040281c        0x2 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                0x0040281c        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
                 0x0040281c                USBDCallbacks_Reset
  .text.USBDCallbacks_Suspended
-                0x0040281e        0x2 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                0x0040281e        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
                 0x0040281e                USBDCallbacks_Suspended
  .text.USBDCallbacks_Resumed
-                0x00402820        0x2 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                0x00402820        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
                 0x00402820                USBDCallbacks_Resumed
  *fill*         0x00402822        0x2 00
  .text.TerminateCtrlInWithNull
-                0x00402824       0x18 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x00402824       0x18 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
  .text.USBD_GetDriver
-                0x0040283c        0x8 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x0040283c        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
                 0x0040283c                USBD_GetDriver
  .text.USBDDriver_Initialize
-                0x00402844        0xc ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x00402844        0xc libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
                 0x00402844                USBDDriver_Initialize
  .text.USBDDriver_GetCfgDescriptors
-                0x00402850       0x18 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x00402850       0x18 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
                 0x00402850                USBDDriver_GetCfgDescriptors
  .text.USBDDriver_RequestHandler
-                0x00402868      0x3f0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x00402868      0x3f0 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
                 0x00402868                USBDDriver_RequestHandler
  .text.CDCDSerial_Initialize
-                0x00402c58       0x24 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00402c58       0x24 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                 0x00402c58                CDCDSerial_Initialize
  .text.CDCDSerial_ConfigureFunction
-                0x00402c7c       0x18 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00402c7c       0x18 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                 0x00402c7c                CDCDSerial_ConfigureFunction
  .text.CDCDSerial_RequestHandler
-                0x00402c94       0x14 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00402c94       0x14 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                 0x00402c94                CDCDSerial_RequestHandler
  .text.CDCDSerial_Read
-                0x00402ca8       0x20 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00402ca8       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                 0x00402ca8                CDCDSerial_Read
  .text.CDCDSerial_Write
-                0x00402cc8       0x20 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00402cc8       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                 0x00402cc8                CDCDSerial_Write
  .text.CDCDSerial_LineCodingIsToChange
-                0x00402ce8        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00402ce8        0x4 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                 0x00402ce8                CDCDSerial_LineCodingIsToChange
  .text.CDCDSerial_ControlLineStateChanged
-                0x00402cec        0x2 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00402cec        0x2 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                 0x00402cec                CDCDSerial_ControlLineStateChanged
  *fill*         0x00402cee        0x2 00
  .text.CDCDSerial_EventHandler
-                0x00402cf0       0x34 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00402cf0       0x34 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
  .text.USBDDriverCallbacks_InterfaceSettingChanged
-                0x00402d24        0x2 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+                0x00402d24        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
                 0x00402d24                USBDDriverCallbacks_InterfaceSettingChanged
  *fill*         0x00402d26        0x2 00
  .text.CDCDSerialDriver_Initialize
-                0x00402d28       0x30 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+                0x00402d28       0x30 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
                 0x00402d28                CDCDSerialDriver_Initialize
  .text.CDCDSerialDriver_ConfigurationChangedHandler
-                0x00402d58       0x24 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+                0x00402d58       0x24 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
                 0x00402d58                CDCDSerialDriver_ConfigurationChangedHandler
  .text.CDCDSerialDriver_RequestHandler
-                0x00402d7c       0x28 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+                0x00402d7c       0x28 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
                 0x00402d7c                CDCDSerialDriver_RequestHandler
  .text.USBGenericRequest_GetType
-                0x00402da4        0xa ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402da4        0xa libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402da4                USBGenericRequest_GetType
  .text.USBGenericRequest_GetRequest
-                0x00402dae        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402dae        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402dae                USBGenericRequest_GetRequest
  .text.USBGenericRequest_GetValue
-                0x00402db2        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402db2        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402db2                USBGenericRequest_GetValue
  .text.USBGenericRequest_GetIndex
-                0x00402db6        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402db6        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402db6                USBGenericRequest_GetIndex
  .text.USBGenericRequest_GetLength
-                0x00402dba        0x4 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402dba        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402dba                USBGenericRequest_GetLength
  *fill*         0x00402dbe        0x2 00
  .text.USBGenericRequest_GetEndpointNumber
-                0x00402dc0       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402dc0       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402dc0                USBGenericRequest_GetEndpointNumber
  .text.USBGenericRequest_GetRecipient
-                0x00402dd0        0x8 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402dd0        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402dd0                USBGenericRequest_GetRecipient
  .text.USBGenericRequest_GetDirection
-                0x00402dd8        0x6 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402dd8        0x6 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402dd8                USBGenericRequest_GetDirection
  *fill*         0x00402dde        0x2 00
  .text.USBGetDescriptorRequest_GetDescriptorType
-                0x00402de0       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402de0       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402de0                USBGetDescriptorRequest_GetDescriptorType
  .text.USBGetDescriptorRequest_GetDescriptorIndex
-                0x00402df0       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402df0       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402df0                USBGetDescriptorRequest_GetDescriptorIndex
  .text.USBSetAddressRequest_GetAddress
-                0x00402e00       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402e00       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402e00                USBSetAddressRequest_GetAddress
  .text.USBSetConfigurationRequest_GetConfiguration
-                0x00402e10       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402e10       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402e10                USBSetConfigurationRequest_GetConfiguration
  .text.USBInterfaceRequest_GetInterface
-                0x00402e20       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402e20       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402e20                USBInterfaceRequest_GetInterface
  .text.USBInterfaceRequest_GetAlternateSetting
-                0x00402e30       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402e30       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402e30                USBInterfaceRequest_GetAlternateSetting
  .text.USBFeatureRequest_GetFeatureSelector
-                0x00402e40       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00402e40       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                 0x00402e40                USBFeatureRequest_GetFeatureSelector
  .text._Interfaces_Parse
-                0x00402e50       0xa6 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00402e50       0xa6 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
  *fill*         0x00402ef6        0x2 00
  .text._SetLineCodingCallback
-                0x00402ef8       0x48 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00402ef8       0x48 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
  .text.CDCDSerialPort_Initialize
-                0x00402f40       0x34 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00402f40       0x34 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
                 0x00402f40                CDCDSerialPort_Initialize
  .text.CDCDSerialPort_ParseInterfaces
-                0x00402f74       0x20 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00402f74       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
                 0x00402f74                CDCDSerialPort_ParseInterfaces
  .text.CDCDSerialPort_RequestHandler
-                0x00402f94       0x9c ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00402f94       0x9c libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
                 0x00402f94                CDCDSerialPort_RequestHandler
  .text.CDCDSerialPort_Read
-                0x00403030       0x18 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00403030       0x18 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
                 0x00403030                CDCDSerialPort_Read
  .text.CDCDSerialPort_Write
-                0x00403048       0x18 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00403048       0x18 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
                 0x00403048                CDCDSerialPort_Write
  .text.CDCLineCoding_Initialize
-                0x00403060        0xe ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+                0x00403060        0xe libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
                 0x00403060                CDCLineCoding_Initialize
  *fill*         0x0040306e        0x2 00
  .text.NVIC_SetPriority
-                0x00403070       0x28 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403070       0x28 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
  .text.PioInterruptHandler
-                0x00403098       0x6c ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403098       0x6c libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                 0x00403098                PioInterruptHandler
  .text.PIOA_IrqHandler
-                0x00403104       0x24 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403104       0x24 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                 0x00403104                PIOA_IrqHandler
  .text.PIOB_IrqHandler
-                0x00403128       0x14 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403128       0x14 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                 0x00403128                PIOB_IrqHandler
  .text.PIOC_IrqHandler
-                0x0040313c       0x14 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x0040313c       0x14 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                 0x0040313c                PIOC_IrqHandler
  .text.PIO_InitializeInterrupts
-                0x00403150       0x98 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403150       0x98 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                 0x00403150                PIO_InitializeInterrupts
  .text.PIO_ConfigureIt
-                0x004031e8       0x84 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x004031e8       0x84 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                 0x004031e8                PIO_ConfigureIt
  .text.PIO_EnableIt
-                0x0040326c       0x70 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x0040326c       0x70 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                 0x0040326c                PIO_EnableIt
  .text.IrqHandlerNotUsed
-                0x004032dc        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032dc        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032dc                IrqHandlerNotUsed
  .text.NMI_Handler
-                0x004032de        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032de        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032de                NMI_Handler
  .text.HardFault_Handler
-                0x004032e0        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032e0        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032e0                HardFault_Handler
  .text.MemManage_Handler
-                0x004032e2        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032e2        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032e2                MemManage_Handler
  .text.BusFault_Handler
-                0x004032e4        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032e4        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032e4                BusFault_Handler
  .text.UsageFault_Handler
-                0x004032e6        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032e6        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032e6                UsageFault_Handler
  .text.SVC_Handler
-                0x004032e8        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032e8        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032e8                SVC_Handler
  .text.DebugMon_Handler
-                0x004032ea        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032ea        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032ea                DebugMon_Handler
  .text.PendSV_Handler
-                0x004032ec        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032ec        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032ec                PendSV_Handler
  .text.SUPC_IrqHandler
-                0x004032ee        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032ee        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032ee                SUPC_IrqHandler
  .text.RSTC_IrqHandler
-                0x004032f0        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032f0        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032f0                RSTC_IrqHandler
  .text.RTC_IrqHandler
-                0x004032f2        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032f2        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032f2                RTC_IrqHandler
  .text.RTT_IrqHandler
-                0x004032f4        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032f4        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032f4                RTT_IrqHandler
  .text.WDT_IrqHandler
-                0x004032f6        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032f6        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032f6                WDT_IrqHandler
  .text.PMC_IrqHandler
-                0x004032f8        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032f8        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032f8                PMC_IrqHandler
  .text.EEFC_IrqHandler
-                0x004032fa        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032fa        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032fa                EEFC_IrqHandler
  .text.UART0_IrqHandler
-                0x004032fc        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032fc        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032fc                UART0_IrqHandler
  .text.UART1_IrqHandler
-                0x004032fe        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x004032fe        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x004032fe                UART1_IrqHandler
  .text.SMC_IrqHandler
-                0x00403300        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403300        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403300                SMC_IrqHandler
  .text.USART0_IrqHandler
-                0x00403302        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403302        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403302                USART0_IrqHandler
  .text.USART1_IrqHandler
-                0x00403304        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403304        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403304                USART1_IrqHandler
  .text.MCI_IrqHandler
-                0x00403306        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403306        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403306                MCI_IrqHandler
  .text.TWI0_IrqHandler
-                0x00403308        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403308        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403308                TWI0_IrqHandler
  .text.TWI1_IrqHandler
-                0x0040330a        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x0040330a        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x0040330a                TWI1_IrqHandler
  .text.SPI_IrqHandler
-                0x0040330c        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x0040330c        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x0040330c                SPI_IrqHandler
  .text.SSC_IrqHandler
-                0x0040330e        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x0040330e        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x0040330e                SSC_IrqHandler
  .text.TC1_IrqHandler
-                0x00403310        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403310        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403310                TC1_IrqHandler
  .text.TC2_IrqHandler
-                0x00403312        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403312        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403312                TC2_IrqHandler
  .text.TC3_IrqHandler
-                0x00403314        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403314        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403314                TC3_IrqHandler
  .text.TC4_IrqHandler
-                0x00403316        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403316        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403316                TC4_IrqHandler
  .text.TC5_IrqHandler
-                0x00403318        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403318        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403318                TC5_IrqHandler
  .text.ADC_IrqHandler
-                0x0040331a        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x0040331a        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x0040331a                ADC_IrqHandler
  .text.DAC_IrqHandler
-                0x0040331c        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x0040331c        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x0040331c                DAC_IrqHandler
  .text.PWM_IrqHandler
-                0x0040331e        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x0040331e        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x0040331e                PWM_IrqHandler
  .text.CRCCU_IrqHandler
-                0x00403320        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403320        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403320                CRCCU_IrqHandler
  .text.ACC_IrqHandler
-                0x00403322        0x2 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403322        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                 0x00403322                ACC_IrqHandler
  .text.PIO_Configure
-                0x00403324      0x14c ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+                0x00403324      0x14c libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
                 0x00403324                PIO_Configure
- .text.PIO_Get  0x00403470       0x1c ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .text.PIO_Get  0x00403470       0x1c libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
                 0x00403470                PIO_Get
  .text.PMC_EnablePeripheral
-                0x0040348c       0x5c ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x0040348c       0x5c libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
                 0x0040348c                PMC_EnablePeripheral
  .text.PMC_DisablePeripheral
-                0x004034e8       0x58 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x004034e8       0x58 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
                 0x004034e8                PMC_DisablePeripheral
  .text.PMC_IsPeriphEnabled
-                0x00403540       0x4c ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x00403540       0x4c libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
                 0x00403540                PMC_IsPeriphEnabled
  .text.TC_Configure
-                0x0040358c       0x38 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x0040358c       0x38 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
                 0x0040358c                TC_Configure
  .text.TC_Start
-                0x004035c4       0x2c ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x004035c4       0x2c libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
                 0x004035c4                TC_Start
- .text.TC_Stop  0x004035f0       0x2c ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .text.TC_Stop  0x004035f0       0x2c libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
                 0x004035f0                TC_Stop
  .text.TC_FindMckDivisor
-                0x0040361c       0x70 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x0040361c       0x70 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
                 0x0040361c                TC_FindMckDivisor
  .text.PIO_CaptureHandler
-                0x0040368c       0x60 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                0x0040368c       0x60 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
                 0x0040368c                PIO_CaptureHandler
  .text          0x004036ec       0x54 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
                 0x004036ec                __assert_func
@@ -1498,20 +1522,20 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
                 0x0041158c                cdcdSerialDriverDescriptors
  .rodata        0x004115b4       0xcc build/obj/flash_main.o
  .rodata.str1.1
-                0x00411680       0x69 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00411680       0x69 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .rodata.str1.1
-                0x004116e9       0x30 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004116e9       0x30 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
  .rodata.str1.1
-                0x00411719       0xef ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .rodata        0x00411808       0x3f ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00411719       0xef libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .rodata        0x00411808       0x3f libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
  .rodata.str1.1
-                0x00411847       0x67 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .rodata        0x004118ae       0x3f ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x00411847       0x67 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .rodata        0x004118ae       0x3f libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
  .rodata.str1.1
-                0x004118ed       0x17 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .rodata        0x00411904       0x1e ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x004118ed       0x17 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .rodata        0x00411904       0x1e libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
  .rodata.str1.1
-                0x00411922       0x51 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x00411922       0x51 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
  *fill*         0x00411973        0x1 00
  .rodata.str1.4
                 0x00411974       0x3f /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
@@ -1682,15 +1706,15 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
  .bss           0x200005ec      0x10c build/obj/flash_usb_console.o
  .bss           0x200006f8        0xc build/obj/flash_led.o
  .bss           0x20000704        0x4 build/obj/flash_timetick.o
- .bss           0x20000708       0xe0 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .bss           0x200007e8        0x2 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .bss           0x20000708       0xe0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .bss           0x200007e8        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
  *fill*         0x200007ea        0x2 00
- .bss           0x200007ec       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .bss           0x200007fc       0x1c ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .bss           0x20000818        0x7 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .bss           0x200007ec       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .bss           0x200007fc       0x1c libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .bss           0x20000818        0x7 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
  *fill*         0x2000081f        0x1 00
- .bss           0x20000820       0x3c ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .bss           0x2000085c        0x4 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .bss           0x20000820       0x3c libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .bss           0x2000085c        0x4 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
  .bss           0x20000860       0x34 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
                 0x20000860                __malloc_top_pad
                 0x20000864                __malloc_current_mallinfo
@@ -1739,39 +1763,39 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .ARM.attributes
                 0x000001de       0x33 build/obj/flash_main.o
  .ARM.attributes
-                0x00000211       0x33 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00000211       0x33 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .ARM.attributes
-                0x00000244       0x33 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00000244       0x33 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
  .ARM.attributes
-                0x00000277       0x33 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00000277       0x33 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
  .ARM.attributes
-                0x000002aa       0x33 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                0x000002aa       0x33 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
  .ARM.attributes
-                0x000002dd       0x33 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x000002dd       0x33 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
  .ARM.attributes
-                0x00000310       0x33 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00000310       0x33 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
  .ARM.attributes
-                0x00000343       0x33 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+                0x00000343       0x33 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
  .ARM.attributes
-                0x00000376       0x33 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+                0x00000376       0x33 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
  .ARM.attributes
-                0x000003a9       0x33 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x000003a9       0x33 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
  .ARM.attributes
-                0x000003dc       0x33 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x000003dc       0x33 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
  .ARM.attributes
-                0x0000040f       0x33 ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+                0x0000040f       0x33 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
  .ARM.attributes
-                0x00000442       0x33 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00000442       0x33 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
  .ARM.attributes
-                0x00000475       0x33 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00000475       0x33 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
  .ARM.attributes
-                0x000004a8       0x33 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+                0x000004a8       0x33 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
  .ARM.attributes
-                0x000004db       0x33 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x000004db       0x33 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
  .ARM.attributes
-                0x0000050e       0x33 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x0000050e       0x33 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
  .ARM.attributes
-                0x00000541       0x33 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                0x00000541       0x33 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
  .ARM.attributes
                 0x00000574       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
  .ARM.attributes
@@ -1964,23 +1988,23 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .comment       0x00000000       0x31 build/obj/flash_startup.o
  .comment       0x00000000       0x31 build/obj/flash_usb_device_descriptor.o
  .comment       0x00000000       0x31 build/obj/flash_main.o
- .comment       0x00000000       0x31 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .comment       0x00000000       0x31 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .comment       0x00000000       0x31 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .comment       0x00000000       0x31 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .comment       0x00000000       0x31 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .comment       0x00000000       0x31 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .comment       0x00000000       0x31 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .comment       0x00000000       0x31 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .comment       0x00000000       0x31 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .comment       0x00000000       0x31 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .comment       0x00000000       0x31 ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .comment       0x00000000       0x31 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .comment       0x00000000       0x31 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .comment       0x00000000       0x31 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .comment       0x00000000       0x31 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .comment       0x00000000       0x31 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .comment       0x00000000       0x31 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .comment       0x00000000       0x31 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .comment       0x00000000       0x31 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .comment       0x00000000       0x31 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .comment       0x00000000       0x31 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .comment       0x00000000       0x31 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .comment       0x00000000       0x31 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_info     0x00000000     0xf482
  .debug_info    0x00000000      0x4e1 build/obj/flash_syscalls.o
@@ -1992,23 +2016,23 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .debug_info    0x000046cf      0x37b build/obj/flash_startup.o
  .debug_info    0x00004a4a      0x7bd build/obj/flash_usb_device_descriptor.o
  .debug_info    0x00005207      0x9b8 build/obj/flash_main.o
- .debug_info    0x00005bbf     0x2144 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .debug_info    0x00007d03      0x5c9 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .debug_info    0x000082cc      0xd8c ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .debug_info    0x00009058      0x181 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .debug_info    0x000091d9     0x13d8 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .debug_info    0x0000a5b1      0x9c5 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .debug_info    0x0000af76       0xd7 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .debug_info    0x0000b04d      0x563 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .debug_info    0x0000b5b0      0x3cd ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .debug_info    0x0000b97d      0xc73 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .debug_info    0x0000c5f0      0x140 ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .debug_info    0x0000c730      0xe46 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .debug_info    0x0000d576      0x3f0 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .debug_info    0x0000d966      0xa6c ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .debug_info    0x0000e3d2      0x44d ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .debug_info    0x0000e81f      0x488 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .debug_info    0x0000eca7      0x7db ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .debug_info    0x00005bbf     0x2144 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .debug_info    0x00007d03      0x5c9 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .debug_info    0x000082cc      0xd8c libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .debug_info    0x00009058      0x181 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .debug_info    0x000091d9     0x13d8 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .debug_info    0x0000a5b1      0x9c5 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .debug_info    0x0000af76       0xd7 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .debug_info    0x0000b04d      0x563 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .debug_info    0x0000b5b0      0x3cd libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .debug_info    0x0000b97d      0xc73 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .debug_info    0x0000c5f0      0x140 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .debug_info    0x0000c730      0xe46 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .debug_info    0x0000d576      0x3f0 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .debug_info    0x0000d966      0xa6c libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .debug_info    0x0000e3d2      0x44d libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .debug_info    0x0000e81f      0x488 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .debug_info    0x0000eca7      0x7db libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_abbrev   0x00000000     0x2722
  .debug_abbrev  0x00000000      0x10f build/obj/flash_syscalls.o
@@ -2020,23 +2044,23 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .debug_abbrev  0x000009f8       0xf6 build/obj/flash_startup.o
  .debug_abbrev  0x00000aee       0xdc build/obj/flash_usb_device_descriptor.o
  .debug_abbrev  0x00000bca      0x18a build/obj/flash_main.o
- .debug_abbrev  0x00000d54      0x3c3 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .debug_abbrev  0x00001117      0x10a ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .debug_abbrev  0x00001221      0x265 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .debug_abbrev  0x00001486       0xb3 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .debug_abbrev  0x00001539      0x309 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .debug_abbrev  0x00001842      0x192 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .debug_abbrev  0x000019d4       0x74 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .debug_abbrev  0x00001a48       0xf6 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .debug_abbrev  0x00001b3e       0xd0 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .debug_abbrev  0x00001c0e      0x264 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .debug_abbrev  0x00001e72       0x95 ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .debug_abbrev  0x00001f07      0x256 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .debug_abbrev  0x0000215d       0x6e ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .debug_abbrev  0x000021cb      0x1d5 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .debug_abbrev  0x000023a0       0xf4 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .debug_abbrev  0x00002494      0x131 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .debug_abbrev  0x000025c5      0x15d ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .debug_abbrev  0x00000d54      0x3c3 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .debug_abbrev  0x00001117      0x10a libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .debug_abbrev  0x00001221      0x265 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .debug_abbrev  0x00001486       0xb3 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .debug_abbrev  0x00001539      0x309 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .debug_abbrev  0x00001842      0x192 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .debug_abbrev  0x000019d4       0x74 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .debug_abbrev  0x00001a48       0xf6 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .debug_abbrev  0x00001b3e       0xd0 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .debug_abbrev  0x00001c0e      0x264 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .debug_abbrev  0x00001e72       0x95 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .debug_abbrev  0x00001f07      0x256 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .debug_abbrev  0x0000215d       0x6e libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .debug_abbrev  0x000021cb      0x1d5 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .debug_abbrev  0x000023a0       0xf4 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .debug_abbrev  0x00002494      0x131 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .debug_abbrev  0x000025c5      0x15d libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_loc      0x00000000     0x45e7
  .debug_loc     0x00000000      0x25c build/obj/flash_syscalls.o
@@ -2047,21 +2071,21 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .debug_loc     0x00000a4c      0x19c build/obj/flash_timetick.o
  .debug_loc     0x00000be8       0x38 build/obj/flash_startup.o
  .debug_loc     0x00000c20       0x38 build/obj/flash_main.o
- .debug_loc     0x00000c58     0x1666 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .debug_loc     0x000022be      0x2fe ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .debug_loc     0x000025bc      0x3db ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .debug_loc     0x00002997       0x3e ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .debug_loc     0x000029d5      0x776 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .debug_loc     0x0000314b      0x369 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .debug_loc     0x000034b4       0xfe ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .debug_loc     0x000035b2      0x250 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .debug_loc     0x00003802      0x548 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .debug_loc     0x00003d4a       0x1f ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .debug_loc     0x00003d69      0x2e3 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .debug_loc     0x0000404c      0x24d ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .debug_loc     0x00004299      0x102 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .debug_loc     0x0000439b      0x1b9 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .debug_loc     0x00004554       0x93 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .debug_loc     0x00000c58     0x1666 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .debug_loc     0x000022be      0x2fe libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .debug_loc     0x000025bc      0x3db libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .debug_loc     0x00002997       0x3e libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .debug_loc     0x000029d5      0x776 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .debug_loc     0x0000314b      0x369 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .debug_loc     0x000034b4       0xfe libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .debug_loc     0x000035b2      0x250 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .debug_loc     0x00003802      0x548 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .debug_loc     0x00003d4a       0x1f libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .debug_loc     0x00003d69      0x2e3 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .debug_loc     0x0000404c      0x24d libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .debug_loc     0x00004299      0x102 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .debug_loc     0x0000439b      0x1b9 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .debug_loc     0x00004554       0x93 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_aranges  0x00000000      0xa00
  .debug_aranges
@@ -2081,39 +2105,39 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .debug_aranges
                 0x00000278       0x20 build/obj/flash_main.o
  .debug_aranges
-                0x00000298       0xd8 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00000298       0xd8 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .debug_aranges
-                0x00000370       0x80 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00000370       0x80 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
  .debug_aranges
-                0x000003f0       0xb0 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x000003f0       0xb0 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
  .debug_aranges
-                0x000004a0       0x40 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                0x000004a0       0x40 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
  .debug_aranges
-                0x000004e0       0x58 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x000004e0       0x58 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
  .debug_aranges
-                0x00000538       0x78 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00000538       0x78 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
  .debug_aranges
-                0x000005b0       0x28 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+                0x000005b0       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
  .debug_aranges
-                0x000005d8       0x30 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+                0x000005d8       0x30 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
  .debug_aranges
-                0x00000608       0x98 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00000608       0x98 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
  .debug_aranges
-                0x000006a0       0x70 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x000006a0       0x70 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
  .debug_aranges
-                0x00000710       0x20 ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+                0x00000710       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
  .debug_aranges
-                0x00000730       0x60 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00000730       0x60 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
  .debug_aranges
-                0x00000790      0x168 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00000790      0x168 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
  .debug_aranges
-                0x000008f8       0x48 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+                0x000008f8       0x48 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
  .debug_aranges
-                0x00000940       0x40 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x00000940       0x40 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
  .debug_aranges
-                0x00000980       0x38 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x00000980       0x38 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
  .debug_aranges
-                0x000009b8       0x48 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                0x000009b8       0x48 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_ranges   0x00000000      0xb60
  .debug_ranges  0x00000000       0x60 build/obj/flash_syscalls.o
@@ -2124,104 +2148,104 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .debug_ranges  0x000001b0       0x48 build/obj/flash_timetick.o
  .debug_ranges  0x000001f8       0x10 build/obj/flash_startup.o
  .debug_ranges  0x00000208       0x10 build/obj/flash_main.o
- .debug_ranges  0x00000218      0x308 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .debug_ranges  0x00000520       0x88 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .debug_ranges  0x000005a8       0xa0 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .debug_ranges  0x00000648       0x30 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .debug_ranges  0x00000678       0x78 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .debug_ranges  0x000006f0       0x68 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .debug_ranges  0x00000758       0x18 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .debug_ranges  0x00000770       0x20 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .debug_ranges  0x00000790       0x88 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .debug_ranges  0x00000818       0x78 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .debug_ranges  0x00000890       0x10 ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .debug_ranges  0x000008a0       0x88 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .debug_ranges  0x00000928      0x158 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .debug_ranges  0x00000a80       0x50 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .debug_ranges  0x00000ad0       0x30 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .debug_ranges  0x00000b00       0x28 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .debug_ranges  0x00000b28       0x38 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .debug_ranges  0x00000218      0x308 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .debug_ranges  0x00000520       0x88 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .debug_ranges  0x000005a8       0xa0 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .debug_ranges  0x00000648       0x30 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .debug_ranges  0x00000678       0x78 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .debug_ranges  0x000006f0       0x68 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .debug_ranges  0x00000758       0x18 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .debug_ranges  0x00000770       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .debug_ranges  0x00000790       0x88 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .debug_ranges  0x00000818       0x78 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .debug_ranges  0x00000890       0x10 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .debug_ranges  0x000008a0       0x88 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .debug_ranges  0x00000928      0x158 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .debug_ranges  0x00000a80       0x50 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .debug_ranges  0x00000ad0       0x30 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .debug_ranges  0x00000b00       0x28 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .debug_ranges  0x00000b28       0x38 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
-.debug_line     0x00000000     0x3526
- .debug_line    0x00000000      0x1ba build/obj/flash_syscalls.o
- .debug_line    0x000001ba      0x1ac build/obj/flash_system.o
- .debug_line    0x00000366      0x186 build/obj/flash_uart_console.o
- .debug_line    0x000004ec      0x3e7 build/obj/flash_usb_console.o
- .debug_line    0x000008d3      0x219 build/obj/flash_led.o
- .debug_line    0x00000aec      0x18a build/obj/flash_timetick.o
- .debug_line    0x00000c76      0x10b build/obj/flash_startup.o
- .debug_line    0x00000d81      0x122 build/obj/flash_usb_device_descriptor.o
- .debug_line    0x00000ea3      0x216 build/obj/flash_main.o
- .debug_line    0x000010b9      0x72d ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .debug_line    0x000017e6      0x1d4 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .debug_line    0x000019ba      0x31f ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .debug_line    0x00001cd9      0x10a ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .debug_line    0x00001de3      0x313 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .debug_line    0x000020f6      0x1f8 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .debug_line    0x000022ee       0xc3 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .debug_line    0x000023b1      0x120 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .debug_line    0x000024d1      0x1ce ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .debug_line    0x0000269f      0x25b ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .debug_line    0x000028fa       0xca ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .debug_line    0x000029c4      0x285 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .debug_line    0x00002c49      0x2e8 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .debug_line    0x00002f31      0x1bf ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .debug_line    0x000030f0      0x154 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .debug_line    0x00003244      0x14e ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .debug_line    0x00003392      0x194 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+.debug_line     0x00000000     0x34f0
+ .debug_line    0x00000000      0x1b7 build/obj/flash_syscalls.o
+ .debug_line    0x000001b7      0x1a6 build/obj/flash_system.o
+ .debug_line    0x0000035d      0x180 build/obj/flash_uart_console.o
+ .debug_line    0x000004dd      0x3de build/obj/flash_usb_console.o
+ .debug_line    0x000008bb      0x213 build/obj/flash_led.o
+ .debug_line    0x00000ace      0x184 build/obj/flash_timetick.o
+ .debug_line    0x00000c52      0x105 build/obj/flash_startup.o
+ .debug_line    0x00000d57      0x11c build/obj/flash_usb_device_descriptor.o
+ .debug_line    0x00000e73      0x210 build/obj/flash_main.o
+ .debug_line    0x00001083      0x72d libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .debug_line    0x000017b0      0x1d4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .debug_line    0x00001984      0x31f libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .debug_line    0x00001ca3      0x10a libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .debug_line    0x00001dad      0x313 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .debug_line    0x000020c0      0x1f8 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .debug_line    0x000022b8       0xc3 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .debug_line    0x0000237b      0x120 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .debug_line    0x0000249b      0x1ce libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .debug_line    0x00002669      0x25b libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .debug_line    0x000028c4       0xca libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .debug_line    0x0000298e      0x285 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .debug_line    0x00002c13      0x2e8 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .debug_line    0x00002efb      0x1bf libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .debug_line    0x000030ba      0x154 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .debug_line    0x0000320e      0x14e libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .debug_line    0x0000335c      0x194 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
-.debug_str      0x00000000     0x317a
- .debug_str     0x00000000      0x1d1 build/obj/flash_syscalls.o
-                                0x237 (size before relaxing)
- .debug_str     0x000001d1      0x1d8 build/obj/flash_system.o
-                                0x294 (size before relaxing)
- .debug_str     0x000003a9      0x3e6 build/obj/flash_uart_console.o
-                                0x5fa (size before relaxing)
- .debug_str     0x0000078f      0xa97 build/obj/flash_usb_console.o
-                               0x1029 (size before relaxing)
- .debug_str     0x00001226      0x143 build/obj/flash_led.o
-                                0x821 (size before relaxing)
- .debug_str     0x00001369      0x118 build/obj/flash_timetick.o
-                                0x40c (size before relaxing)
- .debug_str     0x00001481       0x7e build/obj/flash_startup.o
-                                0x199 (size before relaxing)
- .debug_str     0x000014ff      0x2cb build/obj/flash_usb_device_descriptor.o
-                                0x6d2 (size before relaxing)
- .debug_str     0x000017ca       0x21 build/obj/flash_main.o
-                                0x4a9 (size before relaxing)
- .debug_str     0x000017eb      0x510 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+.debug_str      0x00000000     0x318f
+ .debug_str     0x00000000      0x1e6 build/obj/flash_syscalls.o
+                                0x24c (size before relaxing)
+ .debug_str     0x000001e6      0x1d8 build/obj/flash_system.o
+                                0x2a9 (size before relaxing)
+ .debug_str     0x000003be      0x3e6 build/obj/flash_uart_console.o
+                                0x60f (size before relaxing)
+ .debug_str     0x000007a4      0xa97 build/obj/flash_usb_console.o
+                               0x103e (size before relaxing)
+ .debug_str     0x0000123b      0x143 build/obj/flash_led.o
+                                0x836 (size before relaxing)
+ .debug_str     0x0000137e      0x118 build/obj/flash_timetick.o
+                                0x421 (size before relaxing)
+ .debug_str     0x00001496       0x7e build/obj/flash_startup.o
+                                0x1ae (size before relaxing)
+ .debug_str     0x00001514      0x2cb build/obj/flash_usb_device_descriptor.o
+                                0x6e7 (size before relaxing)
+ .debug_str     0x000017df       0x21 build/obj/flash_main.o
+                                0x4be (size before relaxing)
+ .debug_str     0x00001800      0x510 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                                 0xc98 (size before relaxing)
- .debug_str     0x00001cfb      0x262 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .debug_str     0x00001d10      0x262 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                                 0x504 (size before relaxing)
- .debug_str     0x00001f5d      0x154 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .debug_str     0x00001f72      0x154 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                                 0x7d3 (size before relaxing)
- .debug_str     0x000020b1       0x59 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .debug_str     0x000020c6       0x59 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
                                 0x19a (size before relaxing)
- .debug_str     0x0000210a      0x218 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .debug_str     0x0000211f      0x218 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
                                 0xb35 (size before relaxing)
- .debug_str     0x00002322      0x26f ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .debug_str     0x00002337      0x26f libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                                 0x79d (size before relaxing)
- .debug_str     0x00002591       0x53 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .debug_str     0x000025a6       0x53 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
                                 0x144 (size before relaxing)
- .debug_str     0x000025e4       0x89 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .debug_str     0x000025f9       0x89 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
                                 0x480 (size before relaxing)
- .debug_str     0x0000266d      0x231 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .debug_str     0x00002682      0x231 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                                 0x33a (size before relaxing)
- .debug_str     0x0000289e      0x1b3 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .debug_str     0x000028b3      0x1b3 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
                                 0x901 (size before relaxing)
- .debug_str     0x00002a51       0x51 ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .debug_str     0x00002a66       0x51 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
                                 0x167 (size before relaxing)
- .debug_str     0x00002aa2      0x12e ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .debug_str     0x00002ab7      0x12e libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                                 0x78c (size before relaxing)
- .debug_str     0x00002bd0      0x24c ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .debug_str     0x00002be5      0x24c libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                 0x36a (size before relaxing)
- .debug_str     0x00002e1c      0x104 ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .debug_str     0x00002e31      0x104 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
                                 0x4c2 (size before relaxing)
- .debug_str     0x00002f20       0x84 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .debug_str     0x00002f35       0x84 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
                                 0x296 (size before relaxing)
- .debug_str     0x00002fa4       0x8e ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .debug_str     0x00002fb9       0x8e libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
                                 0x212 (size before relaxing)
- .debug_str     0x00003032      0x148 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .debug_str     0x00003047      0x148 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
                                 0x50f (size before relaxing)
 
 .debug_frame    0x00000000     0x3008
@@ -2233,23 +2257,23 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .debug_frame   0x0000061c       0xfc build/obj/flash_timetick.o
  .debug_frame   0x00000718       0x30 build/obj/flash_startup.o
  .debug_frame   0x00000748       0x30 build/obj/flash_main.o
- .debug_frame   0x00000778      0x2b8 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .debug_frame   0x00000a30      0x108 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .debug_frame   0x00000b38      0x1d8 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .debug_frame   0x00000d10       0x68 ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .debug_frame   0x00000d78       0xc0 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .debug_frame   0x00000e38      0x134 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .debug_frame   0x00000f6c       0x30 ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .debug_frame   0x00000f9c       0x60 ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .debug_frame   0x00000ffc      0x158 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .debug_frame   0x00001154      0x12c ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .debug_frame   0x00001280       0x20 ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .debug_frame   0x000012a0       0xf8 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .debug_frame   0x00001398      0x2b0 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .debug_frame   0x00001648       0x7c ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .debug_frame   0x000016c4       0x78 ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .debug_frame   0x0000173c       0x78 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .debug_frame   0x000017b4       0x84 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .debug_frame   0x00000778      0x2b8 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .debug_frame   0x00000a30      0x108 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .debug_frame   0x00000b38      0x1d8 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .debug_frame   0x00000d10       0x68 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .debug_frame   0x00000d78       0xc0 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .debug_frame   0x00000e38      0x134 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .debug_frame   0x00000f6c       0x30 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .debug_frame   0x00000f9c       0x60 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .debug_frame   0x00000ffc      0x158 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .debug_frame   0x00001154      0x12c libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .debug_frame   0x00001280       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .debug_frame   0x000012a0       0xf8 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .debug_frame   0x00001398      0x2b0 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .debug_frame   0x00001648       0x7c libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .debug_frame   0x000016c4       0x78 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .debug_frame   0x0000173c       0x78 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .debug_frame   0x000017b4       0x84 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
  .debug_frame   0x00001838       0x44 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
  .debug_frame   0x0000187c       0x58 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fiprintf.o)
  .debug_frame   0x000018d4       0x58 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fprintf.o)
@@ -2332,68 +2356,68 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
 Cross Reference Table
 
 Symbol                                            File
-ACC_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ACC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-ADC_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ADC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-BusFault_Handler                                  ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+BusFault_Handler                                  libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-CDCDSerialDriver_ConfigurationChangedHandler      ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+CDCDSerialDriver_ConfigurationChangedHandler      libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
                                                   build/obj/flash_usb_console.o
-CDCDSerialDriver_Initialize                       ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+CDCDSerialDriver_Initialize                       libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
                                                   build/obj/flash_usb_console.o
-CDCDSerialDriver_RequestHandler                   ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+CDCDSerialDriver_RequestHandler                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
                                                   build/obj/flash_usb_console.o
-CDCDSerialPort_GetControlLineState                ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerialPort_GetLineCoding                      ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerialPort_GetSerialState                     ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerialPort_Initialize                         ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerialPort_ParseInterfaces                    ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerialPort_Read                               ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerialPort_RequestHandler                     ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerialPort_SetSerialState                     ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerialPort_Write                              ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerial_ConfigureFunction                      ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-CDCDSerial_ControlLineStateChanged                ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerial_GetControlLineState                    ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerial_GetLineCoding                          ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerial_GetSerialState                         ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerial_Initialize                             ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-CDCDSerial_LineCodingIsToChange                   ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerial_Read                                   ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerialPort_GetControlLineState                libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerialPort_GetLineCoding                      libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerialPort_GetSerialState                     libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerialPort_Initialize                         libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerialPort_ParseInterfaces                    libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerialPort_Read                               libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerialPort_RequestHandler                     libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerialPort_SetSerialState                     libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerialPort_Write                              libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerial_ConfigureFunction                      libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+CDCDSerial_ControlLineStateChanged                libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerial_GetControlLineState                    libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerial_GetLineCoding                          libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerial_GetSerialState                         libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerial_Initialize                             libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+CDCDSerial_LineCodingIsToChange                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerial_Read                                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                                                   build/obj/flash_usb_console.o
-CDCDSerial_RequestHandler                         ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-CDCDSerial_SetSerialState                         ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-CDCDSerial_Write                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerial_RequestHandler                         libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+CDCDSerial_SetSerialState                         libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+CDCDSerial_Write                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                                                   build/obj/flash_usb_console.o
-CDCLineCoding_Initialize                          ../libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-CRCCU_IrqHandler                                  ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+CDCLineCoding_Initialize                          libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+CRCCU_IrqHandler                                  libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-DAC_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+DAC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-DebugMon_Handler                                  ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+DebugMon_Handler                                  libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-EEFC_IrqHandler                                   ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+EEFC_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
 GetTickCount                                      build/obj/flash_timetick.o
                                                   build/obj/flash_usb_console.o
                                                   build/obj/flash_uart_console.o
-HardFault_Handler                                 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+HardFault_Handler                                 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-IrqHandlerNotUsed                                 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+IrqHandlerNotUsed                                 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
 LED_blink                                         build/obj/flash_led.o
                                                   build/obj/flash_main.o
@@ -2410,76 +2434,76 @@ LED_set                                           build/obj/flash_led.o
 LED_tgl                                           build/obj/flash_led.o
 LEDs_configure                                    build/obj/flash_led.o
                                                   build/obj/flash_main.o
-MCI_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+MCI_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-MemManage_Handler                                 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+MemManage_Handler                                 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-NMI_Handler                                       ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+NMI_Handler                                       libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-PIOA_IrqHandler                                   ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+PIOA_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                                                   build/obj/flash_startup.o
-PIOB_IrqHandler                                   ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+PIOB_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                                                   build/obj/flash_startup.o
-PIOC_IrqHandler                                   ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+PIOC_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                                                   build/obj/flash_startup.o
-PIO_CaptureDisable                                ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
-PIO_CaptureDisableIt                              ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
-PIO_CaptureEnable                                 ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
-PIO_CaptureEnableIt                               ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
-PIO_CaptureHandler                                ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
-                                                  ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-PIO_CaptureInit                                   ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
-PIO_Clear                                         ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
-PIO_Configure                                     ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+PIO_CaptureDisable                                libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+PIO_CaptureDisableIt                              libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+PIO_CaptureEnable                                 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+PIO_CaptureEnableIt                               libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+PIO_CaptureHandler                                libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                                                  libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+PIO_CaptureInit                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+PIO_Clear                                         libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+PIO_Configure                                     libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
                                                   build/obj/flash_led.o
                                                   build/obj/flash_usb_console.o
                                                   build/obj/flash_uart_console.o
-PIO_ConfigureIt                                   ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+PIO_ConfigureIt                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                                                   build/obj/flash_usb_console.o
-PIO_DisableIt                                     ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-PIO_EnableIt                                      ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+PIO_DisableIt                                     libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+PIO_EnableIt                                      libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                                                   build/obj/flash_usb_console.o
-PIO_Get                                           ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+PIO_Get                                           libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
                                                   build/obj/flash_usb_console.o
-PIO_GetOutputDataStatus                           ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
-PIO_InitializeInterrupts                          ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+PIO_GetOutputDataStatus                           libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+PIO_InitializeInterrupts                          libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                                                   build/obj/flash_usb_console.o
-PIO_Set                                           ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
-PIO_SetDebounceFilter                             ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
-PMC_DisableAllPeripherals                         ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
-PMC_DisablePeripheral                             ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-PMC_EnableAllPeripherals                          ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
-PMC_EnablePeripheral                              ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
-                                                  ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
-                                                  ../libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
-                                                  ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-PMC_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+PIO_Set                                           libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+PIO_SetDebounceFilter                             libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+PMC_DisableAllPeripherals                         libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+PMC_DisablePeripheral                             libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+PMC_EnableAllPeripherals                          libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+PMC_EnablePeripheral                              libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                                                  libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                                                  libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+                                                  libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+PMC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-PMC_IsPeriphEnabled                               ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-PWM_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+PMC_IsPeriphEnabled                               libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+PWM_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-PendSV_Handler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+PendSV_Handler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-PioInterruptHandler                               ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-RSTC_IrqHandler                                   ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+PioInterruptHandler                               libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+RSTC_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-RTC_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+RTC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-RTT_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+RTT_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
 ResetException                                    build/obj/flash_startup.o
-SMC_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+SMC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-SPI_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+SPI_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-SSC_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+SSC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-SUPC_IrqHandler                                   ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+SUPC_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-SVC_Handler                                       ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+SVC_Handler                                       libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
 Sleep                                             build/obj/flash_timetick.o
 SysTick_Handler                                   build/obj/flash_timetick.o
@@ -2492,33 +2516,33 @@ SystemInit                                        build/obj/flash_system.o
                                                   build/obj/flash_startup.o
 TC0_IrqHandler                                    build/obj/flash_led.o
                                                   build/obj/flash_startup.o
-TC1_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+TC1_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-TC2_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+TC2_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-TC3_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+TC3_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-TC4_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+TC4_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-TC5_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+TC5_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-TC_Configure                                      ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+TC_Configure                                      libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
                                                   build/obj/flash_led.o
-TC_FindMckDivisor                                 ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+TC_FindMckDivisor                                 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
                                                   build/obj/flash_led.o
-TC_Start                                          ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+TC_Start                                          libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
                                                   build/obj/flash_led.o
-TC_Stop                                           ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+TC_Stop                                           libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
                                                   build/obj/flash_led.o
-TWI0_IrqHandler                                   ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+TWI0_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-TWI1_IrqHandler                                   ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+TWI1_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
 TimeTick_Configure                                build/obj/flash_timetick.o
                                                   build/obj/flash_main.o
-UART0_IrqHandler                                  ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+UART0_IrqHandler                                  libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-UART1_IrqHandler                                  ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+UART1_IrqHandler                                  libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
 UART_Configure                                    build/obj/flash_uart_console.o
 UART_Get                                          build/obj/flash_uart_console.o
@@ -2528,9 +2552,9 @@ UART_Put                                          build/obj/flash_uart_console.o
 UART_Puts                                         build/obj/flash_uart_console.o
                                                   build/obj/flash_syscalls.o
 UART_SetTimeout                                   build/obj/flash_uart_console.o
-USART0_IrqHandler                                 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+USART0_IrqHandler                                 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-USART1_IrqHandler                                 ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+USART1_IrqHandler                                 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
 USBC_Configure                                    build/obj/flash_usb_console.o
                                                   build/obj/flash_main.o
@@ -2544,166 +2568,166 @@ USBC_hasData                                      build/obj/flash_usb_console.o
                                                   build/obj/flash_main.o
 USBC_isConfigured                                 build/obj/flash_usb_console.o
                                                   build/obj/flash_main.o
-USBConfigurationDescriptor_GetNumInterfaces       ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-USBConfigurationDescriptor_GetTotalLength         ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBConfigurationDescriptor_IsSelfPowered          ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBConfigurationDescriptor_Parse                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBConfigurationDescriptor_GetNumInterfaces       libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+USBConfigurationDescriptor_GetTotalLength         libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBConfigurationDescriptor_IsSelfPowered          libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBConfigurationDescriptor_Parse                  libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
 USBDCallbacks_Initialized                         build/obj/flash_usb_console.o
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
 USBDCallbacks_RequestReceived                     build/obj/flash_usb_console.o
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBDCallbacks_Reset                               ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBDCallbacks_Resumed                             ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBDCallbacks_Suspended                           ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBDCallbacks_Reset                               libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBDCallbacks_Resumed                             libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBDCallbacks_Suspended                           libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
 USBDDriverCallbacks_ConfigurationChanged          build/obj/flash_usb_console.o
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBDDriverCallbacks_InterfaceSettingChanged       ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBDDriver_GetCfgDescriptors                      ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-USBDDriver_Initialize                             ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-USBDDriver_IsRemoteWakeUpEnabled                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBDDriver_RequestHandler                         ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
-USBDDriver_clearOTGFeatures                       ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBDDriver_returnOTGFeatures                      ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBD_ConfigureEndpoint                            ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBD_Connect                                      ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBDDriverCallbacks_InterfaceSettingChanged       libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBDDriver_GetCfgDescriptors                      libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+USBDDriver_Initialize                             libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+USBDDriver_IsRemoteWakeUpEnabled                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBDDriver_RequestHandler                         libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+USBDDriver_clearOTGFeatures                       libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBDDriver_returnOTGFeatures                      libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBD_ConfigureEndpoint                            libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBD_Connect                                      libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                                                   build/obj/flash_usb_console.o
-USBD_Disconnect                                   ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_Disconnect                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                                                   build/obj/flash_usb_console.o
-USBD_GetDriver                                    ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
-USBD_GetState                                     ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBD_GetDriver                                    libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+USBD_GetState                                     libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                                                   build/obj/flash_usb_console.o
-USBD_HAL_Activate                                 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_CancelIo                                 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBD_HAL_Activate                                 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_CancelIo                                 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                                                   build/obj/flash_usb_console.o
-USBD_HAL_ConfigureEP                              ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_Connect                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_Disconnect                               ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_Halt                                     ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_Init                                     ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_IsHighSpeed                              ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_Read                                     ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_RemoteWakeUp                             ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_ResetEPs                                 ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_SetAddress                               ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_SetConfiguration                         ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_SetTransferCallback                      ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_SetupMblTransfer                         ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-USBD_HAL_Stall                                    ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_Suspend                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_HAL_Write                                    ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_Halt                                         ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBD_Init                                         ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-USBD_IrqHandler                                   ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBD_HAL_ConfigureEP                              libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_Connect                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_Disconnect                               libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_Halt                                     libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_Init                                     libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_IsHighSpeed                              libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_Read                                     libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_RemoteWakeUp                             libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_ResetEPs                                 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_SetAddress                               libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_SetConfiguration                         libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_SetTransferCallback                      libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_SetupMblTransfer                         libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBD_HAL_Stall                                    libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_Suspend                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_HAL_Write                                    libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_Halt                                         libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBD_Init                                         libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+USBD_IrqHandler                                   libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                                                   build/obj/flash_startup.o
-USBD_IsHalted                                     ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_IsHighSpeed                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBD_Read                                         ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-USBD_RemoteWakeUp                                 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBD_RequestHandler                               ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-USBD_ResetHandler                                 ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-USBD_ResumeHandler                                ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-USBD_SetAddress                                   ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBD_SetConfiguration                             ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBD_Stall                                        ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBD_SuspendHandler                               ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-USBD_Unhalt                                       ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBD_Write                                        ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBEndpointDescriptor_GetDirection                ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-USBEndpointDescriptor_GetInterval                 ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-USBEndpointDescriptor_GetMaxPacketSize            ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-USBEndpointDescriptor_GetNumber                   ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-USBEndpointDescriptor_GetType                     ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-USBFeatureRequest_GetFeatureSelector              ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBFeatureRequest_GetTestSelector                 ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-USBGenericDescriptor_GetLength                    ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBGenericDescriptor_GetNextDescriptor            ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-USBGenericDescriptor_GetType                      ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-USBGenericDescriptor_Parse                        ../libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-USBGenericRequest_GetDirection                    ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-USBGenericRequest_GetEndpointNumber               ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBGenericRequest_GetIndex                        ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-USBGenericRequest_GetLength                       ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBGenericRequest_GetRecipient                    ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBGenericRequest_GetRequest                      ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBGenericRequest_GetType                         ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-USBGenericRequest_GetValue                        ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-USBGetDescriptorRequest_GetDescriptorIndex        ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBGetDescriptorRequest_GetDescriptorType         ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBInterfaceRequest_GetAlternateSetting           ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBInterfaceRequest_GetInterface                  ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBSetAddressRequest_GetAddress                   ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBSetConfigurationRequest_GetConfiguration       ../libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-UsageFault_Handler                                ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+USBD_IsHalted                                     libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_IsHighSpeed                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBD_Read                                         libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+USBD_RemoteWakeUp                                 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+USBD_RequestHandler                               libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBD_ResetHandler                                 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBD_ResumeHandler                                libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBD_SetAddress                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBD_SetConfiguration                             libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBD_Stall                                        libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBD_SuspendHandler                               libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBD_Unhalt                                       libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBD_Write                                        libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBEndpointDescriptor_GetDirection                libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBEndpointDescriptor_GetInterval                 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+USBEndpointDescriptor_GetMaxPacketSize            libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBEndpointDescriptor_GetNumber                   libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBEndpointDescriptor_GetType                     libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBFeatureRequest_GetFeatureSelector              libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBFeatureRequest_GetTestSelector                 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+USBGenericDescriptor_GetLength                    libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBGenericDescriptor_GetNextDescriptor            libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+USBGenericDescriptor_GetType                      libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+USBGenericDescriptor_Parse                        libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+USBGenericRequest_GetDirection                    libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+USBGenericRequest_GetEndpointNumber               libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBGenericRequest_GetIndex                        libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+USBGenericRequest_GetLength                       libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBGenericRequest_GetRecipient                    libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBGenericRequest_GetRequest                      libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBGenericRequest_GetType                         libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+USBGenericRequest_GetValue                        libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+USBGetDescriptorRequest_GetDescriptorIndex        libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBGetDescriptorRequest_GetDescriptorType         libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBInterfaceRequest_GetAlternateSetting           libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBInterfaceRequest_GetInterface                  libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBSetAddressRequest_GetAddress                   libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+USBSetConfigurationRequest_GetConfiguration       libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+UsageFault_Handler                                libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
-WDT_IrqHandler                                    ../libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+WDT_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
                                                   build/obj/flash_startup.o
 Wait                                              build/obj/flash_timetick.o
                                                   build/obj/flash_main.o
@@ -2811,10 +2835,11 @@ __ascii_mbtowc                                    /usr/local/Sourcery/bin/../lib
 __ascii_wctomb                                    /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wctomb_r.o)
 __assert                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
 __assert_func                                     /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
-                                                  ../libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
-                                                  ../libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
-                                                  ../libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
-                                                  ../libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                                                  libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                                                  libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                                                  libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                                                  libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                                                  build/obj/flash_controller.o
                                                   build/obj/flash_led.o
 __b2d                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mprec.o)
 __cmpdf2                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_arm_cmpdf2.o)
@@ -3190,9 +3215,9 @@ _impure_ptr                                       /usr/local/Sourcery/bin/../lib
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fprintf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fiprintf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                                                   build/obj/flash_main.o
                                                   build/obj/flash_usb_console.o
 _init                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crti.o
@@ -3299,6 +3324,7 @@ cdcdSerialDriverDescriptors                       build/obj/flash_usb_device_des
                                                   build/obj/flash_usb_console.o
 cleanup_glue                                      /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
 configurationDescriptorsFS                        build/obj/flash_usb_device_descriptor.o
+control                                           build/obj/flash_controller.o
 deviceDescriptor                                  build/obj/flash_usb_device_descriptor.o
 errno                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-isattyr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fstatr.o)
@@ -3318,14 +3344,14 @@ fflush                                            /usr/local/Sourcery/bin/../lib
 fiprintf                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fiprintf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
 fprintf                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fprintf.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                                                   build/obj/flash_main.o
 fputc                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputc.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
 fputs                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputs.o)
-                                                  ../libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
 fputwc                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputwc.o)
 free                                              /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-malloc.o)
 fwrite                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwrite.o)
@@ -3374,6 +3400,7 @@ memset                                            /usr/local/Sourcery/bin/../lib
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiscanf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfscanf.o)
+mode                                              build/obj/flash_controller.o
 nanf                                              /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sf_nan.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfscanf.o)
 pdwStack                                          build/obj/flash_startup.o
@@ -3410,6 +3437,8 @@ strtod                                            /usr/local/Sourcery/bin/../lib
 strtof                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtod.o)
 strtol                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtol.o)
 strtoul                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoul.o)
+tris                                              build/obj/flash_controller.o
+tristate                                          build/obj/flash_controller.o
 ungetc                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ungetc.o)
 vfiprintf                                         /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
 vfprintf                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfprintf.o)

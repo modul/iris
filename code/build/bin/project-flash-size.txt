@@ -8,6 +8,7 @@
     208	   4304	      0	   4512	   11a0	build/obj/flash_startup.o
     160	      8	      0	    168	     a8	build/obj/flash_usb_device_descriptor.o
     884	      0	      0	    884	    374	build/obj/flash_main.o
+   1064	      0	      0	   1064	    428	build/obj/flash_controller.o
   73208	   1480	   5072	  79760	  13790	build/bin/project-flash.elf
 build/bin/project-flash.elf  :
 section             size        addr
@@ -23,9 +24,9 @@ section             size        addr
 .debug_loc         17895           0
 .debug_aranges      2560           0
 .debug_ranges       2912           0
-.debug_line        13606           0
-.debug_str         12666           0
+.debug_line        13552           0
+.debug_str         12687           0
 .debug_frame       12296           0
-Total             214396
+Total             214363
 
 

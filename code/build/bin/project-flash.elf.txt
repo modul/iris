@@ -486,7 +486,7 @@
 00409ef8 T free
 00403cdc T fwrite
 00403d5c T gets
-200005e4 b heap.7557
+200005e4 b heap.7559
 20000018 d impure_data
 00403d6c T iprintf
 00409d14 T iswspace

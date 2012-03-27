@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccFeDWay.s 			page 1
+ARM GAS  /tmp/cchIDtEX.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
   51 0050 00000000 		.word	WDT_IrqHandler
   52 0054 00000000 		.word	PMC_IrqHandler
   53 0058 00000000 		.word	EEFC_IrqHandler
-ARM GAS  /tmp/ccFeDWay.s 			page 2
+ARM GAS  /tmp/cchIDtEX.s 			page 2
 
 
   54 005c 00000000 		.word	IrqHandlerNotUsed
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
   17:board/startup.c ****  * DISCLAIMER: THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR
   18:board/startup.c ****  * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
   19:board/startup.c ****  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
-ARM GAS  /tmp/ccFeDWay.s 			page 3
+ARM GAS  /tmp/cchIDtEX.s 			page 3
 
 
   20:board/startup.c ****  * DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT, INDIRECT,
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
   74:board/startup.c ****     HardFault_Handler,
   75:board/startup.c ****     MemManage_Handler,
   76:board/startup.c ****     BusFault_Handler,
-ARM GAS  /tmp/ccFeDWay.s 			page 4
+ARM GAS  /tmp/cchIDtEX.s 			page 4
 
 
   77:board/startup.c ****     UsageFault_Handler,
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
   93              		.cfi_startproc
   94              		@ args = 0, pretend = 0, frame = 8
   95              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  /tmp/ccFeDWay.s 			page 5
+ARM GAS  /tmp/cchIDtEX.s 			page 5
 
 
   96 0000 80B5     		push	{r7, lr}
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  136              	.L3:
  141:board/startup.c ****         for ( ; pDest < &_erelocate ; )
  137              		.loc 1 141 0 discriminator 1
-ARM GAS  /tmp/ccFeDWay.s 			page 6
+ARM GAS  /tmp/cchIDtEX.s 			page 6
 
 
  138 0040 3A68     		ldr	r2, [r7, #0]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  177 0098 6FF06043 		mvn	r3, #-536870912
  178 009c 9A42     		cmp	r2, r3
  179 009e 12D9     		bls	.L7
-ARM GAS  /tmp/ccFeDWay.s 			page 7
+ARM GAS  /tmp/cchIDtEX.s 			page 7
 
 
  180              		.loc 1 157 0 is_stmt 0 discriminator 1
@@ -403,8 +403,8 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  205              		.text
  206              	.Letext0:
  207              		.file 2 "/usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/
- 208              		.file 3 "../libchip/cmsis/core_cm3.h"
- 209              		.file 4 "../libchip/include/exceptions.h"
+ 208              		.file 3 "libchip/cmsis/core_cm3.h"
+ 209              		.file 4 "libchip/include/exceptions.h"
  210              		.section	.debug_info,"",%progbits
  211              	.Ldebug_info0:
  212 0000 77030000 		.4byte	0x377
@@ -412,13 +412,13 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  214 0006 00000000 		.4byte	.Ldebug_abbrev0
  215 000a 04       		.byte	0x4
  216 000b 01       		.uleb128 0x1
- 217 000c 4C010000 		.4byte	.LASF38
+ 217 000c 61010000 		.4byte	.LASF38
  218 0010 01       		.byte	0x1
- 219 0011 52000000 		.4byte	.LASF39
- 220 0015 0E000000 		.4byte	.LASF40
+ 219 0011 67000000 		.4byte	.LASF39
+ 220 0015 00000000 		.4byte	.LASF40
  221 0019 00000000 		.4byte	0
  222 001d 00000000 		.4byte	0
-ARM GAS  /tmp/ccFeDWay.s 			page 8
+ARM GAS  /tmp/cchIDtEX.s 			page 8
 
 
  223 0021 00000000 		.4byte	.Ldebug_ranges0+0
@@ -426,45 +426,45 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  225 0029 02       		.uleb128 0x2
  226 002a 01       		.byte	0x1
  227 002b 06       		.byte	0x6
- 228 002c 70010000 		.4byte	.LASF0
+ 228 002c 85010000 		.4byte	.LASF0
  229 0030 03       		.uleb128 0x3
- 230 0031 28010000 		.4byte	.LASF5
+ 230 0031 3D010000 		.4byte	.LASF5
  231 0035 02       		.byte	0x2
  232 0036 2A       		.byte	0x2a
  233 0037 3B000000 		.4byte	0x3b
  234 003b 02       		.uleb128 0x2
  235 003c 01       		.byte	0x1
  236 003d 08       		.byte	0x8
- 237 003e 89000000 		.4byte	.LASF1
+ 237 003e 9E000000 		.4byte	.LASF1
  238 0042 02       		.uleb128 0x2
  239 0043 02       		.byte	0x2
  240 0044 05       		.byte	0x5
- 241 0045 D3000000 		.4byte	.LASF2
+ 241 0045 E8000000 		.4byte	.LASF2
  242 0049 02       		.uleb128 0x2
  243 004a 02       		.byte	0x2
  244 004b 07       		.byte	0x7
- 245 004c A9000000 		.4byte	.LASF3
+ 245 004c BE000000 		.4byte	.LASF3
  246 0050 02       		.uleb128 0x2
  247 0051 04       		.byte	0x4
  248 0052 05       		.byte	0x5
- 249 0053 67010000 		.4byte	.LASF4
+ 249 0053 7C010000 		.4byte	.LASF4
  250 0057 03       		.uleb128 0x3
- 251 0058 5E010000 		.4byte	.LASF6
+ 251 0058 73010000 		.4byte	.LASF6
  252 005c 02       		.byte	0x2
  253 005d 50       		.byte	0x50
  254 005e 62000000 		.4byte	0x62
  255 0062 02       		.uleb128 0x2
  256 0063 04       		.byte	0x4
  257 0064 07       		.byte	0x7
- 258 0065 97000000 		.4byte	.LASF7
+ 258 0065 AC000000 		.4byte	.LASF7
  259 0069 02       		.uleb128 0x2
  260 006a 08       		.byte	0x8
  261 006b 05       		.byte	0x5
- 262 006c 30010000 		.4byte	.LASF8
+ 262 006c 45010000 		.4byte	.LASF8
  263 0070 02       		.uleb128 0x2
  264 0071 08       		.byte	0x8
  265 0072 07       		.byte	0x7
- 266 0073 72000000 		.4byte	.LASF9
+ 266 0073 87000000 		.4byte	.LASF9
  267 0077 04       		.uleb128 0x4
  268 0078 04       		.byte	0x4
  269 0079 05       		.byte	0x5
@@ -472,13 +472,13 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  271 007e 02       		.uleb128 0x2
  272 007f 04       		.byte	0x4
  273 0080 07       		.byte	0x7
- 274 0081 E6000000 		.4byte	.LASF10
+ 274 0081 FB000000 		.4byte	.LASF10
  275 0085 05       		.uleb128 0x5
  276 0086 8A000000 		.4byte	0x8a
  277 008a 06       		.uleb128 0x6
  278 008b 57000000 		.4byte	0x57
  279 008f 06       		.uleb128 0x6
-ARM GAS  /tmp/ccFeDWay.s 			page 9
+ARM GAS  /tmp/cchIDtEX.s 			page 9
 
 
  280 0090 57000000 		.4byte	0x57
@@ -488,7 +488,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  284 0097 9B       		.byte	0x9b
  285 0098 A7010000 		.4byte	0x1a7
  286 009c 08       		.uleb128 0x8
- 287 009d 3E010000 		.4byte	.LASF11
+ 287 009d 53010000 		.4byte	.LASF11
  288 00a1 03       		.byte	0x3
  289 00a2 9D       		.byte	0x9d
  290 00a3 85000000 		.4byte	0x85
@@ -496,7 +496,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  292 00a8 23       		.byte	0x23
  293 00a9 00       		.uleb128 0
  294 00aa 08       		.uleb128 0x8
- 295 00ab FD000000 		.4byte	.LASF12
+ 295 00ab 12010000 		.4byte	.LASF12
  296 00af 03       		.byte	0x3
  297 00b0 9E       		.byte	0x9e
  298 00b1 8F000000 		.4byte	0x8f
@@ -504,7 +504,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  300 00b6 23       		.byte	0x23
  301 00b7 04       		.uleb128 0x4
  302 00b8 08       		.uleb128 0x8
- 303 00b9 3B000000 		.4byte	.LASF13
+ 303 00b9 50000000 		.4byte	.LASF13
  304 00bd 03       		.byte	0x3
  305 00be 9F       		.byte	0x9f
  306 00bf 8F000000 		.4byte	0x8f
@@ -512,7 +512,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  308 00c4 23       		.byte	0x23
  309 00c5 08       		.uleb128 0x8
  310 00c6 08       		.uleb128 0x8
- 311 00c7 09010000 		.4byte	.LASF14
+ 311 00c7 1E010000 		.4byte	.LASF14
  312 00cb 03       		.byte	0x3
  313 00cc A0       		.byte	0xa0
  314 00cd 8F000000 		.4byte	0x8f
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  334 00f0 09       		.uleb128 0x9
  335 00f1 53485000 		.ascii	"SHP\000"
  336 00f5 03       		.byte	0x3
-ARM GAS  /tmp/ccFeDWay.s 			page 10
+ARM GAS  /tmp/cchIDtEX.s 			page 10
 
 
  337 00f6 A3       		.byte	0xa3
@@ -547,7 +547,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  340 00fc 23       		.byte	0x23
  341 00fd 18       		.uleb128 0x18
  342 00fe 08       		.uleb128 0x8
- 343 00ff 28000000 		.4byte	.LASF15
+ 343 00ff 3D000000 		.4byte	.LASF15
  344 0103 03       		.byte	0x3
  345 0104 A4       		.byte	0xa4
  346 0105 8F000000 		.4byte	0x8f
@@ -555,7 +555,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  348 010a 23       		.byte	0x23
  349 010b 24       		.uleb128 0x24
  350 010c 08       		.uleb128 0x8
- 351 010d BC000000 		.4byte	.LASF16
+ 351 010d D1000000 		.4byte	.LASF16
  352 0111 03       		.byte	0x3
  353 0112 A5       		.byte	0xa5
  354 0113 8F000000 		.4byte	0x8f
@@ -563,7 +563,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  356 0118 23       		.byte	0x23
  357 0119 28       		.uleb128 0x28
  358 011a 08       		.uleb128 0x8
- 359 011b CE000000 		.4byte	.LASF17
+ 359 011b E3000000 		.4byte	.LASF17
  360 011f 03       		.byte	0x3
  361 0120 A6       		.byte	0xa6
  362 0121 8F000000 		.4byte	0x8f
@@ -571,7 +571,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  364 0126 23       		.byte	0x23
  365 0127 2C       		.uleb128 0x2c
  366 0128 08       		.uleb128 0x8
- 367 0129 F3000000 		.4byte	.LASF18
+ 367 0129 08010000 		.4byte	.LASF18
  368 012d 03       		.byte	0x3
  369 012e A7       		.byte	0xa7
  370 012f 8F000000 		.4byte	0x8f
@@ -579,7 +579,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  372 0134 23       		.byte	0x23
  373 0135 30       		.uleb128 0x30
  374 0136 08       		.uleb128 0x8
- 375 0137 58010000 		.4byte	.LASF19
+ 375 0137 6D010000 		.4byte	.LASF19
  376 013b 03       		.byte	0x3
  377 013c A8       		.byte	0xa8
  378 013d 8F000000 		.4byte	0x8f
@@ -587,7 +587,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  380 0142 23       		.byte	0x23
  381 0143 34       		.uleb128 0x34
  382 0144 08       		.uleb128 0x8
- 383 0145 14010000 		.4byte	.LASF20
+ 383 0145 29010000 		.4byte	.LASF20
  384 0149 03       		.byte	0x3
  385 014a A9       		.byte	0xa9
  386 014b 8F000000 		.4byte	0x8f
@@ -595,10 +595,10 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  388 0150 23       		.byte	0x23
  389 0151 38       		.uleb128 0x38
  390 0152 08       		.uleb128 0x8
- 391 0153 89010000 		.4byte	.LASF21
+ 391 0153 9E010000 		.4byte	.LASF21
  392 0157 03       		.byte	0x3
  393 0158 AA       		.byte	0xaa
-ARM GAS  /tmp/ccFeDWay.s 			page 11
+ARM GAS  /tmp/cchIDtEX.s 			page 11
 
 
  394 0159 8F000000 		.4byte	0x8f
@@ -630,7 +630,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  420 0188 23       		.byte	0x23
  421 0189 4C       		.uleb128 0x4c
  422 018a 08       		.uleb128 0x8
- 423 018b 09000000 		.4byte	.LASF22
+ 423 018b 38000000 		.4byte	.LASF22
  424 018f 03       		.byte	0x3
  425 0190 AE       		.byte	0xae
  426 0191 E6010000 		.4byte	0x1e6
@@ -638,7 +638,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  428 0196 23       		.byte	0x23
  429 0197 50       		.uleb128 0x50
  430 0198 08       		.uleb128 0x8
- 431 0199 0F010000 		.4byte	.LASF23
+ 431 0199 24010000 		.4byte	.LASF23
  432 019d 03       		.byte	0x3
  433 019e AF       		.byte	0xaf
  434 019f 00020000 		.4byte	0x200
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  448 01bc 0A       		.uleb128 0xa
  449 01bd 57000000 		.4byte	0x57
  450 01c1 CC010000 		.4byte	0x1cc
-ARM GAS  /tmp/ccFeDWay.s 			page 12
+ARM GAS  /tmp/cchIDtEX.s 			page 12
 
 
  451 01c5 0B       		.uleb128 0xb
@@ -692,12 +692,12 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  479 0205 06       		.uleb128 0x6
  480 0206 F0010000 		.4byte	0x1f0
  481 020a 03       		.uleb128 0x3
- 482 020b DD000000 		.4byte	.LASF24
+ 482 020b F2000000 		.4byte	.LASF24
  483 020f 03       		.byte	0x3
  484 0210 B0       		.byte	0xb0
  485 0211 94000000 		.4byte	0x94
  486 0215 03       		.uleb128 0x3
- 487 0216 81010000 		.4byte	.LASF25
+ 487 0216 96010000 		.4byte	.LASF25
  488 021a 04       		.byte	0x4
  489 021b 2B       		.byte	0x2b
  490 021c 20020000 		.4byte	0x220
@@ -709,16 +709,16 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  496 0228 02       		.uleb128 0x2
  497 0229 01       		.byte	0x1
  498 022a 08       		.byte	0x8
- 499 022b F8000000 		.4byte	.LASF26
+ 499 022b 0D010000 		.4byte	.LASF26
  500 022f 0C       		.uleb128 0xc
  501 0230 04       		.byte	0x4
  502 0231 57000000 		.4byte	0x57
  503 0235 0E       		.uleb128 0xe
  504 0236 01       		.byte	0x1
- 505 0237 19010000 		.4byte	.LASF41
+ 505 0237 2E010000 		.4byte	.LASF41
  506 023b 01       		.byte	0x1
  507 023c 80       		.byte	0x80
-ARM GAS  /tmp/ccFeDWay.s 			page 13
+ARM GAS  /tmp/cchIDtEX.s 			page 13
 
 
  508 023d 01       		.byte	0x1
@@ -727,7 +727,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  511 0246 00000000 		.4byte	.LLST0
  512 024a 6B020000 		.4byte	0x26b
  513 024e 0F       		.uleb128 0xf
- 514 024f 7C010000 		.4byte	.LASF27
+ 514 024f 91010000 		.4byte	.LASF27
  515 0253 01       		.byte	0x1
  516 0254 82       		.byte	0x82
  517 0255 2F020000 		.4byte	0x22f
@@ -735,7 +735,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  519 025a 91       		.byte	0x91
  520 025b 74       		.sleb128 -12
  521 025c 0F       		.uleb128 0xf
- 522 025d 2E000000 		.4byte	.LASF28
+ 522 025d 43000000 		.4byte	.LASF28
  523 0261 01       		.byte	0x1
  524 0262 82       		.byte	0x82
  525 0263 2F020000 		.4byte	0x22f
@@ -744,7 +744,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  528 0269 70       		.sleb128 -16
  529 026a 00       		.byte	0
  530 026b 10       		.uleb128 0x10
- 531 026c C1000000 		.4byte	.LASF29
+ 531 026c D6000000 		.4byte	.LASF29
  532 0270 03       		.byte	0x3
  533 0271 CE06     		.2byte	0x6ce
  534 0273 79020000 		.4byte	0x279
@@ -760,66 +760,66 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  544 028c FF03     		.2byte	0x3ff
  545 028e 00       		.byte	0
  546 028f 12       		.uleb128 0x12
- 547 0290 00000000 		.4byte	.LASF30
+ 547 0290 2F000000 		.4byte	.LASF30
  548 0294 01       		.byte	0x1
  549 0295 2B       		.byte	0x2b
  550 0296 7E020000 		.4byte	0x27e
  551 029a 01       		.byte	0x1
  552 029b 01       		.byte	0x1
  553 029c 12       		.uleb128 0x12
- 554 029d 44010000 		.4byte	.LASF31
+ 554 029d 59010000 		.4byte	.LASF31
  555 02a1 01       		.byte	0x1
  556 02a2 2E       		.byte	0x2e
  557 02a3 57000000 		.4byte	0x57
  558 02a7 01       		.byte	0x1
  559 02a8 01       		.byte	0x1
  560 02a9 12       		.uleb128 0x12
- 561 02aa 02010000 		.4byte	.LASF32
+ 561 02aa 17010000 		.4byte	.LASF32
  562 02ae 01       		.byte	0x1
  563 02af 30       		.byte	0x30
  564 02b0 57000000 		.4byte	0x57
-ARM GAS  /tmp/ccFeDWay.s 			page 14
+ARM GAS  /tmp/cchIDtEX.s 			page 14
 
 
  565 02b4 01       		.byte	0x1
  566 02b5 01       		.byte	0x1
  567 02b6 12       		.uleb128 0x12
- 568 02b7 8E010000 		.4byte	.LASF33
+ 568 02b7 A3010000 		.4byte	.LASF33
  569 02bb 01       		.byte	0x1
  570 02bc 31       		.byte	0x31
  571 02bd 57000000 		.4byte	0x57
  572 02c1 01       		.byte	0x1
  573 02c2 01       		.byte	0x1
  574 02c3 12       		.uleb128 0x12
- 575 02c4 47000000 		.4byte	.LASF34
+ 575 02c4 5C000000 		.4byte	.LASF34
  576 02c8 01       		.byte	0x1
  577 02c9 32       		.byte	0x32
  578 02ca 57000000 		.4byte	0x57
  579 02ce 01       		.byte	0x1
  580 02cf 01       		.byte	0x1
  581 02d0 12       		.uleb128 0x12
- 582 02d1 34000000 		.4byte	.LASF35
+ 582 02d1 49000000 		.4byte	.LASF35
  583 02d5 01       		.byte	0x1
  584 02d6 33       		.byte	0x33
  585 02d7 57000000 		.4byte	0x57
  586 02db 01       		.byte	0x1
  587 02dc 01       		.byte	0x1
  588 02dd 12       		.uleb128 0x12
- 589 02de 40000000 		.4byte	.LASF36
+ 589 02de 55000000 		.4byte	.LASF36
  590 02e2 01       		.byte	0x1
  591 02e3 34       		.byte	0x34
  592 02e4 57000000 		.4byte	0x57
  593 02e8 01       		.byte	0x1
  594 02e9 01       		.byte	0x1
  595 02ea 10       		.uleb128 0x10
- 596 02eb C1000000 		.4byte	.LASF29
+ 596 02eb D6000000 		.4byte	.LASF29
  597 02ef 03       		.byte	0x3
  598 02f0 CE06     		.2byte	0x6ce
  599 02f2 79020000 		.4byte	0x279
  600 02f6 01       		.byte	0x1
  601 02f7 01       		.byte	0x1
  602 02f8 13       		.uleb128 0x13
- 603 02f9 00000000 		.4byte	.LASF30
+ 603 02f9 2F000000 		.4byte	.LASF30
  604 02fd 01       		.byte	0x1
  605 02fe 2B       		.byte	0x2b
  606 02ff 7E020000 		.4byte	0x27e
@@ -828,45 +828,45 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  609 0305 03       		.byte	0x3
  610 0306 00000000 		.4byte	pdwStack
  611 030a 12       		.uleb128 0x12
- 612 030b 44010000 		.4byte	.LASF31
+ 612 030b 59010000 		.4byte	.LASF31
  613 030f 01       		.byte	0x1
  614 0310 2E       		.byte	0x2e
  615 0311 57000000 		.4byte	0x57
  616 0315 01       		.byte	0x1
  617 0316 01       		.byte	0x1
  618 0317 12       		.uleb128 0x12
- 619 0318 02010000 		.4byte	.LASF32
+ 619 0318 17010000 		.4byte	.LASF32
  620 031c 01       		.byte	0x1
  621 031d 30       		.byte	0x30
-ARM GAS  /tmp/ccFeDWay.s 			page 15
+ARM GAS  /tmp/cchIDtEX.s 			page 15
 
 
  622 031e 57000000 		.4byte	0x57
  623 0322 01       		.byte	0x1
  624 0323 01       		.byte	0x1
  625 0324 12       		.uleb128 0x12
- 626 0325 8E010000 		.4byte	.LASF33
+ 626 0325 A3010000 		.4byte	.LASF33
  627 0329 01       		.byte	0x1
  628 032a 31       		.byte	0x31
  629 032b 57000000 		.4byte	0x57
  630 032f 01       		.byte	0x1
  631 0330 01       		.byte	0x1
  632 0331 12       		.uleb128 0x12
- 633 0332 47000000 		.4byte	.LASF34
+ 633 0332 5C000000 		.4byte	.LASF34
  634 0336 01       		.byte	0x1
  635 0337 32       		.byte	0x32
  636 0338 57000000 		.4byte	0x57
  637 033c 01       		.byte	0x1
  638 033d 01       		.byte	0x1
  639 033e 12       		.uleb128 0x12
- 640 033f 34000000 		.4byte	.LASF35
+ 640 033f 49000000 		.4byte	.LASF35
  641 0343 01       		.byte	0x1
  642 0344 33       		.byte	0x33
  643 0345 57000000 		.4byte	0x57
  644 0349 01       		.byte	0x1
  645 034a 01       		.byte	0x1
  646 034b 12       		.uleb128 0x12
- 647 034c 40000000 		.4byte	.LASF36
+ 647 034c 55000000 		.4byte	.LASF36
  648 0350 01       		.byte	0x1
  649 0351 34       		.byte	0x34
  650 0352 57000000 		.4byte	0x57
@@ -880,7 +880,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  658 0366 33       		.byte	0x33
  659 0367 00       		.byte	0
  660 0368 13       		.uleb128 0x13
- 661 0369 62000000 		.4byte	.LASF37
+ 661 0369 77000000 		.4byte	.LASF37
  662 036d 01       		.byte	0x1
  663 036e 43       		.byte	0x43
  664 036f 58030000 		.4byte	0x358
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  676 0004 0E       		.uleb128 0xe
  677 0005 13       		.uleb128 0x13
  678 0006 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccFeDWay.s 			page 16
+ARM GAS  /tmp/cchIDtEX.s 			page 16
 
 
  679 0007 03       		.uleb128 0x3
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  733 003d 00       		.byte	0
  734 003e 00       		.byte	0
  735 003f 06       		.uleb128 0x6
-ARM GAS  /tmp/ccFeDWay.s 			page 17
+ARM GAS  /tmp/cchIDtEX.s 			page 17
 
 
  736 0040 35       		.uleb128 0x35
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  790 0076 01       		.uleb128 0x1
  791 0077 13       		.uleb128 0x13
  792 0078 00       		.byte	0
-ARM GAS  /tmp/ccFeDWay.s 			page 18
+ARM GAS  /tmp/cchIDtEX.s 			page 18
 
 
  793 0079 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  847 00af 3A       		.uleb128 0x3a
  848 00b0 0B       		.uleb128 0xb
  849 00b1 3B       		.uleb128 0x3b
-ARM GAS  /tmp/ccFeDWay.s 			page 19
+ARM GAS  /tmp/cchIDtEX.s 			page 19
 
 
  850 00b2 0B       		.uleb128 0xb
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  904 00e8 0E       		.uleb128 0xe
  905 00e9 3A       		.uleb128 0x3a
  906 00ea 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccFeDWay.s 			page 20
+ARM GAS  /tmp/cchIDtEX.s 			page 20
 
 
  907 00eb 3B       		.uleb128 0x3b
@@ -1197,193 +1197,193 @@ ARM GAS  /tmp/ccFeDWay.s 			page 1
  960 000c 00000000 		.4byte	0
  961              		.section	.debug_line,"",%progbits
  962              	.Ldebug_line0:
- 963 0000 07010000 		.section	.debug_str,"MS",%progbits,1
-ARM GAS  /tmp/ccFeDWay.s 			page 21
+ 963 0000 01010000 		.section	.debug_str,"MS",%progbits,1
+ARM GAS  /tmp/cchIDtEX.s 			page 21
 
 
- 963      0200CD00 
+ 963      0200C700 
  963      00000201 
  963      FB0E0D00 
  963      01010101 
- 964              	.LASF30:
- 965 0000 70647753 		.ascii	"pdwStack\000"
- 965      7461636B 
- 965      00
- 966              	.LASF22:
- 967 0009 4D4D4652 		.ascii	"MMFR\000"
+ 964              	.LASF40:
+ 965 0000 2F686F6D 		.ascii	"/home/mo/doc/studium/aktuell/Diplomarbeit/code\000"
+ 965      652F6D6F 
+ 965      2F646F63 
+ 965      2F737475 
+ 965      6469756D 
+ 966              	.LASF30:
+ 967 002f 70647753 		.ascii	"pdwStack\000"
+ 967      7461636B 
  967      00
- 968              	.LASF40:
- 969 000e 2F686F6D 		.ascii	"/home/mo/armed/SAM3S/test\000"
- 969      652F6D6F 
- 969      2F61726D 
- 969      65642F53 
- 969      414D3353 
+ 968              	.LASF22:
+ 969 0038 4D4D4652 		.ascii	"MMFR\000"
+ 969      00
  970              	.LASF15:
- 971 0028 53484353 		.ascii	"SHCSR\000"
+ 971 003d 53484353 		.ascii	"SHCSR\000"
  971      5200
  972              	.LASF28:
- 973 002e 70446573 		.ascii	"pDest\000"
+ 973 0043 70446573 		.ascii	"pDest\000"
  973      7400
  974              	.LASF35:
- 975 0034 5F737A65 		.ascii	"_szero\000"
+ 975 0049 5F737A65 		.ascii	"_szero\000"
  975      726F00
  976              	.LASF13:
- 977 003b 56544F52 		.ascii	"VTOR\000"
+ 977 0050 56544F52 		.ascii	"VTOR\000"
  977      00
  978              	.LASF36:
- 979 0040 5F657A65 		.ascii	"_ezero\000"
+ 979 0055 5F657A65 		.ascii	"_ezero\000"
  979      726F00
  980              	.LASF34:
- 981 0047 5F657265 		.ascii	"_erelocate\000"
+ 981 005c 5F657265 		.ascii	"_erelocate\000"
  981      6C6F6361 
  981      746500
  982              	.LASF39:
- 983 0052 626F6172 		.ascii	"board/startup.c\000"
+ 983 0067 626F6172 		.ascii	"board/startup.c\000"
  983      642F7374 
  983      61727475 
  983      702E6300 
  984              	.LASF37:
- 985 0062 65786365 		.ascii	"exception_table\000"
+ 985 0077 65786365 		.ascii	"exception_table\000"
  985      7074696F 
  985      6E5F7461 
  985      626C6500 
  986              	.LASF9:
- 987 0072 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 987 0087 6C6F6E67 		.ascii	"long long unsigned int\000"
  987      206C6F6E 
  987      6720756E 
  987      7369676E 
  987      65642069 
  988              	.LASF1:
- 989 0089 756E7369 		.ascii	"unsigned char\000"
+ 989 009e 756E7369 		.ascii	"unsigned char\000"
  989      676E6564 
  989      20636861 
  989      7200
-ARM GAS  /tmp/ccFeDWay.s 			page 22
+ARM GAS  /tmp/cchIDtEX.s 			page 22
 
 
  990              	.LASF7:
- 991 0097 6C6F6E67 		.ascii	"long unsigned int\000"
+ 991 00ac 6C6F6E67 		.ascii	"long unsigned int\000"
  991      20756E73 
  991      69676E65 
  991      6420696E 
  991      7400
  992              	.LASF3:
- 993 00a9 73686F72 		.ascii	"short unsigned int\000"
+ 993 00be 73686F72 		.ascii	"short unsigned int\000"
  993      7420756E 
  993      7369676E 
  993      65642069 
  993      6E7400
  994              	.LASF16:
- 995 00bc 43465352 		.ascii	"CFSR\000"
+ 995 00d1 43465352 		.ascii	"CFSR\000"
  995      00
  996              	.LASF29:
- 997 00c1 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 997 00d6 49544D5F 		.ascii	"ITM_RxBuffer\000"
  997      52784275 
  997      66666572 
  997      00
  998              	.LASF17:
- 999 00ce 48465352 		.ascii	"HFSR\000"
+ 999 00e3 48465352 		.ascii	"HFSR\000"
  999      00
  1000              	.LASF2:
- 1001 00d3 73686F72 		.ascii	"short int\000"
+ 1001 00e8 73686F72 		.ascii	"short int\000"
  1001      7420696E 
  1001      7400
  1002              	.LASF24:
- 1003 00dd 5343425F 		.ascii	"SCB_Type\000"
+ 1003 00f2 5343425F 		.ascii	"SCB_Type\000"
  1003      54797065 
  1003      00
  1004              	.LASF10:
- 1005 00e6 756E7369 		.ascii	"unsigned int\000"
+ 1005 00fb 756E7369 		.ascii	"unsigned int\000"
  1005      676E6564 
  1005      20696E74 
  1005      00
  1006              	.LASF18:
- 1007 00f3 44465352 		.ascii	"DFSR\000"
+ 1007 0108 44465352 		.ascii	"DFSR\000"
  1007      00
  1008              	.LASF26:
- 1009 00f8 63686172 		.ascii	"char\000"
+ 1009 010d 63686172 		.ascii	"char\000"
  1009      00
  1010              	.LASF12:
- 1011 00fd 49435352 		.ascii	"ICSR\000"
+ 1011 0112 49435352 		.ascii	"ICSR\000"
  1011      00
  1012              	.LASF32:
- 1013 0102 5F657465 		.ascii	"_etext\000"
+ 1013 0117 5F657465 		.ascii	"_etext\000"
  1013      787400
  1014              	.LASF14:
- 1015 0109 41495243 		.ascii	"AIRCR\000"
+ 1015 011e 41495243 		.ascii	"AIRCR\000"
  1015      5200
  1016              	.LASF23:
- 1017 010f 49534152 		.ascii	"ISAR\000"
+ 1017 0124 49534152 		.ascii	"ISAR\000"
  1017      00
  1018              	.LASF20:
- 1019 0114 42464152 		.ascii	"BFAR\000"
+ 1019 0129 42464152 		.ascii	"BFAR\000"
  1019      00
-ARM GAS  /tmp/ccFeDWay.s 			page 23
+ARM GAS  /tmp/cchIDtEX.s 			page 23
 
 
  1020              	.LASF41:
- 1021 0119 52657365 		.ascii	"ResetException\000"
+ 1021 012e 52657365 		.ascii	"ResetException\000"
  1021      74457863 
  1021      65707469 
  1021      6F6E00
  1022              	.LASF5:
- 1023 0128 75696E74 		.ascii	"uint8_t\000"
+ 1023 013d 75696E74 		.ascii	"uint8_t\000"
  1023      385F7400 
  1024              	.LASF8:
- 1025 0130 6C6F6E67 		.ascii	"long long int\000"
+ 1025 0145 6C6F6E67 		.ascii	"long long int\000"
  1025      206C6F6E 
  1025      6720696E 
  1025      7400
  1026              	.LASF11:
- 1027 013e 43505549 		.ascii	"CPUID\000"
+ 1027 0153 43505549 		.ascii	"CPUID\000"
  1027      4400
  1028              	.LASF31:
- 1029 0144 5F736669 		.ascii	"_sfixed\000"
+ 1029 0159 5F736669 		.ascii	"_sfixed\000"
  1029      78656400 
  1030              	.LASF38:
- 1031 014c 474E5520 		.ascii	"GNU C 4.6.1\000"
+ 1031 0161 474E5520 		.ascii	"GNU C 4.6.1\000"
  1031      4320342E 
  1031      362E3100 
  1032              	.LASF19:
- 1033 0158 4D4D4641 		.ascii	"MMFAR\000"
+ 1033 016d 4D4D4641 		.ascii	"MMFAR\000"
  1033      5200
  1034              	.LASF6:
- 1035 015e 75696E74 		.ascii	"uint32_t\000"
+ 1035 0173 75696E74 		.ascii	"uint32_t\000"
  1035      33325F74 
  1035      00
  1036              	.LASF4:
- 1037 0167 6C6F6E67 		.ascii	"long int\000"
+ 1037 017c 6C6F6E67 		.ascii	"long int\000"
  1037      20696E74 
  1037      00
  1038              	.LASF0:
- 1039 0170 7369676E 		.ascii	"signed char\000"
+ 1039 0185 7369676E 		.ascii	"signed char\000"
  1039      65642063 
  1039      68617200 
  1040              	.LASF27:
- 1041 017c 70537263 		.ascii	"pSrc\000"
+ 1041 0191 70537263 		.ascii	"pSrc\000"
  1041      00
  1042              	.LASF25:
- 1043 0181 496E7446 		.ascii	"IntFunc\000"
+ 1043 0196 496E7446 		.ascii	"IntFunc\000"
  1043      756E6300 
  1044              	.LASF21:
- 1045 0189 41465352 		.ascii	"AFSR\000"
+ 1045 019e 41465352 		.ascii	"AFSR\000"
  1045      00
  1046              	.LASF33:
- 1047 018e 5F737265 		.ascii	"_srelocate\000"
+ 1047 01a3 5F737265 		.ascii	"_srelocate\000"
  1047      6C6F6361 
  1047      746500
  1048              		.ident	"GCC: (Sourcery CodeBench Lite 2011.09-69) 4.6.1"
-ARM GAS  /tmp/ccFeDWay.s 			page 24
+ARM GAS  /tmp/cchIDtEX.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 startup.c
-     /tmp/ccFeDWay.s:23     .stack:00000000 pdwStack
-     /tmp/ccFeDWay.s:20     .stack:00000000 $d
-     /tmp/ccFeDWay.s:30     .vectors:00000000 exception_table
-     /tmp/ccFeDWay.s:27     .vectors:00000000 $d
-     /tmp/ccFeDWay.s:89     .text.ResetException:00000000 ResetException
-     /tmp/ccFeDWay.s:84     .text.ResetException:00000000 $t
+     /tmp/cchIDtEX.s:23     .stack:00000000 pdwStack
+     /tmp/cchIDtEX.s:20     .stack:00000000 $d
+     /tmp/cchIDtEX.s:30     .vectors:00000000 exception_table
+     /tmp/cchIDtEX.s:27     .vectors:00000000 $d
+     /tmp/cchIDtEX.s:89     .text.ResetException:00000000 ResetException
+     /tmp/cchIDtEX.s:84     .text.ResetException:00000000 $t
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
@@ -1433,7 +1433,7 @@ SystemInit
 _etext
 _srelocate
 _erelocate
-ARM GAS  /tmp/ccFeDWay.s 			page 25
+ARM GAS  /tmp/cchIDtEX.s 			page 25
 
 
 _szero
