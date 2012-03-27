@@ -82,6 +82,9 @@ volatile uint32_t SystemCoreClock = 4000001;
  */
 void SystemCoreClockUpdate()	
 {
+#ifndef HAS_SLOWCLK
+	SystemCoreClock = BOARD_MCK;
+#else
 	uint32_t mainf;
 	uint32_t sysf;
 	uint16_t mul;
@@ -129,6 +132,7 @@ void SystemCoreClockUpdate()
 
 	prescaler = (PMC->PMC_MCKR & PMC_MCKR_PRES_Msk) >> PMC_MCKR_PRES_Pos;
 	SystemCoreClock = sysf >> prescaler;
+#endif
 }
 
 /**
@@ -144,11 +148,13 @@ WEAK void SystemInit( void )
     EFC->EEFC_FMR = EEFC_FMR_FWS(3);
 
     /* Select external slow clock */
-    //if ((SUPC->SUPC_SR & SUPC_SR_OSCSEL) != SUPC_SR_OSCSEL_CRYST)
-    //{
-    //    SUPC->SUPC_CR = (uint32_t)(SUPC_CR_XTALSEL_CRYSTAL_SEL | SUPC_CR_KEY(0xA5));
-    //    for ( timeout = 0; !(SUPC->SUPC_SR & SUPC_SR_OSCSEL_CRYST) ; );
-    //}
+#ifdef HAS_SLOWCLK
+    if ((SUPC->SUPC_SR & SUPC_SR_OSCSEL) != SUPC_SR_OSCSEL_CRYST)
+    {
+        SUPC->SUPC_CR = (uint32_t)(SUPC_CR_XTALSEL_CRYSTAL_SEL | SUPC_CR_KEY(0xA5));
+        for ( timeout = 0; !(SUPC->SUPC_SR & SUPC_SR_OSCSEL_CRYST) ; );
+    }
+#endif
 
     /* Initialize main oscillator */
     if ( !(PMC->CKGR_MOR & CKGR_MOR_MOSCSEL) )
