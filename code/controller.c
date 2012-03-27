@@ -92,30 +92,25 @@ void mode(uint8_t new, struct ctrl *ctrl)
 }
 
 // Periodically call
-void control(ctrlio_t *pv, struct ctrl *loop, unsigned loops)
+void control(ctrlio_t pv, struct ctrl *loop)
 {
-	while (loops) {
-		if (loop->mode > OFF) {
-			update(*pv, loop);
+	if (loop->mode > OFF) {
+		update(pv, loop);
 
-			if (loop->mode == NORMAL)
-				pid(loop);
-			else if (loop->mode == RAMP) {
-				pid(loop);
-				if (   (loop->_x >= loop->rSP && loop->rSlope > 0) \
-					|| (loop->_x <= loop->rSP && loop->rSlope < 0) \
-					|| (loop->rSlope == 0)) {
-					loop->SP = loop->rSP;
-					mode(NORMAL, loop);
-				}
+		if (loop->mode == NORMAL)
+			pid(loop);
+		else if (loop->mode == RAMP) {
+			pid(loop);
+			if (   (loop->_x >= loop->rSP && loop->rSlope > 0) \
+				|| (loop->_x <= loop->rSP && loop->rSlope < 0) \
+				|| (loop->rSlope == 0)) {
+				loop->SP = loop->rSP;
+				mode(NORMAL, loop);
 			}
 		}
-		else if (loop->mode > STOP) {
-			mode(OFF, loop);
-		}
-		loops--;
-		loop++;
-		pv++;
+	}
+	else if (loop->mode > STOP) {
+		mode(OFF, loop);
 	}
 }
 

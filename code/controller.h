@@ -51,7 +51,7 @@ struct trip {
 #define SCALE(x) ((ctrlio_t) (x * SCALING_FACTOR))
 
 void mode(uint8_t new, struct ctrl *ctrl);
-void control(ctrlio_t *pv, struct ctrl *loop, unsigned loops);
+void control(ctrlio_t pv, struct ctrl *loop);
 
 int tris(int in, int *output, int on, int off);
 int tristate(struct trip *p);
