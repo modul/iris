@@ -1,0 +1,31 @@
+   text	   data	    bss	    dec	    hex	filename
+    524	      0	      4	    528	    210	build/obj/flash_syscalls.o
+    864	      4	      0	    868	    364	build/obj/flash_system.o
+    580	      4	      1	    585	    249	build/obj/flash_uart_console.o
+   1684	      4	    268	   1956	    7a4	build/obj/flash_usb_console.o
+   1256	      0	     12	   1268	    4f4	build/obj/flash_led.o
+    440	      0	      4	    444	    1bc	build/obj/flash_timetick.o
+    208	   4304	      0	   4512	   11a0	build/obj/flash_startup.o
+    160	      8	      0	    168	     a8	build/obj/flash_usb_device_descriptor.o
+    884	      0	      0	    884	    374	build/obj/flash_main.o
+  73208	   1480	   5072	  79760	  13790	build/bin/project-flash.elf
+build/bin/project-flash.elf  :
+section             size        addr
+.text              73200     4194304
+.ARM.exidx             8     4267504
+.relocate           1480   536870912
+.bss                 976   536872392
+.stack              4096   536873368
+.ARM.attributes       41           0
+.comment              48           0
+.debug_info        62594           0
+.debug_abbrev      10018           0
+.debug_loc         17895           0
+.debug_aranges      2560           0
+.debug_ranges       2912           0
+.debug_line        13606           0
+.debug_str         12666           0
+.debug_frame       12296           0
+Total             214396
+
+
