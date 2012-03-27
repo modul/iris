@@ -27,7 +27,7 @@ OPTIMIZATION = -O0 -DDEBUG
 # make will handle library linking, so no flags for that
 USBLIB = -lusb_$(SERIE)_rel
 CHIPLIB = -lchip_$(CHIP)_rel
-LIBPATHS = ../libusb/lib ../libchip/lib
+LIBPATHS = libusb/lib libchip/lib
 LIBS = $(USBLIB) $(CHIPLIB)
 
 # Tool suffix when cross-compiling
@@ -44,11 +44,11 @@ NM = $(CROSS_COMPILE)nm
 OOCD = openocd
 
 INCLUDES  = -Iboard
-INCLUDES += -I../libchip
-INCLUDES += -I../libchip/include
-INCLUDES += -I../libusb
-INCLUDES += -I../libusb/include
-INCLUDES += -I../
+INCLUDES += -Ilibchip
+INCLUDES += -Ilibchip/include
+INCLUDES += -Ilibusb
+INCLUDES += -Ilibusb/include
+INCLUDES += -I.
 
 CFLAGS += -g -mcpu=cortex-m3 -mthumb # -mfix-cortex-m3-ldrd
 CFLAGS += -ffunction-sections # might make problems, see manpage
@@ -67,7 +67,7 @@ LDFLAGS += -Wl,--unresolved-symbols=report-all
 LDFLAGS += -Wl,--warn-common #-Wl,--warn-section-align 
 LDFLAGS += -Wl,--warn-unresolved-symbols
 
-OOCDCFG = "../openocd.cfg"
+OOCDCFG = "openocd.cfg"
 OOCDFLAGS = -f $(OOCDCFG) -c init
 
 #-------------------------------------------------------------------------------

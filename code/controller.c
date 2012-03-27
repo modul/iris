@@ -91,7 +91,7 @@ void mode(uint8_t new, struct ctrl *ctrl)
 	}
 }
 
-// Periodically called 
+// Periodically call
 void control(ctrlio_t *pv, struct ctrl *loop, unsigned loops)
 {
 	while (loops) {
@@ -140,7 +140,7 @@ int tristate(struct trip *p)
 int tris(int in, int *output, int on, int off)
 {
 	if (*output < -1 || *output > 1)
-		*output == 0;
+		*output = 0;
 
 	if (*output < 0) {
 		if (in >= -off) 
