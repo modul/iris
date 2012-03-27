@@ -14,7 +14,7 @@ static struct {
 	ctrlio_t max;
 	ctrlio_t yinit;
 	ctrlio_t uinit;
-} conf[LOOPS] = {{0}};
+} conf[LOOPS] = {{0,MAX,0,0}};
 
 static void init();
 

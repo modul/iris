@@ -208,7 +208,6 @@ Discarded input sections
  .text          0x00000000        0x0 build/obj/usb_device_descriptor.o
  .bss           0x00000000        0x0 build/obj/usb_device_descriptor.o
  .text          0x00000000        0x0 build/obj/main.o
- .data          0x00000000        0x0 build/obj/main.o
  .text          0x00000000        0x0 build/obj/controller.o
  .data          0x00000000        0x0 build/obj/controller.o
  .bss           0x00000000        0x0 build/obj/controller.o
@@ -1451,7 +1450,7 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
                 0x00409954                . = ALIGN (0x4)
                 0x00409954                _etext = .
 
-.relocate       0x20000000      0x5a0 load address 0x00409954
+.relocate       0x20000000      0x5b0 load address 0x00409954
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _srelocate = .
  *(.ramfunc .ramfunc.*)
@@ -1462,36 +1461,37 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
  .data          0x20000008        0x4 build/obj/usb_console.o
  .data          0x2000000c        0x8 build/obj/usb_device_descriptor.o
                 0x2000000c                stringDescriptors
- .data          0x20000014       0xf4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
-                0x20000014                _impure_ptr
- .data          0x20000108        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ctype_.o)
-                0x20000108                __ctype_ptr__
- .data          0x2000010c       0x7c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
-                0x2000012c                __mb_cur_max
- .data          0x20000188      0x410 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
-                0x20000188                __malloc_av_
-                0x20000590                __malloc_sbrk_base
-                0x20000594                __malloc_trim_threshold
- .data          0x20000598        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbtowc_r.o)
-                0x20000598                __mbtowc
- .data          0x2000059c        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wctomb_r.o)
-                0x2000059c                __wctomb
-                0x200005a0                . = ALIGN (0x4)
-                0x200005a0                _erelocate = .
+ .data          0x20000014       0x10 build/obj/main.o
+ .data          0x20000024       0xf4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
+                0x20000024                _impure_ptr
+ .data          0x20000118        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ctype_.o)
+                0x20000118                __ctype_ptr__
+ .data          0x2000011c       0x7c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
+                0x2000013c                __mb_cur_max
+ .data          0x20000198      0x410 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
+                0x20000198                __malloc_av_
+                0x200005a0                __malloc_sbrk_base
+                0x200005a4                __malloc_trim_threshold
+ .data          0x200005a8        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbtowc_r.o)
+                0x200005a8                __mbtowc
+ .data          0x200005ac        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wctomb_r.o)
+                0x200005ac                __wctomb
+                0x200005b0                . = ALIGN (0x4)
+                0x200005b0                _erelocate = .
 
-.bss            0x200005a0      0x338 load address 0x00409ef4
-                0x200005a0                . = ALIGN (0x4)
-                0x200005a0                _sbss = .
-                0x200005a0                _szero = .
+.bss            0x200005b0      0x328 load address 0x00409f04
+                0x200005b0                . = ALIGN (0x4)
+                0x200005b0                _sbss = .
+                0x200005b0                _szero = .
  *(.bss .bss.*)
- .bss           0x200005a0       0x1c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
- .bss           0x200005bc        0x4 build/obj/syscalls.o
- .bss           0x200005c0        0x1 build/obj/uart_console.o
- *fill*         0x200005c1        0x3 00
- .bss           0x200005c4      0x10c build/obj/usb_console.o
- .bss           0x200006d0        0xc build/obj/led.o
- .bss           0x200006dc        0x4 build/obj/timetick.o
- .bss           0x200006e0       0x68 build/obj/main.o
+ .bss           0x200005b0       0x1c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
+ .bss           0x200005cc        0x4 build/obj/syscalls.o
+ .bss           0x200005d0        0x1 build/obj/uart_console.o
+ *fill*         0x200005d1        0x3 00
+ .bss           0x200005d4      0x10c build/obj/usb_console.o
+ .bss           0x200006e0        0xc build/obj/led.o
+ .bss           0x200006ec        0x4 build/obj/timetick.o
+ .bss           0x200006f0       0x58 build/obj/main.o
  .bss           0x20000748       0xe0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .bss           0x20000828        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
  *fill*         0x2000082a        0x2 00
