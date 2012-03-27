@@ -1,7 +1,7 @@
 Archive member included because of file (symbol)
 
 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                              build/obj/flash_startup.o (USBD_IrqHandler)
+                              build/obj/startup.o (USBD_IrqHandler)
 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                               libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (USBEndpointDescriptor_GetNumber)
 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
@@ -11,11 +11,11 @@ libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
                               libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o) (USBD_GetDriver)
 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                              build/obj/flash_usb_console.o (CDCDSerial_Read)
+                              build/obj/usb_console.o (CDCDSerial_Read)
 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
                               libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o) (USBDDriverCallbacks_InterfaceSettingChanged)
 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-                              build/obj/flash_usb_console.o (CDCDSerialDriver_Initialize)
+                              build/obj/usb_console.o (CDCDSerialDriver_Initialize)
 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                               libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o) (USBGenericRequest_GetRequest)
 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
@@ -23,23 +23,23 @@ libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
                               libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o) (CDCLineCoding_Initialize)
 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                              build/obj/flash_startup.o (PIOA_IrqHandler)
+                              build/obj/startup.o (PIOA_IrqHandler)
 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                              build/obj/flash_startup.o (IrqHandlerNotUsed)
+                              build/obj/startup.o (IrqHandlerNotUsed)
 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
-                              build/obj/flash_uart_console.o (PIO_Configure)
+                              build/obj/uart_console.o (PIO_Configure)
 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
                               libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (PMC_EnablePeripheral)
 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
-                              build/obj/flash_led.o (TC_Configure)
+                              build/obj/led.o (TC_Configure)
 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
                               libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o) (PIO_CaptureHandler)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
-                              build/obj/flash_led.o (__assert_func)
+                              build/obj/led.o (__assert_func)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fiprintf.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o) (fiprintf)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fprintf.o)
-                              build/obj/flash_main.o (fprintf)
+                              build/obj/main.o (fprintf)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputc.o)
                               libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o) (fputc)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputs.o)
@@ -47,19 +47,19 @@ libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputs.o) (__sfvwrite_r)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwrite.o)
-                              build/obj/flash_usb_console.o (fwrite)
+                              build/obj/usb_console.o (fwrite)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
-                              build/obj/flash_usb_console.o (_impure_ptr)
+                              build/obj/usb_console.o (_impure_ptr)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iprintf.o)
-                              build/obj/flash_syscalls.o (iprintf)
+                              build/obj/syscalls.o (iprintf)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o) (_malloc_r)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memchr.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o) (memchr)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memcpy.o)
-                              build/obj/flash_usb_console.o (memcpy)
+                              build/obj/usb_console.o (memcpy)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memmove.o)
-                              build/obj/flash_usb_console.o (memmove)
+                              build/obj/usb_console.o (memmove)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mlock.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o) (__malloc_lock)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-putc.o)
@@ -67,11 +67,11 @@ libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reallocr.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o) (_realloc_r)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
-                              build/obj/flash_syscalls.o (errno)
+                              build/obj/syscalls.o (errno)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sbrkr.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o) (_sbrk_r)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setbuf.o)
-                              build/obj/flash_main.o (setbuf)
+                              build/obj/main.o (setbuf)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setvbuf.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setbuf.o) (setvbuf)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strlen.o)
@@ -170,65 +170,65 @@ Discarded input sections
  .data          0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crti.o
  .bss           0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crti.o
  .data          0x00000000        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
- .text          0x00000000        0x0 build/obj/flash_syscalls.o
- .data          0x00000000        0x0 build/obj/flash_syscalls.o
- .text._link    0x00000000       0x1c build/obj/flash_syscalls.o
- .text          0x00000000        0x0 build/obj/flash_system.o
- .bss           0x00000000        0x0 build/obj/flash_system.o
- .text          0x00000000        0x0 build/obj/flash_uart_console.o
+ .text          0x00000000        0x0 build/obj/syscalls.o
+ .data          0x00000000        0x0 build/obj/syscalls.o
+ .text._link    0x00000000       0x1c build/obj/syscalls.o
+ .text          0x00000000        0x0 build/obj/system.o
+ .bss           0x00000000        0x0 build/obj/system.o
+ .text          0x00000000        0x0 build/obj/uart_console.o
  .text.UART_SetTimeout
-                0x00000000       0x20 build/obj/flash_uart_console.o
- .text          0x00000000        0x0 build/obj/flash_usb_console.o
+                0x00000000       0x20 build/obj/uart_console.o
+ .text          0x00000000        0x0 build/obj/usb_console.o
  .text.USBC_hasData
-                0x00000000       0x20 build/obj/flash_usb_console.o
+                0x00000000       0x20 build/obj/usb_console.o
  .text.USBC_SetTimeout
-                0x00000000       0x20 build/obj/flash_usb_console.o
- .text          0x00000000        0x0 build/obj/flash_led.o
- .data          0x00000000        0x0 build/obj/flash_led.o
- .text.LED_set  0x00000000       0x7c build/obj/flash_led.o
- .text.LED_get  0x00000000       0x84 build/obj/flash_led.o
+                0x00000000       0x20 build/obj/usb_console.o
+ .text          0x00000000        0x0 build/obj/led.o
+ .data          0x00000000        0x0 build/obj/led.o
+ .text.LED_set  0x00000000       0x7c build/obj/led.o
+ .text.LED_get  0x00000000       0x84 build/obj/led.o
  .text.LED_blinkwait
-                0x00000000       0x30 build/obj/flash_led.o
+                0x00000000       0x30 build/obj/led.o
  .text.LED_blinkstop
-                0x00000000       0x44 build/obj/flash_led.o
+                0x00000000       0x44 build/obj/led.o
  .text.LED_blinking
-                0x00000000       0x28 build/obj/flash_led.o
- .text          0x00000000        0x0 build/obj/flash_timetick.o
- .data          0x00000000        0x0 build/obj/flash_timetick.o
- .text.__WFI    0x00000000        0xc build/obj/flash_timetick.o
- .text.Wait     0x00000000       0x38 build/obj/flash_timetick.o
- .text.Sleep    0x00000000       0x3c build/obj/flash_timetick.o
- .text          0x00000000        0x0 build/obj/flash_startup.o
- .data          0x00000000        0x0 build/obj/flash_startup.o
- .bss           0x00000000        0x0 build/obj/flash_startup.o
- .text          0x00000000        0x0 build/obj/flash_usb_device_descriptor.o
- .bss           0x00000000        0x0 build/obj/flash_usb_device_descriptor.o
- .text          0x00000000        0x0 build/obj/flash_main.o
- .data          0x00000000        0x0 build/obj/flash_main.o
- .bss           0x00000000       0x58 build/obj/flash_main.o
- .text          0x00000000        0x0 build/obj/flash_controller.o
- .data          0x00000000        0x0 build/obj/flash_controller.o
- .bss           0x00000000        0x0 build/obj/flash_controller.o
- .text.pid      0x00000000       0xc4 build/obj/flash_controller.o
- .text.update   0x00000000       0x90 build/obj/flash_controller.o
- .text.mode     0x00000000       0xd0 build/obj/flash_controller.o
- .text.control  0x00000000       0xbc build/obj/flash_controller.o
- .rodata        0x00000000       0x34 build/obj/flash_controller.o
+                0x00000000       0x28 build/obj/led.o
+ .text          0x00000000        0x0 build/obj/timetick.o
+ .data          0x00000000        0x0 build/obj/timetick.o
+ .text.__WFI    0x00000000        0xc build/obj/timetick.o
+ .text.Wait     0x00000000       0x38 build/obj/timetick.o
+ .text.Sleep    0x00000000       0x3c build/obj/timetick.o
+ .text          0x00000000        0x0 build/obj/startup.o
+ .data          0x00000000        0x0 build/obj/startup.o
+ .bss           0x00000000        0x0 build/obj/startup.o
+ .text          0x00000000        0x0 build/obj/usb_device_descriptor.o
+ .bss           0x00000000        0x0 build/obj/usb_device_descriptor.o
+ .text          0x00000000        0x0 build/obj/main.o
+ .data          0x00000000        0x0 build/obj/main.o
+ .bss           0x00000000       0x58 build/obj/main.o
+ .text          0x00000000        0x0 build/obj/controller.o
+ .data          0x00000000        0x0 build/obj/controller.o
+ .bss           0x00000000        0x0 build/obj/controller.o
+ .text.pid      0x00000000       0xc4 build/obj/controller.o
+ .text.update   0x00000000       0x90 build/obj/controller.o
+ .text.mode     0x00000000       0xd0 build/obj/controller.o
+ .text.control  0x00000000       0xbc build/obj/controller.o
+ .rodata        0x00000000       0x34 build/obj/controller.o
  .text.tristate
-                0x00000000       0x7c build/obj/flash_controller.o
- .text.tris     0x00000000       0x98 build/obj/flash_controller.o
- .debug_info    0x00000000      0x3ac build/obj/flash_controller.o
- .debug_abbrev  0x00000000      0x161 build/obj/flash_controller.o
- .debug_loc     0x00000000      0x150 build/obj/flash_controller.o
+                0x00000000       0x7c build/obj/controller.o
+ .text.tris     0x00000000       0x98 build/obj/controller.o
+ .debug_info    0x00000000      0x3ac build/obj/controller.o
+ .debug_abbrev  0x00000000      0x161 build/obj/controller.o
+ .debug_loc     0x00000000      0x150 build/obj/controller.o
  .debug_aranges
-                0x00000000       0x48 build/obj/flash_controller.o
- .debug_ranges  0x00000000       0x38 build/obj/flash_controller.o
- .debug_line    0x00000000      0x1b8 build/obj/flash_controller.o
- .debug_str     0x00000000      0x176 build/obj/flash_controller.o
- .comment       0x00000000       0x31 build/obj/flash_controller.o
+                0x00000000       0x48 build/obj/controller.o
+ .debug_ranges  0x00000000       0x38 build/obj/controller.o
+ .debug_line    0x00000000      0x1b8 build/obj/controller.o
+ .debug_str     0x00000000      0x176 build/obj/controller.o
+ .comment       0x00000000       0x31 build/obj/controller.o
  .ARM.attributes
-                0x00000000       0x33 build/obj/flash_controller.o
- .debug_frame   0x00000000       0xc4 build/obj/flash_controller.o
+                0x00000000       0x33 build/obj/controller.o
+ .debug_frame   0x00000000       0xc4 build/obj/controller.o
  .text          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .data          0x00000000        0x0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.USBD_HAL_SetupMblTransfer
@@ -504,16 +504,16 @@ START GROUP
 LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a
 LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a
 END GROUP
-LOAD build/obj/flash_syscalls.o
-LOAD build/obj/flash_system.o
-LOAD build/obj/flash_uart_console.o
-LOAD build/obj/flash_usb_console.o
-LOAD build/obj/flash_led.o
-LOAD build/obj/flash_timetick.o
-LOAD build/obj/flash_startup.o
-LOAD build/obj/flash_usb_device_descriptor.o
-LOAD build/obj/flash_main.o
-LOAD build/obj/flash_controller.o
+LOAD build/obj/syscalls.o
+LOAD build/obj/system.o
+LOAD build/obj/uart_console.o
+LOAD build/obj/usb_console.o
+LOAD build/obj/led.o
+LOAD build/obj/timetick.o
+LOAD build/obj/startup.o
+LOAD build/obj/usb_device_descriptor.o
+LOAD build/obj/main.o
+LOAD build/obj/controller.o
 LOAD libusb/lib/libusb_sam3s_rel.a
 LOAD libchip/lib/libchip_sam3s4_rel.a
 START GROUP
@@ -527,132 +527,132 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
                 0x00400000                . = ALIGN (0x4)
                 0x00400000                _sfixed = .
  *(.vectors .vectors.*)
- .vectors       0x00400000       0xd0 build/obj/flash_startup.o
+ .vectors       0x00400000       0xd0 build/obj/startup.o
                 0x00400000                exception_table
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x004000d0       0x68 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
- .text._read    0x00400138       0x54 build/obj/flash_syscalls.o
+ .text._read    0x00400138       0x54 build/obj/syscalls.o
                 0x00400138                _read
- .text._write   0x0040018c       0x54 build/obj/flash_syscalls.o
+ .text._write   0x0040018c       0x54 build/obj/syscalls.o
                 0x0040018c                _write
- .text._sbrk    0x004001e0       0x5c build/obj/flash_syscalls.o
+ .text._sbrk    0x004001e0       0x5c build/obj/syscalls.o
                 0x004001e0                _sbrk
- .text._isatty  0x0040023c       0x28 build/obj/flash_syscalls.o
+ .text._isatty  0x0040023c       0x28 build/obj/syscalls.o
                 0x0040023c                _isatty
- .text._exit    0x00400264       0x18 build/obj/flash_syscalls.o
+ .text._exit    0x00400264       0x18 build/obj/syscalls.o
                 0x00400264                _exit
- .text._lseek   0x0040027c       0x1c build/obj/flash_syscalls.o
+ .text._lseek   0x0040027c       0x1c build/obj/syscalls.o
                 0x0040027c                _lseek
- .text._kill    0x00400298       0x28 build/obj/flash_syscalls.o
+ .text._kill    0x00400298       0x28 build/obj/syscalls.o
                 0x00400298                _kill
- .text._getpid  0x004002c0       0x10 build/obj/flash_syscalls.o
+ .text._getpid  0x004002c0       0x10 build/obj/syscalls.o
                 0x004002c0                _getpid
- .text._close   0x004002d0       0x18 build/obj/flash_syscalls.o
+ .text._close   0x004002d0       0x18 build/obj/syscalls.o
                 0x004002d0                _close
- .text._fstat   0x004002e8       0x24 build/obj/flash_syscalls.o
+ .text._fstat   0x004002e8       0x24 build/obj/syscalls.o
                 0x004002e8                _fstat
  .text.SystemCoreClockUpdate
-                0x0040030c       0x1c build/obj/flash_system.o
+                0x0040030c       0x1c build/obj/system.o
                 0x0040030c                SystemCoreClockUpdate
  .text.SystemInit
-                0x00400328      0x1dc build/obj/flash_system.o
+                0x00400328      0x1dc build/obj/system.o
                 0x00400328                SystemInit
  .text.UART_Configure
-                0x00400504       0x8c build/obj/flash_uart_console.o
+                0x00400504       0x8c build/obj/uart_console.o
                 0x00400504                UART_Configure
  .text.UART_Put
-                0x00400590       0x78 build/obj/flash_uart_console.o
+                0x00400590       0x78 build/obj/uart_console.o
                 0x00400590                UART_Put
  .text.UART_Get
-                0x00400608       0x70 build/obj/flash_uart_console.o
+                0x00400608       0x70 build/obj/uart_console.o
                 0x00400608                UART_Get
  .text.UART_Puts
-                0x00400678       0x50 build/obj/flash_uart_console.o
+                0x00400678       0x50 build/obj/uart_console.o
                 0x00400678                UART_Puts
  .text.UART_Gets
-                0x004006c8       0x54 build/obj/flash_uart_console.o
+                0x004006c8       0x54 build/obj/uart_console.o
                 0x004006c8                UART_Gets
  .text.CDCDSerialDriver_Write
-                0x0040071c       0x28 build/obj/flash_usb_console.o
+                0x0040071c       0x28 build/obj/usb_console.o
  .text.CDCDSerialDriver_Read
-                0x00400744       0x28 build/obj/flash_usb_console.o
+                0x00400744       0x28 build/obj/usb_console.o
  .text.NVIC_EnableIRQ
-                0x0040076c       0x38 build/obj/flash_usb_console.o
+                0x0040076c       0x38 build/obj/usb_console.o
  .text.ISR_Vbus
-                0x004007a4       0x6c build/obj/flash_usb_console.o
+                0x004007a4       0x6c build/obj/usb_console.o
  .text.VBus_Configure
-                0x00400810       0x54 build/obj/flash_usb_console.o
+                0x00400810       0x54 build/obj/usb_console.o
  .text.ConfigureUsbClock
-                0x00400864       0x40 build/obj/flash_usb_console.o
+                0x00400864       0x40 build/obj/usb_console.o
  .text.USBDCallbacks_Initialized
-                0x004008a4       0x10 build/obj/flash_usb_console.o
+                0x004008a4       0x10 build/obj/usb_console.o
                 0x004008a4                USBDCallbacks_Initialized
  .text.USBDDriverCallbacks_ConfigurationChanged
-                0x004008b4       0x1c build/obj/flash_usb_console.o
+                0x004008b4       0x1c build/obj/usb_console.o
                 0x004008b4                USBDDriverCallbacks_ConfigurationChanged
  .text.USBDCallbacks_RequestReceived
-                0x004008d0       0x18 build/obj/flash_usb_console.o
+                0x004008d0       0x18 build/obj/usb_console.o
                 0x004008d0                USBDCallbacks_RequestReceived
  .text.UsbWriteDone
-                0x004008e8       0x4c build/obj/flash_usb_console.o
+                0x004008e8       0x4c build/obj/usb_console.o
  .text.UsbReadDone
-                0x00400934       0x4c build/obj/flash_usb_console.o
+                0x00400934       0x4c build/obj/usb_console.o
  .text.USBC_isConfigured
-                0x00400980       0x6c build/obj/flash_usb_console.o
+                0x00400980       0x6c build/obj/usb_console.o
                 0x00400980                USBC_isConfigured
  .text.USBC_Configure
-                0x004009ec       0x44 build/obj/flash_usb_console.o
+                0x004009ec       0x44 build/obj/usb_console.o
                 0x004009ec                USBC_Configure
  .text.USBC_StartListening
-                0x00400a30       0x58 build/obj/flash_usb_console.o
+                0x00400a30       0x58 build/obj/usb_console.o
                 0x00400a30                USBC_StartListening
  .text.USBC_Gets
-                0x00400a88      0x104 build/obj/flash_usb_console.o
+                0x00400a88      0x104 build/obj/usb_console.o
                 0x00400a88                USBC_Gets
  .text.USBC_Puts
-                0x00400b8c       0xc0 build/obj/flash_usb_console.o
+                0x00400b8c       0xc0 build/obj/usb_console.o
                 0x00400b8c                USBC_Puts
  .text.NVIC_EnableIRQ
-                0x00400c4c       0x38 build/obj/flash_led.o
+                0x00400c4c       0x38 build/obj/led.o
  .text.TC0_IrqHandler
-                0x00400c84       0x90 build/obj/flash_led.o
+                0x00400c84       0x90 build/obj/led.o
                 0x00400c84                TC0_IrqHandler
  .text.configure
-                0x00400d14       0xa0 build/obj/flash_led.o
+                0x00400d14       0xa0 build/obj/led.o
  .text.LEDs_configure
-                0x00400db4       0x18 build/obj/flash_led.o
+                0x00400db4       0x18 build/obj/led.o
                 0x00400db4                LEDs_configure
- .text.LED_tgl  0x00400dcc       0x90 build/obj/flash_led.o
+ .text.LED_tgl  0x00400dcc       0x90 build/obj/led.o
                 0x00400dcc                LED_tgl
- .text.LED_clr  0x00400e5c       0x7c build/obj/flash_led.o
+ .text.LED_clr  0x00400e5c       0x7c build/obj/led.o
                 0x00400e5c                LED_clr
  .text.LED_blink
-                0x00400ed8       0x6c build/obj/flash_led.o
+                0x00400ed8       0x6c build/obj/led.o
                 0x00400ed8                LED_blink
  .text.NVIC_SetPriority
-                0x00400f44       0x5c build/obj/flash_timetick.o
+                0x00400f44       0x5c build/obj/timetick.o
  .text.SysTick_Config
-                0x00400fa0       0x64 build/obj/flash_timetick.o
+                0x00400fa0       0x64 build/obj/timetick.o
  .text.SysTick_Handler
-                0x00401004       0x24 build/obj/flash_timetick.o
+                0x00401004       0x24 build/obj/timetick.o
                 0x00401004                SysTick_Handler
  .text.TimeTick_Configure
-                0x00401028       0x3c build/obj/flash_timetick.o
+                0x00401028       0x3c build/obj/timetick.o
                 0x00401028                TimeTick_Configure
  .text.GetTickCount
-                0x00401064       0x18 build/obj/flash_timetick.o
+                0x00401064       0x18 build/obj/timetick.o
                 0x00401064                GetTickCount
  .text.ResetException
-                0x0040107c       0xd0 build/obj/flash_startup.o
+                0x0040107c       0xd0 build/obj/startup.o
                 0x0040107c                ResetException
  .text.NVIC_EnableIRQ
-                0x0040114c       0x38 build/obj/flash_main.o
- .text.main     0x00401184       0x84 build/obj/flash_main.o
+                0x0040114c       0x38 build/obj/main.o
+ .text.main     0x00401184       0x84 build/obj/main.o
                 0x00401184                main
  .text.TC1_IrqHandler
-                0x00401208        0xc build/obj/flash_main.o
+                0x00401208        0xc build/obj/main.o
                 0x00401208                TC1_IrqHandler
- .text.init     0x00401214       0xa0 build/obj/flash_main.o
+ .text.init     0x00401214       0xa0 build/obj/main.o
                 0x00401214                init
  .text.UDP_EndOfTransfer
                 0x004012b4       0x70 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
@@ -1319,17 +1319,17 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
- .rodata        0x0040ad10       0x1c build/obj/flash_syscalls.o
- .rodata        0x0040ad2c        0xc build/obj/flash_uart_console.o
- .rodata        0x0040ad38      0x124 build/obj/flash_usb_console.o
- .rodata        0x0040ae5c       0x54 build/obj/flash_led.o
- .rodata        0x0040aeb0       0xa0 build/obj/flash_usb_device_descriptor.o
+ .rodata        0x0040ad10       0x1c build/obj/syscalls.o
+ .rodata        0x0040ad2c        0xc build/obj/uart_console.o
+ .rodata        0x0040ad38      0x124 build/obj/usb_console.o
+ .rodata        0x0040ae5c       0x54 build/obj/led.o
+ .rodata        0x0040aeb0       0xa0 build/obj/usb_device_descriptor.o
                 0x0040aeb0                deviceDescriptor
                 0x0040aec4                configurationDescriptorsFS
                 0x0040af08                languageIdStringDescriptor
                 0x0040af0c                productStringDescriptor
                 0x0040af28                cdcdSerialDriverDescriptors
- .rodata        0x0040af50       0x44 build/obj/flash_main.o
+ .rodata        0x0040af50       0x44 build/obj/main.o
  .rodata.str1.1
                 0x0040af94       0x69 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .rodata.str1.1
@@ -1455,11 +1455,11 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
                 0x20000000                _srelocate = .
  *(.ramfunc .ramfunc.*)
  *(.data .data.*)
- .data          0x20000000        0x4 build/obj/flash_system.o
+ .data          0x20000000        0x4 build/obj/system.o
                 0x20000000                SystemCoreClock
- .data          0x20000004        0x4 build/obj/flash_uart_console.o
- .data          0x20000008        0x4 build/obj/flash_usb_console.o
- .data          0x2000000c        0x8 build/obj/flash_usb_device_descriptor.o
+ .data          0x20000004        0x4 build/obj/uart_console.o
+ .data          0x20000008        0x4 build/obj/usb_console.o
+ .data          0x2000000c        0x8 build/obj/usb_device_descriptor.o
                 0x2000000c                stringDescriptors
  .data          0x20000014       0xf4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
                 0x20000014                _impure_ptr
@@ -1480,12 +1480,12 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
                 0x20000598                _szero = .
  *(.bss .bss.*)
  .bss           0x20000598       0x1c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
- .bss           0x200005b4        0x4 build/obj/flash_syscalls.o
- .bss           0x200005b8        0x1 build/obj/flash_uart_console.o
+ .bss           0x200005b4        0x4 build/obj/syscalls.o
+ .bss           0x200005b8        0x1 build/obj/uart_console.o
  *fill*         0x200005b9        0x3 00
- .bss           0x200005bc      0x10c build/obj/flash_usb_console.o
- .bss           0x200006c8        0xc build/obj/flash_led.o
- .bss           0x200006d4        0x4 build/obj/flash_timetick.o
+ .bss           0x200005bc      0x10c build/obj/usb_console.o
+ .bss           0x200006c8        0xc build/obj/led.o
+ .bss           0x200006d4        0x4 build/obj/timetick.o
  .bss           0x200006d8       0xe0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .bss           0x200007b8        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
  *fill*         0x200007ba        0x2 00
@@ -1510,11 +1510,11 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
 .stack          0x20000868     0x1000 load address 0x0040bd88
                 0x20000868                . = ALIGN (0x8)
  *(.stack .stack.*)
- .stack         0x20000868     0x1000 build/obj/flash_startup.o
+ .stack         0x20000868     0x1000 build/obj/startup.o
                 0x20000868                pdwStack
                 0x20001868                . = ALIGN (0x4)
                 0x20001868                _end = .
-OUTPUT(build/bin/project-flash.elf elf32-littlearm)
+OUTPUT(build/bin/project.elf elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x29
@@ -1523,23 +1523,23 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .ARM.attributes
                 0x0000001b       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
  .ARM.attributes
-                0x00000046       0x33 build/obj/flash_syscalls.o
+                0x00000046       0x33 build/obj/syscalls.o
  .ARM.attributes
-                0x00000079       0x33 build/obj/flash_system.o
+                0x00000079       0x33 build/obj/system.o
  .ARM.attributes
-                0x000000ac       0x33 build/obj/flash_uart_console.o
+                0x000000ac       0x33 build/obj/uart_console.o
  .ARM.attributes
-                0x000000df       0x33 build/obj/flash_usb_console.o
+                0x000000df       0x33 build/obj/usb_console.o
  .ARM.attributes
-                0x00000112       0x33 build/obj/flash_led.o
+                0x00000112       0x33 build/obj/led.o
  .ARM.attributes
-                0x00000145       0x33 build/obj/flash_timetick.o
+                0x00000145       0x33 build/obj/timetick.o
  .ARM.attributes
-                0x00000178       0x33 build/obj/flash_startup.o
+                0x00000178       0x33 build/obj/startup.o
  .ARM.attributes
-                0x000001ab       0x33 build/obj/flash_usb_device_descriptor.o
+                0x000001ab       0x33 build/obj/usb_device_descriptor.o
  .ARM.attributes
-                0x000001de       0x33 build/obj/flash_main.o
+                0x000001de       0x33 build/obj/main.o
  .ARM.attributes
                 0x00000211       0x33 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .ARM.attributes
@@ -1702,16 +1702,16 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
                 0x00000f6e       0x1b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
 
 .comment        0x00000000       0x30
- .comment       0x00000000       0x30 build/obj/flash_syscalls.o
+ .comment       0x00000000       0x30 build/obj/syscalls.o
                                  0x31 (size before relaxing)
- .comment       0x00000000       0x31 build/obj/flash_system.o
- .comment       0x00000000       0x31 build/obj/flash_uart_console.o
- .comment       0x00000000       0x31 build/obj/flash_usb_console.o
- .comment       0x00000000       0x31 build/obj/flash_led.o
- .comment       0x00000000       0x31 build/obj/flash_timetick.o
- .comment       0x00000000       0x31 build/obj/flash_startup.o
- .comment       0x00000000       0x31 build/obj/flash_usb_device_descriptor.o
- .comment       0x00000000       0x31 build/obj/flash_main.o
+ .comment       0x00000000       0x31 build/obj/system.o
+ .comment       0x00000000       0x31 build/obj/uart_console.o
+ .comment       0x00000000       0x31 build/obj/usb_console.o
+ .comment       0x00000000       0x31 build/obj/led.o
+ .comment       0x00000000       0x31 build/obj/timetick.o
+ .comment       0x00000000       0x31 build/obj/startup.o
+ .comment       0x00000000       0x31 build/obj/usb_device_descriptor.o
+ .comment       0x00000000       0x31 build/obj/main.o
  .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
  .comment       0x00000000       0x31 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
@@ -1731,15 +1731,15 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .comment       0x00000000       0x31 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_info     0x00000000     0xfc53
- .debug_info    0x00000000      0x4e1 build/obj/flash_syscalls.o
- .debug_info    0x000004e1      0x3e9 build/obj/flash_system.o
- .debug_info    0x000008ca      0xbfa build/obj/flash_uart_console.o
- .debug_info    0x000014c4     0x1b58 build/obj/flash_usb_console.o
- .debug_info    0x0000301c     0x1009 build/obj/flash_led.o
- .debug_info    0x00004025      0x649 build/obj/flash_timetick.o
- .debug_info    0x0000466e      0x37b build/obj/flash_startup.o
- .debug_info    0x000049e9      0x7bd build/obj/flash_usb_device_descriptor.o
- .debug_info    0x000051a6     0x11ea build/obj/flash_main.o
+ .debug_info    0x00000000      0x4e1 build/obj/syscalls.o
+ .debug_info    0x000004e1      0x3e9 build/obj/system.o
+ .debug_info    0x000008ca      0xbfa build/obj/uart_console.o
+ .debug_info    0x000014c4     0x1b58 build/obj/usb_console.o
+ .debug_info    0x0000301c     0x1009 build/obj/led.o
+ .debug_info    0x00004025      0x649 build/obj/timetick.o
+ .debug_info    0x0000466e      0x37b build/obj/startup.o
+ .debug_info    0x000049e9      0x7bd build/obj/usb_device_descriptor.o
+ .debug_info    0x000051a6     0x11ea build/obj/main.o
  .debug_info    0x00006390     0x2144 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .debug_info    0x000084d4      0x5c9 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
  .debug_info    0x00008a9d      0xd8c libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
@@ -1759,15 +1759,15 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .debug_info    0x0000f478      0x7db libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_abbrev   0x00000000     0x27bd
- .debug_abbrev  0x00000000      0x10f build/obj/flash_syscalls.o
- .debug_abbrev  0x0000010f       0xfb build/obj/flash_system.o
- .debug_abbrev  0x0000020a      0x14f build/obj/flash_uart_console.o
- .debug_abbrev  0x00000359      0x2f9 build/obj/flash_usb_console.o
- .debug_abbrev  0x00000652      0x1d2 build/obj/flash_led.o
- .debug_abbrev  0x00000824      0x1c3 build/obj/flash_timetick.o
- .debug_abbrev  0x000009e7       0xf6 build/obj/flash_startup.o
- .debug_abbrev  0x00000add       0xdc build/obj/flash_usb_device_descriptor.o
- .debug_abbrev  0x00000bb9      0x236 build/obj/flash_main.o
+ .debug_abbrev  0x00000000      0x10f build/obj/syscalls.o
+ .debug_abbrev  0x0000010f       0xfb build/obj/system.o
+ .debug_abbrev  0x0000020a      0x14f build/obj/uart_console.o
+ .debug_abbrev  0x00000359      0x2f9 build/obj/usb_console.o
+ .debug_abbrev  0x00000652      0x1d2 build/obj/led.o
+ .debug_abbrev  0x00000824      0x1c3 build/obj/timetick.o
+ .debug_abbrev  0x000009e7       0xf6 build/obj/startup.o
+ .debug_abbrev  0x00000add       0xdc build/obj/usb_device_descriptor.o
+ .debug_abbrev  0x00000bb9      0x236 build/obj/main.o
  .debug_abbrev  0x00000def      0x3c3 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .debug_abbrev  0x000011b2      0x10a libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
  .debug_abbrev  0x000012bc      0x265 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
@@ -1787,14 +1787,14 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .debug_abbrev  0x00002660      0x15d libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_loc      0x00000000     0x466b
- .debug_loc     0x00000000      0x25c build/obj/flash_syscalls.o
- .debug_loc     0x0000025c       0x64 build/obj/flash_system.o
- .debug_loc     0x000002c0      0x150 build/obj/flash_uart_console.o
- .debug_loc     0x00000410      0x39c build/obj/flash_usb_console.o
- .debug_loc     0x000007ac      0x294 build/obj/flash_led.o
- .debug_loc     0x00000a40      0x19c build/obj/flash_timetick.o
- .debug_loc     0x00000bdc       0x38 build/obj/flash_startup.o
- .debug_loc     0x00000c14       0xc8 build/obj/flash_main.o
+ .debug_loc     0x00000000      0x25c build/obj/syscalls.o
+ .debug_loc     0x0000025c       0x64 build/obj/system.o
+ .debug_loc     0x000002c0      0x150 build/obj/uart_console.o
+ .debug_loc     0x00000410      0x39c build/obj/usb_console.o
+ .debug_loc     0x000007ac      0x294 build/obj/led.o
+ .debug_loc     0x00000a40      0x19c build/obj/timetick.o
+ .debug_loc     0x00000bdc       0x38 build/obj/startup.o
+ .debug_loc     0x00000c14       0xc8 build/obj/main.o
  .debug_loc     0x00000cdc     0x1666 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .debug_loc     0x00002342      0x2fe libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
  .debug_loc     0x00002640      0x3db libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
@@ -1813,21 +1813,21 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
 
 .debug_aranges  0x00000000      0xa18
  .debug_aranges
-                0x00000000       0x70 build/obj/flash_syscalls.o
+                0x00000000       0x70 build/obj/syscalls.o
  .debug_aranges
-                0x00000070       0x28 build/obj/flash_system.o
+                0x00000070       0x28 build/obj/system.o
  .debug_aranges
-                0x00000098       0x48 build/obj/flash_uart_console.o
+                0x00000098       0x48 build/obj/uart_console.o
  .debug_aranges
-                0x000000e0       0xa8 build/obj/flash_usb_console.o
+                0x000000e0       0xa8 build/obj/usb_console.o
  .debug_aranges
-                0x00000188       0x78 build/obj/flash_led.o
+                0x00000188       0x78 build/obj/led.o
  .debug_aranges
-                0x00000200       0x58 build/obj/flash_timetick.o
+                0x00000200       0x58 build/obj/timetick.o
  .debug_aranges
-                0x00000258       0x20 build/obj/flash_startup.o
+                0x00000258       0x20 build/obj/startup.o
  .debug_aranges
-                0x00000278       0x38 build/obj/flash_main.o
+                0x00000278       0x38 build/obj/main.o
  .debug_aranges
                 0x000002b0       0xd8 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .debug_aranges
@@ -1864,14 +1864,14 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
                 0x000009d0       0x48 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_ranges   0x00000000      0xb78
- .debug_ranges  0x00000000       0x60 build/obj/flash_syscalls.o
- .debug_ranges  0x00000060       0x18 build/obj/flash_system.o
- .debug_ranges  0x00000078       0x38 build/obj/flash_uart_console.o
- .debug_ranges  0x000000b0       0x98 build/obj/flash_usb_console.o
- .debug_ranges  0x00000148       0x68 build/obj/flash_led.o
- .debug_ranges  0x000001b0       0x48 build/obj/flash_timetick.o
- .debug_ranges  0x000001f8       0x10 build/obj/flash_startup.o
- .debug_ranges  0x00000208       0x28 build/obj/flash_main.o
+ .debug_ranges  0x00000000       0x60 build/obj/syscalls.o
+ .debug_ranges  0x00000060       0x18 build/obj/system.o
+ .debug_ranges  0x00000078       0x38 build/obj/uart_console.o
+ .debug_ranges  0x000000b0       0x98 build/obj/usb_console.o
+ .debug_ranges  0x00000148       0x68 build/obj/led.o
+ .debug_ranges  0x000001b0       0x48 build/obj/timetick.o
+ .debug_ranges  0x000001f8       0x10 build/obj/startup.o
+ .debug_ranges  0x00000208       0x28 build/obj/main.o
  .debug_ranges  0x00000230      0x308 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .debug_ranges  0x00000538       0x88 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
  .debug_ranges  0x000005c0       0xa0 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
@@ -1891,15 +1891,15 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .debug_ranges  0x00000b40       0x38 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_line     0x00000000     0x3491
- .debug_line    0x00000000      0x1b7 build/obj/flash_syscalls.o
- .debug_line    0x000001b7      0x155 build/obj/flash_system.o
- .debug_line    0x0000030c      0x180 build/obj/flash_uart_console.o
- .debug_line    0x0000048c      0x3de build/obj/flash_usb_console.o
- .debug_line    0x0000086a      0x213 build/obj/flash_led.o
- .debug_line    0x00000a7d      0x184 build/obj/flash_timetick.o
- .debug_line    0x00000c01      0x105 build/obj/flash_startup.o
- .debug_line    0x00000d06      0x11c build/obj/flash_usb_device_descriptor.o
- .debug_line    0x00000e22      0x202 build/obj/flash_main.o
+ .debug_line    0x00000000      0x1b7 build/obj/syscalls.o
+ .debug_line    0x000001b7      0x155 build/obj/system.o
+ .debug_line    0x0000030c      0x180 build/obj/uart_console.o
+ .debug_line    0x0000048c      0x3de build/obj/usb_console.o
+ .debug_line    0x0000086a      0x213 build/obj/led.o
+ .debug_line    0x00000a7d      0x184 build/obj/timetick.o
+ .debug_line    0x00000c01      0x105 build/obj/startup.o
+ .debug_line    0x00000d06      0x11c build/obj/usb_device_descriptor.o
+ .debug_line    0x00000e22      0x202 build/obj/main.o
  .debug_line    0x00001024      0x72d libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .debug_line    0x00001751      0x1d4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
  .debug_line    0x00001925      0x31f libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
@@ -1919,23 +1919,23 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
  .debug_line    0x000032fd      0x194 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_str      0x00000000     0x31ca
- .debug_str     0x00000000      0x1df build/obj/flash_syscalls.o
+ .debug_str     0x00000000      0x1df build/obj/syscalls.o
                                 0x24c (size before relaxing)
- .debug_str     0x000001df      0x1b2 build/obj/flash_system.o
+ .debug_str     0x000001df      0x1b2 build/obj/system.o
                                 0x283 (size before relaxing)
- .debug_str     0x00000391      0x3ee build/obj/flash_uart_console.o
+ .debug_str     0x00000391      0x3ee build/obj/uart_console.o
                                 0x60f (size before relaxing)
- .debug_str     0x0000077f      0xaa0 build/obj/flash_usb_console.o
+ .debug_str     0x0000077f      0xaa0 build/obj/usb_console.o
                                0x103e (size before relaxing)
- .debug_str     0x0000121f      0x143 build/obj/flash_led.o
+ .debug_str     0x0000121f      0x143 build/obj/led.o
                                 0x836 (size before relaxing)
- .debug_str     0x00001362      0x118 build/obj/flash_timetick.o
+ .debug_str     0x00001362      0x118 build/obj/timetick.o
                                 0x421 (size before relaxing)
- .debug_str     0x0000147a       0x7e build/obj/flash_startup.o
+ .debug_str     0x0000147a       0x7e build/obj/startup.o
                                 0x1ae (size before relaxing)
- .debug_str     0x000014f8      0x2cb build/obj/flash_usb_device_descriptor.o
+ .debug_str     0x000014f8      0x2cb build/obj/usb_device_descriptor.o
                                 0x6e7 (size before relaxing)
- .debug_str     0x000017c3       0x87 build/obj/flash_main.o
+ .debug_str     0x000017c3       0x87 build/obj/main.o
                                 0x944 (size before relaxing)
  .debug_str     0x0000184a      0x510 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                                 0xc98 (size before relaxing)
@@ -1973,14 +1973,14 @@ OUTPUT(build/bin/project-flash.elf elf32-littlearm)
                                 0x50f (size before relaxing)
 
 .debug_frame    0x00000000     0x2998
- .debug_frame   0x00000000      0x150 build/obj/flash_syscalls.o
- .debug_frame   0x00000150       0x48 build/obj/flash_system.o
- .debug_frame   0x00000198       0xd0 build/obj/flash_uart_console.o
- .debug_frame   0x00000268      0x22c build/obj/flash_usb_console.o
- .debug_frame   0x00000494      0x188 build/obj/flash_led.o
- .debug_frame   0x0000061c       0xfc build/obj/flash_timetick.o
- .debug_frame   0x00000718       0x30 build/obj/flash_startup.o
- .debug_frame   0x00000748       0x88 build/obj/flash_main.o
+ .debug_frame   0x00000000      0x150 build/obj/syscalls.o
+ .debug_frame   0x00000150       0x48 build/obj/system.o
+ .debug_frame   0x00000198       0xd0 build/obj/uart_console.o
+ .debug_frame   0x00000268      0x22c build/obj/usb_console.o
+ .debug_frame   0x00000494      0x188 build/obj/led.o
+ .debug_frame   0x0000061c       0xfc build/obj/timetick.o
+ .debug_frame   0x00000718       0x30 build/obj/startup.o
+ .debug_frame   0x00000748       0x88 build/obj/main.o
  .debug_frame   0x000007d0      0x2b8 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .debug_frame   0x00000a88      0x108 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
  .debug_frame   0x00000b90      0x1d8 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
@@ -2058,17 +2058,17 @@ Cross Reference Table
 
 Symbol                                            File
 ACC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 ADC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 BusFault_Handler                                  libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 CDCDSerialDriver_ConfigurationChangedHandler      libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 CDCDSerialDriver_Initialize                       libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 CDCDSerialDriver_RequestHandler                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 CDCDSerialPort_GetControlLineState                libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
 CDCDSerialPort_GetLineCoding                      libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
@@ -2097,53 +2097,53 @@ CDCDSerial_Initialize                             libusb/lib/libusb_sam3s_rel.a(
                                                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
 CDCDSerial_LineCodingIsToChange                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
 CDCDSerial_Read                                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 CDCDSerial_RequestHandler                         libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
 CDCDSerial_SetSerialState                         libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
 CDCDSerial_Write                                  libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 CDCLineCoding_Initialize                          libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
 CRCCU_IrqHandler                                  libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 DAC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 DebugMon_Handler                                  libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 EEFC_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
-GetTickCount                                      build/obj/flash_timetick.o
-                                                  build/obj/flash_usb_console.o
-                                                  build/obj/flash_uart_console.o
+                                                  build/obj/startup.o
+GetTickCount                                      build/obj/timetick.o
+                                                  build/obj/usb_console.o
+                                                  build/obj/uart_console.o
 HardFault_Handler                                 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 IrqHandlerNotUsed                                 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
-LED_blink                                         build/obj/flash_led.o
-                                                  build/obj/flash_main.o
-LED_blinking                                      build/obj/flash_led.o
-LED_blinkstop                                     build/obj/flash_led.o
-LED_blinkwait                                     build/obj/flash_led.o
-LED_clr                                           build/obj/flash_led.o
-                                                  build/obj/flash_main.o
-LED_get                                           build/obj/flash_led.o
-LED_set                                           build/obj/flash_led.o
-LED_tgl                                           build/obj/flash_led.o
-LEDs_configure                                    build/obj/flash_led.o
-                                                  build/obj/flash_main.o
+                                                  build/obj/startup.o
+LED_blink                                         build/obj/led.o
+                                                  build/obj/main.o
+LED_blinking                                      build/obj/led.o
+LED_blinkstop                                     build/obj/led.o
+LED_blinkwait                                     build/obj/led.o
+LED_clr                                           build/obj/led.o
+                                                  build/obj/main.o
+LED_get                                           build/obj/led.o
+LED_set                                           build/obj/led.o
+LED_tgl                                           build/obj/led.o
+LEDs_configure                                    build/obj/led.o
+                                                  build/obj/main.o
 MCI_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 MemManage_Handler                                 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 NMI_Handler                                       libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 PIOA_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 PIOB_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 PIOC_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 PIO_CaptureDisable                                libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 PIO_CaptureDisableIt                              libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 PIO_CaptureEnable                                 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
@@ -2153,19 +2153,19 @@ PIO_CaptureHandler                                libchip/lib/libchip_sam3s4_rel
 PIO_CaptureInit                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 PIO_Clear                                         libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
 PIO_Configure                                     libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
-                                                  build/obj/flash_led.o
-                                                  build/obj/flash_usb_console.o
-                                                  build/obj/flash_uart_console.o
+                                                  build/obj/led.o
+                                                  build/obj/usb_console.o
+                                                  build/obj/uart_console.o
 PIO_ConfigureIt                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 PIO_DisableIt                                     libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
 PIO_EnableIt                                      libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 PIO_Get                                           libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 PIO_GetOutputDataStatus                           libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
 PIO_InitializeInterrupts                          libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 PIO_Set                                           libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
 PIO_SetDebounceFilter                             libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
 PMC_DisableAllPeripherals                         libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
@@ -2178,94 +2178,94 @@ PMC_EnablePeripheral                              libchip/lib/libchip_sam3s4_rel
                                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
 PMC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 PMC_IsPeriphEnabled                               libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
 PWM_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 PendSV_Handler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 PioInterruptHandler                               libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
 RSTC_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 RTC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 RTT_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
-ResetException                                    build/obj/flash_startup.o
+                                                  build/obj/startup.o
+ResetException                                    build/obj/startup.o
 SMC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 SPI_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 SSC_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 SUPC_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 SVC_Handler                                       libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
-Sleep                                             build/obj/flash_timetick.o
-SysTick_Handler                                   build/obj/flash_timetick.o
-                                                  build/obj/flash_startup.o
-SystemCoreClock                                   build/obj/flash_system.o
-SystemCoreClockUpdate                             build/obj/flash_system.o
-                                                  build/obj/flash_startup.o
-SystemInit                                        build/obj/flash_system.o
-                                                  build/obj/flash_startup.o
-TC0_IrqHandler                                    build/obj/flash_led.o
-                                                  build/obj/flash_startup.o
-TC1_IrqHandler                                    build/obj/flash_main.o
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
+Sleep                                             build/obj/timetick.o
+SysTick_Handler                                   build/obj/timetick.o
+                                                  build/obj/startup.o
+SystemCoreClock                                   build/obj/system.o
+SystemCoreClockUpdate                             build/obj/system.o
+                                                  build/obj/startup.o
+SystemInit                                        build/obj/system.o
+                                                  build/obj/startup.o
+TC0_IrqHandler                                    build/obj/led.o
+                                                  build/obj/startup.o
+TC1_IrqHandler                                    build/obj/main.o
+                                                  build/obj/startup.o
 TC2_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 TC3_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 TC4_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 TC5_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 TC_Configure                                      libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
-                                                  build/obj/flash_main.o
-                                                  build/obj/flash_led.o
+                                                  build/obj/main.o
+                                                  build/obj/led.o
 TC_FindMckDivisor                                 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
-                                                  build/obj/flash_main.o
-                                                  build/obj/flash_led.o
+                                                  build/obj/main.o
+                                                  build/obj/led.o
 TC_Start                                          libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
-                                                  build/obj/flash_led.o
+                                                  build/obj/led.o
 TC_Stop                                           libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
-                                                  build/obj/flash_led.o
+                                                  build/obj/led.o
 TWI0_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 TWI1_IrqHandler                                   libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
-TimeTick_Configure                                build/obj/flash_timetick.o
-                                                  build/obj/flash_main.o
+                                                  build/obj/startup.o
+TimeTick_Configure                                build/obj/timetick.o
+                                                  build/obj/main.o
 UART0_IrqHandler                                  libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 UART1_IrqHandler                                  libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
-UART_Configure                                    build/obj/flash_uart_console.o
-UART_Get                                          build/obj/flash_uart_console.o
-UART_Gets                                         build/obj/flash_uart_console.o
-                                                  build/obj/flash_syscalls.o
-UART_Put                                          build/obj/flash_uart_console.o
-UART_Puts                                         build/obj/flash_uart_console.o
-                                                  build/obj/flash_syscalls.o
-UART_SetTimeout                                   build/obj/flash_uart_console.o
+                                                  build/obj/startup.o
+UART_Configure                                    build/obj/uart_console.o
+UART_Get                                          build/obj/uart_console.o
+UART_Gets                                         build/obj/uart_console.o
+                                                  build/obj/syscalls.o
+UART_Put                                          build/obj/uart_console.o
+UART_Puts                                         build/obj/uart_console.o
+                                                  build/obj/syscalls.o
+UART_SetTimeout                                   build/obj/uart_console.o
 USART0_IrqHandler                                 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 USART1_IrqHandler                                 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
-USBC_Configure                                    build/obj/flash_usb_console.o
-                                                  build/obj/flash_main.o
-USBC_Gets                                         build/obj/flash_usb_console.o
-                                                  build/obj/flash_syscalls.o
-USBC_Puts                                         build/obj/flash_usb_console.o
-                                                  build/obj/flash_syscalls.o
-USBC_SetTimeout                                   build/obj/flash_usb_console.o
-USBC_StartListening                               build/obj/flash_usb_console.o
-USBC_hasData                                      build/obj/flash_usb_console.o
-USBC_isConfigured                                 build/obj/flash_usb_console.o
-                                                  build/obj/flash_main.o
+                                                  build/obj/startup.o
+USBC_Configure                                    build/obj/usb_console.o
+                                                  build/obj/main.o
+USBC_Gets                                         build/obj/usb_console.o
+                                                  build/obj/syscalls.o
+USBC_Puts                                         build/obj/usb_console.o
+                                                  build/obj/syscalls.o
+USBC_SetTimeout                                   build/obj/usb_console.o
+USBC_StartListening                               build/obj/usb_console.o
+USBC_hasData                                      build/obj/usb_console.o
+USBC_isConfigured                                 build/obj/usb_console.o
+                                                  build/obj/main.o
 USBConfigurationDescriptor_GetNumInterfaces       libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
 USBConfigurationDescriptor_GetTotalLength         libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
@@ -2273,9 +2273,9 @@ USBConfigurationDescriptor_IsSelfPowered          libusb/lib/libusb_sam3s_rel.a(
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
 USBConfigurationDescriptor_Parse                  libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-USBDCallbacks_Initialized                         build/obj/flash_usb_console.o
+USBDCallbacks_Initialized                         build/obj/usb_console.o
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBDCallbacks_RequestReceived                     build/obj/flash_usb_console.o
+USBDCallbacks_RequestReceived                     build/obj/usb_console.o
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
 USBDCallbacks_Reset                               libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
@@ -2283,7 +2283,7 @@ USBDCallbacks_Resumed                             libusb/lib/libusb_sam3s_rel.a(
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
 USBDCallbacks_Suspended                           libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-USBDDriverCallbacks_ConfigurationChanged          build/obj/flash_usb_console.o
+USBDDriverCallbacks_ConfigurationChanged          build/obj/usb_console.o
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
 USBDDriverCallbacks_InterfaceSettingChanged       libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
@@ -2300,19 +2300,19 @@ USBDDriver_returnOTGFeatures                      libusb/lib/libusb_sam3s_rel.a(
 USBD_ConfigureEndpoint                            libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
 USBD_Connect                                      libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 USBD_Disconnect                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 USBD_GetDriver                                    libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
 USBD_GetState                                     libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 USBD_HAL_Activate                                 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
 USBD_HAL_CancelIo                                 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 USBD_HAL_ConfigureEP                              libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
 USBD_HAL_Connect                                  libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
@@ -2351,7 +2351,7 @@ USBD_Halt                                         libusb/lib/libusb_sam3s_rel.a(
 USBD_Init                                         libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
 USBD_IrqHandler                                   libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 USBD_IsHalted                                     libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
 USBD_IsHighSpeed                                  libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
@@ -2424,10 +2424,10 @@ USBSetAddressRequest_GetAddress                   libusb/lib/libusb_sam3s_rel.a(
 USBSetConfigurationRequest_GetConfiguration       libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
 UsageFault_Handler                                libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
+                                                  build/obj/startup.o
 WDT_IrqHandler                                    libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                                                  build/obj/flash_startup.o
-Wait                                              build/obj/flash_timetick.o
+                                                  build/obj/startup.o
+Wait                                              build/obj/timetick.o
 _Balloc                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mprec.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-dtoa.o)
 _Bfree                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mprec.o)
@@ -2492,8 +2492,8 @@ __assert_func                                     /usr/local/Sourcery/bin/../lib
                                                   libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
                                                   libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
                                                   libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                                                  build/obj/flash_controller.o
-                                                  build/obj/flash_led.o
+                                                  build/obj/controller.o
+                                                  build/obj/led.o
 __b2d                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mprec.o)
 __cmpdf2                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_arm_cmpdf2.o)
 __copybits                                        /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mprec.o)
@@ -2688,18 +2688,18 @@ _cleanup                                          /usr/local/Sourcery/bin/../lib
 _cleanup_r                                        /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-makebuf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setvbuf.o)
-_close                                            build/obj/flash_syscalls.o
+_close                                            build/obj/syscalls.o
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-closer.o)
 _close_r                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-closer.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-stdio.o)
 _dtoa_r                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-dtoa.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfprintf.o)
-_end                                              build/obj/flash_syscalls.o
-_erelocate                                        build/obj/flash_startup.o
-_etext                                            build/obj/flash_startup.o
-_exit                                             build/obj/flash_syscalls.o
+_end                                              build/obj/syscalls.o
+_erelocate                                        build/obj/startup.o
+_etext                                            build/obj/startup.o
+_exit                                             build/obj/syscalls.o
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-abort.o)
-_ezero                                            build/obj/flash_startup.o
+_ezero                                            build/obj/startup.o
 _fclose_r                                         /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fclose.o)
 _fflush_r                                         /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fflush.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fclose.o)
@@ -2725,7 +2725,7 @@ _free_r                                           /usr/local/Sourcery/bin/../lib
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reallocr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
-_fstat                                            build/obj/flash_syscalls.o
+_fstat                                            build/obj/syscalls.o
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fstatr.o)
 _fstat_r                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fstatr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-makebuf.o)
@@ -2734,7 +2734,7 @@ _fwalk                                            /usr/local/Sourcery/bin/../lib
 _fwalk_reent                                      /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwalk.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fflush.o)
 _fwrite_r                                         /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwrite.o)
-_getpid                                           build/obj/flash_syscalls.o
+_getpid                                           build/obj/syscalls.o
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signalr.o)
 _getpid_r                                         /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signalr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
@@ -2767,24 +2767,24 @@ _impure_ptr                                       /usr/local/Sourcery/bin/../lib
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  build/obj/flash_main.o
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/main.o
+                                                  build/obj/usb_console.o
 _init                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crti.o
 _init_signal                                      /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
 _init_signal_r                                    /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
 _iprintf_r                                        /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iprintf.o)
-_isatty                                           build/obj/flash_syscalls.o
+_isatty                                           build/obj/syscalls.o
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-isattyr.o)
 _isatty_r                                         /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-isattyr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-makebuf.o)
-_kill                                             build/obj/flash_syscalls.o
+_kill                                             build/obj/syscalls.o
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signalr.o)
 _kill_r                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signalr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
-_link                                             build/obj/flash_syscalls.o
+_link                                             build/obj/syscalls.o
 _localeconv_r                                     /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfprintf.o)
-_lseek                                            build/obj/flash_syscalls.o
+_lseek                                            build/obj/syscalls.o
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-lseekr.o)
 _lseek_r                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-lseekr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-stdio.o)
@@ -2801,23 +2801,23 @@ _mprec_log10                                      /usr/local/Sourcery/bin/../lib
 _putc_r                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-putc.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputc.o)
 _raise_r                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
-_read                                             build/obj/flash_syscalls.o
+_read                                             build/obj/syscalls.o
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-readr.o)
 _read_r                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-readr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-stdio.o)
 _realloc_r                                        /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reallocr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
 _reclaim_reent                                    /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
-_sbrk                                             build/obj/flash_syscalls.o
+_sbrk                                             build/obj/syscalls.o
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sbrkr.o)
 _sbrk_r                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sbrkr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-freer.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
 _setlocale_r                                      /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
-_sfixed                                           build/obj/flash_startup.o
+_sfixed                                           build/obj/startup.o
 _signal_r                                         /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
-_srelocate                                        build/obj/flash_startup.o
-_szero                                            build/obj/flash_startup.o
+_srelocate                                        build/obj/startup.o
+_szero                                            build/obj/startup.o
 _vfiprintf_r                                      /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iprintf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fiprintf.o)
@@ -2827,18 +2827,18 @@ _wcrtomb_r                                        /usr/local/Sourcery/bin/../lib
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputwc.o)
 _wctomb_r                                         /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wctomb_r.o)
 _wrapup_reent                                     /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
-_write                                            build/obj/flash_syscalls.o
+_write                                            build/obj/syscalls.o
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-writer.o)
 _write_r                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-writer.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-stdio.o)
 abort                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-abort.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
-cdcdSerialDriverDescriptors                       build/obj/flash_usb_device_descriptor.o
-                                                  build/obj/flash_usb_console.o
+cdcdSerialDriverDescriptors                       build/obj/usb_device_descriptor.o
+                                                  build/obj/usb_console.o
 cleanup_glue                                      /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
-configurationDescriptorsFS                        build/obj/flash_usb_device_descriptor.o
-control                                           build/obj/flash_controller.o
-deviceDescriptor                                  build/obj/flash_usb_device_descriptor.o
+configurationDescriptorsFS                        build/obj/usb_device_descriptor.o
+control                                           build/obj/controller.o
+deviceDescriptor                                  build/obj/usb_device_descriptor.o
 errno                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-readr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-lseekr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-isattyr.o)
@@ -2848,8 +2848,8 @@ errno                                             /usr/local/Sourcery/bin/../lib
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signalr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sbrkr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
-                                                  build/obj/flash_syscalls.o
-exception_table                                   build/obj/flash_startup.o
+                                                  build/obj/syscalls.o
+exception_table                                   build/obj/startup.o
 fclose                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fclose.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
 fflush                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fflush.o)
@@ -2859,7 +2859,7 @@ fprintf                                           /usr/local/Sourcery/bin/../lib
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                                                  build/obj/flash_main.o
+                                                  build/obj/main.o
 fputc                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputc.o)
                                                   libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
 fputs                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputs.o)
@@ -2867,16 +2867,16 @@ fputs                                             /usr/local/Sourcery/bin/../lib
 fputwc                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputwc.o)
 free                                              /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-malloc.o)
 fwrite                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwrite.o)
-                                                  build/obj/flash_main.o
-                                                  build/obj/flash_usb_console.o
-init                                              build/obj/flash_main.o
+                                                  build/obj/main.o
+                                                  build/obj/usb_console.o
+init                                              build/obj/main.o
 iprintf                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iprintf.o)
-                                                  build/obj/flash_syscalls.o
-languageIdStringDescriptor                        build/obj/flash_usb_device_descriptor.o
+                                                  build/obj/syscalls.o
+languageIdStringDescriptor                        build/obj/usb_device_descriptor.o
 localeconv                                        /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
-loops                                             build/obj/flash_main.o
-main                                              build/obj/flash_main.o
-                                                  build/obj/flash_startup.o
+loops                                             build/obj/main.o
+main                                              build/obj/main.o
+                                                  build/obj/startup.o
 malloc                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-malloc.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mprec.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-dtoa.o)
@@ -2889,35 +2889,35 @@ memcpy                                            /usr/local/Sourcery/bin/../lib
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mprec.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-dtoa.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 memmove                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memmove.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reallocr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
-                                                  build/obj/flash_usb_console.o
+                                                  build/obj/usb_console.o
 memset                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-callocr.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
-mode                                              build/obj/flash_controller.o
-pdwStack                                          build/obj/flash_startup.o
-productStringDescriptor                           build/obj/flash_usb_device_descriptor.o
+mode                                              build/obj/controller.o
+pdwStack                                          build/obj/startup.o
+productStringDescriptor                           build/obj/usb_device_descriptor.o
 putc                                              /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-putc.o)
 raise                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-abort.o)
 setbuf                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setbuf.o)
-                                                  build/obj/flash_main.o
+                                                  build/obj/main.o
 setlocale                                         /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
 setvbuf                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setvbuf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setbuf.o)
 signal                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
 strcmp                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strcmp.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
-stringDescriptors                                 build/obj/flash_usb_device_descriptor.o
+stringDescriptors                                 build/obj/usb_device_descriptor.o
 strlen                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strlen.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfprintf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputs.o)
-tris                                              build/obj/flash_controller.o
-tristate                                          build/obj/flash_controller.o
+tris                                              build/obj/controller.o
+tristate                                          build/obj/controller.o
 vfiprintf                                         /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
 vfprintf                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfprintf.o)
 wcrtomb                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wcrtomb.o)

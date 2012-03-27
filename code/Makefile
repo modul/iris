@@ -9,7 +9,6 @@
 SERIE = sam3s
 CHIP  = $(SERIE)4
 BOARD = olimex-sam3-h256
-MEMORIES = flash #sram
 OUTPUT = project
 BUILD = build
 BIN = $(BUILD)/bin
@@ -74,58 +73,27 @@ OOCDFLAGS = -f $(OOCDCFG) -c init
 #		Files
 #-------------------------------------------------------------------------------
 vpath %.a $(LIBPATHS)
-VPATH += . chip chip/cmsis board
+VPATH += . board
 
-C_SRC += $(wildcard chip/cmsis/*.c)
-C_SRC += $(wildcard chip/*.c)
 C_SRC += $(wildcard board/*.c)
 C_SRC += $(wildcard *.c)
 
-C_OBJECTS  = $(patsubst %.c, %.o, $(notdir $(C_SRC)))
+C_OBJECTS = $(addprefix $(OBJ)/, $(patsubst %.c, %.o, $(notdir $(C_SRC))))
 
+TARGET = $(OUTPUT).bin
 #-------------------------------------------------------------------------------
 #		Rules
 #-------------------------------------------------------------------------------
 
-.PHONY: all clean $(MEMORIES) runrom runflash program ramboot 
+.PHONY: all clean flash program debug
 
-all: $(BIN) $(OBJ) $(MEMORIES)
+all: $(BIN) $(OBJ) $(TARGET)
 
 $(BUILD):
 	-mkdir $@
 
 $(BIN) $(OBJ): $(BUILD)
 	-mkdir $@
-
-define RULES
-C_OBJECTS_$(1) = $(addprefix $(OBJ)/$(1)_, $(C_OBJECTS))
-ASM_OBJECTS_$(1) = $(addprefix $(OBJ)/$(1)_, $(ASM_OBJECTS))
-TARGET = $(OUTPUT)-$(1).bin
-
-$(1): $$(TARGET)
-
-$$(TARGET): $$(ASM_OBJECTS_$(1)) $$(C_OBJECTS_$(1)) $$(LIBS)
-	@echo [LINKING $$@]
-	@$(CC) $(LDFLAGS) -T"board/$(1).ld" \
-	       	-Wl,-Map,$(OUTPUT)-$(1).map \
-	       	-o $(OUTPUT)-$(1).elf $$^ 
-	@$(NM) $(OUTPUT)-$(1).elf >$(OUTPUT)-$(1).elf.txt
-	@$(OBJCOPY) -O binary $(OUTPUT)-$(1).elf $$@
-	@$(SIZE) $$(filter-out %a, $$^) $(OUTPUT)-$(1).elf
-	@$(SIZE) $$(filter-out %a, $$^) $(OUTPUT)-$(1).elf > $(OUTPUT)-$(1)-size.txt
-	@$(SIZE) -A $(OUTPUT)-$(1).elf >> $(OUTPUT)-$(1)-size.txt
-
-$$(C_OBJECTS_$(1)): $(OBJ)/$(1)_%.o: %.c Makefile 
-	@echo [COMPILING $$<]
-	@$(CC) $(CFLAGS) -D$(1) -Wa,-ahlms=$(OBJ)/$(1)_$$*.lst -c -o $$@ $$<  
-
-$$(ASM_OBJECTS_$(1)): $(OBJ)/$(1)_%.o: %.S Makefile 
-	@echo [ASSEMBLING $$<]
-	@$(CC) $(ASFLAGS) -D$(1) -c -o $$@ $$<
-
-endef
-
-$(foreach MEMORY, $(MEMORIES), $(eval $(call RULES,$(MEMORY))))
 
 tags: $(C_SRC) $(LIBS)
 	ctags --totals -R .
@@ -136,19 +104,32 @@ clean:
 			$(BIN)/*.elf.txt $(BIN)/*.map \
 			$(BIN)/*-size.txt
 
-program: flash
+program: $(TARGET)
 	$(OOCD) $(OOCDFLAGS) \
 		-c "halt" \
 		-c "flash write_bank 0 $(OUTPUT)-flash.bin 0" \
 		-c "reset run" \
 		-c "shutdown"
 
-ramboot: sram
-	$(OOCD) $(OOCDFLAGS) \
-		-c "halt" \
-		-c "flash write_bank 0 $(OUTPUT)-sram.bin 0" \
-		-c "reset run" \
-		-c "shutdown"
-
-debug: $(MEMORIES)
+debug: $(TARGET)
 	./debug.sh
+
+$(TARGET): $(ASM_OBJECTS) $(C_OBJECTS) $(LIBS)
+	@echo [LINKING $@]
+	@$(CC) $(LDFLAGS) -T"board/flash.ld" \
+	       	-Wl,-Map,$(OUTPUT).map \
+	       	-o $(OUTPUT).elf $^ 
+	@$(NM) $(OUTPUT).elf >$(OUTPUT).elf.txt
+	@$(OBJCOPY) -O binary $(OUTPUT).elf $@
+	@$(SIZE) $(filter-out %a, $^) $(OUTPUT).elf
+	@$(SIZE) $(filter-out %a, $^) $(OUTPUT).elf > $(OUTPUT)-size.txt
+	@$(SIZE) -A $(OUTPUT).elf >> $(OUTPUT)-size.txt
+
+$(C_OBJECTS): $(OBJ)/%.o: %.c Makefile 
+	@echo [COMPILING $<]
+	@$(CC) $(CFLAGS) -Dflash -Wa,-ahlms=$(OBJ)/$*.lst -c -o $@ $<  
+
+$(ASM_OBJECTS): $(OBJ)/%.o: %.S Makefile 
+	@echo [ASSEMBLING $<]
+	@$(CC) $(ASFLAGS) -Dflash -c -o $@ $<
+

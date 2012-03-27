@@ -1,2 +1,2 @@
-file build/bin/project-flash.elf
+file build/bin/project.elf
 target remote localhost:3333
