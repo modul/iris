@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccoMpiKZ.s 			page 1
+ARM GAS  /tmp/ccViBMgP.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
   42              		.cfi_offset 7, -8
   43 0002 00AF     		add	r7, sp, #0
   44              	.LCFI1:
-ARM GAS  /tmp/ccoMpiKZ.s 			page 2
+ARM GAS  /tmp/ccViBMgP.s 			page 2
 
 
   45              		.cfi_def_cfa_register 7
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
   85 006c 002B     		cmp	r3, #0
   86 006e F8D1     		bne	.L2
   20:main.c        **** 
-ARM GAS  /tmp/ccoMpiKZ.s 			page 3
+ARM GAS  /tmp/ccViBMgP.s 			page 3
 
 
   21:main.c        **** 	USBC_Configure();
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  133 0006 00000000 		.4byte	.Ldebug_abbrev0
  134 000a 04       		.byte	0x4
  135 000b 01       		.uleb128 0x1
-ARM GAS  /tmp/ccoMpiKZ.s 			page 4
+ARM GAS  /tmp/ccViBMgP.s 			page 4
 
 
  136 000c 8C030000 		.4byte	.LASF118
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  190 007e 05       		.uleb128 0x5
  191 007f 26020000 		.4byte	.LASF10
  192 0083 04       		.byte	0x4
-ARM GAS  /tmp/ccoMpiKZ.s 			page 5
+ARM GAS  /tmp/ccViBMgP.s 			page 5
 
 
  193 0084 6101     		.2byte	0x161
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  247 00ee 03       		.byte	0x3
  248 00ef 4F       		.byte	0x4f
  249 00f0 61000000 		.4byte	0x61
-ARM GAS  /tmp/ccoMpiKZ.s 			page 6
+ARM GAS  /tmp/ccViBMgP.s 			page 6
 
 
  250 00f4 0C       		.uleb128 0xc
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  304 0156 02       		.byte	0x2
  305 0157 23       		.byte	0x23
  306 0158 10       		.uleb128 0x10
-ARM GAS  /tmp/ccoMpiKZ.s 			page 7
+ARM GAS  /tmp/ccViBMgP.s 			page 7
 
 
  307 0159 0E       		.uleb128 0xe
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  361 01be 02       		.byte	0x2
  362 01bf 23       		.byte	0x23
  363 01c0 0C       		.uleb128 0xc
-ARM GAS  /tmp/ccoMpiKZ.s 			page 8
+ARM GAS  /tmp/ccViBMgP.s 			page 8
 
 
  364 01c1 0B       		.uleb128 0xb
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  418 0222 00       		.uleb128 0
  419 0223 0B       		.uleb128 0xb
  420 0224 00000000 		.4byte	.LASF36
-ARM GAS  /tmp/ccoMpiKZ.s 			page 9
+ARM GAS  /tmp/ccViBMgP.s 			page 9
 
 
  421 0228 05       		.byte	0x5
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  475 028e 05       		.byte	0x5
  476 028f 55       		.byte	0x55
  477 0290 AD020000 		.4byte	0x2ad
-ARM GAS  /tmp/ccoMpiKZ.s 			page 10
+ARM GAS  /tmp/ccViBMgP.s 			page 10
 
 
  478 0294 02       		.byte	0x2
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  532 02f5 04       		.byte	0x4
  533 02f6 30000000 		.4byte	0x30
  534 02fa 12       		.uleb128 0x12
-ARM GAS  /tmp/ccoMpiKZ.s 			page 11
+ARM GAS  /tmp/ccViBMgP.s 			page 11
 
 
  535 02fb 5F030000 		.4byte	.LASF46
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  589 0362 97020000 		.4byte	.LASF53
  590 0366 05       		.byte	0x5
  591 0367 8A01     		.2byte	0x18a
-ARM GAS  /tmp/ccoMpiKZ.s 			page 12
+ARM GAS  /tmp/ccViBMgP.s 			page 12
 
 
  592 0369 45000000 		.4byte	0x45
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  646 03cf 05       		.byte	0x5
  647 03d0 9701     		.2byte	0x197
  648 03d2 F3050000 		.4byte	0x5f3
-ARM GAS  /tmp/ccoMpiKZ.s 			page 13
+ARM GAS  /tmp/ccViBMgP.s 			page 13
 
 
  649 03d6 02       		.byte	0x2
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  703 0439 A401     		.2byte	0x1a4
  704 043b A2060000 		.4byte	0x6a2
  705 043f 03       		.byte	0x3
-ARM GAS  /tmp/ccoMpiKZ.s 			page 14
+ARM GAS  /tmp/ccViBMgP.s 			page 14
 
 
  706 0440 23       		.byte	0x23
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  760 04a4 05       		.byte	0x5
  761 04a5 B6       		.byte	0xb6
  762 04a6 45000000 		.4byte	0x45
-ARM GAS  /tmp/ccoMpiKZ.s 			page 15
+ARM GAS  /tmp/ccViBMgP.s 			page 15
 
 
  763 04aa 02       		.byte	0x2
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  817 0507 C3       		.byte	0xc3
  818 0508 00060000 		.4byte	0x600
  819 050c 02       		.byte	0x2
-ARM GAS  /tmp/ccoMpiKZ.s 			page 16
+ARM GAS  /tmp/ccViBMgP.s 			page 16
 
 
  820 050d 23       		.byte	0x23
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  874 056a 76060000 		.4byte	0x676
  875 056e 02       		.byte	0x2
  876 056f 23       		.byte	0x23
-ARM GAS  /tmp/ccoMpiKZ.s 			page 17
+ARM GAS  /tmp/ccViBMgP.s 			page 17
 
 
  877 0570 44       		.uleb128 0x44
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  931 05d0 02       		.byte	0x2
  932 05d1 23       		.byte	0x23
  933 05d2 64       		.uleb128 0x64
-ARM GAS  /tmp/ccoMpiKZ.s 			page 18
+ARM GAS  /tmp/ccViBMgP.s 			page 18
 
 
  934 05d3 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  988 064b 73000000 		.4byte	0x73
  989 064f 16       		.uleb128 0x16
  990 0650 45000000 		.4byte	0x45
-ARM GAS  /tmp/ccoMpiKZ.s 			page 19
+ARM GAS  /tmp/ccViBMgP.s 			page 19
 
 
  991 0654 00       		.byte	0
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1045 06ca 02       		.byte	0x2
  1046 06cb 23       		.byte	0x23
  1047 06cc 04       		.uleb128 0x4
-ARM GAS  /tmp/ccoMpiKZ.s 			page 20
+ARM GAS  /tmp/ccViBMgP.s 			page 20
 
 
  1048 06cd 13       		.uleb128 0x13
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1102 0733 08       		.uleb128 0x8
  1103 0734 3E000000 		.4byte	0x3e
  1104 0738 43070000 		.4byte	0x743
-ARM GAS  /tmp/ccoMpiKZ.s 			page 21
+ARM GAS  /tmp/ccViBMgP.s 			page 21
 
 
  1105 073c 09       		.uleb128 0x9
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1159 07a5 05       		.byte	0x5
  1160 07a6 6C01     		.2byte	0x16c
  1161 07a8 F3050000 		.4byte	0x5f3
-ARM GAS  /tmp/ccoMpiKZ.s 			page 22
+ARM GAS  /tmp/ccViBMgP.s 			page 22
 
 
  1162 07ac 02       		.byte	0x2
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1216 080f 7301     		.2byte	0x173
  1217 0811 DE000000 		.4byte	0xde
  1218 0815 02       		.byte	0x2
-ARM GAS  /tmp/ccoMpiKZ.s 			page 23
+ARM GAS  /tmp/ccViBMgP.s 			page 23
 
 
  1219 0816 23       		.byte	0x23
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1273 087c 86080000 		.4byte	0x886
  1274 0880 16       		.uleb128 0x16
  1275 0881 45000000 		.4byte	0x45
-ARM GAS  /tmp/ccoMpiKZ.s 			page 24
+ARM GAS  /tmp/ccViBMgP.s 			page 24
 
 
  1276 0885 00       		.byte	0
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1330 08ed 45000000 		.4byte	0x45
  1331 08f1 00000000 		.4byte	.LFB35
  1332 08f5 B8000000 		.4byte	.LFE35
-ARM GAS  /tmp/ccoMpiKZ.s 			page 25
+ARM GAS  /tmp/ccViBMgP.s 			page 25
 
 
  1333 08f9 00000000 		.4byte	.LLST0
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1387 0014 00       		.byte	0
  1388 0015 02       		.uleb128 0x2
  1389 0016 24       		.uleb128 0x24
-ARM GAS  /tmp/ccoMpiKZ.s 			page 26
+ARM GAS  /tmp/ccViBMgP.s 			page 26
 
 
  1390 0017 00       		.byte	0
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1444 004d 0B       		.uleb128 0xb
  1445 004e 01       		.uleb128 0x1
  1446 004f 13       		.uleb128 0x13
-ARM GAS  /tmp/ccoMpiKZ.s 			page 27
+ARM GAS  /tmp/ccViBMgP.s 			page 27
 
 
  1447 0050 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1501 0086 0B       		.uleb128 0xb
  1502 0087 49       		.uleb128 0x49
  1503 0088 13       		.uleb128 0x13
-ARM GAS  /tmp/ccoMpiKZ.s 			page 28
+ARM GAS  /tmp/ccViBMgP.s 			page 28
 
 
  1504 0089 38       		.uleb128 0x38
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1558 00bf 0E       		.uleb128 0xe
  1559 00c0 0B       		.uleb128 0xb
  1560 00c1 05       		.uleb128 0x5
-ARM GAS  /tmp/ccoMpiKZ.s 			page 29
+ARM GAS  /tmp/ccViBMgP.s 			page 29
 
 
  1561 00c2 3A       		.uleb128 0x3a
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1615 00f8 49       		.uleb128 0x49
  1616 00f9 13       		.uleb128 0x13
  1617 00fa 38       		.uleb128 0x38
-ARM GAS  /tmp/ccoMpiKZ.s 			page 30
+ARM GAS  /tmp/ccViBMgP.s 			page 30
 
 
  1618 00fb 0A       		.uleb128 0xa
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1672 0131 13       		.uleb128 0x13
  1673 0132 00       		.byte	0
  1674 0133 00       		.byte	0
-ARM GAS  /tmp/ccoMpiKZ.s 			page 31
+ARM GAS  /tmp/ccViBMgP.s 			page 31
 
 
  1675 0134 1B       		.uleb128 0x1b
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1729              	.LLST0:
  1730 0000 00000000 		.4byte	.LFB35
  1731 0004 02000000 		.4byte	.LCFI0
-ARM GAS  /tmp/ccoMpiKZ.s 			page 32
+ARM GAS  /tmp/ccViBMgP.s 			page 32
 
 
  1732 0008 0200     		.2byte	0x2
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1776              	.LASF52:
  1777 0026 5F656D65 		.ascii	"_emergency\000"
  1777      7267656E 
-ARM GAS  /tmp/ccoMpiKZ.s 			page 33
+ARM GAS  /tmp/ccViBMgP.s 			page 33
 
 
  1777      637900
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1801      435200
  1802              	.LASF79:
  1803 00c7 5F756275 		.ascii	"_ubuf\000"
-ARM GAS  /tmp/ccoMpiKZ.s 			page 34
+ARM GAS  /tmp/ccViBMgP.s 			page 34
 
 
  1803      6600
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1835 014e 5F6D6273 		.ascii	"_mbsrtowcs_state\000"
  1835      72746F77 
  1835      63735F73 
-ARM GAS  /tmp/ccoMpiKZ.s 			page 35
+ARM GAS  /tmp/ccViBMgP.s 			page 35
 
 
  1835      74617465 
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1865 01e0 5F646174 		.ascii	"_data\000"
  1865      6100
  1866              	.LASF89:
-ARM GAS  /tmp/ccoMpiKZ.s 			page 36
+ARM GAS  /tmp/ccViBMgP.s 			page 36
 
 
  1867 01e6 5F6E696F 		.ascii	"_niobs\000"
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1897      5F6D6F6E 
  1897      00
  1898              	.LASF39:
-ARM GAS  /tmp/ccoMpiKZ.s 			page 37
+ARM GAS  /tmp/ccViBMgP.s 			page 37
 
 
  1899 028f 5F617465 		.ascii	"_atexit\000"
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1927 031d 5F6D6273 		.ascii	"_mbstate\000"
  1927      74617465 
  1927      00
-ARM GAS  /tmp/ccoMpiKZ.s 			page 38
+ARM GAS  /tmp/ccViBMgP.s 			page 38
 
 
  1928              	.LASF103:
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1959      00
  1960              	.LASF81:
  1961 03ac 5F626C6B 		.ascii	"_blksize\000"
-ARM GAS  /tmp/ccoMpiKZ.s 			page 39
+ARM GAS  /tmp/ccViBMgP.s 			page 39
 
 
  1961      73697A65 
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  1987      00
  1988              	.LASF88:
  1989 043b 5F676C75 		.ascii	"_glue\000"
-ARM GAS  /tmp/ccoMpiKZ.s 			page 40
+ARM GAS  /tmp/ccViBMgP.s 			page 40
 
 
  1989      6500
@@ -2385,16 +2385,16 @@ ARM GAS  /tmp/ccoMpiKZ.s 			page 1
  2011      5F6D6461 
  2011      7900
  2012              		.ident	"GCC: (Sourcery CodeBench Lite 2011.09-69) 4.6.1"
-ARM GAS  /tmp/ccoMpiKZ.s 			page 41
+ARM GAS  /tmp/ccViBMgP.s 			page 41
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-     /tmp/ccoMpiKZ.s:19     .rodata:00000000 $d
-     /tmp/ccoMpiKZ.s:20     .rodata:00000000 .LC0
-     /tmp/ccoMpiKZ.s:23     .rodata:00000018 .LC1
-     /tmp/ccoMpiKZ.s:26     .text.main:00000000 $t
-     /tmp/ccoMpiKZ.s:31     .text.main:00000000 main
+     /tmp/ccViBMgP.s:19     .rodata:00000000 $d
+     /tmp/ccViBMgP.s:20     .rodata:00000000 .LC0
+     /tmp/ccViBMgP.s:23     .rodata:00000018 .LC1
+     /tmp/ccViBMgP.s:26     .text.main:00000000 $t
+     /tmp/ccViBMgP.s:31     .text.main:00000000 main
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

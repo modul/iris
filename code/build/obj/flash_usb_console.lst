@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccZE231x.s 			page 1
+ARM GAS  /tmp/ccfAGc5L.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
   30:libusb/include/CDCDSerialDriver.h **** /**
   31:libusb/include/CDCDSerialDriver.h ****  * \file
   32:libusb/include/CDCDSerialDriver.h ****  *
-ARM GAS  /tmp/ccZE231x.s 			page 2
+ARM GAS  /tmp/ccfAGc5L.s 			page 2
 
 
   33:libusb/include/CDCDSerialDriver.h ****  * \section Purpose
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
   87:libusb/include/CDCDSerialDriver.h **** 
   88:libusb/include/CDCDSerialDriver.h **** /**
   89:libusb/include/CDCDSerialDriver.h ****  * \typedef CDCDSerialDriverConfigurationDescriptors
-ARM GAS  /tmp/ccZE231x.s 			page 3
+ARM GAS  /tmp/ccfAGc5L.s 			page 3
 
 
   90:libusb/include/CDCDSerialDriver.h ****  * \brief Configuration descriptor list for a device implementing a
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  144:libusb/include/CDCDSerialDriver.h ****     USBEndpointDescriptor dataOut;
  145:libusb/include/CDCDSerialDriver.h ****     /** Data IN endpoint descriptor. */
  146:libusb/include/CDCDSerialDriver.h ****     USBEndpointDescriptor dataIn;
-ARM GAS  /tmp/ccZE231x.s 			page 4
+ARM GAS  /tmp/ccfAGc5L.s 			page 4
 
 
  147:libusb/include/CDCDSerialDriver.h **** 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
   42 0008 B960     		str	r1, [r7, #8]
   43 000a 7A60     		str	r2, [r7, #4]
   44 000c 3B60     		str	r3, [r7, #0]
-ARM GAS  /tmp/ccZE231x.s 			page 5
+ARM GAS  /tmp/ccfAGc5L.s 			page 5
 
 
  185:libusb/include/CDCDSerialDriver.h ****     return CDCDSerial_Write(data, size, callback, argument);
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
   79 0004 00AF     		add	r7, sp, #0
   80              	.LCFI5:
   81              		.cfi_def_cfa_register 7
-ARM GAS  /tmp/ccZE231x.s 			page 6
+ARM GAS  /tmp/ccfAGc5L.s 			page 6
 
 
   82 0006 F860     		str	r0, [r7, #12]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
   26:libchip/cmsis/core_cm3.h **** 
   27:libchip/cmsis/core_cm3.h **** /** @addtogroup CMSIS_CM3_core_LintCinfiguration CMSIS CM3 Core Lint Configuration
   28:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/ccZE231x.s 			page 7
+ARM GAS  /tmp/ccfAGc5L.s 			page 7
 
 
   29:libchip/cmsis/core_cm3.h ****  * List of Lint messages which will be suppressed and not shown:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
   83:libchip/cmsis/core_cm3.h **** 
   84:libchip/cmsis/core_cm3.h **** #define __CM3_CMSIS_VERSION_MAIN  (0x01)                                                       /*!<
   85:libchip/cmsis/core_cm3.h **** #define __CM3_CMSIS_VERSION_SUB   (0x30)                                                       /*!<
-ARM GAS  /tmp/ccZE231x.s 			page 8
+ARM GAS  /tmp/ccfAGc5L.s 			page 8
 
 
   86:libchip/cmsis/core_cm3.h **** #define __CM3_CMSIS_VERSION       ((__CM3_CMSIS_VERSION_MAIN << 16) | __CM3_CMSIS_VERSION_SUB) /*!<
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  140:libchip/cmsis/core_cm3.h ****   __IO uint32_t ICPR[8];                      /*!< Offset: 0x180  Interrupt Clear Pending Register 
  141:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED3[24];
  142:libchip/cmsis/core_cm3.h ****   __IO uint32_t IABR[8];                      /*!< Offset: 0x200  Interrupt Active bit Register    
-ARM GAS  /tmp/ccZE231x.s 			page 9
+ARM GAS  /tmp/ccfAGc5L.s 			page 9
 
 
  143:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED4[56];
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  197:libchip/cmsis/core_cm3.h **** 
  198:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSVCLR_Pos             27                                             /*!< SCB 
  199:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSVCLR_Msk             (1ul << SCB_ICSR_PENDSVCLR_Pos)                /*!< SCB 
-ARM GAS  /tmp/ccZE231x.s 			page 10
+ARM GAS  /tmp/ccfAGc5L.s 			page 10
 
 
  200:libchip/cmsis/core_cm3.h **** 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  254:libchip/cmsis/core_cm3.h **** 
  255:libchip/cmsis/core_cm3.h **** #define SCB_SCR_SLEEPDEEP_Pos               2                                             /*!< SCB 
  256:libchip/cmsis/core_cm3.h **** #define SCB_SCR_SLEEPDEEP_Msk              (1ul << SCB_SCR_SLEEPDEEP_Pos)                 /*!< SCB 
-ARM GAS  /tmp/ccZE231x.s 			page 11
+ARM GAS  /tmp/ccfAGc5L.s 			page 11
 
 
  257:libchip/cmsis/core_cm3.h **** 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  311:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_SVCALLACT_Pos             7                                             /*!< SCB 
  312:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_SVCALLACT_Msk            (1ul << SCB_SHCSR_SVCALLACT_Pos)               /*!< SCB 
  313:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccZE231x.s 			page 12
+ARM GAS  /tmp/ccfAGc5L.s 			page 12
 
 
  314:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_USGFAULTACT_Pos           3                                             /*!< SCB 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  368:libchip/cmsis/core_cm3.h ****   __IO uint32_t LOAD;                         /*!< Offset: 0x04  SysTick Reload Value Register     
  369:libchip/cmsis/core_cm3.h ****   __IO uint32_t VAL;                          /*!< Offset: 0x08  SysTick Current Value Register    
  370:libchip/cmsis/core_cm3.h ****   __I  uint32_t CALIB;                        /*!< Offset: 0x0C  SysTick Calibration Register      
-ARM GAS  /tmp/ccZE231x.s 			page 13
+ARM GAS  /tmp/ccfAGc5L.s 			page 13
 
 
  371:libchip/cmsis/core_cm3.h **** } SysTick_Type;
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  425:libchip/cmsis/core_cm3.h ****   __IO uint32_t IWR;                          /*!< Offset:       ITM Integration Write Register    
  426:libchip/cmsis/core_cm3.h ****   __IO uint32_t IRR;                          /*!< Offset:       ITM Integration Read Register     
  427:libchip/cmsis/core_cm3.h ****   __IO uint32_t IMCR;                         /*!< Offset:       ITM Integration Mode Control Regis
-ARM GAS  /tmp/ccZE231x.s 			page 14
+ARM GAS  /tmp/ccfAGc5L.s 			page 14
 
 
  428:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED4[43];
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  482:libchip/cmsis/core_cm3.h **** 
  483:libchip/cmsis/core_cm3.h **** /* ITM Integration Mode Control Register Definitions */
  484:libchip/cmsis/core_cm3.h **** #define ITM_IMCR_INTEGRATION_Pos            0                                             /*!< ITM 
-ARM GAS  /tmp/ccZE231x.s 			page 15
+ARM GAS  /tmp/ccfAGc5L.s 			page 15
 
 
  485:libchip/cmsis/core_cm3.h **** #define ITM_IMCR_INTEGRATION_Msk           (1ul << ITM_IMCR_INTEGRATION_Pos)              /*!< ITM 
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  539:libchip/cmsis/core_cm3.h ****   __IO uint32_t RNR;                          /*!< Offset: 0x08  MPU Region RNRber Register        
  540:libchip/cmsis/core_cm3.h ****   __IO uint32_t RBAR;                         /*!< Offset: 0x0C  MPU Region Base Address Register  
  541:libchip/cmsis/core_cm3.h ****   __IO uint32_t RASR;                         /*!< Offset: 0x10  MPU Region Attribute and Size Regi
-ARM GAS  /tmp/ccZE231x.s 			page 16
+ARM GAS  /tmp/ccfAGc5L.s 			page 16
 
 
  542:libchip/cmsis/core_cm3.h ****   __IO uint32_t RBAR_A1;                      /*!< Offset: 0x14  MPU Alias 1 Region Base Address Re
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  596:libchip/cmsis/core_cm3.h **** 
  597:libchip/cmsis/core_cm3.h **** #define MPU_RASR_C_Pos                     17                                             /*!< MPU 
  598:libchip/cmsis/core_cm3.h **** #define MPU_RASR_C_Msk                     (1ul << MPU_RASR_C_Pos)                        /*!< MPU 
-ARM GAS  /tmp/ccZE231x.s 			page 17
+ARM GAS  /tmp/ccfAGc5L.s 			page 17
 
 
  599:libchip/cmsis/core_cm3.h **** 
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  653:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_MASKINTS_Pos      3                                             /*!< Core
  654:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_MASKINTS_Msk     (1ul << CoreDebug_DHCSR_C_MASKINTS_Pos)        /*!< Core
  655:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccZE231x.s 			page 18
+ARM GAS  /tmp/ccfAGc5L.s 			page 18
 
 
  656:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_STEP_Pos          2                                             /*!< Core
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  710:libchip/cmsis/core_cm3.h **** #define CoreDebug_DEMCR_VC_CORERESET_Msk   (1ul << CoreDebug_DEMCR_VC_CORERESET_Pos)      /*!< Core
  711:libchip/cmsis/core_cm3.h **** /*@}*/ /* end of group CMSIS_CM3_CoreDebug */
  712:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccZE231x.s 			page 19
+ARM GAS  /tmp/ccfAGc5L.s 			page 19
 
 
  713:libchip/cmsis/core_cm3.h **** 
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  767:libchip/cmsis/core_cm3.h **** 
  768:libchip/cmsis/core_cm3.h **** #define __NOP                             __nop
  769:libchip/cmsis/core_cm3.h **** #define __WFI                             __wfi
-ARM GAS  /tmp/ccZE231x.s 			page 20
+ARM GAS  /tmp/ccfAGc5L.s 			page 20
 
 
  770:libchip/cmsis/core_cm3.h **** #define __WFE                             __wfe
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  824:libchip/cmsis/core_cm3.h ****  *
  825:libchip/cmsis/core_cm3.h ****  * Assign the value mainStackPointer to the MSP
  826:libchip/cmsis/core_cm3.h ****  * (main stack pointer) Cortex processor register
-ARM GAS  /tmp/ccZE231x.s 			page 21
+ARM GAS  /tmp/ccfAGc5L.s 			page 21
 
 
  827:libchip/cmsis/core_cm3.h ****  */
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  881:libchip/cmsis/core_cm3.h ****  * @return PriMask
  882:libchip/cmsis/core_cm3.h ****  *
  883:libchip/cmsis/core_cm3.h ****  * Return state of the priority mask bit from the priority mask register
-ARM GAS  /tmp/ccZE231x.s 			page 22
+ARM GAS  /tmp/ccfAGc5L.s 			page 22
 
 
  884:libchip/cmsis/core_cm3.h ****  */
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  938:libchip/cmsis/core_cm3.h ****  */
  939:libchip/cmsis/core_cm3.h **** #define __CLREX                           __clrex
  940:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccZE231x.s 			page 23
+ARM GAS  /tmp/ccfAGc5L.s 			page 23
 
 
  941:libchip/cmsis/core_cm3.h **** /**
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  995:libchip/cmsis/core_cm3.h ****  *
  996:libchip/cmsis/core_cm3.h ****  * @return FaultMask
  997:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/ccZE231x.s 			page 24
+ARM GAS  /tmp/ccfAGc5L.s 			page 24
 
 
  998:libchip/cmsis/core_cm3.h ****  * Return the content of the fault mask register
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
 1052:libchip/cmsis/core_cm3.h **** #define __enable_irq                              __enable_interrupt        /*!< global Interrupt e
 1053:libchip/cmsis/core_cm3.h **** #define __disable_irq                             __disable_interrupt       /*!< global Interrupt d
 1054:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccZE231x.s 			page 25
+ARM GAS  /tmp/ccfAGc5L.s 			page 25
 
 
 1055:libchip/cmsis/core_cm3.h **** static __INLINE void __enable_fault_irq( void )   { __ASM ("cpsie f"); }
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
 1109:libchip/cmsis/core_cm3.h ****  * @param  topOfMainStack  Main Stack Pointer
 1110:libchip/cmsis/core_cm3.h ****  *
 1111:libchip/cmsis/core_cm3.h ****  * Assign the value mainStackPointer to the MSP
-ARM GAS  /tmp/ccZE231x.s 			page 26
+ARM GAS  /tmp/ccfAGc5L.s 			page 26
 
 
 1112:libchip/cmsis/core_cm3.h ****  * (main stack pointer) Cortex processor register
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
 1166:libchip/cmsis/core_cm3.h **** /**
 1167:libchip/cmsis/core_cm3.h ****  * @brief  STR Exclusive (8 bit)
 1168:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/ccZE231x.s 			page 27
+ARM GAS  /tmp/ccfAGc5L.s 			page 27
 
 
 1169:libchip/cmsis/core_cm3.h ****  * @param  value  value to store
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
 1223:libchip/cmsis/core_cm3.h ****  * @return ProcessStackPointer
 1224:libchip/cmsis/core_cm3.h ****  *
 1225:libchip/cmsis/core_cm3.h ****  * Return the actual process stack pointer
-ARM GAS  /tmp/ccZE231x.s 			page 28
+ARM GAS  /tmp/ccfAGc5L.s 			page 28
 
 
 1226:libchip/cmsis/core_cm3.h ****  */
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
 1280:libchip/cmsis/core_cm3.h ****  * @return PriMask
 1281:libchip/cmsis/core_cm3.h ****  *
 1282:libchip/cmsis/core_cm3.h ****  * Return state of the priority mask bit from the priority mask register
-ARM GAS  /tmp/ccZE231x.s 			page 29
+ARM GAS  /tmp/ccfAGc5L.s 			page 29
 
 
 1283:libchip/cmsis/core_cm3.h ****  */
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
 1337:libchip/cmsis/core_cm3.h ****  * Reverse byte order in integer value
 1338:libchip/cmsis/core_cm3.h ****  */
 1339:libchip/cmsis/core_cm3.h **** extern uint32_t __REV(uint32_t value);
-ARM GAS  /tmp/ccZE231x.s 			page 30
+ARM GAS  /tmp/ccfAGc5L.s 			page 30
 
 
 1340:libchip/cmsis/core_cm3.h **** 
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
 1394:libchip/cmsis/core_cm3.h ****  * @param  *addr  address pointer
 1395:libchip/cmsis/core_cm3.h ****  * @return        value of (*address)
 1396:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/ccZE231x.s 			page 31
+ARM GAS  /tmp/ccfAGc5L.s 			page 31
 
 
 1397:libchip/cmsis/core_cm3.h ****  * Exclusive LDR command for 32 bit values
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
 1451:libchip/cmsis/core_cm3.h ****   - Core Reset Functions
 1452:libchip/cmsis/core_cm3.h **** */
 1453:libchip/cmsis/core_cm3.h **** /*@{*/
-ARM GAS  /tmp/ccZE231x.s 			page 32
+ARM GAS  /tmp/ccfAGc5L.s 			page 32
 
 
 1454:libchip/cmsis/core_cm3.h **** 
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  113              		@ link register save eliminated.
  114 0000 80B4     		push	{r7}
  115              	.LCFI6:
-ARM GAS  /tmp/ccZE231x.s 			page 33
+ARM GAS  /tmp/ccfAGc5L.s 			page 33
 
 
  116              		.cfi_def_cfa_offset 4
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  164              		.type	pinVbus, %object
  165              		.size	pinVbus, 12
  166              	pinVbus:
-ARM GAS  /tmp/ccZE231x.s 			page 34
+ARM GAS  /tmp/ccfAGc5L.s 			page 34
 
 
  167 0000 00000001 		.word	16777216
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
   27:board/usb_console.c **** static volatile uint32_t _rxCount = 0;
   28:board/usb_console.c **** static volatile uint32_t _txCount = 0;
   29:board/usb_console.c **** 
-ARM GAS  /tmp/ccZE231x.s 			page 35
+ARM GAS  /tmp/ccfAGc5L.s 			page 35
 
 
   30:board/usb_console.c **** static volatile uint8_t _cfgdone = 0;
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  219 0036 FFF7FEFF 		bl	fwrite
   52:board/usb_console.c ****         USBD_Connect();
  220              		.loc 3 52 0
-ARM GAS  /tmp/ccZE231x.s 			page 36
+ARM GAS  /tmp/ccfAGc5L.s 			page 36
 
 
  221 003a FFF7FEFF 		bl	USBD_Connect
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  261              	.LCFI13:
  262              		.cfi_def_cfa_register 7
   67:board/usb_console.c **** 
-ARM GAS  /tmp/ccZE231x.s 			page 37
+ARM GAS  /tmp/ccfAGc5L.s 			page 37
 
 
   68:board/usb_console.c ****     /* Configure PIO */
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  302              	ConfigureUsbClock:
  303              	.LFB37:
   83:board/usb_console.c **** 
-ARM GAS  /tmp/ccZE231x.s 			page 38
+ARM GAS  /tmp/ccfAGc5L.s 			page 38
 
 
   84:board/usb_console.c **** /**
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  344 003e 00BF     		.section	.text.USBDCallbacks_Initialized,"ax",%progbits
  345              		.align	2
  346              		.global	USBDCallbacks_Initialized
-ARM GAS  /tmp/ccZE231x.s 			page 39
+ARM GAS  /tmp/ccfAGc5L.s 			page 39
 
 
  347              		.thumb
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  383              		@ frame_needed = 1, uses_anonymous_args = 0
  384 0000 80B5     		push	{r7, lr}
  385              	.LCFI18:
-ARM GAS  /tmp/ccZE231x.s 			page 40
+ARM GAS  /tmp/ccfAGc5L.s 			page 40
 
 
  386              		.cfi_def_cfa_offset 8
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  431 0006 7860     		str	r0, [r7, #4]
  125:board/usb_console.c ****     CDCDSerialDriver_RequestHandler(request);
  432              		.loc 3 125 0
-ARM GAS  /tmp/ccZE231x.s 			page 41
+ARM GAS  /tmp/ccfAGc5L.s 			page 41
 
 
  433 0008 7868     		ldr	r0, [r7, #4]
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  136:board/usb_console.c **** 	if (status == USBD_STATUS_SUCCESS) 
  473              		.loc 3 136 0
  474 0010 FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
-ARM GAS  /tmp/ccZE231x.s 			page 42
+ARM GAS  /tmp/ccfAGc5L.s 			page 42
 
 
  475 0012 002B     		cmp	r3, #0
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  149:board/usb_console.c **** {
  513              		.loc 3 149 0
  514              		.cfi_startproc
-ARM GAS  /tmp/ccZE231x.s 			page 43
+ARM GAS  /tmp/ccfAGc5L.s 			page 43
 
 
  515              		@ args = 0, pretend = 0, frame = 16
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  564              	.LC4:
  565 0080 2D492D20 		.ascii	"-I- USB Device Driver is configured\012\000"
  565      55534220 
-ARM GAS  /tmp/ccZE231x.s 			page 44
+ARM GAS  /tmp/ccfAGc5L.s 			page 44
 
 
  565      44657669 
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  602 0028 DB68     		ldr	r3, [r3, #12]
  603 002a 40F20000 		movw	r0, #:lower16:.LC4
  604 002e C0F20000 		movt	r0, #:upper16:.LC4
-ARM GAS  /tmp/ccZE231x.s 			page 45
+ARM GAS  /tmp/ccfAGc5L.s 			page 45
 
 
  605 0032 4FF00101 		mov	r1, #1
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  642              		.loc 3 186 0
  643              		.cfi_startproc
  644              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccZE231x.s 			page 46
+ARM GAS  /tmp/ccfAGc5L.s 			page 46
 
 
  645              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  691 0004 00AF     		add	r7, sp, #0
  692              	.LCFI36:
  693              		.cfi_def_cfa_register 7
-ARM GAS  /tmp/ccZE231x.s 			page 47
+ARM GAS  /tmp/ccfAGc5L.s 			page 47
 
 
  694 0006 7860     		str	r0, [r7, #4]
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  735 000c 1B68     		ldr	r3, [r3, #0]
  736 000e DB68     		ldr	r3, [r3, #12]
  737 0010 40F20000 		movw	r0, #:lower16:.LC5
-ARM GAS  /tmp/ccZE231x.s 			page 48
+ARM GAS  /tmp/ccfAGc5L.s 			page 48
 
 
  738 0014 C0F20000 		movt	r0, #:upper16:.LC5
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  775              	.LCFI39:
  776              		.cfi_def_cfa_offset 8
  777              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccZE231x.s 			page 49
+ARM GAS  /tmp/ccfAGc5L.s 			page 49
 
 
  778              		.cfi_offset 7, -8
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  821              		.section	.text.USBC_Gets,"ax",%progbits
  822              		.align	2
  823              		.global	USBC_Gets
-ARM GAS  /tmp/ccZE231x.s 			page 50
+ARM GAS  /tmp/ccfAGc5L.s 			page 50
 
 
  824              		.thumb
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  240:board/usb_console.c **** 		if ((GetTickCount() - started) > _xferTimeout) {
  862              		.loc 3 240 0
  863 0024 FFF7FEFF 		bl	GetTickCount
-ARM GAS  /tmp/ccZE231x.s 			page 51
+ARM GAS  /tmp/ccfAGc5L.s 			page 51
 
 
  864 0028 0246     		mov	r2, r0
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  247:board/usb_console.c **** 	memcpy(ptr, _rxBuffer, done);
  911              		.loc 3 247 0 is_stmt 1 discriminator 3
  912 0092 7889     		ldrh	r0, [r7, #10]
-ARM GAS  /tmp/ccZE231x.s 			page 52
+ARM GAS  /tmp/ccfAGc5L.s 			page 52
 
 
  913 0094 7A68     		ldr	r2, [r7, #4]
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  959 0100 BD46     		mov	sp, r7
  960 0102 80BD     		pop	{r7, pc}
  961              		.cfi_endproc
-ARM GAS  /tmp/ccZE231x.s 			page 53
+ARM GAS  /tmp/ccfAGc5L.s 			page 53
 
 
  962              	.LFE48:
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1000 0016 4FF0FF33 		mov	r3, #-1
  1001 001a 4BE0     		b	.L42
  1002              	.L41:
-ARM GAS  /tmp/ccZE231x.s 			page 54
+ARM GAS  /tmp/ccfAGc5L.s 			page 54
 
 
  268:board/usb_console.c **** 
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1047 0082 4FF00101 		mov	r1, #1
  1048 0086 4FF01902 		mov	r2, #25
  1049 008a FFF7FEFF 		bl	fwrite
-ARM GAS  /tmp/ccZE231x.s 			page 55
+ARM GAS  /tmp/ccfAGc5L.s 			page 55
 
 
  278:board/usb_console.c **** 			// pending write operation must be aborted
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1096 000b 01       		.uleb128 0x1
  1097 000c C90E0000 		.4byte	.LASF379
  1098 0010 01       		.byte	0x1
-ARM GAS  /tmp/ccZE231x.s 			page 56
+ARM GAS  /tmp/ccfAGc5L.s 			page 56
 
 
  1099 0011 C80C0000 		.4byte	.LASF380
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1153 0083 06       		.byte	0x6
  1154 0084 6101     		.2byte	0x161
  1155 0086 4C000000 		.4byte	0x4c
-ARM GAS  /tmp/ccZE231x.s 			page 57
+ARM GAS  /tmp/ccfAGc5L.s 			page 57
 
 
  1156 008a 06       		.uleb128 0x6
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1210 00f0 61000000 		.4byte	0x61
  1211 00f4 0C       		.uleb128 0xc
  1212 00f5 04       		.byte	0x4
-ARM GAS  /tmp/ccZE231x.s 			page 58
+ARM GAS  /tmp/ccfAGc5L.s 			page 58
 
 
  1213 00f6 04       		.uleb128 0x4
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1267 0158 10       		.uleb128 0x10
  1268 0159 0E       		.uleb128 0xe
  1269 015a 5F7800   		.ascii	"_x\000"
-ARM GAS  /tmp/ccZE231x.s 			page 59
+ARM GAS  /tmp/ccfAGc5L.s 			page 59
 
 
  1270 015d 07       		.byte	0x7
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1324 01c0 0C       		.uleb128 0xc
  1325 01c1 0B       		.uleb128 0xb
  1326 01c2 FE020000 		.4byte	.LASF29
-ARM GAS  /tmp/ccZE231x.s 			page 60
+ARM GAS  /tmp/ccfAGc5L.s 			page 60
 
 
  1327 01c6 07       		.byte	0x7
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1381 0224 BB0B0000 		.4byte	.LASF36
  1382 0228 07       		.byte	0x7
  1383 0229 49       		.byte	0x49
-ARM GAS  /tmp/ccZE231x.s 			page 61
+ARM GAS  /tmp/ccfAGc5L.s 			page 61
 
 
  1384 022a 51020000 		.4byte	0x251
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1438 0290 AD020000 		.4byte	0x2ad
  1439 0294 02       		.byte	0x2
  1440 0295 23       		.byte	0x23
-ARM GAS  /tmp/ccZE231x.s 			page 62
+ARM GAS  /tmp/ccfAGc5L.s 			page 62
 
 
  1441 0296 08       		.uleb128 0x8
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1495 02fa 12       		.uleb128 0x12
  1496 02fb F6030000 		.4byte	.LASF46
  1497 02ff F0       		.byte	0xf0
-ARM GAS  /tmp/ccZE231x.s 			page 63
+ARM GAS  /tmp/ccfAGc5L.s 			page 63
 
 
  1498 0300 07       		.byte	0x7
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1552 0367 8A01     		.2byte	0x18a
  1553 0369 45000000 		.4byte	0x45
  1554 036d 02       		.byte	0x2
-ARM GAS  /tmp/ccZE231x.s 			page 64
+ARM GAS  /tmp/ccfAGc5L.s 			page 64
 
 
  1555 036e 23       		.byte	0x23
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1609 03d2 F3050000 		.4byte	0x5f3
  1610 03d6 02       		.byte	0x2
  1611 03d7 23       		.byte	0x23
-ARM GAS  /tmp/ccZE231x.s 			page 65
+ARM GAS  /tmp/ccfAGc5L.s 			page 65
 
 
  1612 03d8 34       		.uleb128 0x34
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1666 043f 03       		.byte	0x3
  1667 0440 23       		.byte	0x23
  1668 0441 D801     		.uleb128 0xd8
-ARM GAS  /tmp/ccZE231x.s 			page 66
+ARM GAS  /tmp/ccfAGc5L.s 			page 66
 
 
  1669 0443 13       		.uleb128 0x13
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1723 04a6 45000000 		.4byte	0x45
  1724 04aa 02       		.byte	0x2
  1725 04ab 23       		.byte	0x23
-ARM GAS  /tmp/ccZE231x.s 			page 67
+ARM GAS  /tmp/ccfAGc5L.s 			page 67
 
 
  1726 04ac 08       		.uleb128 0x8
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1780 050c 02       		.byte	0x2
  1781 050d 23       		.byte	0x23
  1782 050e 24       		.uleb128 0x24
-ARM GAS  /tmp/ccZE231x.s 			page 68
+ARM GAS  /tmp/ccfAGc5L.s 			page 68
 
 
  1783 050f 0B       		.uleb128 0xb
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1837 056f 23       		.byte	0x23
  1838 0570 44       		.uleb128 0x44
  1839 0571 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccZE231x.s 			page 69
+ARM GAS  /tmp/ccfAGc5L.s 			page 69
 
 
  1840 0572 FB000000 		.4byte	.LASF80
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1894 05d2 64       		.uleb128 0x64
  1895 05d3 00       		.byte	0
  1896 05d4 15       		.uleb128 0x15
-ARM GAS  /tmp/ccZE231x.s 			page 70
+ARM GAS  /tmp/ccfAGc5L.s 			page 70
 
 
  1897 05d5 01       		.byte	0x1
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  1951 0650 45000000 		.4byte	0x45
  1952 0654 00       		.byte	0
  1953 0655 0F       		.uleb128 0xf
-ARM GAS  /tmp/ccZE231x.s 			page 71
+ARM GAS  /tmp/ccfAGc5L.s 			page 71
 
 
  1954 0656 04       		.byte	0x4
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2008 06cc 04       		.uleb128 0x4
  2009 06cd 13       		.uleb128 0x13
  2010 06ce F2080000 		.4byte	.LASF90
-ARM GAS  /tmp/ccZE231x.s 			page 72
+ARM GAS  /tmp/ccfAGc5L.s 			page 72
 
 
  2011 06d2 07       		.byte	0x7
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2065 0738 43070000 		.4byte	0x743
  2066 073c 09       		.uleb128 0x9
  2067 073d 4C000000 		.4byte	0x4c
-ARM GAS  /tmp/ccZE231x.s 			page 73
+ARM GAS  /tmp/ccfAGc5L.s 			page 73
 
 
  2068 0741 02       		.byte	0x2
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2122 07a8 F3050000 		.4byte	0x5f3
  2123 07ac 02       		.byte	0x2
  2124 07ad 23       		.byte	0x23
-ARM GAS  /tmp/ccZE231x.s 			page 74
+ARM GAS  /tmp/ccfAGc5L.s 			page 74
 
 
  2125 07ae 00       		.uleb128 0
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2179 0815 02       		.byte	0x2
  2180 0816 23       		.byte	0x23
  2181 0817 30       		.uleb128 0x30
-ARM GAS  /tmp/ccZE231x.s 			page 75
+ARM GAS  /tmp/ccfAGc5L.s 			page 75
 
 
  2182 0818 13       		.uleb128 0x13
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2236 0881 45000000 		.4byte	0x45
  2237 0885 00       		.byte	0
  2238 0886 0F       		.uleb128 0xf
-ARM GAS  /tmp/ccZE231x.s 			page 76
+ARM GAS  /tmp/ccfAGc5L.s 			page 76
 
 
  2239 0887 04       		.byte	0x4
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2293 08f4 D70D0000 		.4byte	.LASF120
  2294 08f8 09       		.byte	0x9
  2295 08f9 4E01     		.2byte	0x14e
-ARM GAS  /tmp/ccZE231x.s 			page 77
+ARM GAS  /tmp/ccfAGc5L.s 			page 77
 
 
  2296 08fb 98080000 		.4byte	0x898
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2350 0961 09       		.byte	0x9
  2351 0962 5C01     		.2byte	0x15c
  2352 0964 98080000 		.4byte	0x898
-ARM GAS  /tmp/ccZE231x.s 			page 78
+ARM GAS  /tmp/ccfAGc5L.s 			page 78
 
 
  2353 0968 02       		.byte	0x2
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2407 09cf 01       		.uleb128 0x1
  2408 09d0 13       		.uleb128 0x13
  2409 09d1 73010000 		.4byte	.LASF119
-ARM GAS  /tmp/ccZE231x.s 			page 79
+ARM GAS  /tmp/ccfAGc5L.s 			page 79
 
 
  2410 09d5 09       		.byte	0x9
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2464 0a39 00       		.byte	0
  2465 0a3a 05       		.uleb128 0x5
  2466 0a3b FD030000 		.4byte	.LASF134
-ARM GAS  /tmp/ccZE231x.s 			page 80
+ARM GAS  /tmp/ccfAGc5L.s 			page 80
 
 
  2467 0a3f 09       		.byte	0x9
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2521 0aaa 02       		.byte	0x2
  2522 0aab 23       		.byte	0x23
  2523 0aac 06       		.uleb128 0x6
-ARM GAS  /tmp/ccZE231x.s 			page 81
+ARM GAS  /tmp/ccfAGc5L.s 			page 81
 
 
  2524 0aad 13       		.uleb128 0x13
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2578 0b11 02       		.byte	0x2
  2579 0b12 10       		.byte	0x10
  2580 0b13 00       		.byte	0
-ARM GAS  /tmp/ccZE231x.s 			page 82
+ARM GAS  /tmp/ccfAGc5L.s 			page 82
 
 
  2581 0b14 02       		.byte	0x2
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2635 0b77 03       		.sleb128 3
  2636 0b78 1C       		.uleb128 0x1c
  2637 0b79 4E070000 		.4byte	.LASF155
-ARM GAS  /tmp/ccZE231x.s 			page 83
+ARM GAS  /tmp/ccfAGc5L.s 			page 83
 
 
  2638 0b7d 04       		.sleb128 4
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2692 0bee 0C       		.byte	0xc
  2693 0bef 52       		.byte	0x52
  2694 0bf0 760C0000 		.4byte	0xc76
-ARM GAS  /tmp/ccZE231x.s 			page 84
+ARM GAS  /tmp/ccfAGc5L.s 			page 84
 
 
  2695 0bf4 02       		.byte	0x2
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2749 0c51 60       		.byte	0x60
  2750 0c52 810C0000 		.4byte	0xc81
  2751 0c56 02       		.byte	0x2
-ARM GAS  /tmp/ccZE231x.s 			page 85
+ARM GAS  /tmp/ccfAGc5L.s 			page 85
 
 
  2752 0c57 23       		.byte	0x23
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2806 0cc3 0E       		.byte	0xe
  2807 0cc4 49       		.byte	0x49
  2808 0cc5 BA0D0000 		.4byte	0xdba
-ARM GAS  /tmp/ccZE231x.s 			page 86
+ARM GAS  /tmp/ccfAGc5L.s 			page 86
 
 
  2809 0cc9 1C       		.uleb128 0x1c
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2863 0d35 1C       		.uleb128 0x1c
  2864 0d36 430E0000 		.4byte	.LASF197
  2865 0d3a 0B       		.sleb128 11
-ARM GAS  /tmp/ccZE231x.s 			page 87
+ARM GAS  /tmp/ccfAGc5L.s 			page 87
 
 
  2866 0d3b 1C       		.uleb128 0x1c
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2920 0da7 1C       		.uleb128 0x1c
  2921 0da8 EA010000 		.4byte	.LASF216
  2922 0dac 20       		.sleb128 32
-ARM GAS  /tmp/ccZE231x.s 			page 88
+ARM GAS  /tmp/ccfAGc5L.s 			page 88
 
 
  2923 0dad 1C       		.uleb128 0x1c
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  2977 0e13 03       		.byte	0x3
  2978 0e14 23       		.byte	0x23
  2979 0e15 8002     		.uleb128 0x100
-ARM GAS  /tmp/ccZE231x.s 			page 89
+ARM GAS  /tmp/ccfAGc5L.s 			page 89
 
 
  2980 0e17 0B       		.uleb128 0xb
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3034 0e7c 23       		.byte	0x23
  3035 0e7d F007     		.uleb128 0x3f0
  3036 0e7f 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccZE231x.s 			page 90
+ARM GAS  /tmp/ccfAGc5L.s 			page 90
 
 
  3037 0e80 BD050000 		.4byte	.LASF231
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3091 0efd 00       		.byte	0
  3092 0efe 04       		.uleb128 0x4
  3093 0eff 69000000 		.4byte	.LASF232
-ARM GAS  /tmp/ccZE231x.s 			page 91
+ARM GAS  /tmp/ccfAGc5L.s 			page 91
 
 
  3094 0f03 02       		.byte	0x2
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3148 0f79 0E0F0000 		.4byte	0xf0e
  3149 0f7d 02       		.byte	0x2
  3150 0f7e 23       		.byte	0x23
-ARM GAS  /tmp/ccZE231x.s 			page 92
+ARM GAS  /tmp/ccfAGc5L.s 			page 92
 
 
  3151 0f7f 04       		.uleb128 0x4
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3205 0fe6 02       		.byte	0x2
  3206 0fe7 23       		.byte	0x23
  3207 0fe8 20       		.uleb128 0x20
-ARM GAS  /tmp/ccZE231x.s 			page 93
+ARM GAS  /tmp/ccfAGc5L.s 			page 93
 
 
  3208 0fe9 13       		.uleb128 0x13
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3262 1050 23       		.byte	0x23
  3263 1051 3C       		.uleb128 0x3c
  3264 1052 13       		.uleb128 0x13
-ARM GAS  /tmp/ccZE231x.s 			page 94
+ARM GAS  /tmp/ccfAGc5L.s 			page 94
 
 
  3265 1053 C1080000 		.4byte	.LASF249
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3319 10ba 58       		.uleb128 0x58
  3320 10bb 13       		.uleb128 0x13
  3321 10bc 2D0D0000 		.4byte	.LASF256
-ARM GAS  /tmp/ccZE231x.s 			page 95
+ARM GAS  /tmp/ccfAGc5L.s 			page 95
 
 
  3322 10c0 0E       		.byte	0xe
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3376 1124 13       		.uleb128 0x13
  3377 1125 1A0C0000 		.4byte	.LASF263
  3378 1129 0E       		.byte	0xe
-ARM GAS  /tmp/ccZE231x.s 			page 96
+ARM GAS  /tmp/ccfAGc5L.s 			page 96
 
 
  3379 112a FF06     		.2byte	0x6ff
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3433 1195 54010000 		.4byte	.LASF270
  3434 1199 0E       		.byte	0xe
  3435 119a 0607     		.2byte	0x706
-ARM GAS  /tmp/ccZE231x.s 			page 97
+ARM GAS  /tmp/ccfAGc5L.s 			page 97
 
 
  3436 119c 28140000 		.4byte	0x1428
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3490 1209 0E       		.byte	0xe
  3491 120a 0D07     		.2byte	0x70d
  3492 120c 130F0000 		.4byte	0xf13
-ARM GAS  /tmp/ccZE231x.s 			page 98
+ARM GAS  /tmp/ccfAGc5L.s 			page 98
 
 
  3493 1210 03       		.byte	0x3
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3547 127a 1407     		.2byte	0x714
  3548 127c 0E0F0000 		.4byte	0xf0e
  3549 1280 03       		.byte	0x3
-ARM GAS  /tmp/ccZE231x.s 			page 99
+ARM GAS  /tmp/ccfAGc5L.s 			page 99
 
 
  3550 1281 23       		.byte	0x23
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3604 12ec 0E0F0000 		.4byte	0xf0e
  3605 12f0 03       		.byte	0x3
  3606 12f1 23       		.byte	0x23
-ARM GAS  /tmp/ccZE231x.s 			page 100
+ARM GAS  /tmp/ccfAGc5L.s 			page 100
 
 
  3607 12f2 8002     		.uleb128 0x100
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3661 1360 03       		.byte	0x3
  3662 1361 23       		.byte	0x23
  3663 1362 E402     		.uleb128 0x164
-ARM GAS  /tmp/ccZE231x.s 			page 101
+ARM GAS  /tmp/ccfAGc5L.s 			page 101
 
 
  3664 1364 13       		.uleb128 0x13
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3718 13d1 23       		.byte	0x23
  3719 13d2 8003     		.uleb128 0x180
  3720 13d4 13       		.uleb128 0x13
-ARM GAS  /tmp/ccZE231x.s 			page 102
+ARM GAS  /tmp/ccfAGc5L.s 			page 102
 
 
  3721 13d5 ED0D0000 		.4byte	.LASF306
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3775 1450 0E       		.byte	0xe
  3776 1451 2D07     		.2byte	0x72d
  3777 1453 580F0000 		.4byte	0xf58
-ARM GAS  /tmp/ccZE231x.s 			page 103
+ARM GAS  /tmp/ccfAGc5L.s 			page 103
 
 
  3778 1457 20       		.uleb128 0x20
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3832 14bc 3B000000 		.4byte	.LASF314
  3833 14c0 0E       		.byte	0xe
  3834 14c1 4C0D     		.2byte	0xd4c
-ARM GAS  /tmp/ccZE231x.s 			page 104
+ARM GAS  /tmp/ccfAGc5L.s 			page 104
 
 
  3835 14c3 130F0000 		.4byte	0xf13
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3889 1529 0E       		.byte	0xe
  3890 152a 530D     		.2byte	0xd53
  3891 152c 72160000 		.4byte	0x1672
-ARM GAS  /tmp/ccZE231x.s 			page 105
+ARM GAS  /tmp/ccfAGc5L.s 			page 105
 
 
  3892 1530 02       		.byte	0x2
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  3946 1593 5A0D     		.2byte	0xd5a
  3947 1595 130F0000 		.4byte	0xf13
  3948 1599 02       		.byte	0x2
-ARM GAS  /tmp/ccZE231x.s 			page 106
+ARM GAS  /tmp/ccfAGc5L.s 			page 106
 
 
  3949 159a 23       		.byte	0x23
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4003 15ff 130F0000 		.4byte	0xf13
  4004 1603 03       		.byte	0x3
  4005 1604 23       		.byte	0x23
-ARM GAS  /tmp/ccZE231x.s 			page 107
+ARM GAS  /tmp/ccfAGc5L.s 			page 107
 
 
  4006 1605 E801     		.uleb128 0xe8
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4060 1672 1D       		.uleb128 0x1d
  4061 1673 280F0000 		.4byte	0xf28
  4062 1677 1D       		.uleb128 0x1d
-ARM GAS  /tmp/ccZE231x.s 			page 108
+ARM GAS  /tmp/ccfAGc5L.s 			page 108
 
 
  4063 1678 280F0000 		.4byte	0xf28
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4117 16ed 0F       		.byte	0xf
  4118 16ee AE       		.byte	0xae
  4119 16ef 98080000 		.4byte	0x898
-ARM GAS  /tmp/ccZE231x.s 			page 109
+ARM GAS  /tmp/ccfAGc5L.s 			page 109
 
 
  4120 16f3 02       		.byte	0x2
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4174 175c 24       		.uleb128 0x24
  4175 175d 87010000 		.4byte	.LASF341
  4176 1761 01       		.byte	0x1
-ARM GAS  /tmp/ccZE231x.s 			page 110
+ARM GAS  /tmp/ccfAGc5L.s 			page 110
 
 
  4177 1762 B6       		.byte	0xb6
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4231 17cb 91       		.byte	0x91
  4232 17cc 68       		.sleb128 -24
  4233 17cd 00       		.byte	0
-ARM GAS  /tmp/ccZE231x.s 			page 111
+ARM GAS  /tmp/ccfAGc5L.s 			page 111
 
 
  4234 17ce 25       		.uleb128 0x25
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4288 1845 00000000 		.4byte	.LFB37
  4289 1849 3E000000 		.4byte	.LFE37
  4290 184d 0C010000 		.4byte	.LLST5
-ARM GAS  /tmp/ccZE231x.s 			page 112
+ARM GAS  /tmp/ccfAGc5L.s 			page 112
 
 
  4291 1851 29       		.uleb128 0x29
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4345 18c6 03       		.byte	0x3
  4346 18c7 83       		.byte	0x83
  4347 18c8 01       		.byte	0x1
-ARM GAS  /tmp/ccZE231x.s 			page 113
+ARM GAS  /tmp/ccfAGc5L.s 			page 113
 
 
  4348 18c9 00000000 		.4byte	.LFB41
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4402 1938 24       		.uleb128 0x24
  4403 1939 DC0E0000 		.4byte	.LASF356
  4404 193d 03       		.byte	0x3
-ARM GAS  /tmp/ccZE231x.s 			page 114
+ARM GAS  /tmp/ccfAGc5L.s 			page 114
 
 
  4405 193e 92       		.byte	0x92
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4459 19b2 C1       		.byte	0xc1
  4460 19b3 AE080000 		.4byte	0x8ae
  4461 19b7 02       		.byte	0x2
-ARM GAS  /tmp/ccZE231x.s 			page 115
+ARM GAS  /tmp/ccfAGc5L.s 			page 115
 
 
  4462 19b8 91       		.byte	0x91
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4516 1a2d 91       		.byte	0x91
  4517 1a2e 72       		.sleb128 -14
  4518 1a2f 2F       		.uleb128 0x2f
-ARM GAS  /tmp/ccZE231x.s 			page 116
+ARM GAS  /tmp/ccfAGc5L.s 			page 116
 
 
  4519 1a30 7F0E0000 		.4byte	.LASF367
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4573 1a9e CE06     		.2byte	0x6ce
  4574 1aa0 A61A0000 		.4byte	0x1aa6
  4575 1aa4 01       		.byte	0x1
-ARM GAS  /tmp/ccZE231x.s 			page 117
+ARM GAS  /tmp/ccfAGc5L.s 			page 117
 
 
  4576 1aa5 01       		.byte	0x1
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4630 1b17 05       		.byte	0x5
  4631 1b18 03       		.byte	0x3
  4632 1b19 0C000000 		.4byte	_rxBuffer
-ARM GAS  /tmp/ccZE231x.s 			page 118
+ARM GAS  /tmp/ccfAGc5L.s 			page 118
 
 
  4633 1b1d 2F       		.uleb128 0x2f
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4687 0016 24       		.uleb128 0x24
  4688 0017 00       		.byte	0
  4689 0018 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccZE231x.s 			page 119
+ARM GAS  /tmp/ccfAGc5L.s 			page 119
 
 
  4690 0019 0B       		.uleb128 0xb
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4744 004f 13       		.uleb128 0x13
  4745 0050 00       		.byte	0
  4746 0051 00       		.byte	0
-ARM GAS  /tmp/ccZE231x.s 			page 120
+ARM GAS  /tmp/ccfAGc5L.s 			page 120
 
 
  4747 0052 07       		.uleb128 0x7
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4801 0088 13       		.uleb128 0x13
  4802 0089 38       		.uleb128 0x38
  4803 008a 0A       		.uleb128 0xa
-ARM GAS  /tmp/ccZE231x.s 			page 121
+ARM GAS  /tmp/ccfAGc5L.s 			page 121
 
 
  4804 008b 00       		.byte	0
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4858 00c1 05       		.uleb128 0x5
  4859 00c2 3A       		.uleb128 0x3a
  4860 00c3 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccZE231x.s 			page 122
+ARM GAS  /tmp/ccfAGc5L.s 			page 122
 
 
  4861 00c4 3B       		.uleb128 0x3b
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4915 00fa 38       		.uleb128 0x38
  4916 00fb 0A       		.uleb128 0xa
  4917 00fc 00       		.byte	0
-ARM GAS  /tmp/ccZE231x.s 			page 123
+ARM GAS  /tmp/ccfAGc5L.s 			page 123
 
 
  4918 00fd 00       		.byte	0
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  4972 0133 0B       		.uleb128 0xb
  4973 0134 3B       		.uleb128 0x3b
  4974 0135 05       		.uleb128 0x5
-ARM GAS  /tmp/ccZE231x.s 			page 124
+ARM GAS  /tmp/ccfAGc5L.s 			page 124
 
 
  4975 0136 49       		.uleb128 0x49
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5029 016c 00       		.byte	0
  5030 016d 00       		.byte	0
  5031 016e 1F       		.uleb128 0x1f
-ARM GAS  /tmp/ccZE231x.s 			page 125
+ARM GAS  /tmp/ccfAGc5L.s 			page 125
 
 
  5032 016f 21       		.uleb128 0x21
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5086 01a5 3B       		.uleb128 0x3b
  5087 01a6 0B       		.uleb128 0xb
  5088 01a7 27       		.uleb128 0x27
-ARM GAS  /tmp/ccZE231x.s 			page 126
+ARM GAS  /tmp/ccfAGc5L.s 			page 126
 
 
  5089 01a8 0C       		.uleb128 0xc
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5143 01de 3A       		.uleb128 0x3a
  5144 01df 0B       		.uleb128 0xb
  5145 01e0 3B       		.uleb128 0x3b
-ARM GAS  /tmp/ccZE231x.s 			page 127
+ARM GAS  /tmp/ccfAGc5L.s 			page 127
 
 
  5146 01e1 05       		.uleb128 0x5
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5200 0217 3A       		.uleb128 0x3a
  5201 0218 0B       		.uleb128 0xb
  5202 0219 3B       		.uleb128 0x3b
-ARM GAS  /tmp/ccZE231x.s 			page 128
+ARM GAS  /tmp/ccfAGc5L.s 			page 128
 
 
  5203 021a 0B       		.uleb128 0xb
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5257 0250 06       		.uleb128 0x6
  5258 0251 00       		.byte	0
  5259 0252 00       		.byte	0
-ARM GAS  /tmp/ccZE231x.s 			page 129
+ARM GAS  /tmp/ccfAGc5L.s 			page 129
 
 
  5260 0253 2C       		.uleb128 0x2c
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5314 0289 01       		.uleb128 0x1
  5315 028a 40       		.uleb128 0x40
  5316 028b 06       		.uleb128 0x6
-ARM GAS  /tmp/ccZE231x.s 			page 130
+ARM GAS  /tmp/ccfAGc5L.s 			page 130
 
 
  5317 028c 01       		.uleb128 0x1
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5371 02c2 13       		.uleb128 0x13
  5372 02c3 02       		.uleb128 0x2
  5373 02c4 0A       		.uleb128 0xa
-ARM GAS  /tmp/ccZE231x.s 			page 131
+ARM GAS  /tmp/ccfAGc5L.s 			page 131
 
 
  5374 02c5 00       		.byte	0
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5428              	.LLST0:
  5429 0000 00000000 		.4byte	.LFB0
  5430 0004 02000000 		.4byte	.LCFI0
-ARM GAS  /tmp/ccZE231x.s 			page 132
+ARM GAS  /tmp/ccfAGc5L.s 			page 132
 
 
  5431 0008 0200     		.2byte	0x2
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5485 0088 04000000 		.4byte	.LCFI7
  5486 008c 06000000 		.4byte	.LCFI8
  5487 0090 0200     		.2byte	0x2
-ARM GAS  /tmp/ccZE231x.s 			page 133
+ARM GAS  /tmp/ccfAGc5L.s 			page 133
 
 
  5488 0092 7D       		.byte	0x7d
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5542 0116 7D       		.byte	0x7d
  5543 0117 00       		.sleb128 0
  5544 0118 02000000 		.4byte	.LCFI14
-ARM GAS  /tmp/ccZE231x.s 			page 134
+ARM GAS  /tmp/ccfAGc5L.s 			page 134
 
 
  5545 011c 04000000 		.4byte	.LCFI15
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5599 01a0 02000000 		.4byte	.LCFI21
  5600 01a4 0200     		.2byte	0x2
  5601 01a6 7D       		.byte	0x7d
-ARM GAS  /tmp/ccZE231x.s 			page 135
+ARM GAS  /tmp/ccfAGc5L.s 			page 135
 
 
  5602 01a7 00       		.sleb128 0
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5656 022c 0200     		.2byte	0x2
  5657 022e 7D       		.byte	0x7d
  5658 022f 18       		.sleb128 24
-ARM GAS  /tmp/ccZE231x.s 			page 136
+ARM GAS  /tmp/ccfAGc5L.s 			page 136
 
 
  5659 0230 06000000 		.4byte	.LCFI29
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5713 02b4 04000000 		.4byte	.LCFI35
  5714 02b8 06000000 		.4byte	.LCFI36
  5715 02bc 0200     		.2byte	0x2
-ARM GAS  /tmp/ccZE231x.s 			page 137
+ARM GAS  /tmp/ccfAGc5L.s 			page 137
 
 
  5716 02be 7D       		.byte	0x7d
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5770 0342 7D       		.byte	0x7d
  5771 0343 08       		.sleb128 8
  5772 0344 04000000 		.4byte	.LCFI42
-ARM GAS  /tmp/ccZE231x.s 			page 138
+ARM GAS  /tmp/ccfAGc5L.s 			page 138
 
 
  5773 0348 06000000 		.4byte	.LCFI43
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5827 0040 00000000 		.4byte	.LFB38
  5828 0044 0E000000 		.4byte	.LFE38-.LFB38
  5829 0048 00000000 		.4byte	.LFB39
-ARM GAS  /tmp/ccZE231x.s 			page 139
+ARM GAS  /tmp/ccfAGc5L.s 			page 139
 
 
  5830 004c 1A000000 		.4byte	.LFE39-.LFB39
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5884 0074 42000000 		.4byte	.LFE46
  5885 0078 00000000 		.4byte	.LFB47
  5886 007c 56000000 		.4byte	.LFE47
-ARM GAS  /tmp/ccZE231x.s 			page 140
+ARM GAS  /tmp/ccfAGc5L.s 			page 140
 
 
  5887 0080 00000000 		.4byte	.LFB48
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5917 0063 5F726561 		.ascii	"_read\000"
  5917      6400
  5918              	.LASF232:
-ARM GAS  /tmp/ccZE231x.s 			page 141
+ARM GAS  /tmp/ccfAGc5L.s 			page 141
 
 
  5919 0069 4E564943 		.ascii	"NVIC_Type\000"
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5945      67746800 
  5946              	.LASF106:
  5947 0112 5F6C3634 		.ascii	"_l64a_buf\000"
-ARM GAS  /tmp/ccZE231x.s 			page 142
+ARM GAS  /tmp/ccfAGc5L.s 			page 142
 
 
  5947      615F6275 
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  5975 019d 55534252 		.ascii	"USBRC_ERROR\000"
  5975      435F4552 
  5975      524F5200 
-ARM GAS  /tmp/ccZE231x.s 			page 143
+ARM GAS  /tmp/ccfAGc5L.s 			page 143
 
 
  5976              	.LASF152:
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6003 0234 5F696D70 		.ascii	"_impure_ptr\000"
  6003      7572655F 
  6003      70747200 
-ARM GAS  /tmp/ccZE231x.s 			page 144
+ARM GAS  /tmp/ccfAGc5L.s 			page 144
 
 
  6004              	.LASF98:
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6029      00
  6030              	.LASF168:
  6031 02cd 70467351 		.ascii	"pFsQualifier\000"
-ARM GAS  /tmp/ccZE231x.s 			page 145
+ARM GAS  /tmp/ccfAGc5L.s 			page 145
 
 
  6031      75616C69 
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6055      65642063 
  6055      68617200 
  6056              	.LASF113:
-ARM GAS  /tmp/ccZE231x.s 			page 146
+ARM GAS  /tmp/ccfAGc5L.s 			page 146
 
 
  6057 0379 75696E74 		.ascii	"uint8_t\000"
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6085 03fd 55534244 		.ascii	"USBDeviceQualifierDescriptor\000"
  6085      65766963 
  6085      65517561 
-ARM GAS  /tmp/ccZE231x.s 			page 147
+ARM GAS  /tmp/ccfAGc5L.s 			page 147
 
 
  6085      6C696669 
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6115 0494 52657365 		.ascii	"Reserved11\000"
  6115      72766564 
  6115      313100
-ARM GAS  /tmp/ccZE231x.s 			page 148
+ARM GAS  /tmp/ccfAGc5L.s 			page 148
 
 
  6116              	.LASF290:
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6141      5F697343 
  6141      6F6E6669 
  6141      67757265 
-ARM GAS  /tmp/ccZE231x.s 			page 149
+ARM GAS  /tmp/ccfAGc5L.s 			page 149
 
 
  6141      6400
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6167      71756573 
  6168              	.LASF217:
  6169 05e9 4143435F 		.ascii	"ACC_IRQn\000"
-ARM GAS  /tmp/ccZE231x.s 			page 150
+ARM GAS  /tmp/ccfAGc5L.s 			page 150
 
 
  6169      4952516E 
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6198              	.LASF156:
  6199 0671 55534252 		.ascii	"USBRC_RESET\000"
  6199      435F5245 
-ARM GAS  /tmp/ccZE231x.s 			page 151
+ARM GAS  /tmp/ccfAGc5L.s 			page 151
 
 
  6199      53455400 
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6223      67733200 
  6224              	.LASF377:
  6225 0719 5F727842 		.ascii	"_rxBuffer\000"
-ARM GAS  /tmp/ccZE231x.s 			page 152
+ARM GAS  /tmp/ccfAGc5L.s 			page 152
 
 
  6225      75666665 
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6250              	.LASF23:
  6251 07b1 5F426967 		.ascii	"_Bigint\000"
  6251      696E7400 
-ARM GAS  /tmp/ccZE231x.s 			page 153
+ARM GAS  /tmp/ccfAGc5L.s 			page 153
 
 
  6252              	.LASF20:
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6277 084c 504D435F 		.ascii	"PMC_PCSR1\000"
  6277      50435352 
  6277      3100
-ARM GAS  /tmp/ccZE231x.s 			page 154
+ARM GAS  /tmp/ccfAGc5L.s 			page 154
 
 
  6278              	.LASF89:
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6305      7400
  6306              	.LASF298:
  6307 08e8 50494F5F 		.ascii	"PIO_PCRHR\000"
-ARM GAS  /tmp/ccZE231x.s 			page 155
+ARM GAS  /tmp/ccfAGc5L.s 			page 155
 
 
  6307      50435248 
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6333 097a 56427573 		.ascii	"VBus_Configure\000"
  6333      5F436F6E 
  6333      66696775 
-ARM GAS  /tmp/ccZE231x.s 			page 156
+ARM GAS  /tmp/ccfAGc5L.s 			page 156
 
 
  6333      726500
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6359      645F6E65 
  6359      787400
  6360              	.LASF144:
-ARM GAS  /tmp/ccZE231x.s 			page 157
+ARM GAS  /tmp/ccfAGc5L.s 			page 157
 
 
  6361 0a21 62526571 		.ascii	"bRequest\000"
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6387      524300
  6388              	.LASF166:
  6389 0ab3 70467344 		.ascii	"pFsDevice\000"
-ARM GAS  /tmp/ccZE231x.s 			page 158
+ARM GAS  /tmp/ccfAGc5L.s 			page 158
 
 
  6389      65766963 
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6416              	.LASF340:
  6417 0b4b 73697A65 		.ascii	"size\000"
  6417      00
-ARM GAS  /tmp/ccZE231x.s 			page 159
+ARM GAS  /tmp/ccfAGc5L.s 			page 159
 
 
  6418              	.LASF6:
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6445 0bea 5F737464 		.ascii	"_stdout\000"
  6445      6F757400 
  6446              	.LASF201:
-ARM GAS  /tmp/ccZE231x.s 			page 160
+ARM GAS  /tmp/ccfAGc5L.s 			page 160
 
 
  6447 0bf2 55534152 		.ascii	"USART1_IRQn\000"
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6473 0c7d 49434552 		.ascii	"ICER\000"
  6473      00
  6474              	.LASF16:
-ARM GAS  /tmp/ccZE231x.s 			page 161
+ARM GAS  /tmp/ccfAGc5L.s 			page 161
 
 
  6475 0c82 5F666C6F 		.ascii	"_flock_t\000"
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6503      52516E00 
  6504              	.LASF236:
  6505 0d0f 52657365 		.ascii	"Reserved1\000"
-ARM GAS  /tmp/ccZE231x.s 			page 162
+ARM GAS  /tmp/ccfAGc5L.s 			page 162
 
 
  6505      72766564 
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6531      6E00
  6532              	.LASF247:
  6533 0d9f 50494F5F 		.ascii	"PIO_ODSR\000"
-ARM GAS  /tmp/ccZE231x.s 			page 163
+ARM GAS  /tmp/ccfAGc5L.s 			page 163
 
 
  6533      4F445352 
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6559      5F495251 
  6559      6E00
  6560              	.LASF132:
-ARM GAS  /tmp/ccZE231x.s 			page 164
+ARM GAS  /tmp/ccfAGc5L.s 			page 164
 
 
  6561 0e4d 5F555342 		.ascii	"_USBDeviceQualifierDescriptor\000"
@@ -9838,7 +9838,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6589      57504D52 
  6589      00
  6590              	.LASF67:
-ARM GAS  /tmp/ccZE231x.s 			page 165
+ARM GAS  /tmp/ccfAGc5L.s 			page 165
 
 
  6591 0eec 5F6D6973 		.ascii	"_misc\000"
@@ -9898,7 +9898,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6619      6D656E74 
  6619      00
  6620              	.LASF174:
-ARM GAS  /tmp/ccZE231x.s 			page 166
+ARM GAS  /tmp/ccfAGc5L.s 			page 166
 
 
  6621 0f77 70537472 		.ascii	"pStrings\000"
@@ -9958,7 +9958,7 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6649 0ffa 5F676574 		.ascii	"_getdate_err\000"
  6649      64617465 
  6649      5F657272 
-ARM GAS  /tmp/ccZE231x.s 			page 167
+ARM GAS  /tmp/ccfAGc5L.s 			page 167
 
 
  6649      00
@@ -9986,67 +9986,67 @@ ARM GAS  /tmp/ccZE231x.s 			page 1
  6661      50544352 
  6661      00
  6662              		.ident	"GCC: (Sourcery CodeBench Lite 2011.09-69) 4.6.1"
-ARM GAS  /tmp/ccZE231x.s 			page 168
+ARM GAS  /tmp/ccfAGc5L.s 			page 168
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usb_console.c
-     /tmp/ccZE231x.s:19     .text.CDCDSerialDriver_Write:00000000 $t
-     /tmp/ccZE231x.s:23     .text.CDCDSerialDriver_Write:00000000 CDCDSerialDriver_Write
-     /tmp/ccZE231x.s:61     .text.CDCDSerialDriver_Read:00000000 $t
-     /tmp/ccZE231x.s:65     .text.CDCDSerialDriver_Read:00000000 CDCDSerialDriver_Read
-     /tmp/ccZE231x.s:102    .text.NVIC_EnableIRQ:00000000 $t
-     /tmp/ccZE231x.s:106    .text.NVIC_EnableIRQ:00000000 NVIC_EnableIRQ
-     /tmp/ccZE231x.s:145    .data:00000000 $d
-     /tmp/ccZE231x.s:148    .data:00000000 _xferTimeout
-     /tmp/ccZE231x.s:151    .bss:00000000 $d
-     /tmp/ccZE231x.s:152    .bss:00000000 _rxCount
-     /tmp/ccZE231x.s:155    .bss:00000004 _txCount
-     /tmp/ccZE231x.s:157    .bss:00000008 _cfgdone
-     /tmp/ccZE231x.s:160    .bss:0000000c _rxBuffer
-     /tmp/ccZE231x.s:163    .rodata:00000000 $d
-     /tmp/ccZE231x.s:166    .rodata:00000000 pinVbus
-     /tmp/ccZE231x.s:174    .rodata:0000000c .LC0
-     /tmp/ccZE231x.s:177    .rodata:00000024 .LC1
-     /tmp/ccZE231x.s:180    .text.ISR_Vbus:00000000 $t
-     /tmp/ccZE231x.s:184    .text.ISR_Vbus:00000000 ISR_Vbus
-     /tmp/ccZE231x.s:245    .text.VBus_Configure:00000000 $t
-     /tmp/ccZE231x.s:249    .text.VBus_Configure:00000000 VBus_Configure
-     /tmp/ccZE231x.s:298    .text.ConfigureUsbClock:00000000 $t
-     /tmp/ccZE231x.s:302    .text.ConfigureUsbClock:00000000 ConfigureUsbClock
-     /tmp/ccZE231x.s:345    .text.USBDCallbacks_Initialized:00000000 $t
-     /tmp/ccZE231x.s:350    .text.USBDCallbacks_Initialized:00000000 USBDCallbacks_Initialized
-     /tmp/ccZE231x.s:373    .text.USBDDriverCallbacks_ConfigurationChanged:00000000 $t
-     /tmp/ccZE231x.s:378    .text.USBDDriverCallbacks_ConfigurationChanged:00000000 USBDDriverCallbacks_ConfigurationChanged
-     /tmp/ccZE231x.s:409    .text.USBDCallbacks_RequestReceived:00000000 $t
-     /tmp/ccZE231x.s:414    .text.USBDCallbacks_RequestReceived:00000000 USBDCallbacks_RequestReceived
-     /tmp/ccZE231x.s:444    .rodata:00000040 .LC2
-     /tmp/ccZE231x.s:447    .text.UsbWriteDone:00000000 $t
-     /tmp/ccZE231x.s:451    .text.UsbWriteDone:00000000 UsbWriteDone
-     /tmp/ccZE231x.s:504    .rodata:00000060 .LC3
-     /tmp/ccZE231x.s:507    .text.UsbReadDone:00000000 $t
-     /tmp/ccZE231x.s:511    .text.UsbReadDone:00000000 UsbReadDone
-     /tmp/ccZE231x.s:564    .rodata:00000080 .LC4
-     /tmp/ccZE231x.s:567    .text.USBC_isConfigured:00000000 $t
-     /tmp/ccZE231x.s:572    .text.USBC_isConfigured:00000000 USBC_isConfigured
-     /tmp/ccZE231x.s:768    .text.USBC_StartListening:00000000 USBC_StartListening
-     /tmp/ccZE231x.s:635    .text.USBC_hasData:00000000 $t
-     /tmp/ccZE231x.s:640    .text.USBC_hasData:00000000 USBC_hasData
-     /tmp/ccZE231x.s:672    .text.USBC_SetTimeout:00000000 $t
-     /tmp/ccZE231x.s:677    .text.USBC_SetTimeout:00000000 USBC_SetTimeout
-     /tmp/ccZE231x.s:710    .rodata:000000a8 .LC5
-     /tmp/ccZE231x.s:713    .text.USBC_Configure:00000000 $t
-     /tmp/ccZE231x.s:718    .text.USBC_Configure:00000000 USBC_Configure
-     /tmp/ccZE231x.s:760    .rodata:000000d0 .LC6
-     /tmp/ccZE231x.s:763    .text.USBC_StartListening:00000000 $t
-     /tmp/ccZE231x.s:819    .rodata:000000ec .LC7
-     /tmp/ccZE231x.s:822    .text.USBC_Gets:00000000 $t
-     /tmp/ccZE231x.s:827    .text.USBC_Gets:00000000 USBC_Gets
-     /tmp/ccZE231x.s:966    .rodata:00000108 .LC8
-     /tmp/ccZE231x.s:969    .text.USBC_Puts:00000000 $t
-     /tmp/ccZE231x.s:974    .text.USBC_Puts:00000000 USBC_Puts
+     /tmp/ccfAGc5L.s:19     .text.CDCDSerialDriver_Write:00000000 $t
+     /tmp/ccfAGc5L.s:23     .text.CDCDSerialDriver_Write:00000000 CDCDSerialDriver_Write
+     /tmp/ccfAGc5L.s:61     .text.CDCDSerialDriver_Read:00000000 $t
+     /tmp/ccfAGc5L.s:65     .text.CDCDSerialDriver_Read:00000000 CDCDSerialDriver_Read
+     /tmp/ccfAGc5L.s:102    .text.NVIC_EnableIRQ:00000000 $t
+     /tmp/ccfAGc5L.s:106    .text.NVIC_EnableIRQ:00000000 NVIC_EnableIRQ
+     /tmp/ccfAGc5L.s:145    .data:00000000 $d
+     /tmp/ccfAGc5L.s:148    .data:00000000 _xferTimeout
+     /tmp/ccfAGc5L.s:151    .bss:00000000 $d
+     /tmp/ccfAGc5L.s:152    .bss:00000000 _rxCount
+     /tmp/ccfAGc5L.s:155    .bss:00000004 _txCount
+     /tmp/ccfAGc5L.s:157    .bss:00000008 _cfgdone
+     /tmp/ccfAGc5L.s:160    .bss:0000000c _rxBuffer
+     /tmp/ccfAGc5L.s:163    .rodata:00000000 $d
+     /tmp/ccfAGc5L.s:166    .rodata:00000000 pinVbus
+     /tmp/ccfAGc5L.s:174    .rodata:0000000c .LC0
+     /tmp/ccfAGc5L.s:177    .rodata:00000024 .LC1
+     /tmp/ccfAGc5L.s:180    .text.ISR_Vbus:00000000 $t
+     /tmp/ccfAGc5L.s:184    .text.ISR_Vbus:00000000 ISR_Vbus
+     /tmp/ccfAGc5L.s:245    .text.VBus_Configure:00000000 $t
+     /tmp/ccfAGc5L.s:249    .text.VBus_Configure:00000000 VBus_Configure
+     /tmp/ccfAGc5L.s:298    .text.ConfigureUsbClock:00000000 $t
+     /tmp/ccfAGc5L.s:302    .text.ConfigureUsbClock:00000000 ConfigureUsbClock
+     /tmp/ccfAGc5L.s:345    .text.USBDCallbacks_Initialized:00000000 $t
+     /tmp/ccfAGc5L.s:350    .text.USBDCallbacks_Initialized:00000000 USBDCallbacks_Initialized
+     /tmp/ccfAGc5L.s:373    .text.USBDDriverCallbacks_ConfigurationChanged:00000000 $t
+     /tmp/ccfAGc5L.s:378    .text.USBDDriverCallbacks_ConfigurationChanged:00000000 USBDDriverCallbacks_ConfigurationChanged
+     /tmp/ccfAGc5L.s:409    .text.USBDCallbacks_RequestReceived:00000000 $t
+     /tmp/ccfAGc5L.s:414    .text.USBDCallbacks_RequestReceived:00000000 USBDCallbacks_RequestReceived
+     /tmp/ccfAGc5L.s:444    .rodata:00000040 .LC2
+     /tmp/ccfAGc5L.s:447    .text.UsbWriteDone:00000000 $t
+     /tmp/ccfAGc5L.s:451    .text.UsbWriteDone:00000000 UsbWriteDone
+     /tmp/ccfAGc5L.s:504    .rodata:00000060 .LC3
+     /tmp/ccfAGc5L.s:507    .text.UsbReadDone:00000000 $t
+     /tmp/ccfAGc5L.s:511    .text.UsbReadDone:00000000 UsbReadDone
+     /tmp/ccfAGc5L.s:564    .rodata:00000080 .LC4
+     /tmp/ccfAGc5L.s:567    .text.USBC_isConfigured:00000000 $t
+     /tmp/ccfAGc5L.s:572    .text.USBC_isConfigured:00000000 USBC_isConfigured
+     /tmp/ccfAGc5L.s:768    .text.USBC_StartListening:00000000 USBC_StartListening
+     /tmp/ccfAGc5L.s:635    .text.USBC_hasData:00000000 $t
+     /tmp/ccfAGc5L.s:640    .text.USBC_hasData:00000000 USBC_hasData
+     /tmp/ccfAGc5L.s:672    .text.USBC_SetTimeout:00000000 $t
+     /tmp/ccfAGc5L.s:677    .text.USBC_SetTimeout:00000000 USBC_SetTimeout
+     /tmp/ccfAGc5L.s:710    .rodata:000000a8 .LC5
+     /tmp/ccfAGc5L.s:713    .text.USBC_Configure:00000000 $t
+     /tmp/ccfAGc5L.s:718    .text.USBC_Configure:00000000 USBC_Configure
+     /tmp/ccfAGc5L.s:760    .rodata:000000d0 .LC6
+     /tmp/ccfAGc5L.s:763    .text.USBC_StartListening:00000000 $t
+     /tmp/ccfAGc5L.s:819    .rodata:000000ec .LC7
+     /tmp/ccfAGc5L.s:822    .text.USBC_Gets:00000000 $t
+     /tmp/ccfAGc5L.s:827    .text.USBC_Gets:00000000 USBC_Gets
+     /tmp/ccfAGc5L.s:966    .rodata:00000108 .LC8
+     /tmp/ccfAGc5L.s:969    .text.USBC_Puts:00000000 $t
+     /tmp/ccfAGc5L.s:974    .text.USBC_Puts:00000000 USBC_Puts
                      .debug_frame:00000010 $d
-ARM GAS  /tmp/ccZE231x.s 			page 169
+ARM GAS  /tmp/ccfAGc5L.s 			page 169
 
 
 

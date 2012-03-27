@@ -128,27 +128,13 @@ endef
 $(foreach MEMORY, $(MEMORIES), $(eval $(call RULES,$(MEMORY))))
 
 tags: $(C_SRC) $(LIBS)
-	ctags --totals -R . ../libusb ../libchip
+	ctags --totals -R .
 
 clean:
 	-rm $(OBJ)/*.o $(OBJ)/*.lst \
 			$(BIN)/*.bin $(BIN)/*.elf \
 			$(BIN)/*.elf.txt $(BIN)/*.map \
 			$(BIN)/*-size.txt
-
-runrom:
-	$(OOCD) $(OOCDFLAGS) \
-		-c "halt" \
-		-c "boot rom" \
-		-c "reset run" \
-	    -c "shutdown"
-
-runflash:
-	$(OOCD) $(OOCDFLAGS) \
-		-c "halt" \
-		-c "boot flash" \
-		-c "reset run" \
-		-c "shutdown"
 
 program: flash
 	$(OOCD) $(OOCDFLAGS) \
@@ -164,3 +150,5 @@ ramboot: sram
 		-c "reset run" \
 		-c "shutdown"
 
+debug: $(MEMORIES)
+	./debug.sh
