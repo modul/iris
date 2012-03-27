@@ -6879,6 +6879,7 @@ TC0_IrqHandler	libchip/source/exceptions.c	/^WEAK void TC0_IrqHandler( void )$/;
 TC1	libchip/include/SAM3S.h	7411;"	d
 TC1_IRQn	libchip/include/SAM3S.h	/^  TC1_IRQn             = 24, \/**< 24 SAM3S Timer\/Counter 1 (TC1) *\/$/;"	e	enum:IRQn
 TC1_IrqHandler	libchip/source/exceptions.c	/^WEAK void TC1_IrqHandler( void )$/;"	f
+TC1_IrqHandler	main.c	/^void TC1_IrqHandler()$/;"	f
 TC2_IRQn	libchip/include/SAM3S.h	/^  TC2_IRQn             = 25, \/**< 25 SAM3S Timer\/Counter 2 (TC2) *\/$/;"	e	enum:IRQn
 TC2_IrqHandler	libchip/source/exceptions.c	/^WEAK void TC2_IrqHandler( void )$/;"	f
 TC3_IRQn	libchip/include/SAM3S.h	/^  TC3_IRQn             = 26, \/**< 26 SAM3S Timer\/Counter 3 (TC3) *\/$/;"	e	enum:IRQn
@@ -8618,6 +8619,7 @@ id	libchip/include/pio.h	/^    uint8_t id;$/;"	m	struct:_Pin
 idProduct	libusb/include/USBDescriptors.h	/^   uint16_t idProduct;$/;"	m	struct:_USBDeviceDescriptor
 idVendor	libusb/include/USBDescriptors.h	/^   uint16_t idVendor;$/;"	m	struct:_USBDeviceDescriptor
 inCurr	libusb/source/USBD_HAL.c	/^    uint16_t            inCurr;$/;"	m	struct:__anon4	file:
+init	main.c	/^void init()$/;"	f
 input	controller.h	/^	int *input;$/;"	m	struct:trip
 isRemoteWakeUpEnabled	libusb/include/USBDDriver.h	/^    uint8_t isRemoteWakeUpEnabled;$/;"	m	struct:_USBDDriver
 languageIdStringDescriptor	board/usb_device_descriptor.c	/^const unsigned char languageIdStringDescriptor[] = {$/;"	v

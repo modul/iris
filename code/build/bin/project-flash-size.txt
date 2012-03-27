@@ -7,26 +7,26 @@
     440	      0	      4	    444	    1bc	build/obj/flash_timetick.o
     208	   4304	      0	   4512	   11a0	build/obj/flash_startup.o
     160	      8	      0	    168	     a8	build/obj/flash_usb_device_descriptor.o
-    252	      0	      0	    252	     fc	build/obj/flash_main.o
+    428	      0	     88	    516	    204	build/obj/flash_main.o
    1064	      0	      0	   1064	    428	build/obj/flash_controller.o
-  46232	   1432	   4816	  52480	   cd00	build/bin/project-flash.elf
+  46368	   1432	   4816	  52616	   cd88	build/bin/project-flash.elf
 build/bin/project-flash.elf  :
 section             size        addr
-.text              46224     4194304
-.ARM.exidx             8     4240528
+.text              46360     4194304
+.ARM.exidx             8     4240664
 .relocate           1432   536870912
 .bss                 720   536872344
 .stack              4096   536873064
 .ARM.attributes       41           0
 .comment              48           0
-.debug_info        62372           0
-.debug_abbrev       9967           0
-.debug_loc         17871           0
-.debug_aranges      2560           0
-.debug_ranges       2912           0
-.debug_line        13282           0
-.debug_str         12666           0
-.debug_frame       10556           0
-Total             184755
+.debug_info        64595           0
+.debug_abbrev      10173           0
+.debug_loc         18027           0
+.debug_aranges      2584           0
+.debug_ranges       2936           0
+.debug_line        13457           0
+.debug_str         12746           0
+.debug_frame       10648           0
+Total             187871
 
 
