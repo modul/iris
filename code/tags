@@ -1010,7 +1010,7 @@ CTRL	libchip/cmsis/core_cm3.h	/^  __IO uint32_t CTRL;                         \/
 CTRL_INIT	controller.h	14;"	d
 C_OBJ	libchip/Makefile	/^C_OBJ = $(filter-out $(C_OBJ_FILTER), $(C_OBJ_TEMP))$/;"	m
 C_OBJ	libusb/Makefile	/^C_OBJ = $(filter-out $(C_OBJ_FILTER), $(C_OBJ_TEMP))$/;"	m
-C_OBJECTS	Makefile	/^C_OBJECTS  = $(patsubst %.c, %.o, $(notdir $(C_SRC)))$/;"	m
+C_OBJECTS	Makefile	/^C_OBJECTS = $(addprefix $(OBJ)\/, $(patsubst %.c, %.o, $(notdir $(C_SRC))))$/;"	m
 C_OBJECTS	libchip/Makefile	/^C_OBJECTS = $(addprefix $(PREFIX), $(C_OBJ))$/;"	m
 C_OBJECTS	libusb/Makefile	/^C_OBJECTS = $(addprefix $(PREFIX), $(C_OBJ))$/;"	m
 C_OBJ_FILTER	libchip/Makefile	/^C_OBJ_FILTER = supc.o hsmci.o hsmci_pdc.o$/;"	m
@@ -1806,6 +1806,8 @@ LIBPATHS	Makefile	/^LIBPATHS = libusb\/lib libchip\/lib$/;"	m
 LIBS	Makefile	/^LIBS = $(USBLIB) $(CHIPLIB)$/;"	m
 LIMIT	controller.h	50;"	d
 LOAD	libchip/cmsis/core_cm3.h	/^  __IO uint32_t LOAD;                         \/*!< Offset: 0x04  SysTick Reload Value Register       *\/$/;"	m	struct:__anon41
+LOOPS	main.c	11;"	d	file:
+LOOPSINIT	main.c	12;"	d	file:
 LSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t LSR;                          \/*!< Offset:       ITM Lock Status Register                  *\/$/;"	m	struct:__anon42
 MASK_STATUS0	libchip/source/pmc.c	42;"	d	file:
 MASK_STATUS1	libchip/source/pmc.c	43;"	d	file:
@@ -1919,6 +1921,7 @@ MATRIX_WPSR_WPVSRC_Pos	libchip/include/SAM3S.h	1682;"	d
 MAX	controller.h	10;"	d
 MAXOUT	controller.h	12;"	d
 MAX_INTERRUPT_SOURCES	libchip/source/pio_it.c	49;"	d	file:
+MAXv	main.c	6;"	d	file:
 MBL_FULL	libusb/source/USBD_HAL.c	138;"	d	file:
 MBL_NULL	libusb/source/USBD_HAL.c	140;"	d	file:
 MBL_NbBuffer	libusb/source/USBD_HAL.c	135;"	d	file:
@@ -1945,8 +1948,8 @@ MCI_SetBusWidth	libchip/source/hsmci_pdc.c	/^uint32_t MCI_SetBusWidth(Mcid*pMci,
 MCI_SetSpeed	libchip/source/hsmci.c	/^uint32_t MCI_SetSpeed( Mcid* pMci, uint32_t mciSpeed, uint32_t mck )$/;"	f
 MCI_SetSpeed	libchip/source/hsmci_pdc.c	/^uint32_t MCI_SetSpeed( Mcid* pMci, uint32_t mciSpeed, uint32_t mck )$/;"	f
 MCI_WRITE	libchip/include/hsmci.h	117;"	d
-MEMORIES	Makefile	/^MEMORIES = flash #sram$/;"	m
 MIN	board/usb_device_descriptor.c	70;"	d	file:
+MINv	main.c	5;"	d	file:
 MMFAR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t MMFAR;                        \/*!< Offset: 0x34  Mem Manage Address Register                           *\/$/;"	m	struct:__anon40
 MMFR	libchip/cmsis/core_cm3.h	/^  __I  uint32_t MMFR[4];                      \/*!< Offset: 0x50  Memory Model Feature Register                         *\/$/;"	m	struct:__anon40
 MPU	libchip/cmsis/core_cm3.h	731;"	d
@@ -5761,7 +5764,6 @@ RTT_SetPrescaler	libchip/source/rtt.c	/^void RTT_SetPrescaler(Rtt *rtt, uint16_t
 RTT_VR	libchip/include/SAM3S.h	/^  RoReg RTT_VR; \/**< \\brief (Rtt Offset: 0x08) Value Register *\/$/;"	m	struct:__anon24
 RTT_VR_CRTV_Msk	libchip/include/SAM3S.h	4568;"	d
 RTT_VR_CRTV_Pos	libchip/include/SAM3S.h	4567;"	d
-RULES	Makefile	/^define RULES$/;"	m
 RXBUFFERSIZE	board/usb_console.c	37;"	d	file:
 Reserved1	libchip/include/SAM3S.h	/^  RwReg         Reserved1[12];$/;"	m	struct:__anon26
 Reserved1	libchip/include/SAM3S.h	/^  RwReg      Reserved1[1];$/;"	m	struct:__anon21
@@ -6872,6 +6874,7 @@ SysTick_VAL_CURRENT_Pos	libchip/cmsis/core_cm3.h	391;"	d
 SystemCoreClock	board/system.c	/^volatile uint32_t SystemCoreClock = 4000001;$/;"	v
 SystemCoreClockUpdate	board/system.c	/^void SystemCoreClockUpdate()	$/;"	f
 SystemInit	board/system.c	/^WEAK void SystemInit( void )$/;"	f
+TARGET	Makefile	/^TARGET = $(OUTPUT).bin$/;"	m
 TC0	libchip/include/SAM3S.h	7410;"	d
 TC0_IRQn	libchip/include/SAM3S.h	/^  TC0_IRQn             = 23, \/**< 23 SAM3S Timer\/Counter 0 (TC0) *\/$/;"	e	enum:IRQn
 TC0_IrqHandler	board/led.c	/^void TC0_IrqHandler()$/;"	f
@@ -8619,6 +8622,7 @@ id	libchip/include/pio.h	/^    uint8_t id;$/;"	m	struct:_Pin
 idProduct	libusb/include/USBDescriptors.h	/^   uint16_t idProduct;$/;"	m	struct:_USBDeviceDescriptor
 idVendor	libusb/include/USBDescriptors.h	/^   uint16_t idVendor;$/;"	m	struct:_USBDeviceDescriptor
 inCurr	libusb/source/USBD_HAL.c	/^    uint16_t            inCurr;$/;"	m	struct:__anon4	file:
+in_range	main.c	9;"	d	file:
 init	main.c	/^void init()$/;"	f
 input	controller.h	/^	int *input;$/;"	m	struct:trip
 isRemoteWakeUpEnabled	libusb/include/USBDDriver.h	/^    uint8_t isRemoteWakeUpEnabled;$/;"	m	struct:_USBDDriver
@@ -8628,8 +8632,10 @@ lineCoding	libusb/include/CDCDSerialPort.h	/^    CDCLineCoding  lineCoding;$/;"	
 lineCoding	libusb/source/CDCDSerialPort.c	/^static CDCLineCoding lineCoding;$/;"	v	file:
 listSize	libusb/source/USBD_HAL.c	/^    uint16_t            listSize;$/;"	m	struct:__anon4	file:
 listState	libusb/source/USBD_HAL.c	/^    uint8_t             listState;$/;"	m	struct:__anon4	file:
+loops	main.c	/^struct ctrl loops[LOOPS] = LOOPSINIT;$/;"	v	typeref:struct:ctrl
 main	main.c	/^int main() $/;"	f
 mask	libchip/include/pio.h	/^    uint32_t mask;$/;"	m	struct:_Pin
+match	main.c	8;"	d	file:
 mblTransfer	libusb/source/USBD_HAL.c	/^        MblTransfer    mblTransfer;$/;"	m	union:__anon5::__anon6	file:
 mciId	libchip/include/hsmci.h	/^    uint8_t mciId;$/;"	m	struct:__anon37
 min	libchip/source/flashd.c	94;"	d	file:

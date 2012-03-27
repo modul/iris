@@ -111,7 +111,7 @@ void control(ctrlio_t *pv, struct ctrl *loop, unsigned loops)
 			}
 		}
 		else if (loop->mode > STOP) {
-			mode(STOP, loop);
+			mode(OFF, loop);
 		}
 		loops--;
 		loop++;

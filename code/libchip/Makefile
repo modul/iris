@@ -59,6 +59,7 @@ CFLAGS += -g -mcpu=cortex-m3 -mthumb -mlong-calls
 CFLAGS += -ffunction-sections --param max-inline-insns-single=500 
 CFLAGS += $(OPTIMIZATION) $(INCLUDES) -D$(CHIP) -DTRACE_LEVEL=$(TRACE_LEVEL)
 CFLAGS += -Dprintf=iprintf
+CFLAGS += -Dfprintf=fiprintf
 CFLAGS += -Wall -Wno-address -Wno-format
 
 ASFLAGS += -mcpu=cortex-m3 -mthumb -Wall 
