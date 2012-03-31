@@ -1,7 +1,7 @@
 00408740 t .udivsi3_skip_div0_test
 004038f6 W ACC_IrqHandler
 004038f8 T ADC_Initialize
-004016e0 T ADC_IrqHandler
+004017bc T ADC_IrqHandler
 00403914 T ADC_cfgFrequency
 004038bc W BusFault_Handler
 00403330 T CDCDSerialDriver_ConfigurationChangedHandler
@@ -75,7 +75,7 @@
 0040030c T SystemCoreClockUpdate
 00400328 W SystemInit
 00400c70 T TC0_IrqHandler
-00401664 T TC1_IrqHandler
+00401740 T TC1_IrqHandler
 004038e8 W TC2_IrqHandler
 004038ea W TC3_IrqHandler
 004038ec W TC4_IrqHandler
@@ -385,7 +385,7 @@
 00403df0 T gets
 200005cc b heap.7559
 20000028 d impure_data
-004017b8 t init
+00401170 t init
 00403e00 T iprintf
 00406c50 T iswspace
 004092d4 T languageIdStringDescriptor
@@ -397,7 +397,7 @@
 20000858 b lineCoding
 00406d08 T localeconv
 200006f0 b loops
-00401170 T main
+0040124c T main
 00406e24 T malloc
 0040741c T mbrtowc
 004074e0 T memchr

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccZvkXpi.s 			page 1
+ARM GAS  /tmp/ccrEF6Gk.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
   30:libchip/cmsis/core_cm3.h ****  *   - Error 10: \n
   31:libchip/cmsis/core_cm3.h ****  *     register uint32_t __regBasePri         __asm("basepri"); \n
   32:libchip/cmsis/core_cm3.h ****  *     Error 10: Expecting ';'
-ARM GAS  /tmp/ccZvkXpi.s 			page 2
+ARM GAS  /tmp/ccrEF6Gk.s 			page 2
 
 
   33:libchip/cmsis/core_cm3.h ****  * .
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
   87:libchip/cmsis/core_cm3.h **** 
   88:libchip/cmsis/core_cm3.h **** #define __CORTEX_M                (0x03)                                                       /*!<
   89:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccZvkXpi.s 			page 3
+ARM GAS  /tmp/ccrEF6Gk.s 			page 3
 
 
   90:libchip/cmsis/core_cm3.h **** #include <stdint.h>                           /* Include standard types */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  144:libchip/cmsis/core_cm3.h ****   __IO uint8_t  IP[240];                      /*!< Offset: 0x300  Interrupt Priority Register (8Bit
  145:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED5[644];
  146:libchip/cmsis/core_cm3.h ****   __O  uint32_t STIR;                         /*!< Offset: 0xE00  Software Trigger Interrupt Regist
-ARM GAS  /tmp/ccZvkXpi.s 			page 4
+ARM GAS  /tmp/ccrEF6Gk.s 			page 4
 
 
  147:libchip/cmsis/core_cm3.h **** }  NVIC_Type;
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  201:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSTSET_Pos             26                                             /*!< SCB 
  202:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSTSET_Msk             (1ul << SCB_ICSR_PENDSTSET_Pos)                /*!< SCB 
  203:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccZvkXpi.s 			page 5
+ARM GAS  /tmp/ccrEF6Gk.s 			page 5
 
 
  204:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSTCLR_Pos             25                                             /*!< SCB 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  258:libchip/cmsis/core_cm3.h **** #define SCB_SCR_SLEEPONEXIT_Pos             1                                             /*!< SCB 
  259:libchip/cmsis/core_cm3.h **** #define SCB_SCR_SLEEPONEXIT_Msk            (1ul << SCB_SCR_SLEEPONEXIT_Pos)               /*!< SCB 
  260:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccZvkXpi.s 			page 6
+ARM GAS  /tmp/ccrEF6Gk.s 			page 6
 
 
  261:libchip/cmsis/core_cm3.h **** /* SCB Configuration Control Register Definitions */
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  315:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_USGFAULTACT_Msk          (1ul << SCB_SHCSR_USGFAULTACT_Pos)             /*!< SCB 
  316:libchip/cmsis/core_cm3.h **** 
  317:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_BUSFAULTACT_Pos           1                                             /*!< SCB 
-ARM GAS  /tmp/ccZvkXpi.s 			page 7
+ARM GAS  /tmp/ccrEF6Gk.s 			page 7
 
 
  318:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_BUSFAULTACT_Msk          (1ul << SCB_SHCSR_BUSFAULTACT_Pos)             /*!< SCB 
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  372:libchip/cmsis/core_cm3.h **** 
  373:libchip/cmsis/core_cm3.h **** /* SysTick Control / Status Register Definitions */
  374:libchip/cmsis/core_cm3.h **** #define SysTick_CTRL_COUNTFLAG_Pos         16                                             /*!< SysT
-ARM GAS  /tmp/ccZvkXpi.s 			page 8
+ARM GAS  /tmp/ccrEF6Gk.s 			page 8
 
 
  375:libchip/cmsis/core_cm3.h **** #define SysTick_CTRL_COUNTFLAG_Msk         (1ul << SysTick_CTRL_COUNTFLAG_Pos)            /*!< SysT
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  429:libchip/cmsis/core_cm3.h ****   __IO uint32_t LAR;                          /*!< Offset:       ITM Lock Access Register          
  430:libchip/cmsis/core_cm3.h ****   __IO uint32_t LSR;                          /*!< Offset:       ITM Lock Status Register          
  431:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED5[6];
-ARM GAS  /tmp/ccZvkXpi.s 			page 9
+ARM GAS  /tmp/ccrEF6Gk.s 			page 9
 
 
  432:libchip/cmsis/core_cm3.h ****   __I  uint32_t PID4;                         /*!< Offset:       ITM Peripheral Identification Regi
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  486:libchip/cmsis/core_cm3.h **** 
  487:libchip/cmsis/core_cm3.h **** /* ITM Lock Status Register Definitions */
  488:libchip/cmsis/core_cm3.h **** #define ITM_LSR_ByteAcc_Pos                 2                                             /*!< ITM 
-ARM GAS  /tmp/ccZvkXpi.s 			page 10
+ARM GAS  /tmp/ccrEF6Gk.s 			page 10
 
 
  489:libchip/cmsis/core_cm3.h **** #define ITM_LSR_ByteAcc_Msk                (1ul << ITM_LSR_ByteAcc_Pos)                   /*!< ITM 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  543:libchip/cmsis/core_cm3.h ****   __IO uint32_t RASR_A1;                      /*!< Offset: 0x18  MPU Alias 1 Region Attribute and S
  544:libchip/cmsis/core_cm3.h ****   __IO uint32_t RBAR_A2;                      /*!< Offset: 0x1C  MPU Alias 2 Region Base Address Re
  545:libchip/cmsis/core_cm3.h ****   __IO uint32_t RASR_A2;                      /*!< Offset: 0x20  MPU Alias 2 Region Attribute and S
-ARM GAS  /tmp/ccZvkXpi.s 			page 11
+ARM GAS  /tmp/ccrEF6Gk.s 			page 11
 
 
  546:libchip/cmsis/core_cm3.h ****   __IO uint32_t RBAR_A3;                      /*!< Offset: 0x24  MPU Alias 3 Region Base Address Re
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  600:libchip/cmsis/core_cm3.h **** #define MPU_RASR_B_Pos                     16                                             /*!< MPU 
  601:libchip/cmsis/core_cm3.h **** #define MPU_RASR_B_Msk                     (1ul << MPU_RASR_B_Pos)                        /*!< MPU 
  602:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccZvkXpi.s 			page 12
+ARM GAS  /tmp/ccrEF6Gk.s 			page 12
 
 
  603:libchip/cmsis/core_cm3.h **** #define MPU_RASR_SRD_Pos                    8                                             /*!< MPU 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  657:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_STEP_Msk         (1ul << CoreDebug_DHCSR_C_STEP_Pos)            /*!< Core
  658:libchip/cmsis/core_cm3.h **** 
  659:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_HALT_Pos          1                                             /*!< Core
-ARM GAS  /tmp/ccZvkXpi.s 			page 13
+ARM GAS  /tmp/ccrEF6Gk.s 			page 13
 
 
  660:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_HALT_Msk         (1ul << CoreDebug_DHCSR_C_HALT_Pos)            /*!< Core
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  714:libchip/cmsis/core_cm3.h **** /* Memory mapping of Cortex-M3 Hardware */
  715:libchip/cmsis/core_cm3.h **** #define SCS_BASE            (0xE000E000)                              /*!< System Control Space Bas
  716:libchip/cmsis/core_cm3.h **** #define ITM_BASE            (0xE0000000)                              /*!< ITM Base Address        
-ARM GAS  /tmp/ccZvkXpi.s 			page 14
+ARM GAS  /tmp/ccrEF6Gk.s 			page 14
 
 
  717:libchip/cmsis/core_cm3.h **** #define CoreDebug_BASE      (0xE000EDF0)                              /*!< Core Debug Base Address 
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  771:libchip/cmsis/core_cm3.h **** #define __SEV                             __sev
  772:libchip/cmsis/core_cm3.h **** #define __ISB()                           __isb(0)
  773:libchip/cmsis/core_cm3.h **** #define __DSB()                           __dsb(0)
-ARM GAS  /tmp/ccZvkXpi.s 			page 15
+ARM GAS  /tmp/ccrEF6Gk.s 			page 15
 
 
  774:libchip/cmsis/core_cm3.h **** #define __DMB()                           __dmb(0)
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  828:libchip/cmsis/core_cm3.h **** extern void __set_MSP(uint32_t topOfMainStack);
  829:libchip/cmsis/core_cm3.h **** 
  830:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccZvkXpi.s 			page 16
+ARM GAS  /tmp/ccrEF6Gk.s 			page 16
 
 
  831:libchip/cmsis/core_cm3.h ****  * @brief  Reverse byte order in unsigned short value
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  885:libchip/cmsis/core_cm3.h **** extern uint32_t __get_PRIMASK(void);
  886:libchip/cmsis/core_cm3.h **** 
  887:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccZvkXpi.s 			page 17
+ARM GAS  /tmp/ccrEF6Gk.s 			page 17
 
 
  888:libchip/cmsis/core_cm3.h ****  * @brief  Set the Priority Mask value
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  942:libchip/cmsis/core_cm3.h ****  * @brief  Return the Base Priority value
  943:libchip/cmsis/core_cm3.h ****  *
  944:libchip/cmsis/core_cm3.h ****  * @return BasePriority
-ARM GAS  /tmp/ccZvkXpi.s 			page 18
+ARM GAS  /tmp/ccrEF6Gk.s 			page 18
 
 
  945:libchip/cmsis/core_cm3.h ****  *
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  999:libchip/cmsis/core_cm3.h ****  */
 1000:libchip/cmsis/core_cm3.h **** static __INLINE uint32_t __get_FAULTMASK(void)
 1001:libchip/cmsis/core_cm3.h **** {
-ARM GAS  /tmp/ccZvkXpi.s 			page 19
+ARM GAS  /tmp/ccrEF6Gk.s 			page 19
 
 
 1002:libchip/cmsis/core_cm3.h ****   register uint32_t __regFaultMask       __ASM("faultmask");
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
 1056:libchip/cmsis/core_cm3.h **** static __INLINE void __disable_fault_irq( void )  { __ASM ("cpsid f"); }
 1057:libchip/cmsis/core_cm3.h **** 
 1058:libchip/cmsis/core_cm3.h **** #define __NOP                                     __no_operation            /*!< no operation intri
-ARM GAS  /tmp/ccZvkXpi.s 			page 20
+ARM GAS  /tmp/ccrEF6Gk.s 			page 20
 
 
 1059:libchip/cmsis/core_cm3.h **** static __INLINE  void __WFI( void )               { __ASM ("wfi"); }
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
 1113:libchip/cmsis/core_cm3.h ****  */
 1114:libchip/cmsis/core_cm3.h **** extern void __set_MSP(uint32_t topOfMainStack);
 1115:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccZvkXpi.s 			page 21
+ARM GAS  /tmp/ccrEF6Gk.s 			page 21
 
 
 1116:libchip/cmsis/core_cm3.h **** /**
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
 1170:libchip/cmsis/core_cm3.h ****  * @param  *addr  address pointer
 1171:libchip/cmsis/core_cm3.h ****  * @return        successful / failed
 1172:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/ccZvkXpi.s 			page 22
+ARM GAS  /tmp/ccrEF6Gk.s 			page 22
 
 
 1173:libchip/cmsis/core_cm3.h ****  * Exclusive STR command for 8 bit values
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
 1227:libchip/cmsis/core_cm3.h **** extern uint32_t __get_PSP(void);
 1228:libchip/cmsis/core_cm3.h **** 
 1229:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccZvkXpi.s 			page 23
+ARM GAS  /tmp/ccrEF6Gk.s 			page 23
 
 
 1230:libchip/cmsis/core_cm3.h ****  * @brief  Set the Process Stack Pointer
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
 1284:libchip/cmsis/core_cm3.h **** extern uint32_t  __get_PRIMASK(void);
 1285:libchip/cmsis/core_cm3.h **** 
 1286:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccZvkXpi.s 			page 24
+ARM GAS  /tmp/ccrEF6Gk.s 			page 24
 
 
 1287:libchip/cmsis/core_cm3.h ****  * @brief  Set the Priority Mask value
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
 1341:libchip/cmsis/core_cm3.h **** /**
 1342:libchip/cmsis/core_cm3.h ****  * @brief  Reverse byte order in unsigned short value
 1343:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/ccZvkXpi.s 			page 25
+ARM GAS  /tmp/ccrEF6Gk.s 			page 25
 
 
 1344:libchip/cmsis/core_cm3.h ****  * @param  value  value to reverse
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
 1398:libchip/cmsis/core_cm3.h ****  */
 1399:libchip/cmsis/core_cm3.h **** extern uint32_t __LDREXW(uint32_t *addr);
 1400:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccZvkXpi.s 			page 26
+ARM GAS  /tmp/ccrEF6Gk.s 			page 26
 
 
 1401:libchip/cmsis/core_cm3.h **** /**
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
 1455:libchip/cmsis/core_cm3.h **** /* ##########################   NVIC functions  #################################### */
 1456:libchip/cmsis/core_cm3.h **** 
 1457:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccZvkXpi.s 			page 27
+ARM GAS  /tmp/ccrEF6Gk.s 			page 27
 
 
 1458:libchip/cmsis/core_cm3.h ****  * @brief  Set the Priority Grouping in NVIC Interrupt Controller
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
   34              		.cfi_offset 7, -4
   35 0002 83B0     		sub	sp, sp, #12
   36              	.LCFI1:
-ARM GAS  /tmp/ccZvkXpi.s 			page 28
+ARM GAS  /tmp/ccrEF6Gk.s 			page 28
 
 
   37              		.cfi_def_cfa_offset 16
@@ -1666,101 +1666,21 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
   73 0006 0000     		.short	0
   74 0008 00000000 		.space	8
   74      00000000 
-  75              		.section	.rodata
+  75              		.section	.text.init,"ax",%progbits
   76              		.align	2
-  77              	.LC0:
-  78 0000 2D492D20 		.ascii	"-I- Running at %i MHz\012\000"
-  78      52756E6E 
-  78      696E6720 
-  78      61742025 
-  78      69204D48 
-  79 0017 00       		.align	2
-  80              	.LC1:
-  81 0018 2D442D20 		.ascii	"-D- waiting until USB is fully configured\012\000"
-  81      77616974 
-ARM GAS  /tmp/ccZvkXpi.s 			page 29
-
-
-  81      696E6720 
-  81      756E7469 
-  81      6C205553 
-  82 0043 00       		.align	2
-  83              	.LC2:
-  84 0044 257300   		.ascii	"%s\000"
-  85 0047 00       		.align	2
-  86              	.LC3:
-  87 0048 3F206964 		.ascii	"? id\000"
-  87      00
-  88 004d 000000   		.align	2
-  89              	.LC4:
-  90 0050 3F206F70 		.ascii	"? opt\000"
-  90      7400
-  91 0056 0000     		.align	2
-  92              	.LC5:
-  93 0058 25692569 		.ascii	"%i%i%i\000"
-  93      256900
-  94 005f 00       		.align	2
-  95              	.LC6:
-  96 0060 6D6F6465 		.ascii	"mode\000"
-  96      00
-  97 0065 000000   		.align	2
-  98              	.LC7:
-  99 0068 3F206172 		.ascii	"? arg\000"
-  99      6700
- 100 006e 0000     		.align	2
- 101              	.LC8:
- 102 0070 25750A00 		.ascii	"%u\012\000"
- 103              		.align	2
- 104              	.LC9:
- 105 0074 737000   		.ascii	"sp\000"
- 106 0077 00       		.align	2
- 107              	.LC10:
- 108 0078 707600   		.ascii	"pv\000"
- 109 007b 00       		.align	2
- 110              	.LC11:
- 111 007c 3F207265 		.ascii	"? read-only\000"
- 111      61642D6F 
- 111      6E6C7900 
- 112              		.align	2
- 113              	.LC12:
- 114 0088 6572726F 		.ascii	"error\000"
- 114      7200
- 115 008e 0000     		.align	2
- 116              	.LC13:
- 117 0090 6B00     		.ascii	"k\000"
- 118 0092 0000     		.align	2
- 119              	.LC14:
- 120 0094 25752025 		.ascii	"%u %u %u\012\000"
- 120      75202575 
- 120      0A00
- 121 009e 0000     		.align	2
- 122              	.LC15:
- 123 00a0 6C696D69 		.ascii	"limit\000"
- 123      7400
- 124 00a6 0000     		.align	2
-ARM GAS  /tmp/ccZvkXpi.s 			page 30
-
-
- 125              	.LC16:
- 126 00a8 25752025 		.ascii	"%u %u\012\000"
- 126      750A00
- 127 00af 00       		.align	2
- 128              	.LC17:
- 129 00b0 3F20636D 		.ascii	"? cmd\000"
- 129      6400
- 130 00b6 0000     		.section	.text.main,"ax",%progbits
- 131              		.align	2
- 132              		.global	main
- 133              		.thumb
- 134              		.thumb_func
- 135              		.type	main, %function
- 136              	main:
- 137              	.LFB35:
- 138              		.file 2 "main.c"
+  77              		.thumb
+  78              		.thumb_func
+  79              		.type	init, %function
+  80              	init:
+  81              	.LFB35:
+  82              		.file 2 "main.c"
    1:main.c        **** #include <string.h>
    2:main.c        **** #include "board.h"
    3:main.c        **** #include "controller.h"
    4:main.c        **** 
+ARM GAS  /tmp/ccrEF6Gk.s 			page 29
+
+
    5:main.c        **** #define match(a, b) (strcmp(a, b) == 0)
    6:main.c        **** 
    7:main.c        **** #define LOOPS 2 
@@ -1775,1132 +1695,1210 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
   16:main.c        **** 	ctrlio_t uinit;
   17:main.c        **** } conf[LOOPS] = {{0,MAX,0,0}};
   18:main.c        **** 
-  19:main.c        **** static void init();
-  20:main.c        **** 
-  21:main.c        **** int main() 
-  22:main.c        **** {
- 139              		.loc 2 22 0
- 140              		.cfi_startproc
- 141              		@ args = 0, pretend = 0, frame = 40
- 142              		@ frame_needed = 1, uses_anonymous_args = 0
- 143 0000 90B5     		push	{r4, r7, lr}
- 144              	.LCFI3:
- 145              		.cfi_def_cfa_offset 12
- 146              		.cfi_offset 14, -4
- 147              		.cfi_offset 7, -8
- 148              		.cfi_offset 4, -12
- 149 0002 8DB0     		sub	sp, sp, #52
- 150              	.LCFI4:
- 151              		.cfi_def_cfa_offset 64
- 152 0004 02AF     		add	r7, sp, #8
- 153              	.LCFI5:
- 154              		.cfi_def_cfa 7, 56
-  23:main.c        **** 	char *line;
-  24:main.c        **** 	char opt[8];
-  25:main.c        **** 	char cmd;
-ARM GAS  /tmp/ccZvkXpi.s 			page 31
-
-
+  19:main.c        **** static void init()
+  20:main.c        **** {
+  83              		.loc 2 20 0
+  84              		.cfi_startproc
+  85              		@ args = 0, pretend = 0, frame = 8
+  86              		@ frame_needed = 1, uses_anonymous_args = 0
+  87 0000 90B5     		push	{r4, r7, lr}
+  88              	.LCFI3:
+  89              		.cfi_def_cfa_offset 12
+  90              		.cfi_offset 14, -4
+  91              		.cfi_offset 7, -8
+  92              		.cfi_offset 4, -12
+  93 0002 85B0     		sub	sp, sp, #20
+  94              	.LCFI4:
+  95              		.cfi_def_cfa_offset 32
+  96 0004 02AF     		add	r7, sp, #8
+  97              	.LCFI5:
+  98              		.cfi_def_cfa 7, 24
+  21:main.c        ****     uint32_t div;
+  22:main.c        ****     uint32_t tcclks;
+  23:main.c        **** 
+  24:main.c        ****     /* Enable peripheral clock. */
+  25:main.c        ****     PMC->PMC_PCER0 = 1 << ID_TC1;
+  99              		.loc 2 25 0
+ 100 0006 4FF48063 		mov	r3, #1024
+ 101 000a C4F20E03 		movt	r3, 16398
+ 102 000e 4FF08072 		mov	r2, #16777216
+ 103 0012 1A61     		str	r2, [r3, #16]
   26:main.c        **** 
-  27:main.c        **** 	int argc;
-  28:main.c        **** 	int argv[3];
-  29:main.c        **** 	unsigned id = 0;
- 155              		.loc 2 29 0
- 156 0006 4FF00003 		mov	r3, #0
- 157 000a 3B62     		str	r3, [r7, #32]
-  30:main.c        **** 
-  31:main.c        **** 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
- 158              		.loc 2 31 0
- 159 000c 40F20003 		movw	r3, #:lower16:_impure_ptr
- 160 0010 C0F20003 		movt	r3, #:upper16:_impure_ptr
- 161 0014 1B68     		ldr	r3, [r3, #0]
- 162 0016 DB68     		ldr	r3, [r3, #12]
- 163 0018 1846     		mov	r0, r3
- 164 001a 40F20001 		movw	r1, #:lower16:.LC0
- 165 001e C0F20001 		movt	r1, #:upper16:.LC0
- 166 0022 4FF03002 		mov	r2, #48
- 167 0026 FFF7FEFF 		bl	fiprintf
-  32:main.c        **** 
-  33:main.c        **** 	/* WDT off */
-  34:main.c        ****     WDT->WDT_MR = WDT_MR_WDDIS;
- 168              		.loc 2 34 0
- 169 002a 41F25043 		movw	r3, #5200
- 170 002e C4F20E03 		movt	r3, 16398
- 171 0032 4FF40042 		mov	r2, #32768
- 172 0036 5A60     		str	r2, [r3, #4]
+  27:main.c        ****     /* Configure TC */
+  28:main.c        ****     TC_FindMckDivisor(SAMPLING_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
+ 104              		.loc 2 28 0
+ 105 0014 07F10402 		add	r2, r7, #4
+ 106 0018 3C46     		mov	r4, r7
+ 107 001a 4FF4D843 		mov	r3, #27648
+ 108 001e C0F2DC23 		movt	r3, 732
+ 109 0022 0093     		str	r3, [sp, #0]
+ 110 0024 4FF00400 		mov	r0, #4
+ 111 0028 4FF4D841 		mov	r1, #27648
+ 112 002c C0F2DC21 		movt	r1, 732
+ 113 0030 2346     		mov	r3, r4
+ 114 0032 FFF7FEFF 		bl	TC_FindMckDivisor
+  29:main.c        ****     TC_Configure(TC1, BLINK_TC, tcclks | TC_CMR_CPCTRG);
+ARM GAS  /tmp/ccrEF6Gk.s 			page 30
+
+
+ 115              		.loc 2 29 0
+ 116 0036 3B68     		ldr	r3, [r7, #0]
+ 117 0038 43F48043 		orr	r3, r3, #16384
+ 118 003c 4FF48040 		mov	r0, #16384
+ 119 0040 C4F20100 		movt	r0, 16385
+ 120 0044 4FF00001 		mov	r1, #0
+ 121 0048 1A46     		mov	r2, r3
+ 122 004a FFF7FEFF 		bl	TC_Configure
+  30:main.c        ****     TC1->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / SAMPLING_FREQ;
+ 123              		.loc 2 30 0
+ 124 004e 4FF48043 		mov	r3, #16384
+ 125 0052 C4F20103 		movt	r3, 16385
+ 126 0056 7968     		ldr	r1, [r7, #4]
+ 127 0058 4FF4D852 		mov	r2, #6912
+ 128 005c C0F2B702 		movt	r2, 183
+ 129 0060 B2FBF1F2 		udiv	r2, r2, r1
+ 130 0064 DA61     		str	r2, [r3, #28]
+  31:main.c        **** 
+  32:main.c        ****     /* Configure and enable interrupt on RC compare */
+  33:main.c        ****     NVIC_EnableIRQ((IRQn_Type) ID_TC1);
+ 131              		.loc 2 33 0
+ 132 0066 4FF01800 		mov	r0, #24
+ 133 006a FFF7FEFF 		bl	NVIC_EnableIRQ
+  34:main.c        ****     TC1->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
+ 134              		.loc 2 34 0
+ 135 006e 4FF48043 		mov	r3, #16384
+ 136 0072 C4F20103 		movt	r3, 16385
+ 137 0076 4FF01002 		mov	r2, #16
+ 138 007a 5A62     		str	r2, [r3, #36]
   35:main.c        **** 
-  36:main.c        **** 	/* configure hardware */
-  37:main.c        **** 	init();
- 173              		.loc 2 37 0
- 174 0038 FFF7FEFF 		bl	init
+  36:main.c        **** 	/* Tick Config */
+  37:main.c        **** 	TimeTick_Configure(BOARD_MCK);
+ 139              		.loc 2 37 0
+ 140 007c 4FF4D840 		mov	r0, #27648
+ 141 0080 C0F2DC20 		movt	r0, 732
+ 142 0084 FFF7FEFF 		bl	TimeTick_Configure
   38:main.c        **** 
-  39:main.c        **** 	TRACE_DEBUG("waiting until USB is fully configured\n");
- 175              		.loc 2 39 0
- 176 003c 40F20003 		movw	r3, #:lower16:_impure_ptr
- 177 0040 C0F20003 		movt	r3, #:upper16:_impure_ptr
- 178 0044 1B68     		ldr	r3, [r3, #0]
- 179 0046 DB68     		ldr	r3, [r3, #12]
- 180 0048 1846     		mov	r0, r3
- 181 004a 40F20001 		movw	r1, #:lower16:.LC1
- 182 004e C0F20001 		movt	r1, #:upper16:.LC1
- 183 0052 FFF7FEFF 		bl	fiprintf
-  40:main.c        **** 	while (!USBC_isConfigured());
- 184              		.loc 2 40 0
- 185 0056 00BF     		nop
- 186              	.L3:
- 187              		.loc 2 40 0 is_stmt 0 discriminator 1
- 188 0058 FFF7FEFF 		bl	USBC_isConfigured
- 189 005c 0346     		mov	r3, r0
- 190 005e 002B     		cmp	r3, #0
- 191 0060 FAD0     		beq	.L3
+  39:main.c        ****     /* Initialize ADC */
+  40:main.c        ****     ADC_Initialize( ADC, ID_ADC );
+ 143              		.loc 2 40 0
+ 144 0088 4FF40040 		mov	r0, #32768
+ 145 008c C4F20300 		movt	r0, 16387
+ 146 0090 4FF01D01 		mov	r1, #29
+ 147 0094 FFF7FEFF 		bl	ADC_Initialize
   41:main.c        **** 
-  42:main.c        **** 	LED_blink(statusled, 5);
- 192              		.loc 2 42 0 is_stmt 1
- 193 0062 4FF00000 		mov	r0, #0
- 194 0066 4FF00501 		mov	r1, #5
-ARM GAS  /tmp/ccZvkXpi.s 			page 32
+  42:main.c        ****     /* startup = 15, prescal = 4, ADC clock = 6.4 MHz */
+  43:main.c        ****     ADC_cfgFrequency( ADC, 15, 4 );
+ 148              		.loc 2 43 0
+ 149 0098 4FF40040 		mov	r0, #32768
+ 150 009c C4F20300 		movt	r0, 16387
+ 151 00a0 4FF00F01 		mov	r1, #15
+ 152 00a4 4FF00402 		mov	r2, #4
+ 153 00a8 FFF7FEFF 		bl	ADC_cfgFrequency
+  44:main.c        **** 
+  45:main.c        ****     /* Enable ADC interrupt */
+  46:main.c        ****     NVIC_EnableIRQ(ADC_IRQn);
+ 154              		.loc 2 46 0
+ARM GAS  /tmp/ccrEF6Gk.s 			page 31
 
 
- 195 006a FFF7FEFF 		bl	LED_blink
-  43:main.c        **** 
-  44:main.c        **** 	setbuf(stdout, NULL);
- 196              		.loc 2 44 0
- 197 006e 40F20003 		movw	r3, #:lower16:_impure_ptr
- 198 0072 C0F20003 		movt	r3, #:upper16:_impure_ptr
- 199 0076 1B68     		ldr	r3, [r3, #0]
- 200 0078 9B68     		ldr	r3, [r3, #8]
- 201 007a 1846     		mov	r0, r3
- 202 007c 4FF00001 		mov	r1, #0
- 203 0080 FFF7FEFF 		bl	setbuf
- 204              	.L34:
-  45:main.c        **** 
-  46:main.c        **** 	while (1) {
-  47:main.c        **** 		if(!USBC_hasData())
- 205              		.loc 2 47 0
- 206 0084 FFF7FEFF 		bl	USBC_hasData
- 207 0088 0346     		mov	r3, r0
- 208 008a 002B     		cmp	r3, #0
- 209 008c 00F02E82 		beq	.L36
- 210              	.L4:
-  48:main.c        **** 			continue;
-  49:main.c        **** 
-  50:main.c        **** 		gets(line);
- 211              		.loc 2 50 0
- 212 0090 786A     		ldr	r0, [r7, #36]
- 213 0092 FFF7FEFF 		bl	gets
-  51:main.c        **** #ifdef ECHO
-  52:main.c        **** 		puts(line);
-  53:main.c        **** #endif
-  54:main.c        **** 		switch ((cmd=*line)) {
- 214              		.loc 2 54 0
- 215 0096 7B6A     		ldr	r3, [r7, #36]
- 216 0098 1B78     		ldrb	r3, [r3, #0]
- 217 009a FB77     		strb	r3, [r7, #31]
- 218 009c FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
- 219 009e A3F16703 		sub	r3, r3, #103
- 220 00a2 0C2B     		cmp	r3, #12
- 221 00a4 00F21B82 		bhi	.L6
- 222 00a8 01A2     		adr	r2, .L9
- 223 00aa 52F823F0 		ldr	pc, [r2, r3, lsl #2]
- 224 00ae 00BF     		.align	2
- 225              	.L9:
- 226 00b0 E5000000 		.word	.L7+1
- 227 00b4 DF040000 		.word	.L6+1
- 228 00b8 DF040000 		.word	.L6+1
- 229 00bc DF040000 		.word	.L6+1
- 230 00c0 DF040000 		.word	.L6+1
- 231 00c4 F1040000 		.word	.L37+1
- 232 00c8 DF040000 		.word	.L6+1
- 233 00cc DF040000 		.word	.L6+1
- 234 00d0 DF040000 		.word	.L6+1
- 235 00d4 DF040000 		.word	.L6+1
- 236 00d8 F1040000 		.word	.L37+1
- 237 00dc DF040000 		.word	.L6+1
- 238 00e0 E5000000 		.word	.L7+1
- 239              	.L7:
-ARM GAS  /tmp/ccZvkXpi.s 			page 33
+ 155 00ac 4FF01D00 		mov	r0, #29
+ 156 00b0 FFF7FEFF 		bl	NVIC_EnableIRQ
+  47:main.c        ****     ADC->ADC_IER = ADC_EOC_IRQS;
+ 157              		.loc 2 47 0
+ 158 00b4 4FF40043 		mov	r3, #32768
+ 159 00b8 C4F20303 		movt	r3, 16387
+ 160 00bc 4FF00302 		mov	r2, #3
+ 161 00c0 5A62     		str	r2, [r3, #36]
+  48:main.c        **** 
+  49:main.c        **** 	/* LED PIO Config */
+  50:main.c        **** 	LEDs_configure();
+ 162              		.loc 2 50 0
+ 163 00c2 FFF7FEFF 		bl	LEDs_configure
+  51:main.c        **** 	LED_clr(statusled);
+ 164              		.loc 2 51 0
+ 165 00c6 4FF00000 		mov	r0, #0
+ 166 00ca FFF7FEFF 		bl	LED_clr
+  52:main.c        **** 
+  53:main.c        **** 	/* USB Console Config */
+  54:main.c        **** 	USBC_Configure();
+ 167              		.loc 2 54 0
+ 168 00ce FFF7FEFF 		bl	USBC_Configure
+  55:main.c        **** 
+  56:main.c        **** }
+ 169              		.loc 2 56 0
+ 170 00d2 07F10C07 		add	r7, r7, #12
+ 171 00d6 BD46     		mov	sp, r7
+ 172 00d8 90BD     		pop	{r4, r7, pc}
+ 173              		.cfi_endproc
+ 174              	.LFE35:
+ 175              		.size	init, .-init
+ 176 00da 00BF     		.section	.rodata
+ 177              		.align	2
+ 178              	.LC0:
+ 179 0000 2D492D20 		.ascii	"-I- Running at %i MHz\012\000"
+ 179      52756E6E 
+ 179      696E6720 
+ 179      61742025 
+ 179      69204D48 
+ 180 0017 00       		.align	2
+ 181              	.LC1:
+ 182 0018 2D442D20 		.ascii	"-D- waiting until USB is fully configured\012\000"
+ 182      77616974 
+ 182      696E6720 
+ 182      756E7469 
+ 182      6C205553 
+ 183 0043 00       		.align	2
+ 184              	.LC2:
+ 185 0044 257300   		.ascii	"%s\000"
+ 186 0047 00       		.align	2
+ 187              	.LC3:
+ 188 0048 3F206964 		.ascii	"? id\000"
+ 188      00
+ 189 004d 000000   		.align	2
+ 190              	.LC4:
+ 191 0050 3F206F70 		.ascii	"? opt\000"
+ 191      7400
+ARM GAS  /tmp/ccrEF6Gk.s 			page 32
 
 
-  55:main.c        **** 			case 's':
-  56:main.c        **** 			case 'g':
-  57:main.c        **** 				// get ID (0-9 for loop setting)
-  58:main.c        **** 				if (line[1]-'0' < LOOPS)
- 240              		.loc 2 58 0
- 241 00e4 7B6A     		ldr	r3, [r7, #36]
- 242 00e6 03F10103 		add	r3, r3, #1
- 243 00ea 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
- 244 00ec A3F13003 		sub	r3, r3, #48
- 245 00f0 012B     		cmp	r3, #1
- 246 00f2 18DC     		bgt	.L10
-  59:main.c        **** 					id = line[1]-'0';
- 247              		.loc 2 59 0
- 248 00f4 7B6A     		ldr	r3, [r7, #36]
- 249 00f6 03F10103 		add	r3, r3, #1
- 250 00fa 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
- 251 00fc A3F13003 		sub	r3, r3, #48
- 252 0100 3B62     		str	r3, [r7, #32]
-  60:main.c        **** 				else {
-  61:main.c        **** 					puts("? id");
-  62:main.c        **** 					break;
-  63:main.c        **** 				}
-  64:main.c        **** 				
-  65:main.c        **** 				line = line+2;
- 253              		.loc 2 65 0
- 254 0102 7B6A     		ldr	r3, [r7, #36]
- 255 0104 03F10203 		add	r3, r3, #2
- 256 0108 7B62     		str	r3, [r7, #36]
-  66:main.c        **** 
-  67:main.c        **** 				// get option (max 7 characters)
-  68:main.c        **** 				if (sscanf(line, "%s", opt) != 1) {
- 257              		.loc 2 68 0
- 258 010a 07F11003 		add	r3, r7, #16
- 259 010e 786A     		ldr	r0, [r7, #36]
- 260 0110 40F20001 		movw	r1, #:lower16:.LC2
- 261 0114 C0F20001 		movt	r1, #:upper16:.LC2
- 262 0118 1A46     		mov	r2, r3
- 263 011a FFF7FEFF 		bl	siscanf
- 264 011e 0346     		mov	r3, r0
- 265 0120 012B     		cmp	r3, #1
- 266 0122 07D1     		bne	.L11
- 267 0124 0DE0     		b	.L35
- 268              	.L10:
-  61:main.c        **** 					puts("? id");
- 269              		.loc 2 61 0
- 270 0126 40F20000 		movw	r0, #:lower16:.LC3
- 271 012a C0F20000 		movt	r0, #:upper16:.LC3
- 272 012e FFF7FEFF 		bl	puts
-  62:main.c        **** 					break;
- 273              		.loc 2 62 0
- 274 0132 DEE1     		b	.L5
- 275              	.L11:
-  69:main.c        **** 					puts("? opt");
- 276              		.loc 2 69 0
- 277 0134 40F20000 		movw	r0, #:lower16:.LC4
- 278 0138 C0F20000 		movt	r0, #:upper16:.LC4
- 279 013c FFF7FEFF 		bl	puts
-ARM GAS  /tmp/ccZvkXpi.s 			page 34
+ 192 0056 0000     		.align	2
+ 193              	.LC5:
+ 194 0058 25692569 		.ascii	"%i%i%i\000"
+ 194      256900
+ 195 005f 00       		.align	2
+ 196              	.LC6:
+ 197 0060 6D6F6465 		.ascii	"mode\000"
+ 197      00
+ 198 0065 000000   		.align	2
+ 199              	.LC7:
+ 200 0068 3F206172 		.ascii	"? arg\000"
+ 200      6700
+ 201 006e 0000     		.align	2
+ 202              	.LC8:
+ 203 0070 25750A00 		.ascii	"%u\012\000"
+ 204              		.align	2
+ 205              	.LC9:
+ 206 0074 737000   		.ascii	"sp\000"
+ 207 0077 00       		.align	2
+ 208              	.LC10:
+ 209 0078 707600   		.ascii	"pv\000"
+ 210 007b 00       		.align	2
+ 211              	.LC11:
+ 212 007c 3F207265 		.ascii	"? read-only\000"
+ 212      61642D6F 
+ 212      6E6C7900 
+ 213              		.align	2
+ 214              	.LC12:
+ 215 0088 6572726F 		.ascii	"error\000"
+ 215      7200
+ 216 008e 0000     		.align	2
+ 217              	.LC13:
+ 218 0090 6B00     		.ascii	"k\000"
+ 219 0092 0000     		.align	2
+ 220              	.LC14:
+ 221 0094 25752025 		.ascii	"%u %u %u\012\000"
+ 221      75202575 
+ 221      0A00
+ 222 009e 0000     		.align	2
+ 223              	.LC15:
+ 224 00a0 6C696D69 		.ascii	"limit\000"
+ 224      7400
+ 225 00a6 0000     		.align	2
+ 226              	.LC16:
+ 227 00a8 25752025 		.ascii	"%u %u\012\000"
+ 227      750A00
+ 228 00af 00       		.align	2
+ 229              	.LC17:
+ 230 00b0 3F20636D 		.ascii	"? cmd\000"
+ 230      6400
+ 231 00b6 0000     		.section	.text.main,"ax",%progbits
+ 232              		.align	2
+ 233              		.global	main
+ 234              		.thumb
+ 235              		.thumb_func
+ 236              		.type	main, %function
+ 237              	main:
+ARM GAS  /tmp/ccrEF6Gk.s 			page 33
 
 
-  70:main.c        **** 					break;
- 280              		.loc 2 70 0
- 281 0140 D7E1     		b	.L5
- 282              	.L35:
-  71:main.c        **** 				}
+ 238              	.LFB36:
+  57:main.c        **** 
+  58:main.c        **** int main() 
+  59:main.c        **** {
+ 239              		.loc 2 59 0
+ 240              		.cfi_startproc
+ 241              		@ args = 0, pretend = 0, frame = 40
+ 242              		@ frame_needed = 1, uses_anonymous_args = 0
+ 243 0000 90B5     		push	{r4, r7, lr}
+ 244              	.LCFI6:
+ 245              		.cfi_def_cfa_offset 12
+ 246              		.cfi_offset 14, -4
+ 247              		.cfi_offset 7, -8
+ 248              		.cfi_offset 4, -12
+ 249 0002 8DB0     		sub	sp, sp, #52
+ 250              	.LCFI7:
+ 251              		.cfi_def_cfa_offset 64
+ 252 0004 02AF     		add	r7, sp, #8
+ 253              	.LCFI8:
+ 254              		.cfi_def_cfa 7, 56
+  60:main.c        **** 	char *line;
+  61:main.c        **** 	char opt[8];
+  62:main.c        **** 	char cmd;
+  63:main.c        **** 
+  64:main.c        **** 	int argc;
+  65:main.c        **** 	int argv[3];
+  66:main.c        **** 	unsigned id = 0;
+ 255              		.loc 2 66 0
+ 256 0006 4FF00003 		mov	r3, #0
+ 257 000a 3B62     		str	r3, [r7, #32]
+  67:main.c        **** 
+  68:main.c        **** 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
+ 258              		.loc 2 68 0
+ 259 000c 40F20003 		movw	r3, #:lower16:_impure_ptr
+ 260 0010 C0F20003 		movt	r3, #:upper16:_impure_ptr
+ 261 0014 1B68     		ldr	r3, [r3, #0]
+ 262 0016 DB68     		ldr	r3, [r3, #12]
+ 263 0018 1846     		mov	r0, r3
+ 264 001a 40F20001 		movw	r1, #:lower16:.LC0
+ 265 001e C0F20001 		movt	r1, #:upper16:.LC0
+ 266 0022 4FF03002 		mov	r2, #48
+ 267 0026 FFF7FEFF 		bl	fiprintf
+  69:main.c        **** 
+  70:main.c        **** 	/* WDT off */
+  71:main.c        ****     WDT->WDT_MR = WDT_MR_WDDIS;
+ 268              		.loc 2 71 0
+ 269 002a 41F25043 		movw	r3, #5200
+ 270 002e C4F20E03 		movt	r3, 16398
+ 271 0032 4FF40042 		mov	r2, #32768
+ 272 0036 5A60     		str	r2, [r3, #4]
   72:main.c        **** 
-  73:main.c        **** 				// get arguments (3)
-  74:main.c        **** 				argc = sscanf(line, "%i%i%i", argv, argv+1, argv+2);
- 283              		.loc 2 74 0
- 284 0142 07F10402 		add	r2, r7, #4
- 285 0146 07F10403 		add	r3, r7, #4
- 286 014a 03F10403 		add	r3, r3, #4
- 287 014e 07F10401 		add	r1, r7, #4
- 288 0152 01F10801 		add	r1, r1, #8
- 289 0156 0091     		str	r1, [sp, #0]
- 290 0158 786A     		ldr	r0, [r7, #36]
- 291 015a 40F20001 		movw	r1, #:lower16:.LC5
- 292 015e C0F20001 		movt	r1, #:upper16:.LC5
- 293 0162 FFF7FEFF 		bl	siscanf
- 294 0166 B861     		str	r0, [r7, #24]
+  73:main.c        **** 	/* configure hardware */
+  74:main.c        **** 	init();
+ 273              		.loc 2 74 0
+ 274 0038 FFF7FEFF 		bl	init
   75:main.c        **** 
-  76:main.c        **** 				// check option
-  77:main.c        **** 				if (match("mode", opt)) {
- 295              		.loc 2 77 0
- 296 0168 07F11003 		add	r3, r7, #16
- 297 016c 40F20000 		movw	r0, #:lower16:.LC6
- 298 0170 C0F20000 		movt	r0, #:upper16:.LC6
- 299 0174 1946     		mov	r1, r3
- 300 0176 FFF7FEFF 		bl	strcmp
- 301 017a 0346     		mov	r3, r0
- 302 017c 002B     		cmp	r3, #0
- 303 017e 38D1     		bne	.L13
-  78:main.c        **** 					if (cmd == 's') {
- 304              		.loc 2 78 0
- 305 0180 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
- 306 0182 732B     		cmp	r3, #115
- 307 0184 22D1     		bne	.L14
-  79:main.c        **** 						if (argc < 1) {
- 308              		.loc 2 79 0
- 309 0186 BB69     		ldr	r3, [r7, #24]
- 310 0188 002B     		cmp	r3, #0
- 311 018a 06DC     		bgt	.L15
-  80:main.c        **** 							puts("? arg");
- 312              		.loc 2 80 0
- 313 018c 40F20000 		movw	r0, #:lower16:.LC7
- 314 0190 C0F20000 		movt	r0, #:upper16:.LC7
- 315 0194 FFF7FEFF 		bl	puts
-  81:main.c        **** 							break;
- 316              		.loc 2 81 0
- 317 0198 ABE1     		b	.L5
- 318              	.L15:
-  82:main.c        **** 						}
-  83:main.c        **** 						if (*argv > STOP || *argv < OFF)
- 319              		.loc 2 83 0
- 320 019a 7B68     		ldr	r3, [r7, #4]
- 321 019c 032B     		cmp	r3, #3
- 322 019e 02DC     		bgt	.L16
-ARM GAS  /tmp/ccZvkXpi.s 			page 35
+  76:main.c        **** 	TRACE_DEBUG("waiting until USB is fully configured\n");
+ARM GAS  /tmp/ccrEF6Gk.s 			page 34
 
 
- 323              		.loc 2 83 0 is_stmt 0 discriminator 1
- 324 01a0 7B68     		ldr	r3, [r7, #4]
- 325 01a2 002B     		cmp	r3, #0
- 326 01a4 02DA     		bge	.L17
- 327              	.L16:
-  84:main.c        **** 							*argv = OFF;				
- 328              		.loc 2 84 0 is_stmt 1
- 329 01a6 4FF00003 		mov	r3, #0
- 330 01aa 7B60     		str	r3, [r7, #4]
- 331              	.L17:
-  85:main.c        **** 						mode(*argv, &loops[id]);
- 332              		.loc 2 85 0
- 333 01ac 7B68     		ldr	r3, [r7, #4]
- 334 01ae DAB2     		uxtb	r2, r3
- 335 01b0 3B6A     		ldr	r3, [r7, #32]
- 336 01b2 4FF02C01 		mov	r1, #44
- 337 01b6 01FB03F1 		mul	r1, r1, r3
- 338 01ba 40F20003 		movw	r3, #:lower16:loops
- 339 01be C0F20003 		movt	r3, #:upper16:loops
- 340 01c2 CB18     		adds	r3, r1, r3
- 341 01c4 1046     		mov	r0, r2
- 342 01c6 1946     		mov	r1, r3
- 343 01c8 FFF7FEFF 		bl	mode
- 344              	.L14:
-  86:main.c        **** 					}
-  87:main.c        **** 					printf("%u\n", loops[id].mode);
- 345              		.loc 2 87 0
- 346 01cc 40F20003 		movw	r3, #:lower16:loops
- 347 01d0 C0F20003 		movt	r3, #:upper16:loops
- 348 01d4 3A6A     		ldr	r2, [r7, #32]
- 349 01d6 4FF02C01 		mov	r1, #44
- 350 01da 01FB02F2 		mul	r2, r1, r2
- 351 01de 9B18     		adds	r3, r3, r2
- 352 01e0 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
- 353 01e2 40F20000 		movw	r0, #:lower16:.LC8
- 354 01e6 C0F20000 		movt	r0, #:upper16:.LC8
- 355 01ea 1946     		mov	r1, r3
- 356 01ec FFF7FEFF 		bl	iprintf
- 357 01f0 1FE1     		b	.L18
- 358              	.L13:
-  88:main.c        **** 				}
-  89:main.c        **** 				else if (match("sp", opt)) {
- 359              		.loc 2 89 0
- 360 01f2 07F11003 		add	r3, r7, #16
- 361 01f6 40F20000 		movw	r0, #:lower16:.LC9
- 362 01fa C0F20000 		movt	r0, #:upper16:.LC9
- 363 01fe 1946     		mov	r1, r3
- 364 0200 FFF7FEFF 		bl	strcmp
- 365 0204 0346     		mov	r3, r0
- 366 0206 002B     		cmp	r3, #0
- 367 0208 4AD1     		bne	.L19
-  90:main.c        **** 					if (cmd == 's') {
- 368              		.loc 2 90 0
- 369 020a FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
- 370 020c 732B     		cmp	r3, #115
- 371 020e 34D1     		bne	.L20
-  91:main.c        **** 						if (argc < 1) {
-ARM GAS  /tmp/ccZvkXpi.s 			page 36
+ 275              		.loc 2 76 0
+ 276 003c 40F20003 		movw	r3, #:lower16:_impure_ptr
+ 277 0040 C0F20003 		movt	r3, #:upper16:_impure_ptr
+ 278 0044 1B68     		ldr	r3, [r3, #0]
+ 279 0046 DB68     		ldr	r3, [r3, #12]
+ 280 0048 1846     		mov	r0, r3
+ 281 004a 40F20001 		movw	r1, #:lower16:.LC1
+ 282 004e C0F20001 		movt	r1, #:upper16:.LC1
+ 283 0052 FFF7FEFF 		bl	fiprintf
+  77:main.c        **** 	while (!USBC_isConfigured());
+ 284              		.loc 2 77 0
+ 285 0056 00BF     		nop
+ 286              	.L4:
+ 287              		.loc 2 77 0 is_stmt 0 discriminator 1
+ 288 0058 FFF7FEFF 		bl	USBC_isConfigured
+ 289 005c 0346     		mov	r3, r0
+ 290 005e 002B     		cmp	r3, #0
+ 291 0060 FAD0     		beq	.L4
+  78:main.c        **** 
+  79:main.c        **** 	LED_blink(statusled, 5);
+ 292              		.loc 2 79 0 is_stmt 1
+ 293 0062 4FF00000 		mov	r0, #0
+ 294 0066 4FF00501 		mov	r1, #5
+ 295 006a FFF7FEFF 		bl	LED_blink
+  80:main.c        **** 
+  81:main.c        **** 	setbuf(stdout, NULL);
+ 296              		.loc 2 81 0
+ 297 006e 40F20003 		movw	r3, #:lower16:_impure_ptr
+ 298 0072 C0F20003 		movt	r3, #:upper16:_impure_ptr
+ 299 0076 1B68     		ldr	r3, [r3, #0]
+ 300 0078 9B68     		ldr	r3, [r3, #8]
+ 301 007a 1846     		mov	r0, r3
+ 302 007c 4FF00001 		mov	r1, #0
+ 303 0080 FFF7FEFF 		bl	setbuf
+ 304              	.L35:
+  82:main.c        **** 
+  83:main.c        **** 	while (1) {
+  84:main.c        **** 		if(!USBC_hasData())
+ 305              		.loc 2 84 0
+ 306 0084 FFF7FEFF 		bl	USBC_hasData
+ 307 0088 0346     		mov	r3, r0
+ 308 008a 002B     		cmp	r3, #0
+ 309 008c 00F02E82 		beq	.L37
+ 310              	.L5:
+  85:main.c        **** 			continue;
+  86:main.c        **** 
+  87:main.c        **** 		gets(line);
+ 311              		.loc 2 87 0
+ 312 0090 786A     		ldr	r0, [r7, #36]
+ 313 0092 FFF7FEFF 		bl	gets
+  88:main.c        **** #ifdef ECHO
+  89:main.c        **** 		puts(line);
+  90:main.c        **** #endif
+  91:main.c        **** 		switch ((cmd=*line)) {
+ 314              		.loc 2 91 0
+ 315 0096 7B6A     		ldr	r3, [r7, #36]
+ 316 0098 1B78     		ldrb	r3, [r3, #0]
+ARM GAS  /tmp/ccrEF6Gk.s 			page 35
 
 
- 372              		.loc 2 91 0
- 373 0210 BB69     		ldr	r3, [r7, #24]
- 374 0212 002B     		cmp	r3, #0
- 375 0214 06DC     		bgt	.L21
-  92:main.c        **** 							puts("? arg");
- 376              		.loc 2 92 0
- 377 0216 40F20000 		movw	r0, #:lower16:.LC7
- 378 021a C0F20000 		movt	r0, #:upper16:.LC7
- 379 021e FFF7FEFF 		bl	puts
-  93:main.c        **** 							break;
- 380              		.loc 2 93 0
- 381 0222 66E1     		b	.L5
- 382              	.L21:
-  94:main.c        **** 						}
-  95:main.c        **** 						loops[id].SP = LIMIT(*argv, conf[id].min, conf[id].max);
- 383              		.loc 2 95 0
- 384 0224 7A68     		ldr	r2, [r7, #4]
- 385 0226 40F20003 		movw	r3, #:lower16:conf
- 386 022a C0F20003 		movt	r3, #:upper16:conf
- 387 022e 396A     		ldr	r1, [r7, #32]
- 388 0230 33F83130 		ldrh	r3, [r3, r1, lsl #3]
- 389 0234 9A42     		cmp	r2, r3
- 390 0236 07DA     		bge	.L22
- 391              		.loc 2 95 0 is_stmt 0 discriminator 1
- 392 0238 40F20003 		movw	r3, #:lower16:conf
- 393 023c C0F20003 		movt	r3, #:upper16:conf
- 394 0240 3A6A     		ldr	r2, [r7, #32]
- 395 0242 33F83220 		ldrh	r2, [r3, r2, lsl #3]
- 396 0246 0DE0     		b	.L23
- 397              	.L22:
- 398              		.loc 2 95 0 discriminator 2
- 399 0248 7968     		ldr	r1, [r7, #4]
- 400 024a 40F20002 		movw	r2, #:lower16:conf
- 401 024e C0F20002 		movt	r2, #:upper16:conf
- 402 0252 3B6A     		ldr	r3, [r7, #32]
- 403 0254 4FEAC303 		lsl	r3, r3, #3
- 404 0258 D318     		adds	r3, r2, r3
- 405 025a 5B88     		ldrh	r3, [r3, #2]
- 406 025c 9942     		cmp	r1, r3
- 407 025e B8BF     		it	lt
- 408 0260 0B46     		movlt	r3, r1
- 409 0262 9AB2     		uxth	r2, r3
- 410              	.L23:
- 411              		.loc 2 95 0 discriminator 3
- 412 0264 40F20003 		movw	r3, #:lower16:loops
- 413 0268 C0F20003 		movt	r3, #:upper16:loops
- 414 026c 396A     		ldr	r1, [r7, #32]
- 415 026e 4FF02C00 		mov	r0, #44
- 416 0272 00FB01F1 		mul	r1, r0, r1
- 417 0276 5B18     		adds	r3, r3, r1
- 418 0278 5A80     		strh	r2, [r3, #2]	@ movhi
- 419              	.L20:
-  96:main.c        **** 					}
-  97:main.c        **** 					printf("%u\n", loops[id].SP);
- 420              		.loc 2 97 0 is_stmt 1
- 421 027a 40F20003 		movw	r3, #:lower16:loops
- 422 027e C0F20003 		movt	r3, #:upper16:loops
-ARM GAS  /tmp/ccZvkXpi.s 			page 37
+ 317 009a FB77     		strb	r3, [r7, #31]
+ 318 009c FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
+ 319 009e A3F16703 		sub	r3, r3, #103
+ 320 00a2 0C2B     		cmp	r3, #12
+ 321 00a4 00F21B82 		bhi	.L7
+ 322 00a8 01A2     		adr	r2, .L10
+ 323 00aa 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 324 00ae 00BF     		.align	2
+ 325              	.L10:
+ 326 00b0 E5000000 		.word	.L8+1
+ 327 00b4 DF040000 		.word	.L7+1
+ 328 00b8 DF040000 		.word	.L7+1
+ 329 00bc DF040000 		.word	.L7+1
+ 330 00c0 DF040000 		.word	.L7+1
+ 331 00c4 F1040000 		.word	.L38+1
+ 332 00c8 DF040000 		.word	.L7+1
+ 333 00cc DF040000 		.word	.L7+1
+ 334 00d0 DF040000 		.word	.L7+1
+ 335 00d4 DF040000 		.word	.L7+1
+ 336 00d8 F1040000 		.word	.L38+1
+ 337 00dc DF040000 		.word	.L7+1
+ 338 00e0 E5000000 		.word	.L8+1
+ 339              	.L8:
+  92:main.c        **** 			case 's':
+  93:main.c        **** 			case 'g':
+  94:main.c        **** 				// get ID (0-9 for loop setting)
+  95:main.c        **** 				if (line[1]-'0' < LOOPS)
+ 340              		.loc 2 95 0
+ 341 00e4 7B6A     		ldr	r3, [r7, #36]
+ 342 00e6 03F10103 		add	r3, r3, #1
+ 343 00ea 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 344 00ec A3F13003 		sub	r3, r3, #48
+ 345 00f0 012B     		cmp	r3, #1
+ 346 00f2 18DC     		bgt	.L11
+  96:main.c        **** 					id = line[1]-'0';
+ 347              		.loc 2 96 0
+ 348 00f4 7B6A     		ldr	r3, [r7, #36]
+ 349 00f6 03F10103 		add	r3, r3, #1
+ 350 00fa 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 351 00fc A3F13003 		sub	r3, r3, #48
+ 352 0100 3B62     		str	r3, [r7, #32]
+  97:main.c        **** 				else {
+  98:main.c        **** 					puts("? id");
+  99:main.c        **** 					break;
+ 100:main.c        **** 				}
+ 101:main.c        **** 				
+ 102:main.c        **** 				line = line+2;
+ 353              		.loc 2 102 0
+ 354 0102 7B6A     		ldr	r3, [r7, #36]
+ 355 0104 03F10203 		add	r3, r3, #2
+ 356 0108 7B62     		str	r3, [r7, #36]
+ 103:main.c        **** 
+ 104:main.c        **** 				// get option (max 7 characters)
+ 105:main.c        **** 				if (sscanf(line, "%s", opt) != 1) {
+ 357              		.loc 2 105 0
+ 358 010a 07F11003 		add	r3, r7, #16
+ 359 010e 786A     		ldr	r0, [r7, #36]
+ARM GAS  /tmp/ccrEF6Gk.s 			page 36
 
 
- 423 0282 3A6A     		ldr	r2, [r7, #32]
- 424 0284 4FF02C01 		mov	r1, #44
- 425 0288 01FB02F2 		mul	r2, r1, r2
- 426 028c 9B18     		adds	r3, r3, r2
- 427 028e 5B88     		ldrh	r3, [r3, #2]
- 428 0290 40F20000 		movw	r0, #:lower16:.LC8
- 429 0294 C0F20000 		movt	r0, #:upper16:.LC8
- 430 0298 1946     		mov	r1, r3
- 431 029a FFF7FEFF 		bl	iprintf
- 432 029e C8E0     		b	.L18
- 433              	.L19:
-  98:main.c        **** 				}
-  99:main.c        **** 				else if (match("pv", opt)) {
- 434              		.loc 2 99 0
- 435 02a0 07F11003 		add	r3, r7, #16
- 436 02a4 40F20000 		movw	r0, #:lower16:.LC10
- 437 02a8 C0F20000 		movt	r0, #:upper16:.LC10
- 438 02ac 1946     		mov	r1, r3
- 439 02ae FFF7FEFF 		bl	strcmp
- 440 02b2 0346     		mov	r3, r0
- 441 02b4 002B     		cmp	r3, #0
- 442 02b6 1DD1     		bne	.L24
- 100:main.c        **** 					if (cmd == 's')
- 443              		.loc 2 100 0
- 444 02b8 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
- 445 02ba 732B     		cmp	r3, #115
- 446 02bc 05D1     		bne	.L25
- 101:main.c        **** 						puts("? read-only");
- 447              		.loc 2 101 0
- 448 02be 40F20000 		movw	r0, #:lower16:.LC11
- 449 02c2 C0F20000 		movt	r0, #:upper16:.LC11
- 450 02c6 FFF7FEFF 		bl	puts
- 451              	.L25:
- 102:main.c        **** 					printf("%u\n", loops[id]._x);
- 452              		.loc 2 102 0
- 453 02ca 40F20003 		movw	r3, #:lower16:loops
- 454 02ce C0F20003 		movt	r3, #:upper16:loops
- 455 02d2 3A6A     		ldr	r2, [r7, #32]
- 456 02d4 4FF02C01 		mov	r1, #44
- 457 02d8 01FB02F2 		mul	r2, r1, r2
- 458 02dc 9B18     		adds	r3, r3, r2
- 459 02de 03F12003 		add	r3, r3, #32
- 460 02e2 9B88     		ldrh	r3, [r3, #4]
- 461 02e4 40F20000 		movw	r0, #:lower16:.LC8
- 462 02e8 C0F20000 		movt	r0, #:upper16:.LC8
- 463 02ec 1946     		mov	r1, r3
- 464 02ee FFF7FEFF 		bl	iprintf
- 465 02f2 9EE0     		b	.L18
- 466              	.L24:
- 103:main.c        **** 				}
- 104:main.c        **** 				else if (match("error", opt)) {
- 467              		.loc 2 104 0
- 468 02f4 07F11003 		add	r3, r7, #16
- 469 02f8 40F20000 		movw	r0, #:lower16:.LC12
- 470 02fc C0F20000 		movt	r0, #:upper16:.LC12
- 471 0300 1946     		mov	r1, r3
- 472 0302 FFF7FEFF 		bl	strcmp
-ARM GAS  /tmp/ccZvkXpi.s 			page 38
-
-
- 473 0306 0346     		mov	r3, r0
- 474 0308 002B     		cmp	r3, #0
- 475 030a 1DD1     		bne	.L26
- 105:main.c        **** 					if (cmd == 's')
- 476              		.loc 2 105 0
- 477 030c FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
- 478 030e 732B     		cmp	r3, #115
- 479 0310 05D1     		bne	.L27
- 106:main.c        **** 						puts("? read-only");
- 480              		.loc 2 106 0
- 481 0312 40F20000 		movw	r0, #:lower16:.LC11
- 482 0316 C0F20000 		movt	r0, #:upper16:.LC11
- 483 031a FFF7FEFF 		bl	puts
- 484              	.L27:
- 107:main.c        **** 					printf("%u\n", loops[id]._e);
- 485              		.loc 2 107 0
- 486 031e 40F20003 		movw	r3, #:lower16:loops
- 487 0322 C0F20003 		movt	r3, #:upper16:loops
- 488 0326 3A6A     		ldr	r2, [r7, #32]
- 489 0328 4FF02C01 		mov	r1, #44
- 490 032c 01FB02F2 		mul	r2, r1, r2
- 491 0330 9B18     		adds	r3, r3, r2
- 492 0332 03F11403 		add	r3, r3, #20
- 493 0336 1B68     		ldr	r3, [r3, #0]
- 494 0338 40F20000 		movw	r0, #:lower16:.LC8
- 495 033c C0F20000 		movt	r0, #:upper16:.LC8
- 496 0340 1946     		mov	r1, r3
- 497 0342 FFF7FEFF 		bl	iprintf
- 498 0346 74E0     		b	.L18
- 499              	.L26:
+ 360 0110 40F20001 		movw	r1, #:lower16:.LC2
+ 361 0114 C0F20001 		movt	r1, #:upper16:.LC2
+ 362 0118 1A46     		mov	r2, r3
+ 363 011a FFF7FEFF 		bl	siscanf
+ 364 011e 0346     		mov	r3, r0
+ 365 0120 012B     		cmp	r3, #1
+ 366 0122 07D1     		bne	.L12
+ 367 0124 0DE0     		b	.L36
+ 368              	.L11:
+  98:main.c        **** 					puts("? id");
+ 369              		.loc 2 98 0
+ 370 0126 40F20000 		movw	r0, #:lower16:.LC3
+ 371 012a C0F20000 		movt	r0, #:upper16:.LC3
+ 372 012e FFF7FEFF 		bl	puts
+  99:main.c        **** 					break;
+ 373              		.loc 2 99 0
+ 374 0132 DEE1     		b	.L6
+ 375              	.L12:
+ 106:main.c        **** 					puts("? opt");
+ 376              		.loc 2 106 0
+ 377 0134 40F20000 		movw	r0, #:lower16:.LC4
+ 378 0138 C0F20000 		movt	r0, #:upper16:.LC4
+ 379 013c FFF7FEFF 		bl	puts
+ 107:main.c        **** 					break;
+ 380              		.loc 2 107 0
+ 381 0140 D7E1     		b	.L6
+ 382              	.L36:
  108:main.c        **** 				}
- 109:main.c        **** 				else if (match("k", opt)) {
- 500              		.loc 2 109 0
- 501 0348 07F11003 		add	r3, r7, #16
- 502 034c 40F20000 		movw	r0, #:lower16:.LC13
- 503 0350 C0F20000 		movt	r0, #:upper16:.LC13
- 504 0354 1946     		mov	r1, r3
- 505 0356 FFF7FEFF 		bl	strcmp
- 506 035a 0346     		mov	r3, r0
- 507 035c 002B     		cmp	r3, #0
- 508 035e 68D1     		bne	.L18
- 110:main.c        **** 					if (cmd == 's') {
- 509              		.loc 2 110 0
- 510 0360 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
- 511 0362 732B     		cmp	r3, #115
- 512 0364 36D1     		bne	.L28
- 111:main.c        **** 						if (argc < 3) {
- 513              		.loc 2 111 0
- 514 0366 BB69     		ldr	r3, [r7, #24]
- 515 0368 022B     		cmp	r3, #2
- 516 036a 06DC     		bgt	.L29
- 112:main.c        **** 							puts("? arg");
- 517              		.loc 2 112 0
- 518 036c 40F20000 		movw	r0, #:lower16:.LC7
- 519 0370 C0F20000 		movt	r0, #:upper16:.LC7
- 520 0374 FFF7FEFF 		bl	puts
- 113:main.c        **** 							break;
-ARM GAS  /tmp/ccZvkXpi.s 			page 39
+ 109:main.c        **** 
+ 110:main.c        **** 				// get arguments (3)
+ 111:main.c        **** 				argc = sscanf(line, "%i%i%i", argv, argv+1, argv+2);
+ 383              		.loc 2 111 0
+ 384 0142 07F10402 		add	r2, r7, #4
+ 385 0146 07F10403 		add	r3, r7, #4
+ 386 014a 03F10403 		add	r3, r3, #4
+ 387 014e 07F10401 		add	r1, r7, #4
+ 388 0152 01F10801 		add	r1, r1, #8
+ 389 0156 0091     		str	r1, [sp, #0]
+ 390 0158 786A     		ldr	r0, [r7, #36]
+ 391 015a 40F20001 		movw	r1, #:lower16:.LC5
+ 392 015e C0F20001 		movt	r1, #:upper16:.LC5
+ 393 0162 FFF7FEFF 		bl	siscanf
+ 394 0166 B861     		str	r0, [r7, #24]
+ 112:main.c        **** 
+ 113:main.c        **** 				// check option
+ 114:main.c        **** 				if (match("mode", opt)) {
+ 395              		.loc 2 114 0
+ 396 0168 07F11003 		add	r3, r7, #16
+ 397 016c 40F20000 		movw	r0, #:lower16:.LC6
+ 398 0170 C0F20000 		movt	r0, #:upper16:.LC6
+ 399 0174 1946     		mov	r1, r3
+ 400 0176 FFF7FEFF 		bl	strcmp
+ 401 017a 0346     		mov	r3, r0
+ 402 017c 002B     		cmp	r3, #0
+ 403 017e 38D1     		bne	.L14
+ 115:main.c        **** 					if (cmd == 's') {
+ 404              		.loc 2 115 0
+ARM GAS  /tmp/ccrEF6Gk.s 			page 37
 
 
- 521              		.loc 2 113 0
- 522 0378 BBE0     		b	.L5
- 523              	.L29:
- 114:main.c        **** 						}
- 115:main.c        **** 						loops[id].Kp = argv[0];
- 524              		.loc 2 115 0
- 525 037a 7B68     		ldr	r3, [r7, #4]
- 526 037c 9AB2     		uxth	r2, r3
- 527 037e 40F20003 		movw	r3, #:lower16:loops
- 528 0382 C0F20003 		movt	r3, #:upper16:loops
- 529 0386 396A     		ldr	r1, [r7, #32]
- 530 0388 4FF02C00 		mov	r0, #44
- 531 038c 00FB01F1 		mul	r1, r0, r1
- 532 0390 5B18     		adds	r3, r3, r1
- 533 0392 03F10803 		add	r3, r3, #8
- 534 0396 9A80     		strh	r2, [r3, #4]	@ movhi
- 116:main.c        **** 						loops[id].Ki = argv[1];
- 535              		.loc 2 116 0
- 536 0398 BB68     		ldr	r3, [r7, #8]
- 537 039a 9AB2     		uxth	r2, r3
- 538 039c 40F20003 		movw	r3, #:lower16:loops
- 539 03a0 C0F20003 		movt	r3, #:upper16:loops
- 540 03a4 396A     		ldr	r1, [r7, #32]
- 541 03a6 4FF02C00 		mov	r0, #44
- 542 03aa 00FB01F1 		mul	r1, r0, r1
- 543 03ae 5B18     		adds	r3, r3, r1
- 544 03b0 03F10803 		add	r3, r3, #8
- 545 03b4 DA80     		strh	r2, [r3, #6]	@ movhi
- 117:main.c        **** 						loops[id].Kd = argv[2];
- 546              		.loc 2 117 0
- 547 03b6 FB68     		ldr	r3, [r7, #12]
- 548 03b8 9AB2     		uxth	r2, r3
- 549 03ba 40F20003 		movw	r3, #:lower16:loops
- 550 03be C0F20003 		movt	r3, #:upper16:loops
- 551 03c2 396A     		ldr	r1, [r7, #32]
- 552 03c4 4FF02C00 		mov	r0, #44
- 553 03c8 00FB01F1 		mul	r1, r0, r1
- 554 03cc 5B18     		adds	r3, r3, r1
- 555 03ce 03F11003 		add	r3, r3, #16
- 556 03d2 1A80     		strh	r2, [r3, #0]	@ movhi
- 557              	.L28:
- 118:main.c        **** 					}
- 119:main.c        **** 					printf("%u %u %u\n", loops[id].Kp, loops[id].Ki, loops[id].Kd);
- 558              		.loc 2 119 0
- 559 03d4 40F20003 		movw	r3, #:lower16:loops
- 560 03d8 C0F20003 		movt	r3, #:upper16:loops
- 561 03dc 3A6A     		ldr	r2, [r7, #32]
- 562 03de 4FF02C01 		mov	r1, #44
- 563 03e2 01FB02F2 		mul	r2, r1, r2
- 564 03e6 9B18     		adds	r3, r3, r2
- 565 03e8 03F10803 		add	r3, r3, #8
- 566 03ec 9B88     		ldrh	r3, [r3, #4]
- 567 03ee 1946     		mov	r1, r3
- 568 03f0 40F20003 		movw	r3, #:lower16:loops
- 569 03f4 C0F20003 		movt	r3, #:upper16:loops
- 570 03f8 3A6A     		ldr	r2, [r7, #32]
- 571 03fa 4FF02C00 		mov	r0, #44
-ARM GAS  /tmp/ccZvkXpi.s 			page 40
+ 405 0180 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
+ 406 0182 732B     		cmp	r3, #115
+ 407 0184 22D1     		bne	.L15
+ 116:main.c        **** 						if (argc < 1) {
+ 408              		.loc 2 116 0
+ 409 0186 BB69     		ldr	r3, [r7, #24]
+ 410 0188 002B     		cmp	r3, #0
+ 411 018a 06DC     		bgt	.L16
+ 117:main.c        **** 							puts("? arg");
+ 412              		.loc 2 117 0
+ 413 018c 40F20000 		movw	r0, #:lower16:.LC7
+ 414 0190 C0F20000 		movt	r0, #:upper16:.LC7
+ 415 0194 FFF7FEFF 		bl	puts
+ 118:main.c        **** 							break;
+ 416              		.loc 2 118 0
+ 417 0198 ABE1     		b	.L6
+ 418              	.L16:
+ 119:main.c        **** 						}
+ 120:main.c        **** 						if (*argv > STOP || *argv < OFF)
+ 419              		.loc 2 120 0
+ 420 019a 7B68     		ldr	r3, [r7, #4]
+ 421 019c 032B     		cmp	r3, #3
+ 422 019e 02DC     		bgt	.L17
+ 423              		.loc 2 120 0 is_stmt 0 discriminator 1
+ 424 01a0 7B68     		ldr	r3, [r7, #4]
+ 425 01a2 002B     		cmp	r3, #0
+ 426 01a4 02DA     		bge	.L18
+ 427              	.L17:
+ 121:main.c        **** 							*argv = OFF;				
+ 428              		.loc 2 121 0 is_stmt 1
+ 429 01a6 4FF00003 		mov	r3, #0
+ 430 01aa 7B60     		str	r3, [r7, #4]
+ 431              	.L18:
+ 122:main.c        **** 						mode(*argv, &loops[id]);
+ 432              		.loc 2 122 0
+ 433 01ac 7B68     		ldr	r3, [r7, #4]
+ 434 01ae DAB2     		uxtb	r2, r3
+ 435 01b0 3B6A     		ldr	r3, [r7, #32]
+ 436 01b2 4FF02C01 		mov	r1, #44
+ 437 01b6 01FB03F1 		mul	r1, r1, r3
+ 438 01ba 40F20003 		movw	r3, #:lower16:loops
+ 439 01be C0F20003 		movt	r3, #:upper16:loops
+ 440 01c2 CB18     		adds	r3, r1, r3
+ 441 01c4 1046     		mov	r0, r2
+ 442 01c6 1946     		mov	r1, r3
+ 443 01c8 FFF7FEFF 		bl	mode
+ 444              	.L15:
+ 123:main.c        **** 					}
+ 124:main.c        **** 					printf("%u\n", loops[id].mode);
+ 445              		.loc 2 124 0
+ 446 01cc 40F20003 		movw	r3, #:lower16:loops
+ 447 01d0 C0F20003 		movt	r3, #:upper16:loops
+ 448 01d4 3A6A     		ldr	r2, [r7, #32]
+ 449 01d6 4FF02C01 		mov	r1, #44
+ 450 01da 01FB02F2 		mul	r2, r1, r2
+ 451 01de 9B18     		adds	r3, r3, r2
+ 452 01e0 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ARM GAS  /tmp/ccrEF6Gk.s 			page 38
 
 
- 572 03fe 00FB02F2 		mul	r2, r0, r2
- 573 0402 9B18     		adds	r3, r3, r2
- 574 0404 03F10803 		add	r3, r3, #8
- 575 0408 DB88     		ldrh	r3, [r3, #6]
- 576 040a 1A46     		mov	r2, r3
- 577 040c 40F20003 		movw	r3, #:lower16:loops
- 578 0410 C0F20003 		movt	r3, #:upper16:loops
- 579 0414 386A     		ldr	r0, [r7, #32]
- 580 0416 4FF02C04 		mov	r4, #44
- 581 041a 04FB00F0 		mul	r0, r4, r0
- 582 041e 1B18     		adds	r3, r3, r0
- 583 0420 03F11003 		add	r3, r3, #16
- 584 0424 1B88     		ldrh	r3, [r3, #0]
- 585 0426 40F20000 		movw	r0, #:lower16:.LC14
- 586 042a C0F20000 		movt	r0, #:upper16:.LC14
- 587 042e FFF7FEFF 		bl	iprintf
- 588              	.L18:
- 120:main.c        **** 				}
- 121:main.c        **** 				if (match("limit", opt)) {
- 589              		.loc 2 121 0
- 590 0432 07F11003 		add	r3, r7, #16
- 591 0436 40F20000 		movw	r0, #:lower16:.LC15
- 592 043a C0F20000 		movt	r0, #:upper16:.LC15
- 593 043e 1946     		mov	r1, r3
- 594 0440 FFF7FEFF 		bl	strcmp
- 595 0444 0346     		mov	r3, r0
- 596 0446 002B     		cmp	r3, #0
- 597 0448 42D1     		bne	.L30
- 122:main.c        **** 					if (cmd == 's') {
- 598              		.loc 2 122 0
- 599 044a FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
- 600 044c 732B     		cmp	r3, #115
- 601 044e 26D1     		bne	.L31
- 123:main.c        **** 						if (argc < 2) {
- 602              		.loc 2 123 0
- 603 0450 BB69     		ldr	r3, [r7, #24]
- 604 0452 012B     		cmp	r3, #1
- 605 0454 06DC     		bgt	.L32
- 124:main.c        **** 							puts("? arg");
- 606              		.loc 2 124 0
- 607 0456 40F20000 		movw	r0, #:lower16:.LC7
- 608 045a C0F20000 		movt	r0, #:upper16:.LC7
- 609 045e FFF7FEFF 		bl	puts
- 125:main.c        **** 							break;
- 610              		.loc 2 125 0
- 611 0462 46E0     		b	.L5
- 612              	.L32:
- 126:main.c        **** 						}
- 127:main.c        **** 						conf[id].min = argv[0] < argv[1] ? argv[0] : argv[1];
- 613              		.loc 2 127 0
- 614 0464 BA68     		ldr	r2, [r7, #8]
- 615 0466 7B68     		ldr	r3, [r7, #4]
- 616 0468 9A42     		cmp	r2, r3
- 617 046a B8BF     		it	lt
- 618 046c 1346     		movlt	r3, r2
- 619 046e 99B2     		uxth	r1, r3
- 620 0470 40F20003 		movw	r3, #:lower16:conf
-ARM GAS  /tmp/ccZvkXpi.s 			page 41
+ 453 01e2 40F20000 		movw	r0, #:lower16:.LC8
+ 454 01e6 C0F20000 		movt	r0, #:upper16:.LC8
+ 455 01ea 1946     		mov	r1, r3
+ 456 01ec FFF7FEFF 		bl	iprintf
+ 457 01f0 1FE1     		b	.L19
+ 458              	.L14:
+ 125:main.c        **** 				}
+ 126:main.c        **** 				else if (match("sp", opt)) {
+ 459              		.loc 2 126 0
+ 460 01f2 07F11003 		add	r3, r7, #16
+ 461 01f6 40F20000 		movw	r0, #:lower16:.LC9
+ 462 01fa C0F20000 		movt	r0, #:upper16:.LC9
+ 463 01fe 1946     		mov	r1, r3
+ 464 0200 FFF7FEFF 		bl	strcmp
+ 465 0204 0346     		mov	r3, r0
+ 466 0206 002B     		cmp	r3, #0
+ 467 0208 4AD1     		bne	.L20
+ 127:main.c        **** 					if (cmd == 's') {
+ 468              		.loc 2 127 0
+ 469 020a FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
+ 470 020c 732B     		cmp	r3, #115
+ 471 020e 34D1     		bne	.L21
+ 128:main.c        **** 						if (argc < 1) {
+ 472              		.loc 2 128 0
+ 473 0210 BB69     		ldr	r3, [r7, #24]
+ 474 0212 002B     		cmp	r3, #0
+ 475 0214 06DC     		bgt	.L22
+ 129:main.c        **** 							puts("? arg");
+ 476              		.loc 2 129 0
+ 477 0216 40F20000 		movw	r0, #:lower16:.LC7
+ 478 021a C0F20000 		movt	r0, #:upper16:.LC7
+ 479 021e FFF7FEFF 		bl	puts
+ 130:main.c        **** 							break;
+ 480              		.loc 2 130 0
+ 481 0222 66E1     		b	.L6
+ 482              	.L22:
+ 131:main.c        **** 						}
+ 132:main.c        **** 						loops[id].SP = LIMIT(*argv, conf[id].min, conf[id].max);
+ 483              		.loc 2 132 0
+ 484 0224 7A68     		ldr	r2, [r7, #4]
+ 485 0226 40F20003 		movw	r3, #:lower16:conf
+ 486 022a C0F20003 		movt	r3, #:upper16:conf
+ 487 022e 396A     		ldr	r1, [r7, #32]
+ 488 0230 33F83130 		ldrh	r3, [r3, r1, lsl #3]
+ 489 0234 9A42     		cmp	r2, r3
+ 490 0236 07DA     		bge	.L23
+ 491              		.loc 2 132 0 is_stmt 0 discriminator 1
+ 492 0238 40F20003 		movw	r3, #:lower16:conf
+ 493 023c C0F20003 		movt	r3, #:upper16:conf
+ 494 0240 3A6A     		ldr	r2, [r7, #32]
+ 495 0242 33F83220 		ldrh	r2, [r3, r2, lsl #3]
+ 496 0246 0DE0     		b	.L24
+ 497              	.L23:
+ 498              		.loc 2 132 0 discriminator 2
+ 499 0248 7968     		ldr	r1, [r7, #4]
+ 500 024a 40F20002 		movw	r2, #:lower16:conf
+ 501 024e C0F20002 		movt	r2, #:upper16:conf
+ARM GAS  /tmp/ccrEF6Gk.s 			page 39
 
 
- 621 0474 C0F20003 		movt	r3, #:upper16:conf
- 622 0478 3A6A     		ldr	r2, [r7, #32]
- 623 047a 23F83210 		strh	r1, [r3, r2, lsl #3]	@ movhi
- 128:main.c        **** 						conf[id].max = argv[0] < argv[1] ? argv[1] : argv[0];
- 624              		.loc 2 128 0
- 625 047e 7A68     		ldr	r2, [r7, #4]
- 626 0480 BB68     		ldr	r3, [r7, #8]
- 627 0482 9A42     		cmp	r2, r3
- 628 0484 A8BF     		it	ge
- 629 0486 1346     		movge	r3, r2
- 630 0488 99B2     		uxth	r1, r3
- 631 048a 40F20002 		movw	r2, #:lower16:conf
- 632 048e C0F20002 		movt	r2, #:upper16:conf
- 633 0492 3B6A     		ldr	r3, [r7, #32]
- 634 0494 4FEAC303 		lsl	r3, r3, #3
- 635 0498 D318     		adds	r3, r2, r3
- 636 049a 0A46     		mov	r2, r1	@ movhi
- 637 049c 5A80     		strh	r2, [r3, #2]	@ movhi
- 638              	.L31:
- 129:main.c        **** 					}
- 130:main.c        **** 					printf("%u %u\n", conf[id].min, conf[id].max);
- 639              		.loc 2 130 0
- 640 049e 40F20003 		movw	r3, #:lower16:conf
- 641 04a2 C0F20003 		movt	r3, #:upper16:conf
- 642 04a6 3A6A     		ldr	r2, [r7, #32]
- 643 04a8 33F83230 		ldrh	r3, [r3, r2, lsl #3]
- 644 04ac 1946     		mov	r1, r3
- 645 04ae 40F20002 		movw	r2, #:lower16:conf
- 646 04b2 C0F20002 		movt	r2, #:upper16:conf
- 647 04b6 3B6A     		ldr	r3, [r7, #32]
- 648 04b8 4FEAC303 		lsl	r3, r3, #3
- 649 04bc D318     		adds	r3, r2, r3
- 650 04be 5B88     		ldrh	r3, [r3, #2]
- 651 04c0 40F20000 		movw	r0, #:lower16:.LC16
- 652 04c4 C0F20000 		movt	r0, #:upper16:.LC16
- 653 04c8 1A46     		mov	r2, r3
- 654 04ca FFF7FEFF 		bl	iprintf
- 131:main.c        **** 				}
- 132:main.c        **** 				else 
- 133:main.c        **** 					puts("? opt");
- 134:main.c        **** 				break;
- 655              		.loc 2 134 0
- 656 04ce 10E0     		b	.L5
- 657              	.L30:
- 133:main.c        **** 					puts("? opt");
- 658              		.loc 2 133 0
- 659 04d0 40F20000 		movw	r0, #:lower16:.LC4
- 660 04d4 C0F20000 		movt	r0, #:upper16:.LC4
- 661 04d8 FFF7FEFF 		bl	puts
- 662              		.loc 2 134 0
- 663 04dc 09E0     		b	.L5
- 664              	.L6:
- 135:main.c        **** 			case 'l':
- 136:main.c        **** 			case 'q':
- 137:main.c        **** 				break;
- 138:main.c        **** 			default:
- 139:main.c        **** 				puts("? cmd");
-ARM GAS  /tmp/ccZvkXpi.s 			page 42
+ 502 0252 3B6A     		ldr	r3, [r7, #32]
+ 503 0254 4FEAC303 		lsl	r3, r3, #3
+ 504 0258 D318     		adds	r3, r2, r3
+ 505 025a 5B88     		ldrh	r3, [r3, #2]
+ 506 025c 9942     		cmp	r1, r3
+ 507 025e B8BF     		it	lt
+ 508 0260 0B46     		movlt	r3, r1
+ 509 0262 9AB2     		uxth	r2, r3
+ 510              	.L24:
+ 511              		.loc 2 132 0 discriminator 3
+ 512 0264 40F20003 		movw	r3, #:lower16:loops
+ 513 0268 C0F20003 		movt	r3, #:upper16:loops
+ 514 026c 396A     		ldr	r1, [r7, #32]
+ 515 026e 4FF02C00 		mov	r0, #44
+ 516 0272 00FB01F1 		mul	r1, r0, r1
+ 517 0276 5B18     		adds	r3, r3, r1
+ 518 0278 5A80     		strh	r2, [r3, #2]	@ movhi
+ 519              	.L21:
+ 133:main.c        **** 					}
+ 134:main.c        **** 					printf("%u\n", loops[id].SP);
+ 520              		.loc 2 134 0 is_stmt 1
+ 521 027a 40F20003 		movw	r3, #:lower16:loops
+ 522 027e C0F20003 		movt	r3, #:upper16:loops
+ 523 0282 3A6A     		ldr	r2, [r7, #32]
+ 524 0284 4FF02C01 		mov	r1, #44
+ 525 0288 01FB02F2 		mul	r2, r1, r2
+ 526 028c 9B18     		adds	r3, r3, r2
+ 527 028e 5B88     		ldrh	r3, [r3, #2]
+ 528 0290 40F20000 		movw	r0, #:lower16:.LC8
+ 529 0294 C0F20000 		movt	r0, #:upper16:.LC8
+ 530 0298 1946     		mov	r1, r3
+ 531 029a FFF7FEFF 		bl	iprintf
+ 532 029e C8E0     		b	.L19
+ 533              	.L20:
+ 135:main.c        **** 				}
+ 136:main.c        **** 				else if (match("pv", opt)) {
+ 534              		.loc 2 136 0
+ 535 02a0 07F11003 		add	r3, r7, #16
+ 536 02a4 40F20000 		movw	r0, #:lower16:.LC10
+ 537 02a8 C0F20000 		movt	r0, #:upper16:.LC10
+ 538 02ac 1946     		mov	r1, r3
+ 539 02ae FFF7FEFF 		bl	strcmp
+ 540 02b2 0346     		mov	r3, r0
+ 541 02b4 002B     		cmp	r3, #0
+ 542 02b6 1DD1     		bne	.L25
+ 137:main.c        **** 					if (cmd == 's')
+ 543              		.loc 2 137 0
+ 544 02b8 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
+ 545 02ba 732B     		cmp	r3, #115
+ 546 02bc 05D1     		bne	.L26
+ 138:main.c        **** 						puts("? read-only");
+ 547              		.loc 2 138 0
+ 548 02be 40F20000 		movw	r0, #:lower16:.LC11
+ 549 02c2 C0F20000 		movt	r0, #:upper16:.LC11
+ 550 02c6 FFF7FEFF 		bl	puts
+ 551              	.L26:
+ 139:main.c        **** 					printf("%u\n", loops[id]._x);
+ARM GAS  /tmp/ccrEF6Gk.s 			page 40
 
 
- 665              		.loc 2 139 0
- 666 04de 40F20000 		movw	r0, #:lower16:.LC17
- 667 04e2 C0F20000 		movt	r0, #:upper16:.LC17
- 668 04e6 FFF7FEFF 		bl	puts
- 140:main.c        **** 		}
- 141:main.c        **** 	}
- 669              		.loc 2 141 0
- 670 04ea CBE5     		b	.L34
- 671              	.L36:
-  48:main.c        **** 			continue;
- 672              		.loc 2 48 0
- 673 04ec 00BF     		nop
- 674 04ee 00E0     		b	.L5
- 675              	.L37:
- 137:main.c        **** 				break;
- 676              		.loc 2 137 0
- 677 04f0 00BF     		nop
- 678              	.L5:
- 679              		.loc 2 141 0
- 680 04f2 C7E5     		b	.L34
- 681              		.cfi_endproc
- 682              	.LFE35:
- 683              		.size	main, .-main
- 684              		.section	.text.TC1_IrqHandler,"ax",%progbits
- 685              		.align	2
- 686              		.global	TC1_IrqHandler
- 687              		.thumb
- 688              		.thumb_func
- 689              		.type	TC1_IrqHandler, %function
- 690              	TC1_IrqHandler:
- 691              	.LFB36:
- 142:main.c        **** 	return 0;
- 143:main.c        **** }
- 144:main.c        **** 
- 145:main.c        **** void TC1_IrqHandler()
- 146:main.c        **** {
- 692              		.loc 2 146 0
- 693              		.cfi_startproc
- 694              		@ args = 0, pretend = 0, frame = 8
- 695              		@ frame_needed = 1, uses_anonymous_args = 0
- 696              		@ link register save eliminated.
- 697 0000 80B4     		push	{r7}
- 698              	.LCFI6:
- 699              		.cfi_def_cfa_offset 4
- 700              		.cfi_offset 7, -4
- 701 0002 83B0     		sub	sp, sp, #12
- 702              	.LCFI7:
- 703              		.cfi_def_cfa_offset 16
- 704 0004 00AF     		add	r7, sp, #0
- 705              	.LCFI8:
- 706              		.cfi_def_cfa_register 7
- 147:main.c        **** 	uint8_t i;
- 148:main.c        **** 	struct ctrl *loop = loops;
- 707              		.loc 2 148 0
- 708 0006 40F20003 		movw	r3, #:lower16:loops
- 709 000a C0F20003 		movt	r3, #:upper16:loops
- 710 000e 3B60     		str	r3, [r7, #0]
-ARM GAS  /tmp/ccZvkXpi.s 			page 43
+ 552              		.loc 2 139 0
+ 553 02ca 40F20003 		movw	r3, #:lower16:loops
+ 554 02ce C0F20003 		movt	r3, #:upper16:loops
+ 555 02d2 3A6A     		ldr	r2, [r7, #32]
+ 556 02d4 4FF02C01 		mov	r1, #44
+ 557 02d8 01FB02F2 		mul	r2, r1, r2
+ 558 02dc 9B18     		adds	r3, r3, r2
+ 559 02de 03F12003 		add	r3, r3, #32
+ 560 02e2 9B88     		ldrh	r3, [r3, #4]
+ 561 02e4 40F20000 		movw	r0, #:lower16:.LC8
+ 562 02e8 C0F20000 		movt	r0, #:upper16:.LC8
+ 563 02ec 1946     		mov	r1, r3
+ 564 02ee FFF7FEFF 		bl	iprintf
+ 565 02f2 9EE0     		b	.L19
+ 566              	.L25:
+ 140:main.c        **** 				}
+ 141:main.c        **** 				else if (match("error", opt)) {
+ 567              		.loc 2 141 0
+ 568 02f4 07F11003 		add	r3, r7, #16
+ 569 02f8 40F20000 		movw	r0, #:lower16:.LC12
+ 570 02fc C0F20000 		movt	r0, #:upper16:.LC12
+ 571 0300 1946     		mov	r1, r3
+ 572 0302 FFF7FEFF 		bl	strcmp
+ 573 0306 0346     		mov	r3, r0
+ 574 0308 002B     		cmp	r3, #0
+ 575 030a 1DD1     		bne	.L27
+ 142:main.c        **** 					if (cmd == 's')
+ 576              		.loc 2 142 0
+ 577 030c FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
+ 578 030e 732B     		cmp	r3, #115
+ 579 0310 05D1     		bne	.L28
+ 143:main.c        **** 						puts("? read-only");
+ 580              		.loc 2 143 0
+ 581 0312 40F20000 		movw	r0, #:lower16:.LC11
+ 582 0316 C0F20000 		movt	r0, #:upper16:.LC11
+ 583 031a FFF7FEFF 		bl	puts
+ 584              	.L28:
+ 144:main.c        **** 					printf("%u\n", loops[id]._e);
+ 585              		.loc 2 144 0
+ 586 031e 40F20003 		movw	r3, #:lower16:loops
+ 587 0322 C0F20003 		movt	r3, #:upper16:loops
+ 588 0326 3A6A     		ldr	r2, [r7, #32]
+ 589 0328 4FF02C01 		mov	r1, #44
+ 590 032c 01FB02F2 		mul	r2, r1, r2
+ 591 0330 9B18     		adds	r3, r3, r2
+ 592 0332 03F11403 		add	r3, r3, #20
+ 593 0336 1B68     		ldr	r3, [r3, #0]
+ 594 0338 40F20000 		movw	r0, #:lower16:.LC8
+ 595 033c C0F20000 		movt	r0, #:upper16:.LC8
+ 596 0340 1946     		mov	r1, r3
+ 597 0342 FFF7FEFF 		bl	iprintf
+ 598 0346 74E0     		b	.L19
+ 599              	.L27:
+ 145:main.c        **** 				}
+ 146:main.c        **** 				else if (match("k", opt)) {
+ 600              		.loc 2 146 0
+ 601 0348 07F11003 		add	r3, r7, #16
+ARM GAS  /tmp/ccrEF6Gk.s 			page 41
 
 
- 149:main.c        **** 
- 150:main.c        **** 	for (i=0; i < LOOPS; i++, loop++) {
- 711              		.loc 2 150 0
- 712 0010 4FF00003 		mov	r3, #0
- 713 0014 FB71     		strb	r3, [r7, #7]
- 714 0016 22E0     		b	.L39
- 715              	.L41:
- 151:main.c        **** 		if ((ADC->ADC_CHSR & (1<<i)) == 0 && loop->mode > OFF)
- 716              		.loc 2 151 0
- 717 0018 4FF40043 		mov	r3, #32768
- 718 001c C4F20303 		movt	r3, 16387
- 719 0020 9A69     		ldr	r2, [r3, #24]
- 720 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 721 0024 4FF00101 		mov	r1, #1
- 722 0028 01FA03F3 		lsl	r3, r1, r3
- 723 002c 1340     		ands	r3, r3, r2
- 724 002e 002B     		cmp	r3, #0
- 725 0030 0DD1     		bne	.L40
- 726              		.loc 2 151 0 is_stmt 0 discriminator 1
- 727 0032 3B68     		ldr	r3, [r7, #0]
- 728 0034 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
- 729 0036 002B     		cmp	r3, #0
- 730 0038 09D0     		beq	.L40
- 152:main.c        **** 			ADC->ADC_CHER = (1<<i); // enable channel
- 731              		.loc 2 152 0 is_stmt 1
- 732 003a 4FF40043 		mov	r3, #32768
- 733 003e C4F20303 		movt	r3, 16387
- 734 0042 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 735 0044 4FF00101 		mov	r1, #1
- 736 0048 01FA02F2 		lsl	r2, r1, r2
- 737 004c 1A61     		str	r2, [r3, #16]
- 738              	.L40:
- 150:main.c        **** 	for (i=0; i < LOOPS; i++, loop++) {
- 739              		.loc 2 150 0
- 740 004e FB79     		ldrb	r3, [r7, #7]
- 741 0050 03F10103 		add	r3, r3, #1
- 742 0054 FB71     		strb	r3, [r7, #7]
- 743 0056 3B68     		ldr	r3, [r7, #0]
- 744 0058 03F12C03 		add	r3, r3, #44
- 745 005c 3B60     		str	r3, [r7, #0]
- 746              	.L39:
- 150:main.c        **** 	for (i=0; i < LOOPS; i++, loop++) {
- 747              		.loc 2 150 0 is_stmt 0 discriminator 1
- 748 005e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 749 0060 012B     		cmp	r3, #1
- 750 0062 D9D9     		bls	.L41
- 153:main.c        **** 	}
- 154:main.c        **** 	ADC_StartConversion(ADC);
- 751              		.loc 2 154 0 is_stmt 1
- 752 0064 4FF40043 		mov	r3, #32768
- 753 0068 C4F20303 		movt	r3, 16387
- 754 006c 4FF00202 		mov	r2, #2
- 755 0070 1A60     		str	r2, [r3, #0]
- 155:main.c        **** }
- 756              		.loc 2 155 0
- 757 0072 07F10C07 		add	r7, r7, #12
- 758 0076 BD46     		mov	sp, r7
-ARM GAS  /tmp/ccZvkXpi.s 			page 44
+ 602 034c 40F20000 		movw	r0, #:lower16:.LC13
+ 603 0350 C0F20000 		movt	r0, #:upper16:.LC13
+ 604 0354 1946     		mov	r1, r3
+ 605 0356 FFF7FEFF 		bl	strcmp
+ 606 035a 0346     		mov	r3, r0
+ 607 035c 002B     		cmp	r3, #0
+ 608 035e 68D1     		bne	.L19
+ 147:main.c        **** 					if (cmd == 's') {
+ 609              		.loc 2 147 0
+ 610 0360 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
+ 611 0362 732B     		cmp	r3, #115
+ 612 0364 36D1     		bne	.L29
+ 148:main.c        **** 						if (argc < 3) {
+ 613              		.loc 2 148 0
+ 614 0366 BB69     		ldr	r3, [r7, #24]
+ 615 0368 022B     		cmp	r3, #2
+ 616 036a 06DC     		bgt	.L30
+ 149:main.c        **** 							puts("? arg");
+ 617              		.loc 2 149 0
+ 618 036c 40F20000 		movw	r0, #:lower16:.LC7
+ 619 0370 C0F20000 		movt	r0, #:upper16:.LC7
+ 620 0374 FFF7FEFF 		bl	puts
+ 150:main.c        **** 							break;
+ 621              		.loc 2 150 0
+ 622 0378 BBE0     		b	.L6
+ 623              	.L30:
+ 151:main.c        **** 						}
+ 152:main.c        **** 						loops[id].Kp = argv[0];
+ 624              		.loc 2 152 0
+ 625 037a 7B68     		ldr	r3, [r7, #4]
+ 626 037c 9AB2     		uxth	r2, r3
+ 627 037e 40F20003 		movw	r3, #:lower16:loops
+ 628 0382 C0F20003 		movt	r3, #:upper16:loops
+ 629 0386 396A     		ldr	r1, [r7, #32]
+ 630 0388 4FF02C00 		mov	r0, #44
+ 631 038c 00FB01F1 		mul	r1, r0, r1
+ 632 0390 5B18     		adds	r3, r3, r1
+ 633 0392 03F10803 		add	r3, r3, #8
+ 634 0396 9A80     		strh	r2, [r3, #4]	@ movhi
+ 153:main.c        **** 						loops[id].Ki = argv[1];
+ 635              		.loc 2 153 0
+ 636 0398 BB68     		ldr	r3, [r7, #8]
+ 637 039a 9AB2     		uxth	r2, r3
+ 638 039c 40F20003 		movw	r3, #:lower16:loops
+ 639 03a0 C0F20003 		movt	r3, #:upper16:loops
+ 640 03a4 396A     		ldr	r1, [r7, #32]
+ 641 03a6 4FF02C00 		mov	r0, #44
+ 642 03aa 00FB01F1 		mul	r1, r0, r1
+ 643 03ae 5B18     		adds	r3, r3, r1
+ 644 03b0 03F10803 		add	r3, r3, #8
+ 645 03b4 DA80     		strh	r2, [r3, #6]	@ movhi
+ 154:main.c        **** 						loops[id].Kd = argv[2];
+ 646              		.loc 2 154 0
+ 647 03b6 FB68     		ldr	r3, [r7, #12]
+ 648 03b8 9AB2     		uxth	r2, r3
+ 649 03ba 40F20003 		movw	r3, #:lower16:loops
+ 650 03be C0F20003 		movt	r3, #:upper16:loops
+ARM GAS  /tmp/ccrEF6Gk.s 			page 42
 
 
- 759 0078 80BC     		pop	{r7}
- 760 007a 7047     		bx	lr
- 761              		.cfi_endproc
- 762              	.LFE36:
- 763              		.size	TC1_IrqHandler, .-TC1_IrqHandler
- 764              		.section	.text.ADC_IrqHandler,"ax",%progbits
- 765              		.align	2
- 766              		.global	ADC_IrqHandler
- 767              		.thumb
- 768              		.thumb_func
- 769              		.type	ADC_IrqHandler, %function
- 770              	ADC_IrqHandler:
- 771              	.LFB37:
- 156:main.c        **** 
- 157:main.c        **** void ADC_IrqHandler(void)
- 158:main.c        **** {
- 772              		.loc 2 158 0
- 773              		.cfi_startproc
- 774              		@ args = 0, pretend = 0, frame = 16
- 775              		@ frame_needed = 1, uses_anonymous_args = 0
- 776 0000 80B5     		push	{r7, lr}
- 777              	.LCFI9:
- 778              		.cfi_def_cfa_offset 8
- 779              		.cfi_offset 14, -4
- 780              		.cfi_offset 7, -8
- 781 0002 84B0     		sub	sp, sp, #16
- 782              	.LCFI10:
- 783              		.cfi_def_cfa_offset 24
- 784 0004 00AF     		add	r7, sp, #0
- 785              	.LCFI11:
- 786              		.cfi_def_cfa_register 7
- 159:main.c        **** 	uint8_t i;
- 160:main.c        **** 	uint8_t msk;
- 161:main.c        ****     uint32_t status;
- 162:main.c        **** 	struct ctrl *loop = loops;
- 787              		.loc 2 162 0
- 788 0006 40F20003 		movw	r3, #:lower16:loops
- 789 000a C0F20003 		movt	r3, #:upper16:loops
- 790 000e BB60     		str	r3, [r7, #8]
- 163:main.c        **** 	ctrlio_t x;
- 164:main.c        **** 
- 165:main.c        ****     status = ADC_GetStatus(ADC);
- 791              		.loc 2 165 0
- 792 0010 4FF40043 		mov	r3, #32768
- 793 0014 C4F20303 		movt	r3, 16387
- 794 0018 1B6B     		ldr	r3, [r3, #48]
- 795 001a 7B60     		str	r3, [r7, #4]
- 166:main.c        **** 
- 167:main.c        **** 	for (i=0, msk=1; i < LOOPS; i++, msk<<=1, loop++) {
- 796              		.loc 2 167 0
- 797 001c 4FF00003 		mov	r3, #0
- 798 0020 FB73     		strb	r3, [r7, #15]
- 799 0022 4FF00103 		mov	r3, #1
- 800 0026 BB73     		strb	r3, [r7, #14]
- 801 0028 4EE0     		b	.L43
- 802              	.L49:
- 168:main.c        **** 		if (!((status & msk) == msk)) // check End of Conversion flag for channel i
-ARM GAS  /tmp/ccZvkXpi.s 			page 45
+ 651 03c2 396A     		ldr	r1, [r7, #32]
+ 652 03c4 4FF02C00 		mov	r0, #44
+ 653 03c8 00FB01F1 		mul	r1, r0, r1
+ 654 03cc 5B18     		adds	r3, r3, r1
+ 655 03ce 03F11003 		add	r3, r3, #16
+ 656 03d2 1A80     		strh	r2, [r3, #0]	@ movhi
+ 657              	.L29:
+ 155:main.c        **** 					}
+ 156:main.c        **** 					printf("%u %u %u\n", loops[id].Kp, loops[id].Ki, loops[id].Kd);
+ 658              		.loc 2 156 0
+ 659 03d4 40F20003 		movw	r3, #:lower16:loops
+ 660 03d8 C0F20003 		movt	r3, #:upper16:loops
+ 661 03dc 3A6A     		ldr	r2, [r7, #32]
+ 662 03de 4FF02C01 		mov	r1, #44
+ 663 03e2 01FB02F2 		mul	r2, r1, r2
+ 664 03e6 9B18     		adds	r3, r3, r2
+ 665 03e8 03F10803 		add	r3, r3, #8
+ 666 03ec 9B88     		ldrh	r3, [r3, #4]
+ 667 03ee 1946     		mov	r1, r3
+ 668 03f0 40F20003 		movw	r3, #:lower16:loops
+ 669 03f4 C0F20003 		movt	r3, #:upper16:loops
+ 670 03f8 3A6A     		ldr	r2, [r7, #32]
+ 671 03fa 4FF02C00 		mov	r0, #44
+ 672 03fe 00FB02F2 		mul	r2, r0, r2
+ 673 0402 9B18     		adds	r3, r3, r2
+ 674 0404 03F10803 		add	r3, r3, #8
+ 675 0408 DB88     		ldrh	r3, [r3, #6]
+ 676 040a 1A46     		mov	r2, r3
+ 677 040c 40F20003 		movw	r3, #:lower16:loops
+ 678 0410 C0F20003 		movt	r3, #:upper16:loops
+ 679 0414 386A     		ldr	r0, [r7, #32]
+ 680 0416 4FF02C04 		mov	r4, #44
+ 681 041a 04FB00F0 		mul	r0, r4, r0
+ 682 041e 1B18     		adds	r3, r3, r0
+ 683 0420 03F11003 		add	r3, r3, #16
+ 684 0424 1B88     		ldrh	r3, [r3, #0]
+ 685 0426 40F20000 		movw	r0, #:lower16:.LC14
+ 686 042a C0F20000 		movt	r0, #:upper16:.LC14
+ 687 042e FFF7FEFF 		bl	iprintf
+ 688              	.L19:
+ 157:main.c        **** 				}
+ 158:main.c        **** 				if (match("limit", opt)) {
+ 689              		.loc 2 158 0
+ 690 0432 07F11003 		add	r3, r7, #16
+ 691 0436 40F20000 		movw	r0, #:lower16:.LC15
+ 692 043a C0F20000 		movt	r0, #:upper16:.LC15
+ 693 043e 1946     		mov	r1, r3
+ 694 0440 FFF7FEFF 		bl	strcmp
+ 695 0444 0346     		mov	r3, r0
+ 696 0446 002B     		cmp	r3, #0
+ 697 0448 42D1     		bne	.L31
+ 159:main.c        **** 					if (cmd == 's') {
+ 698              		.loc 2 159 0
+ 699 044a FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
+ 700 044c 732B     		cmp	r3, #115
+ 701 044e 26D1     		bne	.L32
+ 160:main.c        **** 						if (argc < 2) {
+ARM GAS  /tmp/ccrEF6Gk.s 			page 43
 
 
- 803              		.loc 2 168 0
- 804 002a BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
- 805 002c 7B68     		ldr	r3, [r7, #4]
- 806 002e 1A40     		ands	r2, r2, r3
- 807 0030 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
- 808 0032 9A42     		cmp	r2, r3
- 809 0034 3BD1     		bne	.L50
- 810              	.L44:
- 169:main.c        **** 			continue;
- 170:main.c        **** 			
- 171:main.c        **** 		x = (ctrlio_t) *(ADC->ADC_CDR+i); // read channel data
- 811              		.loc 2 171 0
- 812 0036 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 813 0038 4FEA8302 		lsl	r2, r3, #2
- 814 003c 48F25003 		movw	r3, #32848
- 815 0040 C4F20303 		movt	r3, 16387
- 816 0044 D318     		adds	r3, r2, r3
- 817 0046 1B68     		ldr	r3, [r3, #0]
- 818 0048 7B80     		strh	r3, [r7, #2]	@ movhi
- 172:main.c        **** 		x = LIMIT(x, conf[i].min, conf[i].max);
- 819              		.loc 2 172 0
- 820 004a FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
- 821 004c 40F20003 		movw	r3, #:lower16:conf
- 822 0050 C0F20003 		movt	r3, #:upper16:conf
- 823 0054 33F83230 		ldrh	r3, [r3, r2, lsl #3]
- 824 0058 7A88     		ldrh	r2, [r7, #2]
- 825 005a 9A42     		cmp	r2, r3
- 826 005c 07D2     		bcs	.L46
- 827              		.loc 2 172 0 is_stmt 0 discriminator 1
- 828 005e FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
- 829 0060 40F20003 		movw	r3, #:lower16:conf
- 830 0064 C0F20003 		movt	r3, #:upper16:conf
- 831 0068 33F83230 		ldrh	r3, [r3, r2, lsl #3]
- 832 006c 0DE0     		b	.L47
- 833              	.L46:
- 834              		.loc 2 172 0 discriminator 2
- 835 006e FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 836 0070 40F20002 		movw	r2, #:lower16:conf
- 837 0074 C0F20002 		movt	r2, #:upper16:conf
- 838 0078 4FEAC303 		lsl	r3, r3, #3
- 839 007c D318     		adds	r3, r2, r3
- 840 007e 5A88     		ldrh	r2, [r3, #2]
- 841 0080 7B88     		ldrh	r3, [r7, #2]
- 842 0082 9A42     		cmp	r2, r3
- 843 0084 38BF     		it	cc
- 844 0086 1346     		movcc	r3, r2
- 845 0088 9BB2     		uxth	r3, r3
- 846              	.L47:
- 847              		.loc 2 172 0 discriminator 3
- 848 008a 7B80     		strh	r3, [r7, #2]	@ movhi
- 173:main.c        **** 
- 174:main.c        **** 		if (loop->mode > OFF) {
- 849              		.loc 2 174 0 is_stmt 1 discriminator 3
- 850 008c BB68     		ldr	r3, [r7, #8]
- 851 008e 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
- 852 0090 002B     		cmp	r3, #0
- 853 0092 05D0     		beq	.L48
-ARM GAS  /tmp/ccZvkXpi.s 			page 46
+ 702              		.loc 2 160 0
+ 703 0450 BB69     		ldr	r3, [r7, #24]
+ 704 0452 012B     		cmp	r3, #1
+ 705 0454 06DC     		bgt	.L33
+ 161:main.c        **** 							puts("? arg");
+ 706              		.loc 2 161 0
+ 707 0456 40F20000 		movw	r0, #:lower16:.LC7
+ 708 045a C0F20000 		movt	r0, #:upper16:.LC7
+ 709 045e FFF7FEFF 		bl	puts
+ 162:main.c        **** 							break;
+ 710              		.loc 2 162 0
+ 711 0462 46E0     		b	.L6
+ 712              	.L33:
+ 163:main.c        **** 						}
+ 164:main.c        **** 						conf[id].min = argv[0] < argv[1] ? argv[0] : argv[1];
+ 713              		.loc 2 164 0
+ 714 0464 BA68     		ldr	r2, [r7, #8]
+ 715 0466 7B68     		ldr	r3, [r7, #4]
+ 716 0468 9A42     		cmp	r2, r3
+ 717 046a B8BF     		it	lt
+ 718 046c 1346     		movlt	r3, r2
+ 719 046e 99B2     		uxth	r1, r3
+ 720 0470 40F20003 		movw	r3, #:lower16:conf
+ 721 0474 C0F20003 		movt	r3, #:upper16:conf
+ 722 0478 3A6A     		ldr	r2, [r7, #32]
+ 723 047a 23F83210 		strh	r1, [r3, r2, lsl #3]	@ movhi
+ 165:main.c        **** 						conf[id].max = argv[0] < argv[1] ? argv[1] : argv[0];
+ 724              		.loc 2 165 0
+ 725 047e 7A68     		ldr	r2, [r7, #4]
+ 726 0480 BB68     		ldr	r3, [r7, #8]
+ 727 0482 9A42     		cmp	r2, r3
+ 728 0484 A8BF     		it	ge
+ 729 0486 1346     		movge	r3, r2
+ 730 0488 99B2     		uxth	r1, r3
+ 731 048a 40F20002 		movw	r2, #:lower16:conf
+ 732 048e C0F20002 		movt	r2, #:upper16:conf
+ 733 0492 3B6A     		ldr	r3, [r7, #32]
+ 734 0494 4FEAC303 		lsl	r3, r3, #3
+ 735 0498 D318     		adds	r3, r2, r3
+ 736 049a 0A46     		mov	r2, r1	@ movhi
+ 737 049c 5A80     		strh	r2, [r3, #2]	@ movhi
+ 738              	.L32:
+ 166:main.c        **** 					}
+ 167:main.c        **** 					printf("%u %u\n", conf[id].min, conf[id].max);
+ 739              		.loc 2 167 0
+ 740 049e 40F20003 		movw	r3, #:lower16:conf
+ 741 04a2 C0F20003 		movt	r3, #:upper16:conf
+ 742 04a6 3A6A     		ldr	r2, [r7, #32]
+ 743 04a8 33F83230 		ldrh	r3, [r3, r2, lsl #3]
+ 744 04ac 1946     		mov	r1, r3
+ 745 04ae 40F20002 		movw	r2, #:lower16:conf
+ 746 04b2 C0F20002 		movt	r2, #:upper16:conf
+ 747 04b6 3B6A     		ldr	r3, [r7, #32]
+ 748 04b8 4FEAC303 		lsl	r3, r3, #3
+ 749 04bc D318     		adds	r3, r2, r3
+ 750 04be 5B88     		ldrh	r3, [r3, #2]
+ 751 04c0 40F20000 		movw	r0, #:lower16:.LC16
+ARM GAS  /tmp/ccrEF6Gk.s 			page 44
 
 
- 175:main.c        **** 			control(x, loop);    // run controller
- 854              		.loc 2 175 0
- 855 0094 7B88     		ldrh	r3, [r7, #2]
- 856 0096 1846     		mov	r0, r3
- 857 0098 B968     		ldr	r1, [r7, #8]
- 858 009a FFF7FEFF 		bl	control
- 859 009e 07E0     		b	.L45
- 860              	.L48:
- 176:main.c        **** 			// write output here
+ 752 04c4 C0F20000 		movt	r0, #:upper16:.LC16
+ 753 04c8 1A46     		mov	r2, r3
+ 754 04ca FFF7FEFF 		bl	iprintf
+ 168:main.c        **** 				}
+ 169:main.c        **** 				else 
+ 170:main.c        **** 					puts("? opt");
+ 171:main.c        **** 				break;
+ 755              		.loc 2 171 0
+ 756 04ce 10E0     		b	.L6
+ 757              	.L31:
+ 170:main.c        **** 					puts("? opt");
+ 758              		.loc 2 170 0
+ 759 04d0 40F20000 		movw	r0, #:lower16:.LC4
+ 760 04d4 C0F20000 		movt	r0, #:upper16:.LC4
+ 761 04d8 FFF7FEFF 		bl	puts
+ 762              		.loc 2 171 0
+ 763 04dc 09E0     		b	.L6
+ 764              	.L7:
+ 172:main.c        **** 			case 'l':
+ 173:main.c        **** 			case 'q':
+ 174:main.c        **** 				break;
+ 175:main.c        **** 			default:
+ 176:main.c        **** 				puts("? cmd");
+ 765              		.loc 2 176 0
+ 766 04de 40F20000 		movw	r0, #:lower16:.LC17
+ 767 04e2 C0F20000 		movt	r0, #:upper16:.LC17
+ 768 04e6 FFF7FEFF 		bl	puts
  177:main.c        **** 		}
- 178:main.c        **** 		else {
- 179:main.c        **** 			ADC->ADC_CHDR = msk; // disable channel
- 861              		.loc 2 179 0
- 862 00a0 4FF40043 		mov	r3, #32768
- 863 00a4 C4F20303 		movt	r3, 16387
- 864 00a8 BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
- 865 00aa 5A61     		str	r2, [r3, #20]
- 866 00ac 00E0     		b	.L45
- 867              	.L50:
- 169:main.c        **** 			continue;
- 868              		.loc 2 169 0
- 869 00ae 00BF     		nop
- 870              	.L45:
- 167:main.c        **** 	for (i=0, msk=1; i < LOOPS; i++, msk<<=1, loop++) {
- 871              		.loc 2 167 0
- 872 00b0 FB7B     		ldrb	r3, [r7, #15]
- 873 00b2 03F10103 		add	r3, r3, #1
- 874 00b6 FB73     		strb	r3, [r7, #15]
- 875 00b8 BB7B     		ldrb	r3, [r7, #14]
- 876 00ba 4FEA4303 		lsl	r3, r3, #1
- 877 00be BB73     		strb	r3, [r7, #14]
- 878 00c0 BB68     		ldr	r3, [r7, #8]
- 879 00c2 03F12C03 		add	r3, r3, #44
- 880 00c6 BB60     		str	r3, [r7, #8]
- 881              	.L43:
- 167:main.c        **** 	for (i=0, msk=1; i < LOOPS; i++, msk<<=1, loop++) {
- 882              		.loc 2 167 0 is_stmt 0 discriminator 1
- 883 00c8 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 884 00ca 012B     		cmp	r3, #1
- 885 00cc ADD9     		bls	.L49
- 180:main.c        **** 			// reset output here
- 181:main.c        **** 		}
- 182:main.c        **** 	}
- 183:main.c        **** }
- 886              		.loc 2 183 0 is_stmt 1
- 887 00ce 07F11007 		add	r7, r7, #16
- 888 00d2 BD46     		mov	sp, r7
- 889 00d4 80BD     		pop	{r7, pc}
- 890              		.cfi_endproc
- 891              	.LFE37:
- 892              		.size	ADC_IrqHandler, .-ADC_IrqHandler
- 893 00d6 00BF     		.section	.text.init,"ax",%progbits
- 894              		.align	2
- 895              		.thumb
- 896              		.thumb_func
- 897              		.type	init, %function
- 898              	init:
-ARM GAS  /tmp/ccZvkXpi.s 			page 47
+ 178:main.c        **** 	}
+ 769              		.loc 2 178 0
+ 770 04ea CBE5     		b	.L35
+ 771              	.L37:
+  85:main.c        **** 			continue;
+ 772              		.loc 2 85 0
+ 773 04ec 00BF     		nop
+ 774 04ee 00E0     		b	.L6
+ 775              	.L38:
+ 174:main.c        **** 				break;
+ 776              		.loc 2 174 0
+ 777 04f0 00BF     		nop
+ 778              	.L6:
+ 779              		.loc 2 178 0
+ 780 04f2 C7E5     		b	.L35
+ 781              		.cfi_endproc
+ 782              	.LFE36:
+ 783              		.size	main, .-main
+ 784              		.section	.text.TC1_IrqHandler,"ax",%progbits
+ 785              		.align	2
+ 786              		.global	TC1_IrqHandler
+ 787              		.thumb
+ 788              		.thumb_func
+ 789              		.type	TC1_IrqHandler, %function
+ 790              	TC1_IrqHandler:
+ 791              	.LFB37:
+ 179:main.c        **** 	return 0;
+ 180:main.c        **** }
+ 181:main.c        **** 
+ARM GAS  /tmp/ccrEF6Gk.s 			page 45
 
 
- 899              	.LFB38:
- 184:main.c        **** 
- 185:main.c        **** void init()
- 186:main.c        **** {
- 900              		.loc 2 186 0
- 901              		.cfi_startproc
- 902              		@ args = 0, pretend = 0, frame = 8
- 903              		@ frame_needed = 1, uses_anonymous_args = 0
- 904 0000 90B5     		push	{r4, r7, lr}
- 905              	.LCFI12:
- 906              		.cfi_def_cfa_offset 12
- 907              		.cfi_offset 14, -4
- 908              		.cfi_offset 7, -8
- 909              		.cfi_offset 4, -12
- 910 0002 85B0     		sub	sp, sp, #20
- 911              	.LCFI13:
- 912              		.cfi_def_cfa_offset 32
- 913 0004 02AF     		add	r7, sp, #8
- 914              	.LCFI14:
- 915              		.cfi_def_cfa 7, 24
- 187:main.c        ****     uint32_t div;
- 188:main.c        ****     uint32_t tcclks;
- 189:main.c        **** 
- 190:main.c        ****     /* Enable peripheral clock. */
- 191:main.c        ****     PMC->PMC_PCER0 = 1 << ID_TC1;
- 916              		.loc 2 191 0
- 917 0006 4FF48063 		mov	r3, #1024
- 918 000a C4F20E03 		movt	r3, 16398
- 919 000e 4FF08072 		mov	r2, #16777216
- 920 0012 1A61     		str	r2, [r3, #16]
- 192:main.c        **** 
- 193:main.c        ****     /* Configure TC */
- 194:main.c        ****     TC_FindMckDivisor(SAMPLING_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
- 921              		.loc 2 194 0
- 922 0014 07F10402 		add	r2, r7, #4
- 923 0018 3C46     		mov	r4, r7
- 924 001a 4FF4D843 		mov	r3, #27648
- 925 001e C0F2DC23 		movt	r3, 732
- 926 0022 0093     		str	r3, [sp, #0]
- 927 0024 4FF00400 		mov	r0, #4
- 928 0028 4FF4D841 		mov	r1, #27648
- 929 002c C0F2DC21 		movt	r1, 732
- 930 0030 2346     		mov	r3, r4
- 931 0032 FFF7FEFF 		bl	TC_FindMckDivisor
- 195:main.c        ****     TC_Configure(TC1, BLINK_TC, tcclks | TC_CMR_CPCTRG);
- 932              		.loc 2 195 0
- 933 0036 3B68     		ldr	r3, [r7, #0]
- 934 0038 43F48043 		orr	r3, r3, #16384
- 935 003c 4FF48040 		mov	r0, #16384
- 936 0040 C4F20100 		movt	r0, 16385
- 937 0044 4FF00001 		mov	r1, #0
- 938 0048 1A46     		mov	r2, r3
- 939 004a FFF7FEFF 		bl	TC_Configure
- 196:main.c        ****     TC1->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / SAMPLING_FREQ;
- 940              		.loc 2 196 0
- 941 004e 4FF48043 		mov	r3, #16384
- 942 0052 C4F20103 		movt	r3, 16385
-ARM GAS  /tmp/ccZvkXpi.s 			page 48
+ 182:main.c        **** void TC1_IrqHandler()
+ 183:main.c        **** {
+ 792              		.loc 2 183 0
+ 793              		.cfi_startproc
+ 794              		@ args = 0, pretend = 0, frame = 8
+ 795              		@ frame_needed = 1, uses_anonymous_args = 0
+ 796              		@ link register save eliminated.
+ 797 0000 80B4     		push	{r7}
+ 798              	.LCFI9:
+ 799              		.cfi_def_cfa_offset 4
+ 800              		.cfi_offset 7, -4
+ 801 0002 83B0     		sub	sp, sp, #12
+ 802              	.LCFI10:
+ 803              		.cfi_def_cfa_offset 16
+ 804 0004 00AF     		add	r7, sp, #0
+ 805              	.LCFI11:
+ 806              		.cfi_def_cfa_register 7
+ 184:main.c        **** 	uint8_t i;
+ 185:main.c        **** 	struct ctrl *loop = loops;
+ 807              		.loc 2 185 0
+ 808 0006 40F20003 		movw	r3, #:lower16:loops
+ 809 000a C0F20003 		movt	r3, #:upper16:loops
+ 810 000e 3B60     		str	r3, [r7, #0]
+ 186:main.c        **** 
+ 187:main.c        **** 	for (i=0; i < LOOPS; i++, loop++) {
+ 811              		.loc 2 187 0
+ 812 0010 4FF00003 		mov	r3, #0
+ 813 0014 FB71     		strb	r3, [r7, #7]
+ 814 0016 22E0     		b	.L40
+ 815              	.L42:
+ 188:main.c        **** 		if ((ADC->ADC_CHSR & (1<<i)) == 0 && loop->mode > OFF)
+ 816              		.loc 2 188 0
+ 817 0018 4FF40043 		mov	r3, #32768
+ 818 001c C4F20303 		movt	r3, 16387
+ 819 0020 9A69     		ldr	r2, [r3, #24]
+ 820 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 821 0024 4FF00101 		mov	r1, #1
+ 822 0028 01FA03F3 		lsl	r3, r1, r3
+ 823 002c 1340     		ands	r3, r3, r2
+ 824 002e 002B     		cmp	r3, #0
+ 825 0030 0DD1     		bne	.L41
+ 826              		.loc 2 188 0 is_stmt 0 discriminator 1
+ 827 0032 3B68     		ldr	r3, [r7, #0]
+ 828 0034 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 829 0036 002B     		cmp	r3, #0
+ 830 0038 09D0     		beq	.L41
+ 189:main.c        **** 			ADC->ADC_CHER = (1<<i); // enable channel
+ 831              		.loc 2 189 0 is_stmt 1
+ 832 003a 4FF40043 		mov	r3, #32768
+ 833 003e C4F20303 		movt	r3, 16387
+ 834 0042 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 835 0044 4FF00101 		mov	r1, #1
+ 836 0048 01FA02F2 		lsl	r2, r1, r2
+ 837 004c 1A61     		str	r2, [r3, #16]
+ 838              	.L41:
+ 187:main.c        **** 	for (i=0; i < LOOPS; i++, loop++) {
+ 839              		.loc 2 187 0
+ARM GAS  /tmp/ccrEF6Gk.s 			page 46
 
 
- 943 0056 7968     		ldr	r1, [r7, #4]
- 944 0058 4FF4D852 		mov	r2, #6912
- 945 005c C0F2B702 		movt	r2, 183
- 946 0060 B2FBF1F2 		udiv	r2, r2, r1
- 947 0064 DA61     		str	r2, [r3, #28]
- 197:main.c        **** 
- 198:main.c        ****     /* Configure and enable interrupt on RC compare */
- 199:main.c        ****     NVIC_EnableIRQ((IRQn_Type) ID_TC1);
- 948              		.loc 2 199 0
- 949 0066 4FF01800 		mov	r0, #24
- 950 006a FFF7FEFF 		bl	NVIC_EnableIRQ
- 200:main.c        ****     TC1->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
- 951              		.loc 2 200 0
- 952 006e 4FF48043 		mov	r3, #16384
- 953 0072 C4F20103 		movt	r3, 16385
- 954 0076 4FF01002 		mov	r2, #16
- 955 007a 5A62     		str	r2, [r3, #36]
+ 840 004e FB79     		ldrb	r3, [r7, #7]
+ 841 0050 03F10103 		add	r3, r3, #1
+ 842 0054 FB71     		strb	r3, [r7, #7]
+ 843 0056 3B68     		ldr	r3, [r7, #0]
+ 844 0058 03F12C03 		add	r3, r3, #44
+ 845 005c 3B60     		str	r3, [r7, #0]
+ 846              	.L40:
+ 187:main.c        **** 	for (i=0; i < LOOPS; i++, loop++) {
+ 847              		.loc 2 187 0 is_stmt 0 discriminator 1
+ 848 005e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 849 0060 012B     		cmp	r3, #1
+ 850 0062 D9D9     		bls	.L42
+ 190:main.c        **** 	}
+ 191:main.c        **** 	ADC_StartConversion(ADC);
+ 851              		.loc 2 191 0 is_stmt 1
+ 852 0064 4FF40043 		mov	r3, #32768
+ 853 0068 C4F20303 		movt	r3, 16387
+ 854 006c 4FF00202 		mov	r2, #2
+ 855 0070 1A60     		str	r2, [r3, #0]
+ 192:main.c        **** }
+ 856              		.loc 2 192 0
+ 857 0072 07F10C07 		add	r7, r7, #12
+ 858 0076 BD46     		mov	sp, r7
+ 859 0078 80BC     		pop	{r7}
+ 860 007a 7047     		bx	lr
+ 861              		.cfi_endproc
+ 862              	.LFE37:
+ 863              		.size	TC1_IrqHandler, .-TC1_IrqHandler
+ 864              		.section	.text.ADC_IrqHandler,"ax",%progbits
+ 865              		.align	2
+ 866              		.global	ADC_IrqHandler
+ 867              		.thumb
+ 868              		.thumb_func
+ 869              		.type	ADC_IrqHandler, %function
+ 870              	ADC_IrqHandler:
+ 871              	.LFB38:
+ 193:main.c        **** 
+ 194:main.c        **** void ADC_IrqHandler(void)
+ 195:main.c        **** {
+ 872              		.loc 2 195 0
+ 873              		.cfi_startproc
+ 874              		@ args = 0, pretend = 0, frame = 16
+ 875              		@ frame_needed = 1, uses_anonymous_args = 0
+ 876 0000 80B5     		push	{r7, lr}
+ 877              	.LCFI12:
+ 878              		.cfi_def_cfa_offset 8
+ 879              		.cfi_offset 14, -4
+ 880              		.cfi_offset 7, -8
+ 881 0002 84B0     		sub	sp, sp, #16
+ 882              	.LCFI13:
+ 883              		.cfi_def_cfa_offset 24
+ 884 0004 00AF     		add	r7, sp, #0
+ 885              	.LCFI14:
+ 886              		.cfi_def_cfa_register 7
+ 196:main.c        **** 	uint8_t i;
+ 197:main.c        **** 	uint8_t msk;
+ 198:main.c        ****     uint32_t status;
+ARM GAS  /tmp/ccrEF6Gk.s 			page 47
+
+
+ 199:main.c        **** 	struct ctrl *loop = loops;
+ 887              		.loc 2 199 0
+ 888 0006 40F20003 		movw	r3, #:lower16:loops
+ 889 000a C0F20003 		movt	r3, #:upper16:loops
+ 890 000e BB60     		str	r3, [r7, #8]
+ 200:main.c        **** 	ctrlio_t x;
  201:main.c        **** 
- 202:main.c        **** 	/* Tick Config */
- 203:main.c        **** 	TimeTick_Configure(BOARD_MCK);
- 956              		.loc 2 203 0
- 957 007c 4FF4D840 		mov	r0, #27648
- 958 0080 C0F2DC20 		movt	r0, 732
- 959 0084 FFF7FEFF 		bl	TimeTick_Configure
- 204:main.c        **** 
- 205:main.c        ****     /* Initialize ADC */
- 206:main.c        ****     ADC_Initialize( ADC, ID_ADC );
- 960              		.loc 2 206 0
- 961 0088 4FF40040 		mov	r0, #32768
- 962 008c C4F20300 		movt	r0, 16387
- 963 0090 4FF01D01 		mov	r1, #29
- 964 0094 FFF7FEFF 		bl	ADC_Initialize
- 207:main.c        **** 
- 208:main.c        ****     /* startup = 15, prescal = 4, ADC clock = 6.4 MHz */
- 209:main.c        ****     ADC_cfgFrequency( ADC, 15, 4 );
- 965              		.loc 2 209 0
- 966 0098 4FF40040 		mov	r0, #32768
- 967 009c C4F20300 		movt	r0, 16387
- 968 00a0 4FF00F01 		mov	r1, #15
- 969 00a4 4FF00402 		mov	r2, #4
- 970 00a8 FFF7FEFF 		bl	ADC_cfgFrequency
+ 202:main.c        ****     status = ADC_GetStatus(ADC);
+ 891              		.loc 2 202 0
+ 892 0010 4FF40043 		mov	r3, #32768
+ 893 0014 C4F20303 		movt	r3, 16387
+ 894 0018 1B6B     		ldr	r3, [r3, #48]
+ 895 001a 7B60     		str	r3, [r7, #4]
+ 203:main.c        **** 
+ 204:main.c        **** 	for (i=0, msk=1; i < LOOPS; i++, msk<<=1, loop++) {
+ 896              		.loc 2 204 0
+ 897 001c 4FF00003 		mov	r3, #0
+ 898 0020 FB73     		strb	r3, [r7, #15]
+ 899 0022 4FF00103 		mov	r3, #1
+ 900 0026 BB73     		strb	r3, [r7, #14]
+ 901 0028 4EE0     		b	.L44
+ 902              	.L50:
+ 205:main.c        **** 		if (!((status & msk) == msk)) // check End of Conversion flag for channel i
+ 903              		.loc 2 205 0
+ 904 002a BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
+ 905 002c 7B68     		ldr	r3, [r7, #4]
+ 906 002e 1A40     		ands	r2, r2, r3
+ 907 0030 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 908 0032 9A42     		cmp	r2, r3
+ 909 0034 3BD1     		bne	.L51
+ 910              	.L45:
+ 206:main.c        **** 			continue;
+ 207:main.c        **** 			
+ 208:main.c        **** 		x = (ctrlio_t) *(ADC->ADC_CDR+i); // read channel data
+ 911              		.loc 2 208 0
+ 912 0036 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 913 0038 4FEA8302 		lsl	r2, r3, #2
+ 914 003c 48F25003 		movw	r3, #32848
+ 915 0040 C4F20303 		movt	r3, 16387
+ 916 0044 D318     		adds	r3, r2, r3
+ 917 0046 1B68     		ldr	r3, [r3, #0]
+ 918 0048 7B80     		strh	r3, [r7, #2]	@ movhi
+ 209:main.c        **** 		x = LIMIT(x, conf[i].min, conf[i].max);
+ 919              		.loc 2 209 0
+ 920 004a FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
+ 921 004c 40F20003 		movw	r3, #:lower16:conf
+ 922 0050 C0F20003 		movt	r3, #:upper16:conf
+ 923 0054 33F83230 		ldrh	r3, [r3, r2, lsl #3]
+ 924 0058 7A88     		ldrh	r2, [r7, #2]
+ 925 005a 9A42     		cmp	r2, r3
+ 926 005c 07D2     		bcs	.L47
+ 927              		.loc 2 209 0 is_stmt 0 discriminator 1
+ 928 005e FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
+ 929 0060 40F20003 		movw	r3, #:lower16:conf
+ 930 0064 C0F20003 		movt	r3, #:upper16:conf
+ 931 0068 33F83230 		ldrh	r3, [r3, r2, lsl #3]
+ 932 006c 0DE0     		b	.L48
+ARM GAS  /tmp/ccrEF6Gk.s 			page 48
+
+
+ 933              	.L47:
+ 934              		.loc 2 209 0 discriminator 2
+ 935 006e FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 936 0070 40F20002 		movw	r2, #:lower16:conf
+ 937 0074 C0F20002 		movt	r2, #:upper16:conf
+ 938 0078 4FEAC303 		lsl	r3, r3, #3
+ 939 007c D318     		adds	r3, r2, r3
+ 940 007e 5A88     		ldrh	r2, [r3, #2]
+ 941 0080 7B88     		ldrh	r3, [r7, #2]
+ 942 0082 9A42     		cmp	r2, r3
+ 943 0084 38BF     		it	cc
+ 944 0086 1346     		movcc	r3, r2
+ 945 0088 9BB2     		uxth	r3, r3
+ 946              	.L48:
+ 947              		.loc 2 209 0 discriminator 3
+ 948 008a 7B80     		strh	r3, [r7, #2]	@ movhi
  210:main.c        **** 
- 211:main.c        ****     /* Enable ADC interrupt */
- 212:main.c        ****     NVIC_EnableIRQ(ADC_IRQn);
- 971              		.loc 2 212 0
- 972 00ac 4FF01D00 		mov	r0, #29
- 973 00b0 FFF7FEFF 		bl	NVIC_EnableIRQ
- 213:main.c        ****     ADC->ADC_IER = ADC_EOC_IRQS;
- 974              		.loc 2 213 0
- 975 00b4 4FF40043 		mov	r3, #32768
- 976 00b8 C4F20303 		movt	r3, 16387
- 977 00bc 4FF00302 		mov	r2, #3
- 978 00c0 5A62     		str	r2, [r3, #36]
- 214:main.c        **** 
- 215:main.c        **** 	/* LED PIO Config */
- 216:main.c        **** 	LEDs_configure();
- 979              		.loc 2 216 0
-ARM GAS  /tmp/ccZvkXpi.s 			page 49
+ 211:main.c        **** 		if (loop->mode > OFF) {
+ 949              		.loc 2 211 0 is_stmt 1 discriminator 3
+ 950 008c BB68     		ldr	r3, [r7, #8]
+ 951 008e 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 952 0090 002B     		cmp	r3, #0
+ 953 0092 05D0     		beq	.L49
+ 212:main.c        **** 			control(x, loop);    // run controller
+ 954              		.loc 2 212 0
+ 955 0094 7B88     		ldrh	r3, [r7, #2]
+ 956 0096 1846     		mov	r0, r3
+ 957 0098 B968     		ldr	r1, [r7, #8]
+ 958 009a FFF7FEFF 		bl	control
+ 959 009e 07E0     		b	.L46
+ 960              	.L49:
+ 213:main.c        **** 			// write output here
+ 214:main.c        **** 		}
+ 215:main.c        **** 		else {
+ 216:main.c        **** 			ADC->ADC_CHDR = msk; // disable channel
+ 961              		.loc 2 216 0
+ 962 00a0 4FF40043 		mov	r3, #32768
+ 963 00a4 C4F20303 		movt	r3, 16387
+ 964 00a8 BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
+ 965 00aa 5A61     		str	r2, [r3, #20]
+ 966 00ac 00E0     		b	.L46
+ 967              	.L51:
+ 206:main.c        **** 			continue;
+ 968              		.loc 2 206 0
+ 969 00ae 00BF     		nop
+ 970              	.L46:
+ 204:main.c        **** 	for (i=0, msk=1; i < LOOPS; i++, msk<<=1, loop++) {
+ 971              		.loc 2 204 0
+ 972 00b0 FB7B     		ldrb	r3, [r7, #15]
+ 973 00b2 03F10103 		add	r3, r3, #1
+ 974 00b6 FB73     		strb	r3, [r7, #15]
+ 975 00b8 BB7B     		ldrb	r3, [r7, #14]
+ 976 00ba 4FEA4303 		lsl	r3, r3, #1
+ 977 00be BB73     		strb	r3, [r7, #14]
+ 978 00c0 BB68     		ldr	r3, [r7, #8]
+ 979 00c2 03F12C03 		add	r3, r3, #44
+ 980 00c6 BB60     		str	r3, [r7, #8]
+ARM GAS  /tmp/ccrEF6Gk.s 			page 49
 
 
- 980 00c2 FFF7FEFF 		bl	LEDs_configure
- 217:main.c        **** 	LED_clr(statusled);
- 981              		.loc 2 217 0
- 982 00c6 4FF00000 		mov	r0, #0
- 983 00ca FFF7FEFF 		bl	LED_clr
- 218:main.c        **** 
- 219:main.c        **** 	/* USB Console Config */
- 220:main.c        **** 	USBC_Configure();
- 984              		.loc 2 220 0
- 985 00ce FFF7FEFF 		bl	USBC_Configure
- 221:main.c        **** 
- 222:main.c        **** }
- 986              		.loc 2 222 0
- 987 00d2 07F10C07 		add	r7, r7, #12
- 988 00d6 BD46     		mov	sp, r7
- 989 00d8 90BD     		pop	{r4, r7, pc}
+ 981              	.L44:
+ 204:main.c        **** 	for (i=0, msk=1; i < LOOPS; i++, msk<<=1, loop++) {
+ 982              		.loc 2 204 0 is_stmt 0 discriminator 1
+ 983 00c8 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 984 00ca 012B     		cmp	r3, #1
+ 985 00cc ADD9     		bls	.L50
+ 217:main.c        **** 			// reset output here
+ 218:main.c        **** 		}
+ 219:main.c        **** 	}
+ 220:main.c        **** }
+ 986              		.loc 2 220 0 is_stmt 1
+ 987 00ce 07F11007 		add	r7, r7, #16
+ 988 00d2 BD46     		mov	sp, r7
+ 989 00d4 80BD     		pop	{r7, pc}
  990              		.cfi_endproc
  991              	.LFE38:
- 992              		.size	init, .-init
- 993 00da 00BF     		.text
+ 992              		.size	ADC_IrqHandler, .-ADC_IrqHandler
+ 993 00d6 00BF     		.text
  994              	.Letext0:
  995              		.file 3 "/usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/
  996              		.file 4 "/usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/include/
@@ -2938,11 +2936,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1028 003a B0080000 		.4byte	.LASF2
  1029 003e 02       		.uleb128 0x2
  1030 003f 02       		.byte	0x2
-ARM GAS  /tmp/ccZvkXpi.s 			page 50
-
-
  1031 0040 07       		.byte	0x7
  1032 0041 B0090000 		.4byte	.LASF3
+ARM GAS  /tmp/ccrEF6Gk.s 			page 50
+
+
  1033 0045 03       		.uleb128 0x3
  1034 0046 04       		.byte	0x4
  1035 0047 05       		.byte	0x5
@@ -2998,11 +2996,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1085 00aa 30000000 		.4byte	0x30
  1086 00ae B9000000 		.4byte	0xb9
  1087 00b2 09       		.uleb128 0x9
-ARM GAS  /tmp/ccZvkXpi.s 			page 51
-
-
  1088 00b3 4C000000 		.4byte	0x4c
  1089 00b7 03       		.byte	0x3
+ARM GAS  /tmp/ccrEF6Gk.s 			page 51
+
+
  1090 00b8 00       		.byte	0
  1091 00b9 0A       		.uleb128 0xa
  1092 00ba 08       		.byte	0x8
@@ -3058,11 +3056,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1142 0119 06       		.byte	0x6
  1143 011a 2E       		.byte	0x2e
  1144 011b 67010000 		.4byte	0x167
-ARM GAS  /tmp/ccZvkXpi.s 			page 52
-
-
  1145 011f 02       		.byte	0x2
  1146 0120 23       		.byte	0x23
+ARM GAS  /tmp/ccrEF6Gk.s 			page 52
+
+
  1147 0121 00       		.uleb128 0
  1148 0122 0E       		.uleb128 0xe
  1149 0123 5F6B00   		.ascii	"_k\000"
@@ -3118,11 +3116,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1199 017d 0D       		.uleb128 0xd
  1200 017e 98000000 		.4byte	.LASF24
  1201 0182 24       		.byte	0x24
-ARM GAS  /tmp/ccZvkXpi.s 			page 53
-
-
  1202 0183 06       		.byte	0x6
  1203 0184 34       		.byte	0x34
+ARM GAS  /tmp/ccrEF6Gk.s 			page 53
+
+
  1204 0185 08020000 		.4byte	0x208
  1205 0189 0B       		.uleb128 0xb
  1206 018a B4000000 		.4byte	.LASF25
@@ -3178,11 +3176,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1256 01e3 3C       		.byte	0x3c
  1257 01e4 45000000 		.4byte	0x45
  1258 01e8 02       		.byte	0x2
-ARM GAS  /tmp/ccZvkXpi.s 			page 54
-
-
  1259 01e9 23       		.byte	0x23
  1260 01ea 18       		.uleb128 0x18
+ARM GAS  /tmp/ccrEF6Gk.s 			page 54
+
+
  1261 01eb 0B       		.uleb128 0xb
  1262 01ec 67060000 		.4byte	.LASF32
  1263 01f0 06       		.byte	0x6
@@ -3238,11 +3236,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1313 024c 03       		.byte	0x3
  1314 024d 23       		.byte	0x23
  1315 024e 8402     		.uleb128 0x104
-ARM GAS  /tmp/ccZvkXpi.s 			page 55
-
-
  1316 0250 00       		.byte	0
  1317 0251 08       		.uleb128 0x8
+ARM GAS  /tmp/ccrEF6Gk.s 			page 55
+
+
  1318 0252 F4000000 		.4byte	0xf4
  1319 0256 61020000 		.4byte	0x261
  1320 025a 09       		.uleb128 0x9
@@ -3298,11 +3296,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1370 02b7 4C000000 		.4byte	0x4c
  1371 02bb 1F       		.byte	0x1f
  1372 02bc 00       		.byte	0
-ARM GAS  /tmp/ccZvkXpi.s 			page 56
-
-
  1373 02bd 11       		.uleb128 0x11
  1374 02be 01       		.byte	0x1
+ARM GAS  /tmp/ccrEF6Gk.s 			page 56
+
+
  1375 02bf 0F       		.uleb128 0xf
  1376 02c0 04       		.byte	0x4
  1377 02c1 BD020000 		.4byte	0x2bd
@@ -3358,11 +3356,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1427 0323 23       		.byte	0x23
  1428 0324 04       		.uleb128 0x4
  1429 0325 13       		.uleb128 0x13
-ARM GAS  /tmp/ccZvkXpi.s 			page 57
-
-
  1430 0326 0E070000 		.4byte	.LASF49
  1431 032a 06       		.byte	0x6
+ARM GAS  /tmp/ccrEF6Gk.s 			page 57
+
+
  1432 032b 8401     		.2byte	0x184
  1433 032d E3060000 		.4byte	0x6e3
  1434 0331 02       		.byte	0x2
@@ -3418,11 +3416,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1484 038d 20       		.uleb128 0x20
  1485 038e 14       		.uleb128 0x14
  1486 038f 5F6D7000 		.ascii	"_mp\000"
-ARM GAS  /tmp/ccZvkXpi.s 			page 58
-
-
  1487 0393 06       		.byte	0x6
  1488 0394 8F01     		.2byte	0x18f
+ARM GAS  /tmp/ccrEF6Gk.s 			page 58
+
+
  1489 0396 56080000 		.4byte	0x856
  1490 039a 02       		.byte	0x2
  1491 039b 23       		.byte	0x23
@@ -3478,11 +3476,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1541 03f7 13       		.uleb128 0x13
  1542 03f8 6B000000 		.4byte	.LASF62
  1543 03fc 06       		.byte	0x6
-ARM GAS  /tmp/ccZvkXpi.s 			page 59
-
-
  1544 03fd 9B01     		.2byte	0x19b
  1545 03ff F3050000 		.4byte	0x5f3
+ARM GAS  /tmp/ccrEF6Gk.s 			page 59
+
+
  1546 0403 02       		.byte	0x2
  1547 0404 23       		.byte	0x23
  1548 0405 40       		.uleb128 0x40
@@ -3538,11 +3536,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1598 0464 8F040000 		.4byte	.LASF68
  1599 0468 06       		.byte	0x6
  1600 0469 A701     		.2byte	0x1a7
-ARM GAS  /tmp/ccZvkXpi.s 			page 60
-
-
  1601 046b F3050000 		.4byte	0x5f3
  1602 046f 03       		.byte	0x3
+ARM GAS  /tmp/ccrEF6Gk.s 			page 60
+
+
  1603 0470 23       		.byte	0x23
  1604 0471 EC01     		.uleb128 0xec
  1605 0473 00       		.byte	0
@@ -3598,11 +3596,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1655 04c9 0E       		.uleb128 0xe
  1656 04ca 5F626600 		.ascii	"_bf\000"
  1657 04ce 06       		.byte	0x6
-ARM GAS  /tmp/ccZvkXpi.s 			page 61
-
-
  1658 04cf B9       		.byte	0xb9
  1659 04d0 CB020000 		.4byte	0x2cb
+ARM GAS  /tmp/ccrEF6Gk.s 			page 61
+
+
  1660 04d4 02       		.byte	0x2
  1661 04d5 23       		.byte	0x23
  1662 04d6 10       		.uleb128 0x10
@@ -3658,11 +3656,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1712 052c D2020000 		.4byte	.LASF78
  1713 0530 06       		.byte	0x6
  1714 0531 C8       		.byte	0xc8
-ARM GAS  /tmp/ccZvkXpi.s 			page 62
-
-
  1715 0532 70060000 		.4byte	0x670
  1716 0536 02       		.byte	0x2
+ARM GAS  /tmp/ccrEF6Gk.s 			page 62
+
+
  1717 0537 23       		.byte	0x23
  1718 0538 30       		.uleb128 0x30
  1719 0539 0E       		.uleb128 0xe
@@ -3718,11 +3716,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1769 0592 06       		.byte	0x6
  1770 0593 D7       		.byte	0xd7
  1771 0594 45000000 		.4byte	0x45
-ARM GAS  /tmp/ccZvkXpi.s 			page 63
-
-
  1772 0598 02       		.byte	0x2
  1773 0599 23       		.byte	0x23
+ARM GAS  /tmp/ccrEF6Gk.s 			page 63
+
+
  1774 059a 50       		.uleb128 0x50
  1775 059b 0B       		.uleb128 0xb
  1776 059c 70030000 		.4byte	.LASF82
@@ -3778,11 +3776,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1826 05fb 08       		.byte	0x8
  1827 05fc BA020000 		.4byte	.LASF86
  1828 0600 0F       		.uleb128 0xf
-ARM GAS  /tmp/ccZvkXpi.s 			page 64
-
-
  1829 0601 04       		.byte	0x4
  1830 0602 D4050000 		.4byte	0x5d4
+ARM GAS  /tmp/ccrEF6Gk.s 			page 64
+
+
  1831 0606 15       		.uleb128 0x15
  1832 0607 01       		.byte	0x1
  1833 0608 45000000 		.4byte	0x45
@@ -3838,11 +3836,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1883 067f 09       		.uleb128 0x9
  1884 0680 4C000000 		.4byte	0x4c
  1885 0684 02       		.byte	0x2
-ARM GAS  /tmp/ccZvkXpi.s 			page 65
-
-
  1886 0685 00       		.byte	0
  1887 0686 08       		.uleb128 0x8
+ARM GAS  /tmp/ccrEF6Gk.s 			page 65
+
+
  1888 0687 30000000 		.4byte	0x30
  1889 068b 96060000 		.4byte	0x696
  1890 068f 09       		.uleb128 0x9
@@ -3898,11 +3896,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1940 06f0 3E01     		.2byte	0x13e
  1941 06f2 33070000 		.4byte	0x733
  1942 06f6 13       		.uleb128 0x13
-ARM GAS  /tmp/ccZvkXpi.s 			page 66
-
-
  1943 06f7 7A060000 		.4byte	.LASF92
  1944 06fb 06       		.byte	0x6
+ARM GAS  /tmp/ccrEF6Gk.s 			page 66
+
+
  1945 06fc 3F01     		.2byte	0x13f
  1946 06fe 33070000 		.4byte	0x733
  1947 0702 02       		.byte	0x2
@@ -3958,11 +3956,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  1997 0760 90010000 		.4byte	.LASF98
  1998 0764 06       		.byte	0x6
  1999 0765 6301     		.2byte	0x163
-ARM GAS  /tmp/ccZvkXpi.s 			page 67
-
-
  2000 0767 45000000 		.4byte	0x45
  2001 076b 02       		.byte	0x2
+ARM GAS  /tmp/ccrEF6Gk.s 			page 67
+
+
  2002 076c 23       		.byte	0x23
  2003 076d 04       		.uleb128 0x4
  2004 076e 13       		.uleb128 0x13
@@ -4018,11 +4016,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2054 07cd 13       		.uleb128 0x13
  2055 07ce A9060000 		.4byte	.LASF105
  2056 07d2 06       		.byte	0x6
-ARM GAS  /tmp/ccZvkXpi.s 			page 68
-
-
  2057 07d3 6F01     		.2byte	0x16f
  2058 07d5 DE000000 		.4byte	0xde
+ARM GAS  /tmp/ccrEF6Gk.s 			page 68
+
+
  2059 07d9 02       		.byte	0x2
  2060 07da 23       		.byte	0x23
  2061 07db 14       		.uleb128 0x14
@@ -4078,11 +4076,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2111 0837 9D000000 		.4byte	.LASF112
  2112 083b 06       		.byte	0x6
  2113 083c 7601     		.2byte	0x176
-ARM GAS  /tmp/ccZvkXpi.s 			page 69
-
-
  2114 083e DE000000 		.4byte	0xde
  2115 0842 02       		.byte	0x2
+ARM GAS  /tmp/ccrEF6Gk.s 			page 69
+
+
  2116 0843 23       		.byte	0x23
  2117 0844 48       		.uleb128 0x48
  2118 0845 00       		.byte	0
@@ -4138,11 +4136,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2168 08aa 3E000000 		.4byte	0x3e
  2169 08ae 04       		.uleb128 0x4
  2170 08af 80090000 		.4byte	.LASF115
-ARM GAS  /tmp/ccZvkXpi.s 			page 70
-
-
  2171 08b3 07       		.byte	0x7
  2172 08b4 50       		.byte	0x50
+ARM GAS  /tmp/ccrEF6Gk.s 			page 70
+
+
  2173 08b5 01010000 		.4byte	0x101
  2174 08b9 19       		.uleb128 0x19
  2175 08ba AE080000 		.4byte	0x8ae
@@ -4198,11 +4196,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2225 091f 5D030000 		.4byte	.LASF130
  2226 0923 06       		.sleb128 6
  2227 0924 1B       		.uleb128 0x1b
-ARM GAS  /tmp/ccZvkXpi.s 			page 71
-
-
  2228 0925 94070000 		.4byte	.LASF131
  2229 0929 08       		.sleb128 8
+ARM GAS  /tmp/ccrEF6Gk.s 			page 71
+
+
  2230 092a 1B       		.uleb128 0x1b
  2231 092b 86060000 		.4byte	.LASF132
  2232 092f 09       		.sleb128 9
@@ -4258,11 +4256,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2282 0991 D5010000 		.4byte	.LASF149
  2283 0995 1C       		.sleb128 28
  2284 0996 1B       		.uleb128 0x1b
-ARM GAS  /tmp/ccZvkXpi.s 			page 72
-
-
  2285 0997 4D070000 		.4byte	.LASF150
  2286 099b 1D       		.sleb128 29
+ARM GAS  /tmp/ccrEF6Gk.s 			page 72
+
+
  2287 099c 1B       		.uleb128 0x1b
  2288 099d D8030000 		.4byte	.LASF151
  2289 09a1 1E       		.sleb128 30
@@ -4318,11 +4316,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2339 09ff 01       		.byte	0x1
  2340 0a00 89       		.byte	0x89
  2341 0a01 A50A0000 		.4byte	0xaa5
-ARM GAS  /tmp/ccZvkXpi.s 			page 73
-
-
  2342 0a05 03       		.byte	0x3
  2343 0a06 23       		.byte	0x23
+ARM GAS  /tmp/ccrEF6Gk.s 			page 73
+
+
  2344 0a07 A001     		.uleb128 0xa0
  2345 0a09 0B       		.uleb128 0xb
  2346 0a0a 18030000 		.4byte	.LASF161
@@ -4378,11 +4376,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2396 0a68 90       		.byte	0x90
  2397 0a69 E90A0000 		.4byte	0xae9
  2398 0a6d 03       		.byte	0x3
-ARM GAS  /tmp/ccZvkXpi.s 			page 74
-
-
  2399 0a6e 23       		.byte	0x23
  2400 0a6f 8006     		.uleb128 0x300
+ARM GAS  /tmp/ccrEF6Gk.s 			page 74
+
+
  2401 0a71 0B       		.uleb128 0xb
  2402 0a72 6C020000 		.4byte	.LASF167
  2403 0a76 01       		.byte	0x1
@@ -4438,11 +4436,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2453 0ae3 4C000000 		.4byte	0x4c
  2454 0ae7 EF       		.byte	0xef
  2455 0ae8 00       		.byte	0
-ARM GAS  /tmp/ccZvkXpi.s 			page 75
-
-
  2456 0ae9 19       		.uleb128 0x19
  2457 0aea D90A0000 		.4byte	0xad9
+ARM GAS  /tmp/ccrEF6Gk.s 			page 75
+
+
  2458 0aee 08       		.uleb128 0x8
  2459 0aef AE080000 		.4byte	0x8ae
  2460 0af3 FF0A0000 		.4byte	0xaff
@@ -4498,11 +4496,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2510 0b57 0B       		.uleb128 0xb
  2511 0b58 C5070000 		.4byte	.LASF173
  2512 0b5c 08       		.byte	0x8
-ARM GAS  /tmp/ccZvkXpi.s 			page 76
-
-
  2513 0b5d F3       		.byte	0xf3
  2514 0b5e 0A0B0000 		.4byte	0xb0a
+ARM GAS  /tmp/ccrEF6Gk.s 			page 76
+
+
  2515 0b62 02       		.byte	0x2
  2516 0b63 23       		.byte	0x23
  2517 0b64 0C       		.uleb128 0xc
@@ -4558,11 +4556,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2567 0bba BF050000 		.4byte	.LASF180
  2568 0bbe 08       		.byte	0x8
  2569 0bbf FA       		.byte	0xfa
-ARM GAS  /tmp/ccZvkXpi.s 			page 77
-
-
  2570 0bc0 0A0B0000 		.4byte	0xb0a
  2571 0bc4 02       		.byte	0x2
+ARM GAS  /tmp/ccrEF6Gk.s 			page 77
+
+
  2572 0bc5 23       		.byte	0x23
  2573 0bc6 28       		.uleb128 0x28
  2574 0bc7 0B       		.uleb128 0xb
@@ -4618,11 +4616,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2624 0c21 08       		.byte	0x8
  2625 0c22 0101     		.2byte	0x101
  2626 0c24 0A0B0000 		.4byte	0xb0a
-ARM GAS  /tmp/ccZvkXpi.s 			page 78
-
-
  2627 0c28 02       		.byte	0x2
  2628 0c29 23       		.byte	0x23
+ARM GAS  /tmp/ccrEF6Gk.s 			page 78
+
+
  2629 0c2a 48       		.uleb128 0x48
  2630 0c2b 13       		.uleb128 0x13
  2631 0c2c FB060000 		.4byte	.LASF188
@@ -4678,11 +4676,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2681 0c8f 0801     		.2byte	0x108
  2682 0c91 0F0B0000 		.4byte	0xb0f
  2683 0c95 03       		.byte	0x3
-ARM GAS  /tmp/ccZvkXpi.s 			page 79
-
-
  2684 0c96 23       		.byte	0x23
  2685 0c97 E801     		.uleb128 0xe8
+ARM GAS  /tmp/ccrEF6Gk.s 			page 79
+
+
  2686 0c99 13       		.uleb128 0x13
  2687 0c9a 1D080000 		.4byte	.LASF195
  2688 0c9e 08       		.byte	0x8
@@ -4738,11 +4736,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2738 0d01 0A0B0000 		.4byte	0xb0a
  2739 0d05 03       		.byte	0x3
  2740 0d06 23       		.byte	0x23
-ARM GAS  /tmp/ccZvkXpi.s 			page 80
-
-
  2741 0d07 9402     		.uleb128 0x114
  2742 0d09 13       		.uleb128 0x13
+ARM GAS  /tmp/ccrEF6Gk.s 			page 80
+
+
  2743 0d0a 0E010000 		.4byte	.LASF202
  2744 0d0e 08       		.byte	0x8
  2745 0d0f 1001     		.2byte	0x110
@@ -4798,11 +4796,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2795 0d79 840D0000 		.4byte	0xd84
  2796 0d7d 09       		.uleb128 0x9
  2797 0d7e 4C000000 		.4byte	0x4c
-ARM GAS  /tmp/ccZvkXpi.s 			page 81
-
-
  2798 0d82 0F       		.byte	0xf
  2799 0d83 00       		.byte	0
+ARM GAS  /tmp/ccrEF6Gk.s 			page 81
+
+
  2800 0d84 17       		.uleb128 0x17
  2801 0d85 890D0000 		.4byte	0xd89
  2802 0d89 19       		.uleb128 0x19
@@ -4858,11 +4856,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2852 0df6 08       		.byte	0x8
  2853 0df7 480D     		.2byte	0xd48
  2854 0df9 0F0B0000 		.4byte	0xb0f
-ARM GAS  /tmp/ccZvkXpi.s 			page 82
-
-
  2855 0dfd 02       		.byte	0x2
  2856 0dfe 23       		.byte	0x23
+ARM GAS  /tmp/ccrEF6Gk.s 			page 82
+
+
  2857 0dff 08       		.uleb128 0x8
  2858 0e00 13       		.uleb128 0x13
  2859 0e01 F5070000 		.4byte	.LASF177
@@ -4918,11 +4916,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2909 0e60 4F0D     		.2byte	0xd4f
  2910 0e62 0F0B0000 		.4byte	0xb0f
  2911 0e66 02       		.byte	0x2
-ARM GAS  /tmp/ccZvkXpi.s 			page 83
-
-
  2912 0e67 23       		.byte	0x23
  2913 0e68 24       		.uleb128 0x24
+ARM GAS  /tmp/ccrEF6Gk.s 			page 83
+
+
  2914 0e69 13       		.uleb128 0x13
  2915 0e6a 7B0A0000 		.4byte	.LASF214
  2916 0e6e 08       		.byte	0x8
@@ -4978,11 +4976,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  2966 0ecb FE0F0000 		.4byte	0xffe
  2967 0ecf 02       		.byte	0x2
  2968 0ed0 23       		.byte	0x23
-ARM GAS  /tmp/ccZvkXpi.s 			page 84
-
-
  2969 0ed1 40       		.uleb128 0x40
  2970 0ed2 13       		.uleb128 0x13
+ARM GAS  /tmp/ccrEF6Gk.s 			page 84
+
+
  2971 0ed3 1D080000 		.4byte	.LASF195
  2972 0ed7 08       		.byte	0x8
  2973 0ed8 570D     		.2byte	0xd57
@@ -5038,11 +5036,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3023 0f38 02       		.byte	0x2
  3024 0f39 23       		.byte	0x23
  3025 0f3a 74       		.uleb128 0x74
-ARM GAS  /tmp/ccZvkXpi.s 			page 85
-
-
  3026 0f3b 13       		.uleb128 0x13
  3027 0f3c 3A080000 		.4byte	.LASF225
+ARM GAS  /tmp/ccrEF6Gk.s 			page 85
+
+
  3028 0f40 08       		.byte	0x8
  3029 0f41 5E0D     		.2byte	0xd5e
  3030 0f43 0A0B0000 		.4byte	0xb0a
@@ -5098,11 +5096,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3080 0fa6 23       		.byte	0x23
  3081 0fa7 8402     		.uleb128 0x104
  3082 0fa9 13       		.uleb128 0x13
-ARM GAS  /tmp/ccZvkXpi.s 			page 86
-
-
  3083 0faa 680A0000 		.4byte	.LASF232
  3084 0fae 08       		.byte	0x8
+ARM GAS  /tmp/ccrEF6Gk.s 			page 86
+
+
  3085 0faf 650D     		.2byte	0xd65
  3086 0fb1 0F0B0000 		.4byte	0xb0f
  3087 0fb5 03       		.byte	0x3
@@ -5158,11 +5156,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3137 1022 19       		.uleb128 0x19
  3138 1023 4A0D0000 		.4byte	0xd4a
  3139 1027 1E       		.uleb128 0x1e
-ARM GAS  /tmp/ccZvkXpi.s 			page 87
-
-
  3140 1028 506D6300 		.ascii	"Pmc\000"
  3141 102c 08       		.byte	0x8
+ARM GAS  /tmp/ccrEF6Gk.s 			page 87
+
+
  3142 102d 680D     		.2byte	0xd68
  3143 102f C90D0000 		.4byte	0xdc9
  3144 1033 20       		.uleb128 0x20
@@ -5218,11 +5216,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3194 1093 02       		.byte	0x2
  3195 1094 23       		.byte	0x23
  3196 1095 14       		.uleb128 0x14
-ARM GAS  /tmp/ccZvkXpi.s 			page 88
-
-
  3197 1096 13       		.uleb128 0x13
  3198 1097 AE020000 		.4byte	.LASF240
+ARM GAS  /tmp/ccrEF6Gk.s 			page 88
+
+
  3199 109b 08       		.byte	0x8
  3200 109c 5215     		.2byte	0x1552
  3201 109e 0A0B0000 		.4byte	0xb0a
@@ -5278,11 +5276,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3251 10fd 23       		.byte	0x23
  3252 10fe 30       		.uleb128 0x30
  3253 10ff 00       		.byte	0
-ARM GAS  /tmp/ccZvkXpi.s 			page 89
-
-
  3254 1100 19       		.uleb128 0x19
  3255 1101 4A0D0000 		.4byte	0xd4a
+ARM GAS  /tmp/ccrEF6Gk.s 			page 89
+
+
  3256 1105 19       		.uleb128 0x19
  3257 1106 B90D0000 		.4byte	0xdb9
  3258 110a 05       		.uleb128 0x5
@@ -5338,11 +5336,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3308 116e 13       		.uleb128 0x13
  3309 116f 06010000 		.4byte	.LASF252
  3310 1173 08       		.byte	0x8
-ARM GAS  /tmp/ccZvkXpi.s 			page 90
-
-
  3311 1174 6115     		.2byte	0x1561
  3312 1176 0F0B0000 		.4byte	0xb0f
+ARM GAS  /tmp/ccrEF6Gk.s 			page 90
+
+
  3313 117a 03       		.byte	0x3
  3314 117b 23       		.byte	0x23
  3315 117c D001     		.uleb128 0xd0
@@ -5398,11 +5396,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3365 11e1 08       		.byte	0x8
  3366 11e2 7C19     		.2byte	0x197c
  3367 11e4 16120000 		.4byte	0x1216
-ARM GAS  /tmp/ccZvkXpi.s 			page 91
-
-
  3368 11e8 13       		.uleb128 0x13
  3369 11e9 87020000 		.4byte	.LASF256
+ARM GAS  /tmp/ccrEF6Gk.s 			page 91
+
+
  3370 11ed 08       		.byte	0x8
  3371 11ee 7D19     		.2byte	0x197d
  3372 11f0 0A0B0000 		.4byte	0xb0a
@@ -5458,11 +5456,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3422 124f 71050000 		.4byte	.LASF263
  3423 1253 09       		.byte	0x9
  3424 1254 12       		.byte	0x12
-ARM GAS  /tmp/ccZvkXpi.s 			page 92
-
-
  3425 1255 2D120000 		.4byte	0x122d
  3426 1259 0D       		.uleb128 0xd
+ARM GAS  /tmp/ccrEF6Gk.s 			page 92
+
+
  3427 125a 7B020000 		.4byte	.LASF264
  3428 125e 2C       		.byte	0x2c
  3429 125f 09       		.byte	0x9
@@ -5518,11 +5516,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3479 12b5 0E       		.uleb128 0xe
  3480 12b6 0E       		.uleb128 0xe
  3481 12b7 4B6400   		.ascii	"Kd\000"
-ARM GAS  /tmp/ccZvkXpi.s 			page 93
-
-
  3482 12ba 09       		.byte	0x9
  3483 12bb 1D       		.byte	0x1d
+ARM GAS  /tmp/ccrEF6Gk.s 			page 93
+
+
  3484 12bc 22120000 		.4byte	0x1222
  3485 12c0 02       		.byte	0x2
  3486 12c1 23       		.byte	0x23
@@ -5578,11 +5576,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3536 1315 0B       		.uleb128 0xb
  3537 1316 45010000 		.4byte	.LASF269
  3538 131a 09       		.byte	0x9
-ARM GAS  /tmp/ccZvkXpi.s 			page 94
-
-
  3539 131b 27       		.byte	0x27
  3540 131c 68130000 		.4byte	0x1368
+ARM GAS  /tmp/ccrEF6Gk.s 			page 94
+
+
  3541 1320 02       		.byte	0x2
  3542 1321 23       		.byte	0x23
  3543 1322 28       		.uleb128 0x28
@@ -5638,11 +5636,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3593 1377 0C       		.byte	0xc
  3594 1378 B5130000 		.4byte	0x13b5
  3595 137c 0E       		.uleb128 0xe
-ARM GAS  /tmp/ccZvkXpi.s 			page 95
-
-
  3596 137d 6D696E00 		.ascii	"min\000"
  3597 1381 02       		.byte	0x2
+ARM GAS  /tmp/ccrEF6Gk.s 			page 95
+
+
  3598 1382 0D       		.byte	0xd
  3599 1383 22120000 		.4byte	0x1222
  3600 1387 02       		.byte	0x2
@@ -5692,185 +5690,185 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3644 13dc 77       		.sleb128 -9
  3645 13dd 00       		.byte	0
  3646 13de 25       		.uleb128 0x25
- 3647 13df 01       		.byte	0x1
- 3648 13e0 CB010000 		.4byte	.LASF277
- 3649 13e4 02       		.byte	0x2
- 3650 13e5 15       		.byte	0x15
- 3651 13e6 45000000 		.4byte	0x45
- 3652 13ea 00000000 		.4byte	.LFB35
-ARM GAS  /tmp/ccZvkXpi.s 			page 96
+ 3647 13df E4070000 		.4byte	.LASF292
+ 3648 13e3 02       		.byte	0x2
+ 3649 13e4 13       		.byte	0x13
+ 3650 13e5 00000000 		.4byte	.LFB35
+ 3651 13e9 DA000000 		.4byte	.LFE35
+ 3652 13ed 38000000 		.4byte	.LLST1
+ 3653 13f1 12140000 		.4byte	0x1412
+ 3654 13f5 26       		.uleb128 0x26
+ARM GAS  /tmp/ccrEF6Gk.s 			page 96
 
 
- 3653 13ee F4040000 		.4byte	.LFE35
- 3654 13f2 38000000 		.4byte	.LLST1
- 3655 13f6 4E140000 		.4byte	0x144e
- 3656 13fa 26       		.uleb128 0x26
- 3657 13fb 60040000 		.4byte	.LASF274
- 3658 13ff 02       		.byte	0x2
- 3659 1400 17       		.byte	0x17
- 3660 1401 F3050000 		.4byte	0x5f3
- 3661 1405 02       		.byte	0x2
- 3662 1406 91       		.byte	0x91
- 3663 1407 6C       		.sleb128 -20
- 3664 1408 27       		.uleb128 0x27
- 3665 1409 6F707400 		.ascii	"opt\000"
- 3666 140d 02       		.byte	0x2
- 3667 140e 18       		.byte	0x18
- 3668 140f 46080000 		.4byte	0x846
- 3669 1413 02       		.byte	0x2
- 3670 1414 91       		.byte	0x91
- 3671 1415 58       		.sleb128 -40
- 3672 1416 27       		.uleb128 0x27
- 3673 1417 636D6400 		.ascii	"cmd\000"
- 3674 141b 02       		.byte	0x2
- 3675 141c 19       		.byte	0x19
- 3676 141d F9050000 		.4byte	0x5f9
- 3677 1421 02       		.byte	0x2
- 3678 1422 91       		.byte	0x91
- 3679 1423 67       		.sleb128 -25
- 3680 1424 26       		.uleb128 0x26
- 3681 1425 BB040000 		.4byte	.LASF275
- 3682 1429 02       		.byte	0x2
- 3683 142a 1B       		.byte	0x1b
- 3684 142b 45000000 		.4byte	0x45
- 3685 142f 02       		.byte	0x2
- 3686 1430 91       		.byte	0x91
- 3687 1431 60       		.sleb128 -32
- 3688 1432 26       		.uleb128 0x26
- 3689 1433 D0040000 		.4byte	.LASF276
- 3690 1437 02       		.byte	0x2
- 3691 1438 1C       		.byte	0x1c
- 3692 1439 4E140000 		.4byte	0x144e
- 3693 143d 02       		.byte	0x2
- 3694 143e 91       		.byte	0x91
- 3695 143f 4C       		.sleb128 -52
- 3696 1440 27       		.uleb128 0x27
- 3697 1441 696400   		.ascii	"id\000"
- 3698 1444 02       		.byte	0x2
- 3699 1445 1D       		.byte	0x1d
- 3700 1446 4C000000 		.4byte	0x4c
- 3701 144a 02       		.byte	0x2
- 3702 144b 91       		.byte	0x91
- 3703 144c 68       		.sleb128 -24
- 3704 144d 00       		.byte	0
- 3705 144e 08       		.uleb128 0x8
- 3706 144f 45000000 		.4byte	0x45
- 3707 1453 5E140000 		.4byte	0x145e
- 3708 1457 09       		.uleb128 0x9
- 3709 1458 4C000000 		.4byte	0x4c
-ARM GAS  /tmp/ccZvkXpi.s 			page 97
+ 3655 13f6 64697600 		.ascii	"div\000"
+ 3656 13fa 02       		.byte	0x2
+ 3657 13fb 15       		.byte	0x15
+ 3658 13fc AE080000 		.4byte	0x8ae
+ 3659 1400 02       		.byte	0x2
+ 3660 1401 91       		.byte	0x91
+ 3661 1402 6C       		.sleb128 -20
+ 3662 1403 27       		.uleb128 0x27
+ 3663 1404 7B070000 		.4byte	.LASF274
+ 3664 1408 02       		.byte	0x2
+ 3665 1409 16       		.byte	0x16
+ 3666 140a AE080000 		.4byte	0x8ae
+ 3667 140e 02       		.byte	0x2
+ 3668 140f 91       		.byte	0x91
+ 3669 1410 68       		.sleb128 -24
+ 3670 1411 00       		.byte	0
+ 3671 1412 28       		.uleb128 0x28
+ 3672 1413 01       		.byte	0x1
+ 3673 1414 CB010000 		.4byte	.LASF278
+ 3674 1418 02       		.byte	0x2
+ 3675 1419 3A       		.byte	0x3a
+ 3676 141a 45000000 		.4byte	0x45
+ 3677 141e 00000000 		.4byte	.LFB36
+ 3678 1422 F4040000 		.4byte	.LFE36
+ 3679 1426 70000000 		.4byte	.LLST2
+ 3680 142a 82140000 		.4byte	0x1482
+ 3681 142e 27       		.uleb128 0x27
+ 3682 142f 60040000 		.4byte	.LASF275
+ 3683 1433 02       		.byte	0x2
+ 3684 1434 3C       		.byte	0x3c
+ 3685 1435 F3050000 		.4byte	0x5f3
+ 3686 1439 02       		.byte	0x2
+ 3687 143a 91       		.byte	0x91
+ 3688 143b 6C       		.sleb128 -20
+ 3689 143c 26       		.uleb128 0x26
+ 3690 143d 6F707400 		.ascii	"opt\000"
+ 3691 1441 02       		.byte	0x2
+ 3692 1442 3D       		.byte	0x3d
+ 3693 1443 46080000 		.4byte	0x846
+ 3694 1447 02       		.byte	0x2
+ 3695 1448 91       		.byte	0x91
+ 3696 1449 58       		.sleb128 -40
+ 3697 144a 26       		.uleb128 0x26
+ 3698 144b 636D6400 		.ascii	"cmd\000"
+ 3699 144f 02       		.byte	0x2
+ 3700 1450 3E       		.byte	0x3e
+ 3701 1451 F9050000 		.4byte	0x5f9
+ 3702 1455 02       		.byte	0x2
+ 3703 1456 91       		.byte	0x91
+ 3704 1457 67       		.sleb128 -25
+ 3705 1458 27       		.uleb128 0x27
+ 3706 1459 BB040000 		.4byte	.LASF276
+ 3707 145d 02       		.byte	0x2
+ 3708 145e 40       		.byte	0x40
+ 3709 145f 45000000 		.4byte	0x45
+ 3710 1463 02       		.byte	0x2
+ 3711 1464 91       		.byte	0x91
+ARM GAS  /tmp/ccrEF6Gk.s 			page 97
 
 
- 3710 145c 02       		.byte	0x2
- 3711 145d 00       		.byte	0
- 3712 145e 28       		.uleb128 0x28
- 3713 145f 01       		.byte	0x1
- 3714 1460 31070000 		.4byte	.LASF278
- 3715 1464 02       		.byte	0x2
- 3716 1465 91       		.byte	0x91
- 3717 1466 01       		.byte	0x1
- 3718 1467 00000000 		.4byte	.LFB36
- 3719 146b 7C000000 		.4byte	.LFE36
- 3720 146f 71000000 		.4byte	.LLST2
- 3721 1473 92140000 		.4byte	0x1492
- 3722 1477 27       		.uleb128 0x27
- 3723 1478 6900     		.ascii	"i\000"
- 3724 147a 02       		.byte	0x2
- 3725 147b 93       		.byte	0x93
- 3726 147c 98080000 		.4byte	0x898
- 3727 1480 02       		.byte	0x2
- 3728 1481 91       		.byte	0x91
- 3729 1482 77       		.sleb128 -9
- 3730 1483 26       		.uleb128 0x26
- 3731 1484 EE000000 		.4byte	.LASF279
- 3732 1488 02       		.byte	0x2
- 3733 1489 94       		.byte	0x94
- 3734 148a 92140000 		.4byte	0x1492
- 3735 148e 02       		.byte	0x2
- 3736 148f 91       		.byte	0x91
- 3737 1490 70       		.sleb128 -16
- 3738 1491 00       		.byte	0
- 3739 1492 0F       		.uleb128 0xf
- 3740 1493 04       		.byte	0x4
- 3741 1494 59120000 		.4byte	0x1259
- 3742 1498 28       		.uleb128 0x28
- 3743 1499 01       		.byte	0x1
- 3744 149a A4030000 		.4byte	.LASF280
- 3745 149e 02       		.byte	0x2
- 3746 149f 9D       		.byte	0x9d
- 3747 14a0 01       		.byte	0x1
- 3748 14a1 00000000 		.4byte	.LFB37
- 3749 14a5 D6000000 		.4byte	.LFE37
- 3750 14a9 A9000000 		.4byte	.LLST3
- 3751 14ad F4140000 		.4byte	0x14f4
- 3752 14b1 27       		.uleb128 0x27
- 3753 14b2 6900     		.ascii	"i\000"
- 3754 14b4 02       		.byte	0x2
- 3755 14b5 9F       		.byte	0x9f
- 3756 14b6 98080000 		.4byte	0x898
- 3757 14ba 02       		.byte	0x2
- 3758 14bb 91       		.byte	0x91
- 3759 14bc 77       		.sleb128 -9
- 3760 14bd 27       		.uleb128 0x27
- 3761 14be 6D736B00 		.ascii	"msk\000"
- 3762 14c2 02       		.byte	0x2
- 3763 14c3 A0       		.byte	0xa0
- 3764 14c4 98080000 		.4byte	0x898
- 3765 14c8 02       		.byte	0x2
- 3766 14c9 91       		.byte	0x91
-ARM GAS  /tmp/ccZvkXpi.s 			page 98
+ 3712 1465 60       		.sleb128 -32
+ 3713 1466 27       		.uleb128 0x27
+ 3714 1467 D0040000 		.4byte	.LASF277
+ 3715 146b 02       		.byte	0x2
+ 3716 146c 41       		.byte	0x41
+ 3717 146d 82140000 		.4byte	0x1482
+ 3718 1471 02       		.byte	0x2
+ 3719 1472 91       		.byte	0x91
+ 3720 1473 4C       		.sleb128 -52
+ 3721 1474 26       		.uleb128 0x26
+ 3722 1475 696400   		.ascii	"id\000"
+ 3723 1478 02       		.byte	0x2
+ 3724 1479 42       		.byte	0x42
+ 3725 147a 4C000000 		.4byte	0x4c
+ 3726 147e 02       		.byte	0x2
+ 3727 147f 91       		.byte	0x91
+ 3728 1480 68       		.sleb128 -24
+ 3729 1481 00       		.byte	0
+ 3730 1482 08       		.uleb128 0x8
+ 3731 1483 45000000 		.4byte	0x45
+ 3732 1487 92140000 		.4byte	0x1492
+ 3733 148b 09       		.uleb128 0x9
+ 3734 148c 4C000000 		.4byte	0x4c
+ 3735 1490 02       		.byte	0x2
+ 3736 1491 00       		.byte	0
+ 3737 1492 29       		.uleb128 0x29
+ 3738 1493 01       		.byte	0x1
+ 3739 1494 31070000 		.4byte	.LASF279
+ 3740 1498 02       		.byte	0x2
+ 3741 1499 B6       		.byte	0xb6
+ 3742 149a 01       		.byte	0x1
+ 3743 149b 00000000 		.4byte	.LFB37
+ 3744 149f 7C000000 		.4byte	.LFE37
+ 3745 14a3 A9000000 		.4byte	.LLST3
+ 3746 14a7 C6140000 		.4byte	0x14c6
+ 3747 14ab 26       		.uleb128 0x26
+ 3748 14ac 6900     		.ascii	"i\000"
+ 3749 14ae 02       		.byte	0x2
+ 3750 14af B8       		.byte	0xb8
+ 3751 14b0 98080000 		.4byte	0x898
+ 3752 14b4 02       		.byte	0x2
+ 3753 14b5 91       		.byte	0x91
+ 3754 14b6 77       		.sleb128 -9
+ 3755 14b7 27       		.uleb128 0x27
+ 3756 14b8 EE000000 		.4byte	.LASF280
+ 3757 14bc 02       		.byte	0x2
+ 3758 14bd B9       		.byte	0xb9
+ 3759 14be C6140000 		.4byte	0x14c6
+ 3760 14c2 02       		.byte	0x2
+ 3761 14c3 91       		.byte	0x91
+ 3762 14c4 70       		.sleb128 -16
+ 3763 14c5 00       		.byte	0
+ 3764 14c6 0F       		.uleb128 0xf
+ 3765 14c7 04       		.byte	0x4
+ 3766 14c8 59120000 		.4byte	0x1259
+ 3767 14cc 29       		.uleb128 0x29
+ 3768 14cd 01       		.byte	0x1
+ARM GAS  /tmp/ccrEF6Gk.s 			page 98
 
 
- 3767 14ca 76       		.sleb128 -10
- 3768 14cb 26       		.uleb128 0x26
- 3769 14cc 59090000 		.4byte	.LASF281
- 3770 14d0 02       		.byte	0x2
- 3771 14d1 A1       		.byte	0xa1
- 3772 14d2 AE080000 		.4byte	0x8ae
- 3773 14d6 02       		.byte	0x2
- 3774 14d7 91       		.byte	0x91
- 3775 14d8 6C       		.sleb128 -20
- 3776 14d9 26       		.uleb128 0x26
- 3777 14da EE000000 		.4byte	.LASF279
- 3778 14de 02       		.byte	0x2
- 3779 14df A2       		.byte	0xa2
- 3780 14e0 92140000 		.4byte	0x1492
- 3781 14e4 02       		.byte	0x2
- 3782 14e5 91       		.byte	0x91
- 3783 14e6 70       		.sleb128 -16
- 3784 14e7 27       		.uleb128 0x27
- 3785 14e8 7800     		.ascii	"x\000"
- 3786 14ea 02       		.byte	0x2
- 3787 14eb A3       		.byte	0xa3
- 3788 14ec 22120000 		.4byte	0x1222
- 3789 14f0 02       		.byte	0x2
- 3790 14f1 91       		.byte	0x91
- 3791 14f2 6A       		.sleb128 -22
- 3792 14f3 00       		.byte	0
- 3793 14f4 29       		.uleb128 0x29
- 3794 14f5 E4070000 		.4byte	.LASF292
- 3795 14f9 02       		.byte	0x2
- 3796 14fa B9       		.byte	0xb9
- 3797 14fb 00000000 		.4byte	.LFB38
- 3798 14ff DA000000 		.4byte	.LFE38
- 3799 1503 E1000000 		.4byte	.LLST4
- 3800 1507 28150000 		.4byte	0x1528
- 3801 150b 27       		.uleb128 0x27
- 3802 150c 64697600 		.ascii	"div\000"
- 3803 1510 02       		.byte	0x2
- 3804 1511 BB       		.byte	0xbb
- 3805 1512 AE080000 		.4byte	0x8ae
- 3806 1516 02       		.byte	0x2
- 3807 1517 91       		.byte	0x91
- 3808 1518 6C       		.sleb128 -20
- 3809 1519 26       		.uleb128 0x26
- 3810 151a 7B070000 		.4byte	.LASF282
+ 3769 14ce A4030000 		.4byte	.LASF281
+ 3770 14d2 02       		.byte	0x2
+ 3771 14d3 C2       		.byte	0xc2
+ 3772 14d4 01       		.byte	0x1
+ 3773 14d5 00000000 		.4byte	.LFB38
+ 3774 14d9 D6000000 		.4byte	.LFE38
+ 3775 14dd E1000000 		.4byte	.LLST4
+ 3776 14e1 28150000 		.4byte	0x1528
+ 3777 14e5 26       		.uleb128 0x26
+ 3778 14e6 6900     		.ascii	"i\000"
+ 3779 14e8 02       		.byte	0x2
+ 3780 14e9 C4       		.byte	0xc4
+ 3781 14ea 98080000 		.4byte	0x898
+ 3782 14ee 02       		.byte	0x2
+ 3783 14ef 91       		.byte	0x91
+ 3784 14f0 77       		.sleb128 -9
+ 3785 14f1 26       		.uleb128 0x26
+ 3786 14f2 6D736B00 		.ascii	"msk\000"
+ 3787 14f6 02       		.byte	0x2
+ 3788 14f7 C5       		.byte	0xc5
+ 3789 14f8 98080000 		.4byte	0x898
+ 3790 14fc 02       		.byte	0x2
+ 3791 14fd 91       		.byte	0x91
+ 3792 14fe 76       		.sleb128 -10
+ 3793 14ff 27       		.uleb128 0x27
+ 3794 1500 59090000 		.4byte	.LASF282
+ 3795 1504 02       		.byte	0x2
+ 3796 1505 C6       		.byte	0xc6
+ 3797 1506 AE080000 		.4byte	0x8ae
+ 3798 150a 02       		.byte	0x2
+ 3799 150b 91       		.byte	0x91
+ 3800 150c 6C       		.sleb128 -20
+ 3801 150d 27       		.uleb128 0x27
+ 3802 150e EE000000 		.4byte	.LASF280
+ 3803 1512 02       		.byte	0x2
+ 3804 1513 C7       		.byte	0xc7
+ 3805 1514 C6140000 		.4byte	0x14c6
+ 3806 1518 02       		.byte	0x2
+ 3807 1519 91       		.byte	0x91
+ 3808 151a 70       		.sleb128 -16
+ 3809 151b 26       		.uleb128 0x26
+ 3810 151c 7800     		.ascii	"x\000"
  3811 151e 02       		.byte	0x2
- 3812 151f BC       		.byte	0xbc
- 3813 1520 AE080000 		.4byte	0x8ae
+ 3812 151f C8       		.byte	0xc8
+ 3813 1520 22120000 		.4byte	0x1222
  3814 1524 02       		.byte	0x2
  3815 1525 91       		.byte	0x91
- 3816 1526 68       		.sleb128 -24
+ 3816 1526 6A       		.sleb128 -22
  3817 1527 00       		.byte	0
  3818 1528 2A       		.uleb128 0x2a
  3819 1529 84010000 		.4byte	.LASF283
@@ -5878,11 +5876,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3821 152e 4803     		.2byte	0x348
  3822 1530 74040000 		.4byte	0x474
  3823 1534 01       		.byte	0x1
-ARM GAS  /tmp/ccZvkXpi.s 			page 99
-
-
  3824 1535 01       		.byte	0x1
  3825 1536 2A       		.uleb128 0x2a
+ARM GAS  /tmp/ccrEF6Gk.s 			page 99
+
+
  3826 1537 A2050000 		.4byte	.LASF284
  3827 153b 01       		.byte	0x1
  3828 153c CE06     		.2byte	0x6ce
@@ -5898,7 +5896,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3838 1553 4C000000 		.4byte	0x4c
  3839 1557 01       		.byte	0x1
  3840 1558 00       		.byte	0
- 3841 1559 26       		.uleb128 0x26
+ 3841 1559 27       		.uleb128 0x27
  3842 155a 38030000 		.4byte	.LASF285
  3843 155e 02       		.byte	0x2
  3844 155f 0A       		.byte	0xa
@@ -5913,7 +5911,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3853 1574 4C000000 		.4byte	0x4c
  3854 1578 01       		.byte	0x1
  3855 1579 00       		.byte	0
- 3856 157a 26       		.uleb128 0x26
+ 3856 157a 27       		.uleb128 0x27
  3857 157b F3000000 		.4byte	.LASF286
  3858 157f 02       		.byte	0x2
  3859 1580 11       		.byte	0x11
@@ -5938,11 +5936,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3878 15a7 00       		.byte	0
  3879              		.section	.debug_abbrev,"",%progbits
  3880              	.Ldebug_abbrev0:
-ARM GAS  /tmp/ccZvkXpi.s 			page 100
-
-
  3881 0000 01       		.uleb128 0x1
  3882 0001 11       		.uleb128 0x11
+ARM GAS  /tmp/ccrEF6Gk.s 			page 100
+
+
  3883 0002 01       		.byte	0x1
  3884 0003 25       		.uleb128 0x25
  3885 0004 0E       		.uleb128 0xe
@@ -5998,11 +5996,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3935 0036 00       		.byte	0
  3936 0037 00       		.byte	0
  3937 0038 05       		.uleb128 0x5
-ARM GAS  /tmp/ccZvkXpi.s 			page 101
-
-
  3938 0039 16       		.uleb128 0x16
  3939 003a 00       		.byte	0
+ARM GAS  /tmp/ccrEF6Gk.s 			page 101
+
+
  3940 003b 03       		.uleb128 0x3
  3941 003c 0E       		.uleb128 0xe
  3942 003d 3A       		.uleb128 0x3a
@@ -6058,11 +6056,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  3992 006f 00       		.byte	0
  3993 0070 00       		.byte	0
  3994 0071 0A       		.uleb128 0xa
-ARM GAS  /tmp/ccZvkXpi.s 			page 102
-
-
  3995 0072 13       		.uleb128 0x13
  3996 0073 01       		.byte	0x1
+ARM GAS  /tmp/ccrEF6Gk.s 			page 102
+
+
  3997 0074 0B       		.uleb128 0xb
  3998 0075 0B       		.uleb128 0xb
  3999 0076 3A       		.uleb128 0x3a
@@ -6118,11 +6116,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4049 00a8 3A       		.uleb128 0x3a
  4050 00a9 0B       		.uleb128 0xb
  4051 00aa 3B       		.uleb128 0x3b
-ARM GAS  /tmp/ccZvkXpi.s 			page 103
-
-
  4052 00ab 0B       		.uleb128 0xb
  4053 00ac 49       		.uleb128 0x49
+ARM GAS  /tmp/ccrEF6Gk.s 			page 103
+
+
  4054 00ad 13       		.uleb128 0x13
  4055 00ae 38       		.uleb128 0x38
  4056 00af 0A       		.uleb128 0xa
@@ -6178,11 +6176,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4106 00e1 0D       		.uleb128 0xd
  4107 00e2 00       		.byte	0
  4108 00e3 03       		.uleb128 0x3
-ARM GAS  /tmp/ccZvkXpi.s 			page 104
-
-
  4109 00e4 0E       		.uleb128 0xe
  4110 00e5 3A       		.uleb128 0x3a
+ARM GAS  /tmp/ccrEF6Gk.s 			page 104
+
+
  4111 00e6 0B       		.uleb128 0xb
  4112 00e7 3B       		.uleb128 0x3b
  4113 00e8 05       		.uleb128 0x5
@@ -6238,11 +6236,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4163 011a 27       		.uleb128 0x27
  4164 011b 0C       		.uleb128 0xc
  4165 011c 01       		.uleb128 0x1
-ARM GAS  /tmp/ccZvkXpi.s 			page 105
-
-
  4166 011d 13       		.uleb128 0x13
  4167 011e 00       		.byte	0
+ARM GAS  /tmp/ccrEF6Gk.s 			page 105
+
+
  4168 011f 00       		.byte	0
  4169 0120 19       		.uleb128 0x19
  4170 0121 35       		.uleb128 0x35
@@ -6298,11 +6296,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4220 0153 00       		.byte	0
  4221 0154 00       		.byte	0
  4222 0155 1E       		.uleb128 0x1e
-ARM GAS  /tmp/ccZvkXpi.s 			page 106
-
-
  4223 0156 16       		.uleb128 0x16
  4224 0157 00       		.byte	0
+ARM GAS  /tmp/ccrEF6Gk.s 			page 106
+
+
  4225 0158 03       		.uleb128 0x3
  4226 0159 08       		.uleb128 0x8
  4227 015a 3A       		.uleb128 0x3a
@@ -6358,11 +6356,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4277 018c 03       		.uleb128 0x3
  4278 018d 08       		.uleb128 0x8
  4279 018e 1C       		.uleb128 0x1c
-ARM GAS  /tmp/ccZvkXpi.s 			page 107
-
-
  4280 018f 0D       		.uleb128 0xd
  4281 0190 00       		.byte	0
+ARM GAS  /tmp/ccrEF6Gk.s 			page 107
+
+
  4282 0191 00       		.byte	0
  4283 0192 23       		.uleb128 0x23
  4284 0193 2E       		.uleb128 0x2e
@@ -6403,94 +6401,94 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4319 01b6 25       		.uleb128 0x25
  4320 01b7 2E       		.uleb128 0x2e
  4321 01b8 01       		.byte	0x1
- 4322 01b9 3F       		.uleb128 0x3f
- 4323 01ba 0C       		.uleb128 0xc
- 4324 01bb 03       		.uleb128 0x3
- 4325 01bc 0E       		.uleb128 0xe
- 4326 01bd 3A       		.uleb128 0x3a
+ 4322 01b9 03       		.uleb128 0x3
+ 4323 01ba 0E       		.uleb128 0xe
+ 4324 01bb 3A       		.uleb128 0x3a
+ 4325 01bc 0B       		.uleb128 0xb
+ 4326 01bd 3B       		.uleb128 0x3b
  4327 01be 0B       		.uleb128 0xb
- 4328 01bf 3B       		.uleb128 0x3b
- 4329 01c0 0B       		.uleb128 0xb
- 4330 01c1 49       		.uleb128 0x49
- 4331 01c2 13       		.uleb128 0x13
- 4332 01c3 11       		.uleb128 0x11
- 4333 01c4 01       		.uleb128 0x1
- 4334 01c5 12       		.uleb128 0x12
- 4335 01c6 01       		.uleb128 0x1
- 4336 01c7 40       		.uleb128 0x40
-ARM GAS  /tmp/ccZvkXpi.s 			page 108
+ 4328 01bf 11       		.uleb128 0x11
+ 4329 01c0 01       		.uleb128 0x1
+ 4330 01c1 12       		.uleb128 0x12
+ 4331 01c2 01       		.uleb128 0x1
+ 4332 01c3 40       		.uleb128 0x40
+ 4333 01c4 06       		.uleb128 0x6
+ 4334 01c5 01       		.uleb128 0x1
+ 4335 01c6 13       		.uleb128 0x13
+ 4336 01c7 00       		.byte	0
+ 4337 01c8 00       		.byte	0
+ 4338 01c9 26       		.uleb128 0x26
+ARM GAS  /tmp/ccrEF6Gk.s 			page 108
 
 
- 4337 01c8 06       		.uleb128 0x6
- 4338 01c9 01       		.uleb128 0x1
- 4339 01ca 13       		.uleb128 0x13
+ 4339 01ca 34       		.uleb128 0x34
  4340 01cb 00       		.byte	0
- 4341 01cc 00       		.byte	0
- 4342 01cd 26       		.uleb128 0x26
- 4343 01ce 34       		.uleb128 0x34
- 4344 01cf 00       		.byte	0
- 4345 01d0 03       		.uleb128 0x3
- 4346 01d1 0E       		.uleb128 0xe
- 4347 01d2 3A       		.uleb128 0x3a
- 4348 01d3 0B       		.uleb128 0xb
- 4349 01d4 3B       		.uleb128 0x3b
- 4350 01d5 0B       		.uleb128 0xb
- 4351 01d6 49       		.uleb128 0x49
- 4352 01d7 13       		.uleb128 0x13
- 4353 01d8 02       		.uleb128 0x2
- 4354 01d9 0A       		.uleb128 0xa
+ 4341 01cc 03       		.uleb128 0x3
+ 4342 01cd 08       		.uleb128 0x8
+ 4343 01ce 3A       		.uleb128 0x3a
+ 4344 01cf 0B       		.uleb128 0xb
+ 4345 01d0 3B       		.uleb128 0x3b
+ 4346 01d1 0B       		.uleb128 0xb
+ 4347 01d2 49       		.uleb128 0x49
+ 4348 01d3 13       		.uleb128 0x13
+ 4349 01d4 02       		.uleb128 0x2
+ 4350 01d5 0A       		.uleb128 0xa
+ 4351 01d6 00       		.byte	0
+ 4352 01d7 00       		.byte	0
+ 4353 01d8 27       		.uleb128 0x27
+ 4354 01d9 34       		.uleb128 0x34
  4355 01da 00       		.byte	0
- 4356 01db 00       		.byte	0
- 4357 01dc 27       		.uleb128 0x27
- 4358 01dd 34       		.uleb128 0x34
- 4359 01de 00       		.byte	0
- 4360 01df 03       		.uleb128 0x3
- 4361 01e0 08       		.uleb128 0x8
- 4362 01e1 3A       		.uleb128 0x3a
- 4363 01e2 0B       		.uleb128 0xb
- 4364 01e3 3B       		.uleb128 0x3b
- 4365 01e4 0B       		.uleb128 0xb
- 4366 01e5 49       		.uleb128 0x49
- 4367 01e6 13       		.uleb128 0x13
- 4368 01e7 02       		.uleb128 0x2
- 4369 01e8 0A       		.uleb128 0xa
- 4370 01e9 00       		.byte	0
- 4371 01ea 00       		.byte	0
- 4372 01eb 28       		.uleb128 0x28
- 4373 01ec 2E       		.uleb128 0x2e
- 4374 01ed 01       		.byte	0x1
- 4375 01ee 3F       		.uleb128 0x3f
- 4376 01ef 0C       		.uleb128 0xc
- 4377 01f0 03       		.uleb128 0x3
- 4378 01f1 0E       		.uleb128 0xe
- 4379 01f2 3A       		.uleb128 0x3a
- 4380 01f3 0B       		.uleb128 0xb
- 4381 01f4 3B       		.uleb128 0x3b
- 4382 01f5 0B       		.uleb128 0xb
- 4383 01f6 27       		.uleb128 0x27
- 4384 01f7 0C       		.uleb128 0xc
- 4385 01f8 11       		.uleb128 0x11
- 4386 01f9 01       		.uleb128 0x1
- 4387 01fa 12       		.uleb128 0x12
- 4388 01fb 01       		.uleb128 0x1
- 4389 01fc 40       		.uleb128 0x40
- 4390 01fd 06       		.uleb128 0x6
- 4391 01fe 01       		.uleb128 0x1
- 4392 01ff 13       		.uleb128 0x13
- 4393 0200 00       		.byte	0
-ARM GAS  /tmp/ccZvkXpi.s 			page 109
+ 4356 01db 03       		.uleb128 0x3
+ 4357 01dc 0E       		.uleb128 0xe
+ 4358 01dd 3A       		.uleb128 0x3a
+ 4359 01de 0B       		.uleb128 0xb
+ 4360 01df 3B       		.uleb128 0x3b
+ 4361 01e0 0B       		.uleb128 0xb
+ 4362 01e1 49       		.uleb128 0x49
+ 4363 01e2 13       		.uleb128 0x13
+ 4364 01e3 02       		.uleb128 0x2
+ 4365 01e4 0A       		.uleb128 0xa
+ 4366 01e5 00       		.byte	0
+ 4367 01e6 00       		.byte	0
+ 4368 01e7 28       		.uleb128 0x28
+ 4369 01e8 2E       		.uleb128 0x2e
+ 4370 01e9 01       		.byte	0x1
+ 4371 01ea 3F       		.uleb128 0x3f
+ 4372 01eb 0C       		.uleb128 0xc
+ 4373 01ec 03       		.uleb128 0x3
+ 4374 01ed 0E       		.uleb128 0xe
+ 4375 01ee 3A       		.uleb128 0x3a
+ 4376 01ef 0B       		.uleb128 0xb
+ 4377 01f0 3B       		.uleb128 0x3b
+ 4378 01f1 0B       		.uleb128 0xb
+ 4379 01f2 49       		.uleb128 0x49
+ 4380 01f3 13       		.uleb128 0x13
+ 4381 01f4 11       		.uleb128 0x11
+ 4382 01f5 01       		.uleb128 0x1
+ 4383 01f6 12       		.uleb128 0x12
+ 4384 01f7 01       		.uleb128 0x1
+ 4385 01f8 40       		.uleb128 0x40
+ 4386 01f9 06       		.uleb128 0x6
+ 4387 01fa 01       		.uleb128 0x1
+ 4388 01fb 13       		.uleb128 0x13
+ 4389 01fc 00       		.byte	0
+ 4390 01fd 00       		.byte	0
+ 4391 01fe 29       		.uleb128 0x29
+ 4392 01ff 2E       		.uleb128 0x2e
+ 4393 0200 01       		.byte	0x1
+ 4394 0201 3F       		.uleb128 0x3f
+ 4395 0202 0C       		.uleb128 0xc
+ARM GAS  /tmp/ccrEF6Gk.s 			page 109
 
 
- 4394 0201 00       		.byte	0
- 4395 0202 29       		.uleb128 0x29
- 4396 0203 2E       		.uleb128 0x2e
- 4397 0204 01       		.byte	0x1
- 4398 0205 03       		.uleb128 0x3
- 4399 0206 0E       		.uleb128 0xe
- 4400 0207 3A       		.uleb128 0x3a
+ 4396 0203 03       		.uleb128 0x3
+ 4397 0204 0E       		.uleb128 0xe
+ 4398 0205 3A       		.uleb128 0x3a
+ 4399 0206 0B       		.uleb128 0xb
+ 4400 0207 3B       		.uleb128 0x3b
  4401 0208 0B       		.uleb128 0xb
- 4402 0209 3B       		.uleb128 0x3b
- 4403 020a 0B       		.uleb128 0xb
+ 4402 0209 27       		.uleb128 0x27
+ 4403 020a 0C       		.uleb128 0xc
  4404 020b 11       		.uleb128 0x11
  4405 020c 01       		.uleb128 0x1
  4406 020d 12       		.uleb128 0x12
@@ -6538,11 +6536,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4448 0022 7D       		.byte	0x7d
  4449 0023 10       		.sleb128 16
  4450 0024 06000000 		.4byte	.LCFI2
-ARM GAS  /tmp/ccZvkXpi.s 			page 110
-
-
  4451 0028 36000000 		.4byte	.LFE14
  4452 002c 0200     		.2byte	0x2
+ARM GAS  /tmp/ccrEF6Gk.s 			page 110
+
+
  4453 002e 77       		.byte	0x77
  4454 002f 10       		.sleb128 16
  4455 0030 00000000 		.4byte	0
@@ -6560,37 +6558,37 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4467 004f 0C       		.sleb128 12
  4468 0050 04000000 		.4byte	.LCFI4
  4469 0054 06000000 		.4byte	.LCFI5
- 4470 0058 0300     		.2byte	0x3
+ 4470 0058 0200     		.2byte	0x2
  4471 005a 7D       		.byte	0x7d
- 4472 005b C000     		.sleb128 64
- 4473 005d 06000000 		.4byte	.LCFI5
- 4474 0061 F4040000 		.4byte	.LFE35
- 4475 0065 0200     		.2byte	0x2
- 4476 0067 77       		.byte	0x77
- 4477 0068 38       		.sleb128 56
- 4478 0069 00000000 		.4byte	0
- 4479 006d 00000000 		.4byte	0
+ 4472 005b 20       		.sleb128 32
+ 4473 005c 06000000 		.4byte	.LCFI5
+ 4474 0060 DA000000 		.4byte	.LFE35
+ 4475 0064 0200     		.2byte	0x2
+ 4476 0066 77       		.byte	0x77
+ 4477 0067 18       		.sleb128 24
+ 4478 0068 00000000 		.4byte	0
+ 4479 006c 00000000 		.4byte	0
  4480              	.LLST2:
- 4481 0071 00000000 		.4byte	.LFB36
- 4482 0075 02000000 		.4byte	.LCFI6
- 4483 0079 0200     		.2byte	0x2
- 4484 007b 7D       		.byte	0x7d
- 4485 007c 00       		.sleb128 0
- 4486 007d 02000000 		.4byte	.LCFI6
- 4487 0081 04000000 		.4byte	.LCFI7
- 4488 0085 0200     		.2byte	0x2
- 4489 0087 7D       		.byte	0x7d
- 4490 0088 04       		.sleb128 4
- 4491 0089 04000000 		.4byte	.LCFI7
- 4492 008d 06000000 		.4byte	.LCFI8
- 4493 0091 0200     		.2byte	0x2
- 4494 0093 7D       		.byte	0x7d
- 4495 0094 10       		.sleb128 16
+ 4481 0070 00000000 		.4byte	.LFB36
+ 4482 0074 02000000 		.4byte	.LCFI6
+ 4483 0078 0200     		.2byte	0x2
+ 4484 007a 7D       		.byte	0x7d
+ 4485 007b 00       		.sleb128 0
+ 4486 007c 02000000 		.4byte	.LCFI6
+ 4487 0080 04000000 		.4byte	.LCFI7
+ 4488 0084 0200     		.2byte	0x2
+ 4489 0086 7D       		.byte	0x7d
+ 4490 0087 0C       		.sleb128 12
+ 4491 0088 04000000 		.4byte	.LCFI7
+ 4492 008c 06000000 		.4byte	.LCFI8
+ 4493 0090 0300     		.2byte	0x3
+ 4494 0092 7D       		.byte	0x7d
+ 4495 0093 C000     		.sleb128 64
  4496 0095 06000000 		.4byte	.LCFI8
- 4497 0099 7C000000 		.4byte	.LFE36
+ 4497 0099 F4040000 		.4byte	.LFE36
  4498 009d 0200     		.2byte	0x2
  4499 009f 77       		.byte	0x77
- 4500 00a0 10       		.sleb128 16
+ 4500 00a0 38       		.sleb128 56
  4501 00a1 00000000 		.4byte	0
  4502 00a5 00000000 		.4byte	0
  4503              	.LLST3:
@@ -6598,25 +6596,25 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4505 00ad 02000000 		.4byte	.LCFI9
  4506 00b1 0200     		.2byte	0x2
  4507 00b3 7D       		.byte	0x7d
-ARM GAS  /tmp/ccZvkXpi.s 			page 111
-
-
  4508 00b4 00       		.sleb128 0
  4509 00b5 02000000 		.4byte	.LCFI9
+ARM GAS  /tmp/ccrEF6Gk.s 			page 111
+
+
  4510 00b9 04000000 		.4byte	.LCFI10
  4511 00bd 0200     		.2byte	0x2
  4512 00bf 7D       		.byte	0x7d
- 4513 00c0 08       		.sleb128 8
+ 4513 00c0 04       		.sleb128 4
  4514 00c1 04000000 		.4byte	.LCFI10
  4515 00c5 06000000 		.4byte	.LCFI11
  4516 00c9 0200     		.2byte	0x2
  4517 00cb 7D       		.byte	0x7d
- 4518 00cc 18       		.sleb128 24
+ 4518 00cc 10       		.sleb128 16
  4519 00cd 06000000 		.4byte	.LCFI11
- 4520 00d1 D6000000 		.4byte	.LFE37
+ 4520 00d1 7C000000 		.4byte	.LFE37
  4521 00d5 0200     		.2byte	0x2
  4522 00d7 77       		.byte	0x77
- 4523 00d8 18       		.sleb128 24
+ 4523 00d8 10       		.sleb128 16
  4524 00d9 00000000 		.4byte	0
  4525 00dd 00000000 		.4byte	0
  4526              	.LLST4:
@@ -6629,14 +6627,14 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4533 00f1 04000000 		.4byte	.LCFI13
  4534 00f5 0200     		.2byte	0x2
  4535 00f7 7D       		.byte	0x7d
- 4536 00f8 0C       		.sleb128 12
+ 4536 00f8 08       		.sleb128 8
  4537 00f9 04000000 		.4byte	.LCFI13
  4538 00fd 06000000 		.4byte	.LCFI14
  4539 0101 0200     		.2byte	0x2
  4540 0103 7D       		.byte	0x7d
- 4541 0104 20       		.sleb128 32
+ 4541 0104 18       		.sleb128 24
  4542 0105 06000000 		.4byte	.LCFI14
- 4543 0109 DA000000 		.4byte	.LFE38
+ 4543 0109 D6000000 		.4byte	.LFE38
  4544 010d 0200     		.2byte	0x2
  4545 010f 77       		.byte	0x77
  4546 0110 18       		.sleb128 24
@@ -6653,16 +6651,16 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4557 0010 00000000 		.4byte	.LFB14
  4558 0014 36000000 		.4byte	.LFE14-.LFB14
  4559 0018 00000000 		.4byte	.LFB35
- 4560 001c F4040000 		.4byte	.LFE35-.LFB35
+ 4560 001c DA000000 		.4byte	.LFE35-.LFB35
  4561 0020 00000000 		.4byte	.LFB36
- 4562 0024 7C000000 		.4byte	.LFE36-.LFB36
+ 4562 0024 F4040000 		.4byte	.LFE36-.LFB36
  4563 0028 00000000 		.4byte	.LFB37
- 4564 002c D6000000 		.4byte	.LFE37-.LFB37
-ARM GAS  /tmp/ccZvkXpi.s 			page 112
-
-
+ 4564 002c 7C000000 		.4byte	.LFE37-.LFB37
  4565 0030 00000000 		.4byte	.LFB38
- 4566 0034 DA000000 		.4byte	.LFE38-.LFB38
+ 4566 0034 D6000000 		.4byte	.LFE38-.LFB38
+ARM GAS  /tmp/ccrEF6Gk.s 			page 112
+
+
  4567 0038 00000000 		.4byte	0
  4568 003c 00000000 		.4byte	0
  4569              		.section	.debug_ranges,"",%progbits
@@ -6670,18 +6668,18 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4571 0000 00000000 		.4byte	.LFB14
  4572 0004 36000000 		.4byte	.LFE14
  4573 0008 00000000 		.4byte	.LFB35
- 4574 000c F4040000 		.4byte	.LFE35
+ 4574 000c DA000000 		.4byte	.LFE35
  4575 0010 00000000 		.4byte	.LFB36
- 4576 0014 7C000000 		.4byte	.LFE36
+ 4576 0014 F4040000 		.4byte	.LFE36
  4577 0018 00000000 		.4byte	.LFB37
- 4578 001c D6000000 		.4byte	.LFE37
+ 4578 001c 7C000000 		.4byte	.LFE37
  4579 0020 00000000 		.4byte	.LFB38
- 4580 0024 DA000000 		.4byte	.LFE38
+ 4580 0024 D6000000 		.4byte	.LFE38
  4581 0028 00000000 		.4byte	0
  4582 002c 00000000 		.4byte	0
  4583              		.section	.debug_line,"",%progbits
  4584              	.Ldebug_line0:
- 4585 0000 B9020000 		.section	.debug_str,"MS",%progbits,1
+ 4585 0000 B8020000 		.section	.debug_str,"MS",%progbits,1
  4585      02009201 
  4585      00000201 
  4585      FB0E0D00 
@@ -6718,11 +6716,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4601      6400
  4602              	.LASF169:
  4603 0047 4E564943 		.ascii	"NVIC_Type\000"
-ARM GAS  /tmp/ccZvkXpi.s 			page 113
-
-
  4603      5F547970 
  4603      6500
+ARM GAS  /tmp/ccrEF6Gk.s 			page 113
+
+
  4604              	.LASF215:
  4605 0051 434B4752 		.ascii	"CKGR_PLLBR\000"
  4605      5F504C4C 
@@ -6778,11 +6776,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4633      4D5200
  4634              	.LASF229:
  4635 00d4 52657365 		.ascii	"Reserved7\000"
-ARM GAS  /tmp/ccZvkXpi.s 			page 114
-
-
  4635      72766564 
  4635      3700
+ARM GAS  /tmp/ccrEF6Gk.s 			page 114
+
+
  4636              	.LASF93:
  4637 00de 5F6D756C 		.ascii	"_mult\000"
  4637      7400
@@ -6790,7 +6788,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4639 00e4 52535443 		.ascii	"RSTC_IRQn\000"
  4639      5F495251 
  4639      6E00
- 4640              	.LASF279:
+ 4640              	.LASF280:
  4641 00ee 6C6F6F70 		.ascii	"loop\000"
  4641      00
  4642              	.LASF286:
@@ -6838,11 +6836,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4665      49445200 
  4666              	.LASF153:
  4667 0156 43524343 		.ascii	"CRCCU_IRQn\000"
-ARM GAS  /tmp/ccZvkXpi.s 			page 115
-
-
  4667      555F4952 
  4667      516E00
+ARM GAS  /tmp/ccrEF6Gk.s 			page 115
+
+
  4668              	.LASF261:
  4669 0161 52414D50 		.ascii	"RAMP\000"
  4669      00
@@ -6885,7 +6883,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4689 01c1 504D435F 		.ascii	"PMC_PCER1\000"
  4689      50434552 
  4689      3100
- 4690              	.LASF277:
+ 4690              	.LASF278:
  4691 01cb 6D61696E 		.ascii	"main\000"
  4691      00
  4692              	.LASF290:
@@ -6898,11 +6896,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4696              	.LASF212:
  4697 01de 434B4752 		.ascii	"CKGR_MOR\000"
  4697      5F4D4F52 
-ARM GAS  /tmp/ccZvkXpi.s 			page 116
-
-
  4697      00
  4698              	.LASF171:
+ARM GAS  /tmp/ccrEF6Gk.s 			page 116
+
+
  4699 01e7 4144435F 		.ascii	"ADC_MR\000"
  4699      4D5200
  4700              	.LASF29:
@@ -6958,11 +6956,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4723      3500
  4724              	.LASF165:
  4725 0276 49414252 		.ascii	"IABR\000"
-ARM GAS  /tmp/ccZvkXpi.s 			page 117
-
-
  4725      00
  4726              	.LASF264:
+ARM GAS  /tmp/ccrEF6Gk.s 			page 117
+
+
  4727 027b 6374726C 		.ascii	"ctrl\000"
  4727      00
  4728              	.LASF46:
@@ -7018,11 +7016,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4759 02f1 72536C6F 		.ascii	"rSlope\000"
  4759      706500
  4760              	.LASF216:
-ARM GAS  /tmp/ccZvkXpi.s 			page 118
-
-
  4761 02f8 504D435F 		.ascii	"PMC_MCKR\000"
  4761      4D434B52 
+ARM GAS  /tmp/ccrEF6Gk.s 			page 118
+
+
  4761      00
  4762              	.LASF242:
  4763 0301 54435F53 		.ascii	"TC_SR\000"
@@ -7078,11 +7076,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4793 0370 5F6F6666 		.ascii	"_offset\000"
  4793      73657400 
  4794              	.LASF59:
-ARM GAS  /tmp/ccZvkXpi.s 			page 119
-
-
  4795 0378 5F637674 		.ascii	"_cvtbuf\000"
  4795      62756600 
+ARM GAS  /tmp/ccrEF6Gk.s 			page 119
+
+
  4796              	.LASF124:
  4797 0380 53555043 		.ascii	"SUPC_IRQn\000"
  4797      5F495251 
@@ -7098,7 +7096,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4803 039a 50494F43 		.ascii	"PIOC_IRQn\000"
  4803      5F495251 
  4803      6E00
- 4804              	.LASF280:
+ 4804              	.LASF281:
  4805 03a4 4144435F 		.ascii	"ADC_IrqHandler\000"
  4805      49727148 
  4805      616E646C 
@@ -7138,11 +7136,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4821      00
  4822              	.LASF18:
  4823 0404 6C6F6E67 		.ascii	"long unsigned int\000"
-ARM GAS  /tmp/ccZvkXpi.s 			page 120
-
-
  4823      20756E73 
  4823      69676E65 
+ARM GAS  /tmp/ccrEF6Gk.s 			page 120
+
+
  4823      6420696E 
  4823      7400
  4824              	.LASF117:
@@ -7171,7 +7169,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4836              	.LASF222:
  4837 0458 504D435F 		.ascii	"PMC_IMR\000"
  4837      494D5200 
- 4838              	.LASF274:
+ 4838              	.LASF275:
  4839 0460 6C696E65 		.ascii	"line\000"
  4839      00
  4840              	.LASF8:
@@ -7198,11 +7196,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4851 049b 74726970 		.ascii	"trip\000"
  4851      00
  4852              	.LASF178:
-ARM GAS  /tmp/ccZvkXpi.s 			page 121
-
-
  4853 04a0 4144435F 		.ascii	"ADC_LCDR\000"
  4853      4C434452 
+ARM GAS  /tmp/ccrEF6Gk.s 			page 121
+
+
  4853      00
  4854              	.LASF259:
  4855 04a9 6374726C 		.ascii	"ctrlio_t\000"
@@ -7212,7 +7210,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4857 04b2 5744545F 		.ascii	"WDT_IRQn\000"
  4857      4952516E 
  4857      00
- 4858              	.LASF275:
+ 4858              	.LASF276:
  4859 04bb 61726763 		.ascii	"argc\000"
  4859      00
  4860              	.LASF23:
@@ -7221,7 +7219,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4862              	.LASF20:
  4863 04c8 5F6D6178 		.ascii	"_maxwds\000"
  4863      77647300 
- 4864              	.LASF276:
+ 4864              	.LASF277:
  4865 04d0 61726776 		.ascii	"argv\000"
  4865      00
  4866              	.LASF273:
@@ -7258,11 +7256,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4881      5F617267 
  4881      735F7074 
  4881      7200
-ARM GAS  /tmp/ccZvkXpi.s 			page 122
-
-
  4882              	.LASF89:
  4883 052e 5F6E696F 		.ascii	"_niobs\000"
+ARM GAS  /tmp/ccrEF6Gk.s 			page 122
+
+
  4883      627300
  4884              	.LASF141:
  4885 0535 54574931 		.ascii	"TWI1_IRQn\000"
@@ -7318,11 +7316,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4911      00
  4912              	.LASF262:
  4913 05ba 53544F50 		.ascii	"STOP\000"
-ARM GAS  /tmp/ccZvkXpi.s 			page 123
-
-
  4913      00
  4914              	.LASF180:
+ARM GAS  /tmp/ccrEF6Gk.s 			page 123
+
+
  4915 05bf 4144435F 		.ascii	"ADC_IDR\000"
  4915      49445200 
  4916              	.LASF4:
@@ -7378,11 +7376,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4942              	.LASF39:
  4943 0646 5F617465 		.ascii	"_atexit\000"
  4943      78697400 
-ARM GAS  /tmp/ccZvkXpi.s 			page 124
-
-
  4944              	.LASF13:
  4945 064e 5F5F636F 		.ascii	"__count\000"
+ARM GAS  /tmp/ccrEF6Gk.s 			page 124
+
+
  4945      756E7400 
  4946              	.LASF260:
  4947 0656 4E4F524D 		.ascii	"NORMAL\000"
@@ -7438,11 +7436,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4973      7369676E 
  4973      65642069 
  4974              	.LASF114:
-ARM GAS  /tmp/ccZvkXpi.s 			page 125
-
-
  4975 06de 75696E74 		.ascii	"uint16_t\000"
  4975      31365F74 
+ARM GAS  /tmp/ccrEF6Gk.s 			page 125
+
+
  4975      00
  4976              	.LASF36:
  4977 06e7 5F64736F 		.ascii	"_dso_handle\000"
@@ -7472,7 +7470,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  4990              	.LASF44:
  4991 072b 5F626173 		.ascii	"_base\000"
  4991      6500
- 4992              	.LASF278:
+ 4992              	.LASF279:
  4993 0731 5443315F 		.ascii	"TC1_IrqHandler\000"
  4993      49727148 
  4993      616E646C 
@@ -7498,13 +7496,13 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  5003 076d 49434552 		.ascii	"ICER\000"
  5003      00
  5004              	.LASF16:
-ARM GAS  /tmp/ccZvkXpi.s 			page 126
-
-
  5005 0772 5F666C6F 		.ascii	"_flock_t\000"
  5005      636B5F74 
+ARM GAS  /tmp/ccrEF6Gk.s 			page 126
+
+
  5005      00
- 5006              	.LASF282:
+ 5006              	.LASF274:
  5007 077b 7463636C 		.ascii	"tcclks\000"
  5007      6B7300
  5008              	.LASF87:
@@ -7558,11 +7556,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  5036              	.LASF177:
  5037 07f5 52657365 		.ascii	"Reserved1\000"
  5037      72766564 
-ARM GAS  /tmp/ccZvkXpi.s 			page 127
-
-
  5037      3100
  5038              	.LASF183:
+ARM GAS  /tmp/ccrEF6Gk.s 			page 127
+
+
  5039 07ff 52657365 		.ascii	"Reserved2\000"
  5039      72766564 
  5039      3200
@@ -7618,11 +7616,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  5064              	.LASF103:
  5065 08a3 5F6D626C 		.ascii	"_mblen_state\000"
  5065      656E5F73 
-ARM GAS  /tmp/ccZvkXpi.s 			page 128
-
-
  5065      74617465 
  5065      00
+ARM GAS  /tmp/ccrEF6Gk.s 			page 128
+
+
  5066              	.LASF2:
  5067 08b0 73686F72 		.ascii	"short int\000"
  5067      7420696E 
@@ -7678,11 +7676,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  5096              	.LASF204:
  5097 0926 4144435F 		.ascii	"ADC_PTCR\000"
  5097      50544352 
-ARM GAS  /tmp/ccZvkXpi.s 			page 129
-
-
  5097      00
  5098              	.LASF255:
+ARM GAS  /tmp/ccrEF6Gk.s 			page 129
+
+
  5099 092f 54435F57 		.ascii	"TC_WPMR\000"
  5099      504D5200 
  5100              	.LASF43:
@@ -7698,7 +7696,7 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  5106              	.LASF96:
  5107 0952 5F6D7072 		.ascii	"_mprec\000"
  5107      656300
- 5108              	.LASF281:
+ 5108              	.LASF282:
  5109 0959 73746174 		.ascii	"status\000"
  5109      757300
  5110              	.LASF227:
@@ -7738,11 +7736,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  5129      00
  5130              	.LASF3:
  5131 09b0 73686F72 		.ascii	"short unsigned int\000"
-ARM GAS  /tmp/ccZvkXpi.s 			page 130
-
-
  5131      7420756E 
  5131      7369676E 
+ARM GAS  /tmp/ccrEF6Gk.s 			page 130
+
+
  5131      65642069 
  5131      6E7400
  5132              	.LASF193:
@@ -7798,11 +7796,11 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  5158              	.LASF33:
  5159 0a3e 5F5F746D 		.ascii	"__tm_isdst\000"
  5159      5F697364 
-ARM GAS  /tmp/ccZvkXpi.s 			page 131
-
-
  5159      737400
  5160              	.LASF26:
+ARM GAS  /tmp/ccrEF6Gk.s 			page 131
+
+
  5161 0a49 5F5F746D 		.ascii	"__tm_min\000"
  5161      5F6D696E 
  5161      00
@@ -7828,49 +7826,57 @@ ARM GAS  /tmp/ccZvkXpi.s 			page 1
  5171      5F504C4C 
  5171      415200
  5172              		.ident	"GCC: (Sourcery CodeBench Lite 2011.09-69) 4.6.1"
-ARM GAS  /tmp/ccZvkXpi.s 			page 132
+ARM GAS  /tmp/ccrEF6Gk.s 			page 132
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-     /tmp/ccZvkXpi.s:19     .text.NVIC_EnableIRQ:00000000 $t
-     /tmp/ccZvkXpi.s:23     .text.NVIC_EnableIRQ:00000000 NVIC_EnableIRQ
-     /tmp/ccZvkXpi.s:62     .bss:00000000 $d
-     /tmp/ccZvkXpi.s:63     .bss:00000000 loops
-     /tmp/ccZvkXpi.s:66     .data:00000000 $d
-     /tmp/ccZvkXpi.s:69     .data:00000000 conf
-     /tmp/ccZvkXpi.s:76     .rodata:00000000 $d
-     /tmp/ccZvkXpi.s:77     .rodata:00000000 .LC0
-     /tmp/ccZvkXpi.s:80     .rodata:00000018 .LC1
-     /tmp/ccZvkXpi.s:83     .rodata:00000044 .LC2
-     /tmp/ccZvkXpi.s:86     .rodata:00000048 .LC3
-     /tmp/ccZvkXpi.s:89     .rodata:00000050 .LC4
-     /tmp/ccZvkXpi.s:92     .rodata:00000058 .LC5
-     /tmp/ccZvkXpi.s:95     .rodata:00000060 .LC6
-     /tmp/ccZvkXpi.s:98     .rodata:00000068 .LC7
-     /tmp/ccZvkXpi.s:101    .rodata:00000070 .LC8
-     /tmp/ccZvkXpi.s:104    .rodata:00000074 .LC9
-     /tmp/ccZvkXpi.s:107    .rodata:00000078 .LC10
-     /tmp/ccZvkXpi.s:110    .rodata:0000007c .LC11
-     /tmp/ccZvkXpi.s:113    .rodata:00000088 .LC12
-     /tmp/ccZvkXpi.s:116    .rodata:00000090 .LC13
-     /tmp/ccZvkXpi.s:119    .rodata:00000094 .LC14
-     /tmp/ccZvkXpi.s:122    .rodata:000000a0 .LC15
-     /tmp/ccZvkXpi.s:125    .rodata:000000a8 .LC16
-     /tmp/ccZvkXpi.s:128    .rodata:000000b0 .LC17
-     /tmp/ccZvkXpi.s:131    .text.main:00000000 $t
-     /tmp/ccZvkXpi.s:136    .text.main:00000000 main
-     /tmp/ccZvkXpi.s:898    .text.init:00000000 init
-     /tmp/ccZvkXpi.s:226    .text.main:000000b0 $d
-     /tmp/ccZvkXpi.s:241    .text.main:000000e4 $t
-     /tmp/ccZvkXpi.s:685    .text.TC1_IrqHandler:00000000 $t
-     /tmp/ccZvkXpi.s:690    .text.TC1_IrqHandler:00000000 TC1_IrqHandler
-     /tmp/ccZvkXpi.s:765    .text.ADC_IrqHandler:00000000 $t
-     /tmp/ccZvkXpi.s:770    .text.ADC_IrqHandler:00000000 ADC_IrqHandler
-     /tmp/ccZvkXpi.s:894    .text.init:00000000 $t
+     /tmp/ccrEF6Gk.s:19     .text.NVIC_EnableIRQ:00000000 $t
+     /tmp/ccrEF6Gk.s:23     .text.NVIC_EnableIRQ:00000000 NVIC_EnableIRQ
+     /tmp/ccrEF6Gk.s:62     .bss:00000000 $d
+     /tmp/ccrEF6Gk.s:63     .bss:00000000 loops
+     /tmp/ccrEF6Gk.s:66     .data:00000000 $d
+     /tmp/ccrEF6Gk.s:69     .data:00000000 conf
+     /tmp/ccrEF6Gk.s:76     .text.init:00000000 $t
+     /tmp/ccrEF6Gk.s:80     .text.init:00000000 init
+     /tmp/ccrEF6Gk.s:177    .rodata:00000000 $d
+     /tmp/ccrEF6Gk.s:178    .rodata:00000000 .LC0
+     /tmp/ccrEF6Gk.s:181    .rodata:00000018 .LC1
+     /tmp/ccrEF6Gk.s:184    .rodata:00000044 .LC2
+     /tmp/ccrEF6Gk.s:187    .rodata:00000048 .LC3
+     /tmp/ccrEF6Gk.s:190    .rodata:00000050 .LC4
+     /tmp/ccrEF6Gk.s:193    .rodata:00000058 .LC5
+     /tmp/ccrEF6Gk.s:196    .rodata:00000060 .LC6
+     /tmp/ccrEF6Gk.s:199    .rodata:00000068 .LC7
+     /tmp/ccrEF6Gk.s:202    .rodata:00000070 .LC8
+     /tmp/ccrEF6Gk.s:205    .rodata:00000074 .LC9
+     /tmp/ccrEF6Gk.s:208    .rodata:00000078 .LC10
+     /tmp/ccrEF6Gk.s:211    .rodata:0000007c .LC11
+     /tmp/ccrEF6Gk.s:214    .rodata:00000088 .LC12
+     /tmp/ccrEF6Gk.s:217    .rodata:00000090 .LC13
+     /tmp/ccrEF6Gk.s:220    .rodata:00000094 .LC14
+     /tmp/ccrEF6Gk.s:223    .rodata:000000a0 .LC15
+     /tmp/ccrEF6Gk.s:226    .rodata:000000a8 .LC16
+     /tmp/ccrEF6Gk.s:229    .rodata:000000b0 .LC17
+     /tmp/ccrEF6Gk.s:232    .text.main:00000000 $t
+     /tmp/ccrEF6Gk.s:237    .text.main:00000000 main
+     /tmp/ccrEF6Gk.s:326    .text.main:000000b0 $d
+     /tmp/ccrEF6Gk.s:341    .text.main:000000e4 $t
+     /tmp/ccrEF6Gk.s:785    .text.TC1_IrqHandler:00000000 $t
+     /tmp/ccrEF6Gk.s:790    .text.TC1_IrqHandler:00000000 TC1_IrqHandler
+     /tmp/ccrEF6Gk.s:865    .text.ADC_IrqHandler:00000000 $t
+     /tmp/ccrEF6Gk.s:870    .text.ADC_IrqHandler:00000000 ADC_IrqHandler
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
+TC_FindMckDivisor
+TC_Configure
+TimeTick_Configure
+ADC_Initialize
+ADC_cfgFrequency
+LEDs_configure
+LED_clr
+USBC_Configure
 _impure_ptr
 fiprintf
 USBC_isConfigured
@@ -7880,18 +7886,10 @@ USBC_hasData
 gets
 siscanf
 puts
+ARM GAS  /tmp/ccrEF6Gk.s 			page 133
+
+
 strcmp
 mode
 iprintf
 control
-TC_FindMckDivisor
-TC_Configure
-TimeTick_Configure
-ADC_Initialize
-ARM GAS  /tmp/ccZvkXpi.s 			page 133
-
-
-ADC_cfgFrequency
-LEDs_configure
-LED_clr
-USBC_Configure
