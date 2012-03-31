@@ -2,49 +2,80 @@
 #include "board.h"
 #include "controller.h"
 
-#define match(a, b) (strcmp(a, b) == 0)
+#define CONFIG  (1 << 0)
+#define RUN     (1 << 1)
+#define HOLD    (1 << 2)
+#define RELEASE (1 << 3)
 
 #define MINv 0
 #define MAXv MAX
 
 #define ADC0 0
 #define ADC1 1
-#define ADC0m (1 << ADC0)
-#define ADC1m (1 << ADC1)
-#define ADC_EOC_IRQS ADC0m|ADC1m
+#define BUFFER_SIZE 2
 
-static ctrlio_t log = 0;
-static struct ctrl loop = CTRL_INIT;
+#define PWM0 0
+#define PWM1 1
+#define PWM_FREQ   20
+#define PWM_PERIOD 100
+
+ctrlio_t input[BUFFER_SIZE] = {0};
+uint8_t st = CONFIG;
+
+struct ctrl loop = CTRL_INIT;	
+struct trip ntrip = {&loop._e, 0, 100, 10};
+struct trip rtrip = {&loop._e, 0, 12, 0};
+uint32_t releasetime = 0;
 
 static void init()
 {
     uint32_t div;
     uint32_t tcclks;
 
-    /* Enable peripheral clock. */
-    PMC->PMC_PCER0 = 1 << ID_TC1;
+	//TODO PIO Configure 
+
+    /* Enable peripheral clocks */
+    PMC_EnablePeripheral(ID_TC1);
+    PMC_EnablePeripheral(ID_ADC);
+    PMC_EnablePeripheral(ID_PWM);
 
     /* Configure TC */
     TC_FindMckDivisor(SAMPLING_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
     TC_Configure(TC1, BLINK_TC, tcclks | TC_CMR_CPCTRG);
     TC1->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / SAMPLING_FREQ;
 
-    /* Configure and enable interrupt on RC compare */
-    NVIC_EnableIRQ((IRQn_Type) ID_TC1);
+    NVIC_EnableIRQ(TC1_IRQn);
+    NVIC_SetPriority(TC1_IRQn, 1);
     TC1->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
+
+    /* Initialize ADC */
+    ADC_Initialize(ADC, ID_ADC);
+    ADC_cfgFrequency(ADC, 15, 4 ); // startup = 15, prescal = 4, ADC clock = 6.4 MHz
+
+    ADC_EnableChannel(ADC, ADC0);
+    ADC_EnableChannel(ADC, ADC1);
+	ADC_StartConversion(ADC);
+    ADC_ReadBuffer(ADC, (int16_t*) input, BUFFER_SIZE);
+
+    NVIC_EnableIRQ(ADC_IRQn);
+	NVIC_SetPriority(ADC_IRQn, 0);
+    ADC_EnableIt(ADC,ADC_IER_RXBUFF);
+
+    /* Configure PWMC channels */
+    PWMC_ConfigureClocks(PWM_FREQ * PWM_PERIOD, 0, BOARD_MCK);
+    PWMC_ConfigureChannelExt(PWM, PWM0, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
+    PWMC_ConfigureChannelExt(PWM, PWM1, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
+
+    PWMC_SetPeriod(PWM, PWM0, PWM_PERIOD);
+    PWMC_SetDutyCycle(PWM, PWM0, 0);
+    PWMC_SetPeriod(PWM, PWM1, PWM_PERIOD);
+    PWMC_SetDutyCycle(PWM, PWM1, 0);
+
+    PWMC_ConfigureSyncChannel(PWM, (1 << PWM0)|(1 << PWM1), PWM_SCM_UPDM_MODE1, 0, 0);
+    PWMC_SetSyncChannelUpdatePeriod(PWM, PWM_SCUP_UPR(1));
 
 	/* Tick Config */
 	TimeTick_Configure(BOARD_MCK);
-
-    /* Initialize ADC */
-    ADC_Initialize( ADC, ID_ADC );
-
-    /* startup = 15, prescal = 4, ADC clock = 6.4 MHz */
-    ADC_cfgFrequency( ADC, 15, 4 );
-
-    /* Enable ADC interrupt */
-    NVIC_EnableIRQ(ADC_IRQn);
-    ADC->ADC_IER = ADC_EOC_IRQS;
 
 	/* LED PIO Config */
 	LEDs_configure();
@@ -52,18 +83,41 @@ static void init()
 
 	/* USB Console Config */
 	USBC_Configure();
+}
 
+void state(uint8_t new) 
+{
+	switch (new) {
+		case CONFIG:
+			mode(STOP, &loop);
+			PWMC_SetDutyCycle(PWM, PWM0, 0);
+			PWMC_SetDutyCycle(PWM, PWM1, 0);
+			break;
+		case RUN:
+			loop.tristate = &rtrip;
+			mode(RAMP, &loop);
+			break;
+		case HOLD:
+			loop.tristate = &ntrip;
+			loop.SP = loop._x;
+			mode(NORMAL, &loop);
+			break;
+		case RELEASE:
+			PWMC_SetDutyCycle(PWM, PWM0, 0); // down -> 0
+			PWMC_SetDutyCycle(PWM, PWM1, 0); // up -> full
+			mode(STOP, &loop);
+			break;
+		default:
+			state(CONFIG);
+	}
+	st = new;
 }
 
 int main() 
 {
-	char *line;
-	char opt[8];
-	char cmd;
-
-	int argc;
 	int argv[3];
-	unsigned id = 0;
+	char *line = "\0";
+	char cmd = 0;
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
@@ -76,18 +130,115 @@ int main()
 	TRACE_DEBUG("waiting until USB is fully configured\n");
 	while (!USBC_isConfigured());
 
+	loop.Kp = SCALE(3);
+	loop.Ki = SCALE(2);
+	loop.Kd = SCALE(0);
+	loop.rSlope = 16;
+	loop.rSP = MAXv;
+	loop.tristate = &rtrip;
+
 	LED_blink(statusled, 5);
 
 	setbuf(stdout, NULL);
 
 	while (1) {
-		if(!USBC_hasData())
-			continue;
-
-		gets(line);
+		if(USBC_hasData()) {
+			gets(line);
 #ifdef ECHO
-		puts(line);
+			puts(line);
 #endif
+			cmd = *line;
+		}
+		else {
+			cmd = 0;
+		}
+
+		switch (st) {
+			case CONFIG:
+				if (cmd == 'g') {
+					state(RUN);
+				}
+				else if (cmd == 'h') {
+					state(HOLD);
+				}
+				else if (cmd == 'r') {
+					state(RELEASE);
+				}
+				else if (cmd == 'w') {
+					if (sscanf(line+1, "%u", argv) == 1)
+						loop.SP = LIMIT(*argv, MINv, MAXv);
+					printf("SP: %u\n", loop.SP);
+				}
+				else if (cmd == 'e') {
+					if (sscanf(line+1, "%u", argv) == 1) 
+						loop.rSP = LIMIT(*argv, MINv, MAXv);
+					printf("rEP: %u\n", loop.rSP);
+				}
+				else if (cmd == 's') {
+					if (sscanf(line+1, "%i", argv) == 1)
+						loop.rSlope = *argv;
+					printf("rSlope: %i\n", loop.rSlope);
+				}
+				else if (cmd == 'k') {
+					if (sscanf(line+1, "%u%u%u", argv, argv+1, argv+2) == 3) {
+						loop.Kp = argv[0];
+						loop.Ki = argv[1];
+						loop.Kd = argv[2];
+					}
+					printf("Kp: %u Ki: %u Kd: %u\n", loop.Kp, loop.Ki, loop.Kd);
+				}
+				else if (cmd == 't') {
+					if (sscanf(line+1, "%u", argv) == 1)
+						releasetime = *argv;
+					printf("rT: %u\n", releasetime);
+				}
+				else if (cmd == '?') {
+					puts("config");
+				}
+				break;
+
+			case HOLD:
+				if (GetTickCount() % 1000)
+					LED_blink(statusled, 1);
+
+				if (cmd == '?')
+					puts("hold");
+				else if (cmd == 's')
+					state(CONFIG);
+				else if (cmd == 'w') {
+					if (sscanf(line+1, "%u", argv) == 1)
+						loop.SP = LIMIT(*argv, MINv, MAXv);
+					printf("SP: %u\n", loop.SP);
+				}
+				break;
+
+			case RELEASE:
+				if (GetTickCount() % 1000)
+					LED_blink(statusled, 2);
+
+				// decrement releasetime, 0 -> set(CONFIG)
+
+				if (cmd == '?')
+					puts("release");
+				else if (cmd == 's')
+					state(CONFIG);
+				break;
+
+			case RUN:
+				if (GetTickCount() % 1000)
+					LED_blink(statusled, 3);
+
+				if (cmd == '?')
+					puts("run");
+				else if (cmd == 's')
+					state(CONFIG);
+				else if (cmd == 'r')
+					state(RELEASE);
+				break;
+
+			default:
+				state(CONFIG);
+		}
 	}
 	return 0;
 }
@@ -95,32 +246,33 @@ int main()
 void TC1_IrqHandler()
 {
 	ADC_StartConversion(ADC);
+	ADC_ReadBuffer(ADC, (int16_t*) input, BUFFER_SIZE);
 }
 
 void ADC_IrqHandler(void)
 {
     uint32_t status;
-	ctrlio_t x;
+	uint32_t duty = 0;
 
     status = ADC_GetStatus(ADC);
 
-	if ((status & ADC0m) == ADC0m) { // check End of Conversion flag for channel 0
-		x = (ctrlio_t) *(ADC->ADC_CDR+ADC0); // read channel data
-		x = LIMIT(x, MINv, MAXv);
-
-		if (loop.mode > OFF) {
-			control(x, &loop);    // run controller
-			// write output here
+	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
+		if (st & (RUN|HOLD)) {
+			control(LIMIT(input[0], MINv, MAXv), &loop);
+			duty = loop.tristate->output * ((loop.output * PWM_PERIOD) / MAX);
+			if (loop.tristate->output == 1) {
+				PWMC_SetDutyCycle(PWM, PWM0, duty);
+				PWMC_SetDutyCycle(PWM, PWM1, 0);
+			}
+			else if (loop.tristate->output == -1) {
+				PWMC_SetDutyCycle(PWM, PWM0, 0);
+				PWMC_SetDutyCycle(PWM, PWM1, duty);
+			}
+			else {
+				PWMC_SetDutyCycle(PWM, PWM0, 0);
+				PWMC_SetDutyCycle(PWM, PWM1, 0);
+			}
 		}
-		else {
-			ADC->ADC_CHDR = ADC0m; // disable channel /* do this with state(OFF) or sth*/
-			// reset output here
-		}
-	}
-
-	if ((status & ADC1m) == ADC1m) {
-		log = *(ADC->ADC_CDR+ADC1);
-		log = LIMIT(log, MINv, MAXv);
 	}
 }
 
