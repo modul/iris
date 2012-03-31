@@ -4,17 +4,17 @@
 
 #define match(a, b) (strcmp(a, b) == 0)
 
-#define LOOPS 2 
-#define ADC_EOC_IRQS 3  // = (1 << 0)|(1<<1)|..|(1<<LOOPS-1)
+#define MINv 0
+#define MAXv MAX
 
-static struct ctrl loops[LOOPS] = {{0}};
+#define ADC0 0
+#define ADC1 1
+#define ADC0m (1 << ADC0)
+#define ADC1m (1 << ADC1)
+#define ADC_EOC_IRQS ADC0m|ADC1m
 
-static struct {
-	ctrlio_t min;
-	ctrlio_t max;
-	ctrlio_t yinit;
-	ctrlio_t uinit;
-} conf[LOOPS] = {{0,MAX,0,0}};
+static ctrlio_t log = 0;
+static struct ctrl loop = CTRL_INIT;
 
 static void init()
 {
@@ -88,134 +88,39 @@ int main()
 #ifdef ECHO
 		puts(line);
 #endif
-		switch ((cmd=*line)) {
-			case 's':
-			case 'g':
-				// get ID (0-9 for loop setting)
-				if (line[1]-'0' < LOOPS)
-					id = line[1]-'0';
-				else {
-					puts("? id");
-					break;
-				}
-				
-				line = line+2;
-
-				// get option (max 7 characters)
-				if (sscanf(line, "%s", opt) != 1) {
-					puts("? opt");
-					break;
-				}
-
-				// get arguments (3)
-				argc = sscanf(line, "%i%i%i", argv, argv+1, argv+2);
-
-				// check option
-				if (match("mode", opt)) {
-					if (cmd == 's') {
-						if (argc < 1) {
-							puts("? arg");
-							break;
-						}
-						if (*argv > STOP || *argv < OFF)
-							*argv = OFF;				
-						mode(*argv, &loops[id]);
-					}
-					printf("%u\n", loops[id].mode);
-				}
-				else if (match("sp", opt)) {
-					if (cmd == 's') {
-						if (argc < 1) {
-							puts("? arg");
-							break;
-						}
-						loops[id].SP = LIMIT(*argv, conf[id].min, conf[id].max);
-					}
-					printf("%u\n", loops[id].SP);
-				}
-				else if (match("pv", opt)) {
-					if (cmd == 's')
-						puts("? read-only");
-					printf("%u\n", loops[id]._x);
-				}
-				else if (match("error", opt)) {
-					if (cmd == 's')
-						puts("? read-only");
-					printf("%u\n", loops[id]._e);
-				}
-				else if (match("k", opt)) {
-					if (cmd == 's') {
-						if (argc < 3) {
-							puts("? arg");
-							break;
-						}
-						loops[id].Kp = argv[0];
-						loops[id].Ki = argv[1];
-						loops[id].Kd = argv[2];
-					}
-					printf("%u %u %u\n", loops[id].Kp, loops[id].Ki, loops[id].Kd);
-				}
-				if (match("limit", opt)) {
-					if (cmd == 's') {
-						if (argc < 2) {
-							puts("? arg");
-							break;
-						}
-						conf[id].min = argv[0] < argv[1] ? argv[0] : argv[1];
-						conf[id].max = argv[0] < argv[1] ? argv[1] : argv[0];
-					}
-					printf("%u %u\n", conf[id].min, conf[id].max);
-				}
-				else 
-					puts("? opt");
-				break;
-			case 'l':
-			case 'q':
-				break;
-			default:
-				puts("? cmd");
-		}
 	}
 	return 0;
 }
 
 void TC1_IrqHandler()
 {
-	uint8_t i;
-	struct ctrl *loop = loops;
-
-	for (i=0; i < LOOPS; i++, loop++) {
-		if ((ADC->ADC_CHSR & (1<<i)) == 0 && loop->mode > OFF)
-			ADC->ADC_CHER = (1<<i); // enable channel
-	}
 	ADC_StartConversion(ADC);
 }
 
 void ADC_IrqHandler(void)
 {
-	uint8_t i;
-	uint8_t msk;
     uint32_t status;
-	struct ctrl *loop = loops;
 	ctrlio_t x;
 
     status = ADC_GetStatus(ADC);
 
-	for (i=0, msk=1; i < LOOPS; i++, msk<<=1, loop++) {
-		if (!((status & msk) == msk)) // check End of Conversion flag for channel i
-			continue;
-			
-		x = (ctrlio_t) *(ADC->ADC_CDR+i); // read channel data
-		x = LIMIT(x, conf[i].min, conf[i].max);
+	if ((status & ADC0m) == ADC0m) { // check End of Conversion flag for channel 0
+		x = (ctrlio_t) *(ADC->ADC_CDR+ADC0); // read channel data
+		x = LIMIT(x, MINv, MAXv);
 
-		if (loop->mode > OFF) {
-			control(x, loop);    // run controller
+		if (loop.mode > OFF) {
+			control(x, &loop);    // run controller
 			// write output here
 		}
 		else {
-			ADC->ADC_CHDR = msk; // disable channel
+			ADC->ADC_CHDR = ADC0m; // disable channel /* do this with state(OFF) or sth*/
 			// reset output here
 		}
+	}
+
+	if ((status & ADC1m) == ADC1m) {
+		log = *(ADC->ADC_CDR+ADC1);
+		log = LIMIT(log, MINv, MAXv);
 	}
 }
 
