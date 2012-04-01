@@ -115,7 +115,7 @@ void ADC_IrqHandler(void)
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
 		if (_state & (RUN|HOLD)) {
-			control(LIMIT(input[0], MINv, MAXv), &loop);
+			control(LIMIT(input[AIN0], MINv, MAXv), &loop);
 			duty = loop.tristate->output * ((loop.output * PWM_PERIOD) / MAX);
 			if (loop.tristate->output == 1) {
 				PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
@@ -244,7 +244,7 @@ static void cli()
 	else if (cmd == 'r')
 		state(RELEASE);
 	else if (cmd == '?')
-		printf("%u %u %u\n", _state, input[0], input[1]);
+		printf("%u %u %u\n", _state, input[AIN0], input[AIN1]);
 
 	switch (_state) {
 		case STOPPED:
