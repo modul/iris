@@ -44,9 +44,11 @@ int main()
 
 	/* configure hardware */
 	init();
+	LED_blink(statusled, 5);
 
 	TRACE_DEBUG("waiting until USB is fully configured\n");
 	while (!USBC_isConfigured());
+	setbuf(stdout, NULL);
 
 	loop.Kp = SCALE(3);
 	loop.Ki = SCALE(2);
@@ -54,10 +56,7 @@ int main()
 	loop.rSlope = 16;
 	loop.rSP = MAXv;
 	loop.tristate = &rtrip;
-
-	LED_blink(statusled, 5);
-
-	setbuf(stdout, NULL);
+	state(STOP);
 
 	while (1) {
 		cli();
@@ -196,6 +195,7 @@ static void state(uint8_t new)
 {
 	switch (new) {
 		case STOPPED:
+			LED_clr(statusled);
 			mode(STOP, &loop);
 			PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
 			PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
@@ -239,6 +239,7 @@ static void cli()
 	argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2) - 1;
 	TRACE_DEBUG("got %i arguments", argc);
 
+	/* commands allowed in all states */
 	if (cmd == 's')
 		state(STOPPED);
 	else if (cmd == 'r')
@@ -246,6 +247,7 @@ static void cli()
 	else if (cmd == '?')
 		printf("%u %u %u\n", _state, input[AIN0], input[AIN1]);
 
+	/* state specific commands */
 	switch (_state) {
 		case STOPPED:
 			if (cmd == 'g') {
@@ -293,9 +295,6 @@ static void cli()
 			}
 			break;
 
-		case RUN:
-			break;
-
 		case HOLD:
 			if (cmd == 'w') {
 				if (argc == 1) {
@@ -306,11 +305,9 @@ static void cli()
 			}
 			break;
 
+		case RUN:
 		case RELEASE:
 			break;
-
-		default:
-			state(STOPPED);
 	}
 }
 /* vim: set ts=4: */

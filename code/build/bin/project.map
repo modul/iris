@@ -712,17 +712,17 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
                 0x00401138       0x38 build/obj/main.o
  .text.NVIC_SetPriority
                 0x00401170       0x5c build/obj/main.o
- .text.main     0x004011cc      0x26c build/obj/main.o
+ .text.main     0x004011cc      0x274 build/obj/main.o
                 0x004011cc                main
  .text.TC1_IrqHandler
-                0x00401438       0x2c build/obj/main.o
-                0x00401438                TC1_IrqHandler
+                0x00401440       0x2c build/obj/main.o
+                0x00401440                TC1_IrqHandler
  .text.ADC_IrqHandler
-                0x00401464      0x144 build/obj/main.o
-                0x00401464                ADC_IrqHandler
- .text.init     0x004015a8      0x24c build/obj/main.o
- .text.state    0x004017f4      0x1ac build/obj/main.o
- .text.cli      0x004019a0      0x3d8 build/obj/main.o
+                0x0040146c      0x144 build/obj/main.o
+                0x0040146c                ADC_IrqHandler
+ .text.init     0x004015b0      0x24c build/obj/main.o
+ .text.state    0x004017fc      0x1b4 build/obj/main.o
+ .text.cli      0x004019b0      0x3c8 build/obj/main.o
  .text.pid      0x00401d78       0xc4 build/obj/controller.o
  .text.update   0x00401e3c       0x90 build/obj/controller.o
  .text.mode     0x00401ecc       0xd0 build/obj/controller.o
