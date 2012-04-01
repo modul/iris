@@ -30,7 +30,7 @@
 #define statusled 0
 #define alarmled 1
 
-#define PINS_LEDS {PIN_STATUS, PIN_ALARM}
+#define PINS_LEDS PIN_STATUS, PIN_ALARM
 
 /** Blinker configuration (LED Flashing) **/
 #define BLINK_FREQ 6

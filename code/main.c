@@ -2,7 +2,7 @@
 #include "board.h"
 #include "controller.h"
 
-#define CONFIG  (1 << 0)
+#define STOPPED  (1 << 0)
 #define RUN     (1 << 1)
 #define HOLD    (1 << 2)
 #define RELEASE (1 << 3)
@@ -20,7 +20,7 @@
 #define PWM_PERIOD 100
 
 ctrlio_t input[BUFFER_SIZE] = {0};
-uint8_t st = CONFIG;
+uint8_t _state = STOPPED;
 
 struct ctrl loop = CTRL_INIT;	
 struct trip ntrip = {&loop._e, 0, 100, 10};
@@ -43,6 +43,7 @@ static void init()
     TC_FindMckDivisor(SAMPLING_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
     TC_Configure(TC1, BLINK_TC, tcclks | TC_CMR_CPCTRG);
     TC1->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / SAMPLING_FREQ;
+	TC_Start(TC1, 0);
 
     NVIC_EnableIRQ(TC1_IRQn);
     NVIC_SetPriority(TC1_IRQn, 1);
@@ -88,29 +89,34 @@ static void init()
 void state(uint8_t new) 
 {
 	switch (new) {
-		case CONFIG:
+		case STOPPED:
 			mode(STOP, &loop);
 			PWMC_SetDutyCycle(PWM, PWM0, 0);
 			PWMC_SetDutyCycle(PWM, PWM1, 0);
+			TRACE_DEBUG("set state STOPPED\n");
 			break;
 		case RUN:
 			loop.tristate = &rtrip;
 			mode(RAMP, &loop);
+			TRACE_DEBUG("set state RUN\n");
 			break;
 		case HOLD:
 			loop.tristate = &ntrip;
 			loop.SP = loop._x;
 			mode(NORMAL, &loop);
+			TRACE_DEBUG("set state HOLD\n");
 			break;
 		case RELEASE:
 			PWMC_SetDutyCycle(PWM, PWM0, 0); // down -> 0
 			PWMC_SetDutyCycle(PWM, PWM1, 0); // up -> full
 			mode(STOP, &loop);
+			TRACE_DEBUG("set state RELEASE\n");
 			break;
 		default:
-			state(CONFIG);
+			TRACE_DEBUG("got invalid state\n");
+			state(STOPPED);
 	}
-	st = new;
+	_state = new;
 }
 
 int main() 
@@ -118,6 +124,7 @@ int main()
 	int argv[3];
 	char *line = "\0";
 	char cmd = 0;
+	uint32_t timestamp = 0;
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
@@ -153,8 +160,8 @@ int main()
 			cmd = 0;
 		}
 
-		switch (st) {
-			case CONFIG:
+		switch (_state) {
+			case STOPPED:
 				if (cmd == 'g') {
 					state(RUN);
 				}
@@ -165,32 +172,41 @@ int main()
 					state(RELEASE);
 				}
 				else if (cmd == 'w') {
-					if (sscanf(line+1, "%u", argv) == 1)
+					if (sscanf(line+1, "%u", argv) == 1) {
 						loop.SP = LIMIT(*argv, MINv, MAXv);
-					printf("SP: %u\n", loop.SP);
+						TRACE_INFO("set setpoint to %u\n", loop.SP);
+					}
+					printf("%u\n", loop.SP);
 				}
 				else if (cmd == 'e') {
-					if (sscanf(line+1, "%u", argv) == 1) 
+					if (sscanf(line+1, "%u", argv) == 1) {
 						loop.rSP = LIMIT(*argv, MINv, MAXv);
-					printf("rEP: %u\n", loop.rSP);
+						TRACE_INFO("set ramp endpoint to %u\n", loop.rSP);
+					}
+					printf("%u\n", loop.rSP);
 				}
 				else if (cmd == 's') {
-					if (sscanf(line+1, "%i", argv) == 1)
+					if (sscanf(line+1, "%i", argv) == 1) {
 						loop.rSlope = *argv;
-					printf("rSlope: %i\n", loop.rSlope);
+						TRACE_INFO("set ramp slope to %i\n", loop.rSlope);
+					}
+					printf("%i\n", loop.rSlope);
 				}
 				else if (cmd == 'k') {
 					if (sscanf(line+1, "%u%u%u", argv, argv+1, argv+2) == 3) {
 						loop.Kp = argv[0];
 						loop.Ki = argv[1];
 						loop.Kd = argv[2];
+						TRACE_INFO("set PID factors to %u, %u, %u\n", loop.Kp, loop.Ki, loop.Kd);
 					}
-					printf("Kp: %u Ki: %u Kd: %u\n", loop.Kp, loop.Ki, loop.Kd);
+					printf("%u %u %u\n", loop.Kp, loop.Ki, loop.Kd);
 				}
 				else if (cmd == 't') {
-					if (sscanf(line+1, "%u", argv) == 1)
+					if (sscanf(line+1, "%u", argv) == 1) {
 						releasetime = *argv;
-					printf("rT: %u\n", releasetime);
+						TRACE_INFO("set releasetime to %u\n", releasetime);
+					}
+					printf("%u\n", releasetime);
 				}
 				else if (cmd == '?') {
 					puts("config");
@@ -204,11 +220,13 @@ int main()
 				if (cmd == '?')
 					puts("hold");
 				else if (cmd == 's')
-					state(CONFIG);
+					state(STOPPED);
 				else if (cmd == 'w') {
-					if (sscanf(line+1, "%u", argv) == 1)
+					if (sscanf(line+1, "%u", argv) == 1) {
 						loop.SP = LIMIT(*argv, MINv, MAXv);
-					printf("SP: %u\n", loop.SP);
+						TRACE_INFO("set setpoint to %u\n", loop.SP);
+					}
+					printf("%u\n", loop.SP);
 				}
 				break;
 
@@ -216,12 +234,18 @@ int main()
 				if (GetTickCount() % 1000)
 					LED_blink(statusled, 2);
 
-				// decrement releasetime, 0 -> set(CONFIG)
+				if (timestamp == 0)
+					timestamp = GetTickCount() + releasetime;
+				else if (GetTickCount() >= timestamp) {
+					TRACE_DEBUG("releasetime elapsed\n");
+					timestamp = 0;
+					state(STOPPED);
+				}
 
 				if (cmd == '?')
 					puts("release");
 				else if (cmd == 's')
-					state(CONFIG);
+					state(STOPPED);
 				break;
 
 			case RUN:
@@ -231,13 +255,13 @@ int main()
 				if (cmd == '?')
 					puts("run");
 				else if (cmd == 's')
-					state(CONFIG);
+					state(STOPPED);
 				else if (cmd == 'r')
 					state(RELEASE);
 				break;
 
 			default:
-				state(CONFIG);
+				state(STOPPED);
 		}
 	}
 	return 0;
@@ -257,7 +281,7 @@ void ADC_IrqHandler(void)
     status = ADC_GetStatus(ADC);
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
-		if (st & (RUN|HOLD)) {
+		if (_state & (RUN|HOLD)) {
 			control(LIMIT(input[0], MINv, MAXv), &loop);
 			duty = loop.tristate->output * ((loop.output * PWM_PERIOD) / MAX);
 			if (loop.tristate->output == 1) {

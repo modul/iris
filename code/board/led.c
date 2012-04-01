@@ -11,7 +11,7 @@
 
 static uint8_t configured = 0;
 
-static const Pin leds[] = PINS_LEDS;
+static const Pin leds[] = {PINS_LEDS};
 static volatile uint32_t blinks[LEDS_NUM];
 
 void TC0_IrqHandler()
