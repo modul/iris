@@ -68,8 +68,6 @@ int main()
 			case HOLD:
 				if (GetTickCount() % 1000)
 					LED_blink(statusled, 1);
-				if (loop._dx > dxmax || loop._dx < -dxmax)
-					state(RELEASE);
 				break;
 
 			case RELEASE:
@@ -88,6 +86,10 @@ int main()
 			case RUN:
 				if (GetTickCount() % 1000)
 					LED_blink(statusled, 3);
+				if (   loop._dx > dxmax \
+				    || loop._dx < -dxmax \
+					|| loop.mode == NORMAL) // ramp finished
+					state(RELEASE);
 				break;
 
 			default:
@@ -237,6 +239,13 @@ static void cli()
 	argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2) - 1;
 	TRACE_DEBUG("got %i arguments", argc);
 
+	if (cmd == 's')
+		state(STOPPED);
+	else if (cmd == 'r')
+		state(RELEASE);
+	else if (cmd == '?')
+		printf("%u %u %u\n", _state, input[0], input[1]);
+
 	switch (_state) {
 		case STOPPED:
 			if (cmd == 'g') {
@@ -245,9 +254,6 @@ static void cli()
 			else if (cmd == 'h') {
 				state(HOLD);
 			}
-			else if (cmd == 'r') {
-				state(RELEASE);
-			}
 			else if (cmd == 'e') {
 				if (argc == 1) {
 					loop.rSP = LIMIT(*argv, MINv, MAXv);
@@ -255,7 +261,7 @@ static void cli()
 				}
 				printf("%u\n", loop.rSP);
 			}
-			else if (cmd == 's') {
+			else if (cmd == 'v') {
 				if (argc == 1) {
 					loop.rSlope = *argv;
 					TRACE_INFO("set ramp slope to %i\n", loop.rSlope);
@@ -285,27 +291,13 @@ static void cli()
 				}
 				printf("%u\n", dxmax);
 			}
-			else if (cmd == '?') {
-				puts("stopped");
-			}
-
 			break;
 
 		case RUN:
-			if (cmd == '?')
-				puts("run");
-			else if (cmd == 's')
-				state(STOPPED);
-			else if (cmd == 'r')
-				state(RELEASE);
 			break;
 
 		case HOLD:
-			if (cmd == '?')
-				puts("hold");
-			else if (cmd == 's')
-				state(STOPPED);
-			else if (cmd == 'w') {
+			if (cmd == 'w') {
 				if (argc == 1) {
 					loop.SP = LIMIT(*argv, MINv, MAXv);
 					TRACE_INFO("set setpoint to %u\n", loop.SP);
@@ -315,10 +307,6 @@ static void cli()
 			break;
 
 		case RELEASE:
-			if (cmd == '?')
-				puts("release");
-			else if (cmd == 's')
-				state(STOPPED);
 			break;
 
 		default:

@@ -52,8 +52,6 @@ libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
                               build/obj/usb_console.o (memcpy)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memmove.o)
                               build/obj/usb_console.o (memmove)
-/usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
-                              build/obj/main.o (puts)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
                               build/obj/syscalls.o (errno)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-rget.o)
@@ -67,7 +65,7 @@ libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-stdio.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-siscanf.o) (__seofread)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strlen.o)
-                              /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o) (strlen)
+                              /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-siscanf.o) (strlen)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiscanf.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-siscanf.o) (__ssvfiscanf_r)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ungetc.o)
@@ -93,7 +91,7 @@ libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-freer.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o) (_free_r)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
-                              /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o) (__sfvwrite_r)
+                              /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o) (__sfvwrite_r)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwalk.o)
                               /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o) (_fwalk)
 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iswspace.o)
@@ -430,8 +428,6 @@ Discarded input sections
  .bss           0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memcpy.o)
  .data          0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memmove.o)
  .bss           0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memmove.o)
- .data          0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
- .bss           0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
  .text          0x00000000      0x114 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
  .data          0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
  .bss           0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
@@ -587,7 +583,7 @@ END GROUP
 LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtend.o
 LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
 
-.text           0x00400000     0xa488
+.text           0x00400000     0xa3a0
                 0x00400000                . = ALIGN (0x4)
                 0x00400000                _sfixed = .
  *(.vectors .vectors.*)
@@ -716,815 +712,807 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
                 0x00401138       0x38 build/obj/main.o
  .text.NVIC_SetPriority
                 0x00401170       0x5c build/obj/main.o
- .text.main     0x004011cc      0x25c build/obj/main.o
+ .text.main     0x004011cc      0x26c build/obj/main.o
                 0x004011cc                main
  .text.TC1_IrqHandler
-                0x00401428       0x2c build/obj/main.o
-                0x00401428                TC1_IrqHandler
+                0x00401438       0x2c build/obj/main.o
+                0x00401438                TC1_IrqHandler
  .text.ADC_IrqHandler
-                0x00401454      0x144 build/obj/main.o
-                0x00401454                ADC_IrqHandler
- .text.init     0x00401598      0x24c build/obj/main.o
- .text.state    0x004017e4      0x1ac build/obj/main.o
- .text.cli      0x00401990      0x428 build/obj/main.o
- .text.pid      0x00401db8       0xc4 build/obj/controller.o
- .text.update   0x00401e7c       0x90 build/obj/controller.o
- .text.mode     0x00401f0c       0xd0 build/obj/controller.o
-                0x00401f0c                mode
- .text.control  0x00401fdc       0x9c build/obj/controller.o
-                0x00401fdc                control
+                0x00401464      0x144 build/obj/main.o
+                0x00401464                ADC_IrqHandler
+ .text.init     0x004015a8      0x24c build/obj/main.o
+ .text.state    0x004017f4      0x1ac build/obj/main.o
+ .text.cli      0x004019a0      0x3d8 build/obj/main.o
+ .text.pid      0x00401d78       0xc4 build/obj/controller.o
+ .text.update   0x00401e3c       0x90 build/obj/controller.o
+ .text.mode     0x00401ecc       0xd0 build/obj/controller.o
+                0x00401ecc                mode
+ .text.control  0x00401f9c       0x9c build/obj/controller.o
+                0x00401f9c                control
  .text.tristate
-                0x00402078       0x7c build/obj/controller.o
-                0x00402078                tristate
- .text.tris     0x004020f4       0x98 build/obj/controller.o
-                0x004020f4                tris
+                0x00402038       0x7c build/obj/controller.o
+                0x00402038                tristate
+ .text.tris     0x004020b4       0x98 build/obj/controller.o
+                0x004020b4                tris
  .text.UDP_EndOfTransfer
-                0x0040218c       0x70 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x0040214c       0x70 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.UDP_ClearRxFlag
-                0x004021fc       0x80 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004021bc       0x80 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.UDP_WritePayload
-                0x0040227c       0x44 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x0040223c       0x44 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.UDP_EnablePeripheralClock
-                0x004022c0       0x20 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402280       0x20 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.UDP_MblWriteFifo
-                0x004022e0      0x128 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004022a0      0x128 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
  .text.USBD_IrqHandler
-                0x00402408      0x5f8 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402408                USBD_IrqHandler
+                0x004023c8      0x5f8 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004023c8                USBD_IrqHandler
  .text.USBD_HAL_ResetEPs
-                0x00402a00       0xc0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402a00                USBD_HAL_ResetEPs
+                0x004029c0       0xc0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x004029c0                USBD_HAL_ResetEPs
  .text.USBD_HAL_CancelIo
-                0x00402ac0       0x54 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402ac0                USBD_HAL_CancelIo
+                0x00402a80       0x54 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402a80                USBD_HAL_CancelIo
  .text.USBD_HAL_ConfigureEP
-                0x00402b14       0xf0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402b14                USBD_HAL_ConfigureEP
+                0x00402ad4       0xf0 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402ad4                USBD_HAL_ConfigureEP
  .text.USBD_HAL_SetTransferCallback
-                0x00402c04       0x20 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402c04                USBD_HAL_SetTransferCallback
+                0x00402bc4       0x20 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402bc4                USBD_HAL_SetTransferCallback
  .text.USBD_HAL_Write
-                0x00402c24      0x188 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402c24                USBD_HAL_Write
+                0x00402be4      0x188 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402be4                USBD_HAL_Write
  .text.USBD_HAL_Read
-                0x00402dac       0x40 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402dac                USBD_HAL_Read
+                0x00402d6c       0x40 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402d6c                USBD_HAL_Read
  .text.USBD_HAL_Connect
-                0x00402dec       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402dec                USBD_HAL_Connect
+                0x00402dac       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402dac                USBD_HAL_Connect
  .text.USBD_HAL_Disconnect
-                0x00402e14       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402e14                USBD_HAL_Disconnect
+                0x00402dd4       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402dd4                USBD_HAL_Disconnect
  .text.USBD_HAL_SetAddress
-                0x00402e3c       0x1c libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402e3c                USBD_HAL_SetAddress
+                0x00402dfc       0x1c libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402dfc                USBD_HAL_SetAddress
  .text.USBD_HAL_SetConfiguration
-                0x00402e58       0x18 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402e58                USBD_HAL_SetConfiguration
+                0x00402e18       0x18 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402e18                USBD_HAL_SetConfiguration
  .text.USBD_HAL_Init
-                0x00402e70       0x40 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402e70                USBD_HAL_Init
+                0x00402e30       0x40 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402e30                USBD_HAL_Init
  .text.USBD_HAL_Stall
-                0x00402eb0       0x60 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402eb0                USBD_HAL_Stall
+                0x00402e70       0x60 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402e70                USBD_HAL_Stall
  .text.USBD_HAL_Halt
-                0x00402f10       0xc4 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402f10                USBD_HAL_Halt
+                0x00402ed0       0xc4 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402ed0                USBD_HAL_Halt
  .text.USBD_HAL_IsHighSpeed
-                0x00402fd4        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402fd4                USBD_HAL_IsHighSpeed
+                0x00402f94        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402f94                USBD_HAL_IsHighSpeed
  .text.USBD_HAL_Suspend
-                0x00402fd8       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00402fd8                USBD_HAL_Suspend
+                0x00402f98       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402f98                USBD_HAL_Suspend
  .text.USBD_HAL_Activate
-                0x00403000       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
-                0x00403000                USBD_HAL_Activate
+                0x00402fc0       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00402fc0                USBD_HAL_Activate
  .text.USBGenericDescriptor_GetLength
-                0x00403024        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                0x00403024                USBGenericDescriptor_GetLength
+                0x00402fe4        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00402fe4                USBGenericDescriptor_GetLength
  .text.USBGenericDescriptor_GetType
-                0x00403028        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                0x00403028                USBGenericDescriptor_GetType
+                0x00402fe8        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00402fe8                USBGenericDescriptor_GetType
  .text.USBGenericDescriptor_GetNextDescriptor
-                0x0040302c       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                0x0040302c                USBGenericDescriptor_GetNextDescriptor
+                0x00402fec       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00402fec                USBGenericDescriptor_GetNextDescriptor
  .text.USBGenericDescriptor_Parse
-                0x0040303c       0x4c libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                0x0040303c                USBGenericDescriptor_Parse
+                0x00402ffc       0x4c libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00402ffc                USBGenericDescriptor_Parse
  .text.USBEndpointDescriptor_GetNumber
-                0x00403088        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                0x00403088                USBEndpointDescriptor_GetNumber
+                0x00403048        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00403048                USBEndpointDescriptor_GetNumber
  .text.USBEndpointDescriptor_GetDirection
-                0x00403090        0x6 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                0x00403090                USBEndpointDescriptor_GetDirection
+                0x00403050        0x6 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00403050                USBEndpointDescriptor_GetDirection
  .text.USBEndpointDescriptor_GetType
-                0x00403096        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                0x00403096                USBEndpointDescriptor_GetType
+                0x00403056        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00403056                USBEndpointDescriptor_GetType
  .text.USBEndpointDescriptor_GetMaxPacketSize
-                0x0040309e        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                0x0040309e                USBEndpointDescriptor_GetMaxPacketSize
+                0x0040305e        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x0040305e                USBEndpointDescriptor_GetMaxPacketSize
  .text.USBConfigurationDescriptor_GetTotalLength
-                0x004030a2        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                0x004030a2                USBConfigurationDescriptor_GetTotalLength
+                0x00403062        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00403062                USBConfigurationDescriptor_GetTotalLength
  .text.USBConfigurationDescriptor_IsSelfPowered
-                0x004030a6        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                0x004030a6                USBConfigurationDescriptor_IsSelfPowered
- *fill*         0x004030ae        0x2 00
+                0x00403066        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00403066                USBConfigurationDescriptor_IsSelfPowered
+ *fill*         0x0040306e        0x2 00
  .text.USBConfigurationDescriptor_Parse
-                0x004030b0       0x78 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
-                0x004030b0                USBConfigurationDescriptor_Parse
+                0x00403070       0x78 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+                0x00403070                USBConfigurationDescriptor_Parse
  .text.USBD_SuspendHandler
-                0x00403128       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x00403128                USBD_SuspendHandler
+                0x004030e8       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004030e8                USBD_SuspendHandler
  .text.USBD_ResumeHandler
-                0x0040314c       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x0040314c                USBD_ResumeHandler
+                0x0040310c       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x0040310c                USBD_ResumeHandler
  .text.USBD_RequestHandler
-                0x00403174       0x2c libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x00403174                USBD_RequestHandler
+                0x00403134       0x2c libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00403134                USBD_RequestHandler
  .text.USBD_ConfigureEndpoint
-                0x004031a0        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x004031a0                USBD_ConfigureEndpoint
+                0x00403160        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00403160                USBD_ConfigureEndpoint
  .text.USBD_ResetHandler
-                0x004031ac       0x38 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x004031ac                USBD_ResetHandler
+                0x0040316c       0x38 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x0040316c                USBD_ResetHandler
  .text.USBD_Write
-                0x004031e4       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x004031e4                USBD_Write
+                0x004031a4       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004031a4                USBD_Write
  .text.USBD_Read
-                0x00403208       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x00403208                USBD_Read
+                0x004031c8       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004031c8                USBD_Read
  .text.USBD_Halt
-                0x0040322c       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x0040322c                USBD_Halt
+                0x004031ec       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004031ec                USBD_Halt
  .text.USBD_Unhalt
-                0x0040323c       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x0040323c                USBD_Unhalt
+                0x004031fc       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004031fc                USBD_Unhalt
  .text.USBD_IsHighSpeed
-                0x0040324c        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x0040324c                USBD_IsHighSpeed
+                0x0040320c        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x0040320c                USBD_IsHighSpeed
  .text.USBD_Stall
-                0x00403258        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x00403258                USBD_Stall
+                0x00403218        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00403218                USBD_Stall
  .text.USBD_SetAddress
-                0x00403264       0x20 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x00403264                USBD_SetAddress
+                0x00403224       0x20 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00403224                USBD_SetAddress
  .text.USBD_SetConfiguration
-                0x00403284       0x30 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x00403284                USBD_SetConfiguration
+                0x00403244       0x30 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00403244                USBD_SetConfiguration
  .text.USBD_Connect
-                0x004032b4        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x004032b4                USBD_Connect
+                0x00403274        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00403274                USBD_Connect
  .text.USBD_Disconnect
-                0x004032c0       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x004032c0                USBD_Disconnect
+                0x00403280       0x28 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00403280                USBD_Disconnect
  .text.USBD_Init
-                0x004032e8       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x004032e8                USBD_Init
+                0x004032a8       0x24 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004032a8                USBD_Init
  .text.USBD_GetState
-                0x0040330c        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
-                0x0040330c                USBD_GetState
+                0x004032cc        0xc libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x004032cc                USBD_GetState
  .text.USBDCallbacks_Reset
-                0x00403318        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
-                0x00403318                USBDCallbacks_Reset
+                0x004032d8        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                0x004032d8                USBDCallbacks_Reset
  .text.USBDCallbacks_Suspended
-                0x0040331a        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
-                0x0040331a                USBDCallbacks_Suspended
+                0x004032da        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                0x004032da                USBDCallbacks_Suspended
  .text.USBDCallbacks_Resumed
-                0x0040331c        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
-                0x0040331c                USBDCallbacks_Resumed
- *fill*         0x0040331e        0x2 00
+                0x004032dc        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+                0x004032dc                USBDCallbacks_Resumed
+ *fill*         0x004032de        0x2 00
  .text.TerminateCtrlInWithNull
-                0x00403320       0x18 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x004032e0       0x18 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
  .text.USBD_GetDriver
-                0x00403338        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                0x00403338                USBD_GetDriver
+                0x004032f8        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x004032f8                USBD_GetDriver
  .text.USBDDriver_Initialize
-                0x00403340        0xc libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                0x00403340                USBDDriver_Initialize
+                0x00403300        0xc libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x00403300                USBDDriver_Initialize
  .text.USBDDriver_GetCfgDescriptors
-                0x0040334c       0x18 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                0x0040334c                USBDDriver_GetCfgDescriptors
+                0x0040330c       0x18 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x0040330c                USBDDriver_GetCfgDescriptors
  .text.USBDDriver_RequestHandler
-                0x00403364      0x3f0 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
-                0x00403364                USBDDriver_RequestHandler
+                0x00403324      0x3f0 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+                0x00403324                USBDDriver_RequestHandler
  .text.CDCDSerial_Initialize
-                0x00403754       0x24 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                0x00403754                CDCDSerial_Initialize
+                0x00403714       0x24 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00403714                CDCDSerial_Initialize
  .text.CDCDSerial_ConfigureFunction
-                0x00403778       0x18 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                0x00403778                CDCDSerial_ConfigureFunction
+                0x00403738       0x18 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00403738                CDCDSerial_ConfigureFunction
  .text.CDCDSerial_RequestHandler
-                0x00403790       0x14 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                0x00403790                CDCDSerial_RequestHandler
+                0x00403750       0x14 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00403750                CDCDSerial_RequestHandler
  .text.CDCDSerial_Read
-                0x004037a4       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                0x004037a4                CDCDSerial_Read
+                0x00403764       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00403764                CDCDSerial_Read
  .text.CDCDSerial_Write
-                0x004037c4       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                0x004037c4                CDCDSerial_Write
+                0x00403784       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x00403784                CDCDSerial_Write
  .text.CDCDSerial_LineCodingIsToChange
-                0x004037e4        0x4 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                0x004037e4                CDCDSerial_LineCodingIsToChange
+                0x004037a4        0x4 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x004037a4                CDCDSerial_LineCodingIsToChange
  .text.CDCDSerial_ControlLineStateChanged
-                0x004037e8        0x2 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
-                0x004037e8                CDCDSerial_ControlLineStateChanged
- *fill*         0x004037ea        0x2 00
+                0x004037a8        0x2 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x004037a8                CDCDSerial_ControlLineStateChanged
+ *fill*         0x004037aa        0x2 00
  .text.CDCDSerial_EventHandler
-                0x004037ec       0x34 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+                0x004037ac       0x34 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
  .text.USBDDriverCallbacks_InterfaceSettingChanged
-                0x00403820        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
-                0x00403820                USBDDriverCallbacks_InterfaceSettingChanged
- *fill*         0x00403822        0x2 00
+                0x004037e0        0x2 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+                0x004037e0                USBDDriverCallbacks_InterfaceSettingChanged
+ *fill*         0x004037e2        0x2 00
  .text.CDCDSerialDriver_Initialize
-                0x00403824       0x30 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-                0x00403824                CDCDSerialDriver_Initialize
+                0x004037e4       0x30 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+                0x004037e4                CDCDSerialDriver_Initialize
  .text.CDCDSerialDriver_ConfigurationChangedHandler
-                0x00403854       0x24 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-                0x00403854                CDCDSerialDriver_ConfigurationChangedHandler
+                0x00403814       0x24 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+                0x00403814                CDCDSerialDriver_ConfigurationChangedHandler
  .text.CDCDSerialDriver_RequestHandler
-                0x00403878       0x28 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
-                0x00403878                CDCDSerialDriver_RequestHandler
+                0x00403838       0x28 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+                0x00403838                CDCDSerialDriver_RequestHandler
  .text.USBGenericRequest_GetType
-                0x004038a0        0xa libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x004038a0                USBGenericRequest_GetType
+                0x00403860        0xa libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00403860                USBGenericRequest_GetType
  .text.USBGenericRequest_GetRequest
-                0x004038aa        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x004038aa                USBGenericRequest_GetRequest
+                0x0040386a        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x0040386a                USBGenericRequest_GetRequest
  .text.USBGenericRequest_GetValue
-                0x004038ae        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x004038ae                USBGenericRequest_GetValue
+                0x0040386e        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x0040386e                USBGenericRequest_GetValue
  .text.USBGenericRequest_GetIndex
-                0x004038b2        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x004038b2                USBGenericRequest_GetIndex
+                0x00403872        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00403872                USBGenericRequest_GetIndex
  .text.USBGenericRequest_GetLength
-                0x004038b6        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x004038b6                USBGenericRequest_GetLength
- *fill*         0x004038ba        0x2 00
+                0x00403876        0x4 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00403876                USBGenericRequest_GetLength
+ *fill*         0x0040387a        0x2 00
  .text.USBGenericRequest_GetEndpointNumber
-                0x004038bc       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x004038bc                USBGenericRequest_GetEndpointNumber
+                0x0040387c       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x0040387c                USBGenericRequest_GetEndpointNumber
  .text.USBGenericRequest_GetRecipient
-                0x004038cc        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x004038cc                USBGenericRequest_GetRecipient
+                0x0040388c        0x8 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x0040388c                USBGenericRequest_GetRecipient
  .text.USBGenericRequest_GetDirection
-                0x004038d4        0x6 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x004038d4                USBGenericRequest_GetDirection
- *fill*         0x004038da        0x2 00
+                0x00403894        0x6 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x00403894                USBGenericRequest_GetDirection
+ *fill*         0x0040389a        0x2 00
  .text.USBGetDescriptorRequest_GetDescriptorType
-                0x004038dc       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x004038dc                USBGetDescriptorRequest_GetDescriptorType
+                0x0040389c       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x0040389c                USBGetDescriptorRequest_GetDescriptorType
  .text.USBGetDescriptorRequest_GetDescriptorIndex
-                0x004038ec       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x004038ec                USBGetDescriptorRequest_GetDescriptorIndex
+                0x004038ac       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x004038ac                USBGetDescriptorRequest_GetDescriptorIndex
  .text.USBSetAddressRequest_GetAddress
-                0x004038fc       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x004038fc                USBSetAddressRequest_GetAddress
+                0x004038bc       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x004038bc                USBSetAddressRequest_GetAddress
  .text.USBSetConfigurationRequest_GetConfiguration
-                0x0040390c       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x0040390c                USBSetConfigurationRequest_GetConfiguration
+                0x004038cc       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x004038cc                USBSetConfigurationRequest_GetConfiguration
  .text.USBInterfaceRequest_GetInterface
-                0x0040391c       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x0040391c                USBInterfaceRequest_GetInterface
+                0x004038dc       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x004038dc                USBInterfaceRequest_GetInterface
  .text.USBInterfaceRequest_GetAlternateSetting
-                0x0040392c       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x0040392c                USBInterfaceRequest_GetAlternateSetting
+                0x004038ec       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x004038ec                USBInterfaceRequest_GetAlternateSetting
  .text.USBFeatureRequest_GetFeatureSelector
-                0x0040393c       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
-                0x0040393c                USBFeatureRequest_GetFeatureSelector
+                0x004038fc       0x10 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+                0x004038fc                USBFeatureRequest_GetFeatureSelector
  .text._Interfaces_Parse
-                0x0040394c       0xa6 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- *fill*         0x004039f2        0x2 00
+                0x0040390c       0xa6 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ *fill*         0x004039b2        0x2 00
  .text._SetLineCodingCallback
-                0x004039f4       0x48 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x004039b4       0x48 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
  .text.CDCDSerialPort_Initialize
-                0x00403a3c       0x34 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                0x00403a3c                CDCDSerialPort_Initialize
+                0x004039fc       0x34 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x004039fc                CDCDSerialPort_Initialize
  .text.CDCDSerialPort_ParseInterfaces
-                0x00403a70       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                0x00403a70                CDCDSerialPort_ParseInterfaces
+                0x00403a30       0x20 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00403a30                CDCDSerialPort_ParseInterfaces
  .text.CDCDSerialPort_RequestHandler
-                0x00403a90       0x9c libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                0x00403a90                CDCDSerialPort_RequestHandler
+                0x00403a50       0x9c libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00403a50                CDCDSerialPort_RequestHandler
  .text.CDCDSerialPort_Read
-                0x00403b2c       0x18 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                0x00403b2c                CDCDSerialPort_Read
+                0x00403aec       0x18 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00403aec                CDCDSerialPort_Read
  .text.CDCDSerialPort_Write
-                0x00403b44       0x18 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
-                0x00403b44                CDCDSerialPort_Write
+                0x00403b04       0x18 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+                0x00403b04                CDCDSerialPort_Write
  .text.CDCLineCoding_Initialize
-                0x00403b5c        0xe libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
-                0x00403b5c                CDCLineCoding_Initialize
- *fill*         0x00403b6a        0x2 00
+                0x00403b1c        0xe libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+                0x00403b1c                CDCLineCoding_Initialize
+ *fill*         0x00403b2a        0x2 00
  .text.NVIC_SetPriority
-                0x00403b6c       0x28 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403b2c       0x28 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
  .text.PioInterruptHandler
-                0x00403b94       0x6c libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                0x00403b94                PioInterruptHandler
+                0x00403b54       0x6c libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403b54                PioInterruptHandler
  .text.PIOA_IrqHandler
-                0x00403c00       0x24 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                0x00403c00                PIOA_IrqHandler
+                0x00403bc0       0x24 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403bc0                PIOA_IrqHandler
  .text.PIOB_IrqHandler
-                0x00403c24       0x14 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                0x00403c24                PIOB_IrqHandler
+                0x00403be4       0x14 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403be4                PIOB_IrqHandler
  .text.PIOC_IrqHandler
-                0x00403c38       0x14 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                0x00403c38                PIOC_IrqHandler
+                0x00403bf8       0x14 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403bf8                PIOC_IrqHandler
  .text.PIO_InitializeInterrupts
-                0x00403c4c       0x98 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                0x00403c4c                PIO_InitializeInterrupts
+                0x00403c0c       0x98 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403c0c                PIO_InitializeInterrupts
  .text.PIO_ConfigureIt
-                0x00403ce4       0x84 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                0x00403ce4                PIO_ConfigureIt
+                0x00403ca4       0x84 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403ca4                PIO_ConfigureIt
  .text.PIO_EnableIt
-                0x00403d68       0x70 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
-                0x00403d68                PIO_EnableIt
+                0x00403d28       0x70 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00403d28                PIO_EnableIt
  .text.IrqHandlerNotUsed
-                0x00403dd8        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403dd8                IrqHandlerNotUsed
+                0x00403d98        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403d98                IrqHandlerNotUsed
  .text.NMI_Handler
-                0x00403dda        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403dda                NMI_Handler
+                0x00403d9a        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403d9a                NMI_Handler
  .text.HardFault_Handler
-                0x00403ddc        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403ddc                HardFault_Handler
+                0x00403d9c        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403d9c                HardFault_Handler
  .text.MemManage_Handler
-                0x00403dde        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403dde                MemManage_Handler
+                0x00403d9e        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403d9e                MemManage_Handler
  .text.BusFault_Handler
-                0x00403de0        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403de0                BusFault_Handler
+                0x00403da0        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403da0                BusFault_Handler
  .text.UsageFault_Handler
-                0x00403de2        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403de2                UsageFault_Handler
+                0x00403da2        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403da2                UsageFault_Handler
  .text.SVC_Handler
-                0x00403de4        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403de4                SVC_Handler
+                0x00403da4        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403da4                SVC_Handler
  .text.DebugMon_Handler
-                0x00403de6        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403de6                DebugMon_Handler
+                0x00403da6        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403da6                DebugMon_Handler
  .text.PendSV_Handler
-                0x00403de8        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403de8                PendSV_Handler
+                0x00403da8        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403da8                PendSV_Handler
  .text.SUPC_IrqHandler
-                0x00403dea        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403dea                SUPC_IrqHandler
+                0x00403daa        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403daa                SUPC_IrqHandler
  .text.RSTC_IrqHandler
-                0x00403dec        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403dec                RSTC_IrqHandler
+                0x00403dac        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dac                RSTC_IrqHandler
  .text.RTC_IrqHandler
-                0x00403dee        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403dee                RTC_IrqHandler
+                0x00403dae        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dae                RTC_IrqHandler
  .text.RTT_IrqHandler
-                0x00403df0        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403df0                RTT_IrqHandler
+                0x00403db0        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403db0                RTT_IrqHandler
  .text.WDT_IrqHandler
-                0x00403df2        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403df2                WDT_IrqHandler
+                0x00403db2        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403db2                WDT_IrqHandler
  .text.PMC_IrqHandler
-                0x00403df4        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403df4                PMC_IrqHandler
+                0x00403db4        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403db4                PMC_IrqHandler
  .text.EEFC_IrqHandler
-                0x00403df6        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403df6                EEFC_IrqHandler
+                0x00403db6        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403db6                EEFC_IrqHandler
  .text.UART0_IrqHandler
-                0x00403df8        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403df8                UART0_IrqHandler
+                0x00403db8        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403db8                UART0_IrqHandler
  .text.UART1_IrqHandler
-                0x00403dfa        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403dfa                UART1_IrqHandler
+                0x00403dba        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dba                UART1_IrqHandler
  .text.SMC_IrqHandler
-                0x00403dfc        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403dfc                SMC_IrqHandler
+                0x00403dbc        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dbc                SMC_IrqHandler
  .text.USART0_IrqHandler
-                0x00403dfe        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403dfe                USART0_IrqHandler
+                0x00403dbe        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dbe                USART0_IrqHandler
  .text.USART1_IrqHandler
-                0x00403e00        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e00                USART1_IrqHandler
+                0x00403dc0        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dc0                USART1_IrqHandler
  .text.MCI_IrqHandler
-                0x00403e02        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e02                MCI_IrqHandler
+                0x00403dc2        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dc2                MCI_IrqHandler
  .text.TWI0_IrqHandler
-                0x00403e04        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e04                TWI0_IrqHandler
+                0x00403dc4        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dc4                TWI0_IrqHandler
  .text.TWI1_IrqHandler
-                0x00403e06        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e06                TWI1_IrqHandler
+                0x00403dc6        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dc6                TWI1_IrqHandler
  .text.SPI_IrqHandler
-                0x00403e08        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e08                SPI_IrqHandler
+                0x00403dc8        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dc8                SPI_IrqHandler
  .text.SSC_IrqHandler
-                0x00403e0a        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e0a                SSC_IrqHandler
+                0x00403dca        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dca                SSC_IrqHandler
  .text.TC2_IrqHandler
-                0x00403e0c        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e0c                TC2_IrqHandler
+                0x00403dcc        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dcc                TC2_IrqHandler
  .text.TC3_IrqHandler
-                0x00403e0e        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e0e                TC3_IrqHandler
+                0x00403dce        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dce                TC3_IrqHandler
  .text.TC4_IrqHandler
-                0x00403e10        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e10                TC4_IrqHandler
+                0x00403dd0        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dd0                TC4_IrqHandler
  .text.TC5_IrqHandler
-                0x00403e12        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e12                TC5_IrqHandler
+                0x00403dd2        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dd2                TC5_IrqHandler
  .text.DAC_IrqHandler
-                0x00403e14        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e14                DAC_IrqHandler
+                0x00403dd4        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dd4                DAC_IrqHandler
  .text.PWM_IrqHandler
-                0x00403e16        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e16                PWM_IrqHandler
+                0x00403dd6        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dd6                PWM_IrqHandler
  .text.CRCCU_IrqHandler
-                0x00403e18        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e18                CRCCU_IrqHandler
+                0x00403dd8        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dd8                CRCCU_IrqHandler
  .text.ACC_IrqHandler
-                0x00403e1a        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
-                0x00403e1a                ACC_IrqHandler
+                0x00403dda        0x2 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+                0x00403dda                ACC_IrqHandler
  .text.ADC_Initialize
-                0x00403e1c       0x1c libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
-                0x00403e1c                ADC_Initialize
+                0x00403ddc       0x1c libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
+                0x00403ddc                ADC_Initialize
  .text.ADC_cfgFrequency
-                0x00403e38       0x16 libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
-                0x00403e38                ADC_cfgFrequency
+                0x00403df8       0x16 libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
+                0x00403df8                ADC_cfgFrequency
  .text.ADC_ReadBuffer
-                0x00403e4e       0x34 libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
-                0x00403e4e                ADC_ReadBuffer
- *fill*         0x00403e82        0x2 00
+                0x00403e0e       0x34 libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
+                0x00403e0e                ADC_ReadBuffer
+ *fill*         0x00403e42        0x2 00
  .text.PIO_Configure
-                0x00403e84      0x14c libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
-                0x00403e84                PIO_Configure
- .text.PIO_Get  0x00403fd0       0x1c libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
-                0x00403fd0                PIO_Get
+                0x00403e44      0x14c libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+                0x00403e44                PIO_Configure
+ .text.PIO_Get  0x00403f90       0x1c libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+                0x00403f90                PIO_Get
  .text.PMC_EnablePeripheral
-                0x00403fec       0x5c libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
-                0x00403fec                PMC_EnablePeripheral
+                0x00403fac       0x5c libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x00403fac                PMC_EnablePeripheral
  .text.PMC_DisablePeripheral
-                0x00404048       0x58 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
-                0x00404048                PMC_DisablePeripheral
+                0x00404008       0x58 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x00404008                PMC_DisablePeripheral
  .text.PMC_IsPeriphEnabled
-                0x004040a0       0x4c libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
-                0x004040a0                PMC_IsPeriphEnabled
+                0x00404060       0x4c libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x00404060                PMC_IsPeriphEnabled
  .text.TC_Configure
-                0x004040ec       0x38 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
-                0x004040ec                TC_Configure
+                0x004040ac       0x38 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x004040ac                TC_Configure
  .text.TC_Start
-                0x00404124       0x2c libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
-                0x00404124                TC_Start
- .text.TC_Stop  0x00404150       0x2c libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
-                0x00404150                TC_Stop
+                0x004040e4       0x2c libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x004040e4                TC_Start
+ .text.TC_Stop  0x00404110       0x2c libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x00404110                TC_Stop
  .text.TC_FindMckDivisor
-                0x0040417c       0x70 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
-                0x0040417c                TC_FindMckDivisor
+                0x0040413c       0x70 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x0040413c                TC_FindMckDivisor
  .text.FindClockConfiguration
-                0x004041ec       0x7c libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+                0x004041ac       0x7c libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
  .text.PWMC_ConfigureChannelExt
-                0x00404268       0xcc libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
-                0x00404268                PWMC_ConfigureChannelExt
+                0x00404228       0xcc libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+                0x00404228                PWMC_ConfigureChannelExt
  .text.PWMC_ConfigureClocks
-                0x00404334       0x54 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
-                0x00404334                PWMC_ConfigureClocks
+                0x004042f4       0x54 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+                0x004042f4                PWMC_ConfigureClocks
  .text.PWMC_SetPeriod
-                0x00404388       0x1e libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
-                0x00404388                PWMC_SetPeriod
- *fill*         0x004043a6        0x2 00
+                0x00404348       0x1e libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+                0x00404348                PWMC_SetPeriod
+ *fill*         0x00404366        0x2 00
  .text.PWMC_SetDutyCycle
-                0x004043a8       0x48 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
-                0x004043a8                PWMC_SetDutyCycle
+                0x00404368       0x48 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+                0x00404368                PWMC_SetDutyCycle
  .text.PWMC_ConfigureSyncChannel
-                0x004043f0       0x12 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
-                0x004043f0                PWMC_ConfigureSyncChannel
+                0x004043b0       0x12 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+                0x004043b0                PWMC_ConfigureSyncChannel
  .text.PWMC_SetSyncChannelUpdatePeriod
-                0x00404402        0xc libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
-                0x00404402                PWMC_SetSyncChannelUpdatePeriod
- *fill*         0x0040440e        0x2 00
+                0x004043c2        0xc libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+                0x004043c2                PWMC_SetSyncChannelUpdatePeriod
+ *fill*         0x004043ce        0x2 00
  .text.PIO_CaptureHandler
-                0x00404410       0x60 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
-                0x00404410                PIO_CaptureHandler
- .text          0x00404470       0x54 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
-                0x00404470                __assert_func
-                0x004044b8                __assert
- .text          0x004044c4       0x4c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fiprintf.o)
-                0x004044c4                _fiprintf_r
-                0x004044e4                fiprintf
- .text          0x00404510       0x6c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-gets.o)
-                0x00404510                _gets_r
-                0x0040456c                gets
- .text          0x0040457c       0x64 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iprintf.o)
-                0x0040457c                iprintf
-                0x004045b4                _iprintf_r
- .text          0x004045e0       0xf0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memcpy.o)
-                0x004045e0                memcpy
- .text          0x004046d0       0xbc /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memmove.o)
-                0x004046d0                memmove
- .text          0x0040478c       0x84 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
-                0x0040478c                _puts_r
-                0x00404800                puts
- .text          0x00404810       0x70 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-rget.o)
-                0x00404810                __srget_r
-                0x00404870                __srget
- .text          0x00404880       0x10 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setbuf.o)
-                0x00404880                setbuf
- .text          0x00404890      0x15c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setvbuf.o)
-                0x00404890                setvbuf
- .text          0x004049ec       0xb4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-siscanf.o)
-                0x004049ec                siscanf
-                0x00404a48                _siscanf_r
- .text          0x00404aa0       0x8c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-stdio.o)
-                0x00404aa0                __sread
-                0x00404ac4                __seofread
-                0x00404ac8                __swrite
-                0x00404b00                __sseek
-                0x00404b24                __sclose
- .text          0x00404b2c       0x60 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strlen.o)
-                0x00404b2c                strlen
- .text          0x00404b8c      0xb5c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiscanf.o)
-                0x00404b8c                _sungetc_r
-                0x00404c10                __ssrefill_r
-                0x00404c4c                _sfread_r
-                0x00404cc4                __ssvfiscanf_r
- .text          0x004056e8      0x19c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ungetc.o)
-                0x004056e8                __submore
-                0x0040576c                _ungetc_r
-                0x00405870                ungetc
- .text          0x00405884      0xd18 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
-                0x00405884                __sprint_r
-                0x00405904                _vfiprintf_r
-                0x00406580                vfiprintf
- .text          0x0040659c       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-writer.o)
-                0x0040659c                _write_r
- .text          0x004065c8       0xf8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wsetup.o)
-                0x004065c8                __swsetup_r
- .text          0x004066c0       0x10 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-abort.o)
-                0x004066c0                abort
- .text          0x004066d0       0x28 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-closer.o)
-                0x004066d0                _close_r
- .text          0x004066f8      0x1e0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fflush.o)
-                0x004066f8                _fflush_r
-                0x004068b0                fflush
- .text          0x004068d8      0x1dc /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
-                0x004068e0                _cleanup_r
-                0x0040693c                __sfmoreglue
-                0x0040696c                _cleanup
-                0x0040697c                __sinit
-                0x004069d8                __sfp
-                0x00406a74                __sfp_lock_acquire
-                0x00406a78                __sfp_lock_release
-                0x00406a7c                __sinit_lock_acquire
-                0x00406a80                __sinit_lock_release
-                0x00406a84                __fp_lock_all
-                0x00406a9c                __fp_unlock_all
- .text          0x00406ab4      0x13c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputwc.o)
-                0x00406ab4                _fputwc_r
-                0x00406b98                fputwc
- .text          0x00406bf0      0x234 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-freer.o)
-                0x00406bf0                _malloc_trim_r
-                0x00406c94                _free_r
- .text          0x00406e24      0x32c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
-                0x00406e24                __sfvwrite_r
- .text          0x00407150       0xa0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwalk.o)
-                0x00407150                _fwalk
-                0x0040719c                _fwalk_reent
- .text          0x004071f0       0x1c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iswspace.o)
-                0x004071f0                iswspace
- .text          0x0040720c       0xa4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
-                0x0040720c                _setlocale_r
-                0x00407268                __locale_charset
-                0x00407274                __locale_mb_cur_max
-                0x00407280                __locale_msgcharset
-                0x00407288                __locale_cjk_lang
-                0x0040728c                _localeconv_r
-                0x00407294                setlocale
-                0x004072a8                localeconv
- .text          0x004072b0       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-lseekr.o)
-                0x004072b0                _lseek_r
- .text          0x004072dc       0xe8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-makebuf.o)
-                0x004072dc                __smakebuf_r
- .text          0x004073c4       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-malloc.o)
-                0x004073c4                malloc
-                0x004073d4                free
- .text          0x004073e4      0x57c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
-                0x004073e4                _malloc_r
- .text          0x00407960       0xc8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbrtowc.o)
-                0x00407960                _mbrtowc_r
-                0x004079bc                mbrtowc
- .text          0x00407a28       0x58 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbtowc_r.o)
-                0x00407a28                __ascii_mbtowc
-                0x00407a4c                _mbtowc_r
- .text          0x00407a80       0x88 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memchr.o)
-                0x00407a80                memchr
- .text          0x00407b08       0x8c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
-                0x00407b08                memset
- .text          0x00407b94        0x8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mlock.o)
-                0x00407b94                __malloc_lock
-                0x00407b98                __malloc_unlock
- .text          0x00407b9c       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-readr.o)
-                0x00407b9c                _read_r
- .text          0x00407bc8      0x3d8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reallocr.o)
-                0x00407bc8                _realloc_r
- .text          0x00407fa0      0x144 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-refill.o)
-                0x00407fb4                __srefill_r
- .text          0x004080e4       0x28 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sbrkr.o)
-                0x004080e4                _sbrk_r
- .text          0x0040810c       0x78 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sccl.o)
-                0x0040810c                __sccl
- .text          0x00408184      0x150 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
-                0x00408184                _init_signal_r
-                0x004081b4                _signal_r
-                0x004081f0                _raise_r
-                0x00408244                __sigtramp_r
-                0x00408290                raise
-                0x004082a0                signal
-                0x004082b4                _init_signal
-                0x004082c4                __sigtramp
- .text          0x004082d4       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signalr.o)
-                0x004082d4                _kill_r
-                0x004082fc                _getpid_r
- .text          0x00408300      0x1dc /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strcmp.o)
-                0x00408300                strcmp
- .text          0x004084dc      0x17c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtol.o)
-                0x004084dc                _strtol_r
-                0x0040863c                strtol
- .text          0x00408658      0x1f4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoll_r.o)
-                0x00408658                _strtoll_r
- .text          0x0040884c      0x180 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoul.o)
-                0x0040884c                _strtoul_r
-                0x004089b0                strtoul
- *fill*         0x004089cc        0x4 00
- .text          0x004089d0      0x1e0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoull_r.o)
-                0x004089d0                _strtoull_r
- .text          0x00408bb0       0xfc /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wbuf.o)
-                0x00408bb0                __swbuf_r
-                0x00408c98                __swbuf
- .text          0x00408cac       0xb0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wcrtomb.o)
-                0x00408cac                _wcrtomb_r
-                0x00408cfc                wcrtomb
- .text          0x00408d5c       0x4c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wctomb_r.o)
-                0x00408d5c                __ascii_wctomb
-                0x00408d78                _wctomb_r
- .text          0x00408da8       0xc4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fclose.o)
-                0x00408da8                _fclose_r
-                0x00408e5c                fclose
- .text          0x00408e6c       0x28 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fstatr.o)
-                0x00408e6c                _fstat_r
- .text          0x00408e94       0x28 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-isattyr.o)
-                0x00408e94                _isatty_r
- *fill*         0x00408ebc        0x4 00
- .text          0x00408ec0      0x278 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivsi3.o)
-                0x00408ec0                __udivsi3
-                0x00408ec0                __aeabi_uidiv
-                0x0040911c                __aeabi_uidivmod
- .text          0x00409138        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_dvmd_tls.o)
-                0x00409138                __aeabi_ldiv0
-                0x00409138                __aeabi_idiv0
- .text          0x0040913c       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_aeabi_uldivmod.o)
-                0x0040913c                __aeabi_uldivmod
- .text          0x00409168       0x5c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(bpabi.o)
-                0x00409168                __gnu_ldivmod_helper
-                0x00409198                __gnu_uldivmod_helper
- .text          0x004091c4      0x364 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_divdi3.o)
-                0x004091c4                __divdi3
- .text          0x00409528      0x334 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivdi3.o)
-                0x00409528                __udivdi3
+                0x004043d0       0x60 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+                0x004043d0                PIO_CaptureHandler
+ .text          0x00404430       0x54 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
+                0x00404430                __assert_func
+                0x00404478                __assert
+ .text          0x00404484       0x4c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fiprintf.o)
+                0x00404484                _fiprintf_r
+                0x004044a4                fiprintf
+ .text          0x004044d0       0x6c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-gets.o)
+                0x004044d0                _gets_r
+                0x0040452c                gets
+ .text          0x0040453c       0x64 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iprintf.o)
+                0x0040453c                iprintf
+                0x00404574                _iprintf_r
+ .text          0x004045a0       0xf0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memcpy.o)
+                0x004045a0                memcpy
+ .text          0x00404690       0xbc /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memmove.o)
+                0x00404690                memmove
+ .text          0x0040474c       0x70 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-rget.o)
+                0x0040474c                __srget_r
+                0x004047ac                __srget
+ .text          0x004047bc       0x10 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setbuf.o)
+                0x004047bc                setbuf
+ .text          0x004047cc      0x15c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setvbuf.o)
+                0x004047cc                setvbuf
+ .text          0x00404928       0xb4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-siscanf.o)
+                0x00404928                siscanf
+                0x00404984                _siscanf_r
+ .text          0x004049dc       0x8c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-stdio.o)
+                0x004049dc                __sread
+                0x00404a00                __seofread
+                0x00404a04                __swrite
+                0x00404a3c                __sseek
+                0x00404a60                __sclose
+ .text          0x00404a68       0x60 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strlen.o)
+                0x00404a68                strlen
+ .text          0x00404ac8      0xb5c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiscanf.o)
+                0x00404ac8                _sungetc_r
+                0x00404b4c                __ssrefill_r
+                0x00404b88                _sfread_r
+                0x00404c00                __ssvfiscanf_r
+ .text          0x00405624      0x19c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ungetc.o)
+                0x00405624                __submore
+                0x004056a8                _ungetc_r
+                0x004057ac                ungetc
+ .text          0x004057c0      0xd18 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
+                0x004057c0                __sprint_r
+                0x00405840                _vfiprintf_r
+                0x004064bc                vfiprintf
+ .text          0x004064d8       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-writer.o)
+                0x004064d8                _write_r
+ .text          0x00406504       0xf8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wsetup.o)
+                0x00406504                __swsetup_r
+ .text          0x004065fc       0x10 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-abort.o)
+                0x004065fc                abort
+ .text          0x0040660c       0x28 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-closer.o)
+                0x0040660c                _close_r
+ .text          0x00406634      0x1e0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fflush.o)
+                0x00406634                _fflush_r
+                0x004067ec                fflush
+ .text          0x00406814      0x1dc /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
+                0x0040681c                _cleanup_r
+                0x00406878                __sfmoreglue
+                0x004068a8                _cleanup
+                0x004068b8                __sinit
+                0x00406914                __sfp
+                0x004069b0                __sfp_lock_acquire
+                0x004069b4                __sfp_lock_release
+                0x004069b8                __sinit_lock_acquire
+                0x004069bc                __sinit_lock_release
+                0x004069c0                __fp_lock_all
+                0x004069d8                __fp_unlock_all
+ .text          0x004069f0      0x13c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputwc.o)
+                0x004069f0                _fputwc_r
+                0x00406ad4                fputwc
+ .text          0x00406b2c      0x234 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-freer.o)
+                0x00406b2c                _malloc_trim_r
+                0x00406bd0                _free_r
+ .text          0x00406d60      0x32c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
+                0x00406d60                __sfvwrite_r
+ .text          0x0040708c       0xa0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwalk.o)
+                0x0040708c                _fwalk
+                0x004070d8                _fwalk_reent
+ .text          0x0040712c       0x1c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iswspace.o)
+                0x0040712c                iswspace
+ .text          0x00407148       0xa4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
+                0x00407148                _setlocale_r
+                0x004071a4                __locale_charset
+                0x004071b0                __locale_mb_cur_max
+                0x004071bc                __locale_msgcharset
+                0x004071c4                __locale_cjk_lang
+                0x004071c8                _localeconv_r
+                0x004071d0                setlocale
+                0x004071e4                localeconv
+ .text          0x004071ec       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-lseekr.o)
+                0x004071ec                _lseek_r
+ .text          0x00407218       0xe8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-makebuf.o)
+                0x00407218                __smakebuf_r
+ .text          0x00407300       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-malloc.o)
+                0x00407300                malloc
+                0x00407310                free
+ .text          0x00407320      0x57c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
+                0x00407320                _malloc_r
+ .text          0x0040789c       0xc8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbrtowc.o)
+                0x0040789c                _mbrtowc_r
+                0x004078f8                mbrtowc
+ .text          0x00407964       0x58 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbtowc_r.o)
+                0x00407964                __ascii_mbtowc
+                0x00407988                _mbtowc_r
+ .text          0x004079bc       0x88 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memchr.o)
+                0x004079bc                memchr
+ .text          0x00407a44       0x8c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
+                0x00407a44                memset
+ .text          0x00407ad0        0x8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mlock.o)
+                0x00407ad0                __malloc_lock
+                0x00407ad4                __malloc_unlock
+ .text          0x00407ad8       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-readr.o)
+                0x00407ad8                _read_r
+ .text          0x00407b04      0x3d8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reallocr.o)
+                0x00407b04                _realloc_r
+ .text          0x00407edc      0x144 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-refill.o)
+                0x00407ef0                __srefill_r
+ .text          0x00408020       0x28 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sbrkr.o)
+                0x00408020                _sbrk_r
+ .text          0x00408048       0x78 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sccl.o)
+                0x00408048                __sccl
+ .text          0x004080c0      0x150 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
+                0x004080c0                _init_signal_r
+                0x004080f0                _signal_r
+                0x0040812c                _raise_r
+                0x00408180                __sigtramp_r
+                0x004081cc                raise
+                0x004081dc                signal
+                0x004081f0                _init_signal
+                0x00408200                __sigtramp
+ .text          0x00408210       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signalr.o)
+                0x00408210                _kill_r
+                0x00408238                _getpid_r
+ .text          0x0040823c      0x1dc /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strcmp.o)
+                0x0040823c                strcmp
+ .text          0x00408418      0x17c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtol.o)
+                0x00408418                _strtol_r
+                0x00408578                strtol
+ .text          0x00408594      0x1f4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoll_r.o)
+                0x00408594                _strtoll_r
+ .text          0x00408788      0x180 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoul.o)
+                0x00408788                _strtoul_r
+                0x004088ec                strtoul
+ .text          0x00408908      0x1e0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoull_r.o)
+                0x00408908                _strtoull_r
+ .text          0x00408ae8       0xfc /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wbuf.o)
+                0x00408ae8                __swbuf_r
+                0x00408bd0                __swbuf
+ .text          0x00408be4       0xb0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wcrtomb.o)
+                0x00408be4                _wcrtomb_r
+                0x00408c34                wcrtomb
+ .text          0x00408c94       0x4c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wctomb_r.o)
+                0x00408c94                __ascii_wctomb
+                0x00408cb0                _wctomb_r
+ .text          0x00408ce0       0xc4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fclose.o)
+                0x00408ce0                _fclose_r
+                0x00408d94                fclose
+ .text          0x00408da4       0x28 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fstatr.o)
+                0x00408da4                _fstat_r
+ .text          0x00408dcc       0x28 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-isattyr.o)
+                0x00408dcc                _isatty_r
+ *fill*         0x00408df4        0x4 00
+ .text          0x00408df8      0x278 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivsi3.o)
+                0x00408df8                __udivsi3
+                0x00408df8                __aeabi_uidiv
+                0x00409054                __aeabi_uidivmod
+ .text          0x00409070        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_dvmd_tls.o)
+                0x00409070                __aeabi_ldiv0
+                0x00409070                __aeabi_idiv0
+ .text          0x00409074       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_aeabi_uldivmod.o)
+                0x00409074                __aeabi_uldivmod
+ .text          0x004090a0       0x5c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(bpabi.o)
+                0x004090a0                __gnu_ldivmod_helper
+                0x004090d0                __gnu_uldivmod_helper
+ .text          0x004090fc      0x364 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_divdi3.o)
+                0x004090fc                __divdi3
+ .text          0x00409460      0x334 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivdi3.o)
+                0x00409460                __udivdi3
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
- .rodata        0x0040985c       0x1c build/obj/syscalls.o
- .rodata        0x00409878        0xc build/obj/uart_console.o
- .rodata        0x00409884      0x124 build/obj/usb_console.o
- .rodata        0x004099a8       0x54 build/obj/led.o
- .rodata        0x004099fc       0xa0 build/obj/usb_device_descriptor.o
-                0x004099fc                deviceDescriptor
-                0x00409a10                configurationDescriptorsFS
-                0x00409a54                languageIdStringDescriptor
-                0x00409a58                productStringDescriptor
-                0x00409a74                cdcdSerialDriverDescriptors
- .rodata        0x00409a9c      0x1d0 build/obj/main.o
- .rodata        0x00409c6c       0x34 build/obj/controller.o
+ .rodata        0x00409794       0x1c build/obj/syscalls.o
+ .rodata        0x004097b0        0xc build/obj/uart_console.o
+ .rodata        0x004097bc      0x124 build/obj/usb_console.o
+ .rodata        0x004098e0       0x54 build/obj/led.o
+ .rodata        0x00409934       0xa0 build/obj/usb_device_descriptor.o
+                0x00409934                deviceDescriptor
+                0x00409948                configurationDescriptorsFS
+                0x0040998c                languageIdStringDescriptor
+                0x00409990                productStringDescriptor
+                0x004099ac                cdcdSerialDriverDescriptors
+ .rodata        0x004099d4      0x1b4 build/obj/main.o
+ .rodata        0x00409b88       0x34 build/obj/controller.o
  .rodata.str1.1
-                0x00409ca0       0x69 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+                0x00409bbc       0x69 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
                                  0x6b (size before relaxing)
  .rodata.str1.1
-                0x00409d09       0x30 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+                0x00409c25       0x30 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
  .rodata.str1.1
-                0x00409d39       0xef libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .rodata        0x00409e28       0x3f libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+                0x00409c55       0xef libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .rodata        0x00409d44       0x3f libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
  .rodata.str1.1
-                0x00409e67       0x67 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .rodata        0x00409ece       0x3f libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+                0x00409d83       0x67 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .rodata        0x00409dea       0x3f libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
  .rodata.str1.1
-                0x00409f0d       0x17 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .rodata        0x00409f24       0x1e libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+                0x00409e29       0x17 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .rodata        0x00409e40       0x1e libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
  .rodata.str1.1
-                0x00409f42       0x51 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- *fill*         0x00409f93        0x1 00
- .rodata        0x00409f94       0xe4 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+                0x00409e5e       0x51 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ *fill*         0x00409eaf        0x1 00
+ .rodata        0x00409eb0       0xe4 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
  .rodata.str1.1
-                0x0040a078      0x1c0 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+                0x00409f94      0x1c0 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
  .rodata.str1.4
-                0x0040a238       0x3f /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
+                0x0040a154       0x3f /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-assert.o)
                                  0x44 (size before relaxing)
- *fill*         0x0040a277        0x1 00
- .rodata        0x0040a278        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
-                0x0040a278                _global_impure_ptr
+ *fill*         0x0040a193        0x1 00
+ .rodata        0x0040a194        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
+                0x0040a194                _global_impure_ptr
  .rodata.str1.4
-                0x0040a27c        0x2 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
+                0x0040a198        0x2 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
                                   0x4 (size before relaxing)
- *fill*         0x0040a27e        0x2 00
+ *fill*         0x0040a19a        0x2 00
+ .rodata        0x0040a19c       0x24 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiscanf.o)
+ .rodata        0x0040a1c0       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
  .rodata.str1.4
-                0x0040a280        0x2 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
-                                  0x4 (size before relaxing)
- *fill*         0x0040a282        0x2 00
- .rodata        0x0040a284       0x24 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiscanf.o)
- .rodata        0x0040a2a8       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
- .rodata.str1.4
-                0x0040a2c8       0x2f /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
+                0x0040a1e0       0x2f /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
                                  0x30 (size before relaxing)
- *fill*         0x0040a2f7        0x1 00
- .rodata        0x0040a2f8      0x104 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ctype_.o)
-                0x0040a2f8                _ctype_
- .rodata        0x0040a3fc       0x60 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
-                0x0040a3fc                __sf_fake_stderr
-                0x0040a41c                __sf_fake_stdout
-                0x0040a43c                __sf_fake_stdin
+ *fill*         0x0040a20f        0x1 00
+ .rodata        0x0040a210      0x104 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ctype_.o)
+                0x0040a210                _ctype_
+ .rodata        0x0040a314       0x60 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
+                0x0040a314                __sf_fake_stderr
+                0x0040a334                __sf_fake_stdout
+                0x0040a354                __sf_fake_stdin
  .rodata.str1.4
-                0x0040a45c        0xc /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
+                0x0040a374        0xc /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
                                  0x14 (size before relaxing)
  .rodata.str1.4
                 0x00000000        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbrtowc.o)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0040a468                . = ALIGN (0x4)
+                0x0040a380                . = ALIGN (0x4)
  *(.init)
- .init          0x0040a468        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crti.o
-                0x0040a468                _init
- .init          0x0040a46c        0x8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
-                0x0040a474                . = ALIGN (0x4)
-                0x0040a474                __preinit_array_start = .
+ .init          0x0040a380        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crti.o
+                0x0040a380                _init
+ .init          0x0040a384        0x8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
+                0x0040a38c                . = ALIGN (0x4)
+                0x0040a38c                __preinit_array_start = .
  *(.preinit_array)
-                0x0040a474                __preinit_array_end = .
-                0x0040a474                . = ALIGN (0x4)
-                0x0040a474                __init_array_start = .
+                0x0040a38c                __preinit_array_end = .
+                0x0040a38c                . = ALIGN (0x4)
+                0x0040a38c                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x0040a474        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
-                0x0040a478                __init_array_end = .
-                0x0040a478                . = ALIGN (0x4)
+ .init_array    0x0040a38c        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
+                0x0040a390                __init_array_end = .
+                0x0040a390                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x0040a478                . = ALIGN (0x4)
+                0x0040a390                . = ALIGN (0x4)
  *(.fini)
- .fini          0x0040a478        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crti.o
-                0x0040a478                _fini
- .fini          0x0040a47c        0x8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
-                0x0040a484                . = ALIGN (0x4)
-                0x0040a484                __fini_array_start = .
+ .fini          0x0040a390        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crti.o
+                0x0040a390                _fini
+ .fini          0x0040a394        0x8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
+                0x0040a39c                . = ALIGN (0x4)
+                0x0040a39c                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x0040a484        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
+ .fini_array    0x0040a39c        0x4 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
  *(SORT(.fini_array.*))
-                0x0040a488                __fini_array_end = .
+                0x0040a3a0                __fini_array_end = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x0040a488                . = ALIGN (0x4)
-                0x0040a488                _efixed = .
-                0x0040a488                PROVIDE (__exidx_start, .)
+                0x0040a3a0                . = ALIGN (0x4)
+                0x0040a3a0                _efixed = .
+                0x0040a3a0                PROVIDE (__exidx_start, .)
 
-.vfp11_veneer   0x0040a488        0x0
+.vfp11_veneer   0x0040a3a0        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x0040a488        0x0
+.v4_bx          0x0040a3a0        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x0040a488        0x0
+.iplt           0x0040a3a0        0x0
  .iplt          0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
 
-.ARM.exidx      0x0040a488        0x8
+.ARM.exidx      0x0040a3a0        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0040a488        0x8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_divdi3.o)
- .ARM.exidx     0x0040a490        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x0040a3a0        0x8 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_divdi3.o)
+ .ARM.exidx     0x0040a3a8        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivdi3.o)
                                   0x8 (size before relaxing)
-                0x0040a490                PROVIDE (__exidx_end, .)
+                0x0040a3a8                PROVIDE (__exidx_end, .)
 
-.eh_frame       0x0040a490        0x0
- .eh_frame      0x0040a490        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
+.eh_frame       0x0040a3a8        0x0
+ .eh_frame      0x0040a3a8        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
 
-.rel.dyn        0x0040a490        0x0
+.rel.dyn        0x0040a3a8        0x0
  .rel.iplt      0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
 
-.jcr            0x0040a490        0x0
- .jcr           0x0040a490        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
+.jcr            0x0040a3a8        0x0
+ .jcr           0x0040a3a8        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
 
-.igot.plt       0x0040a490        0x0
+.igot.plt       0x0040a3a8        0x0
  .igot.plt      0x00000000        0x0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtbegin.o
-                0x0040a490                . = ALIGN (0x4)
-                0x0040a490                _etext = .
+                0x0040a3a8                . = ALIGN (0x4)
+                0x0040a3a8                _etext = .
 
-.relocate       0x20000000      0x5cc load address 0x0040a490
+.relocate       0x20000000      0x5cc load address 0x0040a3a8
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _srelocate = .
  *(.ramfunc .ramfunc.*)
@@ -1558,7 +1546,7 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
                 0x200005cc                . = ALIGN (0x4)
                 0x200005cc                _erelocate = .
 
-.bss            0x200005cc      0x300 load address 0x0040aa5c
+.bss            0x200005cc      0x300 load address 0x0040a974
                 0x200005cc                . = ALIGN (0x4)
                 0x200005cc                _sbss = .
                 0x200005cc                _szero = .
@@ -1594,7 +1582,7 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
                 0x200008cc                _ebss = .
                 0x200008cc                _ezero = .
 
-.stack          0x200008d0     0x1000 load address 0x0040ad60
+.stack          0x200008d0     0x1000 load address 0x0040ac78
                 0x200008d0                . = ALIGN (0x8)
  *(.stack .stack.*)
  .stack         0x200008d0     0x1000 build/obj/startup.o
@@ -1682,121 +1670,119 @@ OUTPUT(build/bin/project.elf elf32-littlearm)
  .ARM.attributes
                 0x0000070f       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memmove.o)
  .ARM.attributes
-                0x0000073a       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
+                0x0000073a       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
  .ARM.attributes
-                0x00000765       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
+                0x00000765       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-rget.o)
  .ARM.attributes
-                0x00000790       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-rget.o)
+                0x00000790       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setbuf.o)
  .ARM.attributes
-                0x000007bb       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setbuf.o)
+                0x000007bb       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setvbuf.o)
  .ARM.attributes
-                0x000007e6       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setvbuf.o)
+                0x000007e6       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-siscanf.o)
  .ARM.attributes
-                0x00000811       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-siscanf.o)
+                0x00000811       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-stdio.o)
  .ARM.attributes
-                0x0000083c       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-stdio.o)
+                0x0000083c       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strlen.o)
  .ARM.attributes
-                0x00000867       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strlen.o)
+                0x00000867       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiscanf.o)
  .ARM.attributes
-                0x00000892       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiscanf.o)
+                0x00000892       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ungetc.o)
  .ARM.attributes
-                0x000008bd       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ungetc.o)
+                0x000008bd       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
  .ARM.attributes
-                0x000008e8       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
+                0x000008e8       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-writer.o)
  .ARM.attributes
-                0x00000913       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-writer.o)
+                0x00000913       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wsetup.o)
  .ARM.attributes
-                0x0000093e       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wsetup.o)
+                0x0000093e       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-abort.o)
  .ARM.attributes
-                0x00000969       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-abort.o)
+                0x00000969       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-closer.o)
  .ARM.attributes
-                0x00000994       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-closer.o)
+                0x00000994       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ctype_.o)
  .ARM.attributes
-                0x000009bf       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ctype_.o)
+                0x000009bf       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fflush.o)
  .ARM.attributes
-                0x000009ea       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fflush.o)
+                0x000009ea       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
  .ARM.attributes
-                0x00000a15       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
+                0x00000a15       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputwc.o)
  .ARM.attributes
-                0x00000a40       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputwc.o)
+                0x00000a40       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-freer.o)
  .ARM.attributes
-                0x00000a6b       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-freer.o)
+                0x00000a6b       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
  .ARM.attributes
-                0x00000a96       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
+                0x00000a96       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwalk.o)
  .ARM.attributes
-                0x00000ac1       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwalk.o)
+                0x00000ac1       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iswspace.o)
  .ARM.attributes
-                0x00000aec       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iswspace.o)
+                0x00000aec       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
  .ARM.attributes
-                0x00000b17       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
+                0x00000b17       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-lseekr.o)
  .ARM.attributes
-                0x00000b42       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-lseekr.o)
+                0x00000b42       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-makebuf.o)
  .ARM.attributes
-                0x00000b6d       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-makebuf.o)
+                0x00000b6d       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-malloc.o)
  .ARM.attributes
-                0x00000b98       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-malloc.o)
+                0x00000b98       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
  .ARM.attributes
-                0x00000bc3       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
+                0x00000bc3       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbrtowc.o)
  .ARM.attributes
-                0x00000bee       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbrtowc.o)
+                0x00000bee       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbtowc_r.o)
  .ARM.attributes
-                0x00000c19       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbtowc_r.o)
+                0x00000c19       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memchr.o)
  .ARM.attributes
-                0x00000c44       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memchr.o)
+                0x00000c44       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
  .ARM.attributes
-                0x00000c6f       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
+                0x00000c6f       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mlock.o)
  .ARM.attributes
-                0x00000c9a       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mlock.o)
+                0x00000c9a       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-readr.o)
  .ARM.attributes
-                0x00000cc5       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-readr.o)
+                0x00000cc5       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reallocr.o)
  .ARM.attributes
-                0x00000cf0       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reallocr.o)
+                0x00000cf0       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-refill.o)
  .ARM.attributes
-                0x00000d1b       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-refill.o)
+                0x00000d1b       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x00000d46       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sbrkr.o)
+                0x00000d46       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sccl.o)
  .ARM.attributes
-                0x00000d71       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sccl.o)
+                0x00000d71       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
  .ARM.attributes
-                0x00000d9c       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
+                0x00000d9c       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signalr.o)
  .ARM.attributes
-                0x00000dc7       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signalr.o)
+                0x00000dc7       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strcmp.o)
  .ARM.attributes
-                0x00000df2       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strcmp.o)
+                0x00000df2       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtol.o)
  .ARM.attributes
-                0x00000e1d       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtol.o)
+                0x00000e1d       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoll_r.o)
  .ARM.attributes
-                0x00000e48       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoll_r.o)
+                0x00000e48       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoul.o)
  .ARM.attributes
-                0x00000e73       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoul.o)
+                0x00000e73       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoull_r.o)
  .ARM.attributes
-                0x00000e9e       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoull_r.o)
+                0x00000e9e       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wbuf.o)
  .ARM.attributes
-                0x00000ec9       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wbuf.o)
+                0x00000ec9       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wcrtomb.o)
  .ARM.attributes
-                0x00000ef4       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wcrtomb.o)
+                0x00000ef4       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wctomb_r.o)
  .ARM.attributes
-                0x00000f1f       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wctomb_r.o)
+                0x00000f1f       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fclose.o)
  .ARM.attributes
-                0x00000f4a       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fclose.o)
+                0x00000f4a       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fstatr.o)
  .ARM.attributes
-                0x00000f75       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fstatr.o)
+                0x00000f75       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-isattyr.o)
  .ARM.attributes
-                0x00000fa0       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-isattyr.o)
+                0x00000fa0       0x1b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x00000fcb       0x1b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivsi3.o)
+                0x00000fbb       0x1b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000fe6       0x1b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_dvmd_tls.o)
+                0x00000fd6       0x1b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x00001001       0x1b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_aeabi_uldivmod.o)
+                0x00000ff1       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(bpabi.o)
  .ARM.attributes
-                0x0000101c       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(bpabi.o)
+                0x0000101c       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_divdi3.o)
  .ARM.attributes
-                0x00001047       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_divdi3.o)
+                0x00001047       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivdi3.o)
  .ARM.attributes
-                0x00001072       0x2b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivdi3.o)
- .ARM.attributes
-                0x0000109d       0x1b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
+                0x00001072       0x1b /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
 
 .comment        0x00000000       0x30
  .comment       0x00000000       0x30 build/obj/syscalls.o
@@ -2008,7 +1994,7 @@ OUTPUT(build/bin/project.elf elf32-littlearm)
  .debug_ranges  0x00000c28       0xd8 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
  .debug_ranges  0x00000d00       0x38 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
-.debug_line     0x00000000     0x3d7c
+.debug_line     0x00000000     0x3d58
  .debug_line    0x00000000      0x1b7 build/obj/syscalls.o
  .debug_line    0x000001b7      0x155 build/obj/system.o
  .debug_line    0x0000030c      0x180 build/obj/uart_console.o
@@ -2017,27 +2003,27 @@ OUTPUT(build/bin/project.elf elf32-littlearm)
  .debug_line    0x00000a7d      0x184 build/obj/timetick.o
  .debug_line    0x00000c01      0x105 build/obj/startup.o
  .debug_line    0x00000d06      0x11c build/obj/usb_device_descriptor.o
- .debug_line    0x00000e22      0x371 build/obj/main.o
- .debug_line    0x00001193      0x1ab build/obj/controller.o
- .debug_line    0x0000133e      0x72d libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .debug_line    0x00001a6b      0x1d4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .debug_line    0x00001c3f      0x31f libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .debug_line    0x00001f5e      0x10a libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .debug_line    0x00002068      0x313 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .debug_line    0x0000237b      0x1f8 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .debug_line    0x00002573       0xc3 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .debug_line    0x00002636      0x120 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .debug_line    0x00002756      0x1ce libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .debug_line    0x00002924      0x25b libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .debug_line    0x00002b7f       0xca libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .debug_line    0x00002c49      0x285 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .debug_line    0x00002ece      0x2e8 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .debug_line    0x000031b6      0x264 libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
- .debug_line    0x0000341a      0x1bf libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .debug_line    0x000035d9      0x154 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .debug_line    0x0000372d      0x14e libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .debug_line    0x0000387b      0x36d libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
- .debug_line    0x00003be8      0x194 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .debug_line    0x00000e22      0x34d build/obj/main.o
+ .debug_line    0x0000116f      0x1ab build/obj/controller.o
+ .debug_line    0x0000131a      0x72d libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .debug_line    0x00001a47      0x1d4 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .debug_line    0x00001c1b      0x31f libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .debug_line    0x00001f3a      0x10a libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .debug_line    0x00002044      0x313 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .debug_line    0x00002357      0x1f8 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .debug_line    0x0000254f       0xc3 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .debug_line    0x00002612      0x120 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .debug_line    0x00002732      0x1ce libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .debug_line    0x00002900      0x25b libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .debug_line    0x00002b5b       0xca libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .debug_line    0x00002c25      0x285 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .debug_line    0x00002eaa      0x2e8 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .debug_line    0x00003192      0x264 libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
+ .debug_line    0x000033f6      0x1bf libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .debug_line    0x000035b5      0x154 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .debug_line    0x00003709      0x14e libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .debug_line    0x00003857      0x36d libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+ .debug_line    0x00003bc4      0x194 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_str      0x00000000     0x3aaa
  .debug_str     0x00000000      0x1df build/obj/syscalls.o
@@ -2099,7 +2085,7 @@ OUTPUT(build/bin/project.elf elf32-littlearm)
  .debug_str     0x00003962      0x148 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
                                 0x529 (size before relaxing)
 
-.debug_frame    0x00000000     0x2dd4
+.debug_frame    0x00000000     0x2d98
  .debug_frame   0x00000000      0x150 build/obj/syscalls.o
  .debug_frame   0x00000150       0x48 build/obj/system.o
  .debug_frame   0x00000198       0xd0 build/obj/uart_console.o
@@ -2134,60 +2120,59 @@ OUTPUT(build/bin/project.elf elf32-littlearm)
  .debug_frame   0x00001e18       0x5c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iprintf.o)
  .debug_frame   0x00001e74       0x30 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memcpy.o)
  .debug_frame   0x00001ea4       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memmove.o)
- .debug_frame   0x00001ed0       0x3c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
- .debug_frame   0x00001f0c       0x64 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
- .debug_frame   0x00001f70       0x3c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-rget.o)
- .debug_frame   0x00001fac       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setbuf.o)
- .debug_frame   0x00001fcc       0x34 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setvbuf.o)
- .debug_frame   0x00002000       0x68 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-siscanf.o)
- .debug_frame   0x00002068       0x80 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-stdio.o)
- .debug_frame   0x000020e8       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strlen.o)
- .debug_frame   0x00002108       0x98 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiscanf.o)
- .debug_frame   0x000021a0       0x5c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ungetc.o)
- .debug_frame   0x000021fc       0x7c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
- .debug_frame   0x00002278       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-writer.o)
- .debug_frame   0x000022a4       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wsetup.o)
- .debug_frame   0x000022d0       0x28 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-abort.o)
- .debug_frame   0x000022f8       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-closer.o)
- .debug_frame   0x00002324       0x40 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fflush.o)
- .debug_frame   0x00002364      0x11c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
- .debug_frame   0x00002480       0x50 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputwc.o)
- .debug_frame   0x000024d0       0x50 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-freer.o)
- .debug_frame   0x00002520       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
- .debug_frame   0x00002558       0x54 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwalk.o)
- .debug_frame   0x000025ac       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iswspace.o)
- .debug_frame   0x000025cc       0x98 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
- .debug_frame   0x00002664       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-lseekr.o)
- .debug_frame   0x00002690       0x30 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-makebuf.o)
- .debug_frame   0x000026c0       0x30 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-malloc.o)
- .debug_frame   0x000026f0       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
- .debug_frame   0x00002728       0x5c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbrtowc.o)
- .debug_frame   0x00002784       0x48 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbtowc_r.o)
- .debug_frame   0x000027cc       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memchr.o)
- .debug_frame   0x000027f8       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
- .debug_frame   0x00002824       0x30 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mlock.o)
- .debug_frame   0x00002854       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-readr.o)
- .debug_frame   0x00002880       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reallocr.o)
- .debug_frame   0x000028b8       0x3c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-refill.o)
- .debug_frame   0x000028f4       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sbrkr.o)
- .debug_frame   0x00002920       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sccl.o)
- .debug_frame   0x0000294c       0xc0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
- .debug_frame   0x00002a0c       0x3c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signalr.o)
- .debug_frame   0x00002a48       0x30 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strcmp.o)
- .debug_frame   0x00002a78       0x50 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtol.o)
- .debug_frame   0x00002ac8       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoll_r.o)
- .debug_frame   0x00002b00       0x50 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoul.o)
- .debug_frame   0x00002b50       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoull_r.o)
- .debug_frame   0x00002b88       0x3c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wbuf.o)
- .debug_frame   0x00002bc4       0x58 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wcrtomb.o)
- .debug_frame   0x00002c1c       0x44 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wctomb_r.o)
- .debug_frame   0x00002c60       0x3c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fclose.o)
- .debug_frame   0x00002c9c       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fstatr.o)
- .debug_frame   0x00002cc8       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-isattyr.o)
- .debug_frame   0x00002cf4       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivsi3.o)
- .debug_frame   0x00002d14       0x50 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(bpabi.o)
- .debug_frame   0x00002d64       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_divdi3.o)
- .debug_frame   0x00002d9c       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivdi3.o)
+ .debug_frame   0x00001ed0       0x64 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
+ .debug_frame   0x00001f34       0x3c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-rget.o)
+ .debug_frame   0x00001f70       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setbuf.o)
+ .debug_frame   0x00001f90       0x34 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setvbuf.o)
+ .debug_frame   0x00001fc4       0x68 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-siscanf.o)
+ .debug_frame   0x0000202c       0x80 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-stdio.o)
+ .debug_frame   0x000020ac       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strlen.o)
+ .debug_frame   0x000020cc       0x98 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiscanf.o)
+ .debug_frame   0x00002164       0x5c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ungetc.o)
+ .debug_frame   0x000021c0       0x7c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
+ .debug_frame   0x0000223c       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-writer.o)
+ .debug_frame   0x00002268       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wsetup.o)
+ .debug_frame   0x00002294       0x28 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-abort.o)
+ .debug_frame   0x000022bc       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-closer.o)
+ .debug_frame   0x000022e8       0x40 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fflush.o)
+ .debug_frame   0x00002328      0x11c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
+ .debug_frame   0x00002444       0x50 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fputwc.o)
+ .debug_frame   0x00002494       0x50 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-freer.o)
+ .debug_frame   0x000024e4       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
+ .debug_frame   0x0000251c       0x54 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fwalk.o)
+ .debug_frame   0x00002570       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iswspace.o)
+ .debug_frame   0x00002590       0x98 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
+ .debug_frame   0x00002628       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-lseekr.o)
+ .debug_frame   0x00002654       0x30 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-makebuf.o)
+ .debug_frame   0x00002684       0x30 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-malloc.o)
+ .debug_frame   0x000026b4       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mallocr.o)
+ .debug_frame   0x000026ec       0x5c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbrtowc.o)
+ .debug_frame   0x00002748       0x48 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x00002790       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memchr.o)
+ .debug_frame   0x000027bc       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
+ .debug_frame   0x000027e8       0x30 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mlock.o)
+ .debug_frame   0x00002818       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-readr.o)
+ .debug_frame   0x00002844       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reallocr.o)
+ .debug_frame   0x0000287c       0x3c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-refill.o)
+ .debug_frame   0x000028b8       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x000028e4       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-sccl.o)
+ .debug_frame   0x00002910       0xc0 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
+ .debug_frame   0x000029d0       0x3c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signalr.o)
+ .debug_frame   0x00002a0c       0x30 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strcmp.o)
+ .debug_frame   0x00002a3c       0x50 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtol.o)
+ .debug_frame   0x00002a8c       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoll_r.o)
+ .debug_frame   0x00002ac4       0x50 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoul.o)
+ .debug_frame   0x00002b14       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoull_r.o)
+ .debug_frame   0x00002b4c       0x3c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wbuf.o)
+ .debug_frame   0x00002b88       0x58 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wcrtomb.o)
+ .debug_frame   0x00002be0       0x44 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-wctomb_r.o)
+ .debug_frame   0x00002c24       0x3c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fclose.o)
+ .debug_frame   0x00002c60       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fstatr.o)
+ .debug_frame   0x00002c8c       0x2c /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-isattyr.o)
+ .debug_frame   0x00002cb8       0x20 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivsi3.o)
+ .debug_frame   0x00002cd8       0x50 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(bpabi.o)
+ .debug_frame   0x00002d28       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_divdi3.o)
+ .debug_frame   0x00002d60       0x38 /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/libgcc.a(_udivdi3.o)
 
 Cross Reference Table
 
@@ -2759,7 +2744,6 @@ __sfp_lock_release                                /usr/local/Sourcery/bin/../lib
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-gets.o)
 __sfvwrite_r                                      /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fvwrite.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
-                                                  /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
 __sigtramp                                        /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
 __sigtramp_r                                      /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
 __sinit                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
@@ -2773,7 +2757,6 @@ __sinit                                           /usr/local/Sourcery/bin/../lib
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ungetc.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setvbuf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-rget.o)
-                                                  /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iprintf.o)
 __sinit_lock_acquire                              /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
 __sinit_lock_release                              /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-findfp.o)
@@ -2888,7 +2871,6 @@ _impure_ptr                                       /usr/local/Sourcery/bin/../lib
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-setvbuf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-rget.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
-                                                  /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-iprintf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-gets.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-fiprintf.o)
@@ -2928,7 +2910,6 @@ _malloc_trim_r                                    /usr/local/Sourcery/bin/../lib
 _mbrtowc_r                                        /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbrtowc.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-svfiscanf.o)
 _mbtowc_r                                         /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-mbtowc_r.o)
-_puts_r                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
 _raise_r                                          /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
 _read                                             build/obj/syscalls.o
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-readr.o)
@@ -3043,8 +3024,6 @@ mode                                              build/obj/controller.o
 ntrip                                             build/obj/main.o
 pdwStack                                          build/obj/startup.o
 productStringDescriptor                           build/obj/usb_device_descriptor.o
-puts                                              /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
-                                                  build/obj/main.o
 raise                                             /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-abort.o)
 releasetime                                       build/obj/main.o
@@ -3063,7 +3042,6 @@ stringDescriptors                                 build/obj/usb_device_descripto
 strlen                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strlen.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-vfiprintf.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-siscanf.o)
-                                                  /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-puts.o)
 strtol                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtol.o)
 strtoul                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strtoul.o)
 tris                                              build/obj/controller.o
