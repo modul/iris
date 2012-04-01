@@ -1,6 +1,8 @@
 #ifndef _LED_H
 #define _LED_H_
 
+#define FOREVER 0xFFFFFFFF
+
 void LEDs_configure();
 void LED_set(uint8_t led);
 void LED_clr(uint8_t led);

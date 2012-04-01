@@ -9,11 +9,11 @@
     160	      8	      0	    168	     a8	build/obj/usb_device_descriptor.o
    3572	     44	     48	   3664	    e50	build/obj/main.o
    1032	      0	      0	   1032	    408	build/obj/controller.o
-  41896	   1484	   4864	  48244	   bc74	build/bin/project.elf
+  41968	   1484	   4864	  48316	   bcbc	build/bin/project.elf
 build/bin/project.elf  :
 section             size        addr
-.text              41888     4194304
-.ARM.exidx             8     4236192
+.text              41960     4194304
+.ARM.exidx             8     4236264
 .relocate           1484   536870912
 .bss                 768   536872396
 .stack              4096   536873168
@@ -27,6 +27,6 @@ section             size        addr
 .debug_line        15704           0
 .debug_str         15018           0
 .debug_frame       11672           0
-Total             204153
+Total             204225
 
 

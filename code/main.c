@@ -42,13 +42,16 @@ int main()
 	/* WDT off */
     WDT->WDT_MR = WDT_MR_WDDIS;
 
-	/* configure hardware */
-	init();
-	LED_blink(statusled, 5);
+	/* Tick Config */
+	TimeTick_Configure(BOARD_MCK);
 
-	TRACE_DEBUG("waiting until USB is fully configured\n");
-	while (!USBC_isConfigured());
-	setbuf(stdout, NULL);
+	/* LED PIO Config */
+	LEDs_configure();
+
+	/* configure hardware */
+	LED_blink(statusled, FOREVER);
+	init();
+	LED_blinkstop(statusled);
 
 	loop.Kp = SCALE(3);
 	loop.Ki = SCALE(2);
@@ -56,7 +59,7 @@ int main()
 	loop.rSlope = 16;
 	loop.rSP = MAXv;
 	loop.tristate = &rtrip;
-	state(STOP);
+	state(STOPPED);
 
 	while (1) {
 		cli();
@@ -180,15 +183,12 @@ static void init()
     PWMC_ConfigureSyncChannel(PWM, (1 << PWMOUT_up)|(1 << PWMOUT_down), PWM_SCM_UPDM_MODE1, 0, 0);
     PWMC_SetSyncChannelUpdatePeriod(PWM, PWM_SCUP_UPR(1));
 
-	/* Tick Config */
-	TimeTick_Configure(BOARD_MCK);
-
-	/* LED PIO Config */
-	LEDs_configure();
-	LED_clr(statusled);
-
 	/* USB Console Config */
 	USBC_Configure();
+
+	TRACE_DEBUG("waiting until USB is fully configured\n");
+	while (!USBC_isConfigured());
+	setbuf(stdout, NULL);
 }
 
 static void state(uint8_t new) 
