@@ -25,7 +25,9 @@ uint8_t _state = STOPPED;
 struct ctrl loop = CTRL_INIT;	
 struct trip ntrip = {&loop._e, 0, 100, 10};
 struct trip rtrip = {&loop._e, 0, 12, 0};
+
 uint32_t releasetime = 0;
+uint32_t dxmax;
 
 static void init()
 {
@@ -119,11 +121,111 @@ void state(uint8_t new)
 	_state = new;
 }
 
+void cli()
+{
+	int argc;
+	int argv[3];
+	char line[32];
+	char cmd = 0;
+
+	if (!USBC_hasData())
+		return;
+
+	gets(line);
+	argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2) - 1;
+	TRACE_DEBUG("got %i arguments", argc);
+
+	switch (_state) {
+		case STOPPED:
+			if (cmd == 'g') {
+				state(RUN);
+			}
+			else if (cmd == 'h') {
+				state(HOLD);
+			}
+			else if (cmd == 'r') {
+				state(RELEASE);
+			}
+			else if (cmd == 'e') {
+				if (argc == 1) {
+					loop.rSP = LIMIT(*argv, MINv, MAXv);
+					TRACE_INFO("set ramp endpoint to %u\n", loop.rSP);
+				}
+				printf("%u\n", loop.rSP);
+			}
+			else if (cmd == 's') {
+				if (argc == 1) {
+					loop.rSlope = *argv;
+					TRACE_INFO("set ramp slope to %i\n", loop.rSlope);
+				}
+				printf("%i\n", loop.rSlope);
+			}
+			else if (cmd == 'k') {
+				if (argc == 3) {
+					loop.Kp = argv[0];
+					loop.Ki = argv[1];
+					loop.Kd = argv[2];
+					TRACE_INFO("set PID factors to %u, %u, %u\n", loop.Kp, loop.Ki, loop.Kd);
+				}
+				printf("%u %u %u\n", loop.Kp, loop.Ki, loop.Kd);
+			}
+			else if (cmd == 't') {
+				if (argc == 1) {
+					releasetime = *argv;
+					TRACE_INFO("set releasetime to %u\n", releasetime);
+				}
+				printf("%u\n", releasetime);
+			}
+			else if (cmd == 'd') {
+				if (argc == 2) {
+					dxmax = *argv;
+					TRACE_INFO("set dxmax to %u\n", dxmax);
+				}
+				printf("%u\n", dxmax);
+			}
+			else if (cmd == '?') {
+				puts("config");
+			}
+
+			break;
+
+		case RUN:
+			if (cmd == '?')
+				puts("run");
+			else if (cmd == 's')
+				state(STOPPED);
+			else if (cmd == 'r')
+				state(RELEASE);
+			break;
+
+		case HOLD:
+			if (cmd == '?')
+				puts("hold");
+			else if (cmd == 's')
+				state(STOPPED);
+			else if (cmd == 'w') {
+				if (argc == 1) {
+					loop.SP = LIMIT(*argv, MINv, MAXv);
+					TRACE_INFO("set setpoint to %u\n", loop.SP);
+				}
+				printf("%u\n", loop.SP);
+			}
+			break;
+
+		case RELEASE:
+			if (cmd == '?')
+				puts("release");
+			else if (cmd == 's')
+				state(STOPPED);
+			break;
+
+		default:
+			state(STOPPED);
+	}
+}
+
 int main() 
 {
-	int argv[3];
-	char *line = "\0";
-	char cmd = 0;
 	uint32_t timestamp = 0;
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
@@ -149,85 +251,14 @@ int main()
 	setbuf(stdout, NULL);
 
 	while (1) {
-		if(USBC_hasData()) {
-			gets(line);
-#ifdef ECHO
-			puts(line);
-#endif
-			cmd = *line;
-		}
-		else {
-			cmd = 0;
-		}
-
+		cli();
 		switch (_state) {
 			case STOPPED:
-				if (cmd == 'g') {
-					state(RUN);
-				}
-				else if (cmd == 'h') {
-					state(HOLD);
-				}
-				else if (cmd == 'r') {
-					state(RELEASE);
-				}
-				else if (cmd == 'w') {
-					if (sscanf(line+1, "%u", argv) == 1) {
-						loop.SP = LIMIT(*argv, MINv, MAXv);
-						TRACE_INFO("set setpoint to %u\n", loop.SP);
-					}
-					printf("%u\n", loop.SP);
-				}
-				else if (cmd == 'e') {
-					if (sscanf(line+1, "%u", argv) == 1) {
-						loop.rSP = LIMIT(*argv, MINv, MAXv);
-						TRACE_INFO("set ramp endpoint to %u\n", loop.rSP);
-					}
-					printf("%u\n", loop.rSP);
-				}
-				else if (cmd == 's') {
-					if (sscanf(line+1, "%i", argv) == 1) {
-						loop.rSlope = *argv;
-						TRACE_INFO("set ramp slope to %i\n", loop.rSlope);
-					}
-					printf("%i\n", loop.rSlope);
-				}
-				else if (cmd == 'k') {
-					if (sscanf(line+1, "%u%u%u", argv, argv+1, argv+2) == 3) {
-						loop.Kp = argv[0];
-						loop.Ki = argv[1];
-						loop.Kd = argv[2];
-						TRACE_INFO("set PID factors to %u, %u, %u\n", loop.Kp, loop.Ki, loop.Kd);
-					}
-					printf("%u %u %u\n", loop.Kp, loop.Ki, loop.Kd);
-				}
-				else if (cmd == 't') {
-					if (sscanf(line+1, "%u", argv) == 1) {
-						releasetime = *argv;
-						TRACE_INFO("set releasetime to %u\n", releasetime);
-					}
-					printf("%u\n", releasetime);
-				}
-				else if (cmd == '?') {
-					puts("config");
-				}
 				break;
 
 			case HOLD:
 				if (GetTickCount() % 1000)
 					LED_blink(statusled, 1);
-
-				if (cmd == '?')
-					puts("hold");
-				else if (cmd == 's')
-					state(STOPPED);
-				else if (cmd == 'w') {
-					if (sscanf(line+1, "%u", argv) == 1) {
-						loop.SP = LIMIT(*argv, MINv, MAXv);
-						TRACE_INFO("set setpoint to %u\n", loop.SP);
-					}
-					printf("%u\n", loop.SP);
-				}
 				break;
 
 			case RELEASE:
@@ -241,23 +272,11 @@ int main()
 					timestamp = 0;
 					state(STOPPED);
 				}
-
-				if (cmd == '?')
-					puts("release");
-				else if (cmd == 's')
-					state(STOPPED);
 				break;
 
 			case RUN:
 				if (GetTickCount() % 1000)
 					LED_blink(statusled, 3);
-
-				if (cmd == '?')
-					puts("run");
-				else if (cmd == 's')
-					state(STOPPED);
-				else if (cmd == 'r')
-					state(RELEASE);
 				break;
 
 			default:
