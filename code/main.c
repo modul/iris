@@ -29,6 +29,107 @@ struct trip rtrip = {&loop._e, 0, 12, 0};
 uint32_t releasetime = 1000;
 uint32_t dxmax = 1024;
 
+static void init();
+static void state(uint8_t new);
+static void cli();
+
+int main() 
+{
+	uint32_t timestamp = 0;
+
+	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
+
+	/* WDT off */
+    WDT->WDT_MR = WDT_MR_WDDIS;
+
+	/* configure hardware */
+	init();
+
+	TRACE_DEBUG("waiting until USB is fully configured\n");
+	while (!USBC_isConfigured());
+
+	loop.Kp = SCALE(3);
+	loop.Ki = SCALE(2);
+	loop.Kd = SCALE(0);
+	loop.rSlope = 16;
+	loop.rSP = MAXv;
+	loop.tristate = &rtrip;
+
+	LED_blink(statusled, 5);
+
+	setbuf(stdout, NULL);
+
+	while (1) {
+		cli();
+		switch (_state) {
+			case STOPPED:
+				break;
+
+			case HOLD:
+				if (GetTickCount() % 1000)
+					LED_blink(statusled, 1);
+				if (loop._dx > dxmax || loop._dx < -dxmax)
+					state(RELEASE);
+				break;
+
+			case RELEASE:
+				if (GetTickCount() % 1000)
+					LED_blink(statusled, 2);
+
+				if (timestamp == 0)
+					timestamp = GetTickCount() + releasetime;
+				else if (GetTickCount() >= timestamp) {
+					TRACE_DEBUG("releasetime elapsed\n");
+					timestamp = 0;
+					state(STOPPED);
+				}
+				break;
+
+			case RUN:
+				if (GetTickCount() % 1000)
+					LED_blink(statusled, 3);
+				break;
+
+			default:
+				state(STOPPED);
+		}
+	}
+	return 0;
+}
+
+void TC1_IrqHandler()
+{
+	ADC_StartConversion(ADC);
+	ADC_ReadBuffer(ADC, (int16_t*) input, BUFFER_SIZE);
+}
+
+void ADC_IrqHandler(void)
+{
+    uint32_t status;
+	uint32_t duty = 0;
+
+    status = ADC_GetStatus(ADC);
+
+	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
+		if (_state & (RUN|HOLD)) {
+			control(LIMIT(input[0], MINv, MAXv), &loop);
+			duty = loop.tristate->output * ((loop.output * PWM_PERIOD) / MAX);
+			if (loop.tristate->output == 1) {
+				PWMC_SetDutyCycle(PWM, PWM0, duty);
+				PWMC_SetDutyCycle(PWM, PWM1, 0);
+			}
+			else if (loop.tristate->output == -1) {
+				PWMC_SetDutyCycle(PWM, PWM0, 0);
+				PWMC_SetDutyCycle(PWM, PWM1, duty);
+			}
+			else {
+				PWMC_SetDutyCycle(PWM, PWM0, 0);
+				PWMC_SetDutyCycle(PWM, PWM1, 0);
+			}
+		}
+	}
+}
+
 static void init()
 {
     uint32_t div;
@@ -88,7 +189,7 @@ static void init()
 	USBC_Configure();
 }
 
-void state(uint8_t new) 
+static void state(uint8_t new) 
 {
 	switch (new) {
 		case STOPPED:
@@ -121,7 +222,7 @@ void state(uint8_t new)
 	_state = new;
 }
 
-void cli()
+static void cli()
 {
 	int argc;
 	int argv[3];
@@ -223,102 +324,4 @@ void cli()
 			state(STOPPED);
 	}
 }
-
-int main() 
-{
-	uint32_t timestamp = 0;
-
-	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
-
-	/* WDT off */
-    WDT->WDT_MR = WDT_MR_WDDIS;
-
-	/* configure hardware */
-	init();
-
-	TRACE_DEBUG("waiting until USB is fully configured\n");
-	while (!USBC_isConfigured());
-
-	loop.Kp = SCALE(3);
-	loop.Ki = SCALE(2);
-	loop.Kd = SCALE(0);
-	loop.rSlope = 16;
-	loop.rSP = MAXv;
-	loop.tristate = &rtrip;
-
-	LED_blink(statusled, 5);
-
-	setbuf(stdout, NULL);
-
-	while (1) {
-		cli();
-		switch (_state) {
-			case STOPPED:
-				break;
-
-			case HOLD:
-				if (GetTickCount() % 1000)
-					LED_blink(statusled, 1);
-				if (loop._dx > dxmax || loop._dx < -dxmax)
-					state(RELEASE);
-				break;
-
-			case RELEASE:
-				if (GetTickCount() % 1000)
-					LED_blink(statusled, 2);
-
-				if (timestamp == 0)
-					timestamp = GetTickCount() + releasetime;
-				else if (GetTickCount() >= timestamp) {
-					TRACE_DEBUG("releasetime elapsed\n");
-					timestamp = 0;
-					state(STOPPED);
-				}
-				break;
-
-			case RUN:
-				if (GetTickCount() % 1000)
-					LED_blink(statusled, 3);
-				break;
-
-			default:
-				state(STOPPED);
-		}
-	}
-	return 0;
-}
-
-void TC1_IrqHandler()
-{
-	ADC_StartConversion(ADC);
-	ADC_ReadBuffer(ADC, (int16_t*) input, BUFFER_SIZE);
-}
-
-void ADC_IrqHandler(void)
-{
-    uint32_t status;
-	uint32_t duty = 0;
-
-    status = ADC_GetStatus(ADC);
-
-	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
-		if (_state & (RUN|HOLD)) {
-			control(LIMIT(input[0], MINv, MAXv), &loop);
-			duty = loop.tristate->output * ((loop.output * PWM_PERIOD) / MAX);
-			if (loop.tristate->output == 1) {
-				PWMC_SetDutyCycle(PWM, PWM0, duty);
-				PWMC_SetDutyCycle(PWM, PWM1, 0);
-			}
-			else if (loop.tristate->output == -1) {
-				PWMC_SetDutyCycle(PWM, PWM0, 0);
-				PWMC_SetDutyCycle(PWM, PWM1, duty);
-			}
-			else {
-				PWMC_SetDutyCycle(PWM, PWM0, 0);
-				PWMC_SetDutyCycle(PWM, PWM1, 0);
-			}
-		}
-	}
-}
-
 /* vim: set ts=4: */

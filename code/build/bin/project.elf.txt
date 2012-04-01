@@ -1,7 +1,7 @@
 00408ec0 t .udivsi3_skip_div0_test
 00403e1a W ACC_IrqHandler
 00403e1c T ADC_Initialize
-00401c74 T ADC_IrqHandler
+00401454 T ADC_IrqHandler
 00403e4e T ADC_ReadBuffer
 00403e38 T ADC_cfgFrequency
 00403de0 W BusFault_Handler
@@ -84,7 +84,7 @@
 0040030c T SystemCoreClockUpdate
 00400328 W SystemInit
 00400c70 T TC0_IrqHandler
-00401c48 T TC1_IrqHandler
+00401428 T TC1_IrqHandler
 00403e0c W TC2_IrqHandler
 00403e0e W TC3_IrqHandler
 00403e10 W TC4_IrqHandler
@@ -381,7 +381,7 @@
 20000700 b blinks
 20000830 b cdcdSerial
 00409a74 T cdcdSerialDriverDescriptors
-004015c4 T cli
+00401990 t cli
 200005cc b completed.7397
 00409a10 T configurationDescriptorsFS
 00400d00 t configure
@@ -404,7 +404,7 @@
 0040456c T gets
 200005e8 b heap.7559
 20000044 d impure_data
-004011cc t init
+00401598 t init
 2000070c B input
 0040457c T iprintf
 004071f0 T iswspace
@@ -417,7 +417,7 @@
 2000084c b lineCoding
 004072a8 T localeconv
 20000710 B loop
-004019ec T main
+004011cc T main
 004073c4 T malloc
 004079bc T mbrtowc
 00407a80 T memchr
@@ -442,7 +442,7 @@
 00000000 a shift
 004082a0 T signal
 004049ec T siscanf
-00401418 T state
+004017e4 t state
 004068ec t std.isra.0
 00408300 T strcmp
 00408380 t strcmp_unaligned

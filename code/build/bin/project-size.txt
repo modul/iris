@@ -19,14 +19,14 @@ section             size        addr
 .stack              4096   536873168
 .ARM.attributes       41           0
 .comment              48           0
-.debug_info        73929           0
-.debug_abbrev      11557           0
+.debug_info        73923           0
+.debug_abbrev      11538           0
 .debug_loc         21501           0
 .debug_aranges      3080           0
 .debug_ranges       3384           0
 .debug_line        15740           0
 .debug_str         15018           0
 .debug_frame       11732           0
-Total             204506
+Total             204481
 
 

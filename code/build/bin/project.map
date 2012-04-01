@@ -716,19 +716,17 @@ LOAD /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2/crtn.o
                 0x00401138       0x38 build/obj/main.o
  .text.NVIC_SetPriority
                 0x00401170       0x5c build/obj/main.o
- .text.init     0x004011cc      0x24c build/obj/main.o
- .text.state    0x00401418      0x1ac build/obj/main.o
-                0x00401418                state
- .text.cli      0x004015c4      0x428 build/obj/main.o
-                0x004015c4                cli
- .text.main     0x004019ec      0x25c build/obj/main.o
-                0x004019ec                main
+ .text.main     0x004011cc      0x25c build/obj/main.o
+                0x004011cc                main
  .text.TC1_IrqHandler
-                0x00401c48       0x2c build/obj/main.o
-                0x00401c48                TC1_IrqHandler
+                0x00401428       0x2c build/obj/main.o
+                0x00401428                TC1_IrqHandler
  .text.ADC_IrqHandler
-                0x00401c74      0x144 build/obj/main.o
-                0x00401c74                ADC_IrqHandler
+                0x00401454      0x144 build/obj/main.o
+                0x00401454                ADC_IrqHandler
+ .text.init     0x00401598      0x24c build/obj/main.o
+ .text.state    0x004017e4      0x1ac build/obj/main.o
+ .text.cli      0x00401990      0x428 build/obj/main.o
  .text.pid      0x00401db8       0xc4 build/obj/controller.o
  .text.update   0x00401e7c       0x90 build/obj/controller.o
  .text.mode     0x00401f0c       0xd0 build/obj/controller.o
@@ -1832,7 +1830,7 @@ OUTPUT(build/bin/project.elf elf32-littlearm)
  .comment       0x00000000       0x31 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
  .comment       0x00000000       0x31 libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
-.debug_info     0x00000000    0x120c9
+.debug_info     0x00000000    0x120c3
  .debug_info    0x00000000      0x4e1 build/obj/syscalls.o
  .debug_info    0x000004e1      0x3e9 build/obj/system.o
  .debug_info    0x000008ca      0xbfa build/obj/uart_console.o
@@ -1841,29 +1839,29 @@ OUTPUT(build/bin/project.elf elf32-littlearm)
  .debug_info    0x00004025      0x649 build/obj/timetick.o
  .debug_info    0x0000466e      0x37b build/obj/startup.o
  .debug_info    0x000049e9      0x7bd build/obj/usb_device_descriptor.o
- .debug_info    0x000051a6     0x1a10 build/obj/main.o
- .debug_info    0x00006bb6      0x398 build/obj/controller.o
- .debug_info    0x00006f4e     0x2144 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .debug_info    0x00009092      0x5c9 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .debug_info    0x0000965b      0xd8c libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .debug_info    0x0000a3e7      0x181 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .debug_info    0x0000a568     0x13d8 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .debug_info    0x0000b940      0x9c5 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .debug_info    0x0000c305       0xd7 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .debug_info    0x0000c3dc      0x563 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .debug_info    0x0000c93f      0x3cd libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .debug_info    0x0000cd0c      0xc73 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .debug_info    0x0000d97f      0x140 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .debug_info    0x0000dabf      0xe46 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .debug_info    0x0000e905      0x3f0 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .debug_info    0x0000ecf5      0xaa1 libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
- .debug_info    0x0000f796      0xa6c libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .debug_info    0x00010202      0x44d libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .debug_info    0x0001064f      0x488 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .debug_info    0x00010ad7      0xe17 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
- .debug_info    0x000118ee      0x7db libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .debug_info    0x000051a6     0x1a0a build/obj/main.o
+ .debug_info    0x00006bb0      0x398 build/obj/controller.o
+ .debug_info    0x00006f48     0x2144 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .debug_info    0x0000908c      0x5c9 libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .debug_info    0x00009655      0xd8c libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .debug_info    0x0000a3e1      0x181 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .debug_info    0x0000a562     0x13d8 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .debug_info    0x0000b93a      0x9c5 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .debug_info    0x0000c2ff       0xd7 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .debug_info    0x0000c3d6      0x563 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .debug_info    0x0000c939      0x3cd libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .debug_info    0x0000cd06      0xc73 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .debug_info    0x0000d979      0x140 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .debug_info    0x0000dab9      0xe46 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .debug_info    0x0000e8ff      0x3f0 libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .debug_info    0x0000ecef      0xaa1 libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
+ .debug_info    0x0000f790      0xa6c libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .debug_info    0x000101fc      0x44d libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .debug_info    0x00010649      0x488 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .debug_info    0x00010ad1      0xe17 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+ .debug_info    0x000118e8      0x7db libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
-.debug_abbrev   0x00000000     0x2d25
+.debug_abbrev   0x00000000     0x2d12
  .debug_abbrev  0x00000000      0x10f build/obj/syscalls.o
  .debug_abbrev  0x0000010f       0xfb build/obj/system.o
  .debug_abbrev  0x0000020a      0x14f build/obj/uart_console.o
@@ -1872,27 +1870,27 @@ OUTPUT(build/bin/project.elf elf32-littlearm)
  .debug_abbrev  0x00000824      0x1c3 build/obj/timetick.o
  .debug_abbrev  0x000009e7       0xf6 build/obj/startup.o
  .debug_abbrev  0x00000add       0xdc build/obj/usb_device_descriptor.o
- .debug_abbrev  0x00000bb9      0x2b3 build/obj/main.o
- .debug_abbrev  0x00000e6c      0x161 build/obj/controller.o
- .debug_abbrev  0x00000fcd      0x3c3 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
- .debug_abbrev  0x00001390      0x10a libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
- .debug_abbrev  0x0000149a      0x265 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
- .debug_abbrev  0x000016ff       0xb3 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
- .debug_abbrev  0x000017b2      0x309 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
- .debug_abbrev  0x00001abb      0x192 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
- .debug_abbrev  0x00001c4d       0x74 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
- .debug_abbrev  0x00001cc1       0xf6 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
- .debug_abbrev  0x00001db7       0xd0 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
- .debug_abbrev  0x00001e87      0x264 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
- .debug_abbrev  0x000020eb       0x95 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
- .debug_abbrev  0x00002180      0x256 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
- .debug_abbrev  0x000023d6       0x6e libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
- .debug_abbrev  0x00002444      0x1d3 libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
- .debug_abbrev  0x00002617      0x1d5 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
- .debug_abbrev  0x000027ec       0xf4 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
- .debug_abbrev  0x000028e0      0x131 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
- .debug_abbrev  0x00002a11      0x1b7 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
- .debug_abbrev  0x00002bc8      0x15d libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
+ .debug_abbrev  0x00000bb9      0x2a0 build/obj/main.o
+ .debug_abbrev  0x00000e59      0x161 build/obj/controller.o
+ .debug_abbrev  0x00000fba      0x3c3 libusb/lib/libusb_sam3s_rel.a(release-USBD_HAL.o)
+ .debug_abbrev  0x0000137d      0x10a libusb/lib/libusb_sam3s_rel.a(release-USBDescriptors.o)
+ .debug_abbrev  0x00001487      0x265 libusb/lib/libusb_sam3s_rel.a(release-USBD.o)
+ .debug_abbrev  0x000016ec       0xb3 libusb/lib/libusb_sam3s_rel.a(release-USBDCallbacks.o)
+ .debug_abbrev  0x0000179f      0x309 libusb/lib/libusb_sam3s_rel.a(release-USBDDriver.o)
+ .debug_abbrev  0x00001aa8      0x192 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerial.o)
+ .debug_abbrev  0x00001c3a       0x74 libusb/lib/libusb_sam3s_rel.a(release-USBDDriverCallbacks.o)
+ .debug_abbrev  0x00001cae       0xf6 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialDriver.o)
+ .debug_abbrev  0x00001da4       0xd0 libusb/lib/libusb_sam3s_rel.a(release-USBRequests.o)
+ .debug_abbrev  0x00001e74      0x264 libusb/lib/libusb_sam3s_rel.a(release-CDCDSerialPort.o)
+ .debug_abbrev  0x000020d8       0x95 libusb/lib/libusb_sam3s_rel.a(release-CDCLineCoding.o)
+ .debug_abbrev  0x0000216d      0x256 libchip/lib/libchip_sam3s4_rel.a(release-pio_it.o)
+ .debug_abbrev  0x000023c3       0x6e libchip/lib/libchip_sam3s4_rel.a(release-exceptions.o)
+ .debug_abbrev  0x00002431      0x1d3 libchip/lib/libchip_sam3s4_rel.a(release-adc.o)
+ .debug_abbrev  0x00002604      0x1d5 libchip/lib/libchip_sam3s4_rel.a(release-pio.o)
+ .debug_abbrev  0x000027d9       0xf4 libchip/lib/libchip_sam3s4_rel.a(release-pmc.o)
+ .debug_abbrev  0x000028cd      0x131 libchip/lib/libchip_sam3s4_rel.a(release-tc.o)
+ .debug_abbrev  0x000029fe      0x1b7 libchip/lib/libchip_sam3s4_rel.a(release-pwmc.o)
+ .debug_abbrev  0x00002bb5      0x15d libchip/lib/libchip_sam3s4_rel.a(release-pio_capture.o)
 
 .debug_loc      0x00000000     0x53fd
  .debug_loc     0x00000000      0x25c build/obj/syscalls.o
@@ -2979,7 +2977,6 @@ abort                                             /usr/local/Sourcery/bin/../lib
 cdcdSerialDriverDescriptors                       build/obj/usb_device_descriptor.o
                                                   build/obj/usb_console.o
 cleanup_glue                                      /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-reent.o)
-cli                                               build/obj/main.o
 configurationDescriptorsFS                        build/obj/usb_device_descriptor.o
 control                                           build/obj/controller.o
                                                   build/obj/main.o
@@ -3060,7 +3057,6 @@ setvbuf                                           /usr/local/Sourcery/bin/../lib
 signal                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-signal.o)
 siscanf                                           /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-siscanf.o)
                                                   build/obj/main.o
-state                                             build/obj/main.o
 strcmp                                            /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strcmp.o)
                                                   /usr/local/Sourcery/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-locale.o)
 stringDescriptors                                 build/obj/usb_device_descriptor.o
