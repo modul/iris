@@ -26,8 +26,8 @@ struct ctrl loop = CTRL_INIT;
 struct trip ntrip = {&loop._e, 0, 100, 10};
 struct trip rtrip = {&loop._e, 0, 12, 0};
 
-uint32_t releasetime = 0;
-uint32_t dxmax;
+uint32_t releasetime = 1000;
+uint32_t dxmax = 1024;
 
 static void init()
 {
@@ -259,6 +259,8 @@ int main()
 			case HOLD:
 				if (GetTickCount() % 1000)
 					LED_blink(statusled, 1);
+				if (loop._dx > dxmax || loop._dx < -dxmax)
+					state(RELEASE);
 				break;
 
 			case RELEASE:
