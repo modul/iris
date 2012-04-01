@@ -118,12 +118,12 @@ void ADC_IrqHandler(void)
 			control(LIMIT(input[0], MINv, MAXv), &loop);
 			duty = loop.tristate->output * ((loop.output * PWM_PERIOD) / MAX);
 			if (loop.tristate->output == 1) {
-				PWMC_SetDutyCycle(PWM, PWMOUT_up, duty);
-				PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
-			}
-			else if (loop.tristate->output == -1) {
 				PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
 				PWMC_SetDutyCycle(PWM, PWMOUT_down, duty);
+			}
+			else if (loop.tristate->output == -1) {
+				PWMC_SetDutyCycle(PWM, PWMOUT_up, duty);
+				PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
 			}
 			else {
 				PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
@@ -213,8 +213,8 @@ static void state(uint8_t new)
 			TRACE_DEBUG("set state HOLD\n");
 			break;
 		case RELEASE:
-			PWMC_SetDutyCycle(PWM, PWMOUT_up, 0); // down -> 0
-			PWMC_SetDutyCycle(PWM, PWMOUT_down, 0); // up -> full
+			PWMC_SetDutyCycle(PWM, PWMOUT_up, PWM_PERIOD);
+			PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
 			mode(STOP, &loop);
 			TRACE_DEBUG("set state RELEASE\n");
 			break;
