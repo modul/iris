@@ -10,16 +10,16 @@
 #define MINv 0
 #define MAXv MAX
 
-#define ADC0 0
-#define ADC1 1
-#define BUFFER_SIZE 2
+#define AIN0 0
+#define AIN1 1
+#define NUM_AIN 2
 
-#define PWM0 0
-#define PWM1 1
+#define PWMOUT_up 0
+#define PWMOUT_down 1
 #define PWM_FREQ   20
 #define PWM_PERIOD 100
 
-ctrlio_t input[BUFFER_SIZE] = {0};
+ctrlio_t input[NUM_AIN] = {0};
 uint8_t _state = STOPPED;
 
 struct ctrl loop = CTRL_INIT;	
@@ -100,11 +100,12 @@ int main()
 void TC1_IrqHandler()
 {
 	ADC_StartConversion(ADC);
-	ADC_ReadBuffer(ADC, (int16_t*) input, BUFFER_SIZE);
+	ADC_ReadBuffer(ADC, (int16_t*) input, NUM_AIN);
 }
 
 void ADC_IrqHandler(void)
 {
+	//TODO enable TAG option and check
     uint32_t status;
 	uint32_t duty = 0;
 
@@ -115,16 +116,16 @@ void ADC_IrqHandler(void)
 			control(LIMIT(input[0], MINv, MAXv), &loop);
 			duty = loop.tristate->output * ((loop.output * PWM_PERIOD) / MAX);
 			if (loop.tristate->output == 1) {
-				PWMC_SetDutyCycle(PWM, PWM0, duty);
-				PWMC_SetDutyCycle(PWM, PWM1, 0);
+				PWMC_SetDutyCycle(PWM, PWMOUT_up, duty);
+				PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
 			}
 			else if (loop.tristate->output == -1) {
-				PWMC_SetDutyCycle(PWM, PWM0, 0);
-				PWMC_SetDutyCycle(PWM, PWM1, duty);
+				PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
+				PWMC_SetDutyCycle(PWM, PWMOUT_down, duty);
 			}
 			else {
-				PWMC_SetDutyCycle(PWM, PWM0, 0);
-				PWMC_SetDutyCycle(PWM, PWM1, 0);
+				PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
+				PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
 			}
 		}
 	}
@@ -156,10 +157,10 @@ static void init()
     ADC_Initialize(ADC, ID_ADC);
     ADC_cfgFrequency(ADC, 15, 4 ); // startup = 15, prescal = 4, ADC clock = 6.4 MHz
 
-    ADC_EnableChannel(ADC, ADC0);
-    ADC_EnableChannel(ADC, ADC1);
+    ADC_EnableChannel(ADC, AIN0);
+    ADC_EnableChannel(ADC, AIN1);
 	ADC_StartConversion(ADC);
-    ADC_ReadBuffer(ADC, (int16_t*) input, BUFFER_SIZE);
+    ADC_ReadBuffer(ADC, (int16_t*) input, NUM_AIN);
 
     NVIC_EnableIRQ(ADC_IRQn);
 	NVIC_SetPriority(ADC_IRQn, 0);
@@ -167,15 +168,15 @@ static void init()
 
     /* Configure PWMC channels */
     PWMC_ConfigureClocks(PWM_FREQ * PWM_PERIOD, 0, BOARD_MCK);
-    PWMC_ConfigureChannelExt(PWM, PWM0, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
-    PWMC_ConfigureChannelExt(PWM, PWM1, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
+    PWMC_ConfigureChannelExt(PWM, PWMOUT_up, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
+    PWMC_ConfigureChannelExt(PWM, PWMOUT_down, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
 
-    PWMC_SetPeriod(PWM, PWM0, PWM_PERIOD);
-    PWMC_SetDutyCycle(PWM, PWM0, 0);
-    PWMC_SetPeriod(PWM, PWM1, PWM_PERIOD);
-    PWMC_SetDutyCycle(PWM, PWM1, 0);
+    PWMC_SetPeriod(PWM, PWMOUT_up, PWM_PERIOD);
+    PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
+    PWMC_SetPeriod(PWM, PWMOUT_down, PWM_PERIOD);
+    PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
 
-    PWMC_ConfigureSyncChannel(PWM, (1 << PWM0)|(1 << PWM1), PWM_SCM_UPDM_MODE1, 0, 0);
+    PWMC_ConfigureSyncChannel(PWM, (1 << PWMOUT_up)|(1 << PWMOUT_down), PWM_SCM_UPDM_MODE1, 0, 0);
     PWMC_SetSyncChannelUpdatePeriod(PWM, PWM_SCUP_UPR(1));
 
 	/* Tick Config */
@@ -194,8 +195,8 @@ static void state(uint8_t new)
 	switch (new) {
 		case STOPPED:
 			mode(STOP, &loop);
-			PWMC_SetDutyCycle(PWM, PWM0, 0);
-			PWMC_SetDutyCycle(PWM, PWM1, 0);
+			PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
+			PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
 			TRACE_DEBUG("set state STOPPED\n");
 			break;
 		case RUN:
@@ -210,8 +211,8 @@ static void state(uint8_t new)
 			TRACE_DEBUG("set state HOLD\n");
 			break;
 		case RELEASE:
-			PWMC_SetDutyCycle(PWM, PWM0, 0); // down -> 0
-			PWMC_SetDutyCycle(PWM, PWM1, 0); // up -> full
+			PWMC_SetDutyCycle(PWM, PWMOUT_up, 0); // down -> 0
+			PWMC_SetDutyCycle(PWM, PWMOUT_down, 0); // up -> full
 			mode(STOP, &loop);
 			TRACE_DEBUG("set state RELEASE\n");
 			break;
@@ -285,7 +286,7 @@ static void cli()
 				printf("%u\n", dxmax);
 			}
 			else if (cmd == '?') {
-				puts("config");
+				puts("stopped");
 			}
 
 			break;
