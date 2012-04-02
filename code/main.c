@@ -120,7 +120,7 @@ static void init()
 {
     uint32_t div;
     uint32_t tcclks;
-	const Pin pins[] = {PINS_ADCIN, PINS_TPOUT, PINS_C3OUT};
+	const Pin pins[] = {PINS_ADCIN, PINS_TPOUT, PINS_ENA};
 
 	/* PIO Configure */
 	PIO_Configure(pins, PIO_LISTSIZE(pins));
@@ -178,8 +178,8 @@ static void init()
 
 static void write_output(int32_t value)
 {
-	const Pin up   = PIN_C3OUT_up;
-	const Pin down = PIN_C3OUT_down;
+	const Pin up   = PIN_ENA_up;
+	const Pin down = PIN_ENA_down;
 
 	if (value > 0){
 		PWMC_SetDutyCycle(PWM, TPOUT_up, 0);

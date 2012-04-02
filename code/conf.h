@@ -22,12 +22,12 @@
 #define PWM_FREQ   20
 #define PWM_PERIOD 100
 
-/** Threepoint control output pins **/
-#define PIN_C3OUT_up   {PIO_PA2, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
-#define PIN_C3OUT_down {PIO_PA3, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
-#define PINS_C3OUT     PIN_C3OUT_up, PIN_C3OUT_down
+/** Enable output pins **/
+#define PIN_ENA_up   {PIO_PA2, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
+#define PIN_ENA_down {PIO_PA3, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
+#define PINS_ENA     PIN_ENA_up, PIN_ENA_down
 
-#define C3OUT_up 0
-#define C3OUT_down 1
+#define ENA_up 0
+#define ENA_down 1
 #define NUM_C3OUT 2
 
