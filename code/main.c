@@ -14,7 +14,7 @@
 #define MINv 0
 #define MAXv MAX
 
-ctrlio_t input[NUM_AIN] = {0};
+ctrlio_t input[NUM_AIN] = {0, 0};
 uint8_t _state = STOPPED;
 
 struct ctrl loop = CTRL_INIT;	
@@ -59,12 +59,12 @@ int main()
 				break;
 
 			case HOLD:
-				if (GetTickCount() % 1000)
+				if (GetTickCount() % 2000 == 0)
 					LED_blink(STATUS, 1);
 				break;
 
 			case RELEASE:
-				if (GetTickCount() % 1000)
+				if (GetTickCount() % 2000 == 0)
 					LED_blink(STATUS, 2);
 
 				if (timestamp == 0)
@@ -77,7 +77,7 @@ int main()
 				break;
 
 			case RUN:
-				if (GetTickCount() % 1000)
+				if (GetTickCount() % 2000 == 0)
 					LED_blink(STATUS, 3);
 				if (   loop._dx > dxmax \
 				    || loop._dx < -dxmax \
@@ -94,6 +94,15 @@ int main()
 
 void TC1_IrqHandler()
 {
+	static uint8_t ct = SAMPLING_FREQ;
+	uint32_t i = TC1->TC_CHANNEL[0].TC_SR;
+	i = i;
+
+	if (--ct == 0) {
+		ct = SAMPLING_FREQ;
+		TRACE_DEBUG("1 sec\n");
+		LED_blink(ALARM, 2);
+	}
 	ADC_StartConversion(ADC);
 	ADC_ReadBuffer(ADC, (int16_t*) input, NUM_AIN);
 }
@@ -104,6 +113,7 @@ void ADC_IrqHandler(void)
     uint32_t status;
 
     status = ADC_GetStatus(ADC);
+	TRACE_DEBUG("Got samples.\n");
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
 		if (_state & (RUN|HOLD)) {
@@ -132,13 +142,13 @@ static void init()
 
     /* Configure TC */
     TC_FindMckDivisor(SAMPLING_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
-    TC_Configure(TC1, BLINK_TC, tcclks | TC_CMR_CPCTRG);
+    TC_Configure(TC1, 0, tcclks | TC_CMR_CPCTRG);
     TC1->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / SAMPLING_FREQ;
-	TC_Start(TC1, 0);
 
     NVIC_EnableIRQ(TC1_IRQn);
-    NVIC_SetPriority(TC1_IRQn, 1);
+    //NVIC_SetPriority(TC1_IRQn, 1);
     TC1->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
+	TC_Start(TC1, 0);
 
     /* Initialize ADC */
     ADC_Initialize(ADC, ID_ADC);
@@ -155,8 +165,8 @@ static void init()
 
     /* Configure PWMC channels */
     PWMC_ConfigureClocks(PWM_FREQ * PWM_PERIOD, 0, BOARD_MCK);
-    PWMC_ConfigureChannelExt(PWM, TPOUT_up, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
-    PWMC_ConfigureChannelExt(PWM, TPOUT_down, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
+    PWMC_ConfigureChannel(PWM, TPOUT_up, PWM_CMR_CPRE_CKA, 0, PWM_CMR_CPOL);
+    PWMC_ConfigureChannel(PWM, TPOUT_down, PWM_CMR_CPRE_CKA, 0, PWM_CMR_CPOL);
 
     PWMC_SetPeriod(PWM, TPOUT_up, PWM_PERIOD);
     PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
@@ -183,12 +193,12 @@ static void write_output(int32_t value)
 
 	if (value > 0){
 		PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
-		PWMC_SetDutyCycle(PWM, TPOUT_down, value);
+		PWMC_SetDutyCycle(PWM, TPOUT_down, (uint32_t) value);
 		PIO_Set(&down);
 		PIO_Clear(&up);
 	}
 	else if (value < 0) {
-		PWMC_SetDutyCycle(PWM, TPOUT_up, value);
+		PWMC_SetDutyCycle(PWM, TPOUT_up, (uint32_t) -value);
 		PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
 		PIO_Set(&up);
 		PIO_Clear(&down);
@@ -203,6 +213,7 @@ static void write_output(int32_t value)
 
 static void state(uint8_t new) 
 {
+	LED_blinkstop(STATUS);
 	switch (new) {
 		case STOPPED:
 			LED_clr(STATUS);
@@ -244,8 +255,12 @@ static void cli()
 		return;
 
 	gets(line);
+	if (*line == 0 || *line == 10)
+		return;
+
 	argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2) - 1;
-	TRACE_DEBUG("got %i arguments", argc);
+	if (argc > 0)
+		TRACE_DEBUG("got %i arguments\n", argc);
 
 	/* commands allowed in all states */
 	if (cmd == 's')

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccKByVIW.s 			page 1
+ARM GAS  /tmp/ccer70N2.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
   30:libchip/cmsis/core_cm3.h ****  *   - Error 10: \n
   31:libchip/cmsis/core_cm3.h ****  *     register uint32_t __regBasePri         __asm("basepri"); \n
   32:libchip/cmsis/core_cm3.h ****  *     Error 10: Expecting ';'
-ARM GAS  /tmp/ccKByVIW.s 			page 2
+ARM GAS  /tmp/ccer70N2.s 			page 2
 
 
   33:libchip/cmsis/core_cm3.h ****  * .
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
   87:libchip/cmsis/core_cm3.h **** 
   88:libchip/cmsis/core_cm3.h **** #define __CORTEX_M                (0x03)                                                       /*!<
   89:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccKByVIW.s 			page 3
+ARM GAS  /tmp/ccer70N2.s 			page 3
 
 
   90:libchip/cmsis/core_cm3.h **** #include <stdint.h>                           /* Include standard types */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  144:libchip/cmsis/core_cm3.h ****   __IO uint8_t  IP[240];                      /*!< Offset: 0x300  Interrupt Priority Register (8Bit
  145:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED5[644];
  146:libchip/cmsis/core_cm3.h ****   __O  uint32_t STIR;                         /*!< Offset: 0xE00  Software Trigger Interrupt Regist
-ARM GAS  /tmp/ccKByVIW.s 			page 4
+ARM GAS  /tmp/ccer70N2.s 			page 4
 
 
  147:libchip/cmsis/core_cm3.h **** }  NVIC_Type;
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  201:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSTSET_Pos             26                                             /*!< SCB 
  202:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSTSET_Msk             (1ul << SCB_ICSR_PENDSTSET_Pos)                /*!< SCB 
  203:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccKByVIW.s 			page 5
+ARM GAS  /tmp/ccer70N2.s 			page 5
 
 
  204:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSTCLR_Pos             25                                             /*!< SCB 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  258:libchip/cmsis/core_cm3.h **** #define SCB_SCR_SLEEPONEXIT_Pos             1                                             /*!< SCB 
  259:libchip/cmsis/core_cm3.h **** #define SCB_SCR_SLEEPONEXIT_Msk            (1ul << SCB_SCR_SLEEPONEXIT_Pos)               /*!< SCB 
  260:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccKByVIW.s 			page 6
+ARM GAS  /tmp/ccer70N2.s 			page 6
 
 
  261:libchip/cmsis/core_cm3.h **** /* SCB Configuration Control Register Definitions */
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  315:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_USGFAULTACT_Msk          (1ul << SCB_SHCSR_USGFAULTACT_Pos)             /*!< SCB 
  316:libchip/cmsis/core_cm3.h **** 
  317:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_BUSFAULTACT_Pos           1                                             /*!< SCB 
-ARM GAS  /tmp/ccKByVIW.s 			page 7
+ARM GAS  /tmp/ccer70N2.s 			page 7
 
 
  318:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_BUSFAULTACT_Msk          (1ul << SCB_SHCSR_BUSFAULTACT_Pos)             /*!< SCB 
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  372:libchip/cmsis/core_cm3.h **** 
  373:libchip/cmsis/core_cm3.h **** /* SysTick Control / Status Register Definitions */
  374:libchip/cmsis/core_cm3.h **** #define SysTick_CTRL_COUNTFLAG_Pos         16                                             /*!< SysT
-ARM GAS  /tmp/ccKByVIW.s 			page 8
+ARM GAS  /tmp/ccer70N2.s 			page 8
 
 
  375:libchip/cmsis/core_cm3.h **** #define SysTick_CTRL_COUNTFLAG_Msk         (1ul << SysTick_CTRL_COUNTFLAG_Pos)            /*!< SysT
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  429:libchip/cmsis/core_cm3.h ****   __IO uint32_t LAR;                          /*!< Offset:       ITM Lock Access Register          
  430:libchip/cmsis/core_cm3.h ****   __IO uint32_t LSR;                          /*!< Offset:       ITM Lock Status Register          
  431:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED5[6];
-ARM GAS  /tmp/ccKByVIW.s 			page 9
+ARM GAS  /tmp/ccer70N2.s 			page 9
 
 
  432:libchip/cmsis/core_cm3.h ****   __I  uint32_t PID4;                         /*!< Offset:       ITM Peripheral Identification Regi
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  486:libchip/cmsis/core_cm3.h **** 
  487:libchip/cmsis/core_cm3.h **** /* ITM Lock Status Register Definitions */
  488:libchip/cmsis/core_cm3.h **** #define ITM_LSR_ByteAcc_Pos                 2                                             /*!< ITM 
-ARM GAS  /tmp/ccKByVIW.s 			page 10
+ARM GAS  /tmp/ccer70N2.s 			page 10
 
 
  489:libchip/cmsis/core_cm3.h **** #define ITM_LSR_ByteAcc_Msk                (1ul << ITM_LSR_ByteAcc_Pos)                   /*!< ITM 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  543:libchip/cmsis/core_cm3.h ****   __IO uint32_t RASR_A1;                      /*!< Offset: 0x18  MPU Alias 1 Region Attribute and S
  544:libchip/cmsis/core_cm3.h ****   __IO uint32_t RBAR_A2;                      /*!< Offset: 0x1C  MPU Alias 2 Region Base Address Re
  545:libchip/cmsis/core_cm3.h ****   __IO uint32_t RASR_A2;                      /*!< Offset: 0x20  MPU Alias 2 Region Attribute and S
-ARM GAS  /tmp/ccKByVIW.s 			page 11
+ARM GAS  /tmp/ccer70N2.s 			page 11
 
 
  546:libchip/cmsis/core_cm3.h ****   __IO uint32_t RBAR_A3;                      /*!< Offset: 0x24  MPU Alias 3 Region Base Address Re
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  600:libchip/cmsis/core_cm3.h **** #define MPU_RASR_B_Pos                     16                                             /*!< MPU 
  601:libchip/cmsis/core_cm3.h **** #define MPU_RASR_B_Msk                     (1ul << MPU_RASR_B_Pos)                        /*!< MPU 
  602:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccKByVIW.s 			page 12
+ARM GAS  /tmp/ccer70N2.s 			page 12
 
 
  603:libchip/cmsis/core_cm3.h **** #define MPU_RASR_SRD_Pos                    8                                             /*!< MPU 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  657:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_STEP_Msk         (1ul << CoreDebug_DHCSR_C_STEP_Pos)            /*!< Core
  658:libchip/cmsis/core_cm3.h **** 
  659:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_HALT_Pos          1                                             /*!< Core
-ARM GAS  /tmp/ccKByVIW.s 			page 13
+ARM GAS  /tmp/ccer70N2.s 			page 13
 
 
  660:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_HALT_Msk         (1ul << CoreDebug_DHCSR_C_HALT_Pos)            /*!< Core
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  714:libchip/cmsis/core_cm3.h **** /* Memory mapping of Cortex-M3 Hardware */
  715:libchip/cmsis/core_cm3.h **** #define SCS_BASE            (0xE000E000)                              /*!< System Control Space Bas
  716:libchip/cmsis/core_cm3.h **** #define ITM_BASE            (0xE0000000)                              /*!< ITM Base Address        
-ARM GAS  /tmp/ccKByVIW.s 			page 14
+ARM GAS  /tmp/ccer70N2.s 			page 14
 
 
  717:libchip/cmsis/core_cm3.h **** #define CoreDebug_BASE      (0xE000EDF0)                              /*!< Core Debug Base Address 
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  771:libchip/cmsis/core_cm3.h **** #define __SEV                             __sev
  772:libchip/cmsis/core_cm3.h **** #define __ISB()                           __isb(0)
  773:libchip/cmsis/core_cm3.h **** #define __DSB()                           __dsb(0)
-ARM GAS  /tmp/ccKByVIW.s 			page 15
+ARM GAS  /tmp/ccer70N2.s 			page 15
 
 
  774:libchip/cmsis/core_cm3.h **** #define __DMB()                           __dmb(0)
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  828:libchip/cmsis/core_cm3.h **** extern void __set_MSP(uint32_t topOfMainStack);
  829:libchip/cmsis/core_cm3.h **** 
  830:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccKByVIW.s 			page 16
+ARM GAS  /tmp/ccer70N2.s 			page 16
 
 
  831:libchip/cmsis/core_cm3.h ****  * @brief  Reverse byte order in unsigned short value
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  885:libchip/cmsis/core_cm3.h **** extern uint32_t __get_PRIMASK(void);
  886:libchip/cmsis/core_cm3.h **** 
  887:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccKByVIW.s 			page 17
+ARM GAS  /tmp/ccer70N2.s 			page 17
 
 
  888:libchip/cmsis/core_cm3.h ****  * @brief  Set the Priority Mask value
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  942:libchip/cmsis/core_cm3.h ****  * @brief  Return the Base Priority value
  943:libchip/cmsis/core_cm3.h ****  *
  944:libchip/cmsis/core_cm3.h ****  * @return BasePriority
-ARM GAS  /tmp/ccKByVIW.s 			page 18
+ARM GAS  /tmp/ccer70N2.s 			page 18
 
 
  945:libchip/cmsis/core_cm3.h ****  *
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  999:libchip/cmsis/core_cm3.h ****  */
 1000:libchip/cmsis/core_cm3.h **** static __INLINE uint32_t __get_FAULTMASK(void)
 1001:libchip/cmsis/core_cm3.h **** {
-ARM GAS  /tmp/ccKByVIW.s 			page 19
+ARM GAS  /tmp/ccer70N2.s 			page 19
 
 
 1002:libchip/cmsis/core_cm3.h ****   register uint32_t __regFaultMask       __ASM("faultmask");
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
 1056:libchip/cmsis/core_cm3.h **** static __INLINE void __disable_fault_irq( void )  { __ASM ("cpsid f"); }
 1057:libchip/cmsis/core_cm3.h **** 
 1058:libchip/cmsis/core_cm3.h **** #define __NOP                                     __no_operation            /*!< no operation intri
-ARM GAS  /tmp/ccKByVIW.s 			page 20
+ARM GAS  /tmp/ccer70N2.s 			page 20
 
 
 1059:libchip/cmsis/core_cm3.h **** static __INLINE  void __WFI( void )               { __ASM ("wfi"); }
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
 1113:libchip/cmsis/core_cm3.h ****  */
 1114:libchip/cmsis/core_cm3.h **** extern void __set_MSP(uint32_t topOfMainStack);
 1115:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccKByVIW.s 			page 21
+ARM GAS  /tmp/ccer70N2.s 			page 21
 
 
 1116:libchip/cmsis/core_cm3.h **** /**
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
 1170:libchip/cmsis/core_cm3.h ****  * @param  *addr  address pointer
 1171:libchip/cmsis/core_cm3.h ****  * @return        successful / failed
 1172:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/ccKByVIW.s 			page 22
+ARM GAS  /tmp/ccer70N2.s 			page 22
 
 
 1173:libchip/cmsis/core_cm3.h ****  * Exclusive STR command for 8 bit values
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
   41              	@ 0 "" 2
   42              		.thumb
   43 0006 BD46     		mov	sp, r7
-ARM GAS  /tmp/ccKByVIW.s 			page 23
+ARM GAS  /tmp/ccer70N2.s 			page 23
 
 
   44 0008 80BC     		pop	{r7}
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
 1254:libchip/cmsis/core_cm3.h ****  * Assign the value mainStackPointer to the MSP
 1255:libchip/cmsis/core_cm3.h ****  * (main stack pointer) Cortex processor register
 1256:libchip/cmsis/core_cm3.h ****  */
-ARM GAS  /tmp/ccKByVIW.s 			page 24
+ARM GAS  /tmp/ccer70N2.s 			page 24
 
 
 1257:libchip/cmsis/core_cm3.h **** extern void __set_MSP(uint32_t topOfMainStack);
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
 1311:libchip/cmsis/core_cm3.h **** extern void __set_FAULTMASK(uint32_t faultMask);
 1312:libchip/cmsis/core_cm3.h **** 
 1313:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccKByVIW.s 			page 25
+ARM GAS  /tmp/ccer70N2.s 			page 25
 
 
 1314:libchip/cmsis/core_cm3.h ****  * @brief  Return the Control Register value
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
 1368:libchip/cmsis/core_cm3.h ****  */
 1369:libchip/cmsis/core_cm3.h **** extern uint32_t __RBIT(uint32_t value);
 1370:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccKByVIW.s 			page 26
+ARM GAS  /tmp/ccer70N2.s 			page 26
 
 
 1371:libchip/cmsis/core_cm3.h **** /**
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
 1425:libchip/cmsis/core_cm3.h ****  *
 1426:libchip/cmsis/core_cm3.h ****  * @param  value  value to store
 1427:libchip/cmsis/core_cm3.h ****  * @param  *addr  address pointer
-ARM GAS  /tmp/ccKByVIW.s 			page 27
+ARM GAS  /tmp/ccer70N2.s 			page 27
 
 
 1428:libchip/cmsis/core_cm3.h ****  * @return        successful / failed
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
 1482:libchip/cmsis/core_cm3.h ****  * @brief  Get the Priority Grouping from NVIC Interrupt Controller
 1483:libchip/cmsis/core_cm3.h ****  *
 1484:libchip/cmsis/core_cm3.h ****  * @return priority grouping field
-ARM GAS  /tmp/ccKByVIW.s 			page 28
+ARM GAS  /tmp/ccer70N2.s 			page 28
 
 
 1485:libchip/cmsis/core_cm3.h ****  *
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
 1539:libchip/cmsis/core_cm3.h ****  * Set the pending bit for the specified interrupt.
 1540:libchip/cmsis/core_cm3.h ****  * The interrupt number cannot be a negative value.
 1541:libchip/cmsis/core_cm3.h ****  */
-ARM GAS  /tmp/ccKByVIW.s 			page 29
+ARM GAS  /tmp/ccer70N2.s 			page 29
 
 
 1542:libchip/cmsis/core_cm3.h **** static __INLINE void NVIC_SetPendingIRQ(IRQn_Type IRQn)
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
   64              		.cfi_offset 7, -4
   65 0002 83B0     		sub	sp, sp, #12
   66              	.LCFI3:
-ARM GAS  /tmp/ccKByVIW.s 			page 30
+ARM GAS  /tmp/ccer70N2.s 			page 30
 
 
   67              		.cfi_def_cfa_offset 16
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  116              	SysTick_Config:
  117              	.LFB24:
 1593:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccKByVIW.s 			page 31
+ARM GAS  /tmp/ccer70N2.s 			page 31
 
 
 1594:libchip/cmsis/core_cm3.h **** /**
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
 1648:libchip/cmsis/core_cm3.h **** 
 1649:libchip/cmsis/core_cm3.h **** 
 1650:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccKByVIW.s 			page 32
+ARM GAS  /tmp/ccer70N2.s 			page 32
 
 
 1651:libchip/cmsis/core_cm3.h ****  * @brief  Decode the priority of an interrupt
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  127 0002 82B0     		sub	sp, sp, #8
  128              	.LCFI6:
  129              		.cfi_def_cfa_offset 16
-ARM GAS  /tmp/ccKByVIW.s 			page 33
+ARM GAS  /tmp/ccer70N2.s 			page 33
 
 
  130 0004 00AF     		add	r7, sp, #0
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  174              		.size	SysTick_Config, .-SysTick_Config
  175 0062 00BF     		.bss
  176              		.align	2
-ARM GAS  /tmp/ccKByVIW.s 			page 34
+ARM GAS  /tmp/ccer70N2.s 			page 34
 
 
  177              	_dwTickCount:
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
   44:board/timetick.c **** 
   45:board/timetick.c **** /** Tick Counter united by ms */
   46:board/timetick.c **** static volatile uint32_t _dwTickCount=0 ;
-ARM GAS  /tmp/ccKByVIW.s 			page 35
+ARM GAS  /tmp/ccer70N2.s 			page 35
 
 
   47:board/timetick.c **** 
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
   66:board/timetick.c **** extern uint32_t TimeTick_Configure( uint32_t new_mck )
   67:board/timetick.c **** {
  223              		.loc 2 67 0
-ARM GAS  /tmp/ccKByVIW.s 			page 36
+ARM GAS  /tmp/ccer70N2.s 			page 36
 
 
  224              		.cfi_startproc
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  269              		.loc 2 76 0
  270              		.cfi_startproc
  271              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccKByVIW.s 			page 37
+ARM GAS  /tmp/ccer70N2.s 			page 37
 
 
  272              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
   86:board/timetick.c ****     uint32_t dwCurrent ;
   87:board/timetick.c **** 
   88:board/timetick.c ****     dwStart = _dwTickCount ;
-ARM GAS  /tmp/ccKByVIW.s 			page 38
+ARM GAS  /tmp/ccer70N2.s 			page 38
 
 
  317              		.loc 2 88 0
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  360 0002 84B0     		sub	sp, sp, #16
  361              	.LCFI19:
  362              		.cfi_def_cfa_offset 24
-ARM GAS  /tmp/ccKByVIW.s 			page 39
+ARM GAS  /tmp/ccer70N2.s 			page 39
 
 
  363 0004 00AF     		add	r7, sp, #0
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  399              	.LFE39:
  400              		.size	Sleep, .-Sleep
  401              		.text
-ARM GAS  /tmp/ccKByVIW.s 			page 40
+ARM GAS  /tmp/ccer70N2.s 			page 40
 
 
  402              	.Letext0:
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  456 006b 05       		.byte	0x5
  457 006c 3C010000 		.4byte	.LASF8
  458 0070 02       		.uleb128 0x2
-ARM GAS  /tmp/ccKByVIW.s 			page 41
+ARM GAS  /tmp/ccer70N2.s 			page 41
 
 
  459 0071 08       		.byte	0x8
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  513 00dd 64030000 		.4byte	.LASF21
  514 00e1 02       		.sleb128 2
  515 00e2 08       		.uleb128 0x8
-ARM GAS  /tmp/ccKByVIW.s 			page 42
+ARM GAS  /tmp/ccer70N2.s 			page 42
 
 
  516 00e3 6B000000 		.4byte	.LASF22
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  570 014f E9020000 		.4byte	.LASF40
  571 0153 18       		.sleb128 24
  572 0154 08       		.uleb128 0x8
-ARM GAS  /tmp/ccKByVIW.s 			page 43
+ARM GAS  /tmp/ccer70N2.s 			page 43
 
 
  573 0155 A4030000 		.4byte	.LASF41
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  627 01bf 23       		.byte	0x23
  628 01c0 20       		.uleb128 0x20
  629 01c1 0A       		.uleb128 0xa
-ARM GAS  /tmp/ccKByVIW.s 			page 44
+ARM GAS  /tmp/ccer70N2.s 			page 44
 
 
  630 01c2 45020000 		.4byte	.LASF54
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  684 0228 8004     		.uleb128 0x200
  685 022a 0A       		.uleb128 0xa
  686 022b 28030000 		.4byte	.LASF61
-ARM GAS  /tmp/ccKByVIW.s 			page 45
+ARM GAS  /tmp/ccer70N2.s 			page 45
 
 
  687 022f 01       		.byte	0x1
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  741 029b 66020000 		.4byte	0x266
  742 029f 0C       		.uleb128 0xc
  743 02a0 57000000 		.4byte	0x57
-ARM GAS  /tmp/ccKByVIW.s 			page 46
+ARM GAS  /tmp/ccer70N2.s 			page 46
 
 
  744 02a4 AF020000 		.4byte	0x2af
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  798 0311 08       		.uleb128 0x8
  799 0312 0A       		.uleb128 0xa
  800 0313 1B040000 		.4byte	.LASF68
-ARM GAS  /tmp/ccKByVIW.s 			page 47
+ARM GAS  /tmp/ccer70N2.s 			page 47
 
 
  801 0317 01       		.byte	0x1
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  855 0374 0A       		.uleb128 0xa
  856 0375 C2020000 		.4byte	.LASF72
  857 0379 01       		.byte	0x1
-ARM GAS  /tmp/ccKByVIW.s 			page 48
+ARM GAS  /tmp/ccer70N2.s 			page 48
 
 
  858 037a A7       		.byte	0xa7
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  912 03d7 05030000 		.4byte	.LASF76
  913 03db 01       		.byte	0x1
  914 03dc AE       		.byte	0xae
-ARM GAS  /tmp/ccKByVIW.s 			page 49
+ARM GAS  /tmp/ccer70N2.s 			page 49
 
 
  915 03dd 32040000 		.4byte	0x432
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  969 0452 3C040000 		.4byte	0x43c
  970 0456 03       		.uleb128 0x3
  971 0457 B6000000 		.4byte	.LASF78
-ARM GAS  /tmp/ccKByVIW.s 			page 50
+ARM GAS  /tmp/ccer70N2.s 			page 50
 
 
  972 045b 01       		.byte	0x1
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1026 04c2 01       		.byte	0x1
  1027 04c3 00000000 		.4byte	.LFB5
  1028 04c7 0C000000 		.4byte	.LFE5
-ARM GAS  /tmp/ccKByVIW.s 			page 51
+ARM GAS  /tmp/ccer70N2.s 			page 51
 
 
  1029 04cb 00000000 		.4byte	.LLST0
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1083 0545 9C000000 		.4byte	.LLST3
  1084 0549 19       		.uleb128 0x19
  1085 054a 01       		.byte	0x1
-ARM GAS  /tmp/ccKByVIW.s 			page 52
+ARM GAS  /tmp/ccer70N2.s 			page 52
 
 
  1086 054b 92020000 		.4byte	.LASF102
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1140 05c3 1D       		.uleb128 0x1d
  1141 05c4 C1030000 		.4byte	.LASF90
  1142 05c8 02       		.byte	0x2
-ARM GAS  /tmp/ccKByVIW.s 			page 53
+ARM GAS  /tmp/ccer70N2.s 			page 53
 
 
  1143 05c9 56       		.byte	0x56
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1197 0630 8F000000 		.4byte	0x8f
  1198 0634 05       		.byte	0x5
  1199 0635 03       		.byte	0x3
-ARM GAS  /tmp/ccKByVIW.s 			page 54
+ARM GAS  /tmp/ccer70N2.s 			page 54
 
 
  1200 0636 00000000 		.4byte	_dwTickCount
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1254 002b 00       		.byte	0
  1255 002c 00       		.byte	0
  1256 002d 04       		.uleb128 0x4
-ARM GAS  /tmp/ccKByVIW.s 			page 55
+ARM GAS  /tmp/ccer70N2.s 			page 55
 
 
  1257 002e 24       		.uleb128 0x24
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1311 0064 0B       		.uleb128 0xb
  1312 0065 3B       		.uleb128 0x3b
  1313 0066 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccKByVIW.s 			page 56
+ARM GAS  /tmp/ccer70N2.s 			page 56
 
 
  1314 0067 01       		.uleb128 0x1
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1368 009d 00       		.byte	0
  1369 009e 49       		.uleb128 0x49
  1370 009f 13       		.uleb128 0x13
-ARM GAS  /tmp/ccKByVIW.s 			page 57
+ARM GAS  /tmp/ccer70N2.s 			page 57
 
 
  1371 00a0 2F       		.uleb128 0x2f
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1425 00d6 49       		.uleb128 0x49
  1426 00d7 13       		.uleb128 0x13
  1427 00d8 38       		.uleb128 0x38
-ARM GAS  /tmp/ccKByVIW.s 			page 58
+ARM GAS  /tmp/ccer70N2.s 			page 58
 
 
  1428 00d9 0A       		.uleb128 0xa
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1482 010f 00       		.byte	0
  1483 0110 00       		.byte	0
  1484 0111 16       		.uleb128 0x16
-ARM GAS  /tmp/ccKByVIW.s 			page 59
+ARM GAS  /tmp/ccer70N2.s 			page 59
 
 
  1485 0112 05       		.uleb128 0x5
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1539 0148 40       		.uleb128 0x40
  1540 0149 06       		.uleb128 0x6
  1541 014a 00       		.byte	0
-ARM GAS  /tmp/ccKByVIW.s 			page 60
+ARM GAS  /tmp/ccer70N2.s 			page 60
 
 
  1542 014b 00       		.byte	0
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1596 0181 49       		.uleb128 0x49
  1597 0182 13       		.uleb128 0x13
  1598 0183 11       		.uleb128 0x11
-ARM GAS  /tmp/ccKByVIW.s 			page 61
+ARM GAS  /tmp/ccer70N2.s 			page 61
 
 
  1599 0184 01       		.uleb128 0x1
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1653 01ba 49       		.uleb128 0x49
  1654 01bb 13       		.uleb128 0x13
  1655 01bc 3F       		.uleb128 0x3f
-ARM GAS  /tmp/ccKByVIW.s 			page 62
+ARM GAS  /tmp/ccer70N2.s 			page 62
 
 
  1656 01bd 0C       		.uleb128 0xc
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1710 006f 00       		.sleb128 0
  1711 0070 02000000 		.4byte	.LCFI5
  1712 0074 04000000 		.4byte	.LCFI6
-ARM GAS  /tmp/ccKByVIW.s 			page 63
+ARM GAS  /tmp/ccer70N2.s 			page 63
 
 
  1713 0078 0200     		.2byte	0x2
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1767 00f8 00000000 		.4byte	0
  1768 00fc 00000000 		.4byte	0
  1769              	.LLST5:
-ARM GAS  /tmp/ccKByVIW.s 			page 64
+ARM GAS  /tmp/ccer70N2.s 			page 64
 
 
  1770 0100 00000000 		.4byte	.LFB37
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1824 0186 7D       		.byte	0x7d
  1825 0187 18       		.sleb128 24
  1826 0188 06000000 		.4byte	.LCFI20
-ARM GAS  /tmp/ccKByVIW.s 			page 65
+ARM GAS  /tmp/ccer70N2.s 			page 65
 
 
  1827 018c 3C000000 		.4byte	.LFE39
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1881 0000 80010000 		.section	.debug_str,"MS",%progbits,1
  1881      0200C300 
  1881      00000201 
-ARM GAS  /tmp/ccKByVIW.s 			page 66
+ARM GAS  /tmp/ccer70N2.s 			page 66
 
 
  1881      FB0E0D00 
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1909      555F4952 
  1909      516E00
  1910              	.LASF65:
-ARM GAS  /tmp/ccKByVIW.s 			page 67
+ARM GAS  /tmp/ccer70N2.s 			page 67
 
 
  1911 007f 43505549 		.ascii	"CPUID\000"
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1938              	.LASF32:
  1939 010c 55534152 		.ascii	"USART0_IRQn\000"
  1939      54305F49 
-ARM GAS  /tmp/ccKByVIW.s 			page 68
+ARM GAS  /tmp/ccer70N2.s 			page 68
 
 
  1939      52516E00 
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1967      516E00
  1968              	.LASF45:
  1969 0198 4144435F 		.ascii	"ADC_IRQn\000"
-ARM GAS  /tmp/ccKByVIW.s 			page 69
+ARM GAS  /tmp/ccer70N2.s 			page 69
 
 
  1969      4952516E 
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  1995      676E6564 
  1995      20696E74 
  1995      00
-ARM GAS  /tmp/ccKByVIW.s 			page 70
+ARM GAS  /tmp/ccer70N2.s 			page 70
 
 
  1996              	.LASF13:
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  2022              	.LASF77:
  2023 02b8 49534152 		.ascii	"ISAR\000"
  2023      00
-ARM GAS  /tmp/ccKByVIW.s 			page 71
+ARM GAS  /tmp/ccer70N2.s 			page 71
 
 
  2024              	.LASF56:
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  2053      52564544 
  2053      3500
  2054              	.LASF7:
-ARM GAS  /tmp/ccKByVIW.s 			page 72
+ARM GAS  /tmp/ccer70N2.s 			page 72
 
 
  2055 033c 6C6F6E67 		.ascii	"long unsigned int\000"
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  2080              	.LASF42:
  2081 03cb 5443335F 		.ascii	"TC3_IRQn\000"
  2081      4952516E 
-ARM GAS  /tmp/ccKByVIW.s 			page 73
+ARM GAS  /tmp/ccer70N2.s 			page 73
 
 
  2081      00
@@ -4341,29 +4341,29 @@ ARM GAS  /tmp/ccKByVIW.s 			page 1
  2089 041b 41495243 		.ascii	"AIRCR\000"
  2089      5200
  2090              		.ident	"GCC: (Sourcery CodeBench Lite 2011.09-69) 4.6.1"
-ARM GAS  /tmp/ccKByVIW.s 			page 74
+ARM GAS  /tmp/ccer70N2.s 			page 74
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 timetick.c
-     /tmp/ccKByVIW.s:19     .text.__WFI:00000000 $t
-     /tmp/ccKByVIW.s:23     .text.__WFI:00000000 __WFI
-     /tmp/ccKByVIW.s:50     .text.NVIC_SetPriority:00000000 $t
-     /tmp/ccKByVIW.s:54     .text.NVIC_SetPriority:00000000 NVIC_SetPriority
-     /tmp/ccKByVIW.s:112    .text.SysTick_Config:00000000 $t
-     /tmp/ccKByVIW.s:116    .text.SysTick_Config:00000000 SysTick_Config
-     /tmp/ccKByVIW.s:176    .bss:00000000 $d
-     /tmp/ccKByVIW.s:177    .bss:00000000 _dwTickCount
-     /tmp/ccKByVIW.s:180    .text.SysTick_Handler:00000000 $t
-     /tmp/ccKByVIW.s:185    .text.SysTick_Handler:00000000 SysTick_Handler
-     /tmp/ccKByVIW.s:216    .text.TimeTick_Configure:00000000 $t
-     /tmp/ccKByVIW.s:221    .text.TimeTick_Configure:00000000 TimeTick_Configure
-     /tmp/ccKByVIW.s:262    .text.GetTickCount:00000000 $t
-     /tmp/ccKByVIW.s:267    .text.GetTickCount:00000000 GetTickCount
-     /tmp/ccKByVIW.s:294    .text.Wait:00000000 $t
-     /tmp/ccKByVIW.s:299    .text.Wait:00000000 Wait
-     /tmp/ccKByVIW.s:344    .text.Sleep:00000000 $t
-     /tmp/ccKByVIW.s:349    .text.Sleep:00000000 Sleep
+     /tmp/ccer70N2.s:19     .text.__WFI:00000000 $t
+     /tmp/ccer70N2.s:23     .text.__WFI:00000000 __WFI
+     /tmp/ccer70N2.s:50     .text.NVIC_SetPriority:00000000 $t
+     /tmp/ccer70N2.s:54     .text.NVIC_SetPriority:00000000 NVIC_SetPriority
+     /tmp/ccer70N2.s:112    .text.SysTick_Config:00000000 $t
+     /tmp/ccer70N2.s:116    .text.SysTick_Config:00000000 SysTick_Config
+     /tmp/ccer70N2.s:176    .bss:00000000 $d
+     /tmp/ccer70N2.s:177    .bss:00000000 _dwTickCount
+     /tmp/ccer70N2.s:180    .text.SysTick_Handler:00000000 $t
+     /tmp/ccer70N2.s:185    .text.SysTick_Handler:00000000 SysTick_Handler
+     /tmp/ccer70N2.s:216    .text.TimeTick_Configure:00000000 $t
+     /tmp/ccer70N2.s:221    .text.TimeTick_Configure:00000000 TimeTick_Configure
+     /tmp/ccer70N2.s:262    .text.GetTickCount:00000000 $t
+     /tmp/ccer70N2.s:267    .text.GetTickCount:00000000 GetTickCount
+     /tmp/ccer70N2.s:294    .text.Wait:00000000 $t
+     /tmp/ccer70N2.s:299    .text.Wait:00000000 Wait
+     /tmp/ccer70N2.s:344    .text.Sleep:00000000 $t
+     /tmp/ccer70N2.s:349    .text.Sleep:00000000 Sleep
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

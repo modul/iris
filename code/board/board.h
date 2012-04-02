@@ -32,7 +32,7 @@
 #define LEDS_NUM 2
 #define STATUS 0
 #define ALARM 1
-#define BLINK_FREQ 6
+#define BLINK_FREQ 8
 #define BLINK_TC 0
 
 /** USB configuration **/
