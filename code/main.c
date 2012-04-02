@@ -6,6 +6,10 @@
 #define HOLD    (1 << 2)
 #define RELEASE (1 << 3)
 
+#define UP -1
+#define DOWN 1
+#define NONE 0
+
 //TODO config struct
 #define MINv 0
 #define MAXv MAX
@@ -21,6 +25,7 @@ uint32_t releasetime = 1000;
 uint32_t dxmax = 1024;
 
 static void init();
+static void write_output(int32_t value);
 static void state(uint8_t new);
 static void cli();
 
@@ -95,27 +100,17 @@ void TC1_IrqHandler()
 
 void ADC_IrqHandler(void)
 {
-	//TODO enable TAG option and check
+	int32_t duty = 0;
     uint32_t status;
-	uint32_t duty = 0;
 
     status = ADC_GetStatus(ADC);
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
 		if (_state & (RUN|HOLD)) {
 			control(LIMIT(input[AIN0], MINv, MAXv), &loop);
-			duty = loop.tristate->output * ((loop.output * PWM_PERIOD) / MAX);
-			if (loop.tristate->output == 1) {
-				PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
-				PWMC_SetDutyCycle(PWM, TPOUT_down, duty);
-			}
-			else if (loop.tristate->output == -1) {
-				PWMC_SetDutyCycle(PWM, TPOUT_up, duty);
-				PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
-			}
-			else {
-				PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
-				PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
+			if (loop.tristate != NULL) {
+				duty = loop.tristate->output * ((loop.output * PWM_PERIOD) / MAX);
+				write_output(duty);
 			}
 		}
 	}
@@ -177,6 +172,33 @@ static void init()
 	TRACE_DEBUG("waiting until USB is fully configured\n");
 	while (!USBC_isConfigured());
 	setbuf(stdout, NULL);
+
+	TRACE_INFO("configured\n");
+}
+
+static void write_output(int32_t value)
+{
+	const Pin up   = PIN_C3OUT_up;
+	const Pin down = PIN_C3OUT_down;
+
+	if (value > 0){
+		PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
+		PWMC_SetDutyCycle(PWM, TPOUT_down, value);
+		PIO_Set(&down);
+		PIO_Clear(&up);
+	}
+	else if (value < 0) {
+		PWMC_SetDutyCycle(PWM, TPOUT_up, value);
+		PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
+		PIO_Set(&up);
+		PIO_Clear(&down);
+	}
+	else {
+		PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
+		PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
+		PIO_Clear(&up);
+		PIO_Clear(&down);
+	}
 }
 
 static void state(uint8_t new) 
@@ -185,8 +207,7 @@ static void state(uint8_t new)
 		case STOPPED:
 			LED_clr(STATUS);
 			mode(STOP, &loop);
-			PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
-			PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
+			write_output(NONE);
 			TRACE_DEBUG("set state STOPPED\n");
 			break;
 		case RUN:
@@ -201,8 +222,7 @@ static void state(uint8_t new)
 			TRACE_DEBUG("set state HOLD\n");
 			break;
 		case RELEASE:
-			PWMC_SetDutyCycle(PWM, TPOUT_up, PWM_PERIOD);
-			PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
+			write_output(UP * PWM_PERIOD);
 			mode(STOP, &loop);
 			TRACE_DEBUG("set state RELEASE\n");
 			break;
