@@ -109,7 +109,7 @@ clean:
 program: $(TARGET)
 	$(OOCD) $(OOCDFLAGS) \
 		-c "halt" \
-		-c "flash write_bank 0 $(OUTPUT)-flash.bin 0" \
+		-c "flash write_bank 0 $(TARGET) 0" \
 		-c "reset run" \
 		-c "shutdown"
 
