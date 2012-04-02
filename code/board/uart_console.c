@@ -75,7 +75,7 @@ extern void UART_SetTimeout(uint32_t ms)
  */
 extern void UART_Configure( uint32_t baudrate, uint32_t masterClock)
 {
-    const Pin pPins[] = UART_PINS;
+    const Pin pPins[] = {PINS_UART};
     Uart *pUart = UART_UART;
 
     /* Configure PIO */

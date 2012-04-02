@@ -49,9 +49,9 @@ int main()
 	LEDs_configure();
 
 	/* configure hardware */
-	LED_blink(statusled, FOREVER);
+	LED_blink(STATUS, FOREVER);
 	init();
-	LED_blinkstop(statusled);
+	LED_blinkstop(STATUS);
 
 	loop.Kp = SCALE(3);
 	loop.Ki = SCALE(2);
@@ -69,12 +69,12 @@ int main()
 
 			case HOLD:
 				if (GetTickCount() % 1000)
-					LED_blink(statusled, 1);
+					LED_blink(STATUS, 1);
 				break;
 
 			case RELEASE:
 				if (GetTickCount() % 1000)
-					LED_blink(statusled, 2);
+					LED_blink(STATUS, 2);
 
 				if (timestamp == 0)
 					timestamp = GetTickCount() + releasetime;
@@ -87,7 +87,7 @@ int main()
 
 			case RUN:
 				if (GetTickCount() % 1000)
-					LED_blink(statusled, 3);
+					LED_blink(STATUS, 3);
 				if (   loop._dx > dxmax \
 				    || loop._dx < -dxmax \
 					|| loop.mode == NORMAL) // ramp finished
@@ -195,7 +195,7 @@ static void state(uint8_t new)
 {
 	switch (new) {
 		case STOPPED:
-			LED_clr(statusled);
+			LED_clr(STATUS);
 			mode(STOP, &loop);
 			PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
 			PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
