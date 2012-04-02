@@ -1,23 +1,14 @@
 #include <string.h>
-#include "board.h"
-#include "controller.h"
+#include "conf.h"
 
 #define STOPPED  (1 << 0)
 #define RUN     (1 << 1)
 #define HOLD    (1 << 2)
 #define RELEASE (1 << 3)
 
+//TODO config struct
 #define MINv 0
 #define MAXv MAX
-
-#define AIN0 0
-#define AIN1 1
-#define NUM_AIN 2
-
-#define PWMOUT_up 0
-#define PWMOUT_down 1
-#define PWM_FREQ   20
-#define PWM_PERIOD 100
 
 ctrlio_t input[NUM_AIN] = {0};
 uint8_t _state = STOPPED;
@@ -39,13 +30,8 @@ int main()
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
-	/* WDT off */
     WDT->WDT_MR = WDT_MR_WDDIS;
-
-	/* Tick Config */
 	TimeTick_Configure(BOARD_MCK);
-
-	/* LED PIO Config */
 	LEDs_configure();
 
 	/* configure hardware */
@@ -120,16 +106,16 @@ void ADC_IrqHandler(void)
 			control(LIMIT(input[AIN0], MINv, MAXv), &loop);
 			duty = loop.tristate->output * ((loop.output * PWM_PERIOD) / MAX);
 			if (loop.tristate->output == 1) {
-				PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
-				PWMC_SetDutyCycle(PWM, PWMOUT_down, duty);
+				PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
+				PWMC_SetDutyCycle(PWM, TPOUT_down, duty);
 			}
 			else if (loop.tristate->output == -1) {
-				PWMC_SetDutyCycle(PWM, PWMOUT_up, duty);
-				PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
+				PWMC_SetDutyCycle(PWM, TPOUT_up, duty);
+				PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
 			}
 			else {
-				PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
-				PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
+				PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
+				PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
 			}
 		}
 	}
@@ -139,8 +125,10 @@ static void init()
 {
     uint32_t div;
     uint32_t tcclks;
+	const Pin pins[] = {PINS_ADCIN, PINS_TPOUT, PINS_C3OUT};
 
-	//TODO PIO Configure 
+	/* PIO Configure */
+	PIO_Configure(pins, PIO_LISTSIZE(pins));
 
     /* Enable peripheral clocks */
     PMC_EnablePeripheral(ID_TC1);
@@ -172,15 +160,15 @@ static void init()
 
     /* Configure PWMC channels */
     PWMC_ConfigureClocks(PWM_FREQ * PWM_PERIOD, 0, BOARD_MCK);
-    PWMC_ConfigureChannelExt(PWM, PWMOUT_up, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
-    PWMC_ConfigureChannelExt(PWM, PWMOUT_down, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
+    PWMC_ConfigureChannelExt(PWM, TPOUT_up, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
+    PWMC_ConfigureChannelExt(PWM, TPOUT_down, PWM_CMR_CPRE_CKA, 0, 1, 0, 0, 0, 0);
 
-    PWMC_SetPeriod(PWM, PWMOUT_up, PWM_PERIOD);
-    PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
-    PWMC_SetPeriod(PWM, PWMOUT_down, PWM_PERIOD);
-    PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
+    PWMC_SetPeriod(PWM, TPOUT_up, PWM_PERIOD);
+    PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
+    PWMC_SetPeriod(PWM, TPOUT_down, PWM_PERIOD);
+    PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
 
-    PWMC_ConfigureSyncChannel(PWM, (1 << PWMOUT_up)|(1 << PWMOUT_down), PWM_SCM_UPDM_MODE1, 0, 0);
+    PWMC_ConfigureSyncChannel(PWM, (1 << TPOUT_up)|(1 << TPOUT_down), PWM_SCM_UPDM_MODE1, 0, 0);
     PWMC_SetSyncChannelUpdatePeriod(PWM, PWM_SCUP_UPR(1));
 
 	/* USB Console Config */
@@ -197,8 +185,8 @@ static void state(uint8_t new)
 		case STOPPED:
 			LED_clr(STATUS);
 			mode(STOP, &loop);
-			PWMC_SetDutyCycle(PWM, PWMOUT_up, 0);
-			PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
+			PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
+			PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
 			TRACE_DEBUG("set state STOPPED\n");
 			break;
 		case RUN:
@@ -213,8 +201,8 @@ static void state(uint8_t new)
 			TRACE_DEBUG("set state HOLD\n");
 			break;
 		case RELEASE:
-			PWMC_SetDutyCycle(PWM, PWMOUT_up, PWM_PERIOD);
-			PWMC_SetDutyCycle(PWM, PWMOUT_down, 0);
+			PWMC_SetDutyCycle(PWM, TPOUT_up, PWM_PERIOD);
+			PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
 			mode(STOP, &loop);
 			TRACE_DEBUG("set state RELEASE\n");
 			break;
