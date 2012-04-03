@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccDTE0gf.s 			page 1
+ARM GAS  /tmp/ccypmQmm.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
   30:libchip/cmsis/core_cm3.h ****  *   - Error 10: \n
   31:libchip/cmsis/core_cm3.h ****  *     register uint32_t __regBasePri         __asm("basepri"); \n
   32:libchip/cmsis/core_cm3.h ****  *     Error 10: Expecting ';'
-ARM GAS  /tmp/ccDTE0gf.s 			page 2
+ARM GAS  /tmp/ccypmQmm.s 			page 2
 
 
   33:libchip/cmsis/core_cm3.h ****  * .
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
   87:libchip/cmsis/core_cm3.h **** 
   88:libchip/cmsis/core_cm3.h **** #define __CORTEX_M                (0x03)                                                       /*!<
   89:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccDTE0gf.s 			page 3
+ARM GAS  /tmp/ccypmQmm.s 			page 3
 
 
   90:libchip/cmsis/core_cm3.h **** #include <stdint.h>                           /* Include standard types */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  144:libchip/cmsis/core_cm3.h ****   __IO uint8_t  IP[240];                      /*!< Offset: 0x300  Interrupt Priority Register (8Bit
  145:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED5[644];
  146:libchip/cmsis/core_cm3.h ****   __O  uint32_t STIR;                         /*!< Offset: 0xE00  Software Trigger Interrupt Regist
-ARM GAS  /tmp/ccDTE0gf.s 			page 4
+ARM GAS  /tmp/ccypmQmm.s 			page 4
 
 
  147:libchip/cmsis/core_cm3.h **** }  NVIC_Type;
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  201:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSTSET_Pos             26                                             /*!< SCB 
  202:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSTSET_Msk             (1ul << SCB_ICSR_PENDSTSET_Pos)                /*!< SCB 
  203:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccDTE0gf.s 			page 5
+ARM GAS  /tmp/ccypmQmm.s 			page 5
 
 
  204:libchip/cmsis/core_cm3.h **** #define SCB_ICSR_PENDSTCLR_Pos             25                                             /*!< SCB 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  258:libchip/cmsis/core_cm3.h **** #define SCB_SCR_SLEEPONEXIT_Pos             1                                             /*!< SCB 
  259:libchip/cmsis/core_cm3.h **** #define SCB_SCR_SLEEPONEXIT_Msk            (1ul << SCB_SCR_SLEEPONEXIT_Pos)               /*!< SCB 
  260:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccDTE0gf.s 			page 6
+ARM GAS  /tmp/ccypmQmm.s 			page 6
 
 
  261:libchip/cmsis/core_cm3.h **** /* SCB Configuration Control Register Definitions */
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  315:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_USGFAULTACT_Msk          (1ul << SCB_SHCSR_USGFAULTACT_Pos)             /*!< SCB 
  316:libchip/cmsis/core_cm3.h **** 
  317:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_BUSFAULTACT_Pos           1                                             /*!< SCB 
-ARM GAS  /tmp/ccDTE0gf.s 			page 7
+ARM GAS  /tmp/ccypmQmm.s 			page 7
 
 
  318:libchip/cmsis/core_cm3.h **** #define SCB_SHCSR_BUSFAULTACT_Msk          (1ul << SCB_SHCSR_BUSFAULTACT_Pos)             /*!< SCB 
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  372:libchip/cmsis/core_cm3.h **** 
  373:libchip/cmsis/core_cm3.h **** /* SysTick Control / Status Register Definitions */
  374:libchip/cmsis/core_cm3.h **** #define SysTick_CTRL_COUNTFLAG_Pos         16                                             /*!< SysT
-ARM GAS  /tmp/ccDTE0gf.s 			page 8
+ARM GAS  /tmp/ccypmQmm.s 			page 8
 
 
  375:libchip/cmsis/core_cm3.h **** #define SysTick_CTRL_COUNTFLAG_Msk         (1ul << SysTick_CTRL_COUNTFLAG_Pos)            /*!< SysT
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  429:libchip/cmsis/core_cm3.h ****   __IO uint32_t LAR;                          /*!< Offset:       ITM Lock Access Register          
  430:libchip/cmsis/core_cm3.h ****   __IO uint32_t LSR;                          /*!< Offset:       ITM Lock Status Register          
  431:libchip/cmsis/core_cm3.h ****        uint32_t RESERVED5[6];
-ARM GAS  /tmp/ccDTE0gf.s 			page 9
+ARM GAS  /tmp/ccypmQmm.s 			page 9
 
 
  432:libchip/cmsis/core_cm3.h ****   __I  uint32_t PID4;                         /*!< Offset:       ITM Peripheral Identification Regi
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  486:libchip/cmsis/core_cm3.h **** 
  487:libchip/cmsis/core_cm3.h **** /* ITM Lock Status Register Definitions */
  488:libchip/cmsis/core_cm3.h **** #define ITM_LSR_ByteAcc_Pos                 2                                             /*!< ITM 
-ARM GAS  /tmp/ccDTE0gf.s 			page 10
+ARM GAS  /tmp/ccypmQmm.s 			page 10
 
 
  489:libchip/cmsis/core_cm3.h **** #define ITM_LSR_ByteAcc_Msk                (1ul << ITM_LSR_ByteAcc_Pos)                   /*!< ITM 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  543:libchip/cmsis/core_cm3.h ****   __IO uint32_t RASR_A1;                      /*!< Offset: 0x18  MPU Alias 1 Region Attribute and S
  544:libchip/cmsis/core_cm3.h ****   __IO uint32_t RBAR_A2;                      /*!< Offset: 0x1C  MPU Alias 2 Region Base Address Re
  545:libchip/cmsis/core_cm3.h ****   __IO uint32_t RASR_A2;                      /*!< Offset: 0x20  MPU Alias 2 Region Attribute and S
-ARM GAS  /tmp/ccDTE0gf.s 			page 11
+ARM GAS  /tmp/ccypmQmm.s 			page 11
 
 
  546:libchip/cmsis/core_cm3.h ****   __IO uint32_t RBAR_A3;                      /*!< Offset: 0x24  MPU Alias 3 Region Base Address Re
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  600:libchip/cmsis/core_cm3.h **** #define MPU_RASR_B_Pos                     16                                             /*!< MPU 
  601:libchip/cmsis/core_cm3.h **** #define MPU_RASR_B_Msk                     (1ul << MPU_RASR_B_Pos)                        /*!< MPU 
  602:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccDTE0gf.s 			page 12
+ARM GAS  /tmp/ccypmQmm.s 			page 12
 
 
  603:libchip/cmsis/core_cm3.h **** #define MPU_RASR_SRD_Pos                    8                                             /*!< MPU 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  657:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_STEP_Msk         (1ul << CoreDebug_DHCSR_C_STEP_Pos)            /*!< Core
  658:libchip/cmsis/core_cm3.h **** 
  659:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_HALT_Pos          1                                             /*!< Core
-ARM GAS  /tmp/ccDTE0gf.s 			page 13
+ARM GAS  /tmp/ccypmQmm.s 			page 13
 
 
  660:libchip/cmsis/core_cm3.h **** #define CoreDebug_DHCSR_C_HALT_Msk         (1ul << CoreDebug_DHCSR_C_HALT_Pos)            /*!< Core
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  714:libchip/cmsis/core_cm3.h **** /* Memory mapping of Cortex-M3 Hardware */
  715:libchip/cmsis/core_cm3.h **** #define SCS_BASE            (0xE000E000)                              /*!< System Control Space Bas
  716:libchip/cmsis/core_cm3.h **** #define ITM_BASE            (0xE0000000)                              /*!< ITM Base Address        
-ARM GAS  /tmp/ccDTE0gf.s 			page 14
+ARM GAS  /tmp/ccypmQmm.s 			page 14
 
 
  717:libchip/cmsis/core_cm3.h **** #define CoreDebug_BASE      (0xE000EDF0)                              /*!< Core Debug Base Address 
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  771:libchip/cmsis/core_cm3.h **** #define __SEV                             __sev
  772:libchip/cmsis/core_cm3.h **** #define __ISB()                           __isb(0)
  773:libchip/cmsis/core_cm3.h **** #define __DSB()                           __dsb(0)
-ARM GAS  /tmp/ccDTE0gf.s 			page 15
+ARM GAS  /tmp/ccypmQmm.s 			page 15
 
 
  774:libchip/cmsis/core_cm3.h **** #define __DMB()                           __dmb(0)
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  828:libchip/cmsis/core_cm3.h **** extern void __set_MSP(uint32_t topOfMainStack);
  829:libchip/cmsis/core_cm3.h **** 
  830:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccDTE0gf.s 			page 16
+ARM GAS  /tmp/ccypmQmm.s 			page 16
 
 
  831:libchip/cmsis/core_cm3.h ****  * @brief  Reverse byte order in unsigned short value
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  885:libchip/cmsis/core_cm3.h **** extern uint32_t __get_PRIMASK(void);
  886:libchip/cmsis/core_cm3.h **** 
  887:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccDTE0gf.s 			page 17
+ARM GAS  /tmp/ccypmQmm.s 			page 17
 
 
  888:libchip/cmsis/core_cm3.h ****  * @brief  Set the Priority Mask value
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  942:libchip/cmsis/core_cm3.h ****  * @brief  Return the Base Priority value
  943:libchip/cmsis/core_cm3.h ****  *
  944:libchip/cmsis/core_cm3.h ****  * @return BasePriority
-ARM GAS  /tmp/ccDTE0gf.s 			page 18
+ARM GAS  /tmp/ccypmQmm.s 			page 18
 
 
  945:libchip/cmsis/core_cm3.h ****  *
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  999:libchip/cmsis/core_cm3.h ****  */
 1000:libchip/cmsis/core_cm3.h **** static __INLINE uint32_t __get_FAULTMASK(void)
 1001:libchip/cmsis/core_cm3.h **** {
-ARM GAS  /tmp/ccDTE0gf.s 			page 19
+ARM GAS  /tmp/ccypmQmm.s 			page 19
 
 
 1002:libchip/cmsis/core_cm3.h ****   register uint32_t __regFaultMask       __ASM("faultmask");
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
 1056:libchip/cmsis/core_cm3.h **** static __INLINE void __disable_fault_irq( void )  { __ASM ("cpsid f"); }
 1057:libchip/cmsis/core_cm3.h **** 
 1058:libchip/cmsis/core_cm3.h **** #define __NOP                                     __no_operation            /*!< no operation intri
-ARM GAS  /tmp/ccDTE0gf.s 			page 20
+ARM GAS  /tmp/ccypmQmm.s 			page 20
 
 
 1059:libchip/cmsis/core_cm3.h **** static __INLINE  void __WFI( void )               { __ASM ("wfi"); }
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
 1113:libchip/cmsis/core_cm3.h ****  */
 1114:libchip/cmsis/core_cm3.h **** extern void __set_MSP(uint32_t topOfMainStack);
 1115:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccDTE0gf.s 			page 21
+ARM GAS  /tmp/ccypmQmm.s 			page 21
 
 
 1116:libchip/cmsis/core_cm3.h **** /**
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
 1170:libchip/cmsis/core_cm3.h ****  * @param  *addr  address pointer
 1171:libchip/cmsis/core_cm3.h ****  * @return        successful / failed
 1172:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/ccDTE0gf.s 			page 22
+ARM GAS  /tmp/ccypmQmm.s 			page 22
 
 
 1173:libchip/cmsis/core_cm3.h ****  * Exclusive STR command for 8 bit values
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
 1227:libchip/cmsis/core_cm3.h **** extern uint32_t __get_PSP(void);
 1228:libchip/cmsis/core_cm3.h **** 
 1229:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccDTE0gf.s 			page 23
+ARM GAS  /tmp/ccypmQmm.s 			page 23
 
 
 1230:libchip/cmsis/core_cm3.h ****  * @brief  Set the Process Stack Pointer
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
 1284:libchip/cmsis/core_cm3.h **** extern uint32_t  __get_PRIMASK(void);
 1285:libchip/cmsis/core_cm3.h **** 
 1286:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccDTE0gf.s 			page 24
+ARM GAS  /tmp/ccypmQmm.s 			page 24
 
 
 1287:libchip/cmsis/core_cm3.h ****  * @brief  Set the Priority Mask value
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
 1341:libchip/cmsis/core_cm3.h **** /**
 1342:libchip/cmsis/core_cm3.h ****  * @brief  Reverse byte order in unsigned short value
 1343:libchip/cmsis/core_cm3.h ****  *
-ARM GAS  /tmp/ccDTE0gf.s 			page 25
+ARM GAS  /tmp/ccypmQmm.s 			page 25
 
 
 1344:libchip/cmsis/core_cm3.h ****  * @param  value  value to reverse
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
 1398:libchip/cmsis/core_cm3.h ****  */
 1399:libchip/cmsis/core_cm3.h **** extern uint32_t __LDREXW(uint32_t *addr);
 1400:libchip/cmsis/core_cm3.h **** 
-ARM GAS  /tmp/ccDTE0gf.s 			page 26
+ARM GAS  /tmp/ccypmQmm.s 			page 26
 
 
 1401:libchip/cmsis/core_cm3.h **** /**
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
 1455:libchip/cmsis/core_cm3.h **** /* ##########################   NVIC functions  #################################### */
 1456:libchip/cmsis/core_cm3.h **** 
 1457:libchip/cmsis/core_cm3.h **** /**
-ARM GAS  /tmp/ccDTE0gf.s 			page 27
+ARM GAS  /tmp/ccypmQmm.s 			page 27
 
 
 1458:libchip/cmsis/core_cm3.h ****  * @brief  Set the Priority Grouping in NVIC Interrupt Controller
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
   34              		.cfi_offset 7, -4
   35 0002 83B0     		sub	sp, sp, #12
   36              	.LCFI1:
-ARM GAS  /tmp/ccDTE0gf.s 			page 28
+ARM GAS  /tmp/ccypmQmm.s 			page 28
 
 
   37              		.cfi_def_cfa_offset 16
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
 1527:libchip/cmsis/core_cm3.h ****  * otherwise it returns 0
 1528:libchip/cmsis/core_cm3.h ****  */
 1529:libchip/cmsis/core_cm3.h **** static __INLINE uint32_t NVIC_GetPendingIRQ(IRQn_Type IRQn)
-ARM GAS  /tmp/ccDTE0gf.s 			page 29
+ARM GAS  /tmp/ccypmQmm.s 			page 29
 
 
 1530:libchip/cmsis/core_cm3.h **** {
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
 1584:libchip/cmsis/core_cm3.h ****  * Note: The priority cannot be set for every core interrupt.
 1585:libchip/cmsis/core_cm3.h ****  */
 1586:libchip/cmsis/core_cm3.h **** static __INLINE void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
-ARM GAS  /tmp/ccDTE0gf.s 			page 30
+ARM GAS  /tmp/ccypmQmm.s 			page 30
 
 
 1587:libchip/cmsis/core_cm3.h **** {
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  116 0052 07F10C07 		add	r7, r7, #12
  117 0056 BD46     		mov	sp, r7
  118 0058 80BC     		pop	{r7}
-ARM GAS  /tmp/ccDTE0gf.s 			page 31
+ARM GAS  /tmp/ccypmQmm.s 			page 31
 
 
  119 005a 7047     		bx	lr
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  169              		.align	2
  170              		.type	dxmax, %object
  171              		.size	dxmax, 4
-ARM GAS  /tmp/ccDTE0gf.s 			page 32
+ARM GAS  /tmp/ccypmQmm.s 			page 32
 
 
  172              	dxmax:
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
   29:main.c        **** static void state(uint8_t new);
   30:main.c        **** static void cli();
   31:main.c        **** 
-ARM GAS  /tmp/ccDTE0gf.s 			page 33
+ARM GAS  /tmp/ccypmQmm.s 			page 33
 
 
   32:main.c        **** int main() 
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  232 0050 FFF7FEFF 		bl	LED_blink
   44:main.c        **** 	init();
  233              		.loc 2 44 0
-ARM GAS  /tmp/ccDTE0gf.s 			page 34
+ARM GAS  /tmp/ccypmQmm.s 			page 34
 
 
  234 0054 FFF7FEFF 		bl	init
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  275              		.loc 2 57 0
  276 00c4 40F20003 		movw	r3, #:lower16:_state
  277 00c8 C0F20003 		movt	r3, #:upper16:_state
-ARM GAS  /tmp/ccDTE0gf.s 			page 35
+ARM GAS  /tmp/ccypmQmm.s 			page 35
 
 
  278 00cc 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  322 014e 01FB03F3 		mul	r3, r1, r3
  323 0152 D31A     		subs	r3, r2, r3
  324 0154 002B     		cmp	r3, #0
-ARM GAS  /tmp/ccDTE0gf.s 			page 36
+ARM GAS  /tmp/ccypmQmm.s 			page 36
 
 
  325 0156 05D1     		bne	.L14
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  365 01ac 4FF00100 		mov	r0, #1
  366 01b0 FFF7FEFF 		bl	state
  367              		.loc 2 77 0
-ARM GAS  /tmp/ccDTE0gf.s 			page 37
+ARM GAS  /tmp/ccypmQmm.s 			page 37
 
 
  368 01b4 48E0     		b	.L23
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
   85:main.c        **** 					state(RELEASE);
  415              		.loc 2 85 0
  416 022c 4FF00800 		mov	r0, #8
-ARM GAS  /tmp/ccDTE0gf.s 			page 38
+ARM GAS  /tmp/ccypmQmm.s 			page 38
 
 
  417 0230 FFF7FEFF 		bl	state
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
   92:main.c        **** 	return 0;
   93:main.c        **** }
   94:main.c        **** 
-ARM GAS  /tmp/ccDTE0gf.s 			page 39
+ARM GAS  /tmp/ccypmQmm.s 			page 39
 
 
   95:main.c        **** void TC1_IrqHandler()
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  504 0056 40F20001 		movw	r1, #:lower16:.LC5
  505 005a C0F20001 		movt	r1, #:upper16:.LC5
  506 005e FFF7FEFF 		bl	fiprintf
-ARM GAS  /tmp/ccDTE0gf.s 			page 40
+ARM GAS  /tmp/ccypmQmm.s 			page 40
 
 
  104:main.c        **** 		LED_blink(ALARM, 2);
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  549              		.cfi_def_cfa_offset 8
  550              		.cfi_offset 14, -4
  551              		.cfi_offset 7, -8
-ARM GAS  /tmp/ccDTE0gf.s 			page 41
+ARM GAS  /tmp/ccypmQmm.s 			page 41
 
 
  552 0002 82B0     		sub	sp, sp, #8
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  597 0066 40F20001 		movw	r1, #:lower16:loop
  598 006a C0F20001 		movt	r1, #:upper16:loop
  599 006e FFF7FEFF 		bl	control
-ARM GAS  /tmp/ccDTE0gf.s 			page 42
+ARM GAS  /tmp/ccypmQmm.s 			page 42
 
 
  121:main.c        **** 			if (loop.tristate != NULL) {
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  643 0080 2D492D20 		.ascii	"-I- configured\012\000"
  643      636F6E66 
  643      69677572 
-ARM GAS  /tmp/ccDTE0gf.s 			page 43
+ARM GAS  /tmp/ccypmQmm.s 			page 43
 
 
  643      65640A00 
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  694              	.LCFI15:
  695              		.cfi_def_cfa_offset 12
  696              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccDTE0gf.s 			page 44
+ARM GAS  /tmp/ccypmQmm.s 			page 44
 
 
  697              		.cfi_offset 7, -8
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  737 005e C0F2DC21 		movt	r1, 732
  738 0062 2346     		mov	r3, r4
  739 0064 FFF7FEFF 		bl	TC_FindMckDivisor
-ARM GAS  /tmp/ccDTE0gf.s 			page 45
+ARM GAS  /tmp/ccypmQmm.s 			page 45
 
 
  145:main.c        ****     TC_Configure(TC1, 0, tcclks | TC_CMR_CPCTRG);
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  781 00e2 4FF40043 		mov	r3, #32768
  782 00e6 C4F20303 		movt	r3, 16387
  783 00ea 4FF00102 		mov	r2, #1
-ARM GAS  /tmp/ccDTE0gf.s 			page 46
+ARM GAS  /tmp/ccypmQmm.s 			page 46
 
 
  784 00ee 1A61     		str	r2, [r3, #16]
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  827 0170 4FF00003 		mov	r3, #0
  828 0174 FFF7FEFF 		bl	PWMC_ConfigureChannel
  169:main.c        ****     PWMC_ConfigureChannel(PWM, TPOUT_down, PWM_CMR_CPRE_CKA, 0, PWM_CMR_CPOL);
-ARM GAS  /tmp/ccDTE0gf.s 			page 47
+ARM GAS  /tmp/ccypmQmm.s 			page 47
 
 
  829              		.loc 2 169 0
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  875 0210 FFF7FEFF 		bl	PWMC_SetSyncChannelUpdatePeriod
  178:main.c        **** 
  179:main.c        **** 	/* USB Console Config */
-ARM GAS  /tmp/ccDTE0gf.s 			page 48
+ARM GAS  /tmp/ccypmQmm.s 			page 48
 
 
  180:main.c        **** 	USBC_Configure();
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  922 00d8 04000000 		.word	4
  923 00dc 000E0E40 		.word	1074662912
  924 00e0 0B       		.byte	11
-ARM GAS  /tmp/ccDTE0gf.s 			page 49
+ARM GAS  /tmp/ccypmQmm.s 			page 49
 
 
  925 00e1 05       		.byte	5
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  972              		.loc 2 194 0
  973 0030 7B68     		ldr	r3, [r7, #4]
  974 0032 002B     		cmp	r3, #0
-ARM GAS  /tmp/ccDTE0gf.s 			page 50
+ARM GAS  /tmp/ccypmQmm.s 			page 50
 
 
  975 0034 1FDD     		ble	.L32
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1020              		.loc 2 203 0
  1021 00ac 07F11403 		add	r3, r7, #20
  1022 00b0 1846     		mov	r0, r3
-ARM GAS  /tmp/ccDTE0gf.s 			page 51
+ARM GAS  /tmp/ccypmQmm.s 			page 51
 
 
  1023 00b2 FFF7FEFF 		bl	PIO_Set
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1064 0108 2D442D20 		.ascii	"-D- set state RUN\012\000"
  1064      73657420 
  1064      73746174 
-ARM GAS  /tmp/ccDTE0gf.s 			page 52
+ARM GAS  /tmp/ccypmQmm.s 			page 52
 
 
  1064      65205255 
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  217:main.c        **** 	switch (new) {
  1101              		.loc 2 217 0
  1102 0012 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
-ARM GAS  /tmp/ccDTE0gf.s 			page 53
+ARM GAS  /tmp/ccypmQmm.s 			page 53
 
 
  1103 0014 03F1FF33 		add	r3, r3, #-1
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1148              		.loc 2 226 0
  1149 0092 4FF00200 		mov	r0, #2
  1150 0096 40F20001 		movw	r1, #:lower16:loop
-ARM GAS  /tmp/ccDTE0gf.s 			page 54
+ARM GAS  /tmp/ccypmQmm.s 			page 54
 
 
  1151 009a C0F20001 		movt	r1, #:upper16:loop
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1195              		.loc 2 236 0
  1196 0110 6FF06300 		mvn	r0, #99
  1197 0114 FFF7FEFF 		bl	write_output
-ARM GAS  /tmp/ccDTE0gf.s 			page 55
+ARM GAS  /tmp/ccypmQmm.s 			page 55
 
 
  237:main.c        **** 			mode(STOP, &loop);
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1243 0160 25632025 		.ascii	"%c %u %u %u\000"
  1243      75202575 
  1243      20257500 
-ARM GAS  /tmp/ccDTE0gf.s 			page 56
+ARM GAS  /tmp/ccypmQmm.s 			page 56
 
 
  1244              		.align	2
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1272              	.LC24:
  1273 022c 2D492D20 		.ascii	"-I- set setpoint to %u\012\000"
  1273      73657420 
-ARM GAS  /tmp/ccDTE0gf.s 			page 57
+ARM GAS  /tmp/ccypmQmm.s 			page 57
 
 
  1273      73657470 
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1312 0024 002B     		cmp	r3, #0
  1313 0026 00F0D281 		beq	.L75
  1314              		.loc 2 258 0 is_stmt 0 discriminator 1
-ARM GAS  /tmp/ccDTE0gf.s 			page 58
+ARM GAS  /tmp/ccypmQmm.s 			page 58
 
 
  1315 002a 3B7A     		ldrb	r3, [r7, #8]	@ zero_extendqisi2
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  268:main.c        **** 	else if (cmd == 'r')
  1360              		.loc 2 268 0
  1361 009a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
-ARM GAS  /tmp/ccDTE0gf.s 			page 59
+ARM GAS  /tmp/ccypmQmm.s 			page 59
 
 
  1362 009c 722B     		cmp	r3, #114
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  276:main.c        **** 			if (cmd == 'g') {
  1409              		.loc 2 276 0
  1410 0118 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
-ARM GAS  /tmp/ccDTE0gf.s 			page 60
+ARM GAS  /tmp/ccypmQmm.s 			page 60
 
 
  1411 011a 672B     		cmp	r3, #103
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1421 012a 682B     		cmp	r3, #104
  1422 012c 04D1     		bne	.L58
  280:main.c        **** 				state(HOLD);
-ARM GAS  /tmp/ccDTE0gf.s 			page 61
+ARM GAS  /tmp/ccypmQmm.s 			page 61
 
 
  1423              		.loc 2 280 0
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1470              	.L60:
  287:main.c        **** 				printf("%u\n", loop.rSP);
  1471              		.loc 2 287 0
-ARM GAS  /tmp/ccDTE0gf.s 			page 62
+ARM GAS  /tmp/ccypmQmm.s 			page 62
 
 
  1472 018e 40F20003 		movw	r3, #:lower16:loop
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1520              		.loc 2 296 0
  1521 0200 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  1522 0202 6B2B     		cmp	r3, #107
-ARM GAS  /tmp/ccDTE0gf.s 			page 63
+ARM GAS  /tmp/ccypmQmm.s 			page 63
 
 
  1523 0204 4FD1     		bne	.L65
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1571 027a C0F20003 		movt	r3, #:upper16:loop
  1572 027e 9B89     		ldrh	r3, [r3, #12]
  1573 0280 1946     		mov	r1, r3
-ARM GAS  /tmp/ccDTE0gf.s 			page 64
+ARM GAS  /tmp/ccypmQmm.s 			page 64
 
 
  1574 0282 40F20003 		movw	r3, #:lower16:loop
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1623              		.loc 2 319 0
  1624 02fe 68E0     		b	.L76
  1625              	.L67:
-ARM GAS  /tmp/ccDTE0gf.s 			page 65
+ARM GAS  /tmp/ccypmQmm.s 			page 65
 
 
  312:main.c        **** 			else if (cmd == 'd') {
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1671 0362 012B     		cmp	r3, #1
  1672 0364 24D1     		bne	.L71
  324:main.c        **** 					loop.SP = LIMIT(*argv, MINv, MAXv);
-ARM GAS  /tmp/ccDTE0gf.s 			page 66
+ARM GAS  /tmp/ccypmQmm.s 			page 66
 
 
  1673              		.loc 2 324 0
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1721              	.L75:
  259:main.c        **** 		return;
  1722              		.loc 2 259 0
-ARM GAS  /tmp/ccDTE0gf.s 			page 67
+ARM GAS  /tmp/ccypmQmm.s 			page 67
 
 
  1723 03ce 00BF     		nop
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1770 0029 02       		.uleb128 0x2
  1771 002a 01       		.byte	0x1
  1772 002b 06       		.byte	0x6
-ARM GAS  /tmp/ccDTE0gf.s 			page 68
+ARM GAS  /tmp/ccypmQmm.s 			page 68
 
 
  1773 002c E1020000 		.4byte	.LASF0
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1827 0093 7E010000 		.4byte	.LASF11
  1828 0097 04       		.byte	0x4
  1829 0098 48       		.byte	0x48
-ARM GAS  /tmp/ccDTE0gf.s 			page 69
+ARM GAS  /tmp/ccypmQmm.s 			page 69
 
 
  1830 0099 7E000000 		.4byte	0x7e
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1884 0102 04       		.byte	0x4
  1885 0103 07       		.byte	0x7
  1886 0104 1E060000 		.4byte	.LASF18
-ARM GAS  /tmp/ccDTE0gf.s 			page 70
+ARM GAS  /tmp/ccypmQmm.s 			page 70
 
 
  1887 0108 0D       		.uleb128 0xd
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1941 0166 00       		.byte	0
  1942 0167 0F       		.uleb128 0xf
  1943 0168 04       		.byte	0x4
-ARM GAS  /tmp/ccDTE0gf.s 			page 71
+ARM GAS  /tmp/ccypmQmm.s 			page 71
 
 
  1944 0169 08010000 		.4byte	0x108
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  1998 01cf 0B       		.uleb128 0xb
  1999 01d0 0C0D0000 		.4byte	.LASF30
  2000 01d4 06       		.byte	0x6
-ARM GAS  /tmp/ccDTE0gf.s 			page 72
+ARM GAS  /tmp/ccypmQmm.s 			page 72
 
 
  2001 01d5 3B       		.byte	0x3b
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2055 0237 06       		.byte	0x6
  2056 0238 4B       		.byte	0x4b
  2057 0239 F6000000 		.4byte	0xf6
-ARM GAS  /tmp/ccDTE0gf.s 			page 73
+ARM GAS  /tmp/ccypmQmm.s 			page 73
 
 
  2058 023d 03       		.byte	0x3
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2112 02a2 03       		.byte	0x3
  2113 02a3 23       		.byte	0x23
  2114 02a4 8801     		.uleb128 0x88
-ARM GAS  /tmp/ccDTE0gf.s 			page 74
+ARM GAS  /tmp/ccypmQmm.s 			page 74
 
 
  2115 02a6 00       		.byte	0
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2169 030d 7F01     		.2byte	0x17f
  2170 030f 45000000 		.4byte	0x45
  2171 0313 02       		.byte	0x2
-ARM GAS  /tmp/ccDTE0gf.s 			page 75
+ARM GAS  /tmp/ccypmQmm.s 			page 75
 
 
  2172 0314 23       		.byte	0x23
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2226 0378 45000000 		.4byte	0x45
  2227 037c 02       		.byte	0x2
  2228 037d 23       		.byte	0x23
-ARM GAS  /tmp/ccDTE0gf.s 			page 76
+ARM GAS  /tmp/ccypmQmm.s 			page 76
 
 
  2229 037e 1C       		.uleb128 0x1c
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2283 03e5 02       		.byte	0x2
  2284 03e6 23       		.byte	0x23
  2285 03e7 38       		.uleb128 0x38
-ARM GAS  /tmp/ccDTE0gf.s 			page 77
+ARM GAS  /tmp/ccypmQmm.s 			page 77
 
 
  2286 03e8 13       		.uleb128 0x13
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2340 0450 23       		.byte	0x23
  2341 0451 E401     		.uleb128 0xe4
  2342 0453 13       		.uleb128 0x13
-ARM GAS  /tmp/ccDTE0gf.s 			page 78
+ARM GAS  /tmp/ccypmQmm.s 			page 78
 
 
  2343 0454 930D0000 		.4byte	.LASF67
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2397 04b8 02       		.byte	0x2
  2398 04b9 23       		.byte	0x23
  2399 04ba 0C       		.uleb128 0xc
-ARM GAS  /tmp/ccDTE0gf.s 			page 79
+ARM GAS  /tmp/ccypmQmm.s 			page 79
 
 
  2400 04bb 0B       		.uleb128 0xb
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2454 051b 23       		.byte	0x23
  2455 051c 28       		.uleb128 0x28
  2456 051d 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccDTE0gf.s 			page 80
+ARM GAS  /tmp/ccypmQmm.s 			page 80
 
 
  2457 051e 8D090000 		.4byte	.LASF77
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2511 057e 47       		.uleb128 0x47
  2512 057f 0E       		.uleb128 0xe
  2513 0580 5F6C6200 		.ascii	"_lb\000"
-ARM GAS  /tmp/ccDTE0gf.s 			page 81
+ARM GAS  /tmp/ccypmQmm.s 			page 81
 
 
  2514 0584 06       		.byte	0x6
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2568 05e4 F4000000 		.4byte	0xf4
  2569 05e8 16       		.uleb128 0x16
  2570 05e9 F3050000 		.4byte	0x5f3
-ARM GAS  /tmp/ccDTE0gf.s 			page 82
+ARM GAS  /tmp/ccypmQmm.s 			page 82
 
 
  2571 05ed 16       		.uleb128 0x16
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2625 0665 16       		.uleb128 0x16
  2626 0666 74040000 		.4byte	0x474
  2627 066a 16       		.uleb128 0x16
-ARM GAS  /tmp/ccDTE0gf.s 			page 83
+ARM GAS  /tmp/ccypmQmm.s 			page 83
 
 
  2628 066b F4000000 		.4byte	0xf4
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2682 06dc 00       		.byte	0
  2683 06dd 0F       		.uleb128 0xf
  2684 06de 04       		.byte	0x4
-ARM GAS  /tmp/ccDTE0gf.s 			page 84
+ARM GAS  /tmp/ccypmQmm.s 			page 84
 
 
  2685 06df A2060000 		.4byte	0x6a2
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2739 074a 5F01     		.2byte	0x15f
  2740 074c 8D070000 		.4byte	0x78d
  2741 0750 13       		.uleb128 0x13
-ARM GAS  /tmp/ccDTE0gf.s 			page 85
+ARM GAS  /tmp/ccypmQmm.s 			page 85
 
 
  2742 0751 DE0D0000 		.4byte	.LASF97
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2796 07bb 02       		.byte	0x2
  2797 07bc 23       		.byte	0x23
  2798 07bd 04       		.uleb128 0x4
-ARM GAS  /tmp/ccDTE0gf.s 			page 86
+ARM GAS  /tmp/ccypmQmm.s 			page 86
 
 
  2799 07be 13       		.uleb128 0x13
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2853 0825 23       		.byte	0x23
  2854 0826 38       		.uleb128 0x38
  2855 0827 13       		.uleb128 0x13
-ARM GAS  /tmp/ccDTE0gf.s 			page 87
+ARM GAS  /tmp/ccypmQmm.s 			page 87
 
 
  2856 0828 B9080000 		.4byte	.LASF111
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2910 0893 04       		.byte	0x4
  2911 0894 93070000 		.4byte	0x793
  2912 0898 04       		.uleb128 0x4
-ARM GAS  /tmp/ccDTE0gf.s 			page 88
+ARM GAS  /tmp/ccypmQmm.s 			page 88
 
 
  2913 0899 ED020000 		.4byte	.LASF113
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  2967 090e 1B       		.uleb128 0x1b
  2968 090f 450E0000 		.4byte	.LASF124
  2969 0913 7E       		.sleb128 -2
-ARM GAS  /tmp/ccDTE0gf.s 			page 89
+ARM GAS  /tmp/ccypmQmm.s 			page 89
 
 
  2970 0914 1B       		.uleb128 0x1b
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3024 0980 1B       		.uleb128 0x1b
  3025 0981 AF070000 		.4byte	.LASF143
  3026 0985 14       		.sleb128 20
-ARM GAS  /tmp/ccDTE0gf.s 			page 90
+ARM GAS  /tmp/ccypmQmm.s 			page 90
 
 
  3027 0986 1B       		.uleb128 0x1b
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3081 09f0 800E0000 		.4byte	.LASF159
  3082 09f4 01       		.byte	0x1
  3083 09f5 86       		.byte	0x86
-ARM GAS  /tmp/ccDTE0gf.s 			page 91
+ARM GAS  /tmp/ccypmQmm.s 			page 91
 
 
  3084 09f6 C00A0000 		.4byte	0xac0
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3138 0a5b 01       		.byte	0x1
  3139 0a5c 8D       		.byte	0x8d
  3140 0a5d C50A0000 		.4byte	0xac5
-ARM GAS  /tmp/ccDTE0gf.s 			page 92
+ARM GAS  /tmp/ccypmQmm.s 			page 92
 
 
  3141 0a61 03       		.byte	0x3
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3195 0ac6 C4080000 		.4byte	0x8c4
  3196 0aca D50A0000 		.4byte	0xad5
  3197 0ace 09       		.uleb128 0x9
-ARM GAS  /tmp/ccDTE0gf.s 			page 93
+ARM GAS  /tmp/ccypmQmm.s 			page 93
 
 
  3198 0acf 4C000000 		.4byte	0x4c
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3252 0b45 01       		.byte	0x1
  3253 0b46 9E       		.byte	0x9e
  3254 0b47 D9080000 		.4byte	0x8d9
-ARM GAS  /tmp/ccDTE0gf.s 			page 94
+ARM GAS  /tmp/ccypmQmm.s 			page 94
 
 
  3255 0b4b 02       		.byte	0x2
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3309 0ba8 A5       		.byte	0xa5
  3310 0ba9 D9080000 		.4byte	0x8d9
  3311 0bad 02       		.byte	0x2
-ARM GAS  /tmp/ccDTE0gf.s 			page 95
+ARM GAS  /tmp/ccypmQmm.s 			page 95
 
 
  3312 0bae 23       		.byte	0x23
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3366 0c0b CF080000 		.4byte	0x8cf
  3367 0c0f 02       		.byte	0x2
  3368 0c10 23       		.byte	0x23
-ARM GAS  /tmp/ccDTE0gf.s 			page 96
+ARM GAS  /tmp/ccypmQmm.s 			page 96
 
 
  3369 0c11 48       		.uleb128 0x48
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3423 0c7d 810C0000 		.4byte	0xc81
  3424 0c81 19       		.uleb128 0x19
  3425 0c82 6C0C0000 		.4byte	0xc6c
-ARM GAS  /tmp/ccDTE0gf.s 			page 97
+ARM GAS  /tmp/ccypmQmm.s 			page 97
 
 
  3426 0c86 08       		.uleb128 0x8
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3480 0cf6 23       		.byte	0x23
  3481 0cf7 08       		.uleb128 0x8
  3482 0cf8 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccDTE0gf.s 			page 98
+ARM GAS  /tmp/ccypmQmm.s 			page 98
 
 
  3483 0cf9 580B0000 		.4byte	.LASF189
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3537 0d59 24       		.uleb128 0x24
  3538 0d5a 0B       		.uleb128 0xb
  3539 0d5b 81080000 		.4byte	.LASF196
-ARM GAS  /tmp/ccDTE0gf.s 			page 99
+ARM GAS  /tmp/ccypmQmm.s 			page 99
 
 
  3540 0d5f 08       		.byte	0x8
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3594 0dbd 13       		.uleb128 0x13
  3595 0dbe AE060000 		.4byte	.LASF203
  3596 0dc2 08       		.byte	0x8
-ARM GAS  /tmp/ccDTE0gf.s 			page 100
+ARM GAS  /tmp/ccypmQmm.s 			page 100
 
 
  3597 0dc3 0101     		.2byte	0x101
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3651 0e2b 8F010000 		.4byte	.LASF210
  3652 0e2f 08       		.byte	0x8
  3653 0e30 0801     		.2byte	0x108
-ARM GAS  /tmp/ccDTE0gf.s 			page 101
+ARM GAS  /tmp/ccypmQmm.s 			page 101
 
 
  3654 0e32 B00C0000 		.4byte	0xcb0
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3708 0e9f 08       		.byte	0x8
  3709 0ea0 0F01     		.2byte	0x10f
  3710 0ea2 AB0C0000 		.4byte	0xcab
-ARM GAS  /tmp/ccDTE0gf.s 			page 102
+ARM GAS  /tmp/ccypmQmm.s 			page 102
 
 
  3711 0ea6 03       		.byte	0x3
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3765 0f15 08       		.uleb128 0x8
  3766 0f16 01010000 		.4byte	0x101
  3767 0f1a 250F0000 		.4byte	0xf25
-ARM GAS  /tmp/ccDTE0gf.s 			page 103
+ARM GAS  /tmp/ccypmQmm.s 			page 103
 
 
  3768 0f1e 09       		.uleb128 0x9
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3822 0f99 08       		.byte	0x8
  3823 0f9a E106     		.2byte	0x6e1
  3824 0f9c AB0C0000 		.4byte	0xcab
-ARM GAS  /tmp/ccDTE0gf.s 			page 104
+ARM GAS  /tmp/ccypmQmm.s 			page 104
 
 
  3825 0fa0 02       		.byte	0x2
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3879 1003 E806     		.2byte	0x6e8
  3880 1005 3C140000 		.4byte	0x143c
  3881 1009 02       		.byte	0x2
-ARM GAS  /tmp/ccDTE0gf.s 			page 105
+ARM GAS  /tmp/ccypmQmm.s 			page 105
 
 
  3882 100a 23       		.byte	0x23
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3936 106e AB0C0000 		.4byte	0xcab
  3937 1072 02       		.byte	0x2
  3938 1073 23       		.byte	0x23
-ARM GAS  /tmp/ccDTE0gf.s 			page 106
+ARM GAS  /tmp/ccypmQmm.s 			page 106
 
 
  3939 1074 38       		.uleb128 0x38
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  3993 10db 02       		.byte	0x2
  3994 10dc 23       		.byte	0x23
  3995 10dd 54       		.uleb128 0x54
-ARM GAS  /tmp/ccDTE0gf.s 			page 107
+ARM GAS  /tmp/ccypmQmm.s 			page 107
 
 
  3996 10de 13       		.uleb128 0x13
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4050 1145 23       		.byte	0x23
  4051 1146 70       		.uleb128 0x70
  4052 1147 13       		.uleb128 0x13
-ARM GAS  /tmp/ccDTE0gf.s 			page 108
+ARM GAS  /tmp/ccypmQmm.s 			page 108
 
 
  4053 1148 BC0B0000 		.4byte	.LASF246
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4107 11b4 9401     		.uleb128 0x94
  4108 11b6 13       		.uleb128 0x13
  4109 11b7 60090000 		.4byte	.LASF253
-ARM GAS  /tmp/ccDTE0gf.s 			page 109
+ARM GAS  /tmp/ccypmQmm.s 			page 109
 
 
  4110 11bb 08       		.byte	0x8
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4164 1226 13       		.uleb128 0x13
  4165 1227 150B0000 		.4byte	.LASF260
  4166 122b 08       		.byte	0x8
-ARM GAS  /tmp/ccDTE0gf.s 			page 110
+ARM GAS  /tmp/ccypmQmm.s 			page 110
 
 
  4167 122c 0C07     		.2byte	0x70c
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4221 1297 CC040000 		.4byte	.LASF267
  4222 129b 08       		.byte	0x8
  4223 129c 1307     		.2byte	0x713
-ARM GAS  /tmp/ccDTE0gf.s 			page 111
+ARM GAS  /tmp/ccypmQmm.s 			page 111
 
 
  4224 129e AB0C0000 		.4byte	0xcab
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4278 130b 08       		.byte	0x8
  4279 130c 1A07     		.2byte	0x71a
  4280 130e 73140000 		.4byte	0x1473
-ARM GAS  /tmp/ccDTE0gf.s 			page 112
+ARM GAS  /tmp/ccypmQmm.s 			page 112
 
 
  4281 1312 03       		.byte	0x3
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4335 137c 2107     		.2byte	0x721
  4336 137e B00C0000 		.4byte	0xcb0
  4337 1382 03       		.byte	0x3
-ARM GAS  /tmp/ccDTE0gf.s 			page 113
+ARM GAS  /tmp/ccypmQmm.s 			page 113
 
 
  4338 1383 23       		.byte	0x23
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4392 13ee AB0C0000 		.4byte	0xcab
  4393 13f2 03       		.byte	0x3
  4394 13f3 23       		.byte	0x23
-ARM GAS  /tmp/ccDTE0gf.s 			page 114
+ARM GAS  /tmp/ccypmQmm.s 			page 114
 
 
  4395 13f4 FC02     		.uleb128 0x17c
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4449 1469 19       		.uleb128 0x19
  4450 146a EB0E0000 		.4byte	0xeeb
  4451 146e 19       		.uleb128 0x19
-ARM GAS  /tmp/ccDTE0gf.s 			page 115
+ARM GAS  /tmp/ccypmQmm.s 			page 115
 
 
  4452 146f EB0E0000 		.4byte	0xeeb
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4506 14de 13       		.uleb128 0x13
  4507 14df 6D0D0000 		.4byte	.LASF297
  4508 14e3 08       		.byte	0x8
-ARM GAS  /tmp/ccDTE0gf.s 			page 116
+ARM GAS  /tmp/ccypmQmm.s 			page 116
 
 
  4509 14e4 0A0F     		.2byte	0xf0a
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4563 154c 23       		.byte	0x23
  4564 154d 04       		.uleb128 0x4
  4565 154e 13       		.uleb128 0x13
-ARM GAS  /tmp/ccDTE0gf.s 			page 117
+ARM GAS  /tmp/ccypmQmm.s 			page 117
 
 
  4566 154f BC0D0000 		.4byte	.LASF304
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4620 15b8 B00C0000 		.4byte	0xcb0
  4621 15bc 02       		.byte	0x2
  4622 15bd 23       		.byte	0x23
-ARM GAS  /tmp/ccDTE0gf.s 			page 118
+ARM GAS  /tmp/ccypmQmm.s 			page 118
 
 
  4623 15be 0C       		.uleb128 0xc
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4677 1625 02       		.byte	0x2
  4678 1626 23       		.byte	0x23
  4679 1627 28       		.uleb128 0x28
-ARM GAS  /tmp/ccDTE0gf.s 			page 119
+ARM GAS  /tmp/ccypmQmm.s 			page 119
 
 
  4680 1628 13       		.uleb128 0x13
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4734 168f 23       		.byte	0x23
  4735 1690 44       		.uleb128 0x44
  4736 1691 13       		.uleb128 0x13
-ARM GAS  /tmp/ccDTE0gf.s 			page 120
+ARM GAS  /tmp/ccypmQmm.s 			page 120
 
 
  4737 1692 F5020000 		.4byte	.LASF324
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4791 16f9 60       		.uleb128 0x60
  4792 16fa 13       		.uleb128 0x13
  4793 16fb FE000000 		.4byte	.LASF331
-ARM GAS  /tmp/ccDTE0gf.s 			page 121
+ARM GAS  /tmp/ccypmQmm.s 			page 121
 
 
  4794 16ff 08       		.byte	0x8
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4848 1765 13       		.uleb128 0x13
  4849 1766 A80B0000 		.4byte	.LASF208
  4850 176a 08       		.byte	0x8
-ARM GAS  /tmp/ccDTE0gf.s 			page 122
+ARM GAS  /tmp/ccypmQmm.s 			page 122
 
 
  4851 176b 380F     		.2byte	0xf38
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4905 17d6 E0000000 		.4byte	.LASF341
  4906 17da 08       		.byte	0x8
  4907 17db 3F0F     		.2byte	0xf3f
-ARM GAS  /tmp/ccDTE0gf.s 			page 123
+ARM GAS  /tmp/ccypmQmm.s 			page 123
 
 
  4908 17dd AB0C0000 		.4byte	0xcab
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  4962 184a 08       		.byte	0x8
  4963 184b 460F     		.2byte	0xf46
  4964 184d A4180000 		.4byte	0x18a4
-ARM GAS  /tmp/ccDTE0gf.s 			page 124
+ARM GAS  /tmp/ccypmQmm.s 			page 124
 
 
  4965 1851 03       		.byte	0x3
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5019 18c7 13       		.byte	0x13
  5020 18c8 00       		.byte	0
  5021 18c9 19       		.uleb128 0x19
-ARM GAS  /tmp/ccDTE0gf.s 			page 125
+ARM GAS  /tmp/ccypmQmm.s 			page 125
 
 
  5022 18ca B9180000 		.4byte	0x18b9
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5076 1937 AB0C0000 		.4byte	0xcab
  5077 193b 02       		.byte	0x2
  5078 193c 23       		.byte	0x23
-ARM GAS  /tmp/ccDTE0gf.s 			page 126
+ARM GAS  /tmp/ccypmQmm.s 			page 126
 
 
  5079 193d 10       		.uleb128 0x10
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5133 19a4 02       		.byte	0x2
  5134 19a5 23       		.byte	0x23
  5135 19a6 2C       		.uleb128 0x2c
-ARM GAS  /tmp/ccDTE0gf.s 			page 127
+ARM GAS  /tmp/ccypmQmm.s 			page 127
 
 
  5136 19a7 13       		.uleb128 0x13
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5190 1a13 C801     		.uleb128 0xc8
  5191 1a15 13       		.uleb128 0x13
  5192 1a16 6A0C0000 		.4byte	.LASF366
-ARM GAS  /tmp/ccDTE0gf.s 			page 128
+ARM GAS  /tmp/ccypmQmm.s 			page 128
 
 
  5193 1a1a 08       		.byte	0x8
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5247 1a86 19       		.uleb128 0x19
  5248 1a87 000F0000 		.4byte	0xf00
  5249 1a8b 1E       		.uleb128 0x1e
-ARM GAS  /tmp/ccDTE0gf.s 			page 129
+ARM GAS  /tmp/ccypmQmm.s 			page 129
 
 
  5250 1a8c 546300   		.ascii	"Tc\000"
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5304 1af4 70696F00 		.ascii	"pio\000"
  5305 1af8 09       		.byte	0x9
  5306 1af9 AC       		.byte	0xac
-ARM GAS  /tmp/ccDTE0gf.s 			page 130
+ARM GAS  /tmp/ccypmQmm.s 			page 130
 
 
  5307 1afa 2B1B0000 		.4byte	0x1b2b
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5361 1b5c DC010000 		.4byte	.LASF380
  5362 1b60 02       		.sleb128 2
  5363 1b61 1B       		.uleb128 0x1b
-ARM GAS  /tmp/ccDTE0gf.s 			page 131
+ARM GAS  /tmp/ccypmQmm.s 			page 131
 
 
  5364 1b62 7C080000 		.4byte	.LASF381
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5418 1bc3 0E       		.uleb128 0xe
  5419 1bc4 4B6900   		.ascii	"Ki\000"
  5420 1bc7 0A       		.byte	0xa
-ARM GAS  /tmp/ccDTE0gf.s 			page 132
+ARM GAS  /tmp/ccypmQmm.s 			page 132
 
 
  5421 1bc8 1C       		.byte	0x1c
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5475 1c22 090A0000 		.4byte	.LASF387
  5476 1c26 0A       		.byte	0xa
  5477 1c27 25       		.byte	0x25
-ARM GAS  /tmp/ccDTE0gf.s 			page 133
+ARM GAS  /tmp/ccypmQmm.s 			page 133
 
 
  5478 1c28 37000000 		.4byte	0x37
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5532 1c84 3E1C0000 		.4byte	0x1c3e
  5533 1c88 0F       		.uleb128 0xf
  5534 1c89 04       		.byte	0x4
-ARM GAS  /tmp/ccDTE0gf.s 			page 134
+ARM GAS  /tmp/ccypmQmm.s 			page 134
 
 
  5535 1c8a 45000000 		.4byte	0x45
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5589 1d07 1A1D0000 		.4byte	0x1d1a
  5590 1d0b 27       		.uleb128 0x27
  5591 1d0c FC020000 		.4byte	.LASF397
-ARM GAS  /tmp/ccDTE0gf.s 			page 135
+ARM GAS  /tmp/ccypmQmm.s 			page 135
 
 
  5592 1d10 02       		.byte	0x2
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5646 1d7c 02       		.byte	0x2
  5647 1d7d 71       		.byte	0x71
  5648 1d7e C4080000 		.4byte	0x8c4
-ARM GAS  /tmp/ccDTE0gf.s 			page 136
+ARM GAS  /tmp/ccypmQmm.s 			page 136
 
 
  5649 1d82 02       		.byte	0x2
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5703 1df2 4C000000 		.4byte	0x4c
  5704 1df6 04       		.byte	0x4
  5705 1df7 00       		.byte	0
-ARM GAS  /tmp/ccDTE0gf.s 			page 137
+ARM GAS  /tmp/ccypmQmm.s 			page 137
 
 
  5706 1df8 17       		.uleb128 0x17
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5760 1e69 77       		.sleb128 -9
  5761 1e6a 00       		.byte	0
  5762 1e6b 2F       		.uleb128 0x2f
-ARM GAS  /tmp/ccDTE0gf.s 			page 138
+ARM GAS  /tmp/ccypmQmm.s 			page 138
 
 
  5763 1e6c 636C6900 		.ascii	"cli\000"
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5817 1edc 30       		.uleb128 0x30
  5818 1edd 07020000 		.4byte	.LASF411
  5819 1ee1 06       		.byte	0x6
-ARM GAS  /tmp/ccDTE0gf.s 			page 139
+ARM GAS  /tmp/ccypmQmm.s 			page 139
 
 
  5820 1ee2 4803     		.2byte	0x348
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5874 1f4d 01       		.byte	0x1
  5875 1f4e 31       		.uleb128 0x31
  5876 1f4f BB010000 		.4byte	.LASF417
-ARM GAS  /tmp/ccDTE0gf.s 			page 140
+ARM GAS  /tmp/ccypmQmm.s 			page 140
 
 
  5877 1f53 02       		.byte	0x2
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5931 1fbb 9E090000 		.4byte	.LASF415
  5932 1fbf 02       		.byte	0x2
  5933 1fc0 15       		.byte	0x15
-ARM GAS  /tmp/ccDTE0gf.s 			page 141
+ARM GAS  /tmp/ccypmQmm.s 			page 141
 
 
  5934 1fc1 3E1C0000 		.4byte	0x1c3e
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  5988 0013 00       		.byte	0
  5989 0014 00       		.byte	0
  5990 0015 02       		.uleb128 0x2
-ARM GAS  /tmp/ccDTE0gf.s 			page 142
+ARM GAS  /tmp/ccypmQmm.s 			page 142
 
 
  5991 0016 24       		.uleb128 0x24
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6045 004c 3B       		.uleb128 0x3b
  6046 004d 0B       		.uleb128 0xb
  6047 004e 01       		.uleb128 0x1
-ARM GAS  /tmp/ccDTE0gf.s 			page 143
+ARM GAS  /tmp/ccypmQmm.s 			page 143
 
 
  6048 004f 13       		.uleb128 0x13
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6102 0085 3B       		.uleb128 0x3b
  6103 0086 0B       		.uleb128 0xb
  6104 0087 49       		.uleb128 0x49
-ARM GAS  /tmp/ccDTE0gf.s 			page 144
+ARM GAS  /tmp/ccypmQmm.s 			page 144
 
 
  6105 0088 13       		.uleb128 0x13
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6159 00be 03       		.uleb128 0x3
  6160 00bf 0E       		.uleb128 0xe
  6161 00c0 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccDTE0gf.s 			page 145
+ARM GAS  /tmp/ccypmQmm.s 			page 145
 
 
  6162 00c1 05       		.uleb128 0x5
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6216 00f7 05       		.uleb128 0x5
  6217 00f8 49       		.uleb128 0x49
  6218 00f9 13       		.uleb128 0x13
-ARM GAS  /tmp/ccDTE0gf.s 			page 146
+ARM GAS  /tmp/ccypmQmm.s 			page 146
 
 
  6219 00fa 38       		.uleb128 0x38
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6273 0130 3B       		.uleb128 0x3b
  6274 0131 0B       		.uleb128 0xb
  6275 0132 01       		.uleb128 0x1
-ARM GAS  /tmp/ccDTE0gf.s 			page 147
+ARM GAS  /tmp/ccypmQmm.s 			page 147
 
 
  6276 0133 13       		.uleb128 0x13
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6330 0169 3B       		.uleb128 0x3b
  6331 016a 05       		.uleb128 0x5
  6332 016b 01       		.uleb128 0x1
-ARM GAS  /tmp/ccDTE0gf.s 			page 148
+ARM GAS  /tmp/ccypmQmm.s 			page 148
 
 
  6333 016c 13       		.uleb128 0x13
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6387 01a2 03       		.uleb128 0x3
  6388 01a3 0E       		.uleb128 0xe
  6389 01a4 3A       		.uleb128 0x3a
-ARM GAS  /tmp/ccDTE0gf.s 			page 149
+ARM GAS  /tmp/ccypmQmm.s 			page 149
 
 
  6390 01a5 0B       		.uleb128 0xb
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6444 01db 34       		.uleb128 0x34
  6445 01dc 00       		.byte	0
  6446 01dd 03       		.uleb128 0x3
-ARM GAS  /tmp/ccDTE0gf.s 			page 150
+ARM GAS  /tmp/ccypmQmm.s 			page 150
 
 
  6447 01de 0E       		.uleb128 0xe
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6501 0214 3A       		.uleb128 0x3a
  6502 0215 0B       		.uleb128 0xb
  6503 0216 3B       		.uleb128 0x3b
-ARM GAS  /tmp/ccDTE0gf.s 			page 151
+ARM GAS  /tmp/ccypmQmm.s 			page 151
 
 
  6504 0217 0B       		.uleb128 0xb
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6558 024d 02       		.uleb128 0x2
  6559 024e 0A       		.uleb128 0xa
  6560 024f 00       		.byte	0
-ARM GAS  /tmp/ccDTE0gf.s 			page 152
+ARM GAS  /tmp/ccypmQmm.s 			page 152
 
 
  6561 0250 00       		.byte	0
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6615 0286 00       		.byte	0
  6616 0287 03       		.uleb128 0x3
  6617 0288 0E       		.uleb128 0xe
-ARM GAS  /tmp/ccDTE0gf.s 			page 153
+ARM GAS  /tmp/ccypmQmm.s 			page 153
 
 
  6618 0289 3A       		.uleb128 0x3a
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6672 0034 00000000 		.4byte	0
  6673              	.LLST1:
  6674 0038 00000000 		.4byte	.LFB20
-ARM GAS  /tmp/ccDTE0gf.s 			page 154
+ARM GAS  /tmp/ccypmQmm.s 			page 154
 
 
  6675 003c 02000000 		.4byte	.LCFI3
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6729 00bf 08       		.sleb128 8
  6730 00c0 04000000 		.4byte	.LCFI10
  6731 00c4 06000000 		.4byte	.LCFI11
-ARM GAS  /tmp/ccDTE0gf.s 			page 155
+ARM GAS  /tmp/ccypmQmm.s 			page 155
 
 
  6732 00c8 0200     		.2byte	0x2
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6786 014a 00000000 		.4byte	0
  6787 014e 00000000 		.4byte	0
  6788              	.LLST6:
-ARM GAS  /tmp/ccDTE0gf.s 			page 156
+ARM GAS  /tmp/ccypmQmm.s 			page 156
 
 
  6789 0152 00000000 		.4byte	.LFB39
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6843 01d8 7D       		.byte	0x7d
  6844 01d9 0C       		.sleb128 12
  6845 01da 04000000 		.4byte	.LCFI25
-ARM GAS  /tmp/ccDTE0gf.s 			page 157
+ARM GAS  /tmp/ccypmQmm.s 			page 157
 
 
  6846 01de 06000000 		.4byte	.LCFI26
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6900 0034 06010000 		.4byte	.LFE39
  6901 0038 00000000 		.4byte	.LFB40
  6902 003c 7A010000 		.4byte	.LFE40
-ARM GAS  /tmp/ccDTE0gf.s 			page 158
+ARM GAS  /tmp/ccypmQmm.s 			page 158
 
 
  6903 0040 00000000 		.4byte	.LFB41
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6933      746500
  6934              	.LASF116:
  6935 0065 696E7433 		.ascii	"int32_t\000"
-ARM GAS  /tmp/ccDTE0gf.s 			page 159
+ARM GAS  /tmp/ccypmQmm.s 			page 159
 
 
  6935      325F7400 
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6965      6500
  6966              	.LASF83:
  6967 00ee 5F6C6F63 		.ascii	"_lock\000"
-ARM GAS  /tmp/ccDTE0gf.s 			page 160
+ARM GAS  /tmp/ccypmQmm.s 			page 160
 
 
  6967      6B00
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  6999      53434452 
  6999      00
  7000              	.LASF249:
-ARM GAS  /tmp/ccDTE0gf.s 			page 161
+ARM GAS  /tmp/ccypmQmm.s 			page 161
 
 
  7001 0173 50494F5F 		.ascii	"PIO_IFSCSR\000"
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7029      20696E74 
  7029      00
  7030              	.LASF308:
-ARM GAS  /tmp/ccDTE0gf.s 			page 162
+ARM GAS  /tmp/ccypmQmm.s 			page 162
 
 
  7031 01ff 50574D5F 		.ascii	"PWM_ENA\000"
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7061 027e 50494F5F 		.ascii	"PIO_ESR\000"
  7061      45535200 
  7062              	.LASF151:
-ARM GAS  /tmp/ccDTE0gf.s 			page 163
+ARM GAS  /tmp/ccypmQmm.s 			page 163
 
 
  7063 0286 5443355F 		.ascii	"TC5_IRQn\000"
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7089      534D4D52 
  7089      00
  7090              	.LASF245:
-ARM GAS  /tmp/ccDTE0gf.s 			page 164
+ARM GAS  /tmp/ccypmQmm.s 			page 164
 
 
  7091 0319 50494F5F 		.ascii	"PIO_ABCDSR\000"
@@ -9838,7 +9838,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7119 039b 50574D5F 		.ascii	"PWM_FPV\000"
  7119      46505600 
  7120              	.LASF371:
-ARM GAS  /tmp/ccDTE0gf.s 			page 165
+ARM GAS  /tmp/ccypmQmm.s 			page 165
 
 
  7121 03a3 5744545F 		.ascii	"WDT_CR\000"
@@ -9898,7 +9898,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7152              	.LASF270:
  7153 0421 52657365 		.ascii	"Reserved11\000"
  7153      72766564 
-ARM GAS  /tmp/ccDTE0gf.s 			page 166
+ARM GAS  /tmp/ccypmQmm.s 			page 166
 
 
  7153      313100
@@ -9958,7 +9958,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7183      55504400 
  7184              	.LASF357:
  7185 04b2 54435F53 		.ascii	"TC_SR\000"
-ARM GAS  /tmp/ccDTE0gf.s 			page 167
+ARM GAS  /tmp/ccypmQmm.s 			page 167
 
 
  7185      5200
@@ -10018,7 +10018,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7217 0533 53544952 		.ascii	"STIR\000"
  7217      00
  7218              	.LASF265:
-ARM GAS  /tmp/ccDTE0gf.s 			page 168
+ARM GAS  /tmp/ccypmQmm.s 			page 168
 
 
  7219 0538 50494F5F 		.ascii	"PIO_ELSR\000"
@@ -10078,7 +10078,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7248              	.LASF221:
  7249 05be 4144435F 		.ascii	"ADC_PTSR\000"
  7249      50545352 
-ARM GAS  /tmp/ccDTE0gf.s 			page 169
+ARM GAS  /tmp/ccypmQmm.s 			page 169
 
 
  7249      00
@@ -10138,7 +10138,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7275      6D656E74 
  7275      5F495251 
  7276              	.LASF358:
-ARM GAS  /tmp/ccDTE0gf.s 			page 170
+ARM GAS  /tmp/ccypmQmm.s 			page 170
 
 
  7277 065b 54435F49 		.ascii	"TC_IER\000"
@@ -10198,7 +10198,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7306              	.LASF194:
  7307 06e4 4144435F 		.ascii	"ADC_LCDR\000"
  7307      4C434452 
-ARM GAS  /tmp/ccDTE0gf.s 			page 171
+ARM GAS  /tmp/ccypmQmm.s 			page 171
 
 
  7307      00
@@ -10258,7 +10258,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7337      6720696E 
  7337      7400
  7338              	.LASF339:
-ARM GAS  /tmp/ccDTE0gf.s 			page 172
+ARM GAS  /tmp/ccypmQmm.s 			page 172
 
 
  7339 0770 50574D5F 		.ascii	"PWM_RCR\000"
@@ -10318,7 +10318,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7366              	.LASF280:
  7367 0800 50494F5F 		.ascii	"PIO_PCIMR\000"
  7367      5043494D 
-ARM GAS  /tmp/ccDTE0gf.s 			page 173
+ARM GAS  /tmp/ccypmQmm.s 			page 173
 
 
  7367      5200
@@ -10378,7 +10378,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7397      49445200 
  7398              	.LASF294:
  7399 0889 50574D5F 		.ascii	"PWM_CDTY\000"
-ARM GAS  /tmp/ccDTE0gf.s 			page 174
+ARM GAS  /tmp/ccypmQmm.s 			page 174
 
 
  7399      43445459 
@@ -10438,7 +10438,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7427      74617465 
  7427      00
  7428              	.LASF95:
-ARM GAS  /tmp/ccDTE0gf.s 			page 175
+ARM GAS  /tmp/ccypmQmm.s 			page 175
 
 
  7429 091c 5F72616E 		.ascii	"_rand_next\000"
@@ -10498,7 +10498,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7459      7000
  7460              	.LASF9:
  7461 09a4 5F66706F 		.ascii	"_fpos_t\000"
-ARM GAS  /tmp/ccDTE0gf.s 			page 176
+ARM GAS  /tmp/ccypmQmm.s 			page 176
 
 
  7461      735F7400 
@@ -10558,7 +10558,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7491 0a33 50494F5F 		.ascii	"PIO_ODR\000"
  7491      4F445200 
  7492              	.LASF36:
-ARM GAS  /tmp/ccDTE0gf.s 			page 177
+ARM GAS  /tmp/ccypmQmm.s 			page 177
 
 
  7493 0a3b 5F64736F 		.ascii	"_dso_handle\000"
@@ -10618,7 +10618,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7521 0ac7 4144435F 		.ascii	"ADC_IRQn\000"
  7521      4952516E 
  7521      00
-ARM GAS  /tmp/ccDTE0gf.s 			page 178
+ARM GAS  /tmp/ccypmQmm.s 			page 178
 
 
  7522              	.LASF225:
@@ -10678,7 +10678,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7553      53455152 
  7553      3100
  7554              	.LASF189:
-ARM GAS  /tmp/ccDTE0gf.s 			page 179
+ARM GAS  /tmp/ccypmQmm.s 			page 179
 
 
  7555 0b58 4144435F 		.ascii	"ADC_SEQR2\000"
@@ -10738,7 +10738,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7584              	.LASF262:
  7585 0bd9 52657365 		.ascii	"Reserved9\000"
  7585      72766564 
-ARM GAS  /tmp/ccDTE0gf.s 			page 180
+ARM GAS  /tmp/ccypmQmm.s 			page 180
 
 
  7585      3900
@@ -10798,7 +10798,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7613      544E4352 
  7613      00
  7614              	.LASF183:
-ARM GAS  /tmp/ccDTE0gf.s 			page 181
+ARM GAS  /tmp/ccypmQmm.s 			page 181
 
 
  7615 0c8b 4D4D4652 		.ascii	"MMFR\000"
@@ -10858,7 +10858,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7645      445400
  7646              	.LASF30:
  7647 0d0c 5F5F746D 		.ascii	"__tm_year\000"
-ARM GAS  /tmp/ccDTE0gf.s 			page 182
+ARM GAS  /tmp/ccypmQmm.s 			page 182
 
 
  7647      5F796561 
@@ -10918,7 +10918,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7679 0d93 5F6D6973 		.ascii	"_misc\000"
  7679      6300
  7680              	.LASF17:
-ARM GAS  /tmp/ccDTE0gf.s 			page 183
+ARM GAS  /tmp/ccypmQmm.s 			page 183
 
 
  7681 0d99 5F5F554C 		.ascii	"__ULong\000"
@@ -10978,7 +10978,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7711      7420756E 
  7711      7369676E 
  7711      65642069 
-ARM GAS  /tmp/ccDTE0gf.s 			page 184
+ARM GAS  /tmp/ccypmQmm.s 			page 184
 
 
  7711      6E7400
@@ -11038,7 +11038,7 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7741 0eaa 5F5F746D 		.ascii	"__tm_min\000"
  7741      5F6D696E 
  7741      00
-ARM GAS  /tmp/ccDTE0gf.s 			page 185
+ARM GAS  /tmp/ccypmQmm.s 			page 185
 
 
  7742              	.LASF316:
@@ -11070,74 +11070,74 @@ ARM GAS  /tmp/ccDTE0gf.s 			page 1
  7755      50544352 
  7755      00
  7756              		.ident	"GCC: (Sourcery CodeBench Lite 2011.09-69) 4.6.1"
-ARM GAS  /tmp/ccDTE0gf.s 			page 186
+ARM GAS  /tmp/ccypmQmm.s 			page 186
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-     /tmp/ccDTE0gf.s:19     .text.NVIC_EnableIRQ:00000000 $t
-     /tmp/ccDTE0gf.s:23     .text.NVIC_EnableIRQ:00000000 NVIC_EnableIRQ
-     /tmp/ccDTE0gf.s:62     .text.NVIC_SetPriority:00000000 $t
-     /tmp/ccDTE0gf.s:66     .text.NVIC_SetPriority:00000000 NVIC_SetPriority
-     /tmp/ccDTE0gf.s:128    .bss:00000000 input
-     /tmp/ccDTE0gf.s:125    .bss:00000000 $d
-     /tmp/ccDTE0gf.s:134    .data:00000000 _state
-     /tmp/ccDTE0gf.s:141    .bss:00000004 loop
-     /tmp/ccDTE0gf.s:148    .data:00000004 ntrip
-     /tmp/ccDTE0gf.s:145    .data:00000001 $d
-     /tmp/ccDTE0gf.s:157    .data:00000014 rtrip
-     /tmp/ccDTE0gf.s:166    .data:00000024 releasetime
-     /tmp/ccDTE0gf.s:172    .data:00000028 dxmax
-     /tmp/ccDTE0gf.s:175    .rodata:00000000 $d
-     /tmp/ccDTE0gf.s:176    .rodata:00000000 .LC3
-     /tmp/ccDTE0gf.s:179    .rodata:00000018 .LC4
-     /tmp/ccDTE0gf.s:182    .text.main:00000000 $t
-     /tmp/ccDTE0gf.s:187    .text.main:00000000 main
-     /tmp/ccDTE0gf.s:687    .text.init:00000000 init
-     /tmp/ccDTE0gf.s:1079   .text.state:00000000 state
-     /tmp/ccDTE0gf.s:1279   .text.cli:00000000 cli
-     /tmp/ccDTE0gf.s:286    .text.main:000000e0 $d
-     /tmp/ccDTE0gf.s:296    .text.main:00000100 $t
-     /tmp/ccDTE0gf.s:449    .rodata:00000034 .LC5
-     /tmp/ccDTE0gf.s:452    .text.TC1_IrqHandler:00000000 $t
-     /tmp/ccDTE0gf.s:457    .text.TC1_IrqHandler:00000000 TC1_IrqHandler
-     /tmp/ccDTE0gf.s:1743   .data:0000002c ct.7572
-     /tmp/ccDTE0gf.s:533    .rodata:00000040 .LC6
-     /tmp/ccDTE0gf.s:536    .text.ADC_IrqHandler:00000000 $t
-     /tmp/ccDTE0gf.s:541    .text.ADC_IrqHandler:00000000 ADC_IrqHandler
-     /tmp/ccDTE0gf.s:941    .text.write_output:00000000 write_output
-     /tmp/ccDTE0gf.s:639    .rodata:00000054 .LC7
-     /tmp/ccDTE0gf.s:642    .rodata:00000080 .LC8
-     /tmp/ccDTE0gf.s:645    .rodata:00000090 .LC2
-     /tmp/ccDTE0gf.s:683    .text.init:00000000 $t
-     /tmp/ccDTE0gf.s:921    .rodata:000000d8 .LC0
-     /tmp/ccDTE0gf.s:929    .rodata:000000e4 .LC1
-     /tmp/ccDTE0gf.s:937    .text.write_output:00000000 $t
-     /tmp/ccDTE0gf.s:1060   .rodata:000000f0 .LC9
-     /tmp/ccDTE0gf.s:1063   .rodata:00000108 .LC10
-     /tmp/ccDTE0gf.s:1066   .rodata:0000011c .LC11
-     /tmp/ccDTE0gf.s:1069   .rodata:00000130 .LC12
-     /tmp/ccDTE0gf.s:1072   .rodata:00000148 .LC13
-     /tmp/ccDTE0gf.s:1075   .text.state:00000000 $t
-     /tmp/ccDTE0gf.s:1110   .text.state:00000024 $d
-     /tmp/ccDTE0gf.s:1120   .text.state:00000044 $t
-     /tmp/ccDTE0gf.s:1242   .rodata:00000160 .LC14
-     /tmp/ccDTE0gf.s:1245   .rodata:0000016c .LC15
-     /tmp/ccDTE0gf.s:1248   .rodata:00000184 .LC16
-     /tmp/ccDTE0gf.s:1251   .rodata:00000190 .LC17
-     /tmp/ccDTE0gf.s:1254   .rodata:000001b0 .LC18
-     /tmp/ccDTE0gf.s:1257   .rodata:000001b4 .LC19
-     /tmp/ccDTE0gf.s:1260   .rodata:000001d0 .LC20
-     /tmp/ccDTE0gf.s:1263   .rodata:000001d4 .LC21
-     /tmp/ccDTE0gf.s:1266   .rodata:000001f8 .LC22
-ARM GAS  /tmp/ccDTE0gf.s 			page 187
+     /tmp/ccypmQmm.s:19     .text.NVIC_EnableIRQ:00000000 $t
+     /tmp/ccypmQmm.s:23     .text.NVIC_EnableIRQ:00000000 NVIC_EnableIRQ
+     /tmp/ccypmQmm.s:62     .text.NVIC_SetPriority:00000000 $t
+     /tmp/ccypmQmm.s:66     .text.NVIC_SetPriority:00000000 NVIC_SetPriority
+     /tmp/ccypmQmm.s:128    .bss:00000000 input
+     /tmp/ccypmQmm.s:125    .bss:00000000 $d
+     /tmp/ccypmQmm.s:134    .data:00000000 _state
+     /tmp/ccypmQmm.s:141    .bss:00000004 loop
+     /tmp/ccypmQmm.s:148    .data:00000004 ntrip
+     /tmp/ccypmQmm.s:145    .data:00000001 $d
+     /tmp/ccypmQmm.s:157    .data:00000014 rtrip
+     /tmp/ccypmQmm.s:166    .data:00000024 releasetime
+     /tmp/ccypmQmm.s:172    .data:00000028 dxmax
+     /tmp/ccypmQmm.s:175    .rodata:00000000 $d
+     /tmp/ccypmQmm.s:176    .rodata:00000000 .LC3
+     /tmp/ccypmQmm.s:179    .rodata:00000018 .LC4
+     /tmp/ccypmQmm.s:182    .text.main:00000000 $t
+     /tmp/ccypmQmm.s:187    .text.main:00000000 main
+     /tmp/ccypmQmm.s:687    .text.init:00000000 init
+     /tmp/ccypmQmm.s:1079   .text.state:00000000 state
+     /tmp/ccypmQmm.s:1279   .text.cli:00000000 cli
+     /tmp/ccypmQmm.s:286    .text.main:000000e0 $d
+     /tmp/ccypmQmm.s:296    .text.main:00000100 $t
+     /tmp/ccypmQmm.s:449    .rodata:00000034 .LC5
+     /tmp/ccypmQmm.s:452    .text.TC1_IrqHandler:00000000 $t
+     /tmp/ccypmQmm.s:457    .text.TC1_IrqHandler:00000000 TC1_IrqHandler
+     /tmp/ccypmQmm.s:1743   .data:0000002c ct.7572
+     /tmp/ccypmQmm.s:533    .rodata:00000040 .LC6
+     /tmp/ccypmQmm.s:536    .text.ADC_IrqHandler:00000000 $t
+     /tmp/ccypmQmm.s:541    .text.ADC_IrqHandler:00000000 ADC_IrqHandler
+     /tmp/ccypmQmm.s:941    .text.write_output:00000000 write_output
+     /tmp/ccypmQmm.s:639    .rodata:00000054 .LC7
+     /tmp/ccypmQmm.s:642    .rodata:00000080 .LC8
+     /tmp/ccypmQmm.s:645    .rodata:00000090 .LC2
+     /tmp/ccypmQmm.s:683    .text.init:00000000 $t
+     /tmp/ccypmQmm.s:921    .rodata:000000d8 .LC0
+     /tmp/ccypmQmm.s:929    .rodata:000000e4 .LC1
+     /tmp/ccypmQmm.s:937    .text.write_output:00000000 $t
+     /tmp/ccypmQmm.s:1060   .rodata:000000f0 .LC9
+     /tmp/ccypmQmm.s:1063   .rodata:00000108 .LC10
+     /tmp/ccypmQmm.s:1066   .rodata:0000011c .LC11
+     /tmp/ccypmQmm.s:1069   .rodata:00000130 .LC12
+     /tmp/ccypmQmm.s:1072   .rodata:00000148 .LC13
+     /tmp/ccypmQmm.s:1075   .text.state:00000000 $t
+     /tmp/ccypmQmm.s:1110   .text.state:00000024 $d
+     /tmp/ccypmQmm.s:1120   .text.state:00000044 $t
+     /tmp/ccypmQmm.s:1242   .rodata:00000160 .LC14
+     /tmp/ccypmQmm.s:1245   .rodata:0000016c .LC15
+     /tmp/ccypmQmm.s:1248   .rodata:00000184 .LC16
+     /tmp/ccypmQmm.s:1251   .rodata:00000190 .LC17
+     /tmp/ccypmQmm.s:1254   .rodata:000001b0 .LC18
+     /tmp/ccypmQmm.s:1257   .rodata:000001b4 .LC19
+     /tmp/ccypmQmm.s:1260   .rodata:000001d0 .LC20
+     /tmp/ccypmQmm.s:1263   .rodata:000001d4 .LC21
+     /tmp/ccypmQmm.s:1266   .rodata:000001f8 .LC22
+ARM GAS  /tmp/ccypmQmm.s 			page 187
 
 
-     /tmp/ccDTE0gf.s:1269   .rodata:00000214 .LC23
-     /tmp/ccDTE0gf.s:1272   .rodata:0000022c .LC24
-     /tmp/ccDTE0gf.s:1275   .text.cli:00000000 $t
-     /tmp/ccDTE0gf.s:1400   .text.cli:000000f8 $d
-     /tmp/ccDTE0gf.s:1410   .text.cli:00000118 $t
+     /tmp/ccypmQmm.s:1269   .rodata:00000214 .LC23
+     /tmp/ccypmQmm.s:1272   .rodata:0000022c .LC24
+     /tmp/ccypmQmm.s:1275   .text.cli:00000000 $t
+     /tmp/ccypmQmm.s:1400   .text.cli:000000f8 $d
+     /tmp/ccypmQmm.s:1410   .text.cli:00000118 $t
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
