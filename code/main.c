@@ -6,32 +6,25 @@
 #define HOLD    (1 << 2)
 #define RELEASE (1 << 3)
 
-#define UP -1
-#define DOWN 1
-#define NONE 0
-
 //TODO config struct
 #define MINv 0
 #define MAXv MAX
 
-ctrlio_t input[NUM_AIN] = {0, 0};
+uint16_t input[NUM_AIN] = {0};
 uint8_t _state = STOPPED;
 
-struct ctrl loop = CTRL_INIT;	
-struct trip ntrip = {&loop._e, 0, 100, 10};
-struct trip rtrip = {&loop._e, 0, 12, 0};
+static const Pin vpins[] = {PINS_VAL};
 
-uint32_t releasetime = 1000;
-uint32_t dxmax = 1024;
+#define PRESS() PIO_Clear(vpins+VAL_vent); PIO_Set(vpins+VAL_press)
+#define VENT() PIO_Clear(vpins+VAL_press); PIO_Set(vpins+VAL_vent)
 
 static void init();
-static void write_output(int32_t value);
 static void state(uint8_t new);
 static void cli();
 
 int main() 
 {
-	uint32_t timestamp = 0;
+	//uint32_t timestamp = 0;
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
@@ -44,50 +37,10 @@ int main()
 	init();
 	LED_blinkstop(STATUS);
 
-	loop.Kp = SCALE(3);
-	loop.Ki = SCALE(2);
-	loop.Kd = SCALE(0);
-	loop.rSlope = 16;
-	loop.rSP = MAXv;
-	loop.tristate = &rtrip;
 	state(STOPPED);
 
 	while (1) {
 		cli();
-		switch (_state) {
-			case STOPPED:
-				break;
-
-			case HOLD:
-				if (GetTickCount() % 2000 == 0)
-					LED_blink(STATUS, 1);
-				break;
-
-			case RELEASE:
-				if (GetTickCount() % 2000 == 0)
-					LED_blink(STATUS, 2);
-
-				if (timestamp == 0)
-					timestamp = GetTickCount() + releasetime;
-				else if (GetTickCount() >= timestamp) {
-					TRACE_DEBUG("releasetime elapsed\n");
-					timestamp = 0;
-					state(STOPPED);
-				}
-				break;
-
-			case RUN:
-				if (GetTickCount() % 2000 == 0)
-					LED_blink(STATUS, 3);
-				if (   loop._dx > dxmax \
-				    || loop._dx < -dxmax \
-					|| loop.mode == NORMAL) // ramp finished
-					state(RELEASE);
-				break;
-
-			default:
-				state(STOPPED);
-		}
 	}
 	return 0;
 }
@@ -109,20 +62,13 @@ void TC1_IrqHandler()
 
 void ADC_IrqHandler(void)
 {
-	int32_t duty = 0;
     uint32_t status;
 
     status = ADC_GetStatus(ADC);
 	TRACE_DEBUG("Got samples.\n");
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
-		if (_state & (RUN|HOLD)) {
-			control(LIMIT(input[AIN0], MINv, MAXv), &loop);
-			if (loop.tristate != NULL) {
-				duty = loop.tristate->output * ((loop.output * PWM_PERIOD) / MAX);
-				write_output(duty);
-			}
-		}
+		// ..
 	}
 }
 
@@ -130,7 +76,7 @@ static void init()
 {
     uint32_t div;
     uint32_t tcclks;
-	const Pin pins[] = {PINS_ADCIN, PINS_TPOUT, PINS_ENA};
+	const Pin pins[] = {PINS_ADCIN, PINS_VAL};
 
 	/* PIO Configure */
 	PIO_Configure(pins, PIO_LISTSIZE(pins));
@@ -138,7 +84,6 @@ static void init()
     /* Enable peripheral clocks */
     PMC_EnablePeripheral(ID_TC1);
     PMC_EnablePeripheral(ID_ADC);
-    PMC_EnablePeripheral(ID_PWM);
 
     /* Configure TC */
     TC_FindMckDivisor(SAMPLING_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
@@ -146,7 +91,7 @@ static void init()
     TC1->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / SAMPLING_FREQ;
 
     NVIC_EnableIRQ(TC1_IRQn);
-    //NVIC_SetPriority(TC1_IRQn, 1);
+    NVIC_SetPriority(TC1_IRQn, 1);
     TC1->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
 	TC_Start(TC1, 0);
 
@@ -156,25 +101,13 @@ static void init()
 
     ADC_EnableChannel(ADC, AIN0);
     ADC_EnableChannel(ADC, AIN1);
+    ADC_EnableChannel(ADC, AIN2);
 	ADC_StartConversion(ADC);
     ADC_ReadBuffer(ADC, (int16_t*) input, NUM_AIN);
 
     NVIC_EnableIRQ(ADC_IRQn);
 	NVIC_SetPriority(ADC_IRQn, 0);
     ADC_EnableIt(ADC,ADC_IER_RXBUFF);
-
-    /* Configure PWMC channels */
-    PWMC_ConfigureClocks(PWM_FREQ * PWM_PERIOD, 0, BOARD_MCK);
-    PWMC_ConfigureChannel(PWM, TPOUT_up, PWM_CMR_CPRE_CKA, 0, PWM_CMR_CPOL);
-    PWMC_ConfigureChannel(PWM, TPOUT_down, PWM_CMR_CPRE_CKA, 0, PWM_CMR_CPOL);
-
-    PWMC_SetPeriod(PWM, TPOUT_up, PWM_PERIOD);
-    PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
-    PWMC_SetPeriod(PWM, TPOUT_down, PWM_PERIOD);
-    PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
-
-    PWMC_ConfigureSyncChannel(PWM, (1 << TPOUT_up)|(1 << TPOUT_down), PWM_SCM_UPDM_MODE1, 0, 0);
-    PWMC_SetSyncChannelUpdatePeriod(PWM, PWM_SCUP_UPR(1));
 
 	/* USB Console Config */
 	USBC_Configure();
@@ -186,55 +119,21 @@ static void init()
 	TRACE_INFO("configured\n");
 }
 
-static void write_output(int32_t value)
-{
-	const Pin up   = PIN_ENA_up;
-	const Pin down = PIN_ENA_down;
-
-	if (value > 0){
-		PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
-		PWMC_SetDutyCycle(PWM, TPOUT_down, (uint32_t) value);
-		PIO_Set(&down);
-		PIO_Clear(&up);
-	}
-	else if (value < 0) {
-		PWMC_SetDutyCycle(PWM, TPOUT_up, (uint32_t) -value);
-		PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
-		PIO_Set(&up);
-		PIO_Clear(&down);
-	}
-	else {
-		PWMC_SetDutyCycle(PWM, TPOUT_up, 0);
-		PWMC_SetDutyCycle(PWM, TPOUT_down, 0);
-		PIO_Clear(&up);
-		PIO_Clear(&down);
-	}
-}
-
 static void state(uint8_t new) 
 {
 	LED_blinkstop(STATUS);
 	switch (new) {
 		case STOPPED:
 			LED_clr(STATUS);
-			mode(STOP, &loop);
-			write_output(NONE);
 			TRACE_DEBUG("set state STOPPED\n");
 			break;
 		case RUN:
-			loop.tristate = &rtrip;
-			mode(RAMP, &loop);
 			TRACE_DEBUG("set state RUN\n");
 			break;
 		case HOLD:
-			loop.tristate = &ntrip;
-			loop.SP = loop._x;
-			mode(NORMAL, &loop);
 			TRACE_DEBUG("set state HOLD\n");
 			break;
 		case RELEASE:
-			write_output(UP * PWM_PERIOD);
-			mode(STOP, &loop);
 			TRACE_DEBUG("set state RELEASE\n");
 			break;
 		default:
@@ -261,76 +160,5 @@ static void cli()
 	argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2) - 1;
 	if (argc > 0)
 		TRACE_DEBUG("got %i arguments\n", argc);
-
-	/* commands allowed in all states */
-	if (cmd == 's')
-		state(STOPPED);
-	else if (cmd == 'r')
-		state(RELEASE);
-	else if (cmd == '?')
-		printf("%u %u %u\n", _state, input[AIN0], input[AIN1]);
-
-	/* state specific commands */
-	switch (_state) {
-		case STOPPED:
-			if (cmd == 'g') {
-				state(RUN);
-			}
-			else if (cmd == 'h') {
-				state(HOLD);
-			}
-			else if (cmd == 'e') {
-				if (argc == 1) {
-					loop.rSP = LIMIT(*argv, MINv, MAXv);
-					TRACE_INFO("set ramp endpoint to %u\n", loop.rSP);
-				}
-				printf("%u\n", loop.rSP);
-			}
-			else if (cmd == 'v') {
-				if (argc == 1) {
-					loop.rSlope = *argv;
-					TRACE_INFO("set ramp slope to %i\n", loop.rSlope);
-				}
-				printf("%i\n", loop.rSlope);
-			}
-			else if (cmd == 'k') {
-				if (argc == 3) {
-					loop.Kp = argv[0];
-					loop.Ki = argv[1];
-					loop.Kd = argv[2];
-					TRACE_INFO("set PID factors to %u, %u, %u\n", loop.Kp, loop.Ki, loop.Kd);
-				}
-				printf("%u %u %u\n", loop.Kp, loop.Ki, loop.Kd);
-			}
-			else if (cmd == 't') {
-				if (argc == 1) {
-					releasetime = *argv;
-					TRACE_INFO("set releasetime to %u\n", releasetime);
-				}
-				printf("%u\n", releasetime);
-			}
-			else if (cmd == 'd') {
-				if (argc == 2) {
-					dxmax = *argv;
-					TRACE_INFO("set dxmax to %u\n", dxmax);
-				}
-				printf("%u\n", dxmax);
-			}
-			break;
-
-		case HOLD:
-			if (cmd == 'w') {
-				if (argc == 1) {
-					loop.SP = LIMIT(*argv, MINv, MAXv);
-					TRACE_INFO("set setpoint to %u\n", loop.SP);
-				}
-				printf("%u\n", loop.SP);
-			}
-			break;
-
-		case RUN:
-		case RELEASE:
-			break;
-	}
 }
 /* vim: set ts=4: */
