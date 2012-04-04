@@ -48,10 +48,13 @@ int main()
 void TC0_IrqHandler()
 {
 	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
+	static uint32_t timestamp = 0;
+	status = status;
 
-    status = ADC_GetStatus(ADC);
-	if ((status & (ADC_ISR_EOC0|ADC_ISR_EOC1|ADC_ISR_EOC2))) 
-		ADC_StartConversion(ADC);
+	TRACE_DEBUG("Timer t (%u)\n", GetTickCount()-timestamp);
+	timestamp = GetTickCount();
+
+	ADC_StartConversion(ADC);
 }
 
 void ADC_IrqHandler()
@@ -94,14 +97,15 @@ static void init()
     TC_Configure(TC0, 0, tcclks | TC_CMR_CPCTRG);
     TC0->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / SAMPLING_FREQ;
 
-    NVIC_EnableIRQ(TC0_IRQn);
-    NVIC_SetPriority(TC0_IRQn, 1);
     TC0->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
 	TC_Start(TC0, 0);
 
+    NVIC_EnableIRQ(TC0_IRQn);
+    NVIC_SetPriority(TC0_IRQn, 1);
+
     /* Initialize ADC */
     ADC_Initialize(ADC, ID_ADC);
-    ADC_cfgFrequency(ADC, 15, 4 ); // startup = 15, prescal = 4, ADC clock = 6.4 MHz
+    ADC_cfgFrequency(ADC, 4, 1 ); // startup = 64 ADC periods, prescal = 1, ADC clock = 12 MHz
 	ADC->ADC_EMR = ADC_EMR_TAG;
 
     ADC_EnableChannel(ADC, AIN0);
@@ -109,10 +113,10 @@ static void init()
     ADC_EnableChannel(ADC, AIN2);
 	ADC_StartConversion(ADC);
     ADC_ReadBuffer(ADC, (int16_t*) input, NUM_AIN);
+    ADC_EnableIt(ADC,ADC_IER_RXBUFF);
 
     NVIC_EnableIRQ(ADC_IRQn);
 	NVIC_SetPriority(ADC_IRQn, 0);
-    ADC_EnableIt(ADC,ADC_IER_RXBUFF);
 
 	/* USB Console Config */
 	USBC_Configure();

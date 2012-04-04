@@ -1,6 +1,6 @@
 #include "board.h"
 
-#define SAMPLING_FREQ 4
+#define SAMPLING_FREQ 10
 #define RESOLUTION 12
 #define MAX (1 << RESOLUTION)
 
