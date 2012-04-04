@@ -45,30 +45,24 @@ int main()
 	return 0;
 }
 
-void TC1_IrqHandler()
+void TC0_IrqHandler()
 {
-	static uint8_t ct = SAMPLING_FREQ;
-	uint32_t i = TC1->TC_CHANNEL[0].TC_SR;
-	i = i;
+	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
 
-	if (--ct == 0) {
-		ct = SAMPLING_FREQ;
-		TRACE_DEBUG("1 sec\n");
-		LED_blink(ALARM, 2);
-	}
-	ADC_StartConversion(ADC);
-	ADC_ReadBuffer(ADC, (int16_t*) input, NUM_AIN);
+    status = ADC_GetStatus(ADC);
+	if ((status & (ADC_ISR_EOC0|ADC_ISR_EOC1|ADC_ISR_EOC2))) 
+		ADC_StartConversion(ADC);
 }
 
-void ADC_IrqHandler(void)
+void ADC_IrqHandler()
 {
     uint32_t status;
 
     status = ADC_GetStatus(ADC);
-	TRACE_DEBUG("Got samples.\n");
+	TRACE_DEBUG("Got samples. %u, %u, %u\n", input[0], input[1], input[2]);
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
-		// ..
+		ADC_ReadBuffer(ADC, (int16_t*) input, NUM_AIN);
 	}
 }
 
@@ -82,18 +76,18 @@ static void init()
 	PIO_Configure(pins, PIO_LISTSIZE(pins));
 
     /* Enable peripheral clocks */
-    PMC_EnablePeripheral(ID_TC1);
+    PMC_EnablePeripheral(ID_TC0);
     PMC_EnablePeripheral(ID_ADC);
 
     /* Configure TC */
     TC_FindMckDivisor(SAMPLING_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
-    TC_Configure(TC1, 0, tcclks | TC_CMR_CPCTRG);
-    TC1->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / SAMPLING_FREQ;
+    TC_Configure(TC0, 0, tcclks | TC_CMR_CPCTRG);
+    TC0->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / SAMPLING_FREQ;
 
-    NVIC_EnableIRQ(TC1_IRQn);
-    NVIC_SetPriority(TC1_IRQn, 1);
-    TC1->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
-	TC_Start(TC1, 0);
+    NVIC_EnableIRQ(TC0_IRQn);
+    NVIC_SetPriority(TC0_IRQn, 1);
+    TC0->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
+	TC_Start(TC0, 0);
 
     /* Initialize ADC */
     ADC_Initialize(ADC, ID_ADC);
