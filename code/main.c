@@ -57,9 +57,19 @@ void TC0_IrqHandler()
 void ADC_IrqHandler()
 {
     uint32_t status;
+	uint8_t chid[NUM_AIN];
+	static uint32_t timestamp = 0;
 
     status = ADC_GetStatus(ADC);
-	TRACE_DEBUG("Got samples. %u, %u, %u\n", input[0], input[1], input[2]);
+	chid[0] = (input[0] & 0xF000) >> 12;
+	chid[1] = (input[1] & 0xF000) >> 12;
+	chid[2] = (input[2] & 0xF000) >> 12;
+	input[0] &= 0xFFF;
+	input[1] &= 0xFFF;
+	input[2] &= 0xFFF;
+	
+	TRACE_DEBUG("[%u] Got samples. %u: %u, %u: %u, %u: %u\n", GetTickCount()-timestamp, chid[0], input[0], chid[1], input[1], chid[2], input[2]);
+	timestamp = GetTickCount();
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
 		ADC_ReadBuffer(ADC, (int16_t*) input, NUM_AIN);
@@ -92,6 +102,7 @@ static void init()
     /* Initialize ADC */
     ADC_Initialize(ADC, ID_ADC);
     ADC_cfgFrequency(ADC, 15, 4 ); // startup = 15, prescal = 4, ADC clock = 6.4 MHz
+	ADC->ADC_EMR = ADC_EMR_TAG;
 
     ADC_EnableChannel(ADC, AIN0);
     ADC_EnableChannel(ADC, AIN1);
