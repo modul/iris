@@ -1,6 +1,9 @@
 #include <string.h>
 #include "conf.h"
 
+// Timer must fire once for each conversion
+#define TIMER_FREQ (NUM_AIN * SAMPLING_FREQ)
+
 #define STOPPED  (1 << 0)
 #define RUN     (1 << 1)
 #define HOLD    (1 << 2)
@@ -48,11 +51,7 @@ int main()
 void TC0_IrqHandler()
 {
 	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
-	static uint32_t timestamp = 0;
 	status = status;
-
-	TRACE_DEBUG("Timer t (%u)\n", GetTickCount()-timestamp);
-	timestamp = GetTickCount();
 
 	ADC_StartConversion(ADC);
 }
@@ -60,18 +59,11 @@ void TC0_IrqHandler()
 void ADC_IrqHandler()
 {
     uint32_t status;
-	uint8_t chid[NUM_AIN];
 	static uint32_t timestamp = 0;
 
     status = ADC_GetStatus(ADC);
-	chid[0] = (input[0] & 0xF000) >> 12;
-	chid[1] = (input[1] & 0xF000) >> 12;
-	chid[2] = (input[2] & 0xF000) >> 12;
-	input[0] &= 0xFFF;
-	input[1] &= 0xFFF;
-	input[2] &= 0xFFF;
 	
-	TRACE_DEBUG("[%u] Got samples. %u: %u, %u: %u, %u: %u\n", GetTickCount()-timestamp, chid[0], input[0], chid[1], input[1], chid[2], input[2]);
+	TRACE_DEBUG("[%u] Got samples. 0: %u, 1: %u, 2: %u\n", GetTickCount()-timestamp, input[0], input[1], input[2]);
 	timestamp = GetTickCount();
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
@@ -83,7 +75,7 @@ static void init()
 {
     uint32_t div;
     uint32_t tcclks;
-	const Pin pins[] = {PINS_ADCIN, PINS_VAL};
+	const Pin pins[] = {PINS_VAL, PINS_ADCIN};
 
 	/* PIO Configure */
 	PIO_Configure(pins, PIO_LISTSIZE(pins));
@@ -93,32 +85,25 @@ static void init()
     PMC_EnablePeripheral(ID_ADC);
 
     /* Configure TC */
-    TC_FindMckDivisor(SAMPLING_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
+    TC_FindMckDivisor(TIMER_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
     TC_Configure(TC0, 0, tcclks | TC_CMR_CPCTRG);
-    TC0->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / SAMPLING_FREQ;
-
+    TC0->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / TIMER_FREQ;
     TC0->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
 	TC_Start(TC0, 0);
-
-    NVIC_EnableIRQ(TC0_IRQn);
-    NVIC_SetPriority(TC0_IRQn, 1);
 
     /* Initialize ADC */
     ADC_Initialize(ADC, ID_ADC);
     ADC_cfgFrequency(ADC, 4, 1 ); // startup = 64 ADC periods, prescal = 1, ADC clock = 12 MHz
-	ADC->ADC_EMR = ADC_EMR_TAG;
+	ADC->ADC_CHER = (1<<AIN0)|(1<<AIN1)|(1<<AIN2);
+    ADC->ADC_IER  = ADC_IER_RXBUFF;
 
-    ADC_EnableChannel(ADC, AIN0);
-    ADC_EnableChannel(ADC, AIN1);
-    ADC_EnableChannel(ADC, AIN2);
-	ADC_StartConversion(ADC);
-    ADC_ReadBuffer(ADC, (int16_t*) input, NUM_AIN);
-    ADC_EnableIt(ADC,ADC_IER_RXBUFF);
-
+	/* Enable Interrupts */
     NVIC_EnableIRQ(ADC_IRQn);
 	NVIC_SetPriority(ADC_IRQn, 0);
+    NVIC_EnableIRQ(TC0_IRQn);
+    NVIC_SetPriority(TC0_IRQn, 1);
 
-	/* USB Console Config */
+	/* USB Console Configuration */
 	USBC_Configure();
 
 	TRACE_DEBUG("waiting until USB is fully configured\n");
