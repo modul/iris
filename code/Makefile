@@ -87,7 +87,7 @@ TARGET = $(OUTPUT).bin
 #		Rules
 #-------------------------------------------------------------------------------
 
-.PHONY: all clean flash program debug
+.PHONY: all clean flash program debug size
 
 all: $(BIN) $(OBJ) $(TARGET)
 
@@ -115,6 +115,9 @@ program: $(TARGET)
 
 debug: $(TARGET)
 	./debug.sh
+
+size:
+	$(SIZE) $(OUTPUT).elf
 
 $(TARGET): $(ASM_OBJECTS) $(C_OBJECTS) $(LIBS)
 	@echo [LINKING $@]
