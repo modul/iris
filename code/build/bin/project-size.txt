@@ -3,29 +3,29 @@
     504	      4	      0	    508	    1fc	build/obj/system.o
     580	      4	      1	    585	    249	build/obj/uart_console.o
    1632	      4	    268	   1904	    770	build/obj/usb_console.o
-   1256	      0	     12	   1268	    4f4	build/obj/led.o
-    440	      0	      4	    444	    1bc	build/obj/timetick.o
+    952	      0	      8	    960	    3c0	build/obj/led.o
+    452	      0	      4	    456	    1c8	build/obj/timetick.o
     208	   4304	      0	   4512	   11a0	build/obj/startup.o
     160	      8	      0	    168	     a8	build/obj/usb_device_descriptor.o
-   1636	      1	     12	   1649	    671	build/obj/main.o
-  37772	   1444	   4828	  44044	   ac0c	build/bin/project.elf
+   1720	      0	     12	   1732	    6c4	build/obj/main.o
+  37564	   1440	   4824	  43828	   ab34	build/bin/project.elf
 build/bin/project.elf  :
 section             size        addr
-.text              37764     4194304
-.ARM.exidx             8     4232068
-.relocate           1444   536870912
-.bss                 732   536872356
-.stack              4096   536873088
+.text              37556     4194304
+.ARM.exidx             8     4231860
+.relocate           1440   536870912
+.bss                 728   536872352
+.stack              4096   536873080
 .ARM.attributes       41           0
 .comment              48           0
-.debug_info        69173           0
-.debug_abbrev      10703           0
-.debug_loc         19352           0
-.debug_aranges      2776           0
-.debug_ranges       3112           0
-.debug_line        14202           0
-.debug_str         13517           0
-.debug_frame       10940           0
-Total             187908
+.debug_info        67436           0
+.debug_abbrev      10587           0
+.debug_loc         19252           0
+.debug_aranges      2760           0
+.debug_ranges       3096           0
+.debug_line        14128           0
+.debug_str         13511           0
+.debug_frame       10872           0
+Total             185559
 
 

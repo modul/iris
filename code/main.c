@@ -4,17 +4,17 @@
 // Timer must fire once for each conversion
 #define TIMER_FREQ (NUM_AIN * SAMPLING_FREQ)
 
-#define STOPPED  (1 << 0)
-#define RUN     (1 << 1)
-#define HOLD    (1 << 2)
-#define RELEASE (1 << 3)
+#define READY 0
+#define SET     1
+#define GO    2
+#define FINISH 3
 
 //TODO config struct
 #define MINv 0
 #define MAXv MAX
 
 uint16_t input[NUM_AIN] = {0};
-uint8_t _state = STOPPED;
+uint8_t _state = READY;
 
 static const Pin vpins[] = {PINS_VAL};
 
@@ -28,7 +28,7 @@ static void cli();
 
 int main() 
 {
-	//uint32_t timestamp = 0;
+	uint32_t t = 0;
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
@@ -41,10 +41,12 @@ int main()
 	init();
 	LED_blinkstop(STATUS);
 
-	state(STOPPED);
+	state(READY);
 
 	while (1) {
 		cli();
+		if ((t=GetTickCount()) % 1000 == 0 && !LED_blinking(STATUS)) 
+			LED_blink(STATUS, _state);
 	}
 	return 0;
 }
@@ -117,23 +119,24 @@ static void init()
 static void state(uint8_t new) 
 {
 	LED_blinkstop(STATUS);
+	LED_clr(STATUS);
 	switch (new) {
-		case STOPPED:
-			LED_clr(STATUS);
-			TRACE_DEBUG("set state STOPPED\n");
+		case READY:
+			TRACE_DEBUG("set state READY\n");
 			break;
-		case RUN:
-			TRACE_DEBUG("set state RUN\n");
+		case SET:
+			TRACE_DEBUG("set state SET\n");
 			break;
-		case HOLD:
-			TRACE_DEBUG("set state HOLD\n");
+		case GO:
+			TRACE_DEBUG("set state GO\n");
 			break;
-		case RELEASE:
-			TRACE_DEBUG("set state RELEASE\n");
+		case FINISH:
+			TRACE_DEBUG("set state FINISH\n");
 			break;
 		default:
 			TRACE_DEBUG("got invalid state\n");
-			state(STOPPED);
+			state(READY);
+			return;
 	}
 	_state = new;
 }
@@ -155,5 +158,9 @@ static void cli()
 	argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2) - 1;
 	if (argc > 0)
 		TRACE_DEBUG("got %i arguments\n", argc);
+
+	// just for testing
+	if (argc == 0)
+		state(cmd-'0');
 }
 /* vim: set ts=4: */
