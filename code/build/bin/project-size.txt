@@ -7,12 +7,12 @@
     440	      0	      4	    444	    1bc	build/obj/timetick.o
     208	   4304	      0	   4512	   11a0	build/obj/startup.o
     160	      8	      0	    168	     a8	build/obj/usb_device_descriptor.o
-   1596	      1	     12	   1609	    649	build/obj/main.o
-  37732	   1444	   4828	  44004	   abe4	build/bin/project.elf
+   1636	      1	     12	   1649	    671	build/obj/main.o
+  37772	   1444	   4828	  44044	   ac0c	build/bin/project.elf
 build/bin/project.elf  :
 section             size        addr
-.text              37724     4194304
-.ARM.exidx             8     4232028
+.text              37764     4194304
+.ARM.exidx             8     4232068
 .relocate           1444   536870912
 .bss                 732   536872356
 .stack              4096   536873088
@@ -26,6 +26,6 @@ section             size        addr
 .debug_line        14202           0
 .debug_str         13517           0
 .debug_frame       10940           0
-Total             187868
+Total             187908
 
 

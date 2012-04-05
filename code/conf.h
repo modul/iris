@@ -3,6 +3,7 @@
 #define SAMPLING_FREQ 2
 #define RESOLUTION 12
 #define MAX (1 << RESOLUTION)
+#define VREF 3300
 
 /** ADC input pins **/
 #define PIN_ADC0 {PIO_PA17X1_AD0, PIOA, ID_PIOA, PIO_INPUT, PIO_DEFAULT}

@@ -20,6 +20,7 @@ static const Pin vpins[] = {PINS_VAL};
 
 #define PRESS() PIO_Clear(vpins+VAL_vent); PIO_Set(vpins+VAL_press)
 #define VENT() PIO_Clear(vpins+VAL_press); PIO_Set(vpins+VAL_vent)
+#define VOLT(b) ((b*VREF)>>RESOLUTION)
 
 static void init();
 static void state(uint8_t new);
@@ -63,7 +64,7 @@ void ADC_IrqHandler()
 
     status = ADC_GetStatus(ADC);
 	
-	TRACE_DEBUG("[%u] Got samples. 0: %u, 1: %u, 2: %u\n", GetTickCount()-timestamp, input[0], input[1], input[2]);
+	TRACE_DEBUG("[%u] Got samples. 0: %umV, 1: %umV, 2: %umV\n", GetTickCount()-timestamp, VOLT(input[0]), VOLT(input[1]), VOLT(input[2]));
 	timestamp = GetTickCount();
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
