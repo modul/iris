@@ -54,7 +54,8 @@ static volatile uint32_t _dwTickCount=0 ;
  */
 extern void SysTick_Handler( void )
 {
-    _dwTickCount++ ;
+    _dwTickCount++;
+	blinkhandler(_dwTickCount);
 }
 
 /**

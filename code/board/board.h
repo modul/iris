@@ -32,8 +32,7 @@
 #define LEDS_NUM 2
 #define STATUS 0
 #define ALARM 1
-#define BLINK_FREQ 8
-#define BLINK_TC 0
+#define BLINK_TIME 100
 
 /** USB configuration **/
 #define PIN_USB_VBUS    {PIO_PA24, PIOA, ID_PIOA, PIO_INPUT, PIO_PULLUP}
