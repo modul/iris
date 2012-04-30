@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccHO9a9u.s 			page 1
+ARM GAS  /tmp/ccbRaMWv.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
   39 0057 00       		.align	2
   40              	.LC3:
   41 0058 2D492D20 		.ascii	"-I- PMAX reached.\012\000"
-ARM GAS  /tmp/ccHO9a9u.s 			page 2
+ARM GAS  /tmp/ccbRaMWv.s 			page 2
 
 
   41      504D4158 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
    7:main.c        **** #define GO    3
    8:main.c        **** 
    9:main.c        **** #define F AIN0
-ARM GAS  /tmp/ccHO9a9u.s 			page 3
+ARM GAS  /tmp/ccbRaMWv.s 			page 3
 
 
   10:main.c        **** #define p AIN1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
   95 001a 0FC4     		stmia	r4!, {r0, r1, r2, r3}
   96 001c 95E80300 		ldmia	r5, {r0, r1}
   97 0020 84E80300 		stmia	r4, {r0, r1}
-ARM GAS  /tmp/ccHO9a9u.s 			page 4
+ARM GAS  /tmp/ccbRaMWv.s 			page 4
 
 
   38:main.c        **** 	uint16_t soffset = 0;
@@ -209,163 +209,162 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  117 0058 4FF4D840 		mov	r0, #27648
  118 005c C0F2DC20 		movt	r0, 732
  119 0060 FFF7FEFF 		bl	TimeTick_Configure
-  44:main.c        **** 	LEDs_configure();
+  44:main.c        **** 	PIO_Configure(pinsout, PIO_LISTSIZE(pinsout));
  120              		.loc 1 44 0
- 121 0064 FFF7FEFF 		bl	LEDs_configure
-  45:main.c        **** 
-  46:main.c        **** 	/* configure hardware */
-  47:main.c        **** 	LED_blink(STATUS, FOREVER);
- 122              		.loc 1 47 0
- 123 0068 4FF00000 		mov	r0, #0
- 124 006c 4FF0FF31 		mov	r1, #-1
- 125 0070 FFF7FEFF 		bl	LED_blink
-  48:main.c        **** 	PIO_Configure(pinsout, PIO_LISTSIZE(pinsout));
- 126              		.loc 1 48 0
- 127 0074 3B46     		mov	r3, r7
- 128 0076 1846     		mov	r0, r3
- 129 0078 4FF00201 		mov	r1, #2
- 130 007c FFF7FEFF 		bl	PIO_Configure
-  49:main.c        **** 	input_init();
- 131              		.loc 1 49 0
- 132 0080 FFF7FEFF 		bl	input_init
+ 121 0064 3B46     		mov	r3, r7
+ 122 0066 1846     		mov	r0, r3
+ 123 0068 4FF00201 		mov	r1, #2
+ 124 006c FFF7FEFF 		bl	PIO_Configure
+  45:main.c        **** 	enter(IDLE);
+ 125              		.loc 1 45 0
+ 126 0070 4FF00000 		mov	r0, #0
+ 127 0074 FFF7FEFF 		bl	enter
+  46:main.c        **** 	input_init();
+ 128              		.loc 1 46 0
+ 129 0078 FFF7FEFF 		bl	input_init
+  47:main.c        **** 
+  48:main.c        **** 	LEDs_configure();
+ 130              		.loc 1 48 0
+ 131 007c FFF7FEFF 		bl	LEDs_configure
+  49:main.c        **** 	LED_blink(STATUS, FOREVER);
+ 132              		.loc 1 49 0
+ 133 0080 4FF00000 		mov	r0, #0
+ 134 0084 4FF0FF31 		mov	r1, #-1
+ 135 0088 FFF7FEFF 		bl	LED_blink
   50:main.c        **** 	USBC_Configure();
- 133              		.loc 1 50 0
- 134 0084 FFF7FEFF 		bl	USBC_Configure
+ 136              		.loc 1 50 0
+ 137 008c FFF7FEFF 		bl	USBC_Configure
   51:main.c        **** 	TRACE_DEBUG("waiting until USB is fully configured\n");
- 135              		.loc 1 51 0
- 136 0088 40F20003 		movw	r3, #:lower16:_impure_ptr
- 137 008c C0F20003 		movt	r3, #:upper16:_impure_ptr
- 138 0090 1B68     		ldr	r3, [r3, #0]
- 139 0092 DB68     		ldr	r3, [r3, #12]
- 140 0094 1846     		mov	r0, r3
-ARM GAS  /tmp/ccHO9a9u.s 			page 5
+ 138              		.loc 1 51 0
+ 139 0090 40F20003 		movw	r3, #:lower16:_impure_ptr
+ 140 0094 C0F20003 		movt	r3, #:upper16:_impure_ptr
+ARM GAS  /tmp/ccbRaMWv.s 			page 5
 
 
- 141 0096 40F20001 		movw	r1, #:lower16:.LC1
- 142 009a C0F20001 		movt	r1, #:upper16:.LC1
- 143 009e FFF7FEFF 		bl	fiprintf
+ 141 0098 1B68     		ldr	r3, [r3, #0]
+ 142 009a DB68     		ldr	r3, [r3, #12]
+ 143 009c 1846     		mov	r0, r3
+ 144 009e 40F20001 		movw	r1, #:lower16:.LC1
+ 145 00a2 C0F20001 		movt	r1, #:upper16:.LC1
+ 146 00a6 FFF7FEFF 		bl	fiprintf
   52:main.c        **** 	while (!USBC_isConfigured());
- 144              		.loc 1 52 0
- 145 00a2 00BF     		nop
- 146              	.L2:
- 147              		.loc 1 52 0 is_stmt 0 discriminator 1
- 148 00a4 FFF7FEFF 		bl	USBC_isConfigured
- 149 00a8 0346     		mov	r3, r0
- 150 00aa 002B     		cmp	r3, #0
- 151 00ac FAD0     		beq	.L2
+ 147              		.loc 1 52 0
+ 148 00aa 00BF     		nop
+ 149              	.L2:
+ 150              		.loc 1 52 0 is_stmt 0 discriminator 1
+ 151 00ac FFF7FEFF 		bl	USBC_isConfigured
+ 152 00b0 0346     		mov	r3, r0
+ 153 00b2 002B     		cmp	r3, #0
+ 154 00b4 FAD0     		beq	.L2
   53:main.c        **** 	setbuf(stdout, NULL);
- 152              		.loc 1 53 0 is_stmt 1
- 153 00ae 40F20003 		movw	r3, #:lower16:_impure_ptr
- 154 00b2 C0F20003 		movt	r3, #:upper16:_impure_ptr
- 155 00b6 1B68     		ldr	r3, [r3, #0]
- 156 00b8 9B68     		ldr	r3, [r3, #8]
- 157 00ba 1846     		mov	r0, r3
- 158 00bc 4FF00001 		mov	r1, #0
- 159 00c0 FFF7FEFF 		bl	setbuf
+ 155              		.loc 1 53 0 is_stmt 1
+ 156 00b6 40F20003 		movw	r3, #:lower16:_impure_ptr
+ 157 00ba C0F20003 		movt	r3, #:upper16:_impure_ptr
+ 158 00be 1B68     		ldr	r3, [r3, #0]
+ 159 00c0 9B68     		ldr	r3, [r3, #8]
+ 160 00c2 1846     		mov	r0, r3
+ 161 00c4 4FF00001 		mov	r1, #0
+ 162 00c8 FFF7FEFF 		bl	setbuf
   54:main.c        **** 	LED_blinkstop(STATUS);
- 160              		.loc 1 54 0
- 161 00c4 4FF00000 		mov	r0, #0
- 162 00c8 FFF7FEFF 		bl	LED_blinkstop
-  55:main.c        **** 
-  56:main.c        **** 	enter(IDLE);
- 163              		.loc 1 56 0
+ 163              		.loc 1 54 0
  164 00cc 4FF00000 		mov	r0, #0
- 165 00d0 FFF7FEFF 		bl	enter
+ 165 00d0 FFF7FEFF 		bl	LED_blinkstop
  166 00d4 02E0     		b	.L20
  167              	.L25:
-  57:main.c        **** 
-  58:main.c        **** 	while (1) {
-  59:main.c        **** 		if (current[F] >= PAR_FMAX) {
-  60:main.c        **** 			TRACE_INFO("FMAX reached.\n");
-  61:main.c        **** 			enter(IDLE);
-  62:main.c        **** 		}
-  63:main.c        **** 		if (current[p] >= PAR_PMAX) {
-  64:main.c        **** 			TRACE_INFO("PMAX reached.\n");
-  65:main.c        **** 			enter(IDLE);
-  66:main.c        **** 		}
-  67:main.c        **** 		if (current[s] >= PAR_SMAX) {
-  68:main.c        **** 			TRACE_INFO("SMAX reached.\n");
-  69:main.c        **** 			enter(IDLE);
-  70:main.c        **** 		}
-  71:main.c        **** 
-  72:main.c        **** 		/* Parse command line */
-  73:main.c        **** 		cmd = 0;
-  74:main.c        **** 		argc = 0;
-  75:main.c        **** 		if (USBC_hasData()) {
-  76:main.c        **** 			gets(line);
-  77:main.c        **** 			if (*line > 0 && *line != 10) {
-  78:main.c        **** 				argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2);
-  79:main.c        **** 				if (argc > 0) {
-  80:main.c        **** 					TRACE_DEBUG("got %i valid arguments\n", argc);
-  81:main.c        **** 
-ARM GAS  /tmp/ccHO9a9u.s 			page 6
+  55:main.c        **** 
+  56:main.c        **** 
+  57:main.c        **** 	while (1) {
+  58:main.c        **** 		if (current[F] >= PAR_FMAX) {
+  59:main.c        **** 			TRACE_INFO("FMAX reached.\n");
+  60:main.c        **** 			enter(IDLE);
+  61:main.c        **** 		}
+  62:main.c        **** 		if (current[p] >= PAR_PMAX) {
+  63:main.c        **** 			TRACE_INFO("PMAX reached.\n");
+  64:main.c        **** 			enter(IDLE);
+  65:main.c        **** 		}
+  66:main.c        **** 		if (current[s] >= PAR_SMAX) {
+  67:main.c        **** 			TRACE_INFO("SMAX reached.\n");
+  68:main.c        **** 			enter(IDLE);
+  69:main.c        **** 		}
+  70:main.c        **** 
+  71:main.c        **** 		/* Parse command line */
+  72:main.c        **** 		cmd = 0;
+  73:main.c        **** 		argc = 0;
+  74:main.c        **** 		if (USBC_hasData()) {
+  75:main.c        **** 			gets(line);
+  76:main.c        **** 			if (*line > 0 && *line != 10) {
+  77:main.c        **** 				argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2);
+  78:main.c        **** 				if (argc > 0) {
+  79:main.c        **** 					TRACE_DEBUG("got %i valid arguments\n", argc);
+  80:main.c        **** 
+  81:main.c        **** 					if (cmd == 'a') { // abort
+ARM GAS  /tmp/ccbRaMWv.s 			page 6
 
 
-  82:main.c        **** 					if (cmd == 'a') { // abort
-  83:main.c        **** 						printf("ok\n");
-  84:main.c        **** 						enter(IDLE);
-  85:main.c        **** 					}
-  86:main.c        **** 					else if (cmd == 'l') // log
-  87:main.c        **** 						printf("%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
-  88:main.c        **** 				}
-  89:main.c        **** 			}
-  90:main.c        **** 		}
-  91:main.c        **** 		
-  92:main.c        **** 		/* Handle state */
-  93:main.c        **** 		switch (_state) {
-  94:main.c        **** 			case IDLE:
-  95:main.c        **** 				if (cmd == 's') { // start
-  96:main.c        **** 					soffset = 0;
-  97:main.c        **** 					enter(READY);
-  98:main.c        **** 				}
-  99:main.c        **** 				//TODO some configuration here
- 100:main.c        **** 				break;
- 101:main.c        **** 
- 102:main.c        **** 			case READY:
- 103:main.c        **** 				if (current[p] > PAR_PSET) {
- 104:main.c        **** 					soffset = current[s];
- 105:main.c        **** 					enter(SET);
- 106:main.c        **** 				}
- 107:main.c        **** 				break;
- 108:main.c        **** 
- 109:main.c        **** 			case SET:
- 110:main.c        **** 				if (cmd == 's') // start/continue
- 111:main.c        **** 					enter(GO);
- 112:main.c        **** 				break;
- 113:main.c        **** 
- 114:main.c        **** 			case GO:
- 115:main.c        **** 				if (current[F] <= previous[F]/2)
- 116:main.c        **** 					enter(IDLE);
- 117:main.c        **** 				break;
- 118:main.c        **** 
- 119:main.c        **** 			default:
- 120:main.c        **** 				TRACE_ERROR("invalid state\n");
- 121:main.c        **** 				enter(IDLE);
- 122:main.c        **** 		}
- 123:main.c        **** 		
- 124:main.c        **** 		/* Display state */
- 125:main.c        **** 		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) 
- 126:main.c        **** 			LED_blink(STATUS, _state);
- 127:main.c        **** 	}
- 168              		.loc 1 127 0
+  82:main.c        **** 						printf("ok\n");
+  83:main.c        **** 						enter(IDLE);
+  84:main.c        **** 					}
+  85:main.c        **** 					else if (cmd == 'l') // log
+  86:main.c        **** 						printf("%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
+  87:main.c        **** 				}
+  88:main.c        **** 			}
+  89:main.c        **** 		}
+  90:main.c        **** 		
+  91:main.c        **** 		/* Handle state */
+  92:main.c        **** 		switch (_state) {
+  93:main.c        **** 			case IDLE:
+  94:main.c        **** 				if (cmd == 's') { // start
+  95:main.c        **** 					soffset = 0;
+  96:main.c        **** 					enter(READY);
+  97:main.c        **** 				}
+  98:main.c        **** 				//TODO some configuration here
+  99:main.c        **** 				break;
+ 100:main.c        **** 
+ 101:main.c        **** 			case READY:
+ 102:main.c        **** 				if (current[p] > PAR_PSET) {
+ 103:main.c        **** 					soffset = current[s];
+ 104:main.c        **** 					enter(SET);
+ 105:main.c        **** 				}
+ 106:main.c        **** 				break;
+ 107:main.c        **** 
+ 108:main.c        **** 			case SET:
+ 109:main.c        **** 				if (cmd == 's') // start/continue
+ 110:main.c        **** 					enter(GO);
+ 111:main.c        **** 				break;
+ 112:main.c        **** 
+ 113:main.c        **** 			case GO:
+ 114:main.c        **** 				if (current[F] <= previous[F]/2)
+ 115:main.c        **** 					enter(IDLE);
+ 116:main.c        **** 				break;
+ 117:main.c        **** 
+ 118:main.c        **** 			default:
+ 119:main.c        **** 				TRACE_ERROR("invalid state\n");
+ 120:main.c        **** 				enter(IDLE);
+ 121:main.c        **** 		}
+ 122:main.c        **** 		
+ 123:main.c        **** 		/* Display state */
+ 124:main.c        **** 		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) 
+ 125:main.c        **** 			LED_blink(STATUS, _state);
+ 126:main.c        **** 	}
+ 168              		.loc 1 126 0
  169 00d6 00BF     		nop
  170 00d8 00E0     		b	.L20
  171              	.L26:
  172 00da 00BF     		nop
  173              	.L20:
-  59:main.c        **** 		if (current[F] >= PAR_FMAX) {
- 174              		.loc 1 59 0
+  58:main.c        **** 		if (current[F] >= PAR_FMAX) {
+ 174              		.loc 1 58 0
  175 00dc 40F20003 		movw	r3, #:lower16:current
  176 00e0 C0F20003 		movt	r3, #:upper16:current
  177 00e4 1A88     		ldrh	r2, [r3, #0]
-ARM GAS  /tmp/ccHO9a9u.s 			page 7
-
-
  178 00e6 40F6E343 		movw	r3, #3299
+ARM GAS  /tmp/ccbRaMWv.s 			page 7
+
+
  179 00ea 9A42     		cmp	r2, r3
  180 00ec 10D9     		bls	.L3
-  60:main.c        **** 			TRACE_INFO("FMAX reached.\n");
- 181              		.loc 1 60 0
+  59:main.c        **** 			TRACE_INFO("FMAX reached.\n");
+ 181              		.loc 1 59 0
  182 00ee 40F20003 		movw	r3, #:lower16:_impure_ptr
  183 00f2 C0F20003 		movt	r3, #:upper16:_impure_ptr
  184 00f6 1B68     		ldr	r3, [r3, #0]
@@ -374,21 +373,21 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  187 00fc 40F20001 		movw	r1, #:lower16:.LC2
  188 0100 C0F20001 		movt	r1, #:upper16:.LC2
  189 0104 FFF7FEFF 		bl	fiprintf
-  61:main.c        **** 			enter(IDLE);
- 190              		.loc 1 61 0
+  60:main.c        **** 			enter(IDLE);
+ 190              		.loc 1 60 0
  191 0108 4FF00000 		mov	r0, #0
  192 010c FFF7FEFF 		bl	enter
  193              	.L3:
-  63:main.c        **** 		if (current[p] >= PAR_PMAX) {
- 194              		.loc 1 63 0
+  62:main.c        **** 		if (current[p] >= PAR_PMAX) {
+ 194              		.loc 1 62 0
  195 0110 40F20003 		movw	r3, #:lower16:current
  196 0114 C0F20003 		movt	r3, #:upper16:current
  197 0118 5A88     		ldrh	r2, [r3, #2]
  198 011a 40F6E343 		movw	r3, #3299
  199 011e 9A42     		cmp	r2, r3
  200 0120 10D9     		bls	.L4
-  64:main.c        **** 			TRACE_INFO("PMAX reached.\n");
- 201              		.loc 1 64 0
+  63:main.c        **** 			TRACE_INFO("PMAX reached.\n");
+ 201              		.loc 1 63 0
  202 0122 40F20003 		movw	r3, #:lower16:_impure_ptr
  203 0126 C0F20003 		movt	r3, #:upper16:_impure_ptr
  204 012a 1B68     		ldr	r3, [r3, #0]
@@ -397,68 +396,68 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  207 0130 40F20001 		movw	r1, #:lower16:.LC3
  208 0134 C0F20001 		movt	r1, #:upper16:.LC3
  209 0138 FFF7FEFF 		bl	fiprintf
-  65:main.c        **** 			enter(IDLE);
- 210              		.loc 1 65 0
+  64:main.c        **** 			enter(IDLE);
+ 210              		.loc 1 64 0
  211 013c 4FF00000 		mov	r0, #0
  212 0140 FFF7FEFF 		bl	enter
  213              	.L4:
-  67:main.c        **** 		if (current[s] >= PAR_SMAX) {
- 214              		.loc 1 67 0
+  66:main.c        **** 		if (current[s] >= PAR_SMAX) {
+ 214              		.loc 1 66 0
  215 0144 40F20003 		movw	r3, #:lower16:current
  216 0148 C0F20003 		movt	r3, #:upper16:current
  217 014c 9A88     		ldrh	r2, [r3, #4]
  218 014e 40F6E343 		movw	r3, #3299
  219 0152 9A42     		cmp	r2, r3
  220 0154 10D9     		bls	.L5
-  68:main.c        **** 			TRACE_INFO("SMAX reached.\n");
- 221              		.loc 1 68 0
+  67:main.c        **** 			TRACE_INFO("SMAX reached.\n");
+ 221              		.loc 1 67 0
  222 0156 40F20003 		movw	r3, #:lower16:_impure_ptr
  223 015a C0F20003 		movt	r3, #:upper16:_impure_ptr
  224 015e 1B68     		ldr	r3, [r3, #0]
  225 0160 DB68     		ldr	r3, [r3, #12]
  226 0162 1846     		mov	r0, r3
  227 0164 40F20001 		movw	r1, #:lower16:.LC4
-ARM GAS  /tmp/ccHO9a9u.s 			page 8
-
-
  228 0168 C0F20001 		movt	r1, #:upper16:.LC4
+ARM GAS  /tmp/ccbRaMWv.s 			page 8
+
+
  229 016c FFF7FEFF 		bl	fiprintf
-  69:main.c        **** 			enter(IDLE);
- 230              		.loc 1 69 0
+  68:main.c        **** 			enter(IDLE);
+ 230              		.loc 1 68 0
  231 0170 4FF00000 		mov	r0, #0
  232 0174 FFF7FEFF 		bl	enter
  233              	.L5:
-  73:main.c        **** 		cmd = 0;
- 234              		.loc 1 73 0
+  72:main.c        **** 		cmd = 0;
+ 234              		.loc 1 72 0
  235 0178 4FF00003 		mov	r3, #0
  236 017c FB76     		strb	r3, [r7, #27]
-  74:main.c        **** 		argc = 0;
- 237              		.loc 1 74 0
+  73:main.c        **** 		argc = 0;
+ 237              		.loc 1 73 0
  238 017e 4FF00003 		mov	r3, #0
  239 0182 BB64     		str	r3, [r7, #72]
-  75:main.c        **** 		if (USBC_hasData()) {
- 240              		.loc 1 75 0
+  74:main.c        **** 		if (USBC_hasData()) {
+ 240              		.loc 1 74 0
  241 0184 FFF7FEFF 		bl	USBC_hasData
  242 0188 0346     		mov	r3, r0
  243 018a 002B     		cmp	r3, #0
  244 018c 67D0     		beq	.L6
-  76:main.c        **** 			gets(line);
- 245              		.loc 1 76 0
+  75:main.c        **** 			gets(line);
+ 245              		.loc 1 75 0
  246 018e 07F11C03 		add	r3, r7, #28
  247 0192 1846     		mov	r0, r3
  248 0194 FFF7FEFF 		bl	gets
-  77:main.c        **** 			if (*line > 0 && *line != 10) {
- 249              		.loc 1 77 0
+  76:main.c        **** 			if (*line > 0 && *line != 10) {
+ 249              		.loc 1 76 0
  250 0198 3B7F     		ldrb	r3, [r7, #28]	@ zero_extendqisi2
  251 019a 002B     		cmp	r3, #0
  252 019c 5FD0     		beq	.L6
-  77:main.c        **** 			if (*line > 0 && *line != 10) {
- 253              		.loc 1 77 0 is_stmt 0 discriminator 1
+  76:main.c        **** 			if (*line > 0 && *line != 10) {
+ 253              		.loc 1 76 0 is_stmt 0 discriminator 1
  254 019e 3B7F     		ldrb	r3, [r7, #28]	@ zero_extendqisi2
  255 01a0 0A2B     		cmp	r3, #10
  256 01a2 5CD0     		beq	.L6
-  78:main.c        **** 				argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2);
- 257              		.loc 1 78 0 is_stmt 1
+  77:main.c        **** 				argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2);
+ 257              		.loc 1 77 0 is_stmt 1
  258 01a4 07F11C01 		add	r1, r7, #28
  259 01a8 07F11B02 		add	r2, r7, #27
  260 01ac 07F13C03 		add	r3, r7, #60
@@ -473,16 +472,16 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  269 01ca C0F20001 		movt	r1, #:upper16:.LC5
  270 01ce FFF7FEFF 		bl	siscanf
  271 01d2 B864     		str	r0, [r7, #72]
-  79:main.c        **** 				if (argc > 0) {
- 272              		.loc 1 79 0
+  78:main.c        **** 				if (argc > 0) {
+ 272              		.loc 1 78 0
  273 01d4 BB6C     		ldr	r3, [r7, #72]
  274 01d6 002B     		cmp	r3, #0
  275 01d8 41DD     		ble	.L6
-ARM GAS  /tmp/ccHO9a9u.s 			page 9
+  79:main.c        **** 					TRACE_DEBUG("got %i valid arguments\n", argc);
+ARM GAS  /tmp/ccbRaMWv.s 			page 9
 
 
-  80:main.c        **** 					TRACE_DEBUG("got %i valid arguments\n", argc);
- 276              		.loc 1 80 0
+ 276              		.loc 1 79 0
  277 01da 40F20003 		movw	r3, #:lower16:_impure_ptr
  278 01de C0F20003 		movt	r3, #:upper16:_impure_ptr
  279 01e2 1B68     		ldr	r3, [r3, #0]
@@ -492,29 +491,29 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  283 01ec C0F20001 		movt	r1, #:upper16:.LC6
  284 01f0 BA6C     		ldr	r2, [r7, #72]
  285 01f2 FFF7FEFF 		bl	fiprintf
-  82:main.c        **** 					if (cmd == 'a') { // abort
- 286              		.loc 1 82 0
+  81:main.c        **** 					if (cmd == 'a') { // abort
+ 286              		.loc 1 81 0
  287 01f6 FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
  288 01f8 612B     		cmp	r3, #97
  289 01fa 0AD1     		bne	.L7
-  83:main.c        **** 						printf("ok\n");
- 290              		.loc 1 83 0
+  82:main.c        **** 						printf("ok\n");
+ 290              		.loc 1 82 0
  291 01fc 40F20000 		movw	r0, #:lower16:.LC7
  292 0200 C0F20000 		movt	r0, #:upper16:.LC7
  293 0204 FFF7FEFF 		bl	iprintf
-  84:main.c        **** 						enter(IDLE);
- 294              		.loc 1 84 0
+  83:main.c        **** 						enter(IDLE);
+ 294              		.loc 1 83 0
  295 0208 4FF00000 		mov	r0, #0
  296 020c FFF7FEFF 		bl	enter
  297 0210 25E0     		b	.L6
  298              	.L7:
-  86:main.c        **** 					else if (cmd == 'l') // log
- 299              		.loc 1 86 0
+  85:main.c        **** 					else if (cmd == 'l') // log
+ 299              		.loc 1 85 0
  300 0212 FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
  301 0214 6C2B     		cmp	r3, #108
  302 0216 22D1     		bne	.L6
-  87:main.c        **** 						printf("%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
- 303              		.loc 1 87 0
+  86:main.c        **** 						printf("%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
+ 303              		.loc 1 86 0
  304 0218 40F20003 		movw	r3, #:lower16:_state
  305 021c C0F20003 		movt	r3, #:upper16:_state
  306 0220 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
@@ -538,12 +537,12 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  324 0254 C0F20000 		movt	r0, #:upper16:.LC8
  325 0258 2346     		mov	r3, r4
  326 025a FFF7FEFF 		bl	iprintf
-ARM GAS  /tmp/ccHO9a9u.s 			page 10
-
-
  327              	.L6:
-  93:main.c        **** 		switch (_state) {
- 328              		.loc 1 93 0
+ARM GAS  /tmp/ccbRaMWv.s 			page 10
+
+
+  92:main.c        **** 		switch (_state) {
+ 328              		.loc 1 92 0
  329 025e 40F20003 		movw	r3, #:lower16:_state
  330 0262 C0F20003 		movt	r3, #:upper16:_state
  331 0266 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
@@ -558,62 +557,62 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  340 027c C3020000 		.word	.L11+1
  341 0280 D3020000 		.word	.L12+1
  342              	.L9:
-  95:main.c        **** 				if (cmd == 's') { // start
- 343              		.loc 1 95 0
+  94:main.c        **** 				if (cmd == 's') { // start
+ 343              		.loc 1 94 0
  344 0284 FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
  345 0286 732B     		cmp	r3, #115
  346 0288 49D1     		bne	.L21
-  96:main.c        **** 					soffset = 0;
- 347              		.loc 1 96 0
+  95:main.c        **** 					soffset = 0;
+ 347              		.loc 1 95 0
  348 028a 4FF00003 		mov	r3, #0
  349 028e A7F84E30 		strh	r3, [r7, #78]	@ movhi
-  97:main.c        **** 					enter(READY);
- 350              		.loc 1 97 0
+  96:main.c        **** 					enter(READY);
+ 350              		.loc 1 96 0
  351 0292 4FF00100 		mov	r0, #1
  352 0296 FFF7FEFF 		bl	enter
- 100:main.c        **** 				break;
- 353              		.loc 1 100 0
+  99:main.c        **** 				break;
+ 353              		.loc 1 99 0
  354 029a 47E0     		b	.L15
  355              	.L10:
- 103:main.c        **** 				if (current[p] > PAR_PSET) {
- 356              		.loc 1 103 0
+ 102:main.c        **** 				if (current[p] > PAR_PSET) {
+ 356              		.loc 1 102 0
  357 029c 40F20003 		movw	r3, #:lower16:current
  358 02a0 C0F20003 		movt	r3, #:upper16:current
  359 02a4 5B88     		ldrh	r3, [r3, #2]
  360 02a6 322B     		cmp	r3, #50
  361 02a8 3BD9     		bls	.L22
- 104:main.c        **** 					soffset = current[s];
- 362              		.loc 1 104 0
+ 103:main.c        **** 					soffset = current[s];
+ 362              		.loc 1 103 0
  363 02aa 40F20003 		movw	r3, #:lower16:current
  364 02ae C0F20003 		movt	r3, #:upper16:current
  365 02b2 9B88     		ldrh	r3, [r3, #4]	@ movhi
  366 02b4 A7F84E30 		strh	r3, [r7, #78]	@ movhi
- 105:main.c        **** 					enter(SET);
- 367              		.loc 1 105 0
+ 104:main.c        **** 					enter(SET);
+ 367              		.loc 1 104 0
  368 02b8 4FF00200 		mov	r0, #2
  369 02bc FFF7FEFF 		bl	enter
- 107:main.c        **** 				break;
- 370              		.loc 1 107 0
+ 106:main.c        **** 				break;
+ 370              		.loc 1 106 0
  371 02c0 34E0     		b	.L15
  372              	.L11:
- 110:main.c        **** 				if (cmd == 's') // start/continue
- 373              		.loc 1 110 0
-ARM GAS  /tmp/ccHO9a9u.s 			page 11
-
-
+ 109:main.c        **** 				if (cmd == 's') // start/continue
+ 373              		.loc 1 109 0
  374 02c2 FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
+ARM GAS  /tmp/ccbRaMWv.s 			page 11
+
+
  375 02c4 732B     		cmp	r3, #115
  376 02c6 2ED1     		bne	.L23
- 111:main.c        **** 					enter(GO);
- 377              		.loc 1 111 0
+ 110:main.c        **** 					enter(GO);
+ 377              		.loc 1 110 0
  378 02c8 4FF00300 		mov	r0, #3
  379 02cc FFF7FEFF 		bl	enter
- 112:main.c        **** 				break;
- 380              		.loc 1 112 0
+ 111:main.c        **** 				break;
+ 380              		.loc 1 111 0
  381 02d0 2CE0     		b	.L15
  382              	.L12:
- 115:main.c        **** 				if (current[F] <= previous[F]/2)
- 383              		.loc 1 115 0
+ 114:main.c        **** 				if (current[F] <= previous[F]/2)
+ 383              		.loc 1 114 0
  384 02d2 40F20003 		movw	r3, #:lower16:current
  385 02d6 C0F20003 		movt	r3, #:upper16:current
  386 02da 1A88     		ldrh	r2, [r3, #0]
@@ -624,16 +623,16 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  391 02ea 9BB2     		uxth	r3, r3
  392 02ec 9A42     		cmp	r2, r3
  393 02ee 1CD8     		bhi	.L24
- 116:main.c        **** 					enter(IDLE);
- 394              		.loc 1 116 0
+ 115:main.c        **** 					enter(IDLE);
+ 394              		.loc 1 115 0
  395 02f0 4FF00000 		mov	r0, #0
  396 02f4 FFF7FEFF 		bl	enter
- 117:main.c        **** 				break;
- 397              		.loc 1 117 0
+ 116:main.c        **** 				break;
+ 397              		.loc 1 116 0
  398 02f8 18E0     		b	.L15
  399              	.L8:
- 120:main.c        **** 				TRACE_ERROR("invalid state\n");
- 400              		.loc 1 120 0
+ 119:main.c        **** 				TRACE_ERROR("invalid state\n");
+ 400              		.loc 1 119 0
  401 02fa 40F20003 		movw	r3, #:lower16:_impure_ptr
  402 02fe C0F20003 		movt	r3, #:upper16:_impure_ptr
  403 0302 1B68     		ldr	r3, [r3, #0]
@@ -642,36 +641,36 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  406 0308 40F20001 		movw	r1, #:lower16:.LC9
  407 030c C0F20001 		movt	r1, #:upper16:.LC9
  408 0310 FFF7FEFF 		bl	fiprintf
- 121:main.c        **** 				enter(IDLE);
- 409              		.loc 1 121 0
+ 120:main.c        **** 				enter(IDLE);
+ 409              		.loc 1 120 0
  410 0314 4FF00000 		mov	r0, #0
  411 0318 FFF7FEFF 		bl	enter
  412 031c 06E0     		b	.L15
  413              	.L21:
- 100:main.c        **** 				break;
- 414              		.loc 1 100 0
+  99:main.c        **** 				break;
+ 414              		.loc 1 99 0
  415 031e 00BF     		nop
  416 0320 04E0     		b	.L15
  417              	.L22:
- 107:main.c        **** 				break;
- 418              		.loc 1 107 0
+ 106:main.c        **** 				break;
+ 418              		.loc 1 106 0
  419 0322 00BF     		nop
  420 0324 02E0     		b	.L15
  421              	.L23:
-ARM GAS  /tmp/ccHO9a9u.s 			page 12
+ 111:main.c        **** 				break;
+ARM GAS  /tmp/ccbRaMWv.s 			page 12
 
 
- 112:main.c        **** 				break;
- 422              		.loc 1 112 0
+ 422              		.loc 1 111 0
  423 0326 00BF     		nop
  424 0328 00E0     		b	.L15
  425              	.L24:
- 117:main.c        **** 				break;
- 426              		.loc 1 117 0
+ 116:main.c        **** 				break;
+ 426              		.loc 1 116 0
  427 032a 00BF     		nop
  428              	.L15:
- 125:main.c        **** 		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) 
- 429              		.loc 1 125 0
+ 124:main.c        **** 		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) 
+ 429              		.loc 1 124 0
  430 032c FFF7FEFF 		bl	GetTickCount
  431 0330 0246     		mov	r2, r0
  432 0332 44F6D353 		movw	r3, #19923
@@ -683,22 +682,22 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  438 034a D31A     		subs	r3, r2, r3
  439 034c 002B     		cmp	r3, #0
  440 034e 7FF4C2AE 		bne	.L25
- 125:main.c        **** 		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) 
- 441              		.loc 1 125 0 is_stmt 0 discriminator 1
+ 124:main.c        **** 		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) 
+ 441              		.loc 1 124 0 is_stmt 0 discriminator 1
  442 0352 4FF00000 		mov	r0, #0
  443 0356 FFF7FEFF 		bl	LED_blinking
  444 035a 0346     		mov	r3, r0
  445 035c 002B     		cmp	r3, #0
  446 035e 7FF4BCAE 		bne	.L26
- 126:main.c        **** 			LED_blink(STATUS, _state);
- 447              		.loc 1 126 0 is_stmt 1
+ 125:main.c        **** 			LED_blink(STATUS, _state);
+ 447              		.loc 1 125 0 is_stmt 1
  448 0362 40F20003 		movw	r3, #:lower16:_state
  449 0366 C0F20003 		movt	r3, #:upper16:_state
  450 036a 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
  451 036c 4FF00000 		mov	r0, #0
  452 0370 1946     		mov	r1, r3
  453 0372 FFF7FEFF 		bl	LED_blink
- 454              		.loc 1 127 0
+ 454              		.loc 1 126 0
  455 0376 B1E6     		b	.L20
  456              		.cfi_endproc
  457              	.LFE35:
@@ -711,17 +710,17 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  464              		.type	do_press, %function
  465              	do_press:
  466              	.LFB36:
- 128:main.c        **** 	return 0;
- 129:main.c        **** }
- 130:main.c        **** 
- 131:main.c        **** void do_press() 
- 132:main.c        **** {
- 467              		.loc 1 132 0
+ 127:main.c        **** 	return 0;
+ 128:main.c        **** }
+ 129:main.c        **** 
+ 130:main.c        **** void do_press() 
+ 131:main.c        **** {
+ 467              		.loc 1 131 0
  468              		.cfi_startproc
-ARM GAS  /tmp/ccHO9a9u.s 			page 13
-
-
  469              		@ args = 0, pretend = 0, frame = 24
+ARM GAS  /tmp/ccbRaMWv.s 			page 13
+
+
  470              		@ frame_needed = 1, uses_anonymous_args = 0
  471 0000 90B5     		push	{r4, r7, lr}
  472              	.LCFI3:
@@ -735,30 +734,30 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  480              		.cfi_offset 4, -12
  481              	.LCFI5:
  482              		.cfi_def_cfa_register 7
- 133:main.c        **** 	const Pin pr = PIN_VAL_press;
- 483              		.loc 1 133 0
+ 132:main.c        **** 	const Pin pr = PIN_VAL_press;
+ 483              		.loc 1 132 0
  484 0006 40F20003 		movw	r3, #:lower16:C.8.6304
  485 000a C0F20003 		movt	r3, #:upper16:C.8.6304
  486 000e 07F10C04 		add	r4, r7, #12
  487 0012 93E80700 		ldmia	r3, {r0, r1, r2}
  488 0016 84E80700 		stmia	r4, {r0, r1, r2}
- 134:main.c        **** 	const Pin vn = PIN_VAL_vent;
- 489              		.loc 1 134 0
+ 133:main.c        **** 	const Pin vn = PIN_VAL_vent;
+ 489              		.loc 1 133 0
  490 001a 40F20003 		movw	r3, #:lower16:C.9.6305
  491 001e C0F20003 		movt	r3, #:upper16:C.9.6305
  492 0022 3C46     		mov	r4, r7
  493 0024 93E80700 		ldmia	r3, {r0, r1, r2}
  494 0028 84E80700 		stmia	r4, {r0, r1, r2}
- 135:main.c        **** 	PIO_Clear(&vn); PIO_Set(&pr);
- 495              		.loc 1 135 0
+ 134:main.c        **** 	PIO_Clear(&vn); PIO_Set(&pr);
+ 495              		.loc 1 134 0
  496 002c 3B46     		mov	r3, r7
  497 002e 1846     		mov	r0, r3
  498 0030 FFF7FEFF 		bl	PIO_Clear
  499 0034 07F10C03 		add	r3, r7, #12
  500 0038 1846     		mov	r0, r3
  501 003a FFF7FEFF 		bl	PIO_Set
- 136:main.c        **** }
- 502              		.loc 1 136 0
+ 135:main.c        **** }
+ 502              		.loc 1 135 0
  503 003e 07F11C07 		add	r7, r7, #28
  504 0042 BD46     		mov	sp, r7
  505 0044 90BD     		pop	{r4, r7, pc}
@@ -773,15 +772,15 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  514              		.type	do_hold, %function
  515              	do_hold:
  516              	.LFB37:
- 137:main.c        **** 
- 138:main.c        **** void do_hold()
- 139:main.c        **** {
- 517              		.loc 1 139 0
+ 136:main.c        **** 
+ 137:main.c        **** void do_hold()
+ 138:main.c        **** {
+ 517              		.loc 1 138 0
  518              		.cfi_startproc
-ARM GAS  /tmp/ccHO9a9u.s 			page 14
-
-
  519              		@ args = 0, pretend = 0, frame = 24
+ARM GAS  /tmp/ccbRaMWv.s 			page 14
+
+
  520              		@ frame_needed = 1, uses_anonymous_args = 0
  521 0000 B0B5     		push	{r4, r5, r7, lr}
  522              	.LCFI6:
@@ -796,8 +795,8 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  531              		.cfi_offset 4, -16
  532              	.LCFI8:
  533              		.cfi_def_cfa_register 7
- 140:main.c        **** 	const Pin pins[] = {PINS_VAL};
- 534              		.loc 1 140 0
+ 139:main.c        **** 	const Pin pins[] = {PINS_VAL};
+ 534              		.loc 1 139 0
  535 0006 40F20003 		movw	r3, #:lower16:C.7.6303
  536 000a C0F20003 		movt	r3, #:upper16:C.7.6303
  537 000e 3C46     		mov	r4, r7
@@ -806,13 +805,13 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  540 0014 0FC4     		stmia	r4!, {r0, r1, r2, r3}
  541 0016 95E80300 		ldmia	r5, {r0, r1}
  542 001a 84E80300 		stmia	r4, {r0, r1}
- 141:main.c        **** 	PIO_Clear(pins);
- 543              		.loc 1 141 0
+ 140:main.c        **** 	PIO_Clear(pins);
+ 543              		.loc 1 140 0
  544 001e 3B46     		mov	r3, r7
  545 0020 1846     		mov	r0, r3
  546 0022 FFF7FEFF 		bl	PIO_Clear
- 142:main.c        **** }
- 547              		.loc 1 142 0
+ 141:main.c        **** }
+ 547              		.loc 1 141 0
  548 0026 07F11807 		add	r7, r7, #24
  549 002a BD46     		mov	sp, r7
  550 002c B0BD     		pop	{r4, r5, r7, pc}
@@ -827,10 +826,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  559              		.type	do_vent, %function
  560              	do_vent:
  561              	.LFB38:
- 143:main.c        **** 
- 144:main.c        **** void do_vent()
- 145:main.c        **** {
- 562              		.loc 1 145 0
+ 142:main.c        **** 
+ 143:main.c        **** void do_vent()
+ 144:main.c        **** {
+ 562              		.loc 1 144 0
  563              		.cfi_startproc
  564              		@ args = 0, pretend = 0, frame = 24
  565              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -838,10 +837,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  567              	.LCFI9:
  568              		.cfi_def_cfa_offset 12
  569 0002 87B0     		sub	sp, sp, #28
-ARM GAS  /tmp/ccHO9a9u.s 			page 15
-
-
  570              	.LCFI10:
+ARM GAS  /tmp/ccbRaMWv.s 			page 15
+
+
  571              		.cfi_def_cfa_offset 40
  572 0004 00AF     		add	r7, sp, #0
  573              		.cfi_offset 14, -4
@@ -849,30 +848,30 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  575              		.cfi_offset 4, -12
  576              	.LCFI11:
  577              		.cfi_def_cfa_register 7
- 146:main.c        **** 	const Pin pr = PIN_VAL_press;
- 578              		.loc 1 146 0
+ 145:main.c        **** 	const Pin pr = PIN_VAL_press;
+ 578              		.loc 1 145 0
  579 0006 40F20003 		movw	r3, #:lower16:C.5.6301
  580 000a C0F20003 		movt	r3, #:upper16:C.5.6301
  581 000e 07F10C04 		add	r4, r7, #12
  582 0012 93E80700 		ldmia	r3, {r0, r1, r2}
  583 0016 84E80700 		stmia	r4, {r0, r1, r2}
- 147:main.c        **** 	const Pin vn = PIN_VAL_vent;
- 584              		.loc 1 147 0
+ 146:main.c        **** 	const Pin vn = PIN_VAL_vent;
+ 584              		.loc 1 146 0
  585 001a 40F20003 		movw	r3, #:lower16:C.6.6302
  586 001e C0F20003 		movt	r3, #:upper16:C.6.6302
  587 0022 3C46     		mov	r4, r7
  588 0024 93E80700 		ldmia	r3, {r0, r1, r2}
  589 0028 84E80700 		stmia	r4, {r0, r1, r2}
- 148:main.c        **** 	PIO_Clear(&pr); PIO_Set(&vn);
- 590              		.loc 1 148 0
+ 147:main.c        **** 	PIO_Clear(&pr); PIO_Set(&vn);
+ 590              		.loc 1 147 0
  591 002c 07F10C03 		add	r3, r7, #12
  592 0030 1846     		mov	r0, r3
  593 0032 FFF7FEFF 		bl	PIO_Clear
  594 0036 3B46     		mov	r3, r7
  595 0038 1846     		mov	r0, r3
  596 003a FFF7FEFF 		bl	PIO_Set
- 149:main.c        **** }
- 597              		.loc 1 149 0
+ 148:main.c        **** }
+ 597              		.loc 1 148 0
  598 003e 07F11C07 		add	r7, r7, #28
  599 0042 BD46     		mov	sp, r7
  600 0044 90BD     		pop	{r4, r7, pc}
@@ -898,10 +897,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  612              	.LC12:
  613 0104 2D442D20 		.ascii	"-D- entered state SET\012\000"
  613      656E7465 
-ARM GAS  /tmp/ccHO9a9u.s 			page 16
-
-
  613      72656420 
+ARM GAS  /tmp/ccbRaMWv.s 			page 16
+
+
  613      73746174 
  613      65205345 
  614 011b 00       		.align	2
@@ -926,10 +925,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  625              		.type	enter, %function
  626              	enter:
  627              	.LFB39:
- 150:main.c        **** 
- 151:main.c        **** void enter(uint8_t new) 
- 152:main.c        **** {
- 628              		.loc 1 152 0
+ 149:main.c        **** 
+ 150:main.c        **** void enter(uint8_t new) 
+ 151:main.c        **** {
+ 628              		.loc 1 151 0
  629              		.cfi_startproc
  630              		@ args = 0, pretend = 0, frame = 8
  631              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -946,22 +945,22 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  642              		.cfi_def_cfa_register 7
  643 0006 0346     		mov	r3, r0
  644 0008 FB71     		strb	r3, [r7, #7]
- 153:main.c        **** 	LED_blinkstop(STATUS);
- 645              		.loc 1 153 0
+ 152:main.c        **** 	LED_blinkstop(STATUS);
+ 645              		.loc 1 152 0
  646 000a 4FF00000 		mov	r0, #0
  647 000e FFF7FEFF 		bl	LED_blinkstop
- 154:main.c        **** 	LED_clr(STATUS);
- 648              		.loc 1 154 0
+ 153:main.c        **** 	LED_clr(STATUS);
+ 648              		.loc 1 153 0
  649 0012 4FF00000 		mov	r0, #0
  650 0016 FFF7FEFF 		bl	LED_clr
- 155:main.c        **** 	switch (new) {
- 651              		.loc 1 155 0
+ 154:main.c        **** 	switch (new) {
+ 651              		.loc 1 154 0
  652 001a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  653 001c 032B     		cmp	r3, #3
-ARM GAS  /tmp/ccHO9a9u.s 			page 17
-
-
  654 001e 4BD8     		bhi	.L31
+ARM GAS  /tmp/ccbRaMWv.s 			page 17
+
+
  655 0020 01A2     		adr	r2, .L36
  656 0022 52F823F0 		ldr	pc, [r2, r3, lsl #2]
  657 0026 00BF     		.align	2
@@ -971,12 +970,12 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  661 0030 79000000 		.word	.L34+1
  662 0034 99000000 		.word	.L35+1
  663              	.L32:
- 156:main.c        **** 		case IDLE:
- 157:main.c        **** 			do_vent();
- 664              		.loc 1 157 0
+ 155:main.c        **** 		case IDLE:
+ 156:main.c        **** 			do_vent();
+ 664              		.loc 1 156 0
  665 0038 FFF7FEFF 		bl	do_vent
- 158:main.c        **** 			TRACE_DEBUG("entered state IDLE\n");
- 666              		.loc 1 158 0
+ 157:main.c        **** 			TRACE_DEBUG("entered state IDLE\n");
+ 666              		.loc 1 157 0
  667 003c 40F20003 		movw	r3, #:lower16:_impure_ptr
  668 0040 C0F20003 		movt	r3, #:upper16:_impure_ptr
  669 0044 1B68     		ldr	r3, [r3, #0]
@@ -985,16 +984,16 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  672 004a 40F20001 		movw	r1, #:lower16:.LC10
  673 004e C0F20001 		movt	r1, #:upper16:.LC10
  674 0052 FFF7FEFF 		bl	fiprintf
- 159:main.c        **** 			break;
- 675              		.loc 1 159 0
+ 158:main.c        **** 			break;
+ 675              		.loc 1 158 0
  676 0056 41E0     		b	.L37
  677              	.L33:
- 160:main.c        **** 		case READY:
- 161:main.c        **** 			do_press();
- 678              		.loc 1 161 0
+ 159:main.c        **** 		case READY:
+ 160:main.c        **** 			do_press();
+ 678              		.loc 1 160 0
  679 0058 FFF7FEFF 		bl	do_press
- 162:main.c        **** 			TRACE_DEBUG("entered state READY\n");
- 680              		.loc 1 162 0
+ 161:main.c        **** 			TRACE_DEBUG("entered state READY\n");
+ 680              		.loc 1 161 0
  681 005c 40F20003 		movw	r3, #:lower16:_impure_ptr
  682 0060 C0F20003 		movt	r3, #:upper16:_impure_ptr
  683 0064 1B68     		ldr	r3, [r3, #0]
@@ -1003,37 +1002,37 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  686 006a 40F20001 		movw	r1, #:lower16:.LC11
  687 006e C0F20001 		movt	r1, #:upper16:.LC11
  688 0072 FFF7FEFF 		bl	fiprintf
- 163:main.c        **** 			break;
- 689              		.loc 1 163 0
+ 162:main.c        **** 			break;
+ 689              		.loc 1 162 0
  690 0076 31E0     		b	.L37
  691              	.L34:
- 164:main.c        **** 		case SET:
- 165:main.c        **** 			do_hold();
- 692              		.loc 1 165 0
+ 163:main.c        **** 		case SET:
+ 164:main.c        **** 			do_hold();
+ 692              		.loc 1 164 0
  693 0078 FFF7FEFF 		bl	do_hold
- 166:main.c        **** 			TRACE_DEBUG("entered state SET\n");
- 694              		.loc 1 166 0
+ 165:main.c        **** 			TRACE_DEBUG("entered state SET\n");
+ 694              		.loc 1 165 0
  695 007c 40F20003 		movw	r3, #:lower16:_impure_ptr
  696 0080 C0F20003 		movt	r3, #:upper16:_impure_ptr
  697 0084 1B68     		ldr	r3, [r3, #0]
  698 0086 DB68     		ldr	r3, [r3, #12]
  699 0088 1846     		mov	r0, r3
-ARM GAS  /tmp/ccHO9a9u.s 			page 18
-
-
  700 008a 40F20001 		movw	r1, #:lower16:.LC12
+ARM GAS  /tmp/ccbRaMWv.s 			page 18
+
+
  701 008e C0F20001 		movt	r1, #:upper16:.LC12
  702 0092 FFF7FEFF 		bl	fiprintf
- 167:main.c        **** 			break;
- 703              		.loc 1 167 0
+ 166:main.c        **** 			break;
+ 703              		.loc 1 166 0
  704 0096 21E0     		b	.L37
  705              	.L35:
- 168:main.c        **** 		case GO:
- 169:main.c        **** 			do_press();
- 706              		.loc 1 169 0
+ 167:main.c        **** 		case GO:
+ 168:main.c        **** 			do_press();
+ 706              		.loc 1 168 0
  707 0098 FFF7FEFF 		bl	do_press
- 170:main.c        **** 			TRACE_DEBUG("entered state GO\n");
- 708              		.loc 1 170 0
+ 169:main.c        **** 			TRACE_DEBUG("entered state GO\n");
+ 708              		.loc 1 169 0
  709 009c 40F20003 		movw	r3, #:lower16:_impure_ptr
  710 00a0 C0F20003 		movt	r3, #:upper16:_impure_ptr
  711 00a4 1B68     		ldr	r3, [r3, #0]
@@ -1042,13 +1041,13 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  714 00aa 40F20001 		movw	r1, #:lower16:.LC13
  715 00ae C0F20001 		movt	r1, #:upper16:.LC13
  716 00b2 FFF7FEFF 		bl	fiprintf
- 171:main.c        **** 			break;
- 717              		.loc 1 171 0
+ 170:main.c        **** 			break;
+ 717              		.loc 1 170 0
  718 00b6 11E0     		b	.L37
  719              	.L31:
- 172:main.c        **** 		default:
- 173:main.c        **** 			TRACE_DEBUG("got invalid state\n");
- 720              		.loc 1 173 0
+ 171:main.c        **** 		default:
+ 172:main.c        **** 			TRACE_DEBUG("got invalid state\n");
+ 720              		.loc 1 172 0
  721 00b8 40F20003 		movw	r3, #:lower16:_impure_ptr
  722 00bc C0F20003 		movt	r3, #:upper16:_impure_ptr
  723 00c0 1B68     		ldr	r3, [r3, #0]
@@ -1057,31 +1056,31 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  726 00c6 40F20001 		movw	r1, #:lower16:.LC14
  727 00ca C0F20001 		movt	r1, #:upper16:.LC14
  728 00ce FFF7FEFF 		bl	fiprintf
- 174:main.c        **** 			enter(IDLE);
- 729              		.loc 1 174 0
+ 173:main.c        **** 			enter(IDLE);
+ 729              		.loc 1 173 0
  730 00d2 4FF00000 		mov	r0, #0
  731 00d6 FFF7FEFF 		bl	enter
- 175:main.c        **** 			return;
- 732              		.loc 1 175 0
+ 174:main.c        **** 			return;
+ 732              		.loc 1 174 0
  733 00da 05E0     		b	.L30
  734              	.L37:
- 176:main.c        **** 	}
- 177:main.c        **** 	_state = new;
- 735              		.loc 1 177 0
+ 175:main.c        **** 	}
+ 176:main.c        **** 	_state = new;
+ 735              		.loc 1 176 0
  736 00dc 40F20003 		movw	r3, #:lower16:_state
  737 00e0 C0F20003 		movt	r3, #:upper16:_state
  738 00e4 FA79     		ldrb	r2, [r7, #7]
  739 00e6 1A70     		strb	r2, [r3, #0]
  740              	.L30:
- 178:main.c        **** }
- 741              		.loc 1 178 0
+ 177:main.c        **** }
+ 741              		.loc 1 177 0
  742 00e8 07F10807 		add	r7, r7, #8
  743 00ec BD46     		mov	sp, r7
  744 00ee 80BD     		pop	{r7, pc}
-ARM GAS  /tmp/ccHO9a9u.s 			page 19
-
-
  745              		.cfi_endproc
+ARM GAS  /tmp/ccbRaMWv.s 			page 19
+
+
  746              	.LFE39:
  747              		.size	enter, .-enter
  748              		.section	.rodata
@@ -1138,10 +1137,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  799 0188 04000000 		.word	4
  800 018c 000E0E40 		.word	1074662912
  801 0190 0B       		.byte	11
-ARM GAS  /tmp/ccHO9a9u.s 			page 20
-
-
  802 0191 05       		.byte	5
+ARM GAS  /tmp/ccbRaMWv.s 			page 20
+
+
  803 0192 00       		.byte	0
  804 0193 00       		.space	1
  805              		.align	2
@@ -1198,10 +1197,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  856 004e 0200     		.2byte	0x2
  857 0050 7D       		.byte	0x7d
  858 0051 0C       		.sleb128 12
-ARM GAS  /tmp/ccHO9a9u.s 			page 21
-
-
  859 0052 04000000 		.4byte	.LCFI4
+ARM GAS  /tmp/ccbRaMWv.s 			page 21
+
+
  860 0056 06000000 		.4byte	.LCFI5
  861 005a 0200     		.2byte	0x2
  862 005c 7D       		.byte	0x7d
@@ -1258,10 +1257,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  913 00d8 77       		.byte	0x77
  914 00d9 28       		.sleb128 40
  915 00da 00000000 		.4byte	0x0
-ARM GAS  /tmp/ccHO9a9u.s 			page 22
-
-
  916 00de 00000000 		.4byte	0x0
+ARM GAS  /tmp/ccbRaMWv.s 			page 22
+
+
  917              	.LLST4:
  918 00e2 00000000 		.4byte	.LFB39
  919 00e6 02000000 		.4byte	.LCFI12
@@ -1318,10 +1317,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  970 0037 02       		.uleb128 0x2
  971 0038 02       		.byte	0x2
  972 0039 05       		.byte	0x5
-ARM GAS  /tmp/ccHO9a9u.s 			page 23
-
-
  973 003a 0C000000 		.4byte	.LASF2
+ARM GAS  /tmp/ccbRaMWv.s 			page 23
+
+
  974 003e 02       		.uleb128 0x2
  975 003f 02       		.byte	0x2
  976 0040 07       		.byte	0x7
@@ -1378,10 +1377,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1027 00a4 A9000000 		.4byte	0xa9
  1028 00a8 00       		.byte	0x0
  1029 00a9 08       		.uleb128 0x8
-ARM GAS  /tmp/ccHO9a9u.s 			page 24
-
-
  1030 00aa 30000000 		.4byte	0x30
+ARM GAS  /tmp/ccbRaMWv.s 			page 24
+
+
  1031 00ae B9000000 		.4byte	0xb9
  1032 00b2 09       		.uleb128 0x9
  1033 00b3 4C000000 		.4byte	0x4c
@@ -1438,10 +1437,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1084 0110 67010000 		.4byte	0x167
  1085 0114 0B       		.uleb128 0xb
  1086 0115 D5020000 		.4byte	.LASF19
-ARM GAS  /tmp/ccHO9a9u.s 			page 25
-
-
  1087 0119 05       		.byte	0x5
+ARM GAS  /tmp/ccbRaMWv.s 			page 25
+
+
  1088 011a 2E       		.byte	0x2e
  1089 011b 67010000 		.4byte	0x167
  1090 011f 02       		.byte	0x2
@@ -1498,10 +1497,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1141 0177 4C000000 		.4byte	0x4c
  1142 017b 00       		.byte	0x0
  1143 017c 00       		.byte	0x0
-ARM GAS  /tmp/ccHO9a9u.s 			page 26
-
-
  1144 017d 0D       		.uleb128 0xd
+ARM GAS  /tmp/ccbRaMWv.s 			page 26
+
+
  1145 017e F4020000 		.4byte	.LASF24
  1146 0182 24       		.byte	0x24
  1147 0183 05       		.byte	0x5
@@ -1558,10 +1557,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1198 01dd 0B       		.uleb128 0xb
  1199 01de 2D060000 		.4byte	.LASF31
  1200 01e2 05       		.byte	0x5
-ARM GAS  /tmp/ccHO9a9u.s 			page 27
-
-
  1201 01e3 3C       		.byte	0x3c
+ARM GAS  /tmp/ccbRaMWv.s 			page 27
+
+
  1202 01e4 45000000 		.4byte	0x45
  1203 01e8 02       		.byte	0x2
  1204 01e9 23       		.byte	0x23
@@ -1618,10 +1617,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1255 0246 05       		.byte	0x5
  1256 0247 4E       		.byte	0x4e
  1257 0248 F6000000 		.4byte	0xf6
-ARM GAS  /tmp/ccHO9a9u.s 			page 28
-
-
  1258 024c 03       		.byte	0x3
+ARM GAS  /tmp/ccbRaMWv.s 			page 28
+
+
  1259 024d 23       		.byte	0x23
  1260 024e 8402     		.uleb128 0x104
  1261 0250 00       		.byte	0x0
@@ -1678,10 +1677,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1312 02af C0020000 		.4byte	0x2c0
  1313 02b3 BE020000 		.4byte	0x2be
  1314 02b7 09       		.uleb128 0x9
-ARM GAS  /tmp/ccHO9a9u.s 			page 29
-
-
  1315 02b8 4C000000 		.4byte	0x4c
+ARM GAS  /tmp/ccbRaMWv.s 			page 29
+
+
  1316 02bc 1F       		.byte	0x1f
  1317 02bd 00       		.byte	0x0
  1318 02be 11       		.uleb128 0x11
@@ -1738,10 +1737,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1369 0319 23       		.byte	0x23
  1370 031a 04       		.uleb128 0x4
  1371 031b 0E       		.uleb128 0xe
-ARM GAS  /tmp/ccHO9a9u.s 			page 30
-
-
  1372 031c 5F7700   		.ascii	"_w\000"
+ARM GAS  /tmp/ccbRaMWv.s 			page 30
+
+
  1373 031f 05       		.byte	0x5
  1374 0320 AC       		.byte	0xac
  1375 0321 45000000 		.4byte	0x45
@@ -1798,10 +1797,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1426 037b 20       		.uleb128 0x20
  1427 037c 0B       		.uleb128 0xb
  1428 037d 08040000 		.4byte	.LASF51
-ARM GAS  /tmp/ccHO9a9u.s 			page 31
-
-
  1429 0381 05       		.byte	0x5
+ARM GAS  /tmp/ccbRaMWv.s 			page 31
+
+
  1430 0382 BB       		.byte	0xbb
  1431 0383 0F060000 		.4byte	0x60f
  1432 0387 02       		.byte	0x2
@@ -1858,10 +1857,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1483 03de 0B       		.uleb128 0xb
  1484 03df 7B070000 		.4byte	.LASF55
  1485 03e3 05       		.byte	0x5
-ARM GAS  /tmp/ccHO9a9u.s 			page 32
-
-
  1486 03e4 C7       		.byte	0xc7
+ARM GAS  /tmp/ccbRaMWv.s 			page 32
+
+
  1487 03e5 65060000 		.4byte	0x665
  1488 03e9 02       		.byte	0x2
  1489 03ea 23       		.byte	0x23
@@ -1918,10 +1917,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1540 0441 7A050000 		.4byte	.LASF61
  1541 0445 05       		.byte	0x5
  1542 0446 D8       		.byte	0xd8
-ARM GAS  /tmp/ccHO9a9u.s 			page 33
-
-
  1543 0447 45000000 		.4byte	0x45
+ARM GAS  /tmp/ccbRaMWv.s 			page 33
+
+
  1544 044b 02       		.byte	0x2
  1545 044c 23       		.byte	0x23
  1546 044d 64       		.uleb128 0x64
@@ -1978,10 +1977,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1597 04b5 4B02     		.2byte	0x24b
  1598 04b7 C2060000 		.4byte	0x6c2
  1599 04bb 02       		.byte	0x2
-ARM GAS  /tmp/ccHO9a9u.s 			page 34
-
-
  1600 04bc 23       		.byte	0x23
+ARM GAS  /tmp/ccbRaMWv.s 			page 34
+
+
  1601 04bd 0C       		.uleb128 0xc
  1602 04be 15       		.uleb128 0x15
  1603 04bf CA050000 		.4byte	.LASF67
@@ -2038,10 +2037,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1654 0520 67010000 		.4byte	0x167
  1655 0524 02       		.byte	0x2
  1656 0525 23       		.byte	0x23
-ARM GAS  /tmp/ccHO9a9u.s 			page 35
-
-
  1657 0526 40       		.uleb128 0x40
+ARM GAS  /tmp/ccbRaMWv.s 			page 35
+
+
  1658 0527 15       		.uleb128 0x15
  1659 0528 FB010000 		.4byte	.LASF74
  1660 052c 05       		.byte	0x5
@@ -2098,10 +2097,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1711 058d 03       		.byte	0x3
  1712 058e 23       		.byte	0x23
  1713 058f C802     		.uleb128 0x148
-ARM GAS  /tmp/ccHO9a9u.s 			page 36
-
-
  1714 0591 15       		.uleb128 0x15
+ARM GAS  /tmp/ccbRaMWv.s 			page 36
+
+
  1715 0592 77000000 		.4byte	.LASF80
  1716 0596 05       		.byte	0x5
  1717 0597 8602     		.2byte	0x286
@@ -2158,10 +2157,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1768 05ff 45000000 		.4byte	0x45
  1769 0603 00       		.byte	0x0
  1770 0604 0F       		.uleb128 0xf
-ARM GAS  /tmp/ccHO9a9u.s 			page 37
-
-
  1771 0605 04       		.byte	0x4
+ARM GAS  /tmp/ccbRaMWv.s 			page 37
+
+
  1772 0606 0A060000 		.4byte	0x60a
  1773 060a 16       		.uleb128 0x16
  1774 060b D8050000 		.4byte	0x5d8
@@ -2218,10 +2217,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1825 0681 17       		.uleb128 0x17
  1826 0682 3F070000 		.4byte	.LASF86
  1827 0686 0C       		.byte	0xc
-ARM GAS  /tmp/ccHO9a9u.s 			page 38
-
-
  1828 0687 05       		.byte	0x5
+ARM GAS  /tmp/ccbRaMWv.s 			page 38
+
+
  1829 0688 1501     		.2byte	0x115
  1830 068a BC060000 		.4byte	0x6bc
  1831 068e 15       		.uleb128 0x15
@@ -2278,10 +2277,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1882 06f1 23       		.byte	0x23
  1883 06f2 06       		.uleb128 0x6
  1884 06f3 15       		.uleb128 0x15
-ARM GAS  /tmp/ccHO9a9u.s 			page 39
-
-
  1885 06f4 CF060000 		.4byte	.LASF92
+ARM GAS  /tmp/ccbRaMWv.s 			page 39
+
+
  1886 06f8 05       		.byte	0x5
  1887 06f9 3401     		.2byte	0x134
  1888 06fb 3E000000 		.4byte	0x3e
@@ -2338,10 +2337,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1939 075d 05       		.byte	0x5
  1940 075e 6902     		.2byte	0x269
  1941 0760 45000000 		.4byte	0x45
-ARM GAS  /tmp/ccHO9a9u.s 			page 40
-
-
  1942 0764 02       		.byte	0x2
+ARM GAS  /tmp/ccbRaMWv.s 			page 40
+
+
  1943 0765 23       		.byte	0x23
  1944 0766 48       		.uleb128 0x48
  1945 0767 15       		.uleb128 0x15
@@ -2398,10 +2397,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  1996 07c8 7002     		.2byte	0x270
  1997 07ca 63080000 		.4byte	0x863
  1998 07ce 03       		.byte	0x3
-ARM GAS  /tmp/ccHO9a9u.s 			page 41
-
-
  1999 07cf 23       		.byte	0x23
+ARM GAS  /tmp/ccbRaMWv.s 			page 41
+
+
  2000 07d0 8801     		.uleb128 0x88
  2001 07d2 15       		.uleb128 0x15
  2002 07d3 6A000000 		.4byte	.LASF105
@@ -2458,10 +2457,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2053 083a 45000000 		.4byte	0x45
  2054 083e 03       		.byte	0x3
  2055 083f 23       		.byte	0x23
-ARM GAS  /tmp/ccHO9a9u.s 			page 42
-
-
  2056 0840 CC01     		.uleb128 0xcc
+ARM GAS  /tmp/ccbRaMWv.s 			page 42
+
+
  2057 0842 00       		.byte	0x0
  2058 0843 08       		.uleb128 0x8
  2059 0844 D8050000 		.4byte	0x5d8
@@ -2518,10 +2517,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2110 08b0 BB080000 		.4byte	0x8bb
  2111 08b4 09       		.uleb128 0x9
  2112 08b5 4C000000 		.4byte	0x4c
-ARM GAS  /tmp/ccHO9a9u.s 			page 43
-
-
  2113 08b9 1D       		.byte	0x1d
+ARM GAS  /tmp/ccbRaMWv.s 			page 43
+
+
  2114 08ba 00       		.byte	0x0
  2115 08bb 19       		.uleb128 0x19
  2116 08bc F0       		.byte	0xf0
@@ -2578,10 +2577,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2167 092b 02       		.byte	0x2
  2168 092c 00       		.byte	0x0
  2169 092d 04       		.uleb128 0x4
-ARM GAS  /tmp/ccHO9a9u.s 			page 44
-
-
  2170 092e 4E070000 		.4byte	.LASF115
+ARM GAS  /tmp/ccbRaMWv.s 			page 44
+
+
  2171 0932 06       		.byte	0x6
  2172 0933 2A       		.byte	0x2a
  2173 0934 30000000 		.4byte	0x30
@@ -2638,10 +2637,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2224 09a8 E106     		.2byte	0x6e1
  2225 09aa 4E090000 		.4byte	0x94e
  2226 09ae 02       		.byte	0x2
-ARM GAS  /tmp/ccHO9a9u.s 			page 45
-
-
  2227 09af 23       		.byte	0x23
+ARM GAS  /tmp/ccbRaMWv.s 			page 45
+
+
  2228 09b0 00       		.uleb128 0x0
  2229 09b1 15       		.uleb128 0x15
  2230 09b2 B3010000 		.4byte	.LASF119
@@ -2698,10 +2697,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2281 0a13 4A0E0000 		.4byte	0xe4a
  2282 0a17 02       		.byte	0x2
  2283 0a18 23       		.byte	0x23
-ARM GAS  /tmp/ccHO9a9u.s 			page 46
-
-
  2284 0a19 1C       		.uleb128 0x1c
+ARM GAS  /tmp/ccbRaMWv.s 			page 46
+
+
  2285 0a1a 15       		.uleb128 0x15
  2286 0a1b 97040000 		.4byte	.LASF126
  2287 0a1f 07       		.byte	0x7
@@ -2758,10 +2757,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2338 0a80 02       		.byte	0x2
  2339 0a81 23       		.byte	0x23
  2340 0a82 38       		.uleb128 0x38
-ARM GAS  /tmp/ccHO9a9u.s 			page 47
-
-
  2341 0a83 15       		.uleb128 0x15
+ARM GAS  /tmp/ccbRaMWv.s 			page 47
+
+
  2342 0a84 41020000 		.4byte	.LASF133
  2343 0a88 07       		.byte	0x7
  2344 0a89 F006     		.2byte	0x6f0
@@ -2818,10 +2817,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2395 0aea 23       		.byte	0x23
  2396 0aeb 54       		.uleb128 0x54
  2397 0aec 15       		.uleb128 0x15
-ARM GAS  /tmp/ccHO9a9u.s 			page 48
-
-
  2398 0aed CB040000 		.4byte	.LASF140
+ARM GAS  /tmp/ccbRaMWv.s 			page 48
+
+
  2399 0af1 07       		.byte	0x7
  2400 0af2 F706     		.2byte	0x6f7
  2401 0af4 53090000 		.4byte	0x953
@@ -2878,10 +2877,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2452 0b54 70       		.uleb128 0x70
  2453 0b55 15       		.uleb128 0x15
  2454 0b56 76030000 		.4byte	.LASF147
-ARM GAS  /tmp/ccHO9a9u.s 			page 49
-
-
  2455 0b5a 07       		.byte	0x7
+ARM GAS  /tmp/ccbRaMWv.s 			page 49
+
+
  2456 0b5b FE06     		.2byte	0x6fe
  2457 0b5d 630E0000 		.4byte	0xe63
  2458 0b61 02       		.byte	0x2
@@ -2938,10 +2937,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2509 0bc4 15       		.uleb128 0x15
  2510 0bc5 84040000 		.4byte	.LASF154
  2511 0bc9 07       		.byte	0x7
-ARM GAS  /tmp/ccHO9a9u.s 			page 50
-
-
  2512 0bca 0507     		.2byte	0x705
+ARM GAS  /tmp/ccbRaMWv.s 			page 50
+
+
  2513 0bcc 53090000 		.4byte	0x953
  2514 0bd0 03       		.byte	0x3
  2515 0bd1 23       		.byte	0x23
@@ -2998,10 +2997,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2566 0c35 54060000 		.4byte	.LASF161
  2567 0c39 07       		.byte	0x7
  2568 0c3a 0C07     		.2byte	0x70c
-ARM GAS  /tmp/ccHO9a9u.s 			page 51
-
-
  2569 0c3c 4E090000 		.4byte	0x94e
+ARM GAS  /tmp/ccbRaMWv.s 			page 51
+
+
  2570 0c40 03       		.byte	0x3
  2571 0c41 23       		.byte	0x23
  2572 0c42 B401     		.uleb128 0xb4
@@ -3058,10 +3057,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2623 0ca9 07       		.byte	0x7
  2624 0caa 1307     		.2byte	0x713
  2625 0cac 4E090000 		.4byte	0x94e
-ARM GAS  /tmp/ccHO9a9u.s 			page 52
-
-
  2626 0cb0 03       		.byte	0x3
+ARM GAS  /tmp/ccbRaMWv.s 			page 52
+
+
  2627 0cb1 23       		.byte	0x23
  2628 0cb2 D001     		.uleb128 0xd0
  2629 0cb4 15       		.uleb128 0x15
@@ -3118,10 +3117,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2680 0d1a 1A07     		.2byte	0x71a
  2681 0d1c 810E0000 		.4byte	0xe81
  2682 0d20 03       		.byte	0x3
-ARM GAS  /tmp/ccHO9a9u.s 			page 53
-
-
  2683 0d21 23       		.byte	0x23
+ARM GAS  /tmp/ccbRaMWv.s 			page 53
+
+
  2684 0d22 EC01     		.uleb128 0xec
  2685 0d24 15       		.uleb128 0x15
  2686 0d25 55000000 		.4byte	.LASF176
@@ -3178,10 +3177,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2737 0d8c 53090000 		.4byte	0x953
  2738 0d90 03       		.byte	0x3
  2739 0d91 23       		.byte	0x23
-ARM GAS  /tmp/ccHO9a9u.s 			page 54
-
-
  2740 0d92 E002     		.uleb128 0x160
+ARM GAS  /tmp/ccbRaMWv.s 			page 54
+
+
  2741 0d94 15       		.uleb128 0x15
  2742 0d95 16000000 		.4byte	.LASF183
  2743 0d99 07       		.byte	0x7
@@ -3238,10 +3237,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2794 0e00 03       		.byte	0x3
  2795 0e01 23       		.byte	0x23
  2796 0e02 FC02     		.uleb128 0x17c
-ARM GAS  /tmp/ccHO9a9u.s 			page 55
-
-
  2797 0e04 15       		.uleb128 0x15
+ARM GAS  /tmp/ccbRaMWv.s 			page 55
+
+
  2798 0e05 0D050000 		.4byte	.LASF190
  2799 0e09 07       		.byte	0x7
  2800 0e0a 2907     		.2byte	0x729
@@ -3298,10 +3297,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2851 0e78 68090000 		.4byte	0x968
  2852 0e7c 1C       		.uleb128 0x1c
  2853 0e7d 68090000 		.4byte	0x968
-ARM GAS  /tmp/ccHO9a9u.s 			page 56
-
-
  2854 0e81 1C       		.uleb128 0x1c
+ARM GAS  /tmp/ccbRaMWv.s 			page 56
+
+
  2855 0e82 88090000 		.4byte	0x988
  2856 0e86 1C       		.uleb128 0x1c
  2857 0e87 58090000 		.4byte	0x958
@@ -3358,10 +3357,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2908 0eed 43090000 		.4byte	0x943
  2909 0ef1 02       		.byte	0x2
  2910 0ef2 23       		.byte	0x23
-ARM GAS  /tmp/ccHO9a9u.s 			page 57
-
-
  2911 0ef3 00       		.uleb128 0x0
+ARM GAS  /tmp/ccbRaMWv.s 			page 57
+
+
  2912 0ef4 0E       		.uleb128 0xe
  2913 0ef5 70696F00 		.ascii	"pio\000"
  2914 0ef9 08       		.byte	0x8
@@ -3418,10 +3417,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  2965 0f5e 01       		.byte	0x1
  2966 0f5f 21       		.byte	0x21
  2967 0f60 45000000 		.4byte	0x45
-ARM GAS  /tmp/ccHO9a9u.s 			page 58
-
-
  2968 0f64 02       		.byte	0x2
+ARM GAS  /tmp/ccbRaMWv.s 			page 58
+
+
  2969 0f65 91       		.byte	0x91
  2970 0f66 68       		.sleb128 -24
  2971 0f67 21       		.uleb128 0x21
@@ -3478,10 +3477,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3022 0fca 09       		.uleb128 0x9
  3023 0fcb 4C000000 		.4byte	0x4c
  3024 0fcf 1F       		.byte	0x1f
-ARM GAS  /tmp/ccHO9a9u.s 			page 59
-
-
  3025 0fd0 00       		.byte	0x0
+ARM GAS  /tmp/ccbRaMWv.s 			page 59
+
+
  3026 0fd1 08       		.uleb128 0x8
  3027 0fd2 320F0000 		.4byte	0xf32
  3028 0fd6 E10F0000 		.4byte	0xfe1
@@ -3495,7 +3494,7 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3036 0fe7 01       		.byte	0x1
  3037 0fe8 FD070000 		.4byte	.LASF206
  3038 0fec 01       		.byte	0x1
- 3039 0fed 83       		.byte	0x83
+ 3039 0fed 82       		.byte	0x82
  3040 0fee 00000000 		.4byte	.LFB36
  3041 0ff2 46000000 		.4byte	.LFE36
  3042 0ff6 3A000000 		.4byte	.LLST1
@@ -3503,7 +3502,7 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3044 0ffe 22       		.uleb128 0x22
  3045 0fff 707200   		.ascii	"pr\000"
  3046 1002 01       		.byte	0x1
- 3047 1003 85       		.byte	0x85
+ 3047 1003 84       		.byte	0x84
  3048 1004 19100000 		.4byte	0x1019
  3049 1008 02       		.byte	0x2
  3050 1009 91       		.byte	0x91
@@ -3511,7 +3510,7 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3052 100b 22       		.uleb128 0x22
  3053 100c 766E00   		.ascii	"vn\000"
  3054 100f 01       		.byte	0x1
- 3055 1010 86       		.byte	0x86
+ 3055 1010 85       		.byte	0x85
  3056 1011 19100000 		.4byte	0x1019
  3057 1015 02       		.byte	0x2
  3058 1016 91       		.byte	0x91
@@ -3523,7 +3522,7 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3064 101f 01       		.byte	0x1
  3065 1020 93060000 		.4byte	.LASF207
  3066 1024 01       		.byte	0x1
- 3067 1025 8A       		.byte	0x8a
+ 3067 1025 89       		.byte	0x89
  3068 1026 00000000 		.4byte	.LFB37
  3069 102a 2E000000 		.4byte	.LFE37
  3070 102e 72000000 		.4byte	.LLST2
@@ -3531,22 +3530,22 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3072 1036 21       		.uleb128 0x21
  3073 1037 19070000 		.4byte	.LASF208
  3074 103b 01       		.byte	0x1
- 3075 103c 8C       		.byte	0x8c
+ 3075 103c 8B       		.byte	0x8b
  3076 103d 45100000 		.4byte	0x1045
  3077 1041 02       		.byte	0x2
  3078 1042 91       		.byte	0x91
  3079 1043 58       		.sleb128 -40
  3080 1044 00       		.byte	0x0
  3081 1045 16       		.uleb128 0x16
-ARM GAS  /tmp/ccHO9a9u.s 			page 60
-
-
  3082 1046 D10F0000 		.4byte	0xfd1
+ARM GAS  /tmp/ccbRaMWv.s 			page 60
+
+
  3083 104a 23       		.uleb128 0x23
  3084 104b 01       		.byte	0x1
  3085 104c 5D030000 		.4byte	.LASF209
  3086 1050 01       		.byte	0x1
- 3087 1051 90       		.byte	0x90
+ 3087 1051 8F       		.byte	0x8f
  3088 1052 00000000 		.4byte	.LFB38
  3089 1056 46000000 		.4byte	.LFE38
  3090 105a AA000000 		.4byte	.LLST3
@@ -3554,7 +3553,7 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3092 1062 22       		.uleb128 0x22
  3093 1063 707200   		.ascii	"pr\000"
  3094 1066 01       		.byte	0x1
- 3095 1067 92       		.byte	0x92
+ 3095 1067 91       		.byte	0x91
  3096 1068 19100000 		.4byte	0x1019
  3097 106c 02       		.byte	0x2
  3098 106d 91       		.byte	0x91
@@ -3562,7 +3561,7 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3100 106f 22       		.uleb128 0x22
  3101 1070 766E00   		.ascii	"vn\000"
  3102 1073 01       		.byte	0x1
- 3103 1074 93       		.byte	0x93
+ 3103 1074 92       		.byte	0x92
  3104 1075 19100000 		.4byte	0x1019
  3105 1079 02       		.byte	0x2
  3106 107a 91       		.byte	0x91
@@ -3572,7 +3571,7 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3110 107e 01       		.byte	0x1
  3111 107f 49030000 		.4byte	.LASF211
  3112 1083 01       		.byte	0x1
- 3113 1084 97       		.byte	0x97
+ 3113 1084 96       		.byte	0x96
  3114 1085 01       		.byte	0x1
  3115 1086 00000000 		.4byte	.LFB39
  3116 108a F0000000 		.4byte	.LFE39
@@ -3581,7 +3580,7 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3119 1096 25       		.uleb128 0x25
  3120 1097 6E657700 		.ascii	"new\000"
  3121 109b 01       		.byte	0x1
- 3122 109c 97       		.byte	0x97
+ 3122 109c 96       		.byte	0x96
  3123 109d 2D090000 		.4byte	0x92d
  3124 10a1 02       		.byte	0x2
  3125 10a2 91       		.byte	0x91
@@ -3598,10 +3597,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3136 10b4 D8000000 		.4byte	.LASF213
  3137 10b8 09       		.byte	0x9
  3138 10b9 CE06     		.2byte	0x6ce
-ARM GAS  /tmp/ccHO9a9u.s 			page 61
-
-
  3139 10bb C1100000 		.4byte	0x10c1
+ARM GAS  /tmp/ccbRaMWv.s 			page 61
+
+
  3140 10bf 01       		.byte	0x1
  3141 10c0 01       		.byte	0x1
  3142 10c1 1C       		.uleb128 0x1c
@@ -3658,10 +3657,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3193 1126 03       		.byte	0x3
  3194 1127 00000000 		.4byte	_state
  3195 112b 27       		.uleb128 0x27
-ARM GAS  /tmp/ccHO9a9u.s 			page 62
-
-
  3196 112c DB040000 		.4byte	.LASF215
+ARM GAS  /tmp/ccbRaMWv.s 			page 62
+
+
  3197 1130 01       		.byte	0x1
  3198 1131 14       		.byte	0x14
  3199 1132 D3100000 		.4byte	0x10d3
@@ -3718,10 +3717,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3250 0027 03       		.uleb128 0x3
  3251 0028 08       		.uleb128 0x8
  3252 0029 00       		.byte	0x0
-ARM GAS  /tmp/ccHO9a9u.s 			page 63
-
-
  3253 002a 00       		.byte	0x0
+ARM GAS  /tmp/ccbRaMWv.s 			page 63
+
+
  3254 002b 04       		.uleb128 0x4
  3255 002c 16       		.uleb128 0x16
  3256 002d 00       		.byte	0x0
@@ -3778,10 +3777,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3307 0060 01       		.uleb128 0x1
  3308 0061 01       		.byte	0x1
  3309 0062 49       		.uleb128 0x49
-ARM GAS  /tmp/ccHO9a9u.s 			page 64
-
-
  3310 0063 13       		.uleb128 0x13
+ARM GAS  /tmp/ccbRaMWv.s 			page 64
+
+
  3311 0064 01       		.uleb128 0x1
  3312 0065 13       		.uleb128 0x13
  3313 0066 00       		.byte	0x0
@@ -3838,10 +3837,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3364 0099 0B       		.uleb128 0xb
  3365 009a 0B       		.uleb128 0xb
  3366 009b 3A       		.uleb128 0x3a
-ARM GAS  /tmp/ccHO9a9u.s 			page 65
-
-
  3367 009c 0B       		.uleb128 0xb
+ARM GAS  /tmp/ccbRaMWv.s 			page 65
+
+
  3368 009d 3B       		.uleb128 0x3b
  3369 009e 0B       		.uleb128 0xb
  3370 009f 01       		.uleb128 0x1
@@ -3898,10 +3897,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3421 00d2 15       		.uleb128 0x15
  3422 00d3 01       		.byte	0x1
  3423 00d4 27       		.uleb128 0x27
-ARM GAS  /tmp/ccHO9a9u.s 			page 66
-
-
  3424 00d5 0C       		.uleb128 0xc
+ARM GAS  /tmp/ccbRaMWv.s 			page 66
+
+
  3425 00d6 49       		.uleb128 0x49
  3426 00d7 13       		.uleb128 0x13
  3427 00d8 01       		.uleb128 0x1
@@ -3958,10 +3957,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3478 010b 03       		.uleb128 0x3
  3479 010c 0E       		.uleb128 0xe
  3480 010d 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccHO9a9u.s 			page 67
-
-
  3481 010e 0B       		.uleb128 0xb
+ARM GAS  /tmp/ccbRaMWv.s 			page 67
+
+
  3482 010f 3A       		.uleb128 0x3a
  3483 0110 0B       		.uleb128 0xb
  3484 0111 3B       		.uleb128 0x3b
@@ -4018,10 +4017,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3535 0144 13       		.uleb128 0x13
  3536 0145 00       		.byte	0x0
  3537 0146 00       		.byte	0x0
-ARM GAS  /tmp/ccHO9a9u.s 			page 68
-
-
  3538 0147 1C       		.uleb128 0x1c
+ARM GAS  /tmp/ccbRaMWv.s 			page 68
+
+
  3539 0148 35       		.uleb128 0x35
  3540 0149 00       		.byte	0x0
  3541 014a 49       		.uleb128 0x49
@@ -4078,10 +4077,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3592 017d 0B       		.uleb128 0xb
  3593 017e 3B       		.uleb128 0x3b
  3594 017f 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccHO9a9u.s 			page 69
-
-
  3595 0180 49       		.uleb128 0x49
+ARM GAS  /tmp/ccbRaMWv.s 			page 69
+
+
  3596 0181 13       		.uleb128 0x13
  3597 0182 11       		.uleb128 0x11
  3598 0183 01       		.uleb128 0x1
@@ -4138,10 +4137,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3649 01b6 01       		.uleb128 0x1
  3650 01b7 12       		.uleb128 0x12
  3651 01b8 01       		.uleb128 0x1
-ARM GAS  /tmp/ccHO9a9u.s 			page 70
-
-
  3652 01b9 40       		.uleb128 0x40
+ARM GAS  /tmp/ccbRaMWv.s 			page 70
+
+
  3653 01ba 06       		.uleb128 0x6
  3654 01bb 01       		.uleb128 0x1
  3655 01bc 13       		.uleb128 0x13
@@ -4198,10 +4197,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3706 01ef 13       		.uleb128 0x13
  3707 01f0 3F       		.uleb128 0x3f
  3708 01f1 0C       		.uleb128 0xc
-ARM GAS  /tmp/ccHO9a9u.s 			page 71
-
-
  3709 01f2 3C       		.uleb128 0x3c
+ARM GAS  /tmp/ccbRaMWv.s 			page 71
+
+
  3710 01f3 0C       		.uleb128 0xc
  3711 01f4 00       		.byte	0x0
  3712 01f5 00       		.byte	0x0
@@ -4258,10 +4257,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3759 0030 4A100000 		.4byte	0x104a
  3760 0034 646F5F76 		.ascii	"do_vent\000"
  3760      656E7400 
-ARM GAS  /tmp/ccHO9a9u.s 			page 72
-
-
  3761 003c 7D100000 		.4byte	0x107d
+ARM GAS  /tmp/ccbRaMWv.s 			page 72
+
+
  3762 0040 656E7465 		.ascii	"enter\000"
  3762      7200
  3763 0046 19110000 		.4byte	0x1119
@@ -4318,10 +4317,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3794      494C4500 
  3795 00ad 75060000 		.4byte	0x675
  3796 00b1 5F5F4649 		.ascii	"__FILE\000"
-ARM GAS  /tmp/ccHO9a9u.s 			page 73
-
-
  3796      4C4500
+ARM GAS  /tmp/ccbRaMWv.s 			page 73
+
+
  3797 00b8 81060000 		.4byte	0x681
  3798 00bc 5F676C75 		.ascii	"_glue\000"
  3798      6500
@@ -4378,10 +4377,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3841 0004 78030000 		.4byte	.LFE35
  3842 0008 00000000 		.4byte	.LFB36
  3843 000c 46000000 		.4byte	.LFE36
-ARM GAS  /tmp/ccHO9a9u.s 			page 74
-
-
  3844 0010 00000000 		.4byte	.LFB37
+ARM GAS  /tmp/ccbRaMWv.s 			page 74
+
+
  3845 0014 2E000000 		.4byte	.LFE37
  3846 0018 00000000 		.4byte	.LFB38
  3847 001c 46000000 		.4byte	.LFE38
@@ -4438,10 +4437,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3876      00
  3877              	.LASF80:
  3878 0077 5F617465 		.ascii	"_atexit0\000"
-ARM GAS  /tmp/ccHO9a9u.s 			page 75
-
-
  3878      78697430 
+ARM GAS  /tmp/ccbRaMWv.s 			page 75
+
+
  3878      00
  3879              	.LASF199:
  3880 0080 74797065 		.ascii	"type\000"
@@ -4498,10 +4497,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3903              	.LASF25:
  3904 0105 5F5F746D 		.ascii	"__tm_sec\000"
  3904      5F736563 
-ARM GAS  /tmp/ccHO9a9u.s 			page 76
-
-
  3904      00
+ARM GAS  /tmp/ccbRaMWv.s 			page 76
+
+
  3905              	.LASF53:
  3906 010e 5F636C6F 		.ascii	"_close\000"
  3906      736500
@@ -4558,10 +4557,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3934      4320342E 
  3934      352E3200 
  3935              	.LASF163:
-ARM GAS  /tmp/ccHO9a9u.s 			page 77
-
-
  3936 019a 52657365 		.ascii	"Reserved9\000"
+ARM GAS  /tmp/ccbRaMWv.s 			page 77
+
+
  3936      72766564 
  3936      3900
  3937              	.LASF214:
@@ -4618,10 +4617,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3966      31365F74 
  3966      00
  3967              	.LASF192:
-ARM GAS  /tmp/ccHO9a9u.s 			page 78
-
-
  3968 0226 50494F5F 		.ascii	"PIO_PTCR\000"
+ARM GAS  /tmp/ccbRaMWv.s 			page 78
+
+
  3968      50544352 
  3968      00
  3969              	.LASF179:
@@ -4678,10 +4677,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  3996      7572655F 
  3996      70747200 
  3997              	.LASF171:
-ARM GAS  /tmp/ccHO9a9u.s 			page 79
-
-
  3998 02b4 52657365 		.ascii	"Reserved11\000"
+ARM GAS  /tmp/ccbRaMWv.s 			page 79
+
+
  3998      72766564 
  3998      313100
  3999              	.LASF175:
@@ -4738,10 +4737,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  4028      50545352 
  4028      00
  4029              	.LASF47:
-ARM GAS  /tmp/ccHO9a9u.s 			page 80
-
-
  4030 0343 5F66696C 		.ascii	"_file\000"
+ARM GAS  /tmp/ccbRaMWv.s 			page 80
+
+
  4030      6500
  4031              	.LASF211:
  4032 0349 656E7465 		.ascii	"enter\000"
@@ -4798,10 +4797,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  4061              	.LASF172:
  4062 03cc 50494F5F 		.ascii	"PIO_LOCKSR\000"
  4062      4C4F434B 
-ARM GAS  /tmp/ccHO9a9u.s 			page 81
-
-
  4062      535200
+ARM GAS  /tmp/ccbRaMWv.s 			page 81
+
+
  4063              	.LASF218:
  4064 03d7 6D61696E 		.ascii	"main.c\000"
  4064      2E6300
@@ -4858,10 +4857,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  4093              	.LASF112:
  4094 0474 5F6E6578 		.ascii	"_nextf\000"
  4094      746600
-ARM GAS  /tmp/ccHO9a9u.s 			page 82
-
-
  4095              	.LASF143:
+ARM GAS  /tmp/ccbRaMWv.s 			page 82
+
+
  4096 047b 50494F5F 		.ascii	"PIO_PUER\000"
  4096      50554552 
  4096      00
@@ -4918,10 +4917,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  4124      656C6973 
  4124      7400
  4125              	.LASF139:
-ARM GAS  /tmp/ccHO9a9u.s 			page 83
-
-
  4126 0504 50494F5F 		.ascii	"PIO_MDDR\000"
+ARM GAS  /tmp/ccbRaMWv.s 			page 83
+
+
  4126      4D444452 
  4126      00
  4127              	.LASF190:
@@ -4978,10 +4977,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  4152      49464452 
  4152      00
  4153              	.LASF15:
-ARM GAS  /tmp/ccHO9a9u.s 			page 84
-
-
  4154 0591 5F6D6273 		.ascii	"_mbstate_t\000"
+ARM GAS  /tmp/ccbRaMWv.s 			page 84
+
+
  4154      74617465 
  4154      5F7400
  4155              	.LASF45:
@@ -5038,10 +5037,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  4184      6C756500 
  4185              	.LASF169:
  4186 061c 50494F5F 		.ascii	"PIO_REHLSR\000"
-ARM GAS  /tmp/ccHO9a9u.s 			page 85
-
-
  4186      5245484C 
+ARM GAS  /tmp/ccbRaMWv.s 			page 85
+
+
  4186      535200
  4187              	.LASF52:
  4188 0627 5F736565 		.ascii	"_seek\000"
@@ -5098,10 +5097,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  4216      00
  4217              	.LASF188:
  4218 06a4 50494F5F 		.ascii	"PIO_RNPR\000"
-ARM GAS  /tmp/ccHO9a9u.s 			page 86
-
-
  4218      524E5052 
+ARM GAS  /tmp/ccbRaMWv.s 			page 86
+
+
  4218      00
  4219              	.LASF3:
  4220 06ad 73686F72 		.ascii	"short unsigned int\000"
@@ -5158,10 +5157,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  4244      65616E75 
  4244      7000
  4245              	.LASF22:
-ARM GAS  /tmp/ccHO9a9u.s 			page 87
-
-
  4246 073a 5F776473 		.ascii	"_wds\000"
+ARM GAS  /tmp/ccbRaMWv.s 			page 87
+
+
  4246      00
  4247              	.LASF86:
  4248 073f 5F676C75 		.ascii	"_glue\000"
@@ -5218,10 +5217,10 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  4276 07bc 50494F5F 		.ascii	"PIO_OWDR\000"
  4276      4F574452 
  4276      00
-ARM GAS  /tmp/ccHO9a9u.s 			page 88
-
-
  4277              	.LASF99:
+ARM GAS  /tmp/ccbRaMWv.s 			page 88
+
+
  4278 07c5 5F723438 		.ascii	"_r48\000"
  4278      00
  4279              	.LASF130:
@@ -5251,58 +5250,58 @@ ARM GAS  /tmp/ccHO9a9u.s 			page 1
  4292      72657373 
  4292      00
  4293              		.ident	"GCC: (Linaro GCC 4.5-2011.02-0) 4.5.2"
-ARM GAS  /tmp/ccHO9a9u.s 			page 89
+ARM GAS  /tmp/ccbRaMWv.s 			page 89
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/ccHO9a9u.s:27     .data:0000000000000000 _state
-     /tmp/ccHO9a9u.s:30     .rodata:0000000000000000 $d
-     /tmp/ccHO9a9u.s:31     .rodata:0000000000000000 .LC0
-     /tmp/ccHO9a9u.s:34     .rodata:0000000000000018 .LC1
-     /tmp/ccHO9a9u.s:37     .rodata:0000000000000044 .LC2
-     /tmp/ccHO9a9u.s:40     .rodata:0000000000000058 .LC3
-     /tmp/ccHO9a9u.s:43     .rodata:000000000000006c .LC4
-     /tmp/ccHO9a9u.s:46     .rodata:0000000000000080 .LC5
-     /tmp/ccHO9a9u.s:49     .rodata:000000000000008c .LC6
-     /tmp/ccHO9a9u.s:52     .rodata:00000000000000a8 .LC7
-     /tmp/ccHO9a9u.s:55     .rodata:00000000000000ac .LC8
-     /tmp/ccHO9a9u.s:58     .rodata:00000000000000bc .LC9
-     /tmp/ccHO9a9u.s:61     .text.main:0000000000000000 $t
-     /tmp/ccHO9a9u.s:66     .text.main:0000000000000000 main
-     /tmp/ccHO9a9u.s:808    .rodata:0000000000000194 C.10.6306
-     /tmp/ccHO9a9u.s:626    .text.enter:0000000000000000 enter
-     /tmp/ccHO9a9u.s:338    .text.main:0000000000000274 $d
-     /tmp/ccHO9a9u.s:344    .text.main:0000000000000284 $t
-     /tmp/ccHO9a9u.s:460    .text.do_press:0000000000000000 $t
-     /tmp/ccHO9a9u.s:465    .text.do_press:0000000000000000 do_press
-     /tmp/ccHO9a9u.s:788    .rodata:000000000000017c C.8.6304
-     /tmp/ccHO9a9u.s:798    .rodata:0000000000000188 C.9.6305
-     /tmp/ccHO9a9u.s:510    .text.do_hold:0000000000000000 $t
-     /tmp/ccHO9a9u.s:515    .text.do_hold:0000000000000000 do_hold
-     /tmp/ccHO9a9u.s:772    .rodata:0000000000000164 C.7.6303
-     /tmp/ccHO9a9u.s:555    .text.do_vent:0000000000000000 $t
-     /tmp/ccHO9a9u.s:560    .text.do_vent:0000000000000000 do_vent
-     /tmp/ccHO9a9u.s:752    .rodata:000000000000014c C.5.6301
-     /tmp/ccHO9a9u.s:762    .rodata:0000000000000158 C.6.6302
-     /tmp/ccHO9a9u.s:606    .rodata:00000000000000d0 .LC10
-     /tmp/ccHO9a9u.s:609    .rodata:00000000000000e8 .LC11
-     /tmp/ccHO9a9u.s:612    .rodata:0000000000000104 .LC12
-     /tmp/ccHO9a9u.s:615    .rodata:000000000000011c .LC13
-     /tmp/ccHO9a9u.s:618    .rodata:0000000000000134 .LC14
-     /tmp/ccHO9a9u.s:621    .text.enter:0000000000000000 $t
-     /tmp/ccHO9a9u.s:659    .text.enter:0000000000000028 $d
-     /tmp/ccHO9a9u.s:665    .text.enter:0000000000000038 $t
+     /tmp/ccbRaMWv.s:27     .data:0000000000000000 _state
+     /tmp/ccbRaMWv.s:30     .rodata:0000000000000000 $d
+     /tmp/ccbRaMWv.s:31     .rodata:0000000000000000 .LC0
+     /tmp/ccbRaMWv.s:34     .rodata:0000000000000018 .LC1
+     /tmp/ccbRaMWv.s:37     .rodata:0000000000000044 .LC2
+     /tmp/ccbRaMWv.s:40     .rodata:0000000000000058 .LC3
+     /tmp/ccbRaMWv.s:43     .rodata:000000000000006c .LC4
+     /tmp/ccbRaMWv.s:46     .rodata:0000000000000080 .LC5
+     /tmp/ccbRaMWv.s:49     .rodata:000000000000008c .LC6
+     /tmp/ccbRaMWv.s:52     .rodata:00000000000000a8 .LC7
+     /tmp/ccbRaMWv.s:55     .rodata:00000000000000ac .LC8
+     /tmp/ccbRaMWv.s:58     .rodata:00000000000000bc .LC9
+     /tmp/ccbRaMWv.s:61     .text.main:0000000000000000 $t
+     /tmp/ccbRaMWv.s:66     .text.main:0000000000000000 main
+     /tmp/ccbRaMWv.s:808    .rodata:0000000000000194 C.10.6306
+     /tmp/ccbRaMWv.s:626    .text.enter:0000000000000000 enter
+     /tmp/ccbRaMWv.s:338    .text.main:0000000000000274 $d
+     /tmp/ccbRaMWv.s:344    .text.main:0000000000000284 $t
+     /tmp/ccbRaMWv.s:460    .text.do_press:0000000000000000 $t
+     /tmp/ccbRaMWv.s:465    .text.do_press:0000000000000000 do_press
+     /tmp/ccbRaMWv.s:788    .rodata:000000000000017c C.8.6304
+     /tmp/ccbRaMWv.s:798    .rodata:0000000000000188 C.9.6305
+     /tmp/ccbRaMWv.s:510    .text.do_hold:0000000000000000 $t
+     /tmp/ccbRaMWv.s:515    .text.do_hold:0000000000000000 do_hold
+     /tmp/ccbRaMWv.s:772    .rodata:0000000000000164 C.7.6303
+     /tmp/ccbRaMWv.s:555    .text.do_vent:0000000000000000 $t
+     /tmp/ccbRaMWv.s:560    .text.do_vent:0000000000000000 do_vent
+     /tmp/ccbRaMWv.s:752    .rodata:000000000000014c C.5.6301
+     /tmp/ccbRaMWv.s:762    .rodata:0000000000000158 C.6.6302
+     /tmp/ccbRaMWv.s:606    .rodata:00000000000000d0 .LC10
+     /tmp/ccbRaMWv.s:609    .rodata:00000000000000e8 .LC11
+     /tmp/ccbRaMWv.s:612    .rodata:0000000000000104 .LC12
+     /tmp/ccbRaMWv.s:615    .rodata:000000000000011c .LC13
+     /tmp/ccbRaMWv.s:618    .rodata:0000000000000134 .LC14
+     /tmp/ccbRaMWv.s:621    .text.enter:0000000000000000 $t
+     /tmp/ccbRaMWv.s:659    .text.enter:0000000000000028 $d
+     /tmp/ccbRaMWv.s:665    .text.enter:0000000000000038 $t
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 _impure_ptr
 fiprintf
 TimeTick_Configure
-LEDs_configure
-LED_blink
 PIO_Configure
 input_init
+LEDs_configure
+LED_blink
 USBC_Configure
 USBC_isConfigured
 setbuf
@@ -5311,7 +5310,7 @@ current
 USBC_hasData
 gets
 siscanf
-ARM GAS  /tmp/ccHO9a9u.s 			page 90
+ARM GAS  /tmp/ccbRaMWv.s 			page 90
 
 
 iprintf

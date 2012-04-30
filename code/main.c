@@ -41,19 +41,18 @@ int main()
 
     WDT->WDT_MR = WDT_MR_WDDIS;
 	TimeTick_Configure(BOARD_MCK);
-	LEDs_configure();
-
-	/* configure hardware */
-	LED_blink(STATUS, FOREVER);
 	PIO_Configure(pinsout, PIO_LISTSIZE(pinsout));
+	enter(IDLE);
 	input_init();
+
+	LEDs_configure();
+	LED_blink(STATUS, FOREVER);
 	USBC_Configure();
 	TRACE_DEBUG("waiting until USB is fully configured\n");
 	while (!USBC_isConfigured());
 	setbuf(stdout, NULL);
 	LED_blinkstop(STATUS);
 
-	enter(IDLE);
 
 	while (1) {
 		if (current[F] >= PAR_FMAX) {
