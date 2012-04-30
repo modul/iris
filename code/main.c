@@ -30,7 +30,6 @@ void enter(uint8_t new);
 
 int main() 
 {
-	int t = 0;
 	int argc;
 	int argv[3];
 	char line[32];
@@ -114,7 +113,7 @@ int main()
 		}
 		
 		/* Display state */
-		if ((t=GetTickCount()) % 1000 == 0 && !LED_blinking(STATUS)) 
+		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) 
 			LED_blink(STATUS, _state);
 	}
 	return 0;
