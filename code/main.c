@@ -35,6 +35,7 @@ int main()
 	char line[32];
 	char cmd = 0;
 	const Pin pinsout[] = {PINS_VAL};
+	uint16_t soffset = 0;
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
@@ -87,14 +88,18 @@ int main()
 		/* Handle state */
 		switch (_state) {
 			case IDLE:
-				if (cmd == 's') // start
+				if (cmd == 's') { // start
+					soffset = 0;
 					enter(READY);
+				}
 				//TODO some configuration here
 				break;
 
 			case READY:
-				if (current[p] > PAR_PSET)
+				if (current[p] > PAR_PSET) {
+					soffset = current[s];
 					enter(SET);
+				}
 				break;
 
 			case SET:
