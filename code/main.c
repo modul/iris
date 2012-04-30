@@ -13,7 +13,10 @@
 #define MINv 0
 #define MAXv MAX
 
-uint16_t input[NUM_AIN] = {0};
+uint16_t current[NUM_AIN] = {0};
+uint16_t previous[NUM_AIN] = {0};
+uint16_t next[NUM_AIN] = {0};
+
 uint8_t _state = READY;
 
 static const Pin vpins[] = {PINS_VAL};
@@ -61,16 +64,23 @@ void TC0_IrqHandler()
 
 void ADC_IrqHandler()
 {
+	uint8_t i;
     uint32_t status;
 	static uint32_t timestamp = 0;
 
     status = ADC_GetStatus(ADC);
-	
-	TRACE_DEBUG("[%u] Got samples. 0: %umV, 1: %umV, 2: %umV\n", GetTickCount()-timestamp, VOLT(input[0]), VOLT(input[1]), VOLT(input[2]));
-	timestamp = GetTickCount();
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
-		ADC_ReadBuffer(ADC, (int16_t*) input, NUM_AIN);
+
+		for (i=0; i<NUM_AIN; i++) {
+			previous[i] = current[i];
+			current[i] = next[i];
+		}
+
+		TRACE_DEBUG("[%u] Got samples. 0: %umV, 1: %umV, 2: %umV\n", GetTickCount()-timestamp, VOLT(current[0]), VOLT(current[1]), VOLT(current[2]));
+		timestamp = GetTickCount();
+
+		ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
 	}
 }
 
