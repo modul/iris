@@ -1,34 +1,20 @@
 #include <string.h>
 #include "conf.h"
 
-// Timer must fire once for each conversion
-#define TIMER_FREQ (NUM_AIN * SAMPLING_FREQ)
-
 #define IDLE  0
 #define READY 1
 #define SET   2
 #define GO    3
 
-//TODO config struct
-#define MINv 0
-#define MAXv MAX
-
-uint16_t current[NUM_AIN] = {0};
-uint16_t previous[NUM_AIN] = {0};
-uint16_t next[NUM_AIN] = {0};
-
 uint8_t _state = READY;
 
-static const Pin vpins[] = {PINS_VAL};
+extern void input_init();
 
-#define PRESS() PIO_Clear(vpins+VAL_vent); PIO_Set(vpins+VAL_press)
-#define VENT() PIO_Clear(vpins+VAL_press); PIO_Set(vpins+VAL_vent)
-#define HALT() PIO_Clear(vpins+VAL_press); PIO_Clear(vpins+VAL_vent)
+void do_press();
+void do_hold();
+void do_vent();
 
-#define VOLT(b) ((b*VREF)>>RESOLUTION)
-
-static void init();
-static void enter(uint8_t new);
+void enter(uint8_t new);
 
 int main() 
 {
@@ -37,7 +23,7 @@ int main()
 	int argv[3];
 	char line[32];
 	char cmd = 0;
-
+	const Pin pinsout[] = {PINS_VAL};
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
@@ -47,7 +33,12 @@ int main()
 
 	/* configure hardware */
 	LED_blink(STATUS, FOREVER);
-	init();
+	PIO_Configure(pinsout, PIO_LISTSIZE(pinsout));
+	input_init();
+	USBC_Configure();
+	TRACE_DEBUG("waiting until USB is fully configured\n");
+	while (!USBC_isConfigured());
+	setbuf(stdout, NULL);
 	LED_blinkstop(STATUS);
 
 	enter(IDLE);
@@ -104,93 +95,45 @@ int main()
 	return 0;
 }
 
-void TC0_IrqHandler()
+void do_press() 
 {
-	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
-	status = status;
-
-	ADC_StartConversion(ADC);
+	const Pin p = PIN_VAL_press;
+	const Pin v = PIN_VAL_vent;
+	PIO_Clear(&v); PIO_Set(&p);
 }
 
-void ADC_IrqHandler()
+void do_hold()
 {
-    uint32_t status;
-	static uint32_t timestamp = 0;
-
-    status = ADC_GetStatus(ADC);
-
-	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
-		memcpy(previous, current, NUM_AIN*2);
-		memcpy(current, next, NUM_AIN*2);
-
-		TRACE_DEBUG("[%u] Got samples. 0: %umV, 1: %umV, 2: %umV\n", GetTickCount()-timestamp, VOLT(current[0]), VOLT(current[1]), VOLT(current[2]));
-		timestamp = GetTickCount();
-
-		ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
-	}
+	const Pin pins[] = {PINS_VAL};
+	PIO_Clear(pins);
 }
 
-static void init()
+void do_vent()
 {
-    uint32_t div;
-    uint32_t tcclks;
-	const Pin pins[] = {PINS_VAL, PINS_ADCIN};
-
-	/* PIO Configure */
-	PIO_Configure(pins, PIO_LISTSIZE(pins));
-
-    /* Enable peripheral clocks */
-    PMC_EnablePeripheral(ID_TC0);
-    PMC_EnablePeripheral(ID_ADC);
-
-    /* Configure TC */
-    TC_FindMckDivisor(TIMER_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
-    TC_Configure(TC0, 0, tcclks | TC_CMR_CPCTRG);
-    TC0->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / TIMER_FREQ;
-    TC0->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
-	TC_Start(TC0, 0);
-
-    /* Initialize ADC */
-    ADC_Initialize(ADC, ID_ADC);
-    ADC_cfgFrequency(ADC, 4, 1 ); // startup = 64 ADC periods, prescal = 1, ADC clock = 12 MHz
-	ADC->ADC_CHER = (1<<AIN0)|(1<<AIN1)|(1<<AIN2);
-    ADC->ADC_IER  = ADC_IER_RXBUFF;
-
-	/* Enable Interrupts */
-    NVIC_EnableIRQ(ADC_IRQn);
-	NVIC_SetPriority(ADC_IRQn, 0);
-    NVIC_EnableIRQ(TC0_IRQn);
-    NVIC_SetPriority(TC0_IRQn, 1);
-
-	/* USB Console Configuration */
-	USBC_Configure();
-
-	TRACE_DEBUG("waiting until USB is fully configured\n");
-	while (!USBC_isConfigured());
-	setbuf(stdout, NULL);
-
-	TRACE_INFO("configured\n");
+	const Pin p = PIN_VAL_press;
+	const Pin v = PIN_VAL_vent;
+	PIO_Clear(&p); PIO_Set(&v);
 }
 
-static void enter(uint8_t new) 
+void enter(uint8_t new) 
 {
 	LED_blinkstop(STATUS);
 	LED_clr(STATUS);
 	switch (new) {
 		case IDLE:
-			VENT();
+			do_vent();
 			TRACE_DEBUG("entered state IDLE\n");
 			break;
 		case READY:
-			PRESS();
+			do_press();
 			TRACE_DEBUG("entered state READY\n");
 			break;
 		case SET:
-			HALT();
+			do_hold();
 			TRACE_DEBUG("entered state SET\n");
 			break;
 		case GO:
-			PRESS();
+			do_press();
 			TRACE_DEBUG("entered state GO\n");
 			break;
 		default:
