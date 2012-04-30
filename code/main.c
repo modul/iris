@@ -64,18 +64,14 @@ void TC0_IrqHandler()
 
 void ADC_IrqHandler()
 {
-	uint8_t i;
     uint32_t status;
 	static uint32_t timestamp = 0;
 
     status = ADC_GetStatus(ADC);
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
-
-		for (i=0; i<NUM_AIN; i++) {
-			previous[i] = current[i];
-			current[i] = next[i];
-		}
+		memcpy(previous, current, NUM_AIN*2);
+		memcpy(current, next, NUM_AIN*2);
 
 		TRACE_DEBUG("[%u] Got samples. 0: %umV, 1: %umV, 2: %umV\n", GetTickCount()-timestamp, VOLT(current[0]), VOLT(current[1]), VOLT(current[2]));
 		timestamp = GetTickCount();
