@@ -6,7 +6,19 @@
 #define SET   2
 #define GO    3
 
+#define F AIN0
+#define p AIN1
+#define s AIN2
+
+#define PAR_PSET 50
+#define PAR_PMAX VREF
+#define PAR_SMAX VREF
+#define PAR_FMAX VREF
+
 uint8_t _state = READY;
+
+extern uint16_t current[NUM_AIN];   // current ADC input in mV
+extern uint16_t previous[NUM_AIN];  // previous ADC input in mV
 
 extern void input_init();
 
@@ -44,7 +56,18 @@ int main()
 	enter(IDLE);
 
 	while (1) {
-		//TODO always check input limits
+		if (current[F] >= PAR_FMAX) {
+			TRACE_INFO("FMAX reached.\n");
+			enter(IDLE);
+		}
+		if (current[p] >= PAR_PMAX) {
+			TRACE_INFO("PMAX reached.\n");
+			enter(IDLE);
+		}
+		if (current[s] >= PAR_SMAX) {
+			TRACE_INFO("SMAX reached.\n");
+			enter(IDLE);
+		}
 
 		/* Parse command line */
 		cmd = 0;
@@ -67,11 +90,12 @@ int main()
 			case IDLE:
 				if (cmd == 's') // start
 					enter(READY);
-				//TODO else if ()  // some configuration
+				//TODO some configuration here
 				break;
 
 			case READY:
-				//TODO if p > pset: enter(SET)
+				if (current[p] > PAR_PSET)
+					enter(SET);
 				break;
 
 			case SET:
@@ -80,7 +104,8 @@ int main()
 				break;
 
 			case GO:
-				//TODO if F > Ftrig: enter(IDLE)
+				if (current[F] <= previous[F]/2)
+					enter(IDLE);
 				break;
 
 			default:
@@ -97,9 +122,9 @@ int main()
 
 void do_press() 
 {
-	const Pin p = PIN_VAL_press;
-	const Pin v = PIN_VAL_vent;
-	PIO_Clear(&v); PIO_Set(&p);
+	const Pin pr = PIN_VAL_press;
+	const Pin vn = PIN_VAL_vent;
+	PIO_Clear(&vn); PIO_Set(&pr);
 }
 
 void do_hold()
@@ -110,9 +135,9 @@ void do_hold()
 
 void do_vent()
 {
-	const Pin p = PIN_VAL_press;
-	const Pin v = PIN_VAL_vent;
-	PIO_Clear(&p); PIO_Set(&v);
+	const Pin pr = PIN_VAL_press;
+	const Pin vn = PIN_VAL_vent;
+	PIO_Clear(&pr); PIO_Set(&vn);
 }
 
 void enter(uint8_t new) 
