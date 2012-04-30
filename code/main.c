@@ -79,8 +79,12 @@ int main()
 				if (argc > 0) {
 					TRACE_DEBUG("got %i valid arguments\n", argc);
 
-					if (cmd == 'a') // abort
+					if (cmd == 'a') { // abort
+						printf("ok\n");
 						enter(IDLE);
+					}
+					else if (cmd == 'l') // log
+						printf("%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
 				}
 			}
 		}
