@@ -4,10 +4,10 @@
 // Timer must fire once for each conversion
 #define TIMER_FREQ (NUM_AIN * SAMPLING_FREQ)
 
-#define READY 0
-#define SET     1
-#define GO    2
-#define FINISH 3
+#define IDLE  0
+#define READY 1
+#define SET   2
+#define GO    3
 
 //TODO config struct
 #define MINv 0
@@ -23,15 +23,21 @@ static const Pin vpins[] = {PINS_VAL};
 
 #define PRESS() PIO_Clear(vpins+VAL_vent); PIO_Set(vpins+VAL_press)
 #define VENT() PIO_Clear(vpins+VAL_press); PIO_Set(vpins+VAL_vent)
+#define HALT() PIO_Clear(vpins+VAL_press); PIO_Clear(vpins+VAL_vent)
+
 #define VOLT(b) ((b*VREF)>>RESOLUTION)
 
 static void init();
-static void state(uint8_t new);
-static void cli();
+static void enter(uint8_t new);
 
 int main() 
 {
-	uint32_t t = 0;
+	int t = 0;
+	int argc;
+	int argv[3];
+	char line[32];
+	char cmd = 0;
+
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
@@ -44,10 +50,54 @@ int main()
 	init();
 	LED_blinkstop(STATUS);
 
-	state(READY);
+	enter(IDLE);
 
 	while (1) {
-		cli();
+		//TODO always check input limits
+
+		/* Parse command line */
+		cmd = 0;
+		argc = 0;
+		if (USBC_hasData()) {
+			gets(line);
+			if (*line > 0 && *line != 10) {
+				argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2);
+				if (argc > 0) {
+					TRACE_DEBUG("got %i valid arguments\n", argc);
+
+					if (cmd == 'a') // abort
+						enter(IDLE);
+				}
+			}
+		}
+		
+		/* Handle state */
+		switch (_state) {
+			case IDLE:
+				if (cmd == 's') // start
+					enter(READY);
+				//TODO else if ()  // some configuration
+				break;
+
+			case READY:
+				//TODO if p > pset: enter(SET)
+				break;
+
+			case SET:
+				if (cmd == 's') // start/continue
+					enter(GO);
+				break;
+
+			case GO:
+				//TODO if F > Ftrig: enter(IDLE)
+				break;
+
+			default:
+				TRACE_ERROR("invalid state\n");
+				enter(IDLE);
+		}
+		
+		/* Display state */
 		if ((t=GetTickCount()) % 1000 == 0 && !LED_blinking(STATUS)) 
 			LED_blink(STATUS, _state);
 	}
@@ -122,51 +172,33 @@ static void init()
 	TRACE_INFO("configured\n");
 }
 
-static void state(uint8_t new) 
+static void enter(uint8_t new) 
 {
 	LED_blinkstop(STATUS);
 	LED_clr(STATUS);
 	switch (new) {
+		case IDLE:
+			VENT();
+			TRACE_DEBUG("entered state IDLE\n");
+			break;
 		case READY:
-			TRACE_DEBUG("set state READY\n");
+			PRESS();
+			TRACE_DEBUG("entered state READY\n");
 			break;
 		case SET:
-			TRACE_DEBUG("set state SET\n");
+			HALT();
+			TRACE_DEBUG("entered state SET\n");
 			break;
 		case GO:
-			TRACE_DEBUG("set state GO\n");
-			break;
-		case FINISH:
-			TRACE_DEBUG("set state FINISH\n");
+			PRESS();
+			TRACE_DEBUG("entered state GO\n");
 			break;
 		default:
 			TRACE_DEBUG("got invalid state\n");
-			state(READY);
+			enter(IDLE);
 			return;
 	}
 	_state = new;
 }
 
-static void cli()
-{
-	int argc;
-	int argv[3];
-	char line[32];
-	char cmd = 0;
-
-	if (!USBC_hasData())
-		return;
-
-	gets(line);
-	if (*line == 0 || *line == 10)
-		return;
-
-	argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2) - 1;
-	if (argc > 0)
-		TRACE_DEBUG("got %i arguments\n", argc);
-
-	// just for testing
-	if (argc == 0)
-		state(cmd-'0');
-}
 /* vim: set ts=4: */
