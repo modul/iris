@@ -1,0 +1,4 @@
+*.swp
+build/
+libchip/build/
+libusb/build/
