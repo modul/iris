@@ -46,11 +46,4 @@
 #define UART_ID       ID_UART0
 #define PINS_UART  { PIO_PA9A_URXD0|PIO_PA10A_UTXD0, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_DEFAULT}
 
-/** Fileno, syscalls, standard IO configuration **/
-#define read_stdin   USBC_Gets
-#define write_stdout USBC_Puts
-#define read_stderr  UART_Gets // For convenience, stderr is used both ways
-#define write_stderr UART_Puts
-#define TRACE_OUT stderr
-
 #endif

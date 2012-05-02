@@ -11,7 +11,7 @@
 #define TRACE_LEVEL_NO_TRACE   0
 
 #ifndef TRACE_OUT
-#define TRACE_OUT stderr
+#define TRACE_OUT stdout
 #endif
 
 /* By default, all traces are output except the debug one. */

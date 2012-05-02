@@ -1,6 +1,8 @@
 #include <string.h>
 #include "conf.h"
 
+#define BUFSIZE 64
+
 #define IDLE  0
 #define READY 1
 #define SET   2
@@ -32,7 +34,7 @@ int main()
 {
 	int argc;
 	int argv[3];
-	char line[32];
+	char buffer[BUFSIZE];
 	char cmd = 0;
 	const Pin pinsout[] = {PINS_VAL};
 	uint16_t soffset = 0;
@@ -72,18 +74,21 @@ int main()
 		cmd = 0;
 		argc = 0;
 		if (USBC_hasData()) {
-			gets(line);
-			if (*line > 0 && *line != 10) {
-				argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2);
+			USBC_Gets(buffer, BUFSIZE);
+			if (*buffer > 0 && *buffer != 10) {
+				argc = sscanf(buffer, "%c %u %u %u", &cmd, argv, argv+1, argv+2);
 				if (argc > 0) {
 					TRACE_DEBUG("got %i valid arguments\n", argc);
 
 					if (cmd == 'a') { // abort
-						printf("ok\n");
+						sprintf(buffer, "ok\n");
+						USBC_Puts(buffer, strlen(buffer));
 						enter(IDLE);
 					}
-					else if (cmd == 'l') // log
-						printf("%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
+					else if (cmd == 'l') { // log
+						sprintf(buffer, "%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
+						USBC_Puts(buffer, strlen(buffer));
+					}
 				}
 			}
 		}
