@@ -52,10 +52,14 @@ INCLUDES += -I.
 CFLAGS += -g -mcpu=cortex-m3 -mthumb # -mfix-cortex-m3-ldrd
 CFLAGS += -ffunction-sections # might make problems, see manpage
 CFLAGS += $(OPTIMIZATION) $(INCLUDES) -D$(CHIP) -DTRACE_LEVEL=$(TRACE_LEVEL)
+CFLAGS += -Wall -Wno-format -Wredundant-decls
+
 CFLAGS += -Dprintf=iprintf
 CFLAGS += -Dfprintf=fiprintf
+CFLAGS += -Dsprintf=siprintf
+CFLAGS += -Dscanf=iscanf
+CFLAGS += -Dfscanf=fiscanf
 CFLAGS += -Dsscanf=siscanf
-CFLAGS += -Wall -Wno-format -Wredundant-decls
 
 ASFLAGS += -g -mcpu=cortex-m3 -mthumb -Wall $(OPTIMIZATION) $(INCLUDES) -D$(CHIP) -D__ASSEMBLY__
 
