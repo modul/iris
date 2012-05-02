@@ -12,7 +12,6 @@
 #include "board.h"
 
 void USBC_Configure(void);
-void USBC_SetTimeout(uint32_t ms);
 uint8_t USBC_isConfigured(void);
 uint8_t USBC_ReadBuffer(void *buffer, uint32_t size, TransferCallback callback, void *args);
 uint8_t USBC_WriteBuffer(void *buffer, uint32_t size, TransferCallback callback, void *args);

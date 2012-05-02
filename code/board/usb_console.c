@@ -22,15 +22,9 @@ extern const USBDDriverDescriptors cdcdSerialDriverDescriptors;
 
 /** Parameters **/
 
-static uint32_t _xferTimeout = 0xFFFFFFFF;
-
 static volatile uint32_t _rxCount = 0;
 static volatile uint32_t _txCount = 0;
-
 static volatile uint8_t _cfgdone = 0;
-
-#define EP_READ 1
-#define EP_WRITE 2
 
 /** Receive Buffer **/
 
@@ -188,14 +182,6 @@ uint8_t USBC_hasData()
 }
 
 /*
- * Set transfer timeout (in ms).
- */
-void USBC_SetTimeout(uint32_t ms)
-{
-	_xferTimeout = ms;
-}
-
-/*
  * Configure USB serial.
  */
 void USBC_Configure(void)
@@ -223,46 +209,36 @@ uint8_t USBC_StartListening()
 }
 
 /*
- * Read input (blocking).
- * returns -1 on failure or timeout,
+ * Read input
+ * returns -1 on failure,
  * returns number of bytes read otherwise.
  */ 
 int USBC_Gets(char *ptr, uint16_t len)
 {
 	uint16_t done;
-	uint32_t started;
 
 	if(!USBC_isConfigured())
 		return -1;
 
-	started = GetTickCount();
-	while(_rxCount == 0) // Receiver must be running in background
-		if ((GetTickCount() - started) > _xferTimeout) {
-			TRACE_DEBUG("USBC Gets timed out.\n");
-			return -1;
-		}
-
 	done = len >= _rxCount ? _rxCount : len;
-
-	memcpy(ptr, _rxBuffer, done);
-
-	if ((_rxCount -= done) == 0) 
-		USBC_StartListening();
-	else // re-arrange data that's left, if any
-		memmove(_rxBuffer, _rxBuffer+done, _rxCount); 
-
+	if (done > 0) {
+		memcpy(ptr, _rxBuffer, done);
+		_rxCount -= done;
+		if (_rxCount == 0) // no data left
+			USBC_StartListening();
+		else               // re-arrange data left
+			memmove(_rxBuffer, _rxBuffer+done, _rxCount); 
+	}
 	return done;
 }
 
 /*
- * Write output (blocking)
- * returns -1 on failure or timeout,
- * returns number of bytes sent otherwise.
+ * Write output 
+ * returns -1
+ * returns number of bytes that will be sent otherwise.
  */ 
 int USBC_Puts(char *ptr, uint16_t len)
 {
-	uint32_t started;
-
 	if(!USBC_isConfigured())
 		return -1;
 
@@ -270,15 +246,5 @@ int USBC_Puts(char *ptr, uint16_t len)
 	if(CDCDSerialDriver_Write(ptr, len, (TransferCallback) UsbWriteDone, 0)
 		!= USBD_STATUS_SUCCESS)
 		return -1;
-
-	started = GetTickCount();
-	while(_txCount == 0)
-		if ((GetTickCount() - started) > _xferTimeout) {
-			TRACE_WARNING("USBC Puts timed out.\n");
-			// pending write operation must be aborted
-			// or endpoint ends up locked.
-			USBD_HAL_CancelIo(1 << EP_WRITE); 
-			return -1;
-		}
-	return _txCount;
+	return len;
 }
