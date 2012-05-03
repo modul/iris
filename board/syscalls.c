@@ -61,22 +61,44 @@ extern int  _end ;
  *----------------------------------------------------------------------------*/
 extern int _read(int file, char *ptr, int len)
 {
-	if (file == STDIN_FILENO) 
-		return UART_Gets(ptr, len);
-	else {
-		errno = EBADF;
-		return -1;
+	switch (file)
+	{
+#ifdef read_stdin
+		case STDIN_FILENO:
+			len = read_stdin(ptr, len);
+		break;
+#endif
+#ifdef read_stderr
+		case STDERR_FILENO: // For convenience, use stderr both ways
+			len = read_stderr(ptr, len);
+		break;
+#endif
+		default:
+			errno = EBADF;
+			return -1;
 	}
+	return len;
 }
 
 extern int _write( int file, char *ptr, int len )
 {
-	if (file == STDOUT_FILENO)
-		return UART_Puts(ptr, len);
-	else {
+	switch (file)
+	{
+#ifdef write_stdout
+		case STDOUT_FILENO:
+			len = write_stdout(ptr, len);
+		break;
+#endif
+#ifdef write_stderr
+		case STDERR_FILENO:
+			len = write_stderr(ptr, len);
+		break;
+#endif
+		default:
 			errno = EBADF;
 			return -1;
 	}
+	return len;
 }
 
 /*
