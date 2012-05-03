@@ -9,11 +9,11 @@
 SERIE = sam3s
 CHIP  = $(SERIE)4
 BOARD = olimex-sam3-h256
-OUTPUT = project
+NAME = project
 BUILD = build
 BIN = $(BUILD)/bin
 OBJ = $(BUILD)/obj
-OUTPUT := $(BIN)/$(OUTPUT)
+OUTPUT = $(BIN)/$(NAME).bin
 
 # for release version, override on commandline
 TRACE_LEVEL = 5  # DEBUG=5, INFO, WARNING, ERROR, FATAL, NONE=0
@@ -86,44 +86,43 @@ C_SRC += $(wildcard *.c)
 
 C_OBJECTS = $(addprefix $(OBJ)/, $(patsubst %.c, %.o, $(notdir $(C_SRC))))
 
-TARGET = $(OUTPUT).bin
 #-------------------------------------------------------------------------------
 #		Rules
 #-------------------------------------------------------------------------------
 
-.PHONY: all clean flash program debug size
+.PHONY: all clean target program size dist-clean install
 
-all: $(BIN) $(OBJ) $(TARGET)
+all: target
 
 $(BUILD):
 	-mkdir $@
+	-mkdir $(BIN)
+	-mkdir $(OBJ)
 
-$(BIN) $(OBJ): $(BUILD)
-	-mkdir $@
+target: $(BUILD) $(OUTPUT)
+
+clean:
+	-rm $(OBJ)/*.o $(OBJ)/*.lst 
+
+dist-clean:
+	-rm -r $(BUILD)
+
+size: target
+	$(SIZE) $(OUTPUT).elf
 
 tags: $(C_SRC) $(LIBS)
 	ctags --totals -R .
 
-clean:
-	-rm $(OBJ)/*.o $(OBJ)/*.lst \
-			$(BIN)/*.bin $(BIN)/*.elf \
-			$(BIN)/*.elf.txt $(BIN)/*.map \
-			$(BIN)/*-size.txt
+install: program
 
-program: $(TARGET)
+program: target
 	$(OOCD) $(OOCDFLAGS) \
 		-c "halt" \
 		-c "flash write_bank 0 $(TARGET) 0" \
 		-c "reset run" \
 		-c "shutdown"
 
-debug: $(TARGET)
-	./debug.sh
-
-size:
-	$(SIZE) $(OUTPUT).elf
-
-$(TARGET): $(ASM_OBJECTS) $(C_OBJECTS) $(LIBS)
+$(OUTPUT): $(ASM_OBJECTS) $(C_OBJECTS) $(LIBS)
 	@echo [LINKING $@]
 	@$(CC) $(LDFLAGS) -T"board/flash.ld" \
 	       	-Wl,-Map,$(OUTPUT).map \
