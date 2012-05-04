@@ -5,6 +5,7 @@
 #define READY 1
 #define SET   2
 #define GO    3
+#define ERROR 4
 
 #define F AIN0
 #define p AIN1
@@ -57,15 +58,15 @@ int main()
 	while (1) {
 		if (current[F] >= PAR_FMAX) {
 			TRACE_INFO("FMAX reached.\n");
-			enter(IDLE);
+			enter(ERROR);
 		}
 		if (current[p] >= PAR_PMAX) {
 			TRACE_INFO("PMAX reached.\n");
-			enter(IDLE);
+			enter(ERROR);
 		}
 		if (current[s] >= PAR_SMAX) {
 			TRACE_INFO("SMAX reached.\n");
-			enter(IDLE);
+			enter(ERROR);
 		}
 
 		/* Parse command line */
@@ -78,8 +79,8 @@ int main()
 				if (argc > 0) {
 					TRACE_DEBUG("got %i valid arguments\n", argc);
 
-					if (cmd == 'a') { // abort
-						printf("ok\n");
+					if (cmd == 'a') { // abort or acknowledge ERROR
+						puts("ok");
 						enter(IDLE);
 					}
 					else if (cmd == 'l') // log
@@ -152,9 +153,16 @@ void enter(uint8_t new)
 	LED_blinkstop(STATUS);
 	LED_clr(STATUS);
 	switch (new) {
+		case ERROR:
+			do_vent();
+			LED_clr(ALARM);
+			TRACE_DEBUG("entered state ERROR\n");
+			break;
 		case IDLE:
 			do_vent();
 			TRACE_DEBUG("entered state IDLE\n");
+			if (_state == ERROR) // ERROR was acknowledged, turn of alarm
+				LED_set(ALARM);
 			break;
 		case READY:
 			do_press();
