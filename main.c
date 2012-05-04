@@ -1,6 +1,8 @@
 #include <string.h>
 #include "conf.h"
 
+#define BUFSIZE 32
+
 #define IDLE  0
 #define READY 1
 #define SET   2
@@ -33,7 +35,7 @@ int main()
 {
 	int argc;
 	int argv[3];
-	char line[32];
+	char line[BUFSIZE];
 	char cmd = 0;
 	const Pin pinsout[] = {PINS_VAL};
 	uint16_t soffset = 0;
@@ -73,8 +75,10 @@ int main()
 		cmd = 0;
 		argc = 0;
 		if (USBC_hasData()) {
-			gets(line);
-			if (*line > 0 && *line != 10) {
+			if (fgets(line, BUFSIZE, stdin) == NULL) {
+				perror("cli error");
+			}
+			else {
 				argc = sscanf(line, "%c %u %u %u", &cmd, argv, argv+1, argv+2);
 				if (argc > 0) {
 					TRACE_DEBUG("got %i valid arguments\n", argc);
@@ -88,7 +92,7 @@ int main()
 				}
 			}
 		}
-		
+
 		/* Handle state */
 		switch (_state) {
 			case IDLE:
