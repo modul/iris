@@ -220,6 +220,8 @@ int USBC_Gets(char *ptr, uint16_t len)
 	if(!USBC_isConfigured())
 		return -1;
 
+	while(_rxCount == 0);
+
 	done = len >= _rxCount ? _rxCount : len;
 	if (done > 0) {
 		memcpy(ptr, _rxBuffer, done);
