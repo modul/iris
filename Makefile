@@ -17,7 +17,7 @@ OUTPUT = $(BIN)/$(NAME).bin
 
 # for release version, override on commandline
 TRACE_LEVEL = 5  # DEBUG=5, INFO, WARNING, ERROR, FATAL, NONE=0
-OPTIMIZATION = -O0 -DDEBUG
+OPTFLAGS = -O0 -DDEBUG
 
 #-------------------------------------------------------------------------------
 #		Tools
@@ -51,7 +51,7 @@ INCLUDES += -I.
 
 CFLAGS += -g -mcpu=cortex-m3 -mthumb # -mfix-cortex-m3-ldrd
 CFLAGS += -ffunction-sections # might make problems, see manpage
-CFLAGS += $(OPTIMIZATION) $(INCLUDES) -D$(CHIP) -DTRACE_LEVEL=$(TRACE_LEVEL)
+CFLAGS += $(OPTFLAGS) $(INCLUDES) -D$(CHIP) -DTRACE_LEVEL=$(TRACE_LEVEL)
 CFLAGS += -Wall -Wno-format -Wredundant-decls
 
 CFLAGS += -Dprintf=iprintf
@@ -61,7 +61,7 @@ CFLAGS += -Dscanf=iscanf
 CFLAGS += -Dfscanf=fiscanf
 CFLAGS += -Dsscanf=siscanf
 
-ASFLAGS += -g -mcpu=cortex-m3 -mthumb -Wall $(OPTIMIZATION) $(INCLUDES) -D$(CHIP) -D__ASSEMBLY__
+ASFLAGS += -g -mcpu=cortex-m3 -mthumb -Wall $(OPTFLAGS) $(INCLUDES) -D$(CHIP) -D__ASSEMBLY__
 
 LDFLAGS += -g -mcpu=cortex-m3 -mthumb 
 LDFLAGS += -Wl,--start-group -lgcc -lc -Wl,--end-group
