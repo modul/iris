@@ -13,7 +13,7 @@ NAME = project
 BUILD = build
 BIN = $(BUILD)/bin
 OBJ = $(BUILD)/obj
-OUTPUT = $(BIN)/$(NAME).bin
+OUTPUT = $(BIN)/$(NAME)
 
 # for release version, override on commandline
 TRACE_LEVEL = 5  # DEBUG=5, INFO, WARNING, ERROR, FATAL, NONE=0
@@ -107,9 +107,6 @@ clean:
 dist-clean:
 	-rm -r $(BUILD)
 
-size: target
-	$(SIZE) $(OUTPUT).elf
-
 tags: $(C_SRC) $(LIBS)
 	ctags --totals -R .
 
@@ -118,20 +115,19 @@ install: program
 program: target
 	$(OOCD) $(OOCDFLAGS) \
 		-c "halt" \
-		-c "flash write_bank 0 $(TARGET) 0" \
+		-c "flash write_bank 0 $(OUTPUT).bin 0" \
 		-c "reset run" \
 		-c "shutdown"
 
 $(OUTPUT): $(ASM_OBJECTS) $(C_OBJECTS) $(LIBS)
 	@echo [LINKING $@]
 	@$(CC) $(LDFLAGS) -T"board/flash.ld" \
-	       	-Wl,-Map,$(OUTPUT).map \
-	       	-o $(OUTPUT).elf $^ 
-	@$(NM) $(OUTPUT).elf >$(OUTPUT).elf.txt
-	@$(OBJCOPY) -O binary $(OUTPUT).elf $@
-	@$(SIZE) $(filter-out %a, $^) $(OUTPUT).elf
-	@$(SIZE) $(filter-out %a, $^) $(OUTPUT).elf > $(OUTPUT)-size.txt
-	@$(SIZE) -A $(OUTPUT).elf >> $(OUTPUT)-size.txt
+		   -Wl,-Map,$@.map -o $@.elf  $^ 
+	@$(NM) $@.elf >$@.elf.txt
+	@$(OBJCOPY) -O binary $@.elf $@.bin
+	@$(SIZE) $(filter-out %a, $^) $@.elf
+	@$(SIZE) $(filter-out %a, $^) $@.elf > $@-size.txt
+	@$(SIZE) -A $(OUTPUT).elf >> $@-size.txt
 
 $(C_OBJECTS): $(OBJ)/%.o: %.c Makefile 
 	@echo [COMPILING $<]
