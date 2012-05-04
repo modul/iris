@@ -1,8 +1,6 @@
 #include <string.h>
 #include "conf.h"
 
-#define TIMER_FREQ (NUM_AIN * SAMPLING_FREQ)
-
 #define mV(b) ((b*VREF)>>RESOLUTION)
 
 static uint16_t next[NUM_AIN] = {0};
