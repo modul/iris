@@ -33,10 +33,11 @@ void enter(uint8_t new);
 
 int main() 
 {
-	int argc;
-	int argv[3];
-	char line[BUFSIZE];
+	int argc = 0;
+	int argv[3] = {0};
 	char cmd = 0;
+	char line[BUFSIZE];
+
 	const Pin pinsout[] = {PINS_VAL};
 	uint16_t soffset = 0;
 
