@@ -38,35 +38,3 @@ void ADC_IrqHandler()
 	}
 }
 
-void input_init()
-{
-    uint32_t div;
-    uint32_t tcclks;
-	const Pin pins[] = {PINS_ADCIN};
-
-	/* PIO Configure */
-	PIO_Configure(pins, PIO_LISTSIZE(pins));
-
-    /* Enable peripheral clocks */
-    PMC_EnablePeripheral(ID_TC0);
-    PMC_EnablePeripheral(ID_ADC);
-
-    /* Configure TC */
-    TC_FindMckDivisor(TIMER_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
-    TC_Configure(TC0, 0, tcclks | TC_CMR_CPCTRG);
-    TC0->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / TIMER_FREQ;
-    TC0->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
-	TC_Start(TC0, 0);
-
-    /* Initialize ADC */
-    ADC_Initialize(ADC, ID_ADC);
-    ADC_cfgFrequency(ADC, 4, 1 ); // startup = 64 ADC periods, prescal = 1, ADC clock = 12 MHz
-	ADC->ADC_CHER = (1<<AIN0)|(1<<AIN1)|(1<<AIN2);
-    ADC->ADC_IER  = ADC_IER_RXBUFF;
-
-	/* Enable Interrupts */
-    NVIC_EnableIRQ(ADC_IRQn);
-	NVIC_SetPriority(ADC_IRQn, 0);
-    NVIC_EnableIRQ(TC0_IRQn);
-    NVIC_SetPriority(TC0_IRQn, 1);
-}

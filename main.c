@@ -23,13 +23,12 @@ uint8_t _state = READY;
 extern uint16_t current[NUM_AIN];   // current ADC input in mV
 extern uint16_t previous[NUM_AIN];  // previous ADC input in mV
 
-extern void input_init();
+void setup();
+void enter(uint8_t new);
 
 void do_press();
 void do_hold();
 void do_vent();
-
-void enter(uint8_t new);
 
 int main() 
 {
@@ -38,25 +37,11 @@ int main()
 	char cmd = 0;
 	char line[BUFSIZE];
 
-	const Pin pinsout[] = {PINS_VAL};
 	uint16_t soffset = 0;
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
-    WDT->WDT_MR = WDT_MR_WDDIS;
-	TimeTick_Configure(BOARD_MCK);
-	PIO_Configure(pinsout, PIO_LISTSIZE(pinsout));
-	enter(IDLE);
-	input_init();
-
-	LEDs_configure();
-	LED_blink(STATUS, FOREVER);
-	USBC_Configure();
-	TRACE_DEBUG("waiting until USB is fully configured\n");
-	while (!USBC_isConfigured());
-	setbuf(stdout, NULL);
-	LED_blinkstop(STATUS);
-
+	setup();
 
 	while (1) {
 		if (current[F] >= PAR_FMAX) {
@@ -189,4 +174,55 @@ void enter(uint8_t new)
 	_state = new;
 }
 
+void setup()
+{
+	uint32_t div;
+	uint32_t tcclks;
+	const Pin pins[] = {PINS_VAL, PINS_ADCIN};
+
+	WDT_Disable(WDT);
+	TimeTick_Configure(BOARD_MCK);
+
+	/* PIO Configure */
+	PIO_Configure(pins, PIO_LISTSIZE(pins));
+
+	/* Initialize state */
+	enter(IDLE);
+
+	/* Enable peripheral clocks */
+	PMC_EnablePeripheral(ID_TC0);
+	PMC_EnablePeripheral(ID_ADC);
+
+	/* Configure TC */
+	TC_FindMckDivisor(TIMER_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
+	TC_Configure(TC0, 0, tcclks | TC_CMR_CPCTRG);
+	TC0->TC_CHANNEL[0].TC_RC = (BOARD_MCK/div) / TIMER_FREQ;
+	TC0->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
+	TC_Start(TC0, 0);
+
+	/* Configure ADC */
+	ADC_Initialize(ADC, ID_ADC);
+	ADC_cfgFrequency(ADC, 4, 1 ); // startup = 64 ADC periods, prescal = 1, ADC clock = 12 MHz
+	ADC->ADC_CHER = (1<<AIN0)|(1<<AIN1)|(1<<AIN2);
+	ADC->ADC_IER  = ADC_IER_RXBUFF;
+
+	/* Enable Interrupts */
+	NVIC_EnableIRQ(ADC_IRQn);
+	NVIC_SetPriority(ADC_IRQn, 0);
+	NVIC_EnableIRQ(TC0_IRQn);
+	NVIC_SetPriority(TC0_IRQn, 1);
+
+	/* LEDs */
+	LEDs_configure();
+	LED_blink(STATUS, FOREVER);
+
+	/* Configure USB */ 
+	USBC_Configure();
+	TRACE_DEBUG("waiting until USB is fully configured\n");
+	while (!USBC_isConfigured());
+
+	setbuf(stdout, NULL);
+	LED_blinkstop(STATUS);
+
+}
 /* vim: set ts=4: */
