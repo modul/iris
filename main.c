@@ -19,6 +19,8 @@
 #define PAR_SMAX VREF
 #define PAR_FMAX VREF
 
+#define in(state) (_state == state)
+
 uint8_t _state = READY;
 
 void setup();
@@ -43,15 +45,15 @@ int main()
 	start_sampling();
 
 	while (1) {
-		if (current[F] >= PAR_FMAX && _state != ERROR) {
+		if (current[F] >= PAR_FMAX && !in(ERROR)) {
 			TRACE_INFO("FMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[p] >= PAR_PMAX && _state != ERROR) {
+		if (current[p] >= PAR_PMAX && !in(ERROR)) {
 			TRACE_INFO("PMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[s] >= PAR_SMAX && _state != ERROR) {
+		if (current[s] >= PAR_SMAX && !in(ERROR)) {
 			TRACE_INFO("SMAX reached.\n");
 			enter(ERROR);
 		}
@@ -153,7 +155,7 @@ void enter(uint8_t new)
 		case IDLE:
 			do_vent();
 			TRACE_INFO("entered state IDLE\n");
-			if (_state == ERROR) // ERROR was acknowledged, turn of alarm
+			if (in(ERROR)) // ERROR was acknowledged, turn of alarm
 				LED_off(ALARM);
 			break;
 		case READY:
