@@ -28,4 +28,26 @@
 #define VAL_vent  0
 #define VAL_press 1
 
+/** Parameters **/
+#define PAR_PSET 50
+#define PAR_PMAX VREF-1 // VREF-1 is maximum, but these should be set by the user
+#define PAR_SMAX VREF
+#define PAR_FMAX VREF
+
+typedef struct _conf_t {
+	uint16_t pset;
+	uint16_t pmax;
+	uint16_t smax;
+	uint16_t fmax;
+	uint8_t fpeakdiv;
+	uint8_t F;
+	uint8_t P;
+	uint8_t S;
+} conf_t;
+
+#define CONF_INIT PAR_PSET, PAR_PMAX, PAR_SMAX, PAR_FMAX, 2, AIN0, AIN1, AIN2 
+
+void store_configuration(conf_t *src);
+void load_configuration(conf_t *dest);
+
 #endif

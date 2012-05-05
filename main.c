@@ -10,27 +10,8 @@
 #define GO    3
 #define ERROR 4
 
-#define F AIN0
-#define p AIN1
-#define s AIN2
-
-#define PAR_PSET 50
-#define PAR_PMAX VREF-1 // VREF-1 is maximum, but these should be set by the user
-#define PAR_SMAX VREF
-#define PAR_FMAX VREF
 
 #define in(state) (_state == state)
-
-typedef struct _conf_t {
-	uint16_t pset;
-	uint16_t pmax;
-	uint16_t smax;
-	uint16_t fmax;
-	uint8_t fpeakdiv;
-	uint8_t iF;
-	uint8_t iP;
-	uint8_t iS;
-} conf_t;
 
 uint8_t _state = READY;
 
@@ -50,7 +31,7 @@ int main()
 
 	uint16_t soffset = 0;
 
-	conf_t config = {PAR_PSET, PAR_PMAX, PAR_SMAX, PAR_FMAX, 2, F, p, s};
+	conf_t config = {CONF_INIT};
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
@@ -58,15 +39,15 @@ int main()
 	start_sampling();
 
 	while (1) {
-		if (current[config.iF] >= config.fmax && !in(ERROR)) {
+		if (current[config.F] >= config.fmax && !in(ERROR)) {
 			TRACE_INFO("FMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[config.iP] >= config.pmax && !in(ERROR)) {
+		if (current[config.P] >= config.pmax && !in(ERROR)) {
 			TRACE_INFO("PMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[config.iS] >= config.smax && !in(ERROR)) {
+		if (current[config.S] >= config.smax && !in(ERROR)) {
 			TRACE_INFO("SMAX reached.\n");
 			enter(ERROR);
 		}
@@ -88,7 +69,7 @@ int main()
 						enter(IDLE);
 					}
 					else if (cmd == 'l') // log
-						printf("%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
+						printf("%u %u %u %u %u\n", _state, current[config.F], current[config.P], current[config.S], soffset);
 				}
 			}
 		}
@@ -104,8 +85,8 @@ int main()
 				break;
 
 			case READY:
-				if (current[config.iP] > config.pset) {
-					soffset = current[s];
+				if (current[config.P] > config.pset) {
+					soffset = current[config.S];
 					enter(SET);
 				}
 				break;
@@ -116,7 +97,7 @@ int main()
 				break;
 
 			case GO:
-				if (current[config.iF] <= previous[config.iF]/config.fpeakdiv)
+				if (current[config.F] <= previous[config.F]/config.fpeakdiv)
 					enter(IDLE);
 				break;
 
