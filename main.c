@@ -44,15 +44,15 @@ int main()
 	setup();
 
 	while (1) {
-		if (current[F] >= PAR_FMAX) {
+		if (current[F] >= PAR_FMAX && _state != ERROR) {
 			TRACE_INFO("FMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[p] >= PAR_PMAX) {
+		if (current[p] >= PAR_PMAX && _state != ERROR) {
 			TRACE_INFO("PMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[s] >= PAR_SMAX) {
+		if (current[s] >= PAR_SMAX && _state != ERROR) {
 			TRACE_INFO("SMAX reached.\n");
 			enter(ERROR);
 		}
@@ -106,9 +106,12 @@ int main()
 					enter(IDLE);
 				break;
 
+			case ERROR:
+				break;
+
 			default:
 				TRACE_ERROR("invalid state\n");
-				enter(IDLE);
+				enter(ERROR);
 		}
 		
 		/* Display state */
