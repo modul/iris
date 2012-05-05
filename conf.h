@@ -34,13 +34,14 @@
 #define PAR_SMAX VREF
 #define PAR_FMAX VREF
 
+//TODO gain
 typedef struct _conf_t {
 	uint16_t pset;
 	uint16_t pmax;
 	uint16_t smax;
 	uint16_t fmax;
 	uint8_t fpeakdiv;
-	uint8_t F;
+	uint8_t F; //maybe hardcoded
 	uint8_t P;
 	uint8_t S;
 } conf_t;
