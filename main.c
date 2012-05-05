@@ -146,28 +146,28 @@ void enter(uint8_t new)
 		case ERROR:
 			do_vent();
 			LED_clr(ALARM);
-			TRACE_DEBUG("entered state ERROR\n");
+			TRACE_INFO("entered state ERROR\n");
 			break;
 		case IDLE:
 			do_vent();
-			TRACE_DEBUG("entered state IDLE\n");
+			TRACE_INFO("entered state IDLE\n");
 			if (_state == ERROR) // ERROR was acknowledged, turn of alarm
 				LED_set(ALARM);
 			break;
 		case READY:
 			do_press();
-			TRACE_DEBUG("entered state READY\n");
+			TRACE_INFO("entered state READY\n");
 			break;
 		case SET:
 			do_hold();
-			TRACE_DEBUG("entered state SET\n");
+			TRACE_INFO("entered state SET\n");
 			break;
 		case GO:
 			do_press();
-			TRACE_DEBUG("entered state GO\n");
+			TRACE_INFO("entered state GO\n");
 			break;
 		default:
-			TRACE_DEBUG("got invalid state\n");
+			TRACE_INFO("got invalid state\n");
 			enter(IDLE);
 			return;
 	}
@@ -223,6 +223,6 @@ void setup()
 
 	setbuf(stdout, NULL);
 	LED_blinkstop(STATUS);
-
+	TRACE_INFO("setup done\n");
 }
 /* vim: set ts=4: */
