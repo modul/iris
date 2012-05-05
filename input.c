@@ -36,3 +36,17 @@ void ADC_IrqHandler()
 	}
 }
 
+void start_sampling()
+{
+	NVIC_EnableIRQ(ADC_IRQn);
+	NVIC_SetPriority(ADC_IRQn, 0);
+	NVIC_EnableIRQ(TC0_IRQn);
+	NVIC_SetPriority(TC0_IRQn, 1);
+}
+
+void stop_sampling()
+{
+	NVIC_DisableIRQ(ADC_IRQn);
+	NVIC_DisableIRQ(TC0_IRQn);
+}
+

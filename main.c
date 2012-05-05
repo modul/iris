@@ -1,5 +1,6 @@
 #include <string.h>
 #include "conf.h"
+#include "input.h"
 
 #define BUFSIZE 32
 
@@ -20,9 +21,6 @@
 
 uint8_t _state = READY;
 
-extern uint16_t current[NUM_AIN];   // current ADC input in mV
-extern uint16_t previous[NUM_AIN];  // previous ADC input in mV
-
 void setup();
 void enter(uint8_t new);
 
@@ -42,6 +40,7 @@ int main()
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
+	start_sampling();
 
 	while (1) {
 		if (current[F] >= PAR_FMAX && _state != ERROR) {
@@ -208,12 +207,6 @@ void setup()
 	ADC_cfgFrequency(ADC, 4, 1 ); // startup = 64 ADC periods, prescal = 1, ADC clock = 12 MHz
 	ADC->ADC_CHER = (1<<AIN0)|(1<<AIN1)|(1<<AIN2);
 	ADC->ADC_IER  = ADC_IER_RXBUFF;
-
-	/* Enable Interrupts */
-	NVIC_EnableIRQ(ADC_IRQn);
-	NVIC_SetPriority(ADC_IRQn, 0);
-	NVIC_EnableIRQ(TC0_IRQn);
-	NVIC_SetPriority(TC0_IRQn, 1);
 
 	/* LEDs */
 	LEDs_configure();
