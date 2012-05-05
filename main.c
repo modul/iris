@@ -21,6 +21,17 @@
 
 #define in(state) (_state == state)
 
+typedef struct _conf_t {
+	uint16_t pset;
+	uint16_t pmax;
+	uint16_t smax;
+	uint16_t fmax;
+	uint8_t fpeakdiv;
+	uint8_t iF;
+	uint8_t iP;
+	uint8_t iS;
+} conf_t;
+
 uint8_t _state = READY;
 
 void setup();
@@ -39,21 +50,23 @@ int main()
 
 	uint16_t soffset = 0;
 
+	conf_t config = {PAR_PSET, PAR_PMAX, PAR_SMAX, PAR_FMAX, 2, F, p, s};
+
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
 	start_sampling();
 
 	while (1) {
-		if (current[F] >= PAR_FMAX && !in(ERROR)) {
+		if (current[config.iF] >= config.fmax && !in(ERROR)) {
 			TRACE_INFO("FMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[p] >= PAR_PMAX && !in(ERROR)) {
+		if (current[config.iP] >= config.pmax && !in(ERROR)) {
 			TRACE_INFO("PMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[s] >= PAR_SMAX && !in(ERROR)) {
+		if (current[config.iS] >= config.smax && !in(ERROR)) {
 			TRACE_INFO("SMAX reached.\n");
 			enter(ERROR);
 		}
@@ -91,7 +104,7 @@ int main()
 				break;
 
 			case READY:
-				if (current[p] > PAR_PSET) {
+				if (current[config.iP] > config.pset) {
 					soffset = current[s];
 					enter(SET);
 				}
@@ -103,7 +116,7 @@ int main()
 				break;
 
 			case GO:
-				if (current[F] <= previous[F]/2)
+				if (current[config.iF] <= previous[config.iF]/config.fpeakdiv)
 					enter(IDLE);
 				break;
 
