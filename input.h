@@ -1,5 +1,5 @@
-#ifndef INPUT_H
-#define INPUT_H
+#ifndef _INPUT_
+#define _INPUT_
 
 extern uint16_t current[NUM_AIN];   // current ADC input in mV
 extern uint16_t previous[NUM_AIN];  // previous ADC input in mV
