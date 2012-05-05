@@ -1,3 +1,6 @@
+#ifndef _CONF_
+#define _CONF_
+
 #include "board.h"
 
 #define SAMPLING_FREQ 2
@@ -24,3 +27,5 @@
 #define PINS_VAL PIN_VAL_vent, PIN_VAL_press
 #define VAL_vent  0
 #define VAL_press 1
+
+#endif
