@@ -7,9 +7,12 @@
 #include "exceptions.h"
 #include "syscalls.h" 
 #include "timetick.h"
-#include "led.h"
+
 #include "uart_console.h"
 #include "usb_console.h"
+
+#define LEDS_ACTIVE_LOW
+#include "led.h"
 
 /** Name of the board */
 #define BOARD_NAME "SAM3-H256"

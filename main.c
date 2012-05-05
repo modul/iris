@@ -141,18 +141,18 @@ void do_vent()
 void enter(uint8_t new) 
 {
 	LED_blinkstop(STATUS);
-	LED_clr(STATUS);
+	LED_on(STATUS);
 	switch (new) {
 		case ERROR:
 			do_vent();
-			LED_clr(ALARM);
+			LED_on(ALARM);
 			TRACE_INFO("entered state ERROR\n");
 			break;
 		case IDLE:
 			do_vent();
 			TRACE_INFO("entered state IDLE\n");
 			if (_state == ERROR) // ERROR was acknowledged, turn of alarm
-				LED_set(ALARM);
+				LED_off(ALARM);
 			break;
 		case READY:
 			do_press();

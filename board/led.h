@@ -3,6 +3,22 @@
 
 #define FOREVER 0xFFFFFFFF
 
+#ifdef LEDS_ACTIVE_HIGH
+
+#define LED_on(led) LED_set(led)
+#define LED_off(led) LED_clr(led)
+
+#elif defined(LEDS_ACTIVE_LOW)
+
+#define LED_on(led) LED_clr(led)
+#define LED_off(led) LED_set(led)
+
+#else
+#warning "neither LEDS_ACTIVE_HIGH nor ...ACTIVE_LOW defined."
+
+#endif
+
+
 void LEDs_configure();
 void LED_set(uint8_t led);
 void LED_clr(uint8_t led);
