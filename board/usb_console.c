@@ -127,8 +127,10 @@ static void UsbWriteDone(uint32_t unused,
 			             uint32_t transferred,
 						 uint32_t remaining)
 {
-	if (status == USBD_STATUS_SUCCESS) 
+	if (status == USBD_STATUS_SUCCESS) {
 		_txCount = transferred;
+		TRACE_DEBUG("USB sent %u bytes.\n", _txCount);
+	}
 	else
         TRACE_WARNING("USBC Write unsuccessful.\n");
 }
@@ -141,8 +143,10 @@ static void UsbReadDone(uint32_t unused,
 						uint32_t received,
 						uint32_t remaining)
 {
-    if (status == USBD_STATUS_SUCCESS) 
+    if (status == USBD_STATUS_SUCCESS) {
 		_rxCount = received;
+		TRACE_DEBUG("USB read %u bytes.\n", _rxCount);
+	}
 	else
         TRACE_WARNING("USBC Read unsuccessful.\n");
 }
