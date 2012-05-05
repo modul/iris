@@ -252,5 +252,8 @@ int USBC_Puts(char *ptr, uint16_t len)
 	if(CDCDSerialDriver_Write(ptr, len, (TransferCallback) UsbWriteDone, 0)
 		!= USBD_STATUS_SUCCESS)
 		return -1;
-	return len;
+
+	while(_txCount == 0);
+
+	return _txCount;
 }
