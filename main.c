@@ -14,7 +14,7 @@
 #define s AIN2
 
 #define PAR_PSET 50
-#define PAR_PMAX VREF
+#define PAR_PMAX VREF-1 // VREF-1 is maximum, but these should be set by the user
 #define PAR_SMAX VREF
 #define PAR_FMAX VREF
 
