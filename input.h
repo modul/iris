@@ -1,10 +1,10 @@
 #ifndef _INPUT_
 #define _INPUT_
 
-extern uint16_t current[NUM_AIN];   // current ADC input in mV
-extern uint16_t previous[NUM_AIN];  // previous ADC input in mV
-
 void stop_sampling();
 void start_sampling();
+
+uint16_t get_latest_volt(unsigned index);
+uint16_t get_previous_volt(unsigned index);
 
 #endif

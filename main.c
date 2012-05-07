@@ -45,15 +45,15 @@ int main()
 	start_sampling();
 
 	while (1) {
-		if (current[F] >= PAR_FMAX && !in(ERROR)) {
+		if (get_latest_volt(F) >= PAR_FMAX && !in(ERROR)) {
 			TRACE_INFO("FMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[p] >= PAR_PMAX && !in(ERROR)) {
+		if (get_latest_volt(p) >= PAR_PMAX && !in(ERROR)) {
 			TRACE_INFO("PMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[s] >= PAR_SMAX && !in(ERROR)) {
+		if (get_latest_volt(s) >= PAR_SMAX && !in(ERROR)) {
 			TRACE_INFO("SMAX reached.\n");
 			enter(ERROR);
 		}
@@ -75,7 +75,7 @@ int main()
 						enter(IDLE);
 					}
 					else if (cmd == 'l') // log
-						printf("%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
+						printf("%u %u %u %u %u\n", _state, get_latest_volt(F), get_latest_volt(p), get_latest_volt(s), soffset);
 				}
 			}
 		}
@@ -91,8 +91,8 @@ int main()
 				break;
 
 			case READY:
-				if (current[p] > PAR_PSET) {
-					soffset = current[s];
+				if (get_latest_volt(p) > PAR_PSET) {
+					soffset = get_latest_volt(s);
 					enter(SET);
 				}
 				break;
@@ -103,7 +103,7 @@ int main()
 				break;
 
 			case GO:
-				if (current[F] <= previous[F]/2)
+				if (get_latest_volt(F) <= get_previous_volt(F)/2)
 					enter(IDLE);
 				break;
 
