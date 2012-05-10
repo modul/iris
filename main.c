@@ -39,15 +39,15 @@ int main()
 	start_sampling();
 
 	while (1) {
-		if (current[config.F] >= config.fmax && !in(ERROR)) {
+		if (current[F] >= config.fmax && !in(ERROR)) {
 			TRACE_INFO("FMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[config.P] >= config.pmax && !in(ERROR)) {
+		if (current[p] >= config.pmax && !in(ERROR)) {
 			TRACE_INFO("PMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[config.S] >= config.smax && !in(ERROR)) {
+		if (current[s] >= config.smax && !in(ERROR)) {
 			TRACE_INFO("SMAX reached.\n");
 			enter(ERROR);
 		}
@@ -69,7 +69,7 @@ int main()
 						enter(IDLE);
 					}
 					else if (cmd == 'l') // log
-						printf("%u %u %u %u %u\n", _state, current[config.F], current[config.P], current[config.S], soffset);
+						printf("%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
 				}
 			}
 		}
@@ -85,8 +85,8 @@ int main()
 				break;
 
 			case READY:
-				if (current[config.P] > config.pset) {
-					soffset = current[config.S];
+				if (current[p] > config.pset) {
+					soffset = current[s];
 					enter(SET);
 				}
 				break;
@@ -97,7 +97,7 @@ int main()
 				break;
 
 			case GO:
-				if (current[config.F] <= previous[config.F]/config.fpeakdiv)
+				if (current[F] <= previous[F]/config.fpeakdiv)
 					enter(IDLE);
 				break;
 
