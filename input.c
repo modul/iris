@@ -43,6 +43,8 @@ void start_sampling()
 	NVIC_SetPriority(ADC_IRQn, 0);
 	NVIC_EnableIRQ(TC0_IRQn);
 	NVIC_SetPriority(TC0_IRQn, 1);
+
+	ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
 }
 
 void stop_sampling()
