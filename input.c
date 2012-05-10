@@ -18,21 +18,22 @@ void TC0_IrqHandler()
 
 void ADC_IrqHandler()
 {
-	uint8_t i;
     uint32_t status;
+#ifdef TRACE_LEVEL_DEBUG
 	static uint32_t timestamp = 0;
+#endif
 
     status = ADC_GetStatus(ADC);
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
 		memcpy(previous, latest, NUM_AIN*2);
-		for (i=0; i<NUM_AIN; i++)
-			latest[i] = mV(next[i]);
-
-		TRACE_DEBUG("[%u] Got samples. 0: %umV, 1: %umV, 2: %umV\n", GetTickCount()-timestamp, latest[0], latest[1], latest[2]);
-		timestamp = GetTickCount();
-
+		memcpy(latest, next, NUM_AIN*2);
 		ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
+
+#ifdef TRACE_LEVEL_DEBUG
+		TRACE_DEBUG("[%u] Got samples. 0: %u, 1: %u, 2: %u\n", GetTickCount()-timestamp, latest[0], latest[1], latest[2]);
+		timestamp = GetTickCount();
+#endif
 	}
 }
 
@@ -52,10 +53,10 @@ void stop_sampling()
 
 uint16_t get_latest_volt(unsigned index) {
 	assert(index < NUM_AIN);
-	return latest[index];
+	return mV(latest[index]);
 }
 
 uint16_t get_previous_volt(unsigned index) {
 	assert(index < NUM_AIN);
-	return previous[index];
+	return mV(previous[index]);
 }
