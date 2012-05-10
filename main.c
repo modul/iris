@@ -222,5 +222,6 @@ void setup()
 	setbuf(stdout, NULL);
 	LED_blinkstop(STATUS);
 	TRACE_INFO("setup done\n");
+	LED_on(STATUS);
 }
 /* vim: set ts=4: */
