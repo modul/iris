@@ -34,8 +34,8 @@
  *
  */
 
-#ifndef SYSTEM_H
-#define SYSTEM_H
+#ifndef _SYSTEM_
+#define _SYSTEM_
 
 /*----------------------------------------------------------------------------
  *        Exported functions

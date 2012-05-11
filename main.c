@@ -1,5 +1,6 @@
 #include <string.h>
 #include "conf.h"
+#include "input.h"
 
 #define BUFSIZE 32
 
@@ -18,10 +19,9 @@
 #define PAR_SMAX VREF
 #define PAR_FMAX VREF
 
-uint8_t _state = READY;
+#define in(state) (_state == state)
 
-extern uint16_t current[NUM_AIN];   // current ADC input in mV
-extern uint16_t previous[NUM_AIN];  // previous ADC input in mV
+uint8_t _state = READY;
 
 void setup();
 void enter(uint8_t new);
@@ -42,17 +42,18 @@ int main()
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
+	start_sampling();
 
 	while (1) {
-		if (current[F] >= PAR_FMAX && _state != ERROR) {
+		if (get_latest_volt(F) >= PAR_FMAX && !in(ERROR)) {
 			TRACE_INFO("FMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[p] >= PAR_PMAX && _state != ERROR) {
+		if (get_latest_volt(p) >= PAR_PMAX && !in(ERROR)) {
 			TRACE_INFO("PMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[s] >= PAR_SMAX && _state != ERROR) {
+		if (get_latest_volt(s) >= PAR_SMAX && !in(ERROR)) {
 			TRACE_INFO("SMAX reached.\n");
 			enter(ERROR);
 		}
@@ -74,7 +75,7 @@ int main()
 						enter(IDLE);
 					}
 					else if (cmd == 'l') // log
-						printf("%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
+						printf("%u %u %u %u %u\n", _state, get_latest_volt(F), get_latest_volt(p), get_latest_volt(s), soffset);
 				}
 			}
 		}
@@ -90,8 +91,8 @@ int main()
 				break;
 
 			case READY:
-				if (current[p] > PAR_PSET) {
-					soffset = current[s];
+				if (get_latest_volt(p) > PAR_PSET) {
+					soffset = get_latest_volt(s);
 					enter(SET);
 				}
 				break;
@@ -102,7 +103,7 @@ int main()
 				break;
 
 			case GO:
-				if (current[F] <= previous[F]/2)
+				if (get_latest_volt(F) <= get_previous_volt(F)/2)
 					enter(IDLE);
 				break;
 
@@ -154,7 +155,7 @@ void enter(uint8_t new)
 		case IDLE:
 			do_vent();
 			TRACE_INFO("entered state IDLE\n");
-			if (_state == ERROR) // ERROR was acknowledged, turn of alarm
+			if (in(ERROR)) // ERROR was acknowledged, turn of alarm
 				LED_off(ALARM);
 			break;
 		case READY:
@@ -209,12 +210,6 @@ void setup()
 	ADC->ADC_CHER = (1<<AIN0)|(1<<AIN1)|(1<<AIN2);
 	ADC->ADC_IER  = ADC_IER_RXBUFF;
 
-	/* Enable Interrupts */
-	NVIC_EnableIRQ(ADC_IRQn);
-	NVIC_SetPriority(ADC_IRQn, 0);
-	NVIC_EnableIRQ(TC0_IRQn);
-	NVIC_SetPriority(TC0_IRQn, 1);
-
 	/* LEDs */
 	LEDs_configure();
 	LED_blink(STATUS, FOREVER);
@@ -227,5 +222,6 @@ void setup()
 	setbuf(stdout, NULL);
 	LED_blinkstop(STATUS);
 	TRACE_INFO("setup done\n");
+	LED_on(STATUS);
 }
 /* vim: set ts=4: */

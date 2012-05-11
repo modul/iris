@@ -1,5 +1,5 @@
-#ifndef _LED_H
-#define _LED_H_
+#ifndef _LED_
+#define _LED_
 
 #define FOREVER 0xFFFFFFFF
 

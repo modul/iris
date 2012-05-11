@@ -37,6 +37,8 @@
 /*----------------------------------------------------------------------------
  *        Headers
  *----------------------------------------------------------------------------*/
+#ifndef _SYSCALLS_
+#define _SYSCALLS_
 
 
 #include <stdio.h>
@@ -62,3 +64,5 @@ extern int _isatty( int file ) ;
 extern int _read(int file, char *ptr, int len) ;
 
 extern int _write( int file, char *ptr, int len ) ;
+
+#endif

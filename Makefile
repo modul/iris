@@ -110,6 +110,9 @@ dist-clean:
 tags: $(C_SRC) $(LIBS)
 	ctags --totals -R .
 
+size: 
+	$(SIZE) $(OUTPUT).elf
+
 install: program
 
 program: target
@@ -123,9 +126,6 @@ debug: target
 	$(OOCD) $(OOCDFLAGS) 2>/dev/null &
 	$(GDB) -ex "target remote localhost:3333" $(OUTPUT).elf
 	killall -HUP $(OOCD)
-
-size: target
-	$(SIZE) $(OUTPUT).elf
 
 $(OUTPUT): $(ASM_OBJECTS) $(C_OBJECTS) $(LIBS)
 	@echo [LINKING $@]
