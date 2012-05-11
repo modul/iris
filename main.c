@@ -39,15 +39,15 @@ int main()
 	start_sampling();
 
 	while (1) {
-		if (current[F] >= config.fmax && !in(ERROR)) {
+		if (get_latest_volt(F) >= config.fmax && !in(ERROR)) {
 			TRACE_INFO("FMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[p] >= config.pmax && !in(ERROR)) {
+		if (get_latest_volt(p) >= config.pmax && !in(ERROR)) {
 			TRACE_INFO("PMAX reached.\n");
 			enter(ERROR);
 		}
-		if (current[s] >= config.smax && !in(ERROR)) {
+		if (get_latest_volt(s) >= config.smax && !in(ERROR)) {
 			TRACE_INFO("SMAX reached.\n");
 			enter(ERROR);
 		}
@@ -69,7 +69,7 @@ int main()
 						enter(IDLE);
 					}
 					else if (cmd == 'l') // log
-						printf("%u %u %u %u %u\n", _state, current[F], current[p], current[s], soffset);
+						printf("%u %u %u %u %u\n", _state, get_latest_volt(F), get_latest_volt(p), get_latest_volt(s), soffset);
 				}
 			}
 		}
@@ -85,8 +85,8 @@ int main()
 				break;
 
 			case READY:
-				if (current[p] > config.pset) {
-					soffset = current[s];
+				if (get_latest_volt(p) > config.pset) {
+					soffset = get_latest_volt(s);
 					enter(SET);
 				}
 				break;
@@ -97,7 +97,7 @@ int main()
 				break;
 
 			case GO:
-				if (current[F] <= previous[F]/config.fpeakdiv)
+				if (get_latest_volt(F) <= get_previous_volt(F)/config.fpeakdiv)
 					enter(IDLE);
 				break;
 
@@ -216,5 +216,6 @@ void setup()
 	setbuf(stdout, NULL);
 	LED_blinkstop(STATUS);
 	TRACE_INFO("setup done\n");
+	LED_on(STATUS);
 }
 /* vim: set ts=4: */
