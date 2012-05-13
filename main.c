@@ -10,14 +10,6 @@
 #define GO    3
 #define ERROR 4
 
-#define F AIN0
-#define p AIN1
-#define s AIN2
-
-#define PAR_PSET 50
-#define PAR_PMAX VREF-1 // VREF-1 is maximum, but these should be set by the user
-#define PAR_SMAX VREF
-#define PAR_FMAX VREF
 
 #define in(state) (_state == state)
 
@@ -41,21 +33,23 @@ int main()
 
 	uint16_t soffset = 0;
 
+	conf_t config = {CONF_INIT};
+
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
 	start_sampling();
 
 	while (1) {
-		if (get_latest_volt(F) >= PAR_FMAX && !in(ERROR)) {
+		if (get_latest_volt(F) >= config.fmax && !in(ERROR)) {
 			TRACE_INFO("FMAX reached.\n");
 			enter(ERROR);
 		}
-		if (get_latest_volt(p) >= PAR_PMAX && !in(ERROR)) {
+		if (get_latest_volt(p) >= config.pmax && !in(ERROR)) {
 			TRACE_INFO("PMAX reached.\n");
 			enter(ERROR);
 		}
-		if (get_latest_volt(s) >= PAR_SMAX && !in(ERROR)) {
+		if (get_latest_volt(s) >= config.smax && !in(ERROR)) {
 			TRACE_INFO("SMAX reached.\n");
 			enter(ERROR);
 		}
@@ -93,7 +87,7 @@ int main()
 				break;
 
 			case READY:
-				if (get_latest_volt(p) > PAR_PSET) {
+				if (get_latest_volt(p) > config.pset) {
 					soffset = get_latest_volt(s);
 					enter(SET);
 				}
@@ -105,7 +99,7 @@ int main()
 				break;
 
 			case GO:
-				if (get_latest_volt(F) <= get_previous_volt(F)/2)
+				if (get_latest_volt(F) <= get_previous_volt(F)/config.fpeakdiv)
 					enter(IDLE);
 				break;
 
