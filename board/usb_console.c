@@ -235,12 +235,13 @@ int USBC_Gets(char *ptr, uint16_t len)
 		else               // re-arrange data left
 			memmove(_rxBuffer, _rxBuffer+done, _rxCount); 
 	}
+	*(ptr+done) = '\0';
 	return done;
 }
 
 /*
  * Write output 
- * returns -1
+ * returns -1 on failure,
  * returns number of bytes that will be sent otherwise.
  */ 
 int USBC_Puts(char *ptr, uint16_t len)
