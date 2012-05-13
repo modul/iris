@@ -214,6 +214,7 @@ void setup()
 	SPI_Configure(SPI, ID_SPI, SPI_MR_MSTR|SPI_MR_PS|SPI_MR_LLB); // Enable, Reset and set Master mode, variable CS, Loopback (testing)
 	SPI_ConfigureNPCS(SPI, PGA_CS, PGA_SPICONF);
 	SPI_ConfigureNPCS(SPI, MEMORY_CS, MEMORY_SPICONF);
+	SPI_Enable(SPI);
 
 	/* LEDs */
 	LEDs_configure();
