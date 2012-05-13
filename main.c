@@ -30,6 +30,8 @@ void do_press();
 void do_hold();
 void do_vent();
 
+void test_spi();
+
 int main() 
 {
 	int argc = 0;
@@ -116,10 +118,26 @@ int main()
 		}
 		
 		/* Display state */
-		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) 
+		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) {
 			LED_blink(STATUS, _state);
+			test_spi();
+		}
 	}
 	return 0;
+}
+
+void test_spi()
+{
+	union {
+		uint16_t hword; 
+		char bytes[2];
+	} in, out;
+
+	out.hword = 0x6b6f; // "ok"
+	TRACE_DEBUG("Testing SPI, write '%s'\n", out.bytes);
+	SPI_Write(SPI, MEMORY_CS, out.hword|SPI_TDR_LASTXFER);
+	in.hword = (uint16_t) SPI_Read(SPI);
+	TRACE_DEBUG("SPI read: '%s'\n", in.bytes);
 }
 
 void do_press() 
