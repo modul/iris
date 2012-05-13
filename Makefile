@@ -125,7 +125,7 @@ program: target
 debug: target
 	$(OOCD) $(OOCDFLAGS) 2>/dev/null &
 	$(GDB) -ex "target remote localhost:3333" $(OUTPUT).elf
-	killall -HUP $(OOCD)
+	killall $(OOCD)
 
 $(OUTPUT): $(ASM_OBJECTS) $(C_OBJECTS) $(LIBS)
 	@echo [LINKING $@]
