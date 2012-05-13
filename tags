@@ -599,11 +599,11 @@ ADC_cfgFrequency	libchip/source/adc.c	/^extern void ADC_cfgFrequency( Adc* pAdc,
 ADC_check	libchip/source/adc.c	/^extern void ADC_check( Adc* pAdc, uint32_t mck_freq )$/;"	f
 ADR	libchip/cmsis/core_cm3.h	/^  __I  uint32_t ADR;                          \/*!< Offset: 0x4C  Auxiliary Feature Register                            *\/$/;"	m	struct:__anon34
 AFSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t AFSR;                         \/*!< Offset: 0x3C  Auxiliary Fault Status Register                       *\/$/;"	m	struct:__anon34
-AIN0	conf.h	14;"	d
-AIN1	conf.h	15;"	d
-AIN2	conf.h	16;"	d
+AIN0	conf.h	19;"	d
+AIN1	conf.h	20;"	d
+AIN2	conf.h	21;"	d
 AIRCR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t AIRCR;                        \/*!< Offset: 0x0C  Application Interrupt \/ Reset Control Register        *\/$/;"	m	struct:__anon34
-ALARM	board/board.h	34;"	d
+ALARM	board/board.h	37;"	d
 AR	libchip/Makefile	/^AR = $(CROSS_COMPILE)ar$/;"	m
 AR	libusb/Makefile	/^AR = $(CROSS_COMPILE)ar$/;"	m
 AS	libchip/Makefile	/^AS = $(CROSS_COMPILE)as$/;"	m
@@ -652,19 +652,19 @@ BFAR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t BFAR;                         \/
 BIN	Makefile	/^BIN = $(BUILD)\/bin$/;"	m
 BIN	libchip/Makefile	/^BIN = lib$/;"	m
 BIN	libusb/Makefile	/^BIN = lib$/;"	m
-BLINK_TIME	board/board.h	35;"	d
+BLINK_TIME	board/board.h	38;"	d
 BOARD	Makefile	/^BOARD = olimex-sam3-h256$/;"	m
-BOARD_MAINOSC	board/board.h	23;"	d
-BOARD_MCK	board/board.h	24;"	d
+BOARD_MAINOSC	board/board.h	26;"	d
+BOARD_MCK	board/board.h	27;"	d
 BOARD_MCKR	board/system.c	52;"	d	file:
 BOARD_MCKR	board/system.c	61;"	d	file:
-BOARD_NAME	board/board.h	15;"	d
+BOARD_NAME	board/board.h	18;"	d
 BOARD_OSCOUNT	board/system.c	47;"	d	file:
 BOARD_OSCOUNT	board/system.c	56;"	d	file:
 BOARD_PLLAR	board/system.c	48;"	d	file:
 BOARD_PLLAR	board/system.c	57;"	d	file:
-BOARD_USB_BMATTRIBUTES	board/board.h	41;"	d
-BUFSIZE	main.c	4;"	d	file:
+BOARD_USB_BMATTRIBUTES	board/board.h	44;"	d
+BUFSIZE	main.c	5;"	d	file:
 BUILD	Makefile	/^BUILD = build$/;"	m
 BusFault_Handler	libchip/source/exceptions.c	/^WEAK void BusFault_Handler( void )$/;"	f
 BusFault_IRQn	libchip/include/SAM3S.h	/^  BusFault_IRQn         = -11, \/**<  5 Cortex-M3 Bus Fault Interrupt         *\/$/;"	e	enum:IRQn
@@ -1310,9 +1310,10 @@ EFC_PerformCommand	libchip/source/efc.c	/^extern uint32_t EFC_PerformCommand( Ef
 EFC_SetWaitState	libchip/source/efc.c	/^extern void EFC_SetWaitState( Efc* efc, uint8_t ucCycles )$/;"	f
 EFC_StartCommand	libchip/source/efc.c	/^extern void EFC_StartCommand( Efc* efc, uint32_t dwCommand, uint32_t dwArgument )$/;"	f
 EFC_TranslateAddress	libchip/source/efc.c	/^extern void EFC_TranslateAddress( Efc** ppEfc, uint32_t dwAddress, uint16_t* pwPage, uint16_t* pwOffset )$/;"	f
+ERROR	main.c	11;"	d	file:
 Efc	libchip/include/SAM3S.h	/^} Efc;$/;"	t	typeref:struct:__anon7
 Endpoint	libusb/source/USBD_HAL.c	/^} Endpoint;$/;"	t	typeref:struct:__anon45	file:
-F	main.c	11;"	d	file:
+F	main.c	13;"	d	file:
 FLASHD_ClearGPNVM	libchip/source/flashd.c	/^extern uint32_t FLASHD_ClearGPNVM( uint8_t ucGPNVM )$/;"	f
 FLASHD_Erase	libchip/source/flashd.c	/^extern uint32_t FLASHD_Erase( uint32_t dwAddress )$/;"	f
 FLASHD_Initialize	libchip/source/flashd.c	/^extern void FLASHD_Initialize( uint32_t dwMCk, uint32_t dwUseIAP )$/;"	f
@@ -1328,7 +1329,7 @@ FLASHD_Write	libchip/source/flashd.c	/^extern uint32_t FLASHD_Write( uint32_t dw
 FOREVER	board/led.h	4;"	d
 FindClockConfiguration	libchip/source/pwmc.c	/^static uint16_t FindClockConfiguration($/;"	f	file:
 GDB	Makefile	/^GDB = $(CROSS_COMPILE)gdb$/;"	m
-GO	main.c	9;"	d	file:
+GO	main.c	10;"	d	file:
 GPBR	libchip/include/SAM3S.h	7447;"	d
 GetConfiguration	libusb/source/USBDDriver.c	/^static void GetConfiguration(const USBDDriver *pDriver)$/;"	f	file:
 GetDescriptor	libusb/source/USBDDriver.c	/^static void GetDescriptor($/;"	f	file:
@@ -1667,7 +1668,7 @@ ICER	libchip/cmsis/core_cm3.h	/^  __IO uint32_t ICER[8];                      \/
 ICPR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t ICPR[8];                      \/*!< Offset: 0x180  Interrupt Clear Pending Register        *\/$/;"	m	struct:__anon33
 ICSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t ICSR;                         \/*!< Offset: 0x04  Interrupt Control State Register                      *\/$/;"	m	struct:__anon34
 ICTR	libchip/cmsis/core_cm3.h	/^  __I  uint32_t ICTR;                         \/*!< Offset: 0x04  Interrupt Control Type Register *\/$/;"	m	struct:__anon38
-IDLE	main.c	6;"	d	file:
+IDLE	main.c	7;"	d	file:
 ID_ACC	libchip/include/SAM3S.h	7394;"	d
 ID_ADC	libchip/include/SAM3S.h	7390;"	d
 ID_CRCCU	libchip/include/SAM3S.h	7393;"	d
@@ -1788,13 +1789,18 @@ LAR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t LAR;                          \/*
 LD	Makefile	/^LD = $(CROSS_COMPILE)ld$/;"	m
 LD	libchip/Makefile	/^LD = $(CROSS_COMPILE)ld$/;"	m
 LD	libusb/Makefile	/^LD = $(CROSS_COMPILE)ld$/;"	m
-LEDS_NUM	board/board.h	32;"	d
+LEDS_ACTIVE_LOW	board/board.h	14;"	d
+LEDS_NUM	board/board.h	35;"	d
 LED_blink	board/led.c	/^void LED_blink(uint8_t led, uint32_t num)$/;"	f
 LED_blinking	board/led.c	/^uint8_t LED_blinking(uint8_t led)$/;"	f
 LED_blinkstop	board/led.c	/^void LED_blinkstop(uint8_t led)$/;"	f
 LED_blinkwait	board/led.c	/^void LED_blinkwait(uint8_t led, uint32_t num)$/;"	f
 LED_clr	board/led.c	/^void LED_clr(uint8_t led)$/;"	f
 LED_get	board/led.c	/^uint8_t LED_get(uint8_t led)$/;"	f
+LED_off	board/led.h	14;"	d
+LED_off	board/led.h	9;"	d
+LED_on	board/led.h	13;"	d
+LED_on	board/led.h	8;"	d
 LED_set	board/led.c	/^void LED_set(uint8_t led)$/;"	f
 LED_tgl	board/led.c	/^void LED_tgl(uint8_t led)$/;"	f
 LEDs_configure	board/led.c	/^void LEDs_configure()$/;"	f
@@ -1917,7 +1923,7 @@ MATRIX_WPSR	libchip/include/SAM3S.h	/^  RoReg MATRIX_WPSR;    \/**< \\brief (Mat
 MATRIX_WPSR_WPVS	libchip/include/SAM3S.h	1681;"	d
 MATRIX_WPSR_WPVSRC_Msk	libchip/include/SAM3S.h	1683;"	d
 MATRIX_WPSR_WPVSRC_Pos	libchip/include/SAM3S.h	1682;"	d
-MAX	conf.h	5;"	d
+MAX	conf.h	10;"	d
 MAX_INTERRUPT_SOURCES	libchip/source/pio_it.c	49;"	d	file:
 MBL_FULL	libusb/source/USBD_HAL.c	138;"	d	file:
 MBL_NULL	libusb/source/USBD_HAL.c	140;"	d	file:
@@ -1945,6 +1951,9 @@ MCI_SetBusWidth	libchip/source/hsmci_pdc.c	/^uint32_t MCI_SetBusWidth(Mcid*pMci,
 MCI_SetSpeed	libchip/source/hsmci.c	/^uint32_t MCI_SetSpeed( Mcid* pMci, uint32_t mciSpeed, uint32_t mck )$/;"	f
 MCI_SetSpeed	libchip/source/hsmci_pdc.c	/^uint32_t MCI_SetSpeed( Mcid* pMci, uint32_t mciSpeed, uint32_t mck )$/;"	f
 MCI_WRITE	libchip/include/hsmci.h	117;"	d
+MEMORY_BAUD	conf.h	44;"	d
+MEMORY_CS	conf.h	43;"	d
+MEMORY_SPICONF	conf.h	45;"	d
 MIN	board/usb_device_descriptor.c	70;"	d	file:
 MMFAR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t MMFAR;                        \/*!< Offset: 0x34  Mem Manage Address Register                           *\/$/;"	m	struct:__anon34
 MMFR	libchip/cmsis/core_cm3.h	/^  __I  uint32_t MMFR[4];                      \/*!< Offset: 0x50  Memory Model Feature Register                         *\/$/;"	m	struct:__anon34
@@ -1998,6 +2007,7 @@ MciCmd	libchip/include/hsmci.h	/^} MciCmd;$/;"	t	typeref:struct:_MciCmd
 Mcid	libchip/include/hsmci.h	/^} Mcid;$/;"	t	typeref:struct:__anon32
 MemManage_Handler	libchip/source/exceptions.c	/^WEAK void MemManage_Handler( void )$/;"	f
 MemoryManagement_IRQn	libchip/include/SAM3S.h	/^  MemoryManagement_IRQn = -12, \/**<  4 Cortex-M3 Memory Management Interrupt *\/$/;"	e	enum:IRQn
+NAME	Makefile	/^NAME = project$/;"	m
 NM	Makefile	/^NM = $(CROSS_COMPILE)nm$/;"	m
 NMI_Handler	libchip/source/exceptions.c	/^WEAK void NMI_Handler( void )$/;"	f
 NOTRACE	trace.h	134;"	d
@@ -2009,7 +2019,7 @@ NO_INIT	libchip/chip.h	32;"	d
 NO_INIT	libusb/include/USBD.h	74;"	d
 NO_INIT	libusb/include/USBD.h	76;"	d
 NO_INIT	libusb/include/USBD.h	78;"	d
-NUM_AIN	conf.h	17;"	d
+NUM_AIN	conf.h	22;"	d
 NVIC	libchip/cmsis/core_cm3.h	725;"	d
 NVIC_BASE	libchip/cmsis/core_cm3.h	719;"	d
 NVIC_ClearPendingIRQ	libchip/cmsis/core_cm3.h	/^static __INLINE void NVIC_ClearPendingIRQ(IRQn_Type IRQn)$/;"	f
@@ -2036,17 +2046,16 @@ OBJCOPY	libusb/Makefile	/^OBJCOPY = $(CROSS_COMPILE)objcopy$/;"	m
 OOCD	Makefile	/^OOCD = openocd$/;"	m
 OOCDCFG	Makefile	/^OOCDCFG = "openocd.cfg"$/;"	m
 OOCDFLAGS	Makefile	/^OOCDFLAGS = -f $(OOCDCFG) -c init$/;"	m
-OPTIMIZATION	Makefile	/^OPTIMIZATION = -O0 -DDEBUG$/;"	m
+OPTFLAGS	Makefile	/^OPTFLAGS = -O0 -DDEBUG$/;"	m
 OPTIMIZATION	libchip/Makefile	/^OPTIMIZATION = -O0 -D DEBUG$/;"	m
 OPTIMIZATION	libchip/Makefile	/^OPTIMIZATION = -Os$/;"	m
 OPTIMIZATION	libusb/Makefile	/^OPTIMIZATION = -O0 -D DEBUG$/;"	m
 OPTIMIZATION	libusb/Makefile	/^OPTIMIZATION = -Os$/;"	m
-OUTPUT	Makefile	/^OUTPUT := $(BIN)\/$(OUTPUT)$/;"	m
-OUTPUT	Makefile	/^OUTPUT = project$/;"	m
-PAR_FMAX	main.c	18;"	d	file:
-PAR_PMAX	main.c	16;"	d	file:
-PAR_PSET	main.c	15;"	d	file:
-PAR_SMAX	main.c	17;"	d	file:
+OUTPUT	Makefile	/^OUTPUT = $(BIN)\/$(NAME)$/;"	m
+PAR_FMAX	main.c	20;"	d	file:
+PAR_PMAX	main.c	18;"	d	file:
+PAR_PSET	main.c	17;"	d	file:
+PAR_SMAX	main.c	19;"	d	file:
 PDC_ADC	libchip/include/SAM3S.h	7424;"	d
 PDC_DACC	libchip/include/SAM3S.h	7426;"	d
 PDC_HSMCI	libchip/include/SAM3S.h	7405;"	d
@@ -2101,6 +2110,9 @@ PERIPH_TPR_TXPTR	libchip/include/SAM3S.h	1720;"	d
 PERIPH_TPR_TXPTR_Msk	libchip/include/SAM3S.h	1719;"	d
 PERIPH_TPR_TXPTR_Pos	libchip/include/SAM3S.h	1718;"	d
 PFR	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PFR[2];                       \/*!< Offset: 0x40  Processor Feature Register                            *\/$/;"	m	struct:__anon34
+PGA_BAUD	conf.h	41;"	d
+PGA_CS	conf.h	40;"	d
+PGA_SPICONF	conf.h	42;"	d
 PID0	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PID0;                         \/*!< Offset:       ITM Peripheral Identification Register #0 *\/$/;"	m	struct:__anon36
 PID1	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PID1;                         \/*!< Offset:       ITM Peripheral Identification Register #1 *\/$/;"	m	struct:__anon36
 PID2	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PID2;                         \/*!< Offset:       ITM Peripheral Identification Register #2 *\/$/;"	m	struct:__anon36
@@ -2109,18 +2121,21 @@ PID4	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PID4;                         \/
 PID5	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PID5;                         \/*!< Offset:       ITM Peripheral Identification Register #5 *\/$/;"	m	struct:__anon36
 PID6	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PID6;                         \/*!< Offset:       ITM Peripheral Identification Register #6 *\/$/;"	m	struct:__anon36
 PID7	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PID7;                         \/*!< Offset:       ITM Peripheral Identification Register #7 *\/$/;"	m	struct:__anon36
-PINS_ADCIN	conf.h	12;"	d
-PINS_LEDS	board/board.h	29;"	d
-PINS_UART	board/board.h	47;"	d
-PINS_VAL	conf.h	22;"	d
-PIN_ADC0	conf.h	9;"	d
-PIN_ADC1	conf.h	10;"	d
-PIN_ADC2	conf.h	11;"	d
-PIN_ALARM	board/board.h	28;"	d
-PIN_STATUS	board/board.h	27;"	d
-PIN_USB_VBUS	board/board.h	38;"	d
-PIN_VAL_press	conf.h	21;"	d
-PIN_VAL_vent	conf.h	20;"	d
+PINS_LEDS	board/board.h	32;"	d
+PINS_SPI	conf.h	38;"	d
+PINS_UART	board/board.h	50;"	d
+PINS_VAL	conf.h	27;"	d
+PIN_ALARM	board/board.h	31;"	d
+PIN_SPI_CS0	conf.h	35;"	d
+PIN_SPI_CS1	conf.h	36;"	d
+PIN_SPI_CS2	conf.h	37;"	d
+PIN_SPI_MISO	conf.h	32;"	d
+PIN_SPI_MOSI	conf.h	33;"	d
+PIN_SPI_SPCK	conf.h	34;"	d
+PIN_STATUS	board/board.h	30;"	d
+PIN_USB_VBUS	board/board.h	41;"	d
+PIN_VAL_press	conf.h	26;"	d
+PIN_VAL_vent	conf.h	25;"	d
 PIOA	libchip/include/SAM3S.h	7438;"	d
 PIOA_IRQn	libchip/include/SAM3S.h	/^  PIOA_IRQn            = 11, \/**< 11 SAM3S Parallel I\/O Controller A (PIOA) *\/$/;"	e	enum:IRQn
 PIOA_IrqHandler	libchip/source/exceptions.c	/^WEAK void PIOA_IrqHandler( void )$/;"	f
@@ -4813,7 +4828,7 @@ RBAR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR;                         \/
 RBAR_A1	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR_A1;                      \/*!< Offset: 0x14  MPU Alias 1 Region Base Address Register       *\/$/;"	m	struct:__anon39
 RBAR_A2	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR_A2;                      \/*!< Offset: 0x1C  MPU Alias 2 Region Base Address Register       *\/$/;"	m	struct:__anon39
 RBAR_A3	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR_A3;                      \/*!< Offset: 0x24  MPU Alias 3 Region Base Address Register       *\/$/;"	m	struct:__anon39
-READY	main.c	7;"	d	file:
+READY	main.c	8;"	d	file:
 REG_ACCESS	libchip/include/SAM3S.h	60;"	d
 REG_ACCESS	libchip/include/SAM3S.h	63;"	d
 REG_ACC_ACR	libchip/include/SAM3S.h	7010;"	d
@@ -5593,7 +5608,7 @@ RESERVED4	libchip/cmsis/core_cm3.h	/^       uint32_t RESERVED4[43];$/;"	m	struct
 RESERVED4	libchip/cmsis/core_cm3.h	/^       uint32_t RESERVED4[56];$/;"	m	struct:__anon33
 RESERVED5	libchip/cmsis/core_cm3.h	/^       uint32_t RESERVED5[644];$/;"	m	struct:__anon33
 RESERVED5	libchip/cmsis/core_cm3.h	/^       uint32_t RESERVED5[6];$/;"	m	struct:__anon36
-RESOLUTION	conf.h	4;"	d
+RESOLUTION	conf.h	9;"	d
 RNR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RNR;                          \/*!< Offset: 0x08  MPU Region RNRber Register                     *\/$/;"	m	struct:__anon39
 RSERVED1	libchip/cmsis/core_cm3.h	/^       uint32_t RSERVED1[24];$/;"	m	struct:__anon33
 RSTC	libchip/include/SAM3S.h	7442;"	d
@@ -5861,7 +5876,7 @@ Rtc	libchip/include/SAM3S.h	/^} Rtc;$/;"	t	typeref:struct:__anon18
 Rtt	libchip/include/SAM3S.h	/^} Rtt;$/;"	t	typeref:struct:__anon19
 RwReg	libchip/include/SAM3S.h	/^typedef volatile       uint32_t RwReg; \/**< Read-Write 32-bit register (volatile unsigned int) *\/$/;"	t
 SAM3S_H	libchip/include/SAM3S.h	35;"	d
-SAMPLING_FREQ	conf.h	3;"	d
+SAMPLING_FREQ	conf.h	6;"	d
 SCB	libchip/cmsis/core_cm3.h	723;"	d
 SCB_AIRCR_ENDIANESS_Msk	libchip/cmsis/core_cm3.h	237;"	d
 SCB_AIRCR_ENDIANESS_Pos	libchip/cmsis/core_cm3.h	236;"	d
@@ -5984,7 +5999,7 @@ SCS_BASE	libchip/cmsis/core_cm3.h	715;"	d
 SERIE	Makefile	/^SERIE = sam3s$/;"	m
 SERIE	libchip/Makefile	/^SERIE=sam3s$/;"	m
 SERIE	libusb/Makefile	/^SERIE=sam3s$/;"	m
-SET	main.c	8;"	d	file:
+SET	main.c	9;"	d	file:
 SET_CSR	libusb/source/USBD_HAL.c	97;"	d	file:
 SHCSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t SHCSR;                        \/*!< Offset: 0x24  System Handler Control and State Register             *\/$/;"	m	struct:__anon34
 SHP	libchip/cmsis/core_cm3.h	/^  __IO uint8_t  SHP[12];                      \/*!< Offset: 0x18  System Handlers Priority Registers (4-7, 8-11, 12-15) *\/$/;"	m	struct:__anon34
@@ -6539,7 +6554,7 @@ SSC_WPSR_WPVSRC_Pos	libchip/include/SAM3S.h	5135;"	d
 SSC_Write	libchip/source/ssc.c	/^void SSC_Write(uint32_t frame)$/;"	f
 SSC_WriteBuffer	libchip/source/ssc.c	/^uint8_t SSC_WriteBuffer(void *buffer, uint32_t length)$/;"	f
 STACK_SIZE	board/startup.c	41;"	d	file:
-STATUS	board/board.h	33;"	d
+STATUS	board/board.h	36;"	d
 STIR	libchip/cmsis/core_cm3.h	/^  __O  uint32_t STIR;                         \/*!< Offset: 0xE00  Software Trigger Interrupt Register     *\/$/;"	m	struct:__anon33
 STRIP	Makefile	/^STRIP = $(CROSS_COMPILE)strip$/;"	m
 SUPC	libchip/include/SAM3S.h	7443;"	d
@@ -6805,7 +6820,6 @@ SUPC_WUMR_WKUPDBC_Msk	libchip/include/SAM3S.h	5266;"	d
 SUPC_WUMR_WKUPDBC_Pos	libchip/include/SAM3S.h	5265;"	d
 SVC_Handler	libchip/source/exceptions.c	/^WEAK void SVC_Handler( void )$/;"	f
 SVCall_IRQn	libchip/include/SAM3S.h	/^  SVCall_IRQn           = -5,  \/**< 11 Cortex-M3 SV Call Interrupt           *\/$/;"	e	enum:IRQn
-SYSTEM_H	board/system.h	38;"	d
 SYS_GPBR0	libchip/include/SAM3S.h	/^  RwReg SYS_GPBR0; \/**< \\brief (Gpbr Offset: 0x0) General Purpose Backup Register 0 *\/$/;"	m	struct:__anon8
 SYS_GPBR0_GPBR_VALUE0	libchip/include/SAM3S.h	1144;"	d
 SYS_GPBR0_GPBR_VALUE0_Msk	libchip/include/SAM3S.h	1143;"	d
@@ -6878,7 +6892,6 @@ SysTick_VAL_CURRENT_Pos	libchip/cmsis/core_cm3.h	391;"	d
 SystemCoreClock	board/system.c	/^volatile uint32_t SystemCoreClock = 4000001;$/;"	v
 SystemCoreClockUpdate	board/system.c	/^void SystemCoreClockUpdate()	$/;"	f
 SystemInit	board/system.c	/^WEAK void SystemInit( void )$/;"	f
-TARGET	Makefile	/^TARGET = $(OUTPUT).bin$/;"	m
 TC0	libchip/include/SAM3S.h	7410;"	d
 TC0_IRQn	libchip/include/SAM3S.h	/^  TC0_IRQn             = 23, \/**< 23 SAM3S Timer\/Counter 0 (TC0) *\/$/;"	e	enum:IRQn
 TC0_IrqHandler	input.c	/^void TC0_IrqHandler()$/;"	f
@@ -7129,7 +7142,7 @@ TC_WPMR_WPKEY	libchip/include/SAM3S.h	5707;"	d
 TC_WPMR_WPKEY_Msk	libchip/include/SAM3S.h	5706;"	d
 TC_WPMR_WPKEY_Pos	libchip/include/SAM3S.h	5705;"	d
 TER	libchip/cmsis/core_cm3.h	/^  __IO uint32_t TER;                          \/*!< Offset:       ITM Trace Enable Register                 *\/$/;"	m	struct:__anon36
-TIMER_FREQ	input.c	4;"	d	file:
+TIMER_FREQ	conf.h	7;"	d
 TPR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t TPR;                          \/*!< Offset:       ITM Trace Privilege Register              *\/$/;"	m	struct:__anon36
 TRACE_DEBUG	trace.h	53;"	d
 TRACE_DEBUG	trace.h	68;"	d
@@ -7175,6 +7188,7 @@ TRACE_LEVEL_FATAL	trace.h	10;"	d
 TRACE_LEVEL_INFO	trace.h	7;"	d
 TRACE_LEVEL_NO_TRACE	trace.h	11;"	d
 TRACE_LEVEL_WARNING	trace.h	8;"	d
+TRACE_OUT	board/board.h	57;"	d
 TRACE_OUT	trace.h	14;"	d
 TRACE_WARNING	trace.h	100;"	d
 TRACE_WARNING	trace.h	103;"	d
@@ -7379,7 +7393,7 @@ UART0_IrqHandler	libchip/source/exceptions.c	/^WEAK void UART0_IrqHandler( void 
 UART1	libchip/include/SAM3S.h	7435;"	d
 UART1_IRQn	libchip/include/SAM3S.h	/^  UART1_IRQn           =  9, \/**<  9 SAM3S UART 1 (UART1) *\/$/;"	e	enum:IRQn
 UART1_IrqHandler	libchip/source/exceptions.c	/^WEAK void UART1_IrqHandler( void )$/;"	f
-UART_BAUDRATE	board/board.h	44;"	d
+UART_BAUDRATE	board/board.h	47;"	d
 UART_BRGR	libchip/include/SAM3S.h	/^  RwReg UART_BRGR;     \/**< \\brief (Uart Offset: 0x0020) Baud Rate Generator Register *\/$/;"	m	struct:__anon28
 UART_BRGR_CD	libchip/include/SAM3S.h	6001;"	d
 UART_BRGR_CD_Msk	libchip/include/SAM3S.h	6000;"	d
@@ -7395,7 +7409,7 @@ UART_CR_TXEN	libchip/include/SAM3S.h	5930;"	d
 UART_Configure	board/uart_console.c	/^extern void UART_Configure( uint32_t baudrate, uint32_t masterClock)$/;"	f
 UART_Get	board/uart_console.c	/^extern int UART_Get( void )$/;"	f
 UART_Gets	board/uart_console.c	/^extern int UART_Gets(char *ptr, int len)$/;"	f
-UART_ID	board/board.h	46;"	d
+UART_ID	board/board.h	49;"	d
 UART_IDR	libchip/include/SAM3S.h	/^  WoReg UART_IDR;      \/**< \\brief (Uart Offset: 0x000C) Interrupt Disable Register *\/$/;"	m	struct:__anon28
 UART_IDR_ENDRX	libchip/include/SAM3S.h	5961;"	d
 UART_IDR_ENDTX	libchip/include/SAM3S.h	5962;"	d
@@ -7507,7 +7521,7 @@ UART_TPR	libchip/include/SAM3S.h	/^  RwReg UART_TPR;      \/**< \\brief (Uart Of
 UART_TPR_TXPTR	libchip/include/SAM3S.h	6013;"	d
 UART_TPR_TXPTR_Msk	libchip/include/SAM3S.h	6012;"	d
 UART_TPR_TXPTR_Pos	libchip/include/SAM3S.h	6011;"	d
-UART_UART	board/board.h	45;"	d
+UART_UART	board/board.h	48;"	d
 UDP	libchip/include/SAM3S.h	7422;"	d
 UDP_AddWr	libusb/source/USBD_HAL.c	/^static inline uint8_t UDP_AddWr(uint8_t    bEndpoint,$/;"	f	file:
 UDP_CSR	libchip/include/SAM3S.h	/^  RwReg UDP_CSR[8];   \/**< \\brief (Udp Offset: 0x030) Endpoint Control and Status Register *\/$/;"	m	struct:__anon29
@@ -8199,10 +8213,10 @@ Usart	libchip/include/SAM3S.h	/^} Usart;$/;"	t	typeref:struct:__anon30
 UsbReadDone	board/usb_console.c	/^static void UsbReadDone(uint32_t unused,$/;"	f	file:
 UsbWriteDone	board/usb_console.c	/^static void UsbWriteDone(uint32_t unused,$/;"	f	file:
 VAL	libchip/cmsis/core_cm3.h	/^  __IO uint32_t VAL;                          \/*!< Offset: 0x08  SysTick Current Value Register      *\/$/;"	m	struct:__anon35
-VAL_press	conf.h	24;"	d
-VAL_vent	conf.h	23;"	d
+VAL_press	conf.h	29;"	d
+VAL_vent	conf.h	28;"	d
 VBus_Configure	board/usb_console.c	/^static void VBus_Configure( void )$/;"	f	file:
-VREF	conf.h	6;"	d
+VREF	conf.h	11;"	d
 VTOR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t VTOR;                         \/*!< Offset: 0x08  Vector Table Offset Register                          *\/$/;"	m	struct:__anon34
 WDT	libchip/include/SAM3S.h	7445;"	d
 WDT_CR	libchip/include/SAM3S.h	/^  WoReg WDT_CR; \/**< \\brief (Wdt Offset: 0x00) Control Register *\/$/;"	m	struct:__anon31
@@ -8265,15 +8279,17 @@ _CDCNOTIFICATIONS_H_	libusb/include/CDCNotifications.h	35;"	d
 _CDCREQUESTS_H_	libusb/include/CDCRequests.h	46;"	d
 _CDCSerialState	libusb/include/CDCNotifications.h	/^typedef struct _CDCSerialState {$/;"	s
 _CDCUnionDescriptor	libusb/include/CDCDescriptors.h	/^typedef struct _CDCUnionDescriptor {$/;"	s
+_CONF_	conf.h	2;"	d
 _CRCCU_	libchip/include/crccu.h	37;"	d
 _DACC_	libchip/include/dacc.h	48;"	d
 _EEFC_	libchip/include/efc.h	51;"	d
 _EXCEPTIONS_	libchip/include/exceptions.h	36;"	d
 _FLASHD_	libchip/include/flashd.h	38;"	d
 _GetLineCoding	libusb/source/CDCDSerialPort.c	/^static void _GetLineCoding(CDCDSerialPort * pCdcd)$/;"	f	file:
+_INPUT_	input.h	2;"	d
 _Interfaces_Parse	libusb/source/CDCDSerialPort.c	/^static uint32_t _Interfaces_Parse(USBGenericDescriptor *pDesc,$/;"	f	file:
 _InterruptSource	libchip/source/pio_it.c	/^typedef struct _InterruptSource$/;"	s	file:
-_LED_H_	board/led.h	2;"	d
+_LED_	board/led.h	2;"	d
 _LIB_SAM3S_	libchip/chip.h	2;"	d
 _MciCmd	libchip/include/hsmci.h	/^typedef struct _MciCmd {$/;"	s
 _PIO_	libchip/include/pio.h	68;"	d
@@ -8288,6 +8304,8 @@ _SPI_	libchip/include/spi.h	38;"	d
 _SPI_PDC_	libchip/include/spi_pdc.h	38;"	d
 _SSC_	libchip/include/ssc.h	38;"	d
 _SUPC_	libchip/include/supc.h	31;"	d
+_SYSCALLS_	board/syscalls.h	41;"	d
+_SYSTEM_	board/system.h	38;"	d
 _SetControlLineState	libusb/source/CDCDSerialPort.c	/^static void _SetControlLineState($/;"	f	file:
 _SetLineCoding	libusb/source/CDCDSerialPort.c	/^static void _SetLineCoding(CDCDSerialPort * pCdcd)$/;"	f	file:
 _SetLineCodingCallback	libusb/source/CDCDSerialPort.c	/^static void _SetLineCodingCallback(CDCDSerialPort * pCdcd)$/;"	f	file:
@@ -8580,9 +8598,8 @@ communication	libusb/include/CDCDSerialDriver.h	/^    USBInterfaceDescriptor  co
 configuration	libusb/include/CDCDSerialDriver.h	/^    USBConfigurationDescriptor configuration;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptors
 configuration	libusb/include/CDCDSerialDriver.h	/^    USBConfigurationDescriptor configuration;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptorsOTG
 configurationDescriptorsFS	board/usb_device_descriptor.c	/^const CDCDSerialDriverConfigurationDescriptors configurationDescriptorsFS = {$/;"	v
-cortexm3	board/board.h	21;"	d
+cortexm3	board/board.h	24;"	d
 ctrlSettings	libusb/include/USBD.h	/^    uint32_t   ctrlSettings:8,      \/** Control settings *\/$/;"	m	struct:_USBDDmaDescriptor
-current	input.c	/^uint16_t current[NUM_AIN] = {0};   \/\/ current ADC input in mV$/;"	v
 dPDCsize	libchip/include/pio_capture.h	/^    uint16_t dPDCsize;$/;"	m	struct:_SpioCaptureInit
 data	libusb/include/CDCDSerialDriver.h	/^    USBInterfaceDescriptor data;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptors
 data	libusb/include/CDCDSerialDriver.h	/^    USBInterfaceDescriptor data;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptorsOTG
@@ -8606,6 +8623,8 @@ fCallback	libusb/source/USBD_HAL.c	/^    MblTransferCallback fCallback;$/;"	m	st
 fCallback	libusb/source/USBD_HAL.c	/^    TransferCallback fCallback;$/;"	m	struct:__anon43	file:
 fCallback	libusb/source/USBD_HAL.c	/^    void*   fCallback;$/;"	m	struct:__anon42	file:
 fEventHandler	libusb/include/CDCDSerialPort.h	/^    CDCDSerialPortEventHandler fEventHandler;$/;"	m	struct:_CDCDSerialPort
+get_latest_volt	input.c	/^uint16_t get_latest_volt(unsigned index) {$/;"	f
+get_previous_volt	input.c	/^uint16_t get_previous_volt(unsigned index) {$/;"	f
 halfSampling	libchip/include/pio_capture.h	/^    uint8_t halfSampling;$/;"	m	struct:_SpioCaptureInit
 handler	libchip/source/pio_it.c	/^    void (*handler)( const Pin* ) ;$/;"	m	struct:_InterruptSource	file:
 header	libusb/include/CDCDSerialDriver.h	/^    CDCHeaderDescriptor header;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptors
@@ -8619,16 +8638,17 @@ iSerialNumber	libusb/include/USBDescriptors.h	/^   uint8_t iSerialNumber;$/;"	m	
 id	libchip/include/pio.h	/^    uint8_t id;$/;"	m	struct:_Pin
 idProduct	libusb/include/USBDescriptors.h	/^   uint16_t idProduct;$/;"	m	struct:_USBDeviceDescriptor
 idVendor	libusb/include/USBDescriptors.h	/^   uint16_t idVendor;$/;"	m	struct:_USBDeviceDescriptor
+in	main.c	22;"	d	file:
 inCurr	libusb/source/USBD_HAL.c	/^    uint16_t            inCurr;$/;"	m	struct:__anon44	file:
-input_init	input.c	/^void input_init()$/;"	f
 isRemoteWakeUpEnabled	libusb/include/USBDDriver.h	/^    uint8_t isRemoteWakeUpEnabled;$/;"	m	struct:_USBDDriver
 languageIdStringDescriptor	board/usb_device_descriptor.c	/^const unsigned char languageIdStringDescriptor[] = {$/;"	v
+latest	input.c	/^uint16_t latest[NUM_AIN] = {0};   \/\/ latest ADC input in mV$/;"	v
 leds	board/led.c	/^static const Pin leds[] = {PINS_LEDS};$/;"	v	file:
 lineCoding	libusb/include/CDCDSerialPort.h	/^    CDCLineCoding  lineCoding;$/;"	m	struct:_CDCDSerialPort
 lineCoding	libusb/source/CDCDSerialPort.c	/^static CDCLineCoding lineCoding;$/;"	v	file:
 listSize	libusb/source/USBD_HAL.c	/^    uint16_t            listSize;$/;"	m	struct:__anon44	file:
 listState	libusb/source/USBD_HAL.c	/^    uint8_t             listState;$/;"	m	struct:__anon44	file:
-mV	input.c	6;"	d	file:
+mV	input.c	4;"	d	file:
 main	main.c	/^int main() $/;"	f
 mask	libchip/include/pio.h	/^    uint32_t mask;$/;"	m	struct:_Pin
 mblTransfer	libusb/source/USBD_HAL.c	/^        MblTransfer    mblTransfer;$/;"	m	union:__anon45::__anon46	file:
@@ -8649,7 +8669,7 @@ otgDescriptor	libusb/include/CDCDSerialDriver.h	/^    USBOtgDescriptor otgDescri
 otg_features_supported	libusb/include/USBDDriver.h	/^    uint8_t otg_features_supported;$/;"	m	struct:_USBDDriver
 outCurr	libusb/source/USBD_HAL.c	/^    uint16_t            outCurr;$/;"	m	struct:__anon44	file:
 outLast	libusb/source/USBD_HAL.c	/^    uint16_t            outLast;$/;"	m	struct:__anon44	file:
-p	main.c	12;"	d	file:
+p	main.c	14;"	d	file:
 pArg	libchip/include/hsmci.h	/^    void *pArg;$/;"	m	struct:_MciCmd
 pArg	libusb/include/CDCDSerialPort.h	/^    void *pArg;$/;"	m	struct:_CDCDSerialPort
 pArgument	libchip/include/spi_pdc.h	/^	void *pArgument;$/;"	m	struct:_SpidCmd
@@ -8696,30 +8716,36 @@ pio	libchip/include/pio.h	/^    Pio    *pio;$/;"	m	struct:_Pin
 previous	input.c	/^uint16_t previous[NUM_AIN] = {0};  \/\/ previous ADC input in mV$/;"	v
 previousDeviceState	libusb/source/USBD.c	/^static uint8_t previousDeviceState;$/;"	v	file:
 productStringDescriptor	board/usb_device_descriptor.c	/^const unsigned char productStringDescriptor[] = {$/;"	v
+read_stderr	board/board.h	55;"	d
+read_stdin	board/board.h	53;"	d
 remaining	libusb/include/USBD.h	/^    uint16_t remaining;$/;"	m	struct:_USBDTransferBuffer
 remaining	libusb/source/USBD_HAL.c	/^    int32_t          remaining;$/;"	m	struct:__anon43	file:
 resType	libchip/include/hsmci.h	/^    uint8_t resType:7,      \/** Response *\/$/;"	m	struct:_MciCmd
 reserved	libusb/include/CDCNotifications.h	/^             reserved:9;    \/**< Reserved *\/$/;"	m	struct:_CDCSerialState
 reserved	libusb/include/USBD.h	/^                   reserved:8,      \/** Not used *\/$/;"	m	struct:_USBDDmaDescriptor
-s	main.c	13;"	d	file:
-sam3s	board/board.h	19;"	d
+s	main.c	15;"	d	file:
+sam3s	board/board.h	22;"	d
 sam3s4	libchip/chip.h	12;"	d
-sam3sek	board/board.h	17;"	d
+sam3sek	board/board.h	20;"	d
 semaphore	libchip/include/hsmci.h	/^    volatile uint8_t semaphore;$/;"	m	struct:__anon32
 semaphore	libchip/include/spi_pdc.h	/^	volatile char semaphore ;$/;"	m	struct:_Spid
+setup	main.c	/^void setup()$/;"	f
 singleTransfer	libusb/source/USBD_HAL.c	/^        Transfer       singleTransfer;$/;"	m	union:__anon45::__anon46	file:
 size	libusb/include/USBD.h	/^    uint16_t size;$/;"	m	struct:_USBDTransferBuffer
 size	libusb/source/USBD_HAL.c	/^    volatile uint16_t size;$/;"	m	struct:__anon45	file:
 spiCs	libchip/include/spi_pdc.h	/^	uint8_t spiCs;$/;"	m	struct:_SpidCmd
 spiId	libchip/include/spi_pdc.h	/^	char spiId ;$/;"	m	struct:_Spid
+start_sampling	input.c	/^void start_sampling()$/;"	f
 starttimer	board/led.c	10;"	d	file:
 state	libchip/include/hsmci.h	/^    volatile uint8_t state;$/;"	m	struct:_MciCmd
 state	libusb/source/USBD_HAL.c	/^    volatile uint8_t  state;$/;"	m	struct:__anon45	file:
 status	libchip/include/async.h	/^    volatile uint8_t status ;$/;"	m	struct:_Async
 status	libchip/include/hsmci.h	/^    uint8_t status;$/;"	m	struct:_MciCmd
 status	libchip/source/twid.c	/^    volatile uint8_t status;$/;"	m	struct:_AsyncTwi	file:
+stop_sampling	input.c	/^void stop_sampling()$/;"	f
 stoptimer	board/led.c	9;"	d	file:
 stringDescriptors	board/usb_device_descriptor.c	/^const unsigned char *stringDescriptors[] = {$/;"	v
+test_spi	main.c	/^void test_spi()$/;"	f
 tranType	libchip/include/hsmci.h	/^    uint8_t tranType;$/;"	m	struct:_MciCmd
 transHdr	libusb/source/USBD_HAL.c	/^        TransferHeader transHdr;$/;"	m	union:__anon45::__anon46	file:
 transType	libusb/source/USBD_HAL.c	/^    uint16_t         transType;$/;"	m	struct:__anon43	file:
@@ -8743,3 +8769,5 @@ wMaxPacketSize	libusb/include/USBDescriptors.h	/^   uint16_t wMaxPacketSize;$/;"
 wSerialState	libusb/include/CDCDSerialPort.h	/^    uint16_t       wSerialState;$/;"	m	struct:_CDCDSerialPort
 wTotalLength	libusb/include/USBDescriptors.h	/^   uint16_t wTotalLength;$/;"	m	struct:_USBConfigurationDescriptor
 wValue	libusb/include/USBRequests.h	/^    uint16_t wValue:16;$/;"	m	struct:__anon41
+write_stderr	board/board.h	56;"	d
+write_stdout	board/board.h	54;"	d
