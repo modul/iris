@@ -182,7 +182,7 @@ void setup()
 {
 	uint32_t div;
 	uint32_t tcclks;
-	const Pin pins[] = {PINS_VAL, PINS_ADCIN};
+	const Pin pins[] = {PINS_VAL, PINS_ADCIN, PINS_SPI};
 
 	WDT_Disable(WDT);
 	TimeTick_Configure(BOARD_MCK);
@@ -209,6 +209,11 @@ void setup()
 	ADC_cfgFrequency(ADC, 4, 1 ); // startup = 64 ADC periods, prescal = 1, ADC clock = 12 MHz
 	ADC->ADC_CHER = (1<<AIN0)|(1<<AIN1)|(1<<AIN2);
 	ADC->ADC_IER  = ADC_IER_RXBUFF;
+
+	/* Configure SPI */
+	SPI_Configure(SPI, ID_SPI, SPI_MR_MSTR|SPI_MR_PS|SPI_MR_LLB); // Enable, Reset and set Master mode, variable CS, Loopback (testing)
+	SPI_ConfigureNPCS(SPI, PGA_CS, PGA_SPICONF);
+	SPI_ConfigureNPCS(SPI, MEMORY_CS, MEMORY_SPICONF);
 
 	/* LEDs */
 	LEDs_configure();
