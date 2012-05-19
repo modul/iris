@@ -14,6 +14,9 @@
 #define PGA280_GAIN_Pos 3
 #define PGA280_GAIN_Msk 0xF1
 
+#define PGA280_GAIN_SETMIN 0
+#define PGA280_GAIN_SETMAX 10
+
 /* Error and status flags */
 #define PGA280_FIOV  (1<<0)
 #define PGA280_FGAIN (1<<1)
@@ -25,7 +28,7 @@
 #define PGA280_FCHKE (1<<7)
 
 void PGA_setup();
-void PGA_set_gain();
+void PGA_set_gain(uint8_t setting);
 uint8_t PGA_status();
 
 #endif
