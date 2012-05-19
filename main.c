@@ -129,7 +129,7 @@ void test_spi()
 
 	out.hword = 0x6b6f; // "ok"
 	TRACE_DEBUG("Testing SPI, write '%s'\n", out.bytes);
-	SPI_Write(SPI, MEMORY_CS, out.hword|SPI_TDR_LASTXFER);
+	SPI_Write(SPI, MEMORY_CS|SPI_TDR_LASTXFER, out.hword);
 	in.hword = (uint16_t) SPI_Read(SPI);
 	TRACE_DEBUG("SPI read: '%s'\n", in.bytes);
 }
