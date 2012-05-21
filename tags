@@ -1813,7 +1813,7 @@ LIBNAME	libchip/Makefile	/^LIBNAME=libchip$/;"	m
 LIBNAME	libusb/Makefile	/^LIBNAME=libusb$/;"	m
 LIBPATHS	Makefile	/^LIBPATHS = libusb\/lib libchip\/lib$/;"	m
 LIBS	Makefile	/^LIBS = $(USBLIB) $(CHIPLIB)$/;"	m
-LIMIT	main.c	18;"	d	file:
+LIMIT	main.c	15;"	d	file:
 LOAD	libchip/cmsis/core_cm3.h	/^  __IO uint32_t LOAD;                         \/*!< Offset: 0x04  SysTick Reload Value Register       *\/$/;"	m	struct:__anon35
 LSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t LSR;                          \/*!< Offset:       ITM Lock Status Register                  *\/$/;"	m	struct:__anon36
 MASK_STATUS0	libchip/source/pmc.c	42;"	d	file:
@@ -8663,7 +8663,7 @@ iSerialNumber	libusb/include/USBDescriptors.h	/^   uint8_t iSerialNumber;$/;"	m	
 id	libchip/include/pio.h	/^    uint8_t id;$/;"	m	struct:_Pin
 idProduct	libusb/include/USBDescriptors.h	/^   uint16_t idProduct;$/;"	m	struct:_USBDeviceDescriptor
 idVendor	libusb/include/USBDescriptors.h	/^   uint16_t idVendor;$/;"	m	struct:_USBDeviceDescriptor
-in	main.c	15;"	d	file:
+in	main.c	14;"	d	file:
 inCurr	libusb/source/USBD_HAL.c	/^    uint16_t            inCurr;$/;"	m	struct:__anon44	file:
 isRemoteWakeUpEnabled	libusb/include/USBDDriver.h	/^    uint8_t isRemoteWakeUpEnabled;$/;"	m	struct:_USBDDriver
 languageIdStringDescriptor	board/usb_device_descriptor.c	/^const unsigned char languageIdStringDescriptor[] = {$/;"	v

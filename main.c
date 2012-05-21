@@ -11,11 +11,8 @@
 #define GO    3
 #define ERROR 4
 
-
 #define in(state) (_state == state)
-
-// TODO let max = max+1, return max-1 (for VREF, which is actually max+1, or numGain, would be max+1)
-#define LIMIT(x, max) (x > max? max : (x < 0? 0 : x))
+#define LIMIT(x, min, max) (x > max? max-1 : (x < min? min : x))
 
 uint8_t _state = READY;
 
@@ -91,9 +88,9 @@ int main()
 					if (argc < 4)
 						printf("%u %u %u\n", config.fmax, config.pmax, config.smax);
 					else {
-						config.fmax = LIMIT(argv[0], VREF);
-						config.pmax = LIMIT(argv[1], VREF);
-						config.smax = LIMIT(argv[2], VREF);
+						config.fmax = LIMIT(argv[0], 0, VREF);
+						config.pmax = LIMIT(argv[1], 0, VREF);
+						config.smax = LIMIT(argv[2], 0, VREF);
 						printf("ok %u %u %u\n", config.fmax, config.pmax, config.smax);
 					}
 				}
@@ -101,8 +98,8 @@ int main()
 					if (argc < 2)
 						printf("%u\n", config.gainid);
 					else {
-						config.gainid = LIMIT(argv[1], 10); //TODO max = PGA280_GAINMAX or sth
-						// pga_set_gain(config.gainid);
+						config.gainid = LIMIT(argv[1], PGA280_GAIN_SETMIN, PGA280_GAIN_SETMAX); 
+						PGA_set_gain(config.gainid);
 						printf("ok %u\n", config.gainid);
 					}
 				}
