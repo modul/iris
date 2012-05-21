@@ -11,8 +11,8 @@
 #define GO    3
 #define ERROR 4
 
-
 #define in(state) (_state == state)
+#define LIMIT(x, min, max) (x > max? max-1 : (x < min? min : x))
 
 uint8_t _state = READY;
 
@@ -84,11 +84,29 @@ int main()
 					soffset = 0;
 					enter(READY);
 				}
-				//TODO some configuration here
+				else if (cmd == 'm') { // get/set maxima
+					if (argc < 4)
+						printf("%u %u %u\n", config.fmax, config.pmax, config.smax);
+					else {
+						config.fmax = LIMIT(argv[0], 0, VREF);
+						config.pmax = LIMIT(argv[1], 0, VREF);
+						config.smax = LIMIT(argv[2], 0, VREF);
+						printf("ok %u %u %u\n", config.fmax, config.pmax, config.smax);
+					}
+				}
+				else if (cmd == 'g') { // get/set gain
+					if (argc < 2)
+						printf("%u\n", config.gainid);
+					else {
+						config.gainid = LIMIT(argv[1], PGA280_GAIN_SETMIN, PGA280_GAIN_SETMAX); 
+						PGA_set_gain(config.gainid);
+						printf("ok %u\n", config.gainid);
+					}
+				}
 				break;
 
 			case READY:
-				if (get_latest_volt(p) > config.pset) {
+				if (get_latest_volt(p) > PAR_PSET) {
 					soffset = get_latest_volt(s);
 					enter(SET);
 				}
@@ -100,7 +118,7 @@ int main()
 				break;
 
 			case GO:
-				if (get_latest_volt(F) <= get_previous_volt(F)/config.fpeakdiv)
+				if (get_latest_volt(F) <= get_previous_volt(F)/PAR_PEAK)
 					enter(IDLE);
 				break;
 
@@ -115,7 +133,6 @@ int main()
 		/* Display state */
 		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) {
 			LED_blink(STATUS, _state);
-			test_spi();
 		}
 	}
 	return 0;

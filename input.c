@@ -4,9 +4,8 @@
 #define mV(b) ((b*VREF)>>RESOLUTION)
 
 static uint16_t next[NUM_AIN] = {0};
-
-uint16_t latest[NUM_AIN] = {0};   // latest ADC input in mV
-uint16_t previous[NUM_AIN] = {0};  // previous ADC input in mV
+static uint16_t latest[NUM_AIN] = {0};  
+static uint16_t previous[NUM_AIN] = {0}; 
 
 void TC0_IrqHandler()
 {
