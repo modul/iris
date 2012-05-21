@@ -133,7 +133,6 @@ int main()
 		/* Display state */
 		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) {
 			LED_blink(STATUS, _state);
-			test_spi();
 		}
 	}
 	return 0;
