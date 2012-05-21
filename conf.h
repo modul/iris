@@ -47,10 +47,6 @@
 /** Configuration Parameters **/
 #define PAR_PSET   50
 #define PAR_PEAK   2
-#define PAR_PMAX   VREF-1 // VREF-1 is maximum, but these should be set by the user
-#define PAR_SMAX   VREF
-#define PAR_FMAX   VREF
-#define PAR_GAINID 0
 
 #define F AIN0
 #define p AIN1
@@ -63,7 +59,7 @@ typedef struct _conf_t {
 	uint8_t gainid;
 } conf_t;
 
-#define CONF_INIT PAR_PMAX, PAR_SMAX, PAR_FMAX, PAR_GAINID 
+#define CONF_INIT VREF, VREF, VREF, 0
 
 void store_configuration(conf_t *src);
 void load_configuration(conf_t *dest);
