@@ -664,7 +664,7 @@ BOARD_OSCOUNT	board/system.c	56;"	d	file:
 BOARD_PLLAR	board/system.c	48;"	d	file:
 BOARD_PLLAR	board/system.c	57;"	d	file:
 BOARD_USB_BMATTRIBUTES	board/board.h	44;"	d
-BUFSIZE	main.c	5;"	d	file:
+BUFSIZE	main.c	6;"	d	file:
 BUILD	Makefile	/^BUILD = build$/;"	m
 BusFault_Handler	libchip/source/exceptions.c	/^WEAK void BusFault_Handler( void )$/;"	f
 BusFault_IRQn	libchip/include/SAM3S.h	/^  BusFault_IRQn         = -11, \/**<  5 Cortex-M3 Bus Fault Interrupt         *\/$/;"	e	enum:IRQn
@@ -1311,7 +1311,7 @@ EFC_PerformCommand	libchip/source/efc.c	/^extern uint32_t EFC_PerformCommand( Ef
 EFC_SetWaitState	libchip/source/efc.c	/^extern void EFC_SetWaitState( Efc* efc, uint8_t ucCycles )$/;"	f
 EFC_StartCommand	libchip/source/efc.c	/^extern void EFC_StartCommand( Efc* efc, uint32_t dwCommand, uint32_t dwArgument )$/;"	f
 EFC_TranslateAddress	libchip/source/efc.c	/^extern void EFC_TranslateAddress( Efc** ppEfc, uint32_t dwAddress, uint16_t* pwPage, uint16_t* pwOffset )$/;"	f
-ERROR	main.c	11;"	d	file:
+ERROR	main.c	12;"	d	file:
 Efc	libchip/include/SAM3S.h	/^} Efc;$/;"	t	typeref:struct:__anon7
 Endpoint	libusb/source/USBD_HAL.c	/^} Endpoint;$/;"	t	typeref:struct:__anon45	file:
 F	conf.h	51;"	d
@@ -1330,7 +1330,7 @@ FLASHD_Write	libchip/source/flashd.c	/^extern uint32_t FLASHD_Write( uint32_t dw
 FOREVER	board/led.h	4;"	d
 FindClockConfiguration	libchip/source/pwmc.c	/^static uint16_t FindClockConfiguration($/;"	f	file:
 GDB	Makefile	/^GDB = $(CROSS_COMPILE)gdb$/;"	m
-GO	main.c	10;"	d	file:
+GO	main.c	11;"	d	file:
 GPBR	libchip/include/SAM3S.h	7447;"	d
 GetConfiguration	libusb/source/USBDDriver.c	/^static void GetConfiguration(const USBDDriver *pDriver)$/;"	f	file:
 GetDescriptor	libusb/source/USBDDriver.c	/^static void GetDescriptor($/;"	f	file:
@@ -1669,7 +1669,7 @@ ICER	libchip/cmsis/core_cm3.h	/^  __IO uint32_t ICER[8];                      \/
 ICPR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t ICPR[8];                      \/*!< Offset: 0x180  Interrupt Clear Pending Register        *\/$/;"	m	struct:__anon33
 ICSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t ICSR;                         \/*!< Offset: 0x04  Interrupt Control State Register                      *\/$/;"	m	struct:__anon34
 ICTR	libchip/cmsis/core_cm3.h	/^  __I  uint32_t ICTR;                         \/*!< Offset: 0x04  Interrupt Control Type Register *\/$/;"	m	struct:__anon38
-IDLE	main.c	7;"	d	file:
+IDLE	main.c	8;"	d	file:
 ID_ACC	libchip/include/SAM3S.h	7394;"	d
 ID_ADC	libchip/include/SAM3S.h	7390;"	d
 ID_CRCCU	libchip/include/SAM3S.h	7393;"	d
@@ -1813,7 +1813,7 @@ LIBNAME	libchip/Makefile	/^LIBNAME=libchip$/;"	m
 LIBNAME	libusb/Makefile	/^LIBNAME=libusb$/;"	m
 LIBPATHS	Makefile	/^LIBPATHS = libusb\/lib libchip\/lib$/;"	m
 LIBS	Makefile	/^LIBS = $(USBLIB) $(CHIPLIB)$/;"	m
-LIMIT	main.c	17;"	d	file:
+LIMIT	main.c	18;"	d	file:
 LOAD	libchip/cmsis/core_cm3.h	/^  __IO uint32_t LOAD;                         \/*!< Offset: 0x04  SysTick Reload Value Register       *\/$/;"	m	struct:__anon35
 LSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t LSR;                          \/*!< Offset:       ITM Lock Status Register                  *\/$/;"	m	struct:__anon36
 MASK_STATUS0	libchip/source/pmc.c	42;"	d	file:
@@ -2110,9 +2110,29 @@ PERIPH_TPR_TXPTR	libchip/include/SAM3S.h	1720;"	d
 PERIPH_TPR_TXPTR_Msk	libchip/include/SAM3S.h	1719;"	d
 PERIPH_TPR_TXPTR_Pos	libchip/include/SAM3S.h	1718;"	d
 PFR	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PFR[2];                       \/*!< Offset: 0x40  Processor Feature Register                            *\/$/;"	m	struct:__anon34
+PGA280_ERRCL	pga280.h	9;"	d
+PGA280_FBUF	pga280.h	26;"	d
+PGA280_FCHKE	pga280.h	28;"	d
+PGA280_FERR	pga280.h	24;"	d
+PGA280_FGAIN	pga280.h	22;"	d
+PGA280_FIAR	pga280.h	27;"	d
+PGA280_FICA	pga280.h	25;"	d
+PGA280_FIOV	pga280.h	21;"	d
+PGA280_FLAGS	pga280.h	8;"	d
+PGA280_FOUT	pga280.h	23;"	d
+PGA280_GAIN_Msk	pga280.h	15;"	d
+PGA280_GAIN_Pos	pga280.h	14;"	d
+PGA280_GAIN_SETMAX	pga280.h	18;"	d
+PGA280_GAIN_SETMIN	pga280.h	17;"	d
+PGA280_RESET	pga280.h	7;"	d
+PGA280_RGAIN	pga280.h	10;"	d
+PGA280_WGAIN	pga280.h	11;"	d
 PGA_BAUD	conf.h	41;"	d
 PGA_CS	conf.h	40;"	d
 PGA_SPICONF	conf.h	42;"	d
+PGA_set_gain	pga280.c	/^void PGA_set_gain(uint8_t setting)$/;"	f
+PGA_setup	pga280.c	/^void PGA_setup()$/;"	f
+PGA_status	pga280.c	/^uint8_t PGA_status()$/;"	f
 PID0	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PID0;                         \/*!< Offset:       ITM Peripheral Identification Register #0 *\/$/;"	m	struct:__anon36
 PID1	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PID1;                         \/*!< Offset:       ITM Peripheral Identification Register #1 *\/$/;"	m	struct:__anon36
 PID2	libchip/cmsis/core_cm3.h	/^  __I  uint32_t PID2;                         \/*!< Offset:       ITM Peripheral Identification Register #2 *\/$/;"	m	struct:__anon36
@@ -4828,7 +4848,7 @@ RBAR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR;                         \/
 RBAR_A1	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR_A1;                      \/*!< Offset: 0x14  MPU Alias 1 Region Base Address Register       *\/$/;"	m	struct:__anon39
 RBAR_A2	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR_A2;                      \/*!< Offset: 0x1C  MPU Alias 2 Region Base Address Register       *\/$/;"	m	struct:__anon39
 RBAR_A3	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR_A3;                      \/*!< Offset: 0x24  MPU Alias 3 Region Base Address Register       *\/$/;"	m	struct:__anon39
-READY	main.c	8;"	d	file:
+READY	main.c	9;"	d	file:
 REG_ACCESS	libchip/include/SAM3S.h	60;"	d
 REG_ACCESS	libchip/include/SAM3S.h	63;"	d
 REG_ACC_ACR	libchip/include/SAM3S.h	7010;"	d
@@ -5999,7 +6019,7 @@ SCS_BASE	libchip/cmsis/core_cm3.h	715;"	d
 SERIE	Makefile	/^SERIE = sam3s$/;"	m
 SERIE	libchip/Makefile	/^SERIE=sam3s$/;"	m
 SERIE	libusb/Makefile	/^SERIE=sam3s$/;"	m
-SET	main.c	9;"	d	file:
+SET	main.c	10;"	d	file:
 SET_CSR	libusb/source/USBD_HAL.c	97;"	d	file:
 SHCSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t SHCSR;                        \/*!< Offset: 0x24  System Handler Control and State Register             *\/$/;"	m	struct:__anon34
 SHP	libchip/cmsis/core_cm3.h	/^  __IO uint8_t  SHP[12];                      \/*!< Offset: 0x18  System Handlers Priority Registers (4-7, 8-11, 12-15) *\/$/;"	m	struct:__anon34
@@ -8292,6 +8312,7 @@ _InterruptSource	libchip/source/pio_it.c	/^typedef struct _InterruptSource$/;"	s
 _LED_	board/led.h	2;"	d
 _LIB_SAM3S_	libchip/chip.h	2;"	d
 _MciCmd	libchip/include/hsmci.h	/^typedef struct _MciCmd {$/;"	s
+_PGA280_	pga280.h	2;"	d
 _PIO_	libchip/include/pio.h	68;"	d
 _PIO_IT_	libchip/include/pio_it.h	62;"	d
 _PMC_	libchip/include/pmc.h	31;"	d
@@ -8642,7 +8663,7 @@ iSerialNumber	libusb/include/USBDescriptors.h	/^   uint8_t iSerialNumber;$/;"	m	
 id	libchip/include/pio.h	/^    uint8_t id;$/;"	m	struct:_Pin
 idProduct	libusb/include/USBDescriptors.h	/^   uint16_t idProduct;$/;"	m	struct:_USBDeviceDescriptor
 idVendor	libusb/include/USBDescriptors.h	/^   uint16_t idVendor;$/;"	m	struct:_USBDeviceDescriptor
-in	main.c	14;"	d	file:
+in	main.c	15;"	d	file:
 inCurr	libusb/source/USBD_HAL.c	/^    uint16_t            inCurr;$/;"	m	struct:__anon44	file:
 isRemoteWakeUpEnabled	libusb/include/USBDDriver.h	/^    uint8_t isRemoteWakeUpEnabled;$/;"	m	struct:_USBDDriver
 languageIdStringDescriptor	board/usb_device_descriptor.c	/^const unsigned char languageIdStringDescriptor[] = {$/;"	v

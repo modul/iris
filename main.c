@@ -1,5 +1,6 @@
 #include <string.h>
 #include "conf.h"
+#include "pga280.h"
 #include "input.h"
 
 #define BUFSIZE 32
@@ -248,6 +249,9 @@ void setup()
 	SPI_ConfigureNPCS(SPI, PGA_CS, PGA_SPICONF);
 	SPI_ConfigureNPCS(SPI, MEMORY_CS, MEMORY_SPICONF);
 	SPI_Enable(SPI);
+
+	/* Setup SPI Peripherals */
+	PGA_setup();
 
 	/* LEDs */
 	LEDs_configure();
