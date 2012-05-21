@@ -956,6 +956,7 @@ CKGR_PLLBR_PLLBCOUNT_Msk	libchip/include/SAM3S.h	3580;"	d
 CKGR_PLLBR_PLLBCOUNT_Pos	libchip/include/SAM3S.h	3579;"	d
 CLEAR_CSR	libusb/source/USBD_HAL.c	116;"	d	file:
 CLOCK_TIMEOUT	board/system.c	68;"	d	file:
+CONF_INIT	conf.h	62;"	d
 CPUID	libchip/cmsis/core_cm3.h	/^  __I  uint32_t CPUID;                        \/*!< Offset: 0x00  CPU ID Base Register                                  *\/$/;"	m	struct:__anon34
 CRCCU	libchip/include/SAM3S.h	7428;"	d
 CRCCU_CR	libchip/include/SAM3S.h	/^  WoReg CRCCU_CR;      \/**< \\brief (Crccu Offset: 0x00000034) CRCCU Control Register *\/$/;"	m	struct:__anon5
@@ -1313,7 +1314,7 @@ EFC_TranslateAddress	libchip/source/efc.c	/^extern void EFC_TranslateAddress( Ef
 ERROR	main.c	11;"	d	file:
 Efc	libchip/include/SAM3S.h	/^} Efc;$/;"	t	typeref:struct:__anon7
 Endpoint	libusb/source/USBD_HAL.c	/^} Endpoint;$/;"	t	typeref:struct:__anon45	file:
-F	main.c	13;"	d	file:
+F	conf.h	51;"	d
 FLASHD_ClearGPNVM	libchip/source/flashd.c	/^extern uint32_t FLASHD_ClearGPNVM( uint8_t ucGPNVM )$/;"	f
 FLASHD_Erase	libchip/source/flashd.c	/^extern uint32_t FLASHD_Erase( uint32_t dwAddress )$/;"	f
 FLASHD_Initialize	libchip/source/flashd.c	/^extern void FLASHD_Initialize( uint32_t dwMCk, uint32_t dwUseIAP )$/;"	f
@@ -1812,6 +1813,7 @@ LIBNAME	libchip/Makefile	/^LIBNAME=libchip$/;"	m
 LIBNAME	libusb/Makefile	/^LIBNAME=libusb$/;"	m
 LIBPATHS	Makefile	/^LIBPATHS = libusb\/lib libchip\/lib$/;"	m
 LIBS	Makefile	/^LIBS = $(USBLIB) $(CHIPLIB)$/;"	m
+LIMIT	main.c	17;"	d	file:
 LOAD	libchip/cmsis/core_cm3.h	/^  __IO uint32_t LOAD;                         \/*!< Offset: 0x04  SysTick Reload Value Register       *\/$/;"	m	struct:__anon35
 LSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t LSR;                          \/*!< Offset:       ITM Lock Status Register                  *\/$/;"	m	struct:__anon36
 MASK_STATUS0	libchip/source/pmc.c	42;"	d	file:
@@ -2052,10 +2054,8 @@ OPTIMIZATION	libchip/Makefile	/^OPTIMIZATION = -Os$/;"	m
 OPTIMIZATION	libusb/Makefile	/^OPTIMIZATION = -O0 -D DEBUG$/;"	m
 OPTIMIZATION	libusb/Makefile	/^OPTIMIZATION = -Os$/;"	m
 OUTPUT	Makefile	/^OUTPUT = $(BIN)\/$(NAME)$/;"	m
-PAR_FMAX	main.c	20;"	d	file:
-PAR_PMAX	main.c	18;"	d	file:
-PAR_PSET	main.c	17;"	d	file:
-PAR_SMAX	main.c	19;"	d	file:
+PAR_PEAK	conf.h	49;"	d
+PAR_PSET	conf.h	48;"	d
 PDC_ADC	libchip/include/SAM3S.h	7424;"	d
 PDC_DACC	libchip/include/SAM3S.h	7426;"	d
 PDC_HSMCI	libchip/include/SAM3S.h	7405;"	d
@@ -8461,6 +8461,7 @@ _adwPageBuffer	libchip/source/flashd.c	/^static NO_INIT uint32_t _adwPageBuffer[
 _aucPageBuffer	libchip/source/flashd.c	/^static uint8_t* _aucPageBuffer = (uint8_t*)_adwPageBuffer;$/;"	v	file:
 _cfgdone	board/usb_console.c	/^static volatile uint8_t _cfgdone = 0;$/;"	v	file:
 _close	board/syscalls.c	/^extern int _close( int file )$/;"	f
+_conf_t	conf.h	/^typedef struct _conf_t {$/;"	s
 _dwNumSources	libchip/source/pio_it.c	/^static uint32_t _dwNumSources = 0;$/;"	v	file:
 _dwTickCount	board/timetick.c	/^static volatile uint32_t _dwTickCount=0 ;$/;"	v	file:
 _dwUseIAP	libchip/source/flashd.c	/^static NO_INIT uint32_t _dwUseIAP ;$/;"	v	file:
@@ -8595,6 +8596,7 @@ cmd	libchip/include/hsmci.h	/^    uint32_t cmd;$/;"	m	struct:_MciCmd
 cmdSize	libchip/include/spi_pdc.h	/^	uint8_t cmdSize;$/;"	m	struct:_SpidCmd
 communication	libusb/include/CDCDSerialDriver.h	/^    USBInterfaceDescriptor  communication;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptors
 communication	libusb/include/CDCDSerialDriver.h	/^    USBInterfaceDescriptor  communication;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptorsOTG
+conf_t	conf.h	/^} conf_t;$/;"	t	typeref:struct:_conf_t
 configuration	libusb/include/CDCDSerialDriver.h	/^    USBConfigurationDescriptor configuration;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptors
 configuration	libusb/include/CDCDSerialDriver.h	/^    USBConfigurationDescriptor configuration;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptorsOTG
 configurationDescriptorsFS	board/usb_device_descriptor.c	/^const CDCDSerialDriverConfigurationDescriptors configurationDescriptorsFS = {$/;"	v
@@ -8623,6 +8625,8 @@ fCallback	libusb/source/USBD_HAL.c	/^    MblTransferCallback fCallback;$/;"	m	st
 fCallback	libusb/source/USBD_HAL.c	/^    TransferCallback fCallback;$/;"	m	struct:__anon43	file:
 fCallback	libusb/source/USBD_HAL.c	/^    void*   fCallback;$/;"	m	struct:__anon42	file:
 fEventHandler	libusb/include/CDCDSerialPort.h	/^    CDCDSerialPortEventHandler fEventHandler;$/;"	m	struct:_CDCDSerialPort
+fmax	conf.h	/^	uint16_t fmax;$/;"	m	struct:_conf_t
+gainid	conf.h	/^	uint8_t gainid;$/;"	m	struct:_conf_t
 get_latest_volt	input.c	/^uint16_t get_latest_volt(unsigned index) {$/;"	f
 get_previous_volt	input.c	/^uint16_t get_previous_volt(unsigned index) {$/;"	f
 halfSampling	libchip/include/pio_capture.h	/^    uint8_t halfSampling;$/;"	m	struct:_SpioCaptureInit
@@ -8638,11 +8642,11 @@ iSerialNumber	libusb/include/USBDescriptors.h	/^   uint8_t iSerialNumber;$/;"	m	
 id	libchip/include/pio.h	/^    uint8_t id;$/;"	m	struct:_Pin
 idProduct	libusb/include/USBDescriptors.h	/^   uint16_t idProduct;$/;"	m	struct:_USBDeviceDescriptor
 idVendor	libusb/include/USBDescriptors.h	/^   uint16_t idVendor;$/;"	m	struct:_USBDeviceDescriptor
-in	main.c	22;"	d	file:
+in	main.c	14;"	d	file:
 inCurr	libusb/source/USBD_HAL.c	/^    uint16_t            inCurr;$/;"	m	struct:__anon44	file:
 isRemoteWakeUpEnabled	libusb/include/USBDDriver.h	/^    uint8_t isRemoteWakeUpEnabled;$/;"	m	struct:_USBDDriver
 languageIdStringDescriptor	board/usb_device_descriptor.c	/^const unsigned char languageIdStringDescriptor[] = {$/;"	v
-latest	input.c	/^uint16_t latest[NUM_AIN] = {0};   \/\/ latest ADC input in mV$/;"	v
+latest	input.c	/^static uint16_t latest[NUM_AIN] = {0};  $/;"	v	file:
 leds	board/led.c	/^static const Pin leds[] = {PINS_LEDS};$/;"	v	file:
 lineCoding	libusb/include/CDCDSerialPort.h	/^    CDCLineCoding  lineCoding;$/;"	m	struct:_CDCDSerialPort
 lineCoding	libusb/source/CDCDSerialPort.c	/^static CDCLineCoding lineCoding;$/;"	v	file:
@@ -8669,7 +8673,7 @@ otgDescriptor	libusb/include/CDCDSerialDriver.h	/^    USBOtgDescriptor otgDescri
 otg_features_supported	libusb/include/USBDDriver.h	/^    uint8_t otg_features_supported;$/;"	m	struct:_USBDDriver
 outCurr	libusb/source/USBD_HAL.c	/^    uint16_t            outCurr;$/;"	m	struct:__anon44	file:
 outLast	libusb/source/USBD_HAL.c	/^    uint16_t            outLast;$/;"	m	struct:__anon44	file:
-p	main.c	14;"	d	file:
+p	conf.h	52;"	d
 pArg	libchip/include/hsmci.h	/^    void *pArg;$/;"	m	struct:_MciCmd
 pArg	libusb/include/CDCDSerialPort.h	/^    void *pArg;$/;"	m	struct:_CDCDSerialPort
 pArgument	libchip/include/spi_pdc.h	/^	void *pArgument;$/;"	m	struct:_SpidCmd
@@ -8713,7 +8717,8 @@ pUsbd	libusb/include/CDCDSerialPort.h	/^    USBDDriver *pUsbd;$/;"	m	struct:_CDC
 pdwStack	board/startup.c	/^uint32_t pdwStack[STACK_SIZE] ;     $/;"	v
 pinVbus	board/usb_console.c	/^static const Pin pinVbus = PIN_USB_VBUS;$/;"	v	file:
 pio	libchip/include/pio.h	/^    Pio    *pio;$/;"	m	struct:_Pin
-previous	input.c	/^uint16_t previous[NUM_AIN] = {0};  \/\/ previous ADC input in mV$/;"	v
+pmax	conf.h	/^	uint16_t pmax;$/;"	m	struct:_conf_t
+previous	input.c	/^static uint16_t previous[NUM_AIN] = {0}; $/;"	v	file:
 previousDeviceState	libusb/source/USBD.c	/^static uint8_t previousDeviceState;$/;"	v	file:
 productStringDescriptor	board/usb_device_descriptor.c	/^const unsigned char productStringDescriptor[] = {$/;"	v
 read_stderr	board/board.h	55;"	d
@@ -8723,7 +8728,7 @@ remaining	libusb/source/USBD_HAL.c	/^    int32_t          remaining;$/;"	m	struc
 resType	libchip/include/hsmci.h	/^    uint8_t resType:7,      \/** Response *\/$/;"	m	struct:_MciCmd
 reserved	libusb/include/CDCNotifications.h	/^             reserved:9;    \/**< Reserved *\/$/;"	m	struct:_CDCSerialState
 reserved	libusb/include/USBD.h	/^                   reserved:8,      \/** Not used *\/$/;"	m	struct:_USBDDmaDescriptor
-s	main.c	15;"	d	file:
+s	conf.h	53;"	d
 sam3s	board/board.h	22;"	d
 sam3s4	libchip/chip.h	12;"	d
 sam3sek	board/board.h	20;"	d
@@ -8733,6 +8738,7 @@ setup	main.c	/^void setup()$/;"	f
 singleTransfer	libusb/source/USBD_HAL.c	/^        Transfer       singleTransfer;$/;"	m	union:__anon45::__anon46	file:
 size	libusb/include/USBD.h	/^    uint16_t size;$/;"	m	struct:_USBDTransferBuffer
 size	libusb/source/USBD_HAL.c	/^    volatile uint16_t size;$/;"	m	struct:__anon45	file:
+smax	conf.h	/^	uint16_t smax;$/;"	m	struct:_conf_t
 spiCs	libchip/include/spi_pdc.h	/^	uint8_t spiCs;$/;"	m	struct:_SpidCmd
 spiId	libchip/include/spi_pdc.h	/^	char spiId ;$/;"	m	struct:_Spid
 start_sampling	input.c	/^void start_sampling()$/;"	f
