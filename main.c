@@ -87,7 +87,7 @@ int main()
 				break;
 
 			case READY:
-				if (get_latest_volt(p) > config.pset) {
+				if (get_latest_volt(p) > PAR_PSET) {
 					soffset = get_latest_volt(s);
 					enter(SET);
 				}
@@ -99,7 +99,7 @@ int main()
 				break;
 
 			case GO:
-				if (get_latest_volt(F) <= get_previous_volt(F)/config.fpeakdiv)
+				if (get_latest_volt(F) <= get_previous_volt(F)/PAR_PEAK)
 					enter(IDLE);
 				break;
 
