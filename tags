@@ -2130,6 +2130,7 @@ PGA280_WGAIN	pga280.h	11;"	d
 PGA_BAUD	conf.h	41;"	d
 PGA_CS	conf.h	40;"	d
 PGA_SPICONF	conf.h	42;"	d
+PGA_get_gain	pga280.c	/^uint8_t PGA_get_gain()$/;"	f
 PGA_set_gain	pga280.c	/^void PGA_set_gain(uint8_t setting)$/;"	f
 PGA_setup	pga280.c	/^void PGA_setup()$/;"	f
 PGA_status	pga280.c	/^uint8_t PGA_status()$/;"	f

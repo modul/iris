@@ -96,7 +96,7 @@ int main()
 				}
 				else if (cmd == 'g') { // get/set gain
 					if (argc < 2)
-						printf("%u\n", config.gainid);
+						printf("%u\n", PGA_get_gain());
 					else {
 						config.gainid = LIMIT(argv[1], PGA280_GAIN_SETMIN, PGA280_GAIN_SETMAX); 
 						PGA_set_gain(config.gainid);

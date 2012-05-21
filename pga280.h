@@ -29,6 +29,7 @@
 
 void PGA_setup();
 void PGA_set_gain(uint8_t setting);
+uint8_t PGA_get_gain();
 uint8_t PGA_status();
 
 #endif
