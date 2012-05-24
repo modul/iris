@@ -61,6 +61,9 @@ typedef struct _conf_t {
 
 #define CONF_INIT VREF, VREF, VREF, 0
 
+void get_config(conf_t *dest);
+void set_config(conf_t src);
+
 void store_configuration(conf_t *src);
 void load_configuration(conf_t *dest);
 
