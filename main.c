@@ -21,16 +21,19 @@ int main()
 	while (1) {
 		if (get_latest_volt(F) >= config.fmax) {
 			TRACE_INFO("FMAX reached.\n");
+			set_error(EFMAX);
 			send_event(EV_ESTOP);
 			continue;
 		}
 		if (get_latest_volt(p) >= config.pmax) {
 			TRACE_INFO("PMAX reached.\n");
+			set_error(EPMAX);
 			send_event(EV_ESTOP);
 			continue;
 		}
 		if (get_latest_volt(s) >= config.smax) {
 			TRACE_INFO("SMAX reached.\n");
+			set_error(ESMAX);
 			send_event(EV_ESTOP);
 			continue;
 		}
@@ -61,9 +64,12 @@ int main()
 				puts("nok");
 		}
 
-		/* Display state */
-		if (GetTickCount() % 1000 == 0 && !LED_blinking(STATUS)) {
-			LED_blink(STATUS, get_state());
+		/* Display state & error */
+		if (GetTickCount() % 1000 == 0) {
+			if (!LED_blinking(STATUS))
+				LED_blink(STATUS, get_state());
+			if (!LED_blinking(ALARM))
+				LED_blink(ALARM, get_error());
 		}
 	}
 	return 0;

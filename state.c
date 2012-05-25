@@ -21,6 +21,7 @@ static void do_conf();
 static void do_ack();
 
 static unsigned _state = IDLE;
+static unsigned _error = EOK;
 static uint16_t soffset = 0;
 
 static struct state actions[NUMSTATES][NUMEVENTS] = {
@@ -48,11 +49,22 @@ void reset_state()
 {
 	do_vent();
 	_state = IDLE;
+	_error = EOK;
 }
 
 unsigned get_state()
 {
 	return _state;
+}
+
+void set_error(unsigned flag)
+{
+	_error |= flag;
+}
+
+unsigned get_error()
+{
+	return _error;
 }
 
 static void do_nok()
@@ -69,13 +81,14 @@ static void do_abort()
 static void do_ack()
 {
 	// check emergency stop here
-	LED_off(ALARM);
 	do_vent();
+	_error = EOK;
+	LED_blinkstop(ALARM);
+	LED_off(ALARM);
 }
 
 static void do_error()
 {
-	LED_on(ALARM);
 	do_vent();
 }
 
@@ -97,7 +110,7 @@ static void do_conf()
 
 static void do_log()
 {
-	printf("%u %u %u %u %u\n", _state, get_latest_volt(F), get_latest_volt(p), get_latest_volt(s), soffset);
+	printf("%u %u %u %u %u %u\n", _state, _error, get_latest_volt(F), get_latest_volt(p), get_latest_volt(s), soffset);
 }
 
 static void do_press() 
@@ -120,5 +133,3 @@ static void do_vent()
 	const Pin vn = PIN_VAL_vent;
 	PIO_Clear(&pr); PIO_Set(&vn);
 }
-
-
