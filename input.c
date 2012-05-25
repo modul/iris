@@ -23,8 +23,8 @@ void ADC_IrqHandler()
     status = ADC_GetStatus(ADC);
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
-		memcpy(previous, latest, NUM_AIN*2);
-		memcpy(latest, next, NUM_AIN*2);
+		memcpy(previous, latest, sizeof(previous));
+		memcpy(latest, next, sizeof(latest));
 		ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
 
 		TRACE_DEBUG("Got samples. 0: %u, 1: %u, 2: %u\n", latest[0], latest[1], latest[2]);
