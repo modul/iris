@@ -52,10 +52,12 @@
 #define p AIN1
 #define s AIN2
 
+#include "input.h"
+
 typedef struct _conf_t {
-	uint16_t pmax;
-	uint16_t smax;
-	uint16_t fmax;
+	input_t pmax;
+	input_t smax;
+	input_t fmax;
 	uint8_t gainid;
 } conf_t;
 
