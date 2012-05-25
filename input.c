@@ -18,9 +18,6 @@ void TC0_IrqHandler()
 void ADC_IrqHandler()
 {
     uint32_t status;
-#ifdef TRACE_LEVEL_DEBUG
-	static uint32_t timestamp = 0;
-#endif
 
     status = ADC_GetStatus(ADC);
 
@@ -29,10 +26,7 @@ void ADC_IrqHandler()
 		memcpy(latest, next, NUM_AIN*2);
 		ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
 
-#ifdef TRACE_LEVEL_DEBUG
-		TRACE_DEBUG("[%u] Got samples. 0: %u, 1: %u, 2: %u\n", GetTickCount()-timestamp, latest[0], latest[1], latest[2]);
-		timestamp = GetTickCount();
-#endif
+		TRACE_DEBUG("Got samples. 0: %u, 1: %u, 2: %u\n", latest[0], latest[1], latest[2]);
 	}
 }
 
