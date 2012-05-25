@@ -32,7 +32,7 @@ int main()
 	char cmd = 0;
 	char line[BUFSIZE];
 
-	uint16_t soffset = 0;
+	input_t soffset = 0;
 
 	conf_t config = {CONF_INIT};
 

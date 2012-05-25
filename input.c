@@ -1,11 +1,12 @@
 #include <string.h>
 #include "conf.h"
+#include "input.h"
 
 #define mV(b) ((b*VREF)>>RESOLUTION)
 
-static uint16_t next[NUM_AIN] = {0};
-static uint16_t latest[NUM_AIN] = {0};  
-static uint16_t previous[NUM_AIN] = {0}; 
+static input_t next[NUM_AIN] = {0};
+static input_t latest[NUM_AIN] = {0};  
+static input_t previous[NUM_AIN] = {0}; 
 
 void TC0_IrqHandler()
 {
@@ -46,12 +47,12 @@ void stop_sampling()
 	NVIC_DisableIRQ(TC0_IRQn);
 }
 
-uint16_t get_latest_volt(unsigned index) {
+input_t get_latest_volt(unsigned index) {
 	assert(index < NUM_AIN);
 	return mV(latest[index]);
 }
 
-uint16_t get_previous_volt(unsigned index) {
+input_t get_previous_volt(unsigned index) {
 	assert(index < NUM_AIN);
 	return mV(previous[index]);
 }
