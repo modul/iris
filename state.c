@@ -17,7 +17,6 @@ static void do_press();
 static void do_vent();
 static void do_stop();
 static void do_conf();
-static void do_ack();
 
 static unsigned _state = IDLE;
 static unsigned _error = EOK;
@@ -29,7 +28,7 @@ static struct state actions[NUMSTATES][NUMEVENTS] = {
 /* READY */  {{  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, { do_nok, READY}, {do_vent, ERROR}, {do_stop,    SET}, {   NULL,  READY}},
 /* SET   */  {{do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, { do_nok,   SET}, {do_vent, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
 /* GO    */  {{  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, { do_nok,    GO}, {do_vent, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
-/* ERROR */  {{  do_nok, ERROR}, {  do_ack, IDLE}, {do_log, ERROR}, { do_nok, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
+/* ERROR */  {{  do_nok, ERROR}, {do_abort, IDLE}, {do_log, ERROR}, { do_nok, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
 /*              action    next                                                                                                               */
 };
 
@@ -73,17 +72,14 @@ static void do_nok()
 
 static void do_abort()
 {
+	do_vent();
 	puts("ok");
-	do_vent();
-}
-
-static void do_ack()
-{
-	// check emergency stop here
-	do_vent();
-	_error = EOK;
-	LED_blinkstop(ALARM);
-	LED_off(ALARM);
+	if (_state == ERROR) { // acknowledge error
+		// check emergency stop here
+		_error = EOK;
+		LED_blinkstop(ALARM);
+		LED_off(ALARM);
+	}
 }
 
 static void do_conf()
