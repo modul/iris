@@ -16,7 +16,6 @@ static void do_abort();
 static void do_press();
 static void do_vent();
 static void do_stop();
-static void do_error();
 static void do_conf();
 static void do_ack();
 
@@ -26,11 +25,11 @@ static uint16_t soffset = 0;
 
 static struct state actions[NUMSTATES][NUMEVENTS] = {
 /* event/state EV_START,          EV_ABORT,         EV_LOG,          EV_CONF,          EV_ESTOP,          EV_PTRIG,          EV_FTRIG       */
-/* IDLE  */  {{do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_conf,  IDLE}, {do_error, ERROR}, {   NULL,   IDLE}, {   NULL,  IDLE}},
-/* READY */  {{  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, { do_nok, READY}, {do_error, ERROR}, {do_stop,    SET}, {   NULL,  READY}},
-/* SET   */  {{do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, { do_nok,   SET}, {do_error, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
-/* GO    */  {{  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, { do_nok,    GO}, {do_error, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
-/* ERROR */  {{  do_nok, ERROR}, {  do_ack, IDLE}, {do_log, ERROR}, { do_nok, ERROR}, {do_error, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
+/* IDLE  */  {{do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_conf,  IDLE}, {do_vent, ERROR}, {   NULL,   IDLE}, {   NULL,  IDLE}},
+/* READY */  {{  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, { do_nok, READY}, {do_vent, ERROR}, {do_stop,    SET}, {   NULL,  READY}},
+/* SET   */  {{do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, { do_nok,   SET}, {do_vent, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
+/* GO    */  {{  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, { do_nok,    GO}, {do_vent, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
+/* ERROR */  {{  do_nok, ERROR}, {  do_ack, IDLE}, {do_log, ERROR}, { do_nok, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
 /*              action    next                                                                                                               */
 };
 
@@ -85,11 +84,6 @@ static void do_ack()
 	_error = EOK;
 	LED_blinkstop(ALARM);
 	LED_off(ALARM);
-}
-
-static void do_error()
-{
-	do_vent();
 }
 
 static void do_conf()
