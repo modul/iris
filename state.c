@@ -21,7 +21,7 @@ static void do_ack();
 
 static unsigned _state = IDLE;
 static unsigned _error = EOK;
-static uint16_t soffset = 0;
+static input_t soffset = 0;
 
 static struct state actions[NUMSTATES][NUMEVENTS] = {
 /* event/state EV_START,          EV_ABORT,         EV_LOG,          EV_CONF,          EV_ESTOP,          EV_PTRIG,          EV_FTRIG       */
