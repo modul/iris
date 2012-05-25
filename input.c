@@ -1,11 +1,12 @@
 #include <string.h>
 #include "conf.h"
+#include "input.h"
 
 #define mV(b) ((b*VREF)>>RESOLUTION)
 
-static uint16_t next[NUM_AIN] = {0};
-static uint16_t latest[NUM_AIN] = {0};  
-static uint16_t previous[NUM_AIN] = {0}; 
+static input_t next[NUM_AIN] = {0};
+static input_t latest[NUM_AIN] = {0};  
+static input_t previous[NUM_AIN] = {0}; 
 
 void TC0_IrqHandler()
 {
@@ -18,21 +19,15 @@ void TC0_IrqHandler()
 void ADC_IrqHandler()
 {
     uint32_t status;
-#ifdef TRACE_LEVEL_DEBUG
-	static uint32_t timestamp = 0;
-#endif
 
     status = ADC_GetStatus(ADC);
 
 	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
-		memcpy(previous, latest, NUM_AIN*2);
-		memcpy(latest, next, NUM_AIN*2);
+		memcpy(previous, latest, sizeof(previous));
+		memcpy(latest, next, sizeof(latest));
 		ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
 
-#ifdef TRACE_LEVEL_DEBUG
-		TRACE_DEBUG("[%u] Got samples. 0: %u, 1: %u, 2: %u\n", GetTickCount()-timestamp, latest[0], latest[1], latest[2]);
-		timestamp = GetTickCount();
-#endif
+		TRACE_DEBUG("Got samples. 0: %u, 1: %u, 2: %u\n", latest[0], latest[1], latest[2]);
 	}
 }
 
@@ -52,12 +47,12 @@ void stop_sampling()
 	NVIC_DisableIRQ(TC0_IRQn);
 }
 
-uint16_t get_latest_volt(unsigned index) {
+input_t get_latest_volt(unsigned index) {
 	assert(index < NUM_AIN);
 	return mV(latest[index]);
 }
 
-uint16_t get_previous_volt(unsigned index) {
+input_t get_previous_volt(unsigned index) {
 	assert(index < NUM_AIN);
 	return mV(previous[index]);
 }
