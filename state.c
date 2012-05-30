@@ -94,7 +94,6 @@ static void do_conf()
 	}
 
 	printf("%u %u %u %u\n", cnf.fmax, cnf.pmax, cnf.smax, cnf.gainid);
-	while ((c = getchar()) != 10 || c != 0);
 }
 
 static void do_log()

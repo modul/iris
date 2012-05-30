@@ -13,9 +13,9 @@ void get_config(conf_t *dest)
 
 void set_config(conf_t src)
 {
-	config.fmax   = LIMIT(src.fmax, 0, VREF-1);
-	config.pmax   = LIMIT(src.pmax, 0, VREF-1);
-	config.smax   = LIMIT(src.smax, 0, VREF-1);
+	config.fmax   = LIMIT(src.fmax, 0, VREF);
+	config.pmax   = LIMIT(src.pmax, 0, VREF);
+	config.smax   = LIMIT(src.smax, 0, VREF);
 	config.gainid = (uint8_t) LIMIT(src.gainid, PGA280_GAIN_SETMIN, PGA280_GAIN_SETMAX);
 }
 

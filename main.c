@@ -23,29 +23,24 @@ int main()
 			TRACE_INFO("FMAX reached.\n");
 			set_error(EFMAX);
 			send_event(EV_ESTOP);
-			continue;
 		}
 		if (get_latest_volt(p) >= config.pmax) {
 			TRACE_INFO("PMAX reached.\n");
 			set_error(EPMAX);
 			send_event(EV_ESTOP);
-			continue;
 		}
 		if (get_latest_volt(s) >= config.smax) {
 			TRACE_INFO("SMAX reached.\n");
 			set_error(ESMAX);
 			send_event(EV_ESTOP);
-			continue;
 		}
 		if (get_latest_volt(p) > PAR_PSET) {
 			TRACE_INFO("PSET reached.\n");
 			send_event(EV_PTRIG);
-			continue;
 		}
 		if (get_latest_volt(F) < get_previous_volt(F)/PAR_PEAK) {
 			TRACE_INFO("Fpeak triggered.\n");
 			send_event(EV_FTRIG);
-			continue;
 		}
 
 		/* Parse command line */
@@ -60,8 +55,6 @@ int main()
 				send_event(EV_ABORT);
 			else if (cmd == 'c')
 				send_event(EV_CONF);
-			else
-				puts("nok");
 		}
 
 		/* Display state & error */
