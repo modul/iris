@@ -84,8 +84,10 @@ static void do_abort()
 static void do_conf()
 {
 	conf_t cnf = {CONF_INIT};
-	char c;
-	if (scanf("%u %u %u %u", &cnf.fmax, &cnf.pmax, &cnf.smax, &cnf.gainid) == 4) {
+	char buf[32];
+
+	fgets(buf, 32, stdin);
+	if (sscanf(buf, "%u %u %u %u", &(cnf.fmax), &(cnf.pmax), &(cnf.smax), &(cnf.gainid)) == 4) {
 		set_config(cnf);
 		printf("ok ");
 	}
@@ -106,6 +108,7 @@ static void do_press()
 	const Pin pr = PIN_VAL_press;
 	const Pin vn = PIN_VAL_vent;
 	PIO_Clear(&vn); PIO_Set(&pr);
+	puts("ok");
 }
 
 static void do_stop()
