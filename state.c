@@ -2,7 +2,6 @@
 #include "state.h"
 #include "input.h"
 
-enum states {SAME, IDLE, READY, SET, GO, ERROR, NUMSTATES};
 typedef void (*paction_t)();
 
 struct state {

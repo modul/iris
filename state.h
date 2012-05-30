@@ -8,6 +8,7 @@
 #define ESTOP 8
 
 enum events {EV_START, EV_ABORT, EV_LOG, EV_CONF, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};
+enum states {IDLE, READY, SET, GO, ERROR, NUMSTATES};
 
 void send_event(unsigned ev);
 

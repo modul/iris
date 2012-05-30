@@ -664,7 +664,6 @@ BOARD_OSCOUNT	board/system.c	56;"	d	file:
 BOARD_PLLAR	board/system.c	48;"	d	file:
 BOARD_PLLAR	board/system.c	57;"	d	file:
 BOARD_USB_BMATTRIBUTES	board/board.h	44;"	d
-BUFSIZE	main.c	6;"	d	file:
 BUILD	Makefile	/^BUILD = build$/;"	m
 BusFault_Handler	libchip/source/exceptions.c	/^WEAK void BusFault_Handler( void )$/;"	f
 BusFault_IRQn	libchip/include/SAM3S.h	/^  BusFault_IRQn         = -11, \/**<  5 Cortex-M3 Bus Fault Interrupt         *\/$/;"	e	enum:IRQn
@@ -956,7 +955,7 @@ CKGR_PLLBR_PLLBCOUNT_Msk	libchip/include/SAM3S.h	3580;"	d
 CKGR_PLLBR_PLLBCOUNT_Pos	libchip/include/SAM3S.h	3579;"	d
 CLEAR_CSR	libusb/source/USBD_HAL.c	116;"	d	file:
 CLOCK_TIMEOUT	board/system.c	68;"	d	file:
-CONF_INIT	conf.h	62;"	d
+CONF_INIT	conf.h	64;"	d
 CPUID	libchip/cmsis/core_cm3.h	/^  __I  uint32_t CPUID;                        \/*!< Offset: 0x00  CPU ID Base Register                                  *\/$/;"	m	struct:__anon34
 CRCCU	libchip/include/SAM3S.h	7428;"	d
 CRCCU_CR	libchip/include/SAM3S.h	/^  WoReg CRCCU_CR;      \/**< \\brief (Crccu Offset: 0x00000034) CRCCU Control Register *\/$/;"	m	struct:__anon5
@@ -1311,7 +1310,19 @@ EFC_PerformCommand	libchip/source/efc.c	/^extern uint32_t EFC_PerformCommand( Ef
 EFC_SetWaitState	libchip/source/efc.c	/^extern void EFC_SetWaitState( Efc* efc, uint8_t ucCycles )$/;"	f
 EFC_StartCommand	libchip/source/efc.c	/^extern void EFC_StartCommand( Efc* efc, uint32_t dwCommand, uint32_t dwArgument )$/;"	f
 EFC_TranslateAddress	libchip/source/efc.c	/^extern void EFC_TranslateAddress( Efc** ppEfc, uint32_t dwAddress, uint16_t* pwPage, uint16_t* pwOffset )$/;"	f
-ERROR	main.c	12;"	d	file:
+EFMAX	state.h	5;"	d
+EOK	state.h	4;"	d
+EPMAX	state.h	6;"	d
+ERROR	state.c	/^enum states {SAME, IDLE, READY, SET, GO, ERROR, NUMSTATES};$/;"	e	enum:states	file:
+ESMAX	state.h	7;"	d
+ESTOP	state.h	8;"	d
+EV_ABORT	state.h	/^enum events {EV_START, EV_ABORT, EV_LOG, EV_CONF, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};$/;"	e	enum:events
+EV_CONF	state.h	/^enum events {EV_START, EV_ABORT, EV_LOG, EV_CONF, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};$/;"	e	enum:events
+EV_ESTOP	state.h	/^enum events {EV_START, EV_ABORT, EV_LOG, EV_CONF, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};$/;"	e	enum:events
+EV_FTRIG	state.h	/^enum events {EV_START, EV_ABORT, EV_LOG, EV_CONF, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};$/;"	e	enum:events
+EV_LOG	state.h	/^enum events {EV_START, EV_ABORT, EV_LOG, EV_CONF, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};$/;"	e	enum:events
+EV_PTRIG	state.h	/^enum events {EV_START, EV_ABORT, EV_LOG, EV_CONF, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};$/;"	e	enum:events
+EV_START	state.h	/^enum events {EV_START, EV_ABORT, EV_LOG, EV_CONF, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};$/;"	e	enum:events
 Efc	libchip/include/SAM3S.h	/^} Efc;$/;"	t	typeref:struct:__anon7
 Endpoint	libusb/source/USBD_HAL.c	/^} Endpoint;$/;"	t	typeref:struct:__anon45	file:
 F	conf.h	51;"	d
@@ -1330,7 +1341,7 @@ FLASHD_Write	libchip/source/flashd.c	/^extern uint32_t FLASHD_Write( uint32_t dw
 FOREVER	board/led.h	4;"	d
 FindClockConfiguration	libchip/source/pwmc.c	/^static uint16_t FindClockConfiguration($/;"	f	file:
 GDB	Makefile	/^GDB = $(CROSS_COMPILE)gdb$/;"	m
-GO	main.c	11;"	d	file:
+GO	state.c	/^enum states {SAME, IDLE, READY, SET, GO, ERROR, NUMSTATES};$/;"	e	enum:states	file:
 GPBR	libchip/include/SAM3S.h	7447;"	d
 GetConfiguration	libusb/source/USBDDriver.c	/^static void GetConfiguration(const USBDDriver *pDriver)$/;"	f	file:
 GetDescriptor	libusb/source/USBDDriver.c	/^static void GetDescriptor($/;"	f	file:
@@ -1669,7 +1680,7 @@ ICER	libchip/cmsis/core_cm3.h	/^  __IO uint32_t ICER[8];                      \/
 ICPR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t ICPR[8];                      \/*!< Offset: 0x180  Interrupt Clear Pending Register        *\/$/;"	m	struct:__anon33
 ICSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t ICSR;                         \/*!< Offset: 0x04  Interrupt Control State Register                      *\/$/;"	m	struct:__anon34
 ICTR	libchip/cmsis/core_cm3.h	/^  __I  uint32_t ICTR;                         \/*!< Offset: 0x04  Interrupt Control Type Register *\/$/;"	m	struct:__anon38
-IDLE	main.c	8;"	d	file:
+IDLE	state.c	/^enum states {SAME, IDLE, READY, SET, GO, ERROR, NUMSTATES};$/;"	e	enum:states	file:
 ID_ACC	libchip/include/SAM3S.h	7394;"	d
 ID_ADC	libchip/include/SAM3S.h	7390;"	d
 ID_CRCCU	libchip/include/SAM3S.h	7393;"	d
@@ -1813,7 +1824,7 @@ LIBNAME	libchip/Makefile	/^LIBNAME=libchip$/;"	m
 LIBNAME	libusb/Makefile	/^LIBNAME=libusb$/;"	m
 LIBPATHS	Makefile	/^LIBPATHS = libusb\/lib libchip\/lib$/;"	m
 LIBS	Makefile	/^LIBS = $(USBLIB) $(CHIPLIB)$/;"	m
-LIMIT	main.c	15;"	d	file:
+LIMIT	conf.c	5;"	d	file:
 LOAD	libchip/cmsis/core_cm3.h	/^  __IO uint32_t LOAD;                         \/*!< Offset: 0x04  SysTick Reload Value Register       *\/$/;"	m	struct:__anon35
 LSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t LSR;                          \/*!< Offset:       ITM Lock Status Register                  *\/$/;"	m	struct:__anon36
 MASK_STATUS0	libchip/source/pmc.c	42;"	d	file:
@@ -2021,6 +2032,8 @@ NO_INIT	libchip/chip.h	32;"	d
 NO_INIT	libusb/include/USBD.h	74;"	d
 NO_INIT	libusb/include/USBD.h	76;"	d
 NO_INIT	libusb/include/USBD.h	78;"	d
+NUMEVENTS	state.h	/^enum events {EV_START, EV_ABORT, EV_LOG, EV_CONF, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};$/;"	e	enum:events
+NUMSTATES	state.c	/^enum states {SAME, IDLE, READY, SET, GO, ERROR, NUMSTATES};$/;"	e	enum:states	file:
 NUM_AIN	conf.h	22;"	d
 NVIC	libchip/cmsis/core_cm3.h	725;"	d
 NVIC_BASE	libchip/cmsis/core_cm3.h	719;"	d
@@ -4849,7 +4862,7 @@ RBAR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR;                         \/
 RBAR_A1	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR_A1;                      \/*!< Offset: 0x14  MPU Alias 1 Region Base Address Register       *\/$/;"	m	struct:__anon39
 RBAR_A2	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR_A2;                      \/*!< Offset: 0x1C  MPU Alias 2 Region Base Address Register       *\/$/;"	m	struct:__anon39
 RBAR_A3	libchip/cmsis/core_cm3.h	/^  __IO uint32_t RBAR_A3;                      \/*!< Offset: 0x24  MPU Alias 3 Region Base Address Register       *\/$/;"	m	struct:__anon39
-READY	main.c	9;"	d	file:
+READY	state.c	/^enum states {SAME, IDLE, READY, SET, GO, ERROR, NUMSTATES};$/;"	e	enum:states	file:
 REG_ACCESS	libchip/include/SAM3S.h	60;"	d
 REG_ACCESS	libchip/include/SAM3S.h	63;"	d
 REG_ACC_ACR	libchip/include/SAM3S.h	7010;"	d
@@ -5897,6 +5910,7 @@ Rtc	libchip/include/SAM3S.h	/^} Rtc;$/;"	t	typeref:struct:__anon18
 Rtt	libchip/include/SAM3S.h	/^} Rtt;$/;"	t	typeref:struct:__anon19
 RwReg	libchip/include/SAM3S.h	/^typedef volatile       uint32_t RwReg; \/**< Read-Write 32-bit register (volatile unsigned int) *\/$/;"	t
 SAM3S_H	libchip/include/SAM3S.h	35;"	d
+SAME	state.c	/^enum states {SAME, IDLE, READY, SET, GO, ERROR, NUMSTATES};$/;"	e	enum:states	file:
 SAMPLING_FREQ	conf.h	6;"	d
 SCB	libchip/cmsis/core_cm3.h	723;"	d
 SCB_AIRCR_ENDIANESS_Msk	libchip/cmsis/core_cm3.h	237;"	d
@@ -6020,7 +6034,7 @@ SCS_BASE	libchip/cmsis/core_cm3.h	715;"	d
 SERIE	Makefile	/^SERIE = sam3s$/;"	m
 SERIE	libchip/Makefile	/^SERIE=sam3s$/;"	m
 SERIE	libusb/Makefile	/^SERIE=sam3s$/;"	m
-SET	main.c	10;"	d	file:
+SET	state.c	/^enum states {SAME, IDLE, READY, SET, GO, ERROR, NUMSTATES};$/;"	e	enum:states	file:
 SET_CSR	libusb/source/USBD_HAL.c	97;"	d	file:
 SHCSR	libchip/cmsis/core_cm3.h	/^  __IO uint32_t SHCSR;                        \/*!< Offset: 0x24  System Handler Control and State Register             *\/$/;"	m	struct:__anon34
 SHP	libchip/cmsis/core_cm3.h	/^  __IO uint8_t  SHP[12];                      \/*!< Offset: 0x18  System Handlers Priority Registers (4-7, 8-11, 12-15) *\/$/;"	m	struct:__anon34
@@ -8325,6 +8339,7 @@ _RTT_	libchip/include/rtt.h	49;"	d
 _SPI_	libchip/include/spi.h	38;"	d
 _SPI_PDC_	libchip/include/spi_pdc.h	38;"	d
 _SSC_	libchip/include/ssc.h	38;"	d
+_STATE_	state.h	2;"	d
 _SUPC_	libchip/include/supc.h	31;"	d
 _SYSCALLS_	board/syscalls.h	41;"	d
 _SYSTEM_	board/system.h	38;"	d
@@ -8487,6 +8502,7 @@ _conf_t	conf.h	/^typedef struct _conf_t {$/;"	s
 _dwNumSources	libchip/source/pio_it.c	/^static uint32_t _dwNumSources = 0;$/;"	v	file:
 _dwTickCount	board/timetick.c	/^static volatile uint32_t _dwTickCount=0 ;$/;"	v	file:
 _dwUseIAP	libchip/source/flashd.c	/^static NO_INIT uint32_t _dwUseIAP ;$/;"	v	file:
+_error	state.c	/^static unsigned _error = EOK;$/;"	v	file:
 _exit	board/syscalls.c	/^extern void _exit( int status )$/;"	f
 _fstat	board/syscalls.c	/^extern int _fstat( int file, struct stat *st )$/;"	f
 _getpid	board/syscalls.c	/^extern int _getpid ( void )$/;"	f
@@ -8498,7 +8514,7 @@ _read	board/syscalls.c	/^extern int _read(int file, char *ptr, int len)$/;"	f
 _rxBuffer	board/usb_console.c	/^static char _rxBuffer[RXBUFFERSIZE];$/;"	v	file:
 _rxCount	board/usb_console.c	/^static volatile uint32_t _rxCount = 0;$/;"	v	file:
 _sbrk	board/syscalls.c	/^extern caddr_t _sbrk ( int incr )$/;"	f
-_state	main.c	/^uint8_t _state = READY;$/;"	v
+_state	state.c	/^static unsigned _state = IDLE;$/;"	v	file:
 _txCount	board/usb_console.c	/^static volatile uint32_t _txCount = 0;$/;"	v	file:
 _ucIsConsoleInitialized	board/uart_console.c	/^static uint8_t _ucIsConsoleInitialized = 0;$/;"	v	file:
 _usb_	libusb/include/usb.h	38;"	d
@@ -8506,6 +8522,8 @@ _write	board/syscalls.c	/^extern int _write( int file, char *ptr, int len )$/;"	
 _xferTimeout	board/uart_console.c	/^static uint32_t _xferTimeout = 0xFFFFFFFF;$/;"	v	file:
 abstractControlManagement	libusb/include/CDCDSerialDriver.h	/^    CDCAbstractControlManagementDescriptor abstractControlManagement;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptors
 abstractControlManagement	libusb/include/CDCDSerialDriver.h	/^    CDCAbstractControlManagementDescriptor abstractControlManagement;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptorsOTG
+action	state.c	/^	paction_t action;$/;"	m	struct:state	file:
+actions	state.c	/^static struct state actions[NUMSTATES][NUMEVENTS] = {$/;"	v	typeref:struct:state	file:
 alwaysSampling	libchip/include/pio_capture.h	/^    uint8_t alwaysSampling;$/;"	m	struct:_SpioCaptureInit
 arg	libchip/include/hsmci.h	/^    uint32_t arg;$/;"	m	struct:_MciCmd
 attribute	libchip/include/pio.h	/^    uint8_t attribute;$/;"	m	struct:_Pin
@@ -8619,6 +8637,7 @@ cmdSize	libchip/include/spi_pdc.h	/^	uint8_t cmdSize;$/;"	m	struct:_SpidCmd
 communication	libusb/include/CDCDSerialDriver.h	/^    USBInterfaceDescriptor  communication;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptors
 communication	libusb/include/CDCDSerialDriver.h	/^    USBInterfaceDescriptor  communication;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptorsOTG
 conf_t	conf.h	/^} conf_t;$/;"	t	typeref:struct:_conf_t
+config	conf.c	/^static conf_t config = {CONF_INIT};$/;"	v	file:
 configuration	libusb/include/CDCDSerialDriver.h	/^    USBConfigurationDescriptor configuration;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptors
 configuration	libusb/include/CDCDSerialDriver.h	/^    USBConfigurationDescriptor configuration;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptorsOTG
 configurationDescriptorsFS	board/usb_device_descriptor.c	/^const CDCDSerialDriverConfigurationDescriptors configurationDescriptorsFS = {$/;"	v
@@ -8634,23 +8653,30 @@ dataOut	libusb/include/CDCDSerialDriver.h	/^    USBEndpointDescriptor dataOut;$/
 dataSize	libchip/include/spi_pdc.h	/^	unsigned short dataSize;$/;"	m	struct:_SpidCmd
 deviceDescriptor	board/usb_device_descriptor.c	/^const USBDeviceDescriptor deviceDescriptor = {$/;"	v
 deviceState	libusb/source/USBD.c	/^static uint8_t deviceState;$/;"	v	file:
-do_hold	main.c	/^void do_hold()$/;"	f
-do_press	main.c	/^void do_press() $/;"	f
-do_vent	main.c	/^void do_vent()$/;"	f
+do_abort	state.c	/^static void do_abort()$/;"	f	file:
+do_conf	state.c	/^static void do_conf()$/;"	f	file:
+do_log	state.c	/^static void do_log()$/;"	f	file:
+do_nok	state.c	/^static void do_nok()$/;"	f	file:
+do_press	state.c	/^static void do_press() $/;"	f	file:
+do_stop	state.c	/^static void do_stop()$/;"	f	file:
+do_vent	state.c	/^static void do_vent()$/;"	f	file:
 dsize	libchip/include/pio_capture.h	/^    uint8_t dsize;$/;"	m	struct:_SpioCaptureInit
 dwDTERate	libusb/include/CDCRequests.h	/^    uint32_t dwDTERate;$/;"	m	struct:_CDCLineCoding
 endpoints	libusb/source/USBD_HAL.c	/^static Endpoint endpoints[CHIP_USB_NUMENDPOINTS];$/;"	v	file:
-enter	main.c	/^void enter(uint8_t new) $/;"	f
 errno	board/syscalls.c	55;"	d	file:
+events	state.h	/^enum events {EV_START, EV_ABORT, EV_LOG, EV_CONF, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};$/;"	g
 exception_table	board/startup.c	/^IntFunc exception_table[] = {$/;"	v
 fCallback	libusb/source/USBD_HAL.c	/^    MblTransferCallback fCallback;$/;"	m	struct:__anon44	file:
 fCallback	libusb/source/USBD_HAL.c	/^    TransferCallback fCallback;$/;"	m	struct:__anon43	file:
 fCallback	libusb/source/USBD_HAL.c	/^    void*   fCallback;$/;"	m	struct:__anon42	file:
 fEventHandler	libusb/include/CDCDSerialPort.h	/^    CDCDSerialPortEventHandler fEventHandler;$/;"	m	struct:_CDCDSerialPort
-fmax	conf.h	/^	uint16_t fmax;$/;"	m	struct:_conf_t
+fmax	conf.h	/^	input_t fmax;$/;"	m	struct:_conf_t
 gainid	conf.h	/^	uint8_t gainid;$/;"	m	struct:_conf_t
-get_latest_volt	input.c	/^uint16_t get_latest_volt(unsigned index) {$/;"	f
-get_previous_volt	input.c	/^uint16_t get_previous_volt(unsigned index) {$/;"	f
+get_config	conf.c	/^void get_config(conf_t *dest)$/;"	f
+get_error	state.c	/^unsigned get_error()$/;"	f
+get_latest_volt	input.c	/^input_t get_latest_volt(unsigned index) {$/;"	f
+get_previous_volt	input.c	/^input_t get_previous_volt(unsigned index) {$/;"	f
+get_state	state.c	/^unsigned get_state()$/;"	f
 halfSampling	libchip/include/pio_capture.h	/^    uint8_t halfSampling;$/;"	m	struct:_SpioCaptureInit
 handler	libchip/source/pio_it.c	/^    void (*handler)( const Pin* ) ;$/;"	m	struct:_InterruptSource	file:
 header	libusb/include/CDCDSerialDriver.h	/^    CDCHeaderDescriptor header;$/;"	m	struct:_CDCDSerialDriverConfigurationDescriptors
@@ -8664,17 +8690,17 @@ iSerialNumber	libusb/include/USBDescriptors.h	/^   uint8_t iSerialNumber;$/;"	m	
 id	libchip/include/pio.h	/^    uint8_t id;$/;"	m	struct:_Pin
 idProduct	libusb/include/USBDescriptors.h	/^   uint16_t idProduct;$/;"	m	struct:_USBDeviceDescriptor
 idVendor	libusb/include/USBDescriptors.h	/^   uint16_t idVendor;$/;"	m	struct:_USBDeviceDescriptor
-in	main.c	14;"	d	file:
 inCurr	libusb/source/USBD_HAL.c	/^    uint16_t            inCurr;$/;"	m	struct:__anon44	file:
+input_t	input.h	/^typedef uint16_t input_t;$/;"	t
 isRemoteWakeUpEnabled	libusb/include/USBDDriver.h	/^    uint8_t isRemoteWakeUpEnabled;$/;"	m	struct:_USBDDriver
 languageIdStringDescriptor	board/usb_device_descriptor.c	/^const unsigned char languageIdStringDescriptor[] = {$/;"	v
-latest	input.c	/^static uint16_t latest[NUM_AIN] = {0};  $/;"	v	file:
+latest	input.c	/^static input_t latest[NUM_AIN] = {0};  $/;"	v	file:
 leds	board/led.c	/^static const Pin leds[] = {PINS_LEDS};$/;"	v	file:
 lineCoding	libusb/include/CDCDSerialPort.h	/^    CDCLineCoding  lineCoding;$/;"	m	struct:_CDCDSerialPort
 lineCoding	libusb/source/CDCDSerialPort.c	/^static CDCLineCoding lineCoding;$/;"	v	file:
 listSize	libusb/source/USBD_HAL.c	/^    uint16_t            listSize;$/;"	m	struct:__anon44	file:
 listState	libusb/source/USBD_HAL.c	/^    uint8_t             listState;$/;"	m	struct:__anon44	file:
-mV	input.c	4;"	d	file:
+mV	input.c	5;"	d	file:
 main	main.c	/^int main() $/;"	f
 mask	libchip/include/pio.h	/^    uint32_t mask;$/;"	m	struct:_Pin
 mblTransfer	libusb/source/USBD_HAL.c	/^        MblTransfer    mblTransfer;$/;"	m	union:__anon45::__anon46	file:
@@ -8682,7 +8708,8 @@ mciId	libchip/include/hsmci.h	/^    uint8_t mciId;$/;"	m	struct:__anon32
 min	libchip/source/flashd.c	94;"	d	file:
 modeFirstSample	libchip/include/pio_capture.h	/^    uint8_t modeFirstSample;$/;"	m	struct:_SpioCaptureInit
 nbBlock	libchip/include/hsmci.h	/^    uint16_t nbBlock;$/;"	m	struct:_MciCmd
-next	input.c	/^static uint16_t next[NUM_AIN] = {0};$/;"	v	file:
+next	input.c	/^static input_t next[NUM_AIN] = {0};$/;"	v	file:
+next	state.c	/^	unsigned next;$/;"	m	struct:state	file:
 nop	libusb/source/USBD_HAL.c	77;"	d	file:
 nop	libusb/source/USBD_HAL.c	80;"	d	file:
 nop	libusb/source/USBD_HAL.c	82;"	d	file:
@@ -8736,11 +8763,12 @@ pStrings	libusb/include/USBDDriver.h	/^    const uint8_t **pStrings;$/;"	m	struc
 pTransfer	libchip/include/twid.h	/^    Async *pTransfer ;$/;"	m	struct:_Twid
 pTwi	libchip/include/twid.h	/^    Twi *pTwi ;$/;"	m	struct:_Twid
 pUsbd	libusb/include/CDCDSerialPort.h	/^    USBDDriver *pUsbd;$/;"	m	struct:_CDCDSerialPort
+paction_t	state.c	/^typedef void (*paction_t)();$/;"	t	file:
 pdwStack	board/startup.c	/^uint32_t pdwStack[STACK_SIZE] ;     $/;"	v
 pinVbus	board/usb_console.c	/^static const Pin pinVbus = PIN_USB_VBUS;$/;"	v	file:
 pio	libchip/include/pio.h	/^    Pio    *pio;$/;"	m	struct:_Pin
-pmax	conf.h	/^	uint16_t pmax;$/;"	m	struct:_conf_t
-previous	input.c	/^static uint16_t previous[NUM_AIN] = {0}; $/;"	v	file:
+pmax	conf.h	/^	input_t pmax;$/;"	m	struct:_conf_t
+previous	input.c	/^static input_t previous[NUM_AIN] = {0}; $/;"	v	file:
 previousDeviceState	libusb/source/USBD.c	/^static uint8_t previousDeviceState;$/;"	v	file:
 productStringDescriptor	board/usb_device_descriptor.c	/^const unsigned char productStringDescriptor[] = {$/;"	v
 read_stderr	board/board.h	55;"	d
@@ -8750,23 +8778,30 @@ remaining	libusb/source/USBD_HAL.c	/^    int32_t          remaining;$/;"	m	struc
 resType	libchip/include/hsmci.h	/^    uint8_t resType:7,      \/** Response *\/$/;"	m	struct:_MciCmd
 reserved	libusb/include/CDCNotifications.h	/^             reserved:9;    \/**< Reserved *\/$/;"	m	struct:_CDCSerialState
 reserved	libusb/include/USBD.h	/^                   reserved:8,      \/** Not used *\/$/;"	m	struct:_USBDDmaDescriptor
+reset_state	state.c	/^void reset_state()$/;"	f
 s	conf.h	53;"	d
 sam3s	board/board.h	22;"	d
 sam3s4	libchip/chip.h	12;"	d
 sam3sek	board/board.h	20;"	d
 semaphore	libchip/include/hsmci.h	/^    volatile uint8_t semaphore;$/;"	m	struct:__anon32
 semaphore	libchip/include/spi_pdc.h	/^	volatile char semaphore ;$/;"	m	struct:_Spid
+send_event	state.c	/^void send_event(unsigned ev)$/;"	f
+set_config	conf.c	/^void set_config(conf_t src)$/;"	f
+set_error	state.c	/^void set_error(unsigned flag)$/;"	f
 setup	main.c	/^void setup()$/;"	f
 singleTransfer	libusb/source/USBD_HAL.c	/^        Transfer       singleTransfer;$/;"	m	union:__anon45::__anon46	file:
 size	libusb/include/USBD.h	/^    uint16_t size;$/;"	m	struct:_USBDTransferBuffer
 size	libusb/source/USBD_HAL.c	/^    volatile uint16_t size;$/;"	m	struct:__anon45	file:
-smax	conf.h	/^	uint16_t smax;$/;"	m	struct:_conf_t
+smax	conf.h	/^	input_t smax;$/;"	m	struct:_conf_t
+soffset	state.c	/^static input_t soffset = 0;$/;"	v	file:
 spiCs	libchip/include/spi_pdc.h	/^	uint8_t spiCs;$/;"	m	struct:_SpidCmd
 spiId	libchip/include/spi_pdc.h	/^	char spiId ;$/;"	m	struct:_Spid
 start_sampling	input.c	/^void start_sampling()$/;"	f
 starttimer	board/led.c	10;"	d	file:
 state	libchip/include/hsmci.h	/^    volatile uint8_t state;$/;"	m	struct:_MciCmd
 state	libusb/source/USBD_HAL.c	/^    volatile uint8_t  state;$/;"	m	struct:__anon45	file:
+state	state.c	/^struct state {$/;"	s	file:
+states	state.c	/^enum states {SAME, IDLE, READY, SET, GO, ERROR, NUMSTATES};$/;"	g	file:
 status	libchip/include/async.h	/^    volatile uint8_t status ;$/;"	m	struct:_Async
 status	libchip/include/hsmci.h	/^    uint8_t status;$/;"	m	struct:_MciCmd
 status	libchip/source/twid.c	/^    volatile uint8_t status;$/;"	m	struct:_AsyncTwi	file:
