@@ -2,12 +2,11 @@
 #include "state.h"
 #include "input.h"
 
-typedef void (*paction_t)();
-
-struct state {
-	paction_t action;
-	unsigned next;
-};
+static struct _proc {
+	unsigned state;
+	unsigned error;
+	input_t soffset;
+} proc = {IDLE, EOK, 0};
 
 static void do_nok();
 static void do_log();
@@ -17,51 +16,54 @@ static void do_vent();
 static void do_stop();
 static void do_conf();
 
-static unsigned _state = IDLE;
-static unsigned _error = EOK;
-static input_t soffset = 0;
 
-static struct state actions[NUMSTATES][NUMEVENTS] = {
+typedef void (*taction_t)();
+
+struct transition {
+	taction_t action;
+	unsigned next_state;
+};
+
+static struct transition table[NUMSTATES][NUMEVENTS] = {
 /* event/state EV_START,          EV_ABORT,         EV_LOG,          EV_CONF,          EV_ESTOP,          EV_PTRIG,          EV_FTRIG       */
 /* IDLE  */  {{do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_conf,  IDLE}, {do_vent, ERROR}, {   NULL,   IDLE}, {   NULL,  IDLE}},
 /* READY */  {{  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, { do_nok, READY}, {do_vent, ERROR}, {do_stop,    SET}, {   NULL,  READY}},
 /* SET   */  {{do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, { do_nok,   SET}, {do_vent, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
 /* GO    */  {{  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, { do_nok,    GO}, {do_vent, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
 /* ERROR */  {{  do_nok, ERROR}, {do_abort, IDLE}, {do_log, ERROR}, { do_nok, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
-/*              action    next                                                                                                               */
+/*              action    nextproc.state                                                                                                               */
 };
 
-void send_event(unsigned ev)
+void send_event(unsigned event)
 {
-	paction_t action = NULL;
+	taction_t action = NULL;
 
-	assert (ev < NUMEVENTS);
-	action = actions[_state][ev].action;
-	if (action)
+	assert (event < NUMEVENTS);
+	if((action = table[proc.state][event].action))
 		action();
-	_state = actions[_state][ev].next;
+	proc.state = table[proc.state][event].next_state;
 }
 
 void reset_state()
 {
 	do_vent();
-	_state = IDLE;
-	_error = EOK;
+	proc.state = IDLE;
+	proc.error = EOK;
 }
 
 unsigned get_state()
 {
-	return _state;
+	return proc.state;
 }
 
 void set_error(unsigned flag)
 {
-	_error |= flag;
+	proc.error |= flag;
 }
 
 unsigned get_error()
 {
-	return _error;
+	return proc.error;
 }
 
 static void do_nok()
@@ -73,9 +75,9 @@ static void do_abort()
 {
 	do_vent();
 	puts("ok");
-	if (_state == ERROR) { // acknowledge error
+	if (proc.state == ERROR) { // acknowledge error
 		// check emergency stop here
-		_error = EOK;
+		proc.error = EOK;
 		LED_blinkstop(ALARM);
 		LED_off(ALARM);
 	}
@@ -100,7 +102,7 @@ static void do_conf()
 
 static void do_log()
 {
-	printf("%u %u %u %u %u %u\n", _state, _error, get_latest_volt(F), get_latest_volt(p), get_latest_volt(s), soffset);
+	printf("%u %u %u %u %u %u\n", proc.state, proc.error, get_latest_volt(F), get_latest_volt(p), get_latest_volt(s), proc.soffset);
 }
 
 static void do_press() 
@@ -115,7 +117,7 @@ static void do_stop()
 {
 	const Pin pins[] = {PINS_VAL};
 	PIO_Clear(pins);
-	soffset = get_latest_volt(s);
+	proc.soffset = get_latest_volt(s);
 }
 
 static void do_vent()
