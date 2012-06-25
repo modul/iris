@@ -9,35 +9,33 @@ void test_spi();
 int main() 
 {
 	char cmd = 0;
-	conf_t config;
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
 	start_sampling();
-	get_config(&config);
 
 	while (1) {
-		if (get_latest_volt(F) >= config.fmax) {
+		if (get_latest_volt(Fchan) >= Fmax) {
 			TRACE_INFO("FMAX reached.\n");
 			set_error(EFMAX);
 			send_event(EV_ESTOP);
 		}
-		if (get_latest_volt(p) >= config.pmax) {
+		if (get_latest_volt(pchan) >= pmax) {
 			TRACE_INFO("PMAX reached.\n");
 			set_error(EPMAX);
 			send_event(EV_ESTOP);
 		}
-		if (get_latest_volt(s) >= config.smax) {
+		if (get_latest_volt(schan) >= smax) {
 			TRACE_INFO("SMAX reached.\n");
 			set_error(ESMAX);
 			send_event(EV_ESTOP);
 		}
-		if (get_latest_volt(p) > PAR_PSET) {
+		if (get_latest_volt(pchan) > PAR_PSET) {
 			TRACE_INFO("PSET reached.\n");
 			send_event(EV_PTRIG);
 		}
-		if (get_latest_volt(F) < get_previous_volt(F)/PAR_PEAK) {
+		if (get_latest_volt(Fchan) < get_previous_volt(Fchan)/PAR_PEAK) {
 			TRACE_INFO("Fpeak triggered.\n");
 			send_event(EV_FTRIG);
 		}
@@ -52,8 +50,8 @@ int main()
 				send_event(EV_LOG);
 			else if (cmd == 'a')
 				send_event(EV_ABORT);
-			else if (cmd == 'c')
-				send_event(EV_CONF);
+	//		else if (cmd == 'c')
+	//			send_event(EV_CONF);
 		}
 
 		/* Display state & error */

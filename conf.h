@@ -10,6 +10,22 @@
 #define VREF 1170
 #define NUM_AIN 3
 
+/** Configuration Parameters **/
+#define PAR_PSET   50
+#define PAR_PEAK   2
+
+#define Fchan 0
+#define pchan 1
+#define schan 2
+
+#define Fgain 6
+#define pgain 1
+#define sgain 6
+
+#define Fmax VREF-1
+#define pmax VREF-1
+#define smax VREF-1
+
 /** Valve output pins **/
 #define PIN_VAL_vent  {PIO_PA2, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
 #define PIN_VAL_press {PIO_PA3, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
@@ -33,31 +49,5 @@
 #define MEMORY_CS       2
 #define MEMORY_BAUD     1000000
 #define MEMORY_SPICONF  SPI_SCBR(MEMORY_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_16_BIT
-
-
-/** Configuration Parameters **/
-#define PAR_PSET   50
-#define PAR_PEAK   2
-
-#define F 0
-#define p 1
-#define s 2
-
-#include "input.h"
-
-typedef struct _conf_t {
-	input_t pmax;
-	input_t smax;
-	input_t fmax;
-	uint8_t gainid;
-} conf_t;
-
-#define CONF_INIT VREF, VREF, VREF, 0
-
-void get_config(conf_t *dest);
-void set_config(conf_t src);
-
-void store_configuration(conf_t *src);
-void load_configuration(conf_t *dest);
 
 #endif
