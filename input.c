@@ -4,31 +4,69 @@
 
 #define mV(b) ((b*VREF)>>RESOLUTION)
 
-static input_t next[NUM_AIN] = {0};
+#define WRITE 0 << 6
+#define READ  1 << 6
+#define AD_STATREG 0 << 3
+#define AD_MODEREG 1 << 3
+#define AD_CONFREG 2 << 3
+#define AD_DATAREG 3 << 3
+#define AD_OFFSREG 6 << 3
+#define AD_FULLREG 7 << 3
+
+#define AD_MODE_HI 0x20
+#define AD_MODE_LO 0x0A
+
+#define AD_CONF_HI 0x00
+#define AD_CONF_LO 0x90
+
 static input_t latest[NUM_AIN] = {0};  
 static input_t previous[NUM_AIN] = {0}; 
 
+static input_t ain_read(unsigned chan, unsigned gain)
+{	
+	const Pin rdy = PIN_AIN_RDY;
+	unsigned i = RESOLUTION/8;
+	union {
+		input_t w;
+		uint8_t b[sizeof(input_t)];
+	} value;
+
+	SPI_Write(SPI, AIN_CS, AD_CONFREG|WRITE);
+	SPI_Write(SPI, AIN_CS, AD_CONF_HI|(gain&0x07));
+	SPI_Write(SPI, AIN_CS, AD_CONF_LO|(chan&0x0F));
+	SPI_Write(SPI, AIN_CS, AD_MODEREG|WRITE);
+	SPI_Write(SPI, AIN_CS, AD_MODE_HI);
+	SPI_Write(SPI, AIN_CS, AD_MODE_LO);
+
+	while (PIO_Get(&rdy)); // white for conversion to complete
+	SPI_Write(SPI, AIN_CS|SPI_TDR_LASTXFER, AD_DATAREG|READ);
+
+	do { value.b[--i] = SPI_Read(SPI); }
+		while (i > 0);
+
+	return value.w;
+}
+
 void TC0_IrqHandler()
 {
-	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
-	status = status;
+	uint32_t i = TC0->TC_CHANNEL[0].TC_SR;
 
-//	ADC_StartConversion(ADC);
+	for (i=0; i<NUM_AIN; i++) {
+		previous[i] = latest[i];
+		latest[i] = ain_read(i, 1);
+	}
+
+
 }
 
 void start_sampling()
 {
-//	NVIC_EnableIRQ(ADC_IRQn);
-//	NVIC_SetPriority(ADC_IRQn, 0);
 	NVIC_EnableIRQ(TC0_IRQn);
 	NVIC_SetPriority(TC0_IRQn, 1);
-
-//	ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
 }
 
 void stop_sampling()
 {
-//	NVIC_DisableIRQ(ADC_IRQn);
 	NVIC_DisableIRQ(TC0_IRQn);
 }
 
