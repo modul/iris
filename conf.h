@@ -3,22 +3,11 @@
 
 #include "board.h"
 
-#define SAMPLING_FREQ 2
-#define TIMER_FREQ (NUM_AIN * SAMPLING_FREQ)
+#define TIMER_FREQ 6
 
-#define RESOLUTION 12
+#define RESOLUTION 24
 #define MAX (1 << RESOLUTION)
-#define VREF 3300
-
-/** ADC input pins **/
-/*#define PIN_ADC0 {PIO_PA17X1_AD0, PIOA, ID_PIOA, PIO_INPUT, PIO_DEFAULT}
-#define PIN_ADC1 {PIO_PA18X1_AD1, PIOA, ID_PIOA, PIO_INPUT, PIO_DEFAULT}
-#define PIN_ADC2 {PIO_PA19X1_AD2_WKUP9, PIOA, ID_PIOA, PIO_INPUT, PIO_DEFAULT}
-#define PINS_ADCIN PIN_ADC0, PIN_ADC1, PIN_ADC2
-*/
-#define AIN0 0
-#define AIN1 1
-#define AIN2 2
+#define VREF 1170
 #define NUM_AIN 3
 
 /** Valve output pins **/
@@ -37,9 +26,9 @@
 #define PIN_SPI_CS2  {PIO_PA30B_NPCS2, PIOA, ID_PIOA, PIO_PERIPH_B, PIO_DEFAULT}
 #define PINS_SPI PIN_SPI_MISO, PIN_SPI_MOSI, PIN_SPI_SPCK, PIN_SPI_CS0, PIN_SPI_CS1, PIN_SPI_CS2
 
-#define PGA_CS          1
-#define PGA_BAUD        1000000
-#define PGA_SPICONF     SPI_SCBR(PGA_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_16_BIT
+#define AIN_CS          1
+#define AIN_BAUD        1000000
+#define AIN_SPICONF     SPI_SCBR(AIN_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_16_BIT
 #define MEMORY_CS       2
 #define MEMORY_BAUD     1000000
 #define MEMORY_SPICONF  SPI_SCBR(MEMORY_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_16_BIT
@@ -48,9 +37,9 @@
 #define PAR_PSET   50
 #define PAR_PEAK   2
 
-#define F AIN0
-#define p AIN1
-#define s AIN2
+#define F 0
+#define p 1
+#define s 2
 
 #include "input.h"
 

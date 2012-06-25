@@ -1,7 +1,7 @@
 #ifndef _INPUT_
 #define _INPUT_
 
-typedef uint16_t input_t;
+typedef uint32_t input_t;
 
 void stop_sampling();
 void start_sampling();

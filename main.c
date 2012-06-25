@@ -1,6 +1,5 @@
 #include <string.h>
 #include "conf.h"
-#include "pga280.h"
 #include "input.h"
 #include "state.h"
 
@@ -99,7 +98,6 @@ void setup()
 
 	/* Enable peripheral clocks */
 	PMC_EnablePeripheral(ID_TC0);
-	PMC_EnablePeripheral(ID_ADC);
 
 	/* Configure TC */
 	TC_FindMckDivisor(TIMER_FREQ, BOARD_MCK, &div, &tcclks, BOARD_MCK);
@@ -108,20 +106,11 @@ void setup()
 	TC0->TC_CHANNEL[0].TC_IER = TC_IER_CPCS;
 	TC_Start(TC0, 0);
 
-	/* Configure ADC */
-	ADC_Initialize(ADC, ID_ADC);
-	ADC_cfgFrequency(ADC, 4, 1 ); // startup = 64 ADC periods, prescal = 1, ADC clock = 12 MHz
-	ADC->ADC_CHER = (1<<AIN0)|(1<<AIN1)|(1<<AIN2);
-	ADC->ADC_IER  = ADC_IER_RXBUFF;
-
 	/* Configure SPI */
 	SPI_Configure(SPI, ID_SPI, SPI_MR_MSTR|SPI_MR_PS|SPI_MR_LLB); // Enable, Reset and set Master mode, variable CS, Loopback (testing)
-	SPI_ConfigureNPCS(SPI, PGA_CS, PGA_SPICONF);
+	SPI_ConfigureNPCS(SPI, AIN_CS, AIN_SPICONF);
 	SPI_ConfigureNPCS(SPI, MEMORY_CS, MEMORY_SPICONF);
 	SPI_Enable(SPI);
-
-	/* Setup SPI Peripherals */
-	PGA_setup();
 
 	/* LEDs */
 	LEDs_configure();
