@@ -105,7 +105,7 @@ void setup()
 	TC_Start(TC0, 0);
 
 	/* Configure SPI */
-	SPI_Configure(SPI, ID_SPI, SPI_MR_MSTR|SPI_MR_PS|SPI_MR_LLB); // Enable, Reset and set Master mode, variable CS, Loopback (testing)
+	SPI_Configure(SPI, ID_SPI, SPI_MR_MSTR|SPI_MR_PS);//|SPI_MR_LLB); // Enable, Reset and set Master mode, variable CS, Loopback (testing)
 	SPI_ConfigureNPCS(SPI, AIN_CS, AIN_SPICONF);
 	SPI_ConfigureNPCS(SPI, MEMORY_CS, MEMORY_SPICONF);
 	SPI_Enable(SPI);
