@@ -25,24 +25,34 @@ static input_t previous[NUM_AIN] = {0};
 static input_t ain_read(unsigned chan, unsigned gain)
 {	
 	const Pin rdy = PIN_AIN_RDY;
-	unsigned i = RESOLUTION/8;
 	union {
 		input_t w;
 		uint8_t b[sizeof(input_t)];
 	} value;
 
 	SPI_Write(SPI, AIN_CS, AD_CONFREG|WRITE);
+	SPI_Read(SPI);
 	SPI_Write(SPI, AIN_CS, AD_CONF_HI|(gain&0x07));
+	SPI_Read(SPI);
 	SPI_Write(SPI, AIN_CS, AD_CONF_LO|(chan&0x0F));
+	SPI_Read(SPI);
 	SPI_Write(SPI, AIN_CS, AD_MODEREG|WRITE);
+	SPI_Read(SPI);
 	SPI_Write(SPI, AIN_CS, AD_MODE_HI);
+	SPI_Read(SPI);
 	SPI_Write(SPI, AIN_CS, AD_MODE_LO);
+	SPI_Read(SPI);
 
 	while (PIO_Get(&rdy)); // white for conversion to complete
-	SPI_Write(SPI, AIN_CS|SPI_TDR_LASTXFER, AD_DATAREG|READ);
+	SPI_Write(SPI, AIN_CS, AD_DATAREG|READ);
+	SPI_Read(SPI);
 
-	do { value.b[--i] = SPI_Read(SPI); }
-		while (i > 0);
+	SPI_Write(SPI, AIN_CS, 0xFF);
+	value.b[2] = SPI_Read(SPI);
+	SPI_Write(SPI, AIN_CS, 0xFF);
+	value.b[1] = SPI_Read(SPI);
+	SPI_Write(SPI, AIN_CS|SPI_TDR_LASTXFER, 0xFF);
+	value.b[0] = SPI_Read(SPI);
 
 	return value.w;
 }
