@@ -13,7 +13,11 @@ int main()
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
-	start_sampling();
+	//start_sampling();
+	while (1) {
+		test_spi();
+		Sleep(250);
+	}
 
 	while (1) {
 		if (get_latest_volt(Fchan) >= Fmax) {
@@ -73,10 +77,14 @@ void test_spi()
 	} in, out;
 
 	out.hword = 0x6b6f; // "ok"
-	TRACE_DEBUG("Testing SPI, write '%s'\n", out.bytes);
-	SPI_Write(SPI, MEMORY_CS|SPI_TDR_LASTXFER, out.hword);
-	in.hword = (uint16_t) SPI_Read(SPI);
-	TRACE_DEBUG("SPI read: '%s'\n", in.bytes);
+	if (out.hword == in.hword)
+		LED_on(ALARM);
+	TRACE_DEBUG("Testing SPI, write '%c%c'\n", out.bytes[0], out.bytes[1]);
+	SPI_Write(SPI, AIN_CS, (out.hword&0xFF00)>>8);
+	in.hword = (uint16_t) SPI_Read(SPI)<<8;
+	SPI_Write(SPI, AIN_CS|SPI_TDR_LASTXFER, out.hword&0xFF);
+	in.hword |= (uint16_t) SPI_Read(SPI);
+	TRACE_DEBUG("SPI read: '%c%c'\n", in.bytes[0], in.bytes[1]);
 }
 
 void setup()
