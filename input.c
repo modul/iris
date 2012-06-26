@@ -66,7 +66,7 @@ void TC0_IrqHandler()
 		latest[i] = ain_read(i, 1);
 	}
 
-
+	TRACE_DEBUG("Got Samples: %u %u %u\n", latest[0], latest[1], latest[2]);
 }
 
 void start_sampling()
