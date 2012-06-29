@@ -18,9 +18,9 @@
 #define pchan 1
 #define schan 2
 
-#define Fgain 6
+#define Fgain 1
 #define pgain 1
-#define sgain 6
+#define sgain 1
 
 #define Fmax VREF-1
 #define pmax VREF-1

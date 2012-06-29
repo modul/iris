@@ -11,6 +11,7 @@
 #define AD_READ_DATA 0x58
 #define AD_WRITE_MODE 0x08
 #define AD_WRITE_CONF 0x10
+#define AD_DUMMY 0xFF
 
 #define AD_STAT_RDY (1 << 7)
 #define AD_STAT_ERR (1 << 6)
@@ -42,6 +43,7 @@ static struct chan channel[NUM_AIN] = {
 
 static void ain_config(struct chan ch)
 {
+	TRACE_DEBUG("ADC configuration: %x\n", ((AD_CONF_HI|(ch.gain&7))<<8)|((AD_CONF_LO|(ch.num&7))));
 	SPI_Write(SPI, AIN_CS, AD_WRITE_CONF);
 	SPI_Read(SPI);
 	SPI_Write(SPI, AIN_CS, AD_CONF_HI|(ch.gain&0x07));
@@ -64,7 +66,7 @@ static uint8_t ain_status()
 {
 	SPI_Write(SPI, AIN_CS, AD_READ_STAT);
 	SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS, 0xFF);
+	SPI_Write(SPI, AIN_CS, AD_DUMMY);
 	return SPI_Read(SPI);
 }
 
@@ -78,11 +80,11 @@ static int ain_read()
 
 	SPI_Write(SPI, AIN_CS, AD_READ_DATA);
 	SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS, 0xFF);
+	SPI_Write(SPI, AIN_CS, AD_DUMMY);
 	value.b[2] = SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS, 0xFF);
+	SPI_Write(SPI, AIN_CS, AD_DUMMY);
 	value.b[1] = SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS|SPI_TDR_LASTXFER, 0xFF);
+	SPI_Write(SPI, AIN_CS|SPI_TDR_LASTXFER, AD_DUMMY);
 	value.b[0] = SPI_Read(SPI);
 
 	return value.w;
@@ -92,6 +94,7 @@ void TC0_IrqHandler()
 {
 	uint32_t i = TC0->TC_CHANNEL[0].TC_SR;
 	uint8_t tmp = 0;
+	uint8_t status = 0;
 
 	for (i=0; i<NUM_AIN; i++) {
 		previous[i] = latest[i];
@@ -99,14 +102,18 @@ void TC0_IrqHandler()
 
 		tmp = 0;
 		ain_mode(AD_MODE_SINGLE);
-		while (ain_status() & AD_STAT_ERR && tmp++ < 3) {
+		while (((status = ain_status()) & AD_STAT_ERR == AD_STAT_ERR) && tmp++ < 3) {
 			TRACE_ERROR("ADC reported error on channel %u\n", channel[i].num);
+			TRACE_DEBUG("ADC status: %x\n", status);
 			ain_mode(AD_MODE_SINGLE);
 		}
-		
-		while (ain_status() & AD_STAT_RDY) {
+
+		if (tmp > 2) continue;
+		else tmp = 0;
+
+		while (((status = ain_status()) & AD_STAT_RDY == AD_STAT_RDY ) && tmp++ < 3) {
 			TRACE_DEBUG("waiting for ADC to finish conversion (%u)\n", channel[i].num);
-			Wait(1);
+			TRACE_DEBUG("ADC status: %x\n", status);
 		}
 
 		latest[i] = ain_read();

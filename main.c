@@ -13,12 +13,25 @@ int main()
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
-	//start_sampling();
-	while (1) {
-		test_spi();
-		Sleep(250);
+	start_sampling();
+	while(1) {
+		TRACE_DEBUG("ping\n");
+		Wait(1000);
+	};
+	//while (1) {
+	//	test_spi();
+	//	Wait(250);
+	//}
+	/*while (1) {
+		SPI->SPI_MR |= SPI_PCS(AIN_CS);
+		TRACE_DEBUG("send STAT access\n");
+		SPI_Write(SPI, AIN_CS, 0x60); SPI_Read(SPI);
+		TRACE_DEBUG("send DUMMY\n");
+		SPI_Write(SPI, AIN_CS, 0x00|SPI_TDR_LASTXFER);
+		TRACE_DEBUG("response: ID=%u\n", SPI_Read(SPI));
+		Wait(1000);
 	}
-
+*/
 	while (1) {
 		if (get_latest_volt(Fchan) >= Fmax) {
 			TRACE_INFO("FMAX reached.\n");
@@ -113,7 +126,7 @@ void setup()
 	TC_Start(TC0, 0);
 
 	/* Configure SPI */
-	SPI_Configure(SPI, ID_SPI, SPI_MR_MSTR|SPI_MR_PS);//|SPI_MR_LLB); // Enable, Reset and set Master mode, variable CS, Loopback (testing)
+	SPI_Configure(SPI, ID_SPI, SPI_MR_MSTR|SPI_MR_PS|SPI_MR_MODFDIS);
 	SPI_ConfigureNPCS(SPI, AIN_CS, AIN_SPICONF);
 	SPI_ConfigureNPCS(SPI, MEMORY_CS, MEMORY_SPICONF);
 	SPI_Enable(SPI);
