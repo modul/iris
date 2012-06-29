@@ -49,14 +49,16 @@ static unsigned spitrans(unsigned cs, unsigned data)
 
 static void ain_config(struct chan ch)
 {
-	TRACE_DEBUG("ADC configuration: %x\n", ((AD_CONF_HI|(ch.gain&7))<<8)|((AD_CONF_LO|(ch.num&7))));
 	spitrans(AIN_CS, AD_WRITE_CONF);
 	spitrans(AIN_CS, AD_CONF_HI|(ch.gain&0x07));
 	spitrans(AIN_CS, AD_CONF_LO|(ch.num&0x07)|SPI_TDR_LASTXFER);
+	spitrans(AIN_CS, AD_READ_CONF);
+	TRACE_DEBUG("ADC conf written: %x\n", spitrans(AIN_CS, AD_DUMMY), spitrans(AIN_CS, AD_DUMMY));  
 }
 
 static void ain_mode(uint8_t mode)
 {
+	TRACE_DEBUG("ADC mode: %x\n", mode);
 	spitrans(AIN_CS, AD_WRITE_MODE);
 	spitrans(AIN_CS, mode);
 	spitrans(AIN_CS, AD_MODE_LOW|SPI_TDR_LASTXFER);
@@ -101,6 +103,7 @@ void TC0_IrqHandler()
 		}
 
 		latest[i] = ain_read();
+		TRACE_DEBUG("ADC status %x\n", ain_status());
 		tmp = 0;
 	}
 
