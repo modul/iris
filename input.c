@@ -90,23 +90,18 @@ void TC0_IrqHandler()
 		previous[i] = latest[i];
 		ain_config(channel[i]);
 
-		tmp = 0;
 		ain_mode(AD_MODE_SINGLE);
-		while (((status = ain_status()) & AD_STAT_ERR) && tmp++ < 3) {
-			TRACE_ERROR("ADC reported error on channel %u\n", channel[i].num);
-			TRACE_DEBUG("ADC status: %x\n", status);
-			ain_mode(AD_MODE_SINGLE);
+		if ((status = ain_status()) & AD_STAT_ERR) {
+			TRACE_ERROR("ADC error ch%u (%x)\n", channel[i].num, status);
+			continue;
 		}
 
-		if (tmp > 2) continue;
-		else tmp = 0;
-
 		while (((status = ain_status()) & AD_STAT_RDY) && tmp++ < 3) {
-			TRACE_DEBUG("waiting for ADC to finish conversion (%u)\n", channel[i].num);
-			TRACE_DEBUG("ADC status: %x\n", status);
+			TRACE_DEBUG("ADC busy ch%u (%x)\n", channel[i].num, status);
 		}
 
 		latest[i] = ain_read();
+		tmp = 0;
 	}
 
 	TRACE_DEBUG("Got Samples: %u %u %u\n", latest[0], latest[1], latest[2]);
