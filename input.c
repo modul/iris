@@ -22,7 +22,7 @@
 #define AD_MODE_INTZERO 0x80
 #define AD_MODE_INTFULL 0xA0
 
-/* AD7793 Modes (Low byte) */
+/* AD7793 Modes (Low byte = clk configuration etc) */
 #define AD_MODE_LOW 0x0A
 
 /* AD7793 Settings */
@@ -41,53 +41,43 @@ static struct chan channel[NUM_AIN] = {
 	{Fchan, Fgain}, {pchan, pgain}, {schan, sgain}
 };
 
+static unsigned spitrans(unsigned cs, unsigned data)
+{
+	SPI_Write(SPI, cs, data);
+	return SPI_Read(SPI);
+}
+
 static void ain_config(struct chan ch)
 {
 	TRACE_DEBUG("ADC configuration: %x\n", ((AD_CONF_HI|(ch.gain&7))<<8)|((AD_CONF_LO|(ch.num&7))));
-	SPI_Write(SPI, AIN_CS, AD_WRITE_CONF);
-	SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS, AD_CONF_HI|(ch.gain&0x07));
-	SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS, AD_CONF_LO|(ch.num&0x07));
-	SPI_Read(SPI);
+	spitrans(AIN_CS, AD_WRITE_CONF);
+	spitrans(AIN_CS, AD_CONF_HI|(ch.gain&0x07));
+	spitrans(AIN_CS, AD_CONF_LO|(ch.num&0x07)|SPI_TDR_LASTXFER);
 }
 
 static void ain_mode(uint8_t mode)
 {
-	SPI_Write(SPI, AIN_CS, AD_WRITE_MODE);
-	SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS, mode);
-	SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS, AD_MODE_LOW);
-	SPI_Read(SPI);
+	spitrans(AIN_CS, AD_WRITE_MODE);
+	spitrans(AIN_CS, mode);
+	spitrans(AIN_CS, AD_MODE_LOW|SPI_TDR_LASTXFER);
 }
 
 static uint8_t ain_status()
 {
-	SPI_Write(SPI, AIN_CS, AD_READ_STAT);
-	SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS, AD_DUMMY);
-	return SPI_Read(SPI);
+	spitrans(AIN_CS, AD_READ_STAT);
+	return (uint8_t) spitrans(AIN_CS, AD_DUMMY|SPI_TDR_LASTXFER)&0xFF;
 }
 
 static int ain_read()
 {	
-	union {
-		input_t w;
-		uint8_t b[sizeof(input_t)];
-	} value;
-	value.w = 0;
+	input_t value = 0;
 
-	SPI_Write(SPI, AIN_CS, AD_READ_DATA);
-	SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS, AD_DUMMY);
-	value.b[2] = SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS, AD_DUMMY);
-	value.b[1] = SPI_Read(SPI);
-	SPI_Write(SPI, AIN_CS|SPI_TDR_LASTXFER, AD_DUMMY);
-	value.b[0] = SPI_Read(SPI);
+	spitrans(AIN_CS, AD_READ_DATA);
+	value |= spitrans(AIN_CS, AD_DUMMY) << 16;
+	value |= spitrans(AIN_CS, AD_DUMMY) << 8;
+	value |= spitrans(AIN_CS|SPI_TDR_LASTXFER, AD_DUMMY);
 
-	return value.w;
+	return value;
 }
 
 void TC0_IrqHandler()
@@ -102,7 +92,7 @@ void TC0_IrqHandler()
 
 		tmp = 0;
 		ain_mode(AD_MODE_SINGLE);
-		while (((status = ain_status()) & AD_STAT_ERR == AD_STAT_ERR) && tmp++ < 3) {
+		while (((status = ain_status()) & AD_STAT_ERR) && tmp++ < 3) {
 			TRACE_ERROR("ADC reported error on channel %u\n", channel[i].num);
 			TRACE_DEBUG("ADC status: %x\n", status);
 			ain_mode(AD_MODE_SINGLE);
@@ -111,7 +101,7 @@ void TC0_IrqHandler()
 		if (tmp > 2) continue;
 		else tmp = 0;
 
-		while (((status = ain_status()) & AD_STAT_RDY == AD_STAT_RDY ) && tmp++ < 3) {
+		while (((status = ain_status()) & AD_STAT_RDY) && tmp++ < 3) {
 			TRACE_DEBUG("waiting for ADC to finish conversion (%u)\n", channel[i].num);
 			TRACE_DEBUG("ADC status: %x\n", status);
 		}
