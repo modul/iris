@@ -31,7 +31,7 @@ static struct transition table[NUMSTATES][NUMEVENTS] = {
 /* SET   */  {{do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, {do_vent, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
 /* GO    */  {{  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, {do_vent, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
 /* ERROR */  {{  do_nok, ERROR}, {do_abort, IDLE}, {do_log, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
-/*              action    nextproc.state                                                                                                               */
+/*              action    next                                                                                            */
 };
 
 void send_event(unsigned event)
