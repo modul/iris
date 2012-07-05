@@ -53,12 +53,11 @@ static void ain_config(struct chan ch)
 	spitrans(AIN_CS, AD_CONF_HI|(ch.gain&0x07));
 	spitrans(AIN_CS, AD_CONF_LO|(ch.num&0x07)|SPI_TDR_LASTXFER);
 	spitrans(AIN_CS, AD_READ_CONF);
-	TRACE_DEBUG("ADC conf written: %x\n", spitrans(AIN_CS, AD_DUMMY), spitrans(AIN_CS, AD_DUMMY));  
+	TRACE_DEBUG("ADC conf written: %x%x\n", spitrans(AIN_CS, AD_DUMMY), spitrans(AIN_CS, AD_DUMMY));  
 }
 
 static void ain_mode(uint8_t mode)
 {
-	TRACE_DEBUG("ADC mode: %x\n", mode);
 	spitrans(AIN_CS, AD_WRITE_MODE);
 	spitrans(AIN_CS, mode);
 	spitrans(AIN_CS, AD_MODE_LOW|SPI_TDR_LASTXFER);
