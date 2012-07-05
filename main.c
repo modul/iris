@@ -15,8 +15,7 @@ int main()
 	setup();
 	start_sampling();
 	while(1) {
-		TRACE_DEBUG("ping\n");
-		Wait(1000);
+		Wait(2000);
 	};
 	//while (1) {
 	//	test_spi();
