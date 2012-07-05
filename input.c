@@ -2,7 +2,7 @@
 #include "conf.h"
 #include "input.h"
 
-#define mV(b) ((b*VREF)>>RESOLUTION)
+#define mV(b) ((b*VREF)>>RESOLUTION) //FIXME ovfl for uint32_t b
 
 /* AD7793 SPI Commands */
 #define AD_READ_STAT 0x40
