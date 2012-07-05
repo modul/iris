@@ -14,13 +14,19 @@
 #define PAR_PSET   50
 #define PAR_PEAK   2
 
-#define Fchan 0
-#define pchan 1
-#define schan 2
+/* Input Indices */
+#define F 0
+#define p 1
+#define s 2
 
-#define Fgain 1
-#define pgain 1
-#define sgain 1
+/* Input channels, might differ from indices */
+#define Fchan 7
+#define pchan 7
+#define schan 7
+
+#define Fgain 0
+#define pgain 0
+#define sgain 0
 
 #define Fmax VREF-1
 #define pmax VREF-1
@@ -35,8 +41,8 @@
 
 /** SPI Configuration **/
 #define PIN_SPI_MISO {PIO_PA12A_MISO, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_PULLUP}
-#define PIN_SPI_MOSI {PIO_PA13A_MOSI, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_PULLUP}
-#define PIN_SPI_SPCK {PIO_PA14A_SPCK, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_PULLUP}
+#define PIN_SPI_MOSI {PIO_PA13A_MOSI, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_DEFAULT}
+#define PIN_SPI_SPCK {PIO_PA14A_SPCK, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_DEFAULT}
 #define PIN_SPI_CS1  {PIO_PB14A_NPCS1, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_PULLUP}
 #define PIN_SPI_CS2  {PIO_PA30B_NPCS2, PIOA, ID_PIOA, PIO_PERIPH_B, PIO_PULLUP}
 
@@ -47,7 +53,7 @@
 
 #define AIN_CS          1
 #define AIN_BAUD        1000000
-#define AIN_SPICONF     SPI_SCBR(AIN_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_8_BIT|SPI_CSR_CPOL|SPI_CSR_NCPHA
+#define AIN_SPICONF     SPI_SCBR(AIN_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_8_BIT|SPI_CSR_NCPHA
 #define MEMORY_CS       2
 #define MEMORY_BAUD     1000000
 #define MEMORY_SPICONF  SPI_SCBR(MEMORY_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_16_BIT
