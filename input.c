@@ -84,6 +84,34 @@ static int ain_read()
 void TC0_IrqHandler()
 {
 	uint32_t i = TC0->TC_CHANNEL[0].TC_SR;
+	uint8_t status = 0;
+	static uint8_t n = 0;
+
+	i=i;
+	TRACE_DEBUG("n=%u\n", n);
+
+	if ((status = ain_status()) & AD_STAT_ERR) {
+		TRACE_ERROR("ADC error ch%u (%x)\n", channel[n].num, status);
+	}
+	else if (status & AD_STAT_RDY) {
+		TRACE_DEBUG("ADC ch%u wasn't ready in time, discarding (%x)\n", channel[n].num, status);
+	}
+	else {
+		previous[n] = latest[n];
+		latest[n] = ain_read();
+		TRACE_DEBUG("ADC read %u (%u)\n", latest[n], status);
+	}
+
+	if (++n == NUM_AIN)
+		n = 0;
+
+	ain_config(channel[n]);
+	ain_mode(AD_MODE_SINGLE);
+}
+
+/*void TC0_IrqHandler()
+{
+	uint32_t i = TC0->TC_CHANNEL[0].TC_SR;
 	uint8_t tmp = 0;
 	uint8_t status = 0;
 
@@ -107,7 +135,7 @@ void TC0_IrqHandler()
 	}
 
 	TRACE_DEBUG("Got Samples: %u %u %u\n", latest[0], latest[1], latest[2]);
-}
+}*/
 
 void start_sampling()
 {
