@@ -20,9 +20,9 @@
 #define s 2
 
 /* Input channels, might differ from indices */
-#define Fchan 7
-#define pchan 7
-#define schan 7
+#define Fchan 0
+#define pchan 1
+#define schan 2
 
 #define Fgain 0
 #define pgain 0
