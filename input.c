@@ -11,8 +11,8 @@
 #define AD_WRITE_CONF 0x10
 #define AD_DUMMY 0xFF
 
-#define AD_STAT_RDY (1 << 7)
-#define AD_STAT_ERR (1 << 6)
+#define AD_STAT_NRDY (1 << 7)
+#define AD_STAT_ERR  (1 << 6)
 
 /* AD7793 Modes (High byte) */
 #define AD_MODE_CONT 0x00
@@ -57,12 +57,12 @@ static void ain_config(struct chan ch)
 	spitrans(AIN_CS, AD_CONF_HI|(ch.gain&0x07));
 	spitrans(AIN_CS, AD_CONF_LO|(ch.num&0x07));
 	spitrans(AIN_CS, AD_READ_CONF);
-	TRACE_DEBUG("ADC conf ch%u r:%x%x w:%x%x\n",
+	TRACE_DEBUG("ADC conf ch%u w:%x%x r:%x%x\n",
 			ch.num,
-			spitrans(AIN_CS, AD_DUMMY),
-			spitrans(AIN_CS, AD_DUMMY),
 			AD_CONF_HI|(ch.gain&7),
-			AD_CONF_LO|(ch.num&7));
+			AD_CONF_LO|(ch.num&7),
+			spitrans(AIN_CS, AD_DUMMY),
+			spitrans(AIN_CS, AD_DUMMY));
 }
 
 static void ain_mode(uint8_t mode)
@@ -92,27 +92,26 @@ static int ain_read()
 
 void TC0_IrqHandler()
 {
-	uint32_t i = TC0->TC_CHANNEL[0].TC_SR;
-	uint8_t status = 0;
+	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
 	static uint8_t n = 0;
 
-	i=i;
 	TRACE_DEBUG("n=%u\n", n);
 
-	if ((status = ain_status()) & AD_STAT_ERR) {
-		TRACE_ERROR("ADC error ch%u (%x)\n", channel[n].num, status);
+	if ((status = ain_status()) & AD_STAT_NRDY) {
+		TRACE_INFO("ADC ch%u not ready (%x)\n", channel[n].num, status);
+		return; // try again next time
 	}
-	else if (status & AD_STAT_RDY) {
-		TRACE_DEBUG("ADC ch%u wasn't ready in time, discarding (%x)\n", channel[n].num, status);
+	else if (status & AD_STAT_ERR) {
+		TRACE_ERROR("ADC error ch%u (%x)\n", channel[n].num, status);
 	}
 	else {
 		previous[n] = latest[n];
 		latest[n] = ain_read();
-		TRACE_DEBUG("ADC read %u (%u)\n", latest[n], status);
-	}
+		TRACE_DEBUG("ADC read %u (%x)\n", mv(latest[n]), status);
 
-	if (++n == NUM_AIN)
-		n = 0;
+		if (++n == NUM_AIN)
+			n = 0;
+	}
 
 	ain_config(channel[n]);
 	ain_mode(AD_MODE_SINGLE);
