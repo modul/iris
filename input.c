@@ -2,8 +2,8 @@
 #include "input.h"
 #include "ad7793.h"
 
-static input_t latest[NUM_AIN] = {0};  
-static input_t previous[NUM_AIN] = {0}; 
+static int latest[NUM_AIN] = {0};  
+static int previous[NUM_AIN] = {0}; 
 
 struct chan {
 	uint8_t num;
@@ -57,12 +57,12 @@ void stop_sampling()
 	NVIC_DisableIRQ(TC0_IRQn);
 }
 
-input_t get_latest_volt(unsigned index) {
+int get_latest_volt(unsigned index) {
 	assert(index < NUM_AIN);
 	return mv(latest[index]);
 }
 
-input_t get_previous_volt(unsigned index) {
+int get_previous_volt(unsigned index) {
 	assert(index < NUM_AIN);
 	return mv(previous[index]);
 }

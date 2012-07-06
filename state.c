@@ -5,8 +5,7 @@
 static struct _proc {
 	unsigned state;
 	unsigned error;
-	input_t soffset;
-} proc = {IDLE, EOK, 0};
+} proc = {IDLE, EOK};
 
 static void do_nok();
 static void do_log();
@@ -102,7 +101,7 @@ static void do_abort()
 */
 static void do_log()
 {
-	printf("%u %u %u %u %u %u\n", proc.state, proc.error, get_latest_volt(Fchan), get_latest_volt(pchan), get_latest_volt(schan), proc.soffset);
+	printf("%u %u %u %u %u %u\n", proc.state, proc.error, get_latest_volt(Fchan), get_latest_volt(pchan), get_latest_volt(schan));
 }
 
 static void do_press() 
@@ -117,7 +116,6 @@ static void do_stop()
 {
 	const Pin pins[] = {PINS_VAL};
 	PIO_Clear(pins);
-	proc.soffset = get_latest_volt(schan);
 }
 
 static void do_vent()

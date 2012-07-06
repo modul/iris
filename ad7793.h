@@ -26,7 +26,6 @@
 #define AD_CONF_HI 0x10
 #define AD_CONF_LO 0x90
 
-
 void ain_start(uint8_t channel, uint8_t gain, uint8_t mode);
 int ain_read();
 uint8_t ain_status();
