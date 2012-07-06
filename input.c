@@ -2,8 +2,6 @@
 #include "conf.h"
 #include "input.h"
 
-#define mV(b) ((b*VREF)>>RESOLUTION) //FIXME ovfl for uint32_t b
-
 /* AD7793 SPI Commands */
 #define AD_READ_STAT 0x40
 #define AD_READ_MODE 0x48
@@ -45,6 +43,12 @@ static unsigned spitrans(unsigned cs, unsigned data)
 {
 	SPI_Write(SPI, cs, data);
 	return SPI_Read(SPI);
+}
+
+static int mv(int in)
+{
+	uint64_t result = VREF;
+	return (int) ((result*in)>>RESOLUTION);
 }
 
 static void ain_config(struct chan ch)
@@ -155,10 +159,10 @@ void stop_sampling()
 
 input_t get_latest_volt(unsigned index) {
 	assert(index < NUM_AIN);
-	return mV(latest[index]);
+	return mv(latest[index]);
 }
 
 input_t get_previous_volt(unsigned index) {
 	assert(index < NUM_AIN);
-	return mV(previous[index]);
+	return mv(previous[index]);
 }
