@@ -4,7 +4,6 @@
 #include "state.h"
 
 void setup();
-void test_spi();
 
 int main() 
 {
@@ -17,20 +16,7 @@ int main()
 	while(1) {
 		Wait(2000);
 	};
-	//while (1) {
-	//	test_spi();
-	//	Wait(250);
-	//}
-	/*while (1) {
-		SPI->SPI_MR |= SPI_PCS(AIN_CS);
-		TRACE_DEBUG("send STAT access\n");
-		SPI_Write(SPI, AIN_CS, 0x60); SPI_Read(SPI);
-		TRACE_DEBUG("send DUMMY\n");
-		SPI_Write(SPI, AIN_CS, 0x00|SPI_TDR_LASTXFER);
-		TRACE_DEBUG("response: ID=%u\n", SPI_Read(SPI));
-		Wait(1000);
-	}
-*/
+
 	while (1) {
 		if (get_latest_volt(Fchan) >= Fmax) {
 			TRACE_INFO("FMAX reached.\n");
@@ -81,24 +67,6 @@ int main()
 	return 0;
 }
 
-void test_spi()
-{
-	union {
-		uint16_t hword; 
-		char bytes[2];
-	} in, out;
-
-	out.hword = 0x6b6f; // "ok"
-	if (out.hword == in.hword)
-		LED_on(ALARM);
-	TRACE_DEBUG("Testing SPI, write '%c%c'\n", out.bytes[0], out.bytes[1]);
-	SPI_Write(SPI, AIN_CS, (out.hword&0xFF00)>>8);
-	in.hword = (uint16_t) SPI_Read(SPI)<<8;
-	SPI_Write(SPI, AIN_CS|SPI_TDR_LASTXFER, out.hword&0xFF);
-	in.hword |= (uint16_t) SPI_Read(SPI);
-	TRACE_DEBUG("SPI read: '%c%c'\n", in.bytes[0], in.bytes[1]);
-}
-
 void setup()
 {
 	uint32_t div;
@@ -144,4 +112,3 @@ void setup()
 	TRACE_INFO("setup done\n");
 	LED_on(STATUS);
 }
-/* vim: set ts=4: */
