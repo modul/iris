@@ -37,7 +37,7 @@ void TC0_IrqHandler()
 	else {
 		previous[n] = latest[n];
 		latest[n] = ain_read();
-		TRACE_DEBUG("ADC read %u (%x)\n", mv(latest[n]), status);
+		TRACE_DEBUG("ADC read %umV (%x)\n", mv(latest[n]), status);
 
 		if (++n == NUM_AIN)
 			n = 0;
