@@ -3,7 +3,7 @@
 
 #include "board.h"
 
-#define TIMER_FREQ 1
+#define TIMER_FREQ 6
 
 #define RESOLUTION 24
 #define MAX (1 << RESOLUTION)
