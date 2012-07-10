@@ -53,13 +53,33 @@ int ain_read()
 int ad_temperature()
 {
 	ain_start(AD_CHT, 0, AD_MODE_SINGLE);
-	Wait(200);
+	Wait(AD_WAIT);
 	return mv(ain_read());
 }
 
 int ad_voltmon()
 {
 	ain_start(AD_CHV, 0, AD_MODE_SINGLE);
-	Wait(200);
+	Wait(AD_WAIT);
 	return mv(ain_read()) * 6;
+}
+
+int ad_calibrate(uint8_t channel, uint8_t gain)
+{
+	ain_start(channel, gain, AD_MODE_INTZERO);
+	Wait(AD_WAIT);
+	if (ain_status() & (AD_STAT_NRDY|AD_STAT_ERR))
+		return 0;
+
+	if (gain == 7)
+		return 1;
+	else {
+		ain_start(channel, gain, AD_MODE_INTFULL);
+		Wait(AD_WAIT);
+		if (gain > 0)
+			Wait(AD_WAIT);
+		if (ain_status() & (AD_STAT_NRDY|AD_STAT_ERR))
+			return 0;
+	}
+	return 1;
 }

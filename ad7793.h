@@ -33,6 +33,8 @@
 #define AD_CHT 6
 #define AD_CHV 7
 
+#define AD_WAIT 150
+
 int mv(int in);
 
 void ain_start(uint8_t channel, uint8_t gain, uint8_t mode);
@@ -41,5 +43,6 @@ int ain_read();
 
 int ad_temperature();
 int ad_voltmon();
+int ad_calibrate(uint8_t channel, uint8_t gain);
 
 #endif

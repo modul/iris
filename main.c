@@ -14,6 +14,14 @@ int main()
 
 	setup();
 	//start_sampling();
+
+	if (ad_calibrate(Fchan, Fgain))
+		TRACE_INFO("Channel F calibrated\n");
+	if (ad_calibrate(pchan, pgain))
+		TRACE_INFO("Channel p calibrated\n");
+	if (ad_calibrate(schan, sgain))
+		TRACE_INFO("Channel s calibrated\n");
+
 	while(1) {
 		int temp = ad_temperature();
 		int volt = ad_voltmon();
