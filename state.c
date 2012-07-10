@@ -5,8 +5,7 @@
 static struct _proc {
 	unsigned state;
 	unsigned error;
-	input_t soffset;
-} proc = {IDLE, EOK, 0};
+} proc = {IDLE, EOK};
 
 static void do_nok();
 static void do_log();
@@ -14,7 +13,7 @@ static void do_abort();
 static void do_press();
 static void do_vent();
 static void do_stop();
-static void do_conf();
+//static void do_conf();
 
 
 typedef void (*taction_t)();
@@ -25,13 +24,13 @@ struct transition {
 };
 
 static struct transition table[NUMSTATES][NUMEVENTS] = {
-/* event/state EV_START,          EV_ABORT,         EV_LOG,          EV_CONF,          EV_ESTOP,          EV_PTRIG,          EV_FTRIG       */
-/* IDLE  */  {{do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_conf,  IDLE}, {do_vent, ERROR}, {   NULL,   IDLE}, {   NULL,  IDLE}},
-/* READY */  {{  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, { do_nok, READY}, {do_vent, ERROR}, {do_stop,    SET}, {   NULL,  READY}},
-/* SET   */  {{do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, { do_nok,   SET}, {do_vent, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
-/* GO    */  {{  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, { do_nok,    GO}, {do_vent, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
-/* ERROR */  {{  do_nok, ERROR}, {do_abort, IDLE}, {do_log, ERROR}, { do_nok, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
-/*              action    nextproc.state                                                                                                               */
+/* event/state EV_START,          EV_ABORT,         EV_LOG,          EV_ESTOP,          EV_PTRIG,          EV_FTRIG       */
+/* IDLE  */  {{do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_vent, ERROR}, {   NULL,   IDLE}, {   NULL,  IDLE}},
+/* READY */  {{  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, {do_vent, ERROR}, {do_stop,    SET}, {   NULL,  READY}},
+/* SET   */  {{do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, {do_vent, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
+/* GO    */  {{  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, {do_vent, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
+/* ERROR */  {{  do_nok, ERROR}, {do_abort, IDLE}, {do_log, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
+/*              action    next                                                                                            */
 };
 
 void send_event(unsigned event)
@@ -83,7 +82,7 @@ static void do_abort()
 	}
 }
 
-static void do_conf()
+/*static void do_conf()
 {
 	conf_t cnf = {CONF_INIT};
 	char buf[32];
@@ -99,10 +98,10 @@ static void do_conf()
 
 	printf("%u %u %u %u\n", cnf.fmax, cnf.pmax, cnf.smax, cnf.gainid);
 }
-
+*/
 static void do_log()
 {
-	printf("%u %u %u %u %u %u\n", proc.state, proc.error, get_latest_volt(F), get_latest_volt(p), get_latest_volt(s), proc.soffset);
+	printf("%u %u %u %u %u %u\n", proc.state, proc.error, get_latest_volt(Fchan), get_latest_volt(pchan), get_latest_volt(schan));
 }
 
 static void do_press() 
@@ -117,7 +116,6 @@ static void do_stop()
 {
 	const Pin pins[] = {PINS_VAL};
 	PIO_Clear(pins);
-	proc.soffset = get_latest_volt(s);
 }
 
 static void do_vent()
