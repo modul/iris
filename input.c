@@ -14,12 +14,6 @@ static struct chan channel[NUM_AIN] = {
 	{Fchan, Fgain}, {pchan, pgain}, {schan, sgain}
 };
 
-static int mv(int in)
-{
-	uint64_t result = VREF;
-	return (int) ((result*in)>>RESOLUTION);
-}
-
 void TC0_IrqHandler()
 {
 	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;

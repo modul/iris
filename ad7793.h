@@ -26,8 +26,20 @@
 #define AD_CONF_HI 0x10
 #define AD_CONF_LO 0x90
 
+/* AD7793 Channels */
+#define AD_CH0 0
+#define AD_CH1 1
+#define AD_CH2 2
+#define AD_CHT 6
+#define AD_CHV 7
+
+int mv(int in);
+
 void ain_start(uint8_t channel, uint8_t gain, uint8_t mode);
-int ain_read();
 uint8_t ain_status();
+int ain_read();
+
+int ad_temperature();
+int ad_voltmon();
 
 #endif

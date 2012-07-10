@@ -7,6 +7,12 @@ static unsigned spitrans(unsigned data)
 	return SPI_Read(SPI);
 }
 
+int mv(int in)
+{
+	uint64_t result = VREF;
+	return (int) ((result*in)>>RESOLUTION);
+}
+
 void ain_start(uint8_t channel, uint8_t gain, uint8_t mode)
 {
 	spitrans(AD_WRITE_CONF);
@@ -42,4 +48,18 @@ int ain_read()
 	value |= spitrans(AD_DUMMY);
 
 	return value;
+}
+
+int ad_temperature()
+{
+	ain_start(AD_CHT, 0, AD_MODE_SINGLE);
+	Wait(200);
+	return mv(ain_read());
+}
+
+int ad_voltmon()
+{
+	ain_start(AD_CHV, 0, AD_MODE_SINGLE);
+	Wait(200);
+	return mv(ain_read()) * 6;
 }

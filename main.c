@@ -2,6 +2,7 @@
 #include "conf.h"
 #include "input.h"
 #include "state.h"
+#include "ad7793.h"
 
 void setup();
 
@@ -12,9 +13,15 @@ int main()
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
-	start_sampling();
+	//start_sampling();
 	while(1) {
+		int temp = ad_temperature();
+		int volt = ad_voltmon();
+		TRACE_INFO("--- AVDD: %umV T: %u.%u°C ---\n", volt, temp/10, temp%10);
+		
+		start_sampling();
 		Wait(2000);
+		stop_sampling();
 	};
 
 	while (1) {
