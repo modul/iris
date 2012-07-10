@@ -1,6 +1,7 @@
 #include "conf.h"
 #include "state.h"
 #include "input.h"
+#include "ad7793.h"
 
 static struct _proc {
 	unsigned state;
@@ -13,7 +14,7 @@ static void do_abort();
 static void do_press();
 static void do_vent();
 static void do_stop();
-//static void do_conf();
+static void do_info();
 
 
 typedef void (*taction_t)();
@@ -24,12 +25,12 @@ struct transition {
 };
 
 static struct transition table[NUMSTATES][NUMEVENTS] = {
-/* event/state EV_START,          EV_ABORT,         EV_LOG,          EV_ESTOP,          EV_PTRIG,          EV_FTRIG       */
-/* IDLE  */  {{do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_vent, ERROR}, {   NULL,   IDLE}, {   NULL,  IDLE}},
-/* READY */  {{  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, {do_vent, ERROR}, {do_stop,    SET}, {   NULL,  READY}},
-/* SET   */  {{do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, {do_vent, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
-/* GO    */  {{  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, {do_vent, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
-/* ERROR */  {{  do_nok, ERROR}, {do_abort, IDLE}, {do_log, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
+/* event/state EV_INFO,         EV_START,          EV_ABORT,         EV_LOG,          EV_ESTOP,          EV_PTRIG,          EV_FTRIG       */
+/* IDLE  */  {{do_info, IDLE}, {do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_vent, ERROR}, {   NULL,   IDLE}, {   NULL,  IDLE}},
+/* READY */  {{do_nok, READY}, {  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, {do_vent, ERROR}, {do_stop,    SET}, {   NULL,  READY}},
+/* SET   */  {{do_nok,   SET}, {do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, {do_vent, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
+/* GO    */  {{do_nok,    GO}, {  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, {do_vent, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
+/* ERROR */  {{do_nok, ERROR}, {  do_nok, ERROR}, {do_abort, IDLE}, {do_log, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
 /*              action    next                                                                                            */
 };
 
@@ -82,26 +83,33 @@ static void do_abort()
 	}
 }
 
-/*static void do_conf()
-{
-	conf_t cnf = {CONF_INIT};
-	char buf[32];
-
-	fgets(buf, 32, stdin);
-	if (sscanf(buf, "%u %u %u %u", &(cnf.fmax), &(cnf.pmax), &(cnf.smax), &(cnf.gainid)) == 4) {
-		set_config(cnf);
-		printf("ok ");
-	}
-	else {
-		get_config(&cnf);
-	}
-
-	printf("%u %u %u %u\n", cnf.fmax, cnf.pmax, cnf.smax, cnf.gainid);
-}
-*/
 static void do_log()
 {
-	printf("%u %u %u %u %u %u\n", proc.state, proc.error, get_latest_volt(Fchan), get_latest_volt(pchan), get_latest_volt(schan));
+	printf("%u %u %u %u %u\n", proc.state, proc.error, get_latest_volt(Fchan), get_latest_volt(pchan), get_latest_volt(schan));
+}
+
+static void do_info()
+{
+	int avdd = 0;
+	int temp = 0;
+	int num, gain, max;
+	int i;
+	
+	stop_sampling();
+
+	avdd = ad_voltmon();
+	temp = ad_temperature();
+	printf("AVdd: %umV T: %u.%u°C\n", avdd, temp/10, temp%10);
+	for (i=0; i<NUM_AIN; i++) {
+		get_channel(i, &num, &gain, &max);
+		printf("%c: %u %ux <%u\n", 
+				 (i == F? 'F' : 
+				 (i == p? 'p' : 
+				 (i == s? 's': 'x'))),
+				num, 1<<gain, max);
+	}
+
+	start_sampling();
 }
 
 static void do_press() 

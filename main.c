@@ -8,12 +8,12 @@ void setup();
 
 int main() 
 {
-	char cmd = 0;
+	char line[64];
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
-	//start_sampling();
+	start_sampling();
 
 	if (ad_calibrate(Fchan, Fgain))
 		TRACE_INFO("Channel F calibrated\n");
@@ -22,7 +22,7 @@ int main()
 	if (ad_calibrate(schan, sgain))
 		TRACE_INFO("Channel s calibrated\n");
 
-	while(1) {
+	/*while(1) {
 		int temp = ad_temperature();
 		int volt = ad_voltmon();
 		TRACE_INFO("--- AVDD: %umV T: %u.%u°C ---\n", volt, temp/10, temp%10);
@@ -31,7 +31,7 @@ int main()
 		Wait(2000);
 		stop_sampling();
 	};
-
+*/
 	while (1) {
 		if (get_latest_volt(Fchan) >= Fmax) {
 			TRACE_INFO("FMAX reached.\n");
@@ -49,26 +49,44 @@ int main()
 			send_event(EV_ESTOP);
 		}
 		if (get_latest_volt(pchan) > PAR_PSET) {
-			TRACE_INFO("PSET reached.\n");
 			send_event(EV_PTRIG);
 		}
 		if (get_latest_volt(Fchan) < get_previous_volt(Fchan)/PAR_PEAK) {
-			TRACE_INFO("Fpeak triggered.\n");
 			send_event(EV_FTRIG);
 		}
 
 		/* Parse command line */
-		cmd = 0;
 		if (USBC_hasData()) { 
-			cmd = getchar();
-			if (cmd == 's') 
+			gets(line);
+			if (line[0] == 's') 
 				send_event(EV_START);
-			else if (cmd == 'l')
+			else if (line[0] == 'l')
 				send_event(EV_LOG);
-			else if (cmd == 'a')
+			else if (line[0] == 'a')
 				send_event(EV_ABORT);
-	//		else if (cmd == 'c')
-	//			send_event(EV_CONF);
+			else if (line[0] == 'i') 
+				send_event(EV_INFO);
+			else if (line[0] == 'c') {
+				if (get_state() != IDLE)
+					puts("nok");
+				else {
+					char c = 0;
+					int id, num, gain, max;
+					if (sscanf(line+1, "%c %u %u %u", &c, &num, &gain, &max) == 4) {
+						id = (c == 'F'? F : (c == 'p'? p: (c == 's'? s : c)));
+						printf("DBG %c %u %u %u\nDBG %s\n", c, num, gain, max, line);
+						if (id >= NUM_AIN)
+							puts("nok");
+						else {
+							setup_channel(id, num, gain, max);
+							get_channel(id, &num, &gain, &max);
+							printf("ok %c %u %u %u\n", c, num, gain, max);
+						}
+					}
+					else
+						puts("nok");
+				}
+			}
 		}
 
 		/* Display state & error */

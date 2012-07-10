@@ -34,6 +34,8 @@
 #define AD_CHV 7
 
 #define AD_WAIT 150
+#define AD_GAIN_MIN 0
+#define AD_GAIN_MAX 7
 
 void ain_start(uint8_t channel, uint8_t gain, uint8_t mode);
 uint8_t ain_status();

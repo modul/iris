@@ -2,6 +2,8 @@
 #include "input.h"
 #include "ad7793.h"
 
+#define LIMIT(x, min, max) (x < min? min : (x > max? max : x))
+
 static int next = 0;
 static int latest[NUM_AIN] = {0};  
 static int previous[NUM_AIN] = {0}; 
@@ -9,11 +11,52 @@ static int previous[NUM_AIN] = {0};
 struct chan {
 	uint8_t num;
 	uint8_t gain;
+	int max;
 };
 
 static struct chan channel[NUM_AIN] = {
-	{Fchan, Fgain}, {pchan, pgain}, {schan, sgain}
+	{Fchan, Fgain, Fmax}, {pchan, pgain, pmax}, {schan, sgain, smax}
 };
+
+void setup_channel(int id, int num, int gain, int max)
+{
+	channel[id].num = LIMIT(num, 0, NUM_AIN);
+	channel[id].gain = LIMIT(gain, AD_GAIN_MIN, AD_GAIN_MAX);
+	channel[id].max = LIMIT(max, 0, MAX);
+}
+
+void get_channel(int id, int *num, int *gain, int *max)
+{
+	if (num)
+		*num = channel[id].num;
+	if (gain)
+		*gain = channel[id].gain;
+	if (max)
+		*max = channel[id].max;
+	TRACE_DEBUG("get channel: %u, %u, %u\n", *num, *gain, *max);
+}
+
+void start_sampling()
+{
+	ain_start(channel[next].num, channel[next].gain, AD_MODE_SINGLE);
+	NVIC_EnableIRQ(TC0_IRQn);
+	NVIC_SetPriority(TC0_IRQn, 1);
+}
+
+void stop_sampling()
+{
+	NVIC_DisableIRQ(TC0_IRQn);
+}
+
+int get_latest_volt(unsigned index) {
+	assert(index < NUM_AIN);
+	return latest[index];
+}
+
+int get_previous_volt(unsigned index) {
+	assert(index < NUM_AIN);
+	return previous[index];
+}
 
 void TC0_IrqHandler()
 {
@@ -40,24 +83,4 @@ void TC0_IrqHandler()
 	ain_start(channel[next].num, channel[next].gain, AD_MODE_SINGLE);
 }
 
-void start_sampling()
-{
-	ain_start(channel[next].num, channel[next].gain, AD_MODE_SINGLE);
-	NVIC_EnableIRQ(TC0_IRQn);
-	NVIC_SetPriority(TC0_IRQn, 1);
-}
 
-void stop_sampling()
-{
-	NVIC_DisableIRQ(TC0_IRQn);
-}
-
-int get_latest_volt(unsigned index) {
-	assert(index < NUM_AIN);
-	return latest[index];
-}
-
-int get_previous_volt(unsigned index) {
-	assert(index < NUM_AIN);
-	return previous[index];
-}
