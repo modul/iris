@@ -1,58 +1,63 @@
-#include <string.h>
 #include "conf.h"
 #include "input.h"
+#include "ad7793.h"
 
-#define mV(b) ((b*VREF)>>RESOLUTION)
+static int next = 0;
+static int latest[NUM_AIN] = {0};  
+static int previous[NUM_AIN] = {0}; 
 
-static input_t next[NUM_AIN] = {0};
-static input_t latest[NUM_AIN] = {0};  
-static input_t previous[NUM_AIN] = {0}; 
+struct chan {
+	uint8_t num;
+	uint8_t gain;
+};
+
+static struct chan channel[NUM_AIN] = {
+	{Fchan, Fgain}, {pchan, pgain}, {schan, sgain}
+};
 
 void TC0_IrqHandler()
 {
 	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
-	status = status;
 
-	ADC_StartConversion(ADC);
-}
+	TRACE_DEBUG("n=%u\n", next);
 
-void ADC_IrqHandler()
-{
-    uint32_t status;
-
-    status = ADC_GetStatus(ADC);
-
-	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
-		memcpy(previous, latest, sizeof(previous));
-		memcpy(latest, next, sizeof(latest));
-		ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
-
-		TRACE_DEBUG("Got samples. 0: %u, 1: %u, 2: %u\n", latest[0], latest[1], latest[2]);
+	if ((status = ain_status()) & AD_STAT_NRDY) {
+		TRACE_INFO("ADC ch%u not ready (%x)\n", channel[next].num, status);
+		return; // try again next time
 	}
+	else if (status & AD_STAT_ERR) {
+		TRACE_ERROR("ADC error ch%u (%x)\n", channel[next].num, status);
+	}
+	else {
+		previous[next] = latest[next];
+		latest[next] = ain_read();
+		TRACE_DEBUG("ADC read %umV (%x)\n", latest[next], status);
+
+		if (++next == NUM_AIN)
+			next = 0;
+	}
+
+	ain_start(channel[next].num, channel[next].gain, AD_MODE_SINGLE);
 }
 
 void start_sampling()
 {
-	NVIC_EnableIRQ(ADC_IRQn);
-	NVIC_SetPriority(ADC_IRQn, 0);
+	ain_start(channel[next].num, channel[next].gain, AD_MODE_SINGLE);
 	NVIC_EnableIRQ(TC0_IRQn);
 	NVIC_SetPriority(TC0_IRQn, 1);
-
-	ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
 }
 
 void stop_sampling()
 {
-	NVIC_DisableIRQ(ADC_IRQn);
 	NVIC_DisableIRQ(TC0_IRQn);
 }
 
-input_t get_latest_volt(unsigned index) {
+int get_latest_volt(unsigned index) {
 	assert(index < NUM_AIN);
-	return mV(latest[index]);
+	return latest[index];
 }
 
-input_t get_previous_volt(unsigned index) {
+int get_previous_volt(unsigned index) {
 	assert(index < NUM_AIN);
-	return mV(previous[index]);
+	return previous[index];
 }
