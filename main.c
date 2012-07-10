@@ -9,6 +9,7 @@ void setup();
 int main() 
 {
 	char cmd;
+	const Pin stop = PIN_STOP;
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
@@ -19,6 +20,10 @@ int main()
 	setup_channel(s, 2, 0, VREF-2);
 
 	while (1) {
+		if (PIO_Get(&stop) == 0) {
+			set_error(ESTOP);
+			send_event(EV_ESTOP);
+		}
 		if (overload(F)) {
 			set_error(EFMAX);
 			send_event(EV_ESTOP);
@@ -66,7 +71,7 @@ void setup()
 {
 	uint32_t div;
 	uint32_t tcclks;
-	const Pin pins[] = {PINS_VAL, PINS_SPI};
+	const Pin pins[] = {PINS_VAL, PIN_STOP, PINS_SPI};
 
 	WDT_Disable(WDT);
 	TimeTick_Configure(BOARD_MCK);

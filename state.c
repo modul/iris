@@ -75,13 +75,19 @@ static void do_nok()
 static void do_abort()
 {
 	do_vent();
-	puts("ok");
 	if (proc.state == ERROR) { // acknowledge error
-		// check emergency stop here
-		proc.error = EOK;
-		LED_blinkstop(ALARM);
-		LED_off(ALARM);
+		const Pin stop = PIN_STOP;
+		if (PIO_Get(&stop)) {
+			proc.error = EOK;
+			LED_blinkstop(ALARM);
+			LED_off(ALARM);
+			puts("ok");
+		}
+		else
+			puts("nok");
 	}
+	else
+		puts("ok");
 }
 
 static void do_log()
