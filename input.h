@@ -7,7 +7,8 @@ void get_channel(int id, int *num, int *gain, int *max);
 void stop_sampling();
 void start_sampling();
 
-int get_latest_volt(unsigned index);
-int get_previous_volt(unsigned index);
+int overload(int id);
+int latest(int id);
+int previous(int id);
 
 #endif

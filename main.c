@@ -15,45 +15,30 @@ int main()
 	setup();
 	start_sampling();
 
-	if (ad_calibrate(Fchan, Fgain))
+	if (ad_calibrate(F, Fgain))
 		TRACE_INFO("Channel F calibrated\n");
-	if (ad_calibrate(pchan, pgain))
+	if (ad_calibrate(p, pgain))
 		TRACE_INFO("Channel p calibrated\n");
-	if (ad_calibrate(schan, sgain))
+	if (ad_calibrate(s, sgain))
 		TRACE_INFO("Channel s calibrated\n");
 
-	/*while(1) {
-		int temp = ad_temperature();
-		int volt = ad_voltmon();
-		TRACE_INFO("--- AVDD: %umV T: %u.%u°C ---\n", volt, temp/10, temp%10);
-		
-		start_sampling();
-		Wait(2000);
-		stop_sampling();
-	};
-*/
 	while (1) {
-		if (get_latest_volt(Fchan) >= Fmax) {
-			TRACE_INFO("FMAX reached.\n");
+		if (overload(F)) {
 			set_error(EFMAX);
 			send_event(EV_ESTOP);
 		}
-		if (get_latest_volt(pchan) >= pmax) {
-			TRACE_INFO("PMAX reached.\n");
+		if (overload(p)) {
 			set_error(EPMAX);
 			send_event(EV_ESTOP);
 		}
-		if (get_latest_volt(schan) >= smax) {
-			TRACE_INFO("SMAX reached.\n");
+		if (overload(s)) {
 			set_error(ESMAX);
 			send_event(EV_ESTOP);
 		}
-		if (get_latest_volt(pchan) > PAR_PSET) {
+		if (latest(p) > PAR_PSET) 
 			send_event(EV_PTRIG);
-		}
-		if (get_latest_volt(Fchan) < get_previous_volt(Fchan)/PAR_PEAK) {
+		if (latest(F) < previous(F)/PAR_PEAK)
 			send_event(EV_FTRIG);
-		}
 
 		/* Parse command line */
 		if (USBC_hasData()) { 

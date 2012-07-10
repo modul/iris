@@ -85,7 +85,9 @@ static void do_abort()
 
 static void do_log()
 {
-	printf("%u %u %u %u %u\n", proc.state, proc.error, get_latest_volt(Fchan), get_latest_volt(pchan), get_latest_volt(schan));
+	printf("%u %u %u %u %u\n", 
+			proc.state, proc.error, 
+			latest(F), latest(p), latest(s));
 }
 
 static void do_info()

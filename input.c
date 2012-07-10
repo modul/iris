@@ -5,17 +5,19 @@
 #define LIMIT(x, min, max) (x < min? min : (x > max? max : x))
 
 static int next = 0;
-static int latest[NUM_AIN] = {0};  
-static int previous[NUM_AIN] = {0}; 
 
 struct chan {
 	uint8_t num;
 	uint8_t gain;
 	int max;
+	int latest;
+	int previous;
 };
 
 static struct chan channel[NUM_AIN] = {
-	{Fchan, Fgain, Fmax}, {pchan, pgain, pmax}, {schan, sgain, smax}
+	{Fchan, Fgain, Fmax, 0, 0},
+	{pchan, pgain, pmax, 0, 0}, 
+	{schan, sgain, smax, 0, 0}
 };
 
 void setup_channel(int id, int num, int gain, int max)
@@ -33,7 +35,24 @@ void get_channel(int id, int *num, int *gain, int *max)
 		*gain = channel[id].gain;
 	if (max)
 		*max = channel[id].max;
-	TRACE_DEBUG("get channel: %u, %u, %u\n", *num, *gain, *max);
+}
+
+int overload(int id)
+{
+	assert(id < NUM_AIN);
+	return channel[id].latest > channel[id].max;
+}
+
+int latest(int id)
+{
+	assert(id < NUM_AIN);
+	return channel[id].latest;
+}
+
+int previous(int id)
+{
+	assert(id < NUM_AIN);
+	return channel[id].previous;
 }
 
 void start_sampling()
@@ -46,16 +65,6 @@ void start_sampling()
 void stop_sampling()
 {
 	NVIC_DisableIRQ(TC0_IRQn);
-}
-
-int get_latest_volt(unsigned index) {
-	assert(index < NUM_AIN);
-	return latest[index];
-}
-
-int get_previous_volt(unsigned index) {
-	assert(index < NUM_AIN);
-	return previous[index];
 }
 
 void TC0_IrqHandler()
@@ -72,9 +81,9 @@ void TC0_IrqHandler()
 		TRACE_ERROR("ADC error ch%u (%x)\n", channel[next].num, status);
 	}
 	else {
-		previous[next] = latest[next];
-		latest[next] = ain_read();
-		TRACE_DEBUG("ADC read %umV (%x)\n", latest[next], status);
+		channel[next].previous = channel[next].latest;
+		channel[next].latest = ain_read();
+		TRACE_DEBUG("ADC read %umV (%x)\n", channel[next].latest, status);
 
 		if (++next == NUM_AIN)
 			next = 0;
@@ -82,5 +91,4 @@ void TC0_IrqHandler()
 
 	ain_start(channel[next].num, channel[next].gain, AD_MODE_SINGLE);
 }
-
 
