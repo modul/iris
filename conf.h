@@ -19,19 +19,6 @@
 #define p 1
 #define s 2
 
-/* Input channels, might differ from indices */
-#define Fchan 0
-#define pchan 1
-#define schan 2
-
-#define Fgain 0
-#define pgain 0
-#define sgain 0
-
-#define Fmax VREF-1
-#define pmax VREF-1
-#define smax VREF-1
-
 /** Valve output pins **/
 #define PIN_VAL_vent  {PIO_PA2, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
 #define PIN_VAL_press {PIO_PA3, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}

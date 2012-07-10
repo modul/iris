@@ -15,12 +15,9 @@ int main()
 	setup();
 	start_sampling();
 
-	if (ad_calibrate(F, Fgain))
-		TRACE_INFO("Channel F calibrated\n");
-	if (ad_calibrate(p, pgain))
-		TRACE_INFO("Channel p calibrated\n");
-	if (ad_calibrate(s, sgain))
-		TRACE_INFO("Channel s calibrated\n");
+	setup_channel(F, 0, 0, VREF-2);
+	setup_channel(p, 1, 0, VREF-2);
+	setup_channel(s, 2, 0, VREF-2);
 
 	while (1) {
 		if (overload(F)) {

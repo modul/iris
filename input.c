@@ -14,17 +14,22 @@ struct chan {
 	int previous;
 };
 
-static struct chan channel[NUM_AIN] = {
-	{Fchan, Fgain, Fmax, 0, 0},
-	{pchan, pgain, pmax, 0, 0}, 
-	{schan, sgain, smax, 0, 0}
-};
+static struct chan channel[NUM_AIN] = { {0}, {0}, {0} };
 
 void setup_channel(int id, int num, int gain, int max)
 {
 	channel[id].num = LIMIT(num, 0, NUM_AIN);
 	channel[id].gain = LIMIT(gain, AD_GAIN_MIN, AD_GAIN_MAX);
 	channel[id].max = LIMIT(max, 0, MAX);
+
+	stop_sampling();
+	if (ad_calibrate(num, gain)) {
+		TRACE_INFO("ADC ch%u calibration successful\n", num);
+	}
+	else {
+		TRACE_ERROR("ADC calibration failed on ch%u\n", num);
+	}
+	start_sampling();
 }
 
 void get_channel(int id, int *num, int *gain, int *max)
