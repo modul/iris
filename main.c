@@ -18,8 +18,6 @@ int main()
 	setup_channel(p, 1, 0, VREF-2);
 	setup_channel(s, 2, 0, VREF-2);
 
-	start_sampling();
-
 	while (1) {
 		if (overload(F)) {
 			set_error(EFMAX);

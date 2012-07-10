@@ -18,17 +18,17 @@ static struct chan channel[NUM_AIN] = { {0}, {0}, {0} };
 
 void setup_channel(int id, int num, int gain, int max)
 {
+	stop_sampling();
 	channel[id].num = LIMIT(num, 0, NUM_AIN);
 	channel[id].gain = LIMIT(gain, AD_GAIN_MIN, AD_GAIN_MAX);
 	channel[id].max = LIMIT(max, 0, MAX);
 
-	stop_sampling();
-	if (ad_calibrate(num, gain)) {
-		TRACE_INFO("ADC ch%u calibration successful\n", num);
+	if (ad_calibrate(channel[id].num, channel[id].gain)) {
+		TRACE_INFO("ADC ch%u calibration successful\n", channel[id].num);
 	}
-	else {
-		TRACE_ERROR("ADC calibration failed on ch%u\n", num);
-	}
+	else
+		TRACE_ERROR("ADC calibration failed on ch%u\n", channel[id].num);
+
 	start_sampling();
 }
 
