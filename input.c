@@ -31,7 +31,7 @@ void TC0_IrqHandler()
 	else {
 		previous[next] = latest[next];
 		latest[next] = ain_read();
-		TRACE_DEBUG("ADC read %umV (%x)\n", mv(latest[next]), status);
+		TRACE_DEBUG("ADC read %umV (%x)\n", latest[next], status);
 
 		if (++next == NUM_AIN)
 			next = 0;
@@ -54,10 +54,10 @@ void stop_sampling()
 
 int get_latest_volt(unsigned index) {
 	assert(index < NUM_AIN);
-	return mv(latest[index]);
+	return latest[index];
 }
 
 int get_previous_volt(unsigned index) {
 	assert(index < NUM_AIN);
-	return mv(previous[index]);
+	return previous[index];
 }

@@ -35,8 +35,6 @@
 
 #define AD_WAIT 150
 
-int mv(int in);
-
 void ain_start(uint8_t channel, uint8_t gain, uint8_t mode);
 uint8_t ain_status();
 int ain_read();
