@@ -7,7 +7,6 @@ void get_channel(int id, int *num, int *gain, int *max);
 void stop_sampling();
 void start_sampling();
 
-int overload(int id);
 int latest(int id);
 int previous(int id);
 

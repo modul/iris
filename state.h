@@ -3,7 +3,7 @@
 
 enum events {EV_CONF, EV_INFO, EV_START, EV_ABORT, EV_LOG, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};
 enum states {IDLE, READY, SET, GO, ERROR, NUMSTATES};
-enum errors {EOK, EFMAX, EPMAX, ESMAX, ESTOP, NUMERRORS};
+enum errors {EOK, EMAX, ESTOP, EOVL, NUMERRORS};
 
 void send_event(unsigned ev);
 

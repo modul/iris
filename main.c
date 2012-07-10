@@ -22,26 +22,11 @@ int main()
 	start_sampling();
 
 	while (1) {
+		/* Check emergency stop */
 		if (PIO_Get(&stop) == 0) {
 			set_error(ESTOP);
 			send_event(EV_ESTOP);
 		}
-		if (overload(F)) {
-			set_error(EFMAX);
-			send_event(EV_ESTOP);
-		}
-		if (overload(p)) {
-			set_error(EPMAX);
-			send_event(EV_ESTOP);
-		}
-		if (overload(s)) {
-			set_error(ESMAX);
-			send_event(EV_ESTOP);
-		}
-		if (latest(p) > PAR_PSET) 
-			send_event(EV_PTRIG);
-		if (latest(F) < previous(F)/PAR_PEAK)
-			send_event(EV_FTRIG);
 
 		/* Parse command line */
 		if (USBC_hasData()) { 

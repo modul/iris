@@ -1,5 +1,6 @@
 #include "conf.h"
 #include "input.h"
+#include "state.h"
 #include "ad7793.h"
 
 #define LIMIT(x, min, max) (x < min? min : (x > max? max : x))
@@ -36,12 +37,6 @@ void get_channel(int id, int *num, int *gain, int *max)
 	if (max) *max = channel[id].max;
 }
 
-int overload(int id)
-{
-	assert(id < NUM_AIN);
-	return channel[id].latest > channel[id].max;
-}
-
 int latest(int id)
 {
 	assert(id < NUM_AIN);
@@ -72,20 +67,32 @@ void TC0_IrqHandler()
 
 	if ((status = ain_status()) & AD_STAT_NRDY) {
 		TRACE_INFO("ADC ch%u not ready (%02x)\n", channel[next].num, status);
-		return; // try again next time
-	}
-	else if (status & AD_STAT_ERR) {
-		TRACE_ERROR("ADC error ch%u (%umV)\n", channel[next].num, ain_read());
 	}
 	else {
 		channel[next].previous = channel[next].latest;
 		channel[next].latest = ain_read();
-		TRACE_DEBUG("ADC read ch%u %umV (%02x)\n", channel[next].num, channel[next].latest, status);
+
+		if (status & AD_STAT_ERR) {
+			status = ain_read();
+			if (status > 0) {
+				set_error(EOVL);
+				send_event(EV_ESTOP);
+				TRACE_ERROR("ADC overload ch%u (%umV)\n", channel[next].num, status);
+			}
+		}
+		else if (channel[next].latest > channel[next].max) {
+			set_error(EMAX);
+			send_event(EV_ESTOP);
+		}
+		else if (next == F && channel[next].latest < channel[next].previous/PAR_PEAK)
+			send_event(EV_FTRIG);
+		else if (next == p && channel[next].latest > PAR_PSET)
+			send_event(EV_PTRIG);
 
 		if (++next == NUM_AIN)
 			next = 0;
+		ain_start(channel[next].num, channel[next].gain, AD_MODE_SINGLE);
 	}
 
-	ain_start(channel[next].num, channel[next].gain, AD_MODE_SINGLE);
 }
 
