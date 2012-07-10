@@ -7,7 +7,7 @@
 #define ESMAX 4
 #define ESTOP 8
 
-enum events {EV_INFO, EV_START, EV_ABORT, EV_LOG, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};
+enum events {EV_CONF, EV_INFO, EV_START, EV_ABORT, EV_LOG, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};
 enum states {IDLE, READY, SET, GO, ERROR, NUMSTATES};
 
 void send_event(unsigned ev);

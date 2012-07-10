@@ -8,7 +8,7 @@ void setup();
 
 int main() 
 {
-	char line[64];
+	char cmd;
 
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
@@ -42,36 +42,17 @@ int main()
 
 		/* Parse command line */
 		if (USBC_hasData()) { 
-			gets(line);
-			if (line[0] == 's') 
+			cmd = getchar();
+			if (cmd == 's')
 				send_event(EV_START);
-			else if (line[0] == 'l')
+			else if (cmd == 'l')
 				send_event(EV_LOG);
-			else if (line[0] == 'a')
+			else if (cmd == 'a')
 				send_event(EV_ABORT);
-			else if (line[0] == 'i') 
+			else if (cmd == 'i')
 				send_event(EV_INFO);
-			else if (line[0] == 'c') {
-				if (get_state() != IDLE)
-					puts("nok");
-				else {
-					char c = 0;
-					int id, num, gain, max;
-					if (sscanf(line+1, "%c %u %u %u", &c, &num, &gain, &max) == 4) {
-						id = (c == 'F'? F : (c == 'p'? p: (c == 's'? s : c)));
-						printf("DBG %c %u %u %u\nDBG %s\n", c, num, gain, max, line);
-						if (id >= NUM_AIN)
-							puts("nok");
-						else {
-							setup_channel(id, num, gain, max);
-							get_channel(id, &num, &gain, &max);
-							printf("ok %c %u %u %u\n", c, num, gain, max);
-						}
-					}
-					else
-						puts("nok");
-				}
-			}
+			else if (cmd == 'c')
+				send_event(EV_CONF);
 		}
 
 		/* Display state & error */

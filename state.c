@@ -15,6 +15,7 @@ static void do_press();
 static void do_vent();
 static void do_stop();
 static void do_info();
+static void do_conf();
 
 
 typedef void (*taction_t)();
@@ -25,12 +26,12 @@ struct transition {
 };
 
 static struct transition table[NUMSTATES][NUMEVENTS] = {
-/* event/state EV_INFO,         EV_START,          EV_ABORT,         EV_LOG,          EV_ESTOP,          EV_PTRIG,          EV_FTRIG       */
-/* IDLE  */  {{do_info, IDLE}, {do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_vent, ERROR}, {   NULL,   IDLE}, {   NULL,  IDLE}},
-/* READY */  {{do_nok, READY}, {  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, {do_vent, ERROR}, {do_stop,    SET}, {   NULL,  READY}},
-/* SET   */  {{do_nok,   SET}, {do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, {do_vent, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
-/* GO    */  {{do_nok,    GO}, {  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, {do_vent, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
-/* ERROR */  {{do_nok, ERROR}, {  do_nok, ERROR}, {do_abort, IDLE}, {do_log, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
+/* event/state EV_CONF,          EV_INFO,         EV_START,          EV_ABORT,         EV_LOG,          EV_ESTOP,          EV_PTRIG,          EV_FTRIG       */
+/* IDLE  */  {{do_conf,  IDLE}, {do_info, IDLE}, {do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_vent, ERROR}, {   NULL,   IDLE}, {   NULL,  IDLE}},
+/* READY */  {{ do_nok, READY}, {do_nok, READY}, {  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, {do_vent, ERROR}, {do_stop,    SET}, {   NULL,  READY}},
+/* SET   */  {{ do_nok,   SET}, {do_nok,   SET}, {do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, {do_vent, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
+/* GO    */  {{ do_nok,    GO}, {do_nok,    GO}, {  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, {do_vent, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
+/* ERROR */  {{do_conf, ERROR}, {do_nok, ERROR}, {  do_nok, ERROR}, {do_abort, IDLE}, {do_log, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
 /*              action    next                                                                                            */
 };
 
@@ -101,10 +102,10 @@ static void do_info()
 
 	avdd = ad_voltmon();
 	temp = ad_temperature();
-	printf("AVdd: %umV T: %u.%u°C\n", avdd, temp/10, temp%10);
+	printf("AVdd: %umV T: %u.%uC\n", avdd, temp/10, temp%10);
 	for (i=0; i<NUM_AIN; i++) {
 		get_channel(i, &num, &gain, &max);
-		printf("%c: %u %ux <%u\n", 
+		printf("%c: ch%u %ux <%u\n",
 				 (i == F? 'F' : 
 				 (i == p? 'p' : 
 				 (i == s? 's': 'x'))),
@@ -112,6 +113,35 @@ static void do_info()
 	}
 
 	start_sampling();
+}
+
+static void do_conf()
+{
+	char c = 0;
+	char line[64];
+	int args, id, num, gain, max;
+
+	gets(line);
+	args = sscanf(line, "%c %u %u %u", &c, &num, &gain, &max);
+	if (args > 0) {
+		id = (c == 'F'? F : (c == 'p'? p: (c == 's'? s : c)));
+		if (id >= NUM_AIN)
+			puts("nok");
+		else if (args == 1) {
+			get_channel(id, &num, &gain, &max);
+			printf("%c %u %u %u\n", c, num, gain, max);
+		}
+		else if (args == 4) {
+			setup_channel(id, num, gain, max);
+			get_channel(id, &num, &gain, &max);
+			printf("ok %c %u %u %u\n", c, num, gain, max);
+		}
+		else
+			puts("nok");
+	}
+	else {
+		puts("nok");
+	}
 }
 
 static void do_press() 
