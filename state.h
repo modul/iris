@@ -1,14 +1,9 @@
 #ifndef _STATE_
 #define _STATE_
 
-#define EOK   0
-#define EFMAX 1
-#define EPMAX 2
-#define ESMAX 4
-#define ESTOP 8
-
 enum events {EV_CONF, EV_INFO, EV_START, EV_ABORT, EV_LOG, EV_ESTOP, EV_PTRIG, EV_FTRIG, NUMEVENTS};
 enum states {IDLE, READY, SET, GO, ERROR, NUMSTATES};
+enum errors {EOK, EFMAX, EPMAX, ESMAX, ESTOP, NUMERRORS};
 
 void send_event(unsigned ev);
 

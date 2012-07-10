@@ -57,9 +57,9 @@ unsigned get_state()
 	return proc.state;
 }
 
-void set_error(unsigned flag)
+void set_error(unsigned err)
 {
-	proc.error |= flag;
+	proc.error = err;
 }
 
 unsigned get_error()
