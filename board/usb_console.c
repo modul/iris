@@ -191,7 +191,7 @@ uint8_t USBC_hasData()
 void USBC_Configure(void)
 {
 	TRACE_INFO("USB Serial Console configuration\n");
-	PIO_InitializeInterrupts(0);
+	PIO_InitializeInterrupts(0); // should be called in main() when other IRQs needed
 	ConfigureUsbClock();
 	CDCDSerialDriver_Initialize(&cdcdSerialDriverDescriptors);
 	VBus_Configure();
