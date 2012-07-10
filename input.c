@@ -71,8 +71,6 @@ void TC0_IrqHandler()
 {
 	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
 
-	TRACE_DEBUG("n=%u\n", next);
-
 	if ((status = ain_status()) & AD_STAT_NRDY) {
 		TRACE_INFO("ADC ch%u not ready (%x)\n", channel[next].num, status);
 		return; // try again next time
@@ -83,7 +81,7 @@ void TC0_IrqHandler()
 	else {
 		channel[next].previous = channel[next].latest;
 		channel[next].latest = ain_read();
-		TRACE_DEBUG("ADC read %umV (%x)\n", channel[next].latest, status);
+		TRACE_DEBUG("ADC read ch%u %umV (%x)\n", next, channel[next].latest, status);
 
 		if (++next == NUM_AIN)
 			next = 0;
