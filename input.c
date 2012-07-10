@@ -34,12 +34,9 @@ void setup_channel(int id, int num, int gain, int max)
 
 void get_channel(int id, int *num, int *gain, int *max)
 {
-	if (num)
-		*num = channel[id].num;
-	if (gain)
-		*gain = channel[id].gain;
-	if (max)
-		*max = channel[id].max;
+	if (num) *num = channel[id].num;
+	if (gain) *gain = channel[id].gain;
+	if (max) *max = channel[id].max;
 }
 
 int overload(int id)
@@ -77,16 +74,16 @@ void TC0_IrqHandler()
 	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
 
 	if ((status = ain_status()) & AD_STAT_NRDY) {
-		TRACE_INFO("ADC ch%u not ready (%x)\n", channel[next].num, status);
+		TRACE_INFO("ADC ch%u not ready (%02x)\n", channel[next].num, status);
 		return; // try again next time
 	}
 	else if (status & AD_STAT_ERR) {
-		TRACE_ERROR("ADC error ch%u (%x)\n", channel[next].num, status);
+		TRACE_ERROR("ADC error ch%u (%umV)\n", channel[next].num, ain_read());
 	}
 	else {
 		channel[next].previous = channel[next].latest;
 		channel[next].latest = ain_read();
-		TRACE_DEBUG("ADC read ch%u %umV (%x)\n", next, channel[next].latest, status);
+		TRACE_DEBUG("ADC read ch%u %umV (%02x)\n", channel[next].num, channel[next].latest, status);
 
 		if (++next == NUM_AIN)
 			next = 0;
