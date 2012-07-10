@@ -18,7 +18,6 @@ static struct chan channel[NUM_AIN] = { {0}, {0}, {0} };
 
 void setup_channel(int id, int num, int gain, int max)
 {
-	stop_sampling();
 	channel[id].num = LIMIT(num, 0, NUM_AIN);
 	channel[id].gain = LIMIT(gain, AD_GAIN_MIN, AD_GAIN_MAX);
 	channel[id].max = LIMIT(max, 0, (VREF>>channel[id].gain)-1);
@@ -28,8 +27,6 @@ void setup_channel(int id, int num, int gain, int max)
 	}
 	else
 		TRACE_ERROR("ADC calibration failed on ch%u\n", channel[id].num);
-
-	start_sampling();
 }
 
 void get_channel(int id, int *num, int *gain, int *max)

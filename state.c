@@ -138,9 +138,11 @@ static void do_conf()
 			printf("%c %u %u %u\n", c, num, gain, max);
 		}
 		else if (args == 4) {
+			stop_sampling();
 			setup_channel(id, num, gain, max);
 			get_channel(id, &num, &gain, &max);
 			printf("ok %c %u %u %u\n", c, num, gain, max);
+			start_sampling();
 		}
 		else
 			puts("nok");
