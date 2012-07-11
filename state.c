@@ -3,10 +3,8 @@
 #include "input.h"
 #include "ad7793.h"
 
-static struct _proc {
-	unsigned state;
-	unsigned error;
-} proc = {IDLE, EOK};
+unsigned state = IDLE;
+unsigned error = EOK;
 
 static void do_nok();
 static void do_log();
@@ -16,7 +14,6 @@ static void do_vent();
 static void do_stop();
 static void do_info();
 static void do_conf();
-
 
 typedef void (*taction_t)();
 
@@ -40,31 +37,31 @@ void send_event(unsigned event)
 	taction_t action = NULL;
 
 	assert (event < NUMEVENTS);
-	if((action = table[proc.state][event].action))
+	if((action = table[state][event].action))
 		action();
-	proc.state = table[proc.state][event].next_state;
+	state = table[state][event].next_state;
 }
 
 void reset_state()
 {
 	do_vent();
-	proc.state = IDLE;
-	proc.error = EOK;
+	state = IDLE;
+	error = EOK;
 }
 
 unsigned get_state()
 {
-	return proc.state;
+	return state;
 }
 
 void set_error(unsigned err)
 {
-	proc.error = err;
+	error = err;
 }
 
 unsigned get_error()
 {
-	return proc.error;
+	return error;
 }
 
 static void do_nok()
@@ -75,10 +72,10 @@ static void do_nok()
 static void do_abort()
 {
 	do_vent();
-	if (proc.state == ERROR) { // acknowledge error
+	if (state == ERROR) { // acknowledge error
 		const Pin stop = PIN_STOP;
 		if (PIO_Get(&stop)) {
-			proc.error = EOK;
+			error = EOK;
 			LED_blinkstop(ALARM);
 			LED_off(ALARM);
 			puts("ok");
@@ -93,7 +90,7 @@ static void do_abort()
 static void do_log()
 {
 	printf("%u %u %u %u %u\n", 
-			proc.state, proc.error, 
+			state, error, 
 			latest(F), latest(p), latest(s));
 }
 
