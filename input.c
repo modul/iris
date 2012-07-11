@@ -67,7 +67,7 @@ void TC0_IrqHandler()
 	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
 
 	if ((status = ain_status()) & AD_STAT_NRDY) {
-		TRACE_INFO("ADC ch%u not ready (%02x)\n", channel[next].num, status);
+		TRACE_DEBUG("ADC ch%u not ready\n", channel[next].num);
 	}
 	else {
 		channel[next].previous = channel[next].latest;
@@ -75,12 +75,15 @@ void TC0_IrqHandler()
 
 		if (status & AD_STAT_ERR) {
 			if (channel[next].latest > 0) {
+				if (get_error() != EOVL)
+					TRACE_WARNING("ADC overload ch%u\n", channel[next].num);
 				set_error(EOVL);
 				send_event(EV_ESTOP);
-				TRACE_ERROR("ADC overload ch%u\n", channel[next].num);
 			}
 		}
 		else if (channel[next].latest >= channel[next].max) {
+			if (get_error() != EMAX)
+				TRACE_WARNING("Maximum reached on ch%u (%c)\n", channel[next].num, CHANNEL_NAME(next));
 			set_error(EMAX);
 			send_event(EV_ESTOP);
 		}
