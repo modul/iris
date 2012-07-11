@@ -3,6 +3,9 @@
 #include "input.h"
 #include "ad7793.h"
 
+#define OK()  puts("ok")
+#define NOK() puts("nok")
+
 unsigned state = IDLE;
 unsigned error = EOK;
 
@@ -67,7 +70,7 @@ unsigned get_error()
 
 static void do_nok()
 {
-	puts("nok");
+	NOK();
 }
 
 static void do_abort()
@@ -79,13 +82,11 @@ static void do_abort()
 			error = EOK;
 			LED_blinkstop(ALARM);
 			LED_off(ALARM);
-			puts("ok");
+			OK();
 		}
-		else
-			puts("nok");
+		else NOK();
 	}
-	else
-		puts("ok");
+	else OK();
 }
 
 static void do_log()
@@ -126,7 +127,7 @@ static void do_conf()
 	if (args > 0) {
 		id = CHANNEL_ID(c);
 		if (id >= CHANNELS)
-			puts("nok");
+			NOK();
 		else if (args == 1) {
 			get_channel(id, &num, &gain, &max);
 			printf("%c %u %u %u\n", c, num, gain, max);
@@ -138,12 +139,9 @@ static void do_conf()
 			printf("ok %c %u %u %u\n", c, num, gain, max);
 			start_sampling();
 		}
-		else
-			puts("nok");
+		else NOK();
 	}
-	else {
-		puts("nok");
-	}
+	else NOK();
 }
 
 static void do_press() 
@@ -151,7 +149,7 @@ static void do_press()
 	const Pin pr = PIN_VAL_press;
 	const Pin vn = PIN_VAL_vent;
 	PIO_Clear(&vn); PIO_Set(&pr);
-	puts("ok");
+	OK();
 }
 
 static void do_stop()
