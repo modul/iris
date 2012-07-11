@@ -8,16 +8,10 @@
 #define RESOLUTION 24
 #define MAX (1 << RESOLUTION)
 #define VREF 1170
-#define NUM_AIN 3
 
 /** Configuration Parameters **/
 #define PAR_PSET   50
 #define PAR_PEAK   2
-
-/* Input Indices */
-#define F 0
-#define p 1
-#define s 2
 
 /** Valve output pins **/
 #define PIN_VAL_vent  {PIO_PA2, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}

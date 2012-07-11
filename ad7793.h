@@ -32,6 +32,7 @@
 #define AD_CH2 2
 #define AD_CHT 6
 #define AD_CHV 7
+#define AD_CHANNELS 3
 
 #define AD_WAIT 150
 #define AD_GAIN_MIN 0

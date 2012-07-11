@@ -106,13 +106,9 @@ static void do_info()
 	avdd = ad_voltmon();
 	temp = ad_temperature();
 	printf("AVdd: %umV T: %u.%uC\n", avdd, temp/10, temp%10);
-	for (i=0; i<NUM_AIN; i++) {
+	for (i=0; i<CHANNELS; i++) {
 		get_channel(i, &num, &gain, &max);
-		printf("%c: ch%u %ux <%u\n",
-				 (i == F? 'F' : 
-				 (i == p? 'p' : 
-				 (i == s? 's': 'x'))),
-				num, 1<<gain, max);
+		printf("%c: ch%u %ux <%u\n", CHANNEL_NAME(i), num, 1<<gain, max);
 	}
 
 	start_sampling();
@@ -127,8 +123,8 @@ static void do_conf()
 	gets(line);
 	args = sscanf(line, "%c %u %u %u", &c, &num, &gain, &max);
 	if (args > 0) {
-		id = (c == 'F'? F : (c == 'p'? p: (c == 's'? s : c)));
-		if (id >= NUM_AIN)
+		id = CHANNEL_ID(c);
+		if (id >= CHANNELS)
 			puts("nok");
 		else if (args == 1) {
 			get_channel(id, &num, &gain, &max);

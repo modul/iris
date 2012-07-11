@@ -15,11 +15,12 @@ struct chan {
 	int previous;
 };
 
-static struct chan channel[NUM_AIN] = { {0}, {0}, {0} };
+static struct chan channel[CHANNELS] = {{0}};
 
 void setup_channel(int id, int num, int gain, int max)
 {
-	channel[id].num = LIMIT(num, 0, NUM_AIN);
+	assert(id < CHANNELS);
+	channel[id].num = LIMIT(num, 0, AD_CHANNELS);
 	channel[id].gain = LIMIT(gain, AD_GAIN_MIN, AD_GAIN_MAX);
 	channel[id].max = LIMIT(max, 0, VREF-1);
 
@@ -39,13 +40,13 @@ void get_channel(int id, int *num, int *gain, int *max)
 
 int latest(int id)
 {
-	assert(id < NUM_AIN);
+	assert(id < CHANNELS);
 	return channel[id].latest;
 }
 
 int previous(int id)
 {
-	assert(id < NUM_AIN);
+	assert(id < CHANNELS);
 	return channel[id].previous;
 }
 
@@ -73,11 +74,10 @@ void TC0_IrqHandler()
 		channel[next].latest = ain_read();
 
 		if (status & AD_STAT_ERR) {
-			status = ain_read();
-			if (status > 0) {
+			if (channel[next].latest > 0) {
 				set_error(EOVL);
 				send_event(EV_ESTOP);
-				TRACE_ERROR("ADC overload ch%u (%umV)\n", channel[next].num, status);
+				TRACE_ERROR("ADC overload ch%u\n", channel[next].num);
 			}
 		}
 		else if (channel[next].latest >= channel[next].max) {
@@ -89,7 +89,7 @@ void TC0_IrqHandler()
 		else if (next == p && channel[next].latest > PAR_PSET)
 			send_event(EV_PTRIG);
 
-		if (++next == NUM_AIN)
+		if (++next == CHANNELS)
 			next = 0;
 		ain_start(channel[next].num, channel[next].gain, AD_MODE_SINGLE);
 	}
