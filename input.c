@@ -77,15 +77,13 @@ void TC0_IrqHandler()
 			if (channel[next].latest > 0) {
 				if (get_error() != EOVL)
 					TRACE_WARNING("ADC overload ch%u\n", channel[next].num);
-				set_error(EOVL);
-				send_event(EV_ESTOP);
+				send_error(EOVL);
 			}
 		}
 		else if (channel[next].latest >= channel[next].max) {
 			if (get_error() != EMAX)
 				TRACE_WARNING("Maximum reached on ch%u (%c)\n", channel[next].num, CHANNEL_NAME(next));
-			set_error(EMAX);
-			send_event(EV_ESTOP);
+			send_error(EMAX);
 		}
 		else if (next == F && channel[next].latest < channel[next].previous/PAR_PEAK)
 			send_event(EV_FTRIG);

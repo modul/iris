@@ -10,7 +10,7 @@ void send_event(unsigned ev);
 void reset_state(); 
 unsigned get_state();
 
-void set_error(unsigned flag);
+void send_error(unsigned err);
 unsigned get_error();
 
 #endif

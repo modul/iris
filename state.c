@@ -54,9 +54,10 @@ unsigned get_state()
 	return state;
 }
 
-void set_error(unsigned err)
+void send_error(unsigned err)
 {
 	error = err;
+	send_event(EV_ESTOP);
 }
 
 unsigned get_error()
