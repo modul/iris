@@ -45,9 +45,9 @@
 #define AD_CHANNELS 3
 
 
-void ain_start(uint8_t channel, uint8_t gain);
-int ain_read();
-unsigned ain_status();
+void ad_start(uint8_t channel, uint8_t gain);
+int ad_read();
+unsigned ad_status();
 
 int ad_temperature();
 int ad_voltmon();

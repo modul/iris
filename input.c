@@ -52,7 +52,7 @@ int previous(int id)
 
 void start_sampling()
 {
-	ain_start(channel[next].num, channel[next].gain);
+	ad_start(channel[next].num, channel[next].gain);
 	NVIC_EnableIRQ(TC0_IRQn);
 	NVIC_SetPriority(TC0_IRQn, 1);
 }
@@ -66,12 +66,12 @@ void TC0_IrqHandler()
 {
 	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
 
-	if ((status = ain_status()) & AD_STAT_NRDY) {
+	if ((status = ad_status()) & AD_STAT_NRDY) {
 		TRACE_DEBUG("ADC ch%u not ready\n", channel[next].num);
 	}
 	else {
 		channel[next].previous = channel[next].latest;
-		channel[next].latest = ain_read();
+		channel[next].latest = ad_read();
 
 		if (status & AD_STAT_ERR) {
 			if (channel[next].latest > 0) {
@@ -92,7 +92,7 @@ void TC0_IrqHandler()
 
 		if (++next == CHANNELS)
 			next = 0;
-		ain_start(channel[next].num, channel[next].gain);
+		ad_start(channel[next].num, channel[next].gain);
 	}
 
 }
