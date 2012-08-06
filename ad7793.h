@@ -5,7 +5,7 @@
 #define AD_SETTLE_FAST  10
 
 #define AD_RESOLUTION 24
-#define AD_VREF 1170
+#define AD_VREF 1170000
 
 /* AD7793 SPI Commands */
 #define AD_READ_STAT 0x40
