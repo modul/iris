@@ -7,7 +7,7 @@ static unsigned spitrans(unsigned data)
 	return SPI_Read(SPI);
 }
 
-void ain_start(uint8_t channel, uint8_t gain, uint8_t mode)
+static void setup(uint8_t channel, uint8_t gain, uint8_t mode, uint8_t rate)
 {
 	spitrans(AD_WRITE_CONF);
 	spitrans(AD_CONF_HI|(gain&0x07));
@@ -15,7 +15,12 @@ void ain_start(uint8_t channel, uint8_t gain, uint8_t mode)
 
 	spitrans(AD_WRITE_MODE);
 	spitrans(mode);
-	spitrans(AD_MODE_LOW|SPI_TDR_LASTXFER);
+	spitrans(rate|SPI_TDR_LASTXFER);
+}
+
+void ain_start(uint8_t channel, uint8_t gain)
+{
+	setup(channel, gain, AD_MODE_SINGLE, AD_RATE_FAST);
 }
 
 unsigned ain_status()
@@ -39,30 +44,30 @@ int ain_read()
 
 int ad_temperature()
 {
-	ain_start(AD_CHT, 0, AD_MODE_SINGLE);
-	Wait(AD_WAIT);
+	ain_start(AD_CHT, 0);
+	Wait(AD_SETTLE_FAST);
 	return ain_read();
 }
 
 int ad_voltmon()
 {
-	ain_start(AD_CHV, 0, AD_MODE_SINGLE);
-	Wait(AD_WAIT);
+	ain_start(AD_CHV, 0);
+	Wait(AD_SETTLE_FAST);
 	return ain_read() * 6;
 }
 
 int ad_calibrate(uint8_t channel, uint8_t gain)
 {
-	ain_start(channel, gain, AD_MODE_INTZERO);
-	Wait(AD_WAIT);
+	setup(channel, gain, AD_MODE_INTZERO, AD_RATE_SLOW);
+	Wait(AD_SETTLE_SLOW);
 	if (ain_status() & (AD_STAT_NRDY|AD_STAT_ERR))
 		return 0;
 
 	if (gain < AD_GAIN_MAX) { // FS calibration not possible for max gain
-		ain_start(channel, gain, AD_MODE_INTFULL);
-		Wait(AD_WAIT);
+		setup(channel, gain, AD_MODE_INTFULL, AD_RATE_SLOW);
+		Wait(AD_SETTLE_SLOW);
 		if (gain > 0)
-			Wait(AD_WAIT);
+			Wait(AD_SETTLE_SLOW);
 		if (ain_status() & (AD_STAT_NRDY|AD_STAT_ERR))
 			return 0;
 	}

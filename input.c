@@ -52,7 +52,7 @@ int previous(int id)
 
 void start_sampling()
 {
-	ain_start(channel[next].num, channel[next].gain, AD_MODE_SINGLE);
+	ain_start(channel[next].num, channel[next].gain);
 	NVIC_EnableIRQ(TC0_IRQn);
 	NVIC_SetPriority(TC0_IRQn, 1);
 }
@@ -92,7 +92,7 @@ void TC0_IrqHandler()
 
 		if (++next == CHANNELS)
 			next = 0;
-		ain_start(channel[next].num, channel[next].gain, AD_MODE_SINGLE);
+		ain_start(channel[next].num, channel[next].gain);
 	}
 
 }

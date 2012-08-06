@@ -1,7 +1,8 @@
 #ifndef _AD7793_
 #define _AD7793_
 
-#define AD_WAIT 150
+#define AD_SETTLE_SLOW 150
+#define AD_SETTLE_FAST  10
 
 #define AD_RESOLUTION 24
 #define AD_VREF 1170
@@ -19,18 +20,19 @@
 #define AD_STAT_NRDY (1 << 7)
 #define AD_STAT_ERR  (1 << 6)
 
-/* AD7793 Modes (High byte: operation) */
+/* AD7793 Modes (High byte of mode register) */
 #define AD_MODE_CONT 0x00
 #define AD_MODE_SINGLE 0x20
 #define AD_MODE_INTZERO 0x80
 #define AD_MODE_INTFULL 0xA0
 
-/* AD7793 Modes (Low byte: clk and rate) */
-#define AD_MODE_LOW 0x0A
+/* AD7793 Update Rate (Low byte of mode register) */
+#define AD_RATE_SLOW 0x0A
+#define AD_RATE_FAST 0x02
 
-/* AD7793 Configuration (gain and channel)*/
-#define AD_CONF_HI 0x10
-#define AD_CONF_LO 0x90
+/* AD7793 Configuration */
+#define AD_CONF_HI 0x10 // set unipolar; here goes gain selection
+#define AD_CONF_LO 0x90 // set buffered, use int. ref.; here goes channel select
 
 #define AD_GAIN_MIN 0
 #define AD_GAIN_MAX 7
@@ -43,7 +45,7 @@
 #define AD_CHANNELS 3
 
 
-void ain_start(uint8_t channel, uint8_t gain, uint8_t mode);
+void ain_start(uint8_t channel, uint8_t gain);
 int ain_read();
 unsigned ain_status();
 
