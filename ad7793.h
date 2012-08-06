@@ -1,6 +1,11 @@
 #ifndef _AD7793_
 #define _AD7793_
 
+#define AD_WAIT 150
+
+#define AD_RESOLUTION 24
+#define AD_VREF 1170
+
 /* AD7793 SPI Commands */
 #define AD_READ_STAT 0x40
 #define AD_READ_MODE 0x48
@@ -10,23 +15,26 @@
 #define AD_WRITE_CONF 0x10
 #define AD_DUMMY 0xFF
 
+/* AD7793 Status Bits */
 #define AD_STAT_NRDY (1 << 7)
 #define AD_STAT_ERR  (1 << 6)
 
-/* AD7793 Modes (High byte) */
+/* AD7793 Modes (High byte: operation) */
 #define AD_MODE_CONT 0x00
 #define AD_MODE_SINGLE 0x20
 #define AD_MODE_INTZERO 0x80
 #define AD_MODE_INTFULL 0xA0
 
-/* AD7793 Modes (Low byte = clk configuration etc) */
+/* AD7793 Modes (Low byte: clk and rate) */
 #define AD_MODE_LOW 0x0A
 
-/* AD7793 Settings */
+/* AD7793 Configuration (gain and channel)*/
 #define AD_CONF_HI 0x10
 #define AD_CONF_LO 0x90
 
-/* AD7793 Channels */
+#define AD_GAIN_MIN 0
+#define AD_GAIN_MAX 7
+
 #define AD_CH0 0
 #define AD_CH1 1
 #define AD_CH2 2
@@ -34,13 +42,10 @@
 #define AD_CHV 7
 #define AD_CHANNELS 3
 
-#define AD_WAIT 150
-#define AD_GAIN_MIN 0
-#define AD_GAIN_MAX 7
 
 void ain_start(uint8_t channel, uint8_t gain, uint8_t mode);
-uint8_t ain_status();
 int ain_read();
+unsigned ain_status();
 
 int ad_temperature();
 int ad_voltmon();

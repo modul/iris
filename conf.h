@@ -5,10 +5,6 @@
 
 #define TIMER_FREQ 6
 
-#define RESOLUTION 24
-#define MAX (1 << RESOLUTION)
-#define VREF 1170
-
 /** Configuration Parameters **/
 #define PAR_PSET   50
 #define PAR_PEAK   2

@@ -1,6 +1,6 @@
 /*
  * USB CDC Console
- * Based on ATMEL USB CDC Serial example.
+ * Inspired by ATMEL USB CDC Serial example.
  *
  * (2012) Remo Giermann
  */
@@ -12,13 +12,13 @@
 #include "board.h"
 
 void USBC_Configure(void);
-uint8_t USBC_isConfigured(void);
-uint8_t USBC_ReadBuffer(void *buffer, uint32_t size, TransferCallback callback, void *args);
-uint8_t USBC_WriteBuffer(void *buffer, uint32_t size, TransferCallback callback, void *args);
+int USBC_isConfigured(void);
+int USBC_ReadBuffer(void *buffer, uint32_t size, TransferCallback callback, void *args);
+int USBC_WriteBuffer(void *buffer, uint32_t size, TransferCallback callback, void *args);
 int USBC_Gets(char *ptr, uint16_t len);
 int USBC_Puts(char *ptr, uint16_t len);
 
-uint8_t USBC_StartListening();
-uint8_t USBC_hasData();
+int USBC_StartListening();
+int USBC_hasData();
 
 #endif

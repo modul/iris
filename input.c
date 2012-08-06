@@ -3,7 +3,7 @@
 #include "state.h"
 #include "ad7793.h"
 
-#define LIMIT(x, min, max) (x < min? min : (x > max? max : x))
+#define limit(x, min, max) (x < min? min : (x > max? max : x))
 
 static int next = 0;
 
@@ -20,9 +20,9 @@ static struct chan channel[CHANNELS] = {{0}};
 void setup_channel(int id, int num, int gain, int max)
 {
 	assert(id < CHANNELS);
-	channel[id].num = LIMIT(num, 0, AD_CHANNELS);
-	channel[id].gain = LIMIT(gain, AD_GAIN_MIN, AD_GAIN_MAX);
-	channel[id].max = LIMIT(max, 0, VREF-1);
+	channel[id].num = limit(num, 0, AD_CHANNELS);
+	channel[id].gain = limit(gain, AD_GAIN_MIN, AD_GAIN_MAX);
+	channel[id].max = limit(max, 0, AD_VREF-1);
 
 	if (ad_calibrate(channel[id].num, channel[id].gain)) {
 		TRACE_INFO("ADC ch%u calibration successful\n", channel[id].num);

@@ -12,7 +12,7 @@
 static const Pin leds[] = {PINS_LEDS};
 static volatile uint32_t blinks[LEDS_NUM];
 
-/** To be called periodically **/
+// To be called periodically
 void blinkhandler(uint32_t ms)
 {
 	if (ms % BLINK_TIME == 0) {

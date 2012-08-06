@@ -1,13 +1,9 @@
 /*
  * USB CDC Serial Console
- * Based on ATMEL's USB CDC Serial example.
+ * Inspired by ATMEL's USB CDC Serial example.
  *
  * (2012) Remo Giermann
  */
-
-/*----------------------------------------------------------------------------
- *         Headers
- *----------------------------------------------------------------------------*/
 
 #include <string.h>
 
@@ -16,22 +12,13 @@
 
 extern const USBDDriverDescriptors cdcdSerialDriverDescriptors;
 
-/*----------------------------------------------------------------------------
- *         Configuration
- *----------------------------------------------------------------------------*/
-
-/** Parameters **/
-
-static volatile uint32_t _rxCount = 0;
-static volatile uint32_t _txCount = 0;
-static volatile uint8_t _cfgdone = 0;
-
-/** Receive Buffer **/
+static volatile unsigned _rxCount = 0;
+static volatile unsigned _txCount = 0;
+static volatile unsigned _cfgdone = 0;
 
 #define RXBUFFERSIZE 256
 static char _rxBuffer[RXBUFFERSIZE];
 
-/** VBus pin instance. */
 static const Pin pinVbus = PIN_USB_VBUS;
 
 /**
@@ -41,12 +28,10 @@ static void ISR_Vbus(const Pin *pPin)
 {
     /* Check current level on VBus */
     if (PIO_Get(&pinVbus)) {
-
         TRACE_INFO("USB VBUS connected\n");
         USBD_Connect();
     }
     else {
-
         TRACE_INFO("USB VBUS disconnected\n");
         USBD_Disconnect();
     }
@@ -58,7 +43,6 @@ static void ISR_Vbus(const Pin *pPin)
  */
 static void VBus_Configure( void )
 {
-
     /* Configure PIO */
     PIO_Configure(&pinVbus, 1);
     PIO_ConfigureIt(&pinVbus, ISR_Vbus);
@@ -66,7 +50,6 @@ static void VBus_Configure( void )
 
     /* Check current level on VBus */
     if (PIO_Get(&pinVbus)) {
-
         /* if VBUS present, force the connect */
         USBD_Connect();
     }
@@ -151,16 +134,11 @@ static void UsbReadDone(uint32_t unused,
         TRACE_WARNING("USBC Read unsuccessful.\n");
 }
 
-/*----------------------------------------------------------------------------
- *
- *         Exported Functions
- *----------------------------------------------------------------------------*/
-
 /*
  * Return 1 if USB Driver is configured,
  * return 0 otherwise.
  */
-uint8_t USBC_isConfigured(void)
+int USBC_isConfigured(void)
 {
 	if (USBD_GetState() == USBD_STATE_CONFIGURED) {
 		if (_cfgdone == 0) {
@@ -180,7 +158,7 @@ uint8_t USBC_isConfigured(void)
  * Return 1 if data present, 
  * return 0 otherwise.
  */
-uint8_t USBC_hasData()
+int USBC_hasData()
 {
 	return (_rxCount > 0);
 }
@@ -202,7 +180,7 @@ void USBC_Configure(void)
  * Returns 1 on success,
  * returns 0 otherwise.
  */
-uint8_t USBC_StartListening()
+int USBC_StartListening()
 {
 	if(CDCDSerialDriver_Read(_rxBuffer, RXBUFFERSIZE, (TransferCallback) UsbReadDone, 0)
 			!= USBD_STATUS_SUCCESS) {

@@ -15,9 +15,9 @@ int main()
 
 	setup();
 
-	setup_channel(F, 0, 0, VREF-1);
-	setup_channel(p, 1, 0, VREF-1);
-	setup_channel(s, 2, 0, VREF-1);
+	setup_channel(F, AD_CH0, 0, AD_VREF-1);
+	setup_channel(p, AD_CH1, 0, AD_VREF-1);
+	setup_channel(s, AD_CH2, 0, AD_VREF-1);
 
 	start_sampling();
 
