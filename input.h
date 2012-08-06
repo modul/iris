@@ -6,7 +6,7 @@
 #define s 2
 
 #define CHANNELS 3
-#define CHANNEL_ID(c) (c == 'F'? F : (c == 'p'? p: (c == 's'? s : c)))
+#define CHANNEL_ID(c) (c == 'F'? F : (c == 'p'? p: (c == 's'? s : 0xFF)))
 #define CHANNEL_NAME(i) (i == F? 'F' : (i == p? 'p' : (i == s? 's' : 'x')))
 
 void setup_channel(int id, int num, int gain, int max);
