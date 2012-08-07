@@ -86,7 +86,7 @@ void setup()
 	LED_blink(STATUS, FOREVER);
 
 	/* Configure USB */ 
-	USBC_Configure();
+	USBC_configure();
 	TRACE_DEBUG("waiting until USB is fully configured\n");
 	while (!USBC_isConfigured());
 

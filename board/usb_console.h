@@ -11,14 +11,13 @@
 #include <usb.h>
 #include "board.h"
 
-void USBC_Configure(void);
+void USBC_configure(void);
+int USBC_startListening();
+
+int USBC_hasData();
 int USBC_isConfigured(void);
-int USBC_ReadBuffer(void *buffer, uint32_t size, TransferCallback callback, void *args);
-int USBC_WriteBuffer(void *buffer, uint32_t size, TransferCallback callback, void *args);
+
 int USBC_Gets(char *ptr, uint16_t len);
 int USBC_Puts(char *ptr, uint16_t len);
-
-int USBC_StartListening();
-int USBC_hasData();
 
 #endif

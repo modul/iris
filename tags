@@ -7735,12 +7735,12 @@ USART_SetReceiverEnabled	libchip/source/usart.c	/^void USART_SetReceiverEnabled(
 USART_SetTransmitterEnabled	libchip/source/usart.c	/^void USART_SetTransmitterEnabled(Usart *usart, uint8_t enabled)$/;"	f
 USART_Write	libchip/source/usart.c	/^void USART_Write($/;"	f
 USART_WriteBuffer	libchip/source/usart.c	/^uint8_t USART_WriteBuffer($/;"	f
-USBC_Configure	board/usb_console.c	/^void USBC_Configure(void)$/;"	f
 USBC_Gets	board/usb_console.c	/^int USBC_Gets(char *ptr, uint16_t len)$/;"	f
 USBC_Puts	board/usb_console.c	/^int USBC_Puts(char *ptr, uint16_t len)$/;"	f
-USBC_StartListening	board/usb_console.c	/^int USBC_StartListening()$/;"	f
+USBC_configure	board/usb_console.c	/^void USBC_configure(void)$/;"	f
 USBC_hasData	board/usb_console.c	/^int USBC_hasData()$/;"	f
 USBC_isConfigured	board/usb_console.c	/^int USBC_isConfigured(void)$/;"	f
+USBC_startListening	board/usb_console.c	/^int USBC_startListening()$/;"	f
 USBConfigurationDescriptor	libusb/include/USBDescriptors.h	/^} __attribute__ ((packed)) USBConfigurationDescriptor; \/* GCC*\/$/;"	t	typeref:struct:_USBConfigurationDescriptor
 USBConfigurationDescriptor_BUSPOWERED_NORWAKEUP	libusb/include/USBDescriptors.h	128;"	d
 USBConfigurationDescriptor_BUSPOWERED_RWAKEUP	libusb/include/USBDescriptors.h	132;"	d
