@@ -1,7 +1,6 @@
 #include "conf.h"
 #include "input.h"
 #include "state.h"
-#include "ad7793.h"
 
 #define limit(x, min, max) (x < min? min : (x > max? max : x))
 

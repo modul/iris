@@ -1,7 +1,6 @@
 #include "conf.h"
 #include "state.h"
 #include "input.h"
-#include "ad7793.h"
 
 #define OK()  puts("ok")
 #define NOK() puts("nok")

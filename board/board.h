@@ -13,6 +13,7 @@
 
 #define LEDS_ACTIVE_LOW
 #include "led.h"
+#include "ad7793.h"
 
 /* Name of the board */
 #define BOARD_NAME "IRIS"

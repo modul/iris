@@ -2,7 +2,6 @@
 #include "conf.h"
 #include "input.h"
 #include "state.h"
-#include "ad7793.h"
 
 void setup();
 
