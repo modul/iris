@@ -45,29 +45,29 @@ int ad_read()
 int ad_temperature()
 {
 	ad_start(AD_CHT, 0);
-	Wait(AD_SETTLE_FAST);
+	wait(AD_SETTLE_FAST);
 	return ad_read();
 }
 
 int ad_voltmon()
 {
 	ad_start(AD_CHV, 0);
-	Wait(AD_SETTLE_FAST);
+	wait(AD_SETTLE_FAST);
 	return ad_read() * 6;
 }
 
 int ad_calibrate(uint8_t channel, uint8_t gain)
 {
 	setup(channel, gain, AD_MODE_INTZERO, AD_RATE_SLOW);
-	Wait(AD_SETTLE_SLOW);
+	wait(AD_SETTLE_SLOW);
 	if (ad_status() & (AD_STAT_NRDY|AD_STAT_ERR))
 		return 0;
 
 	if (gain < AD_GAIN_MAX) { // FS calibration not possible for max gain
 		setup(channel, gain, AD_MODE_INTFULL, AD_RATE_SLOW);
-		Wait(AD_SETTLE_SLOW);
+		wait(AD_SETTLE_SLOW);
 		if (gain > 0)
-			Wait(AD_SETTLE_SLOW);
+			wait(AD_SETTLE_SLOW);
 		if (ad_status() & (AD_STAT_NRDY|AD_STAT_ERR))
 			return 0;
 	}

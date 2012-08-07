@@ -14,13 +14,13 @@ int TimeTick_Configure(unsigned current_clk)
     return SysTick_Config(current_clk/1000);
 }
 
-unsigned GetTick()
+unsigned timetick()
 {
     return count ;
 }
 
-void Wait(unsigned ms)
+void wait(unsigned ms)
 {
     unsigned start = count;
-    while (GetTick() - start < ms);
+    while (timetick() - start < ms);
 }

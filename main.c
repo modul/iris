@@ -42,7 +42,7 @@ int main()
 		}
 
 		/* Display state & error */
-		if (GetTick() % 1000 == 0) {
+		if (timetick() % 1000 == 0) {
 			if (!LED_blinking(STATUS))
 				LED_blink(STATUS, get_state());
 			if (!LED_blinking(ALARM))
