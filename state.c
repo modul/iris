@@ -105,8 +105,8 @@ static void do_info()
 	
 	stop_sampling();
 
-	avdd = ad_voltmon();
-	temp = ad_temperature();
+	avdd = AD7793_voltmon();
+	temp = AD7793_temperature();
 	printf("AVdd: %umV T: %u.%uC\n", avdd/1000, temp/10, temp%10);
 	for (i=0; i<CHANNELS; i++) {
 		get_channel(i, &num, &gain, &max);
