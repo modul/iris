@@ -1,4 +1,3 @@
-#include <string.h>
 #include "conf.h"
 #include "input.h"
 #include "state.h"
