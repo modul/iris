@@ -79,7 +79,7 @@ void setup()
 
 	/* Configure SPI */
 	SPI_Configure(SPI, ID_SPI, SPI_MR_MSTR|SPI_MR_PS|SPI_MR_MODFDIS);
-	SPI_ConfigureNPCS(SPI, AIN_CS, AIN_SPICONF);
+	SPI_ConfigureNPCS(SPI, ADC_CS, ADC_SPICONF);
 	SPI_ConfigureNPCS(SPI, MEMORY_CS, MEMORY_SPICONF);
 	SPI_Enable(SPI);
 

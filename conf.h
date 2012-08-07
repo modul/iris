@@ -5,18 +5,18 @@
 
 #define TIMER_FREQ 6
 
-/** Configuration Parameters **/
+/* Configuration Parameters */
 #define PAR_PSET   50
 #define PAR_PEAK   2
 
-/** Valve output pins **/
+/* Valve output pins */
 #define PIN_VAL_vent  {PIO_PA2, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
 #define PIN_VAL_press {PIO_PA3, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
 #define PINS_VAL PIN_VAL_vent, PIN_VAL_press
 
 #define PIN_STOP {PIO_PA0, PIOA, ID_PIOA, PIO_INPUT, PIO_PULLUP}
 
-/** SPI Configuration **/
+/* SPI Configuration */
 #define PIN_SPI_MISO {PIO_PA12A_MISO, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_PULLUP}
 #define PIN_SPI_MOSI {PIO_PA13A_MOSI, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_DEFAULT}
 #define PIN_SPI_SPCK {PIO_PA14A_SPCK, PIOA, ID_PIOA, PIO_PERIPH_A, PIO_DEFAULT}
@@ -25,9 +25,9 @@
 
 #define PINS_SPI PIN_SPI_MISO, PIN_SPI_MOSI, PIN_SPI_SPCK, PIN_SPI_CS1, PIN_SPI_CS2
 
-#define AIN_CS          1
-#define AIN_BAUD        1000000
-#define AIN_SPICONF     SPI_SCBR(AIN_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_8_BIT|SPI_CSR_CPOL
+#define ADC_CS          1
+#define ADC_BAUD        1000000
+#define ADC_SPICONF     SPI_SCBR(ADC_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_8_BIT|SPI_CSR_CPOL
 #define MEMORY_CS       2
 #define MEMORY_BAUD     1000000
 #define MEMORY_SPICONF  SPI_SCBR(MEMORY_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_16_BIT

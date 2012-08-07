@@ -3,7 +3,7 @@
 
 static unsigned spitrans(unsigned data)
 {
-	SPI_Write(SPI, AIN_CS, data);
+	SPI_Write(SPI, ADC_CS, data);
 	return SPI_Read(SPI);
 }
 
