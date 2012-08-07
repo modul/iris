@@ -1,13 +1,13 @@
 #ifndef _BOARD_
 #define _BOARD_
 
-#include "chip.h"
+#include <chip.h>
+#include <exceptions.h>
 
-#include "system.h"
-#include "exceptions.h"
-#include "syscalls.h" 
+#include "lowlevel/system.h"
+#include "lowlevel/syscalls.h" 
+
 #include "timetick.h"
-
 #include "uart_console.h"
 #include "usb_console.h"
 

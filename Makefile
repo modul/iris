@@ -79,8 +79,9 @@ OOCDFLAGS = -f $(OOCDCFG) -c init
 #		Files
 #-------------------------------------------------------------------------------
 vpath %.a $(LIBPATHS)
-VPATH += . board
+VPATH += . lowlevel board
 
+C_SRC += $(wildcard lowlevel/*.c)
 C_SRC += $(wildcard board/*.c)
 C_SRC += $(wildcard *.c)
 
@@ -129,7 +130,7 @@ debug: target
 
 $(OUTPUT): $(ASM_OBJECTS) $(C_OBJECTS) $(LIBS)
 	@echo [LINKING $@]
-	@$(CC) $(LDFLAGS) -T"board/flash.ld" \
+	@$(CC) $(LDFLAGS) -T"lowlevel/flash.ld" \
 		   -Wl,-Map,$@.map -o $@.elf  $^ 
 	@$(NM) $@.elf >$@.elf.txt
 	@$(OBJCOPY) -O binary $@.elf $@.bin
