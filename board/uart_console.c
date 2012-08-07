@@ -121,9 +121,9 @@ extern int UART_Put( uint8_t c )
         UART_Configure(UART_BAUDRATE, BOARD_MCK);
 
     /* Wait for the transmitter to be ready */
-	started = GetTickCount();
+	started = GetTick();
     while ( (pUart->UART_SR & UART_SR_TXRDY) == 0 ) 
-		if ((GetTickCount() - started) > _xferTimeout)
+		if ((GetTick() - started) > _xferTimeout)
 			return -1;
 
     /* Send character */
@@ -148,9 +148,9 @@ extern int UART_Get( void )
         UART_Configure(UART_BAUDRATE, BOARD_MCK);
 
     /* Wait for the receiver to be ready */
-	started = GetTickCount();
+	started = GetTick();
 	while ( (pUart->UART_SR & UART_SR_RXRDY) == 0 ) 
-		if ((GetTickCount() - started) > _xferTimeout) 
+		if ((GetTick() - started) > _xferTimeout) 
 			return -1;
 
     return pUart->UART_RHR ;
