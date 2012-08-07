@@ -3,7 +3,7 @@
 #include "state.h"
 
 void setup();
-
+extern void flashit();
 int main() 
 {
 	char cmd;
@@ -12,6 +12,9 @@ int main()
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
+	
+	flashit();
+	while(1);
 
 	setup_channel(F, AD_CH0, 0, AD_VREF-1);
 	setup_channel(p, AD_CH1, 0, AD_VREF-1);
