@@ -1,7 +1,7 @@
 # -------------------------------------------------------------
 #         Remo Giermann (giermann@uni-bonn.de) 
 #
-# based on a Makefile by 
+# loosely based on a Makefile by 
 #         ATMEL Microcontroller Software Support 
 #         Copyright (c) 2010, Atmel Corporation
 # -------------------------------------------------------------
