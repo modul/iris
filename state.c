@@ -91,7 +91,7 @@ static void do_abort()
 
 static void do_log()
 {
-	printf("%u %u %u %u %u\n", 
+	printf("%u %u %i %i %i\n", 
 			state, error, 
 			latest(F), latest(p), latest(s));
 }
@@ -110,7 +110,7 @@ static void do_info()
 	printf("AVdd: %umV T: %u.%uC\n", avdd/1000, temp/10, temp%10);
 	for (i=0; i<CHANNELS; i++) {
 		get_channel(i, &num, &gain, &max);
-		printf("%c: ch%u %ux <%u\n", CHANNEL_NAME(i), num, 1<<gain, max);
+		printf("%c: ch%u %ux <%i\n", CHANNEL_NAME(i), num, 1<<gain, max);
 	}
 
 	start_sampling();
@@ -123,20 +123,20 @@ static void do_conf()
 	int args, id, num, gain, max;
 
 	gets(line);
-	args = sscanf(line, "%c %u %u %u", &c, &num, &gain, &max);
+	args = sscanf(line, "%c %u %u %i", &c, &num, &gain, &max);
 	if (args > 0) {
 		id = CHANNEL_ID(c);
 		if (id >= CHANNELS)
 			NOK();
 		else if (args == 1) {
 			get_channel(id, &num, &gain, &max);
-			printf("%c %u %u %u\n", c, num, gain, max);
+			printf("%c %u %u %i\n", c, num, gain, max);
 		}
 		else if (args == 4) {
 			stop_sampling();
 			setup_channel(id, num, gain, max);
 			get_channel(id, &num, &gain, &max);
-			printf("ok %c %u %u %u\n", c, num, gain, max);
+			printf("ok %c %u %u %i\n", c, num, gain, max);
 			start_sampling();
 		}
 		else NOK();

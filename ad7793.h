@@ -31,7 +31,7 @@
 #define AD_RATE_FAST 0x02
 
 /* AD7793 Configuration */
-#define AD_CONF_HI 0x10 // set unipolar; here goes gain selection
+#define AD_CONF_HI 0x00 // set bipolar; here goes gain selection
 #define AD_CONF_LO 0x90 // set buffered, use int. ref.; here goes channel select
 
 #define AD_GAIN_MIN 0

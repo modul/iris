@@ -32,14 +32,16 @@ unsigned ad_status()
 int ad_read()
 {
 	int value = 0;
-	uint64_t result = AD_VREF;
+	long int result = AD_VREF;
 
 	spitrans(AD_READ_DATA);
 	value |= spitrans(AD_DUMMY) << 16;
 	value |= spitrans(AD_DUMMY) << 8;
 	value |= spitrans(AD_DUMMY);
 
-	return (int) ((result*value)>>AD_RESOLUTION);
+	result = result*value;
+	result = (result>>(AD_RESOLUTION-1)) - AD_VREF;
+	return (int) result;
 }
 
 int ad_temperature()
