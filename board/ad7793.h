@@ -45,12 +45,13 @@
 #define AD_CHANNELS 3
 
 
-void ad_start(uint8_t channel, uint8_t gain);
-int ad_read();
-unsigned ad_status();
+unsigned AD7793_status();
 
-int ad_temperature();
-int ad_voltmon();
-int ad_calibrate(uint8_t channel, uint8_t gain);
+void AD7793_start(uint8_t channel, uint8_t gain);
+int AD7793_read();
+
+int AD7793_temperature();
+int AD7793_voltmon();
+int AD7793_calibrate(uint8_t channel, uint8_t gain);
 
 #endif

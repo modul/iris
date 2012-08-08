@@ -75,8 +75,7 @@ static void ConfigureUsbClock(void)
 
 /** 
  * Callback re-implementation
- * Invoked after the USB driver has been initialized. By default, configures
- * the UDP/UDPHS interrupt.
+ * Invoked after the USB driver has been initialized. 
  */
 void USBDCallbacks_Initialized(void)
 {
@@ -85,8 +84,7 @@ void USBDCallbacks_Initialized(void)
 
 /** 
  * Callback re-implementation
- * Invoked when the configuration of the device changes. Parse used endpoints.
- * \param cfgnum New configuration number.
+ * Invoked when the configuration of the device changes. 
  */
 void USBDDriverCallbacks_ConfigurationChanged(unsigned char cfgnum)
 {
@@ -144,7 +142,7 @@ int USBC_isConfigured(void)
 		if (_cfgdone == 0) {
 			TRACE_INFO("USB Device Driver is configured\n");
 			_cfgdone = 1;
-			USBC_StartListening();
+			USBC_startListening();
 		}
 		return 1;
 	}
@@ -166,7 +164,7 @@ int USBC_hasData()
 /*
  * Configure USB serial.
  */
-void USBC_Configure(void)
+void USBC_configure(void)
 {
 	TRACE_INFO("USB Serial Console configuration\n");
 	PIO_InitializeInterrupts(0); // should be called in main() when other IRQs needed
@@ -180,7 +178,7 @@ void USBC_Configure(void)
  * Returns 1 on success,
  * returns 0 otherwise.
  */
-int USBC_StartListening()
+int USBC_startListening()
 {
 	if(CDCDSerialDriver_Read(_rxBuffer, RXBUFFERSIZE, (TransferCallback) UsbReadDone, 0)
 			!= USBD_STATUS_SUCCESS) {
@@ -209,7 +207,7 @@ int USBC_Gets(char *ptr, uint16_t len)
 		memcpy(ptr, _rxBuffer, done);
 		_rxCount -= done;
 		if (_rxCount == 0) // no data left
-			USBC_StartListening();
+			USBC_startListening();
 		else               // re-arrange data left
 			memmove(_rxBuffer, _rxBuffer+done, _rxCount); 
 	}

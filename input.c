@@ -1,7 +1,6 @@
 #include "conf.h"
 #include "input.h"
 #include "state.h"
-#include "ad7793.h"
 
 #define limit(x, min, max) (x < min? min : (x > max? max : x))
 
@@ -24,7 +23,7 @@ void setup_channel(int id, int num, int gain, int max)
 	channel[id].gain = limit(gain, AD_GAIN_MIN, AD_GAIN_MAX);
 	channel[id].max = limit(max, 0, AD_VREF-1);
 
-	if (ad_calibrate(channel[id].num, channel[id].gain)) {
+	if (AD7793_calibrate(channel[id].num, channel[id].gain)) {
 		TRACE_INFO("ADC ch%u calibration successful\n", channel[id].num);
 	}
 	else
@@ -52,7 +51,7 @@ int previous(int id)
 
 void start_sampling()
 {
-	ad_start(channel[next].num, channel[next].gain);
+	AD7793_start(channel[next].num, channel[next].gain);
 	NVIC_EnableIRQ(TC0_IRQn);
 	NVIC_SetPriority(TC0_IRQn, 1);
 }
@@ -66,12 +65,12 @@ void TC0_IrqHandler()
 {
 	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
 
-	if ((status = ad_status()) & AD_STAT_NRDY) {
+	if ((status = AD7793_status()) & AD_STAT_NRDY) {
 		TRACE_DEBUG("ADC ch%u not ready\n", channel[next].num);
 	}
 	else {
 		channel[next].previous = channel[next].latest;
-		channel[next].latest = ad_read();
+		channel[next].latest = AD7793_read();
 
 		if (status & AD_STAT_ERR) {
 			if (channel[next].latest > 0) {
@@ -92,7 +91,7 @@ void TC0_IrqHandler()
 
 		if (++next == CHANNELS)
 			next = 0;
-		ad_start(channel[next].num, channel[next].gain);
+		AD7793_start(channel[next].num, channel[next].gain);
 	}
 
 }

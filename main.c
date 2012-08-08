@@ -1,8 +1,6 @@
-#include <string.h>
 #include "conf.h"
 #include "input.h"
 #include "state.h"
-#include "ad7793.h"
 
 void setup();
 
@@ -42,7 +40,7 @@ int main()
 		}
 
 		/* Display state & error */
-		if (GetTickCount() % 1000 == 0) {
+		if (timetick() % 1000 == 0) {
 			if (!LED_blinking(STATUS))
 				LED_blink(STATUS, get_state());
 			if (!LED_blinking(ALARM))
@@ -88,7 +86,7 @@ void setup()
 	LED_blink(STATUS, FOREVER);
 
 	/* Configure USB */ 
-	USBC_Configure();
+	USBC_configure();
 	TRACE_DEBUG("waiting until USB is fully configured\n");
 	while (!USBC_isConfigured());
 
