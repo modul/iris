@@ -107,7 +107,7 @@ static void do_info()
 
 	avdd = ad_voltmon();
 	temp = ad_temperature();
-	printf("AVdd: %umV T: %u.%uC\n", avdd/1000, temp/10, temp%10);
+	printf("AVdd: %uuV T: %u.%uC\n", avdd, temp/10000, temp%10000);
 	for (i=0; i<CHANNELS; i++) {
 		get_channel(i, &num, &gain, &max);
 		printf("%c: ch%u %ux <%u\n", CHANNEL_NAME(i), num, 1<<gain, max);
