@@ -2,7 +2,7 @@
 #define _AD7793_
 
 #define AD_SETTLE_SLOW 150
-#define AD_SETTLE_FAST  10
+#define AD_SETTLE_FAST  15
 
 #define AD_RESOLUTION 24
 #define AD_VREF 1170000
