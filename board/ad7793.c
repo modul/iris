@@ -31,16 +31,14 @@ unsigned AD7793_status()
 
 int AD7793_read()
 {
-	int value = 0;
-	long int result = AD_VREF;
+	int64_t result = 0;
 
 	spitrans(AD_READ_DATA);
-	value |= spitrans(AD_DUMMY) << 16;
-	value |= spitrans(AD_DUMMY) << 8;
-	value |= spitrans(AD_DUMMY);
+	result |= spitrans(AD_DUMMY) << 16;
+	result |= spitrans(AD_DUMMY) << 8;
+	result |= spitrans(AD_DUMMY);
 
-	result = result*value;
-	result = (result>>(AD_RESOLUTION-1)) - AD_VREF;
+	result = ((result * AD_VREF)>>(AD_RESOLUTION-1)) - AD_VREF;
 	return (int) result;
 }
 
