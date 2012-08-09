@@ -6,6 +6,8 @@
 
 #define AD_RESOLUTION 24
 #define AD_VREF 1170000
+#define AD_VMAX AD_VREF-1
+#define AD_VMIN -AD_VREF
 
 /* AD7793 SPI Commands */
 #define AD_READ_STAT 0x40
@@ -31,7 +33,7 @@
 #define AD_RATE_FAST 0x02
 
 /* AD7793 Configuration */
-#define AD_CONF_HI 0x10 // set unipolar; here goes gain selection
+#define AD_CONF_HI 0x00 // set bipolar; here goes gain selection
 #define AD_CONF_LO 0x90 // set buffered, use int. ref.; here goes channel select
 
 #define AD_GAIN_MIN 0
@@ -45,12 +47,13 @@
 #define AD_CHANNELS 3
 
 
-void ad_start(uint8_t channel, uint8_t gain);
-int ad_read();
-unsigned ad_status();
+unsigned AD7793_status();
 
-int ad_temperature();
-int ad_voltmon();
-int ad_calibrate(uint8_t channel, uint8_t gain);
+void AD7793_start(uint8_t channel, uint8_t gain);
+int AD7793_read();
+
+int AD7793_temperature();
+int AD7793_voltmon();
+int AD7793_calibrate(uint8_t channel, uint8_t gain);
 
 #endif

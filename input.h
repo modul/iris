@@ -9,8 +9,8 @@
 #define CHANNEL_ID(c) (c == 'F'? F : (c == 'p'? p: (c == 's'? s : 0xFF)))
 #define CHANNEL_NAME(i) (i == F? 'F' : (i == p? 'p' : (i == s? 's' : 'x')))
 
-void setup_channel(int id, int num, int gain, int max);
-void get_channel(int id, int *num, int *gain, int *max);
+void setup_channel(int id, int num, int gain, int min, int max);
+void get_channel(int id, int *num, int *gain, int *min, int *max);
 
 void stop_sampling();
 void start_sampling();
