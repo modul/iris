@@ -4,6 +4,7 @@
 
 void setup();
 extern void flashit();
+extern void flashread();
 int main() 
 {
 	char cmd;
@@ -14,7 +15,7 @@ int main()
 	setup();
 	
 	flashit();
-	while(1);
+	flashread();
 
 	setup_channel(F, AD_CH0, 0, AD_VMIN, AD_VMAX);
 	setup_channel(p, AD_CH1, 0, AD_VMIN, AD_VMAX);
