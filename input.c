@@ -21,7 +21,7 @@ void setup_channel(int id, int num, int gain, int max)
 	assert(id < CHANNELS);
 	channel[id].num = limit(num, 0, AD_CHANNELS);
 	channel[id].gain = limit(gain, AD_GAIN_MIN, AD_GAIN_MAX);
-	channel[id].max = limit(max, 0, AD_VREF-1);
+	channel[id].max = limit(max, AD_VMIN, AD_VMAX);
 
 	if (AD7793_calibrate(channel[id].num, channel[id].gain)) {
 		TRACE_INFO("ADC ch%u calibration successful\n", channel[id].num);
@@ -73,7 +73,7 @@ void TC0_IrqHandler()
 		channel[next].latest = AD7793_read();
 
 		if (status & AD_STAT_ERR) {
-			if (channel[next].latest > 0) {
+			if (channel[next].latest == AD_VMAX || channel[next].latest == AD_VMIN) {
 				if (get_error() != EOVL)
 					TRACE_WARNING("ADC overload ch%u\n", channel[next].num);
 				send_error(EOVL);

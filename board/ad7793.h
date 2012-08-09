@@ -6,6 +6,8 @@
 
 #define AD_RESOLUTION 24
 #define AD_VREF 1170000
+#define AD_VMAX AD_VREF-1
+#define AD_VMIN -AD_VREF
 
 /* AD7793 SPI Commands */
 #define AD_READ_STAT 0x40
