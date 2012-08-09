@@ -3,7 +3,7 @@
 
 #include <board.h>
 
-#define TIMER_FREQ 6
+#define TIMER_FREQ 10
 
 /* Configuration Parameters */
 #define PAR_PSET   50

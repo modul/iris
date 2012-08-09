@@ -90,7 +90,7 @@ static void do_abort()
 
 static void do_log()
 {
-	printf("%u %u %u %u %u\n", 
+	printf("%u %u %i %i %i\n", 
 			state, error, 
 			latest(F), latest(p), latest(s));
 }
@@ -99,17 +99,17 @@ static void do_info()
 {
 	int avdd = 0;
 	int temp = 0;
-	int num, gain, max;
+	int num, gain, min, max;
 	int i;
 	
 	stop_sampling();
 
 	avdd = AD7793_voltmon();
 	temp = AD7793_temperature();
-	printf("AVdd: %umV T: %u.%uC\n", avdd/1000, temp/10, temp%10);
+	printf("AVdd: %uuV T: %u.%uC\n", avdd, temp/10000, temp%10000);
 	for (i=0; i<CHANNELS; i++) {
-		get_channel(i, &num, &gain, &max);
-		printf("%c: ch%u %ux <%u\n", CHANNEL_NAME(i), num, 1<<gain, max);
+		get_channel(i, &num, &gain, &min, &max);
+		printf("%c: ch%u %ux >%i <%i\n", CHANNEL_NAME(i), num, 1<<gain, min, max);
 	}
 
 	start_sampling();
@@ -119,23 +119,23 @@ static void do_conf()
 {
 	char c = 0;
 	char line[64];
-	int args, id, num, gain, max;
+	int args, id, num, gain, min, max;
 
 	gets(line);
-	args = sscanf(line, "%c %u %u %u", &c, &num, &gain, &max);
+	args = sscanf(line, "%c %u %u %i %i", &c, &num, &gain, &min, &max);
 	if (args > 0) {
 		id = CHANNEL_ID(c);
 		if (id >= CHANNELS)
 			NOK();
 		else if (args == 1) {
-			get_channel(id, &num, &gain, &max);
-			printf("%c %u %u %u\n", c, num, gain, max);
+			get_channel(id, &num, &gain, &min, &max);
+			printf("%c %u %u %i %i\n", c, num, gain, min, max);
 		}
-		else if (args == 4) {
+		else if (args == 5) {
 			stop_sampling();
-			setup_channel(id, num, gain, max);
-			get_channel(id, &num, &gain, &max);
-			printf("ok %c %u %u %u\n", c, num, gain, max);
+			setup_channel(id, num, gain, min, max);
+			get_channel(id, &num, &gain, &min, &max);
+			printf("ok %c %u %u %i %i\n", c, num, gain, min, max);
 			start_sampling();
 		}
 		else NOK();
