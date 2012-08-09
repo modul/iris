@@ -16,9 +16,9 @@ int main()
 	flashit();
 	while(1);
 
-	setup_channel(F, AD_CH0, 0, AD_VREF-1);
-	setup_channel(p, AD_CH1, 0, AD_VREF-1);
-	setup_channel(s, AD_CH2, 0, AD_VREF-1);
+	setup_channel(F, AD_CH0, 0, AD_VMIN, AD_VMAX);
+	setup_channel(p, AD_CH1, 0, AD_VMIN, AD_VMAX);
+	setup_channel(s, AD_CH2, 0, AD_VMIN, AD_VMAX);
 
 	start_sampling();
 
