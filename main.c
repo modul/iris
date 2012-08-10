@@ -13,31 +13,31 @@ int main()
 
 	setup();
 	conf_load();
-	calibrate(CHANNELS);
-	start_sampling();
+	input_calibrate(CHANNELS);
+	input_start();
 
 	while (1) {
 		/* Check emergency stop */
 		if (PIO_Get(&stop) == 0) 
-			send_error(ESTOP);
+			state_setError(ESTOP);
 
 		/* Parse command line */
 		if (USBC_hasData()) { 
 			cmd = getchar();
 			if (cmd == 's')
-				send_event(EV_START);
+				state_send(EV_START);
 			else if (cmd == 'l')
-				send_event(EV_LOG);
+				state_send(EV_LOG);
 			else if (cmd == 'a')
-				send_event(EV_ABORT);
+				state_send(EV_ABORT);
 			else if (cmd == 'i')
-				send_event(EV_INFO);
+				state_send(EV_INFO);
 			else if (cmd == 'c')
-				send_event(EV_CONF);
+				state_send(EV_CONF);
 			else if (cmd == 'S')
-				send_event(EV_STOR);
+				state_send(EV_STOR);
 			else if (cmd == 'L')
-				send_event(EV_LOAD);
+				state_send(EV_LOAD);
 			
 			else if (cmd == 'h') {
 				printf("s start\n");
@@ -55,9 +55,9 @@ int main()
 		/* Display state & error */
 		if (timetick() % 1000 == 0) {
 			if (!LED_blinking(STATUS))
-				LED_blink(STATUS, get_state());
+				LED_blink(STATUS, state_getState());
 			if (!LED_blinking(ALARM))
-				LED_blink(ALARM, get_error());
+				LED_blink(ALARM, state_getError());
 		}
 	}
 	return 0;
@@ -76,7 +76,7 @@ void setup()
 	PIO_Configure(pins, PIO_LISTSIZE(pins));
 
 	/* Initialize state */
-	reset_state();
+	state_reset();
 
 	/* Enable peripheral clocks */
 	PMC_EnablePeripheral(ID_TC0);

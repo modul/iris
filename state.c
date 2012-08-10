@@ -7,7 +7,6 @@
 
 #define limit(x, min, max) (x < min? min : (x > max? max : x))
 
-
 unsigned state = IDLE;
 unsigned error = EOK;
 
@@ -39,7 +38,7 @@ static struct transition table[NUMSTATES][NUMEVENTS] = {
 /*              action    next                                                                                            */
 };
 
-void send_event(unsigned event)
+void state_send(unsigned event)
 {
 	taction_t action = NULL;
 
@@ -49,25 +48,25 @@ void send_event(unsigned event)
 	state = table[state][event].next_state;
 }
 
-void reset_state()
+void state_reset()
 {
 	do_vent();
 	state = IDLE;
 	error = EOK;
 }
 
-unsigned get_state()
+unsigned state_getState()
 {
 	return state;
 }
 
-void send_error(unsigned err)
+void state_setError(unsigned err)
 {
 	error = err;
-	send_event(EV_ESTOP);
+	state_send(EV_ESTOP);
 }
 
-unsigned get_error()
+unsigned state_getError()
 {
 	return error;
 }
@@ -97,23 +96,23 @@ static void do_log()
 {
 	printf("%u %u %i %i %i\n", 
 			state, error, 
-			latest(F), latest(p), latest(s));
+			input_latest(F), input_latest(p), input_latest(s));
 }
 
 static void do_load()
 {
-	stop_sampling();
+	input_stop();
 	conf_load();
 	OK();
-	calibrate(CHANNELS);
-	start_sampling();
+	input_calibrate(CHANNELS);
+	input_start();
 }
 
 static void do_stor()
 {
-	stop_sampling();
+	input_stop();
 	conf_store();
-	start_sampling();
+	input_start();
 	OK();
 }
 
@@ -124,7 +123,7 @@ static void do_info()
 	int i;
 	struct chan *channel;
 	
-	stop_sampling();
+	input_stop();
 
 	avdd = AD7793_voltmon();
 	temp = AD7793_temperature();
@@ -134,7 +133,7 @@ static void do_info()
 		printf("%c: ch%u %ux >%i <%i\n", CHANNEL_NAME(i), channel->num, 1<<channel->gain, channel->min, channel->max);
 	}
 
-	start_sampling();
+	input_start();
 }
 
 static void do_conf()
@@ -156,7 +155,7 @@ static void do_conf()
 		}
 		else if (args == 5) {
 			int tmp;
-			stop_sampling();
+			input_stop();
 			channel = conf_get(id);
 			tmp = channel->gain;
 
@@ -166,10 +165,10 @@ static void do_conf()
 			channel->max = limit(max, channel->min, AD_VMAX);
 
 			if (tmp != channel->gain)
-				calibrate(id);
+				input_calibrate(id);
 			
 			printf("ok %c %u %u %i %i\n", c, channel->num, channel->gain, channel->min, channel->max);
-			start_sampling();
+			input_start();
 		}
 		else NOK();
 	}

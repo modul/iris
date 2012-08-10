@@ -1,12 +1,12 @@
 #ifndef _INPUT_
 #define _INPUT_
 
-void stop_sampling();
-void start_sampling();
+void input_stop();
+void input_start();
 
-int latest(int id);
-int previous(int id);
+int input_latest(int id);
+int input_previous(int id);
 
-void calibrate(int id);
+void input_calibrate(int id);
 
 #endif

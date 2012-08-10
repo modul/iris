@@ -5,12 +5,11 @@ enum events {EV_CONF, EV_INFO, EV_START, EV_ABORT, EV_LOG, EV_LOAD, EV_STOR, EV_
 enum states {IDLE, READY, SET, GO, ERROR, NUMSTATES};
 enum errors {EOK, EMAX, EMIN, ESTOP, EOVL, NUMERRORS};
 
-void send_event(unsigned ev);
+void state_send(unsigned ev);
+void state_reset();
 
-void reset_state(); 
-unsigned get_state();
-
-void send_error(unsigned err);
-unsigned get_error();
+void state_setError(unsigned err);
+unsigned state_getError();
+unsigned state_getState();
 
 #endif
