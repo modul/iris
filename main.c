@@ -3,8 +3,7 @@
 #include "state.h"
 
 void setup();
-extern void flashit();
-extern void flashread();
+
 int main() 
 {
 	char cmd;
@@ -13,9 +12,6 @@ int main()
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
-	
-	flashit();
-	flashread();
 
 	setup_channel(F, AD_CH0, 0, AD_VMIN, AD_VMAX);
 	setup_channel(p, AD_CH1, 0, AD_VMIN, AD_VMAX);
@@ -41,6 +37,11 @@ int main()
 				send_event(EV_INFO);
 			else if (cmd == 'c')
 				send_event(EV_CONF);
+			
+			else if (cmd == 'w')
+				store_conf(); // testing
+			else if (cmd == 't')
+				load_conf(); // testing
 		}
 
 		/* Display state & error */

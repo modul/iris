@@ -1,43 +1,30 @@
-#include <string.h>
 #include "conf.h"
+#include "flashit.h"
 
-#define LASTPAGE (IFLASH_ADDR + IFLASH_SIZE - IFLASH_PAGE_SIZE)
-#define LASTPAGENO ((LASTPAGE - IFLASH_ADDR)/IFLASH_PAGE_SIZE)
+#define PAGE ((FLASHPAGE - IFLASH_ADDR)/IFLASH_PAGE_SIZE)
+#define FLASHKEY 0x5A << 24
+#define FLASH_UNLOCK EFC_FCMD_CLB|(PAGE << 8)|FLASHKEY
+#define FLASH_WRITE  EFC_FCMD_EWP|(PAGE << 8)|FLASHKEY
 
-struct c {
-	int min;
-	int max;
-} chnls[3] = {{-1, 1}, {0, 1024}, {-1024, 42}};
+static void ram_flashwrite(uint32_t *data, unsigned size) __attribute__((section(".data")));
 
-void flashread()
+static void ram_flashwrite(uint32_t *data, unsigned bytes)
 {
-	uint32_t *data = (uint32_t *) LASTPAGE;
-	
-	TRACE_DEBUG("%i %i %i %i %i %i\n", data[0], data[1], data[2], data[3], data[4], data[5]);
-}
-
-void FlashRam_WriteCommand() __attribute__((section(".data")));
-
-void FlashRam_WriteCommand()
-{
-	const int KEY = 0x5A << 24;
 	uint32_t i = 0;
-	uint32_t *page = (uint32_t *) LASTPAGE;
-	uint32_t *data = (uint32_t *) chnls;
+	uint32_t *destination = (uint32_t *) FLASHPAGE;
 	
-	for (i=0; i < IFLASH_PAGE_SIZE/4; i++) {
-		*page++ = *data++;
-	}
+	for (i=0; i < bytes/4; i++)
+		*destination++ = *data++;
 	
-	EFC->EEFC_FCR = EFC_FCMD_CLB | (LASTPAGENO << 8) | KEY;
+	EFC->EEFC_FCR = FLASH_UNLOCK;
 	while( (EFC->EEFC_FSR & EEFC_FSR_FRDY) == 0);
-	EFC->EEFC_FCR = EFC_FCMD_EWP | (LASTPAGENO << 8) | KEY;
+	EFC->EEFC_FCR = FLASH_WRITE;
 	while( (EFC->EEFC_FSR & EEFC_FSR_FRDY) == 0);
 }
 
-void flashit()
+void flashwrite(uint32_t *data, unsigned bytes)
 {
 	__disable_irq();
-	FlashRam_WriteCommand();
+	ram_flashwrite(data, bytes);
 	__enable_irq();
 }
