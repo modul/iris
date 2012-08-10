@@ -12,7 +12,9 @@ int main()
 	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
 
 	setup();
-	send_event(EV_LOAD);
+	conf_load();
+	calibrate(CHANNELS);
+	start_sampling();
 
 	while (1) {
 		/* Check emergency stop */
