@@ -3,7 +3,7 @@
 #include "conf.h"
 #include "input.h"
 #include "state.h"
-#include "flashit.h"
+#include "flashwrite.h"
 
 #define limit(x, min, max) (x < min? min : (x > max? max : x))
 

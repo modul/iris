@@ -1,5 +1,5 @@
 #include "conf.h"
-#include "flashit.h"
+#include "flashwrite.h"
 
 #define PAGE ((FLASHPAGE - IFLASH_ADDR)/IFLASH_PAGE_SIZE)
 #define FLASHKEY 0x5A << 24
