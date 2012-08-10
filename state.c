@@ -140,7 +140,11 @@ static void do_info()
 	printf("AVdd: %uuV T: %u.%uC\n", avdd, temp/10000, temp%10000);
 	for (i=0; i<CHANNELS; i++) {
 		channel = conf_get(i);
-		printf("%c: ch%u %ux >%i <%i\n", CHANNEL_NAME(i), channel->num, 1<<channel->gain, channel->min, channel->max);
+		printf("%c %s ch%u %ux %i ... %i %iuV\n", 
+			   CHANNEL_NAME(i), ERROR_NAME(error[i]), 
+			   channel->num, 1<<channel->gain,
+			   channel->min, channel->max,
+			   input_latest(i));
 	}
 
 	input_start();
