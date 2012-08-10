@@ -19,7 +19,7 @@ int main()
 	while (1) {
 		/* Check emergency stop */
 		if (PIO_Get(&stop) == 0) 
-			state_setError(ESTOP);
+			state_send(EV_ESTOP);
 
 		/* Parse command line */
 		if (USBC_hasData()) { 

@@ -29,12 +29,12 @@ struct transition {
 };
 
 static struct transition table[NUMSTATES][NUMEVENTS] = {
-/* event/state EV_CONF,          EV_INFO,         EV_START,          EV_ABORT,         EV_LOG,          EV_LOAD,           EV_ESTOR          EV_ESTOP,          EV_PTRIG,          EV_FTRIG       */
-/* IDLE  */  {{do_conf,  IDLE}, {do_info, IDLE},  {do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_load,   IDLE}, {do_stor,  IDLE}, {do_vent, ERROR}, {   NULL,   IDLE}, {   NULL,  IDLE}},
-/* READY */  {{ do_nok, READY}, {do_nok, READY},  {  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, { do_nok,  READY}, { do_nok, READY}, {do_vent, ERROR}, {do_stop,    SET}, {   NULL,  READY}},
-/* SET   */  {{ do_nok,   SET}, {do_nok,   SET},  {do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, { do_nok,    SET}, { do_nok,   SET}, {do_vent, ERROR}, {   NULL,    SET}, {   NULL,  SET}},
-/* GO    */  {{ do_nok,    GO}, {do_nok,    GO},  {  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, { do_nok,     GO}, { do_nok,    GO}, {do_vent, ERROR}, {   NULL,     GO}, {do_vent,  IDLE}},
-/* ERROR */  {{do_conf, ERROR}, {do_info, ERROR}, {  do_nok, ERROR}, {do_abort, IDLE}, {do_log, ERROR}, {do_load,  ERROR}, {do_stor, ERROR}, {do_vent, ERROR}, {   NULL,  ERROR}, {   NULL,  ERROR}},
+/* event/state EV_CONF,          EV_INFO,         EV_START,          EV_ABORT,         EV_LOG,          EV_LOAD,           EV_ESTOR          EV_ESTOP,        EV_PTRIG,          EV_FTRIG       */
+/* IDLE  */  {{do_conf,  IDLE}, {do_info, IDLE},  {do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_load,   IDLE}, {do_stor,  IDLE}, {do_vent, STOP}, {   NULL,   IDLE}, {   NULL,  IDLE}},
+/* READY */  {{ do_nok, READY}, {do_nok, READY},  {  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, { do_nok,  READY}, { do_nok, READY}, {do_vent, STOP}, {do_stop,    SET}, {   NULL,  READY}},
+/* SET   */  {{ do_nok,   SET}, {do_nok,   SET},  {do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, { do_nok,    SET}, { do_nok,   SET}, {do_vent, STOP}, {   NULL,    SET}, {   NULL,  SET}},
+/* GO    */  {{ do_nok,    GO}, {do_nok,    GO},  {  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, { do_nok,     GO}, { do_nok,    GO}, {do_vent, STOP}, {   NULL,     GO}, {do_vent,  IDLE}},
+/* STOP */  {{do_conf,   STOP}, {do_info, STOP},  {  do_nok,  STOP}, {do_abort, IDLE}, {do_log,  STOP}, {do_load,   STOP}, {do_stor,  STOP}, {do_vent, STOP}, {   NULL,   STOP}, {   NULL,  STOP}},
 /*              action    next                                                                                            */
 };
 
@@ -79,7 +79,7 @@ static void do_nok()
 static void do_abort()
 {
 	do_vent();
-	if (state == ERROR) { // acknowledge error
+	if (state == STOP) { // acknowledge error
 		const Pin stop = PIN_STOP;
 		if (PIO_Get(&stop)) {
 			error = EOK;
