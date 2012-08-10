@@ -13,9 +13,7 @@ int main()
 
 	setup();
 
-	setup_channel(F, AD_CH0, 0, AD_VMIN, AD_VMAX);
-	setup_channel(p, AD_CH1, 0, AD_VMIN, AD_VMAX);
-	setup_channel(s, AD_CH2, 0, AD_VMIN, AD_VMAX);
+	send_event(EV_LOAD);
 
 	start_sampling();
 
@@ -37,11 +35,22 @@ int main()
 				send_event(EV_INFO);
 			else if (cmd == 'c')
 				send_event(EV_CONF);
+			else if (cmd == 'S')
+				send_event(EV_STOR);
+			else if (cmd == 'L')
+				send_event(EV_LOAD);
 			
-			else if (cmd == 'w')
-				store_conf(); // testing
-			else if (cmd == 't')
-				load_conf(); // testing
+			else if (cmd == 'h') {
+				printf("s start\n");
+				printf("l log\n");
+				printf("a abort/ack\n");
+				printf("i info\n");
+				printf("c conf\n");
+				printf("S stor config\n");
+				printf("L load config\n");
+				printf("h this help message\n");
+			}
+			
 		}
 
 		/* Display state & error */
