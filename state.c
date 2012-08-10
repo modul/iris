@@ -128,23 +128,37 @@ static void do_stor()
 
 static void do_info()
 {
-	int avdd = 0;
-	int temp = 0;
-	int i;
+	char c;
+	int i, tmp;
 	struct chan *channel;
 	
 	input_stop();
 
-	avdd = AD7793_voltmon();
-	temp = AD7793_temperature();
-	printf("AVdd: %uuV T: %u.%uC\n", avdd, temp/10000, temp%10000);
-	for (i=0; i<CHANNELS; i++) {
-		channel = conf_get(i);
-		printf("%c %s ch%u %ux %i ... %i %iuV\n", 
-			   CHANNEL_NAME(i), ERROR_NAME(error[i]), 
-			   channel->num, 1<<channel->gain,
-			   channel->min, channel->max,
-			   input_latest(i));
+	if ((c = getchar()) == 'V') {
+		tmp = AD7793_voltmon();
+		printf("%u.%uV\n", tmp/1000000, tmp%1000000);
+	}
+	else if (c == 'T') {
+		tmp = AD7793_temperature();
+		printf("%u.%uC\n", tmp/10000, tmp%10000);
+	}
+	else {
+		if ((i = CHANNEL_ID(c)) < CHANNELS)
+			tmp = i+1;
+		else {
+			i = 0;
+			tmp = CHANNELS;
+		}
+		
+		while (i < tmp) {
+			channel = conf_get(i);
+			printf("%c %s ch%u %ux %i ... %i %iuV\n", 
+				CHANNEL_NAME(i), ERROR_NAME(error[i]), 
+				channel->num, 1<<channel->gain,
+				channel->min, channel->max,
+				input_latest(i));
+			i++;
+		}
 	}
 
 	input_start();
