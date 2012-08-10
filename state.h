@@ -8,8 +8,8 @@ enum errors {EOK, EMAX, EMIN, EOVL, NUMERRORS};
 void state_send(unsigned ev);
 void state_reset();
 
-void state_setError(unsigned err);
-unsigned state_getError();
+void state_setError(int id, unsigned err);
+unsigned state_getError(int id);
 unsigned state_getState();
 
 #endif

@@ -57,7 +57,7 @@ int main()
 			if (!LED_blinking(STATUS))
 				LED_blink(STATUS, state_getState());
 			if (!LED_blinking(ALARM))
-				LED_blink(ALARM, state_getError());
+				LED_blink(ALARM, state_getError(CHANNELS));
 		}
 	}
 	return 0;

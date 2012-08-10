@@ -6,9 +6,10 @@
 #define NOK() puts("nok")
 
 #define limit(x, min, max) (x < min? min : (x > max? max : x))
+#define maxerr(a, b, c) (a > b? (a > c? a : c) : (b > c? b : c))
 
 unsigned state = IDLE;
-unsigned error = EOK;
+unsigned error[CHANNELS] = {EOK};
 
 static void do_nok();
 static void do_log();
@@ -52,7 +53,9 @@ void state_reset()
 {
 	do_vent();
 	state = IDLE;
-	error = EOK;
+	error[F] = EOK;
+	error[p] = EOK;
+	error[s] = EOK;
 }
 
 unsigned state_getState()
@@ -60,15 +63,20 @@ unsigned state_getState()
 	return state;
 }
 
-void state_setError(unsigned err)
+void state_setError(int id, unsigned err)
 {
-	error = err;
+	assert(id < CHANNELS);
+	error[id] = err;
 	state_send(EV_ESTOP);
 }
 
-unsigned state_getError()
+unsigned state_getError(int id)
 {
-	return error;
+	assert(id <= CHANNELS);
+	if (id == CHANNELS)
+		return maxerr(error[F], error[p], error[s]);
+	else
+		return error[id];
 }
 
 static void do_nok()
@@ -82,7 +90,9 @@ static void do_abort()
 	if (state == STOP) { // acknowledge error
 		const Pin stop = PIN_STOP;
 		if (PIO_Get(&stop)) {
-			error = EOK;
+			error[F] = EOK;
+			error[p] = EOK;
+			error[s] = EOK;
 			LED_blinkstop(ALARM);
 			LED_off(ALARM);
 			OK();
@@ -94,8 +104,8 @@ static void do_abort()
 
 static void do_log()
 {
-	printf("%u %u %i %i %i\n", 
-			state, error, 
+	printf("%u %u %u %u %i %i %i\n", 
+			state, error[F], error[p], error[s], 
 			input_latest(F), input_latest(p), input_latest(s));
 }
 
