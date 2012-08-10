@@ -49,7 +49,16 @@ void get_channel(int id, int *num, int *gain, int *min, int *max)
 
 void load_conf()
 {
+	int id;
 	memcpy((uint8_t *) channel, (uint8_t *) FLASHPAGE, CHANNELS*sizeof(struct chan));
+	
+	for (id=0; id<CHANNELS; id++) {
+		if (AD7793_calibrate(channel[id].num, channel[id].gain)) {
+			TRACE_INFO("ADC ch%u calibration successful\n", channel[id].num);
+		}
+		else
+			TRACE_ERROR("ADC calibration failed on ch%u\n", channel[id].num);
+	}
 }
 
 void store_conf()
