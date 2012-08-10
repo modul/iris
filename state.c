@@ -153,24 +153,33 @@ static void do_conf()
 			channel = conf_get(id);
 			printf("%c %u %u %i %i\n", c, channel->num, channel->gain, channel->min, channel->max);
 		}
-		else if (args == 5) {
+		else {
 			int tmp;
 			input_stop();
 			channel = conf_get(id);
 			tmp = channel->gain;
 
 			channel->num = limit(num, 0, AD_CHANNELS);
-			channel->gain = limit(gain, AD_GAIN_MIN, AD_GAIN_MAX);
-			channel->min = limit(min, AD_VMIN, AD_VMAX);
-			channel->max = limit(max, channel->min, AD_VMAX);
 
-			if (tmp != channel->gain)
-				input_calibrate(id);
-			
+			if (args >= 3) {
+				channel->gain = limit(gain, AD_GAIN_MIN, AD_GAIN_MAX);
+				if (tmp != channel->gain)
+					input_calibrate(id);
+			}
+			if (args == 4) {
+				max = limit(min, 0, AD_VMAX);
+				min = limit(-min, AD_VMIN, 0);
+				channel->min = min;
+				channel->max = max;
+			}
+			else if (args >= 5) {
+				channel->min = limit(min, AD_VMIN, AD_VMAX);
+				channel->max = limit(max, channel->min, AD_VMAX);
+			}
+
 			printf("ok %c %u %u %i %i\n", c, channel->num, channel->gain, channel->min, channel->max);
 			input_start();
 		}
-		else NOK();
 	}
 	else NOK();
 }
