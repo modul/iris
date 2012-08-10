@@ -1,21 +1,28 @@
+#include <string.h>
+
 #include "conf.h"
 #include "input.h"
 #include "state.h"
+#include "flashit.h"
 
 #define limit(x, min, max) (x < min? min : (x > max? max : x))
 
 static int next = 0;
 
 struct chan {
-	uint8_t num;
-	uint8_t gain;
 	int min;
 	int max;
+	unsigned num:3;
+	unsigned gain:3;
+};
+
+struct read {
 	int latest;
 	int previous;
 };
 
 static struct chan channel[CHANNELS] = {{0}};
+static struct read reading[CHANNELS] = {{0}};
 
 void setup_channel(int id, int num, int gain, int min, int max)
 {
@@ -40,16 +47,35 @@ void get_channel(int id, int *num, int *gain, int *min, int *max)
 	if (max) *max = channel[id].max;
 }
 
+void load_conf()
+{
+	int id;
+	memcpy((uint8_t *) channel, (uint8_t *) FLASHPAGE, CHANNELS*sizeof(struct chan));
+	
+	for (id=0; id<CHANNELS; id++) {
+		if (AD7793_calibrate(channel[id].num, channel[id].gain)) {
+			TRACE_INFO("ADC ch%u calibration successful\n", channel[id].num);
+		}
+		else
+			TRACE_ERROR("ADC calibration failed on ch%u\n", channel[id].num);
+	}
+}
+
+void store_conf()
+{
+	flashwrite((uint32_t *) channel, CHANNELS*sizeof(struct chan));
+}
+
 int latest(int id)
 {
 	assert(id < CHANNELS);
-	return channel[id].latest;
+	return reading[id].latest;
 }
 
 int previous(int id)
 {
 	assert(id < CHANNELS);
-	return channel[id].previous;
+	return reading[id].previous;
 }
 
 void start_sampling()
@@ -72,29 +98,29 @@ void TC0_IrqHandler()
 		TRACE_DEBUG("ADC ch%u not ready\n", channel[next].num);
 	}
 	else {
-		channel[next].previous = channel[next].latest;
-		channel[next].latest = AD7793_read();
+		reading[next].previous = reading[next].latest;
+		reading[next].latest = AD7793_read();
 
 		if (status & AD_STAT_ERR) {
-			if (channel[next].latest == AD_VMAX || channel[next].latest == AD_VMIN) {
+			if (reading[next].latest == AD_VMAX || reading[next].latest == AD_VMIN) {
 				if (get_error() != EOVL)
 					TRACE_WARNING("ADC overload ch%u\n", channel[next].num);
 				send_error(EOVL);
 			}
 		}
-		else if (channel[next].latest >= channel[next].max) {
+		else if (reading[next].latest >= channel[next].max) {
 			if (get_error() != EMAX)
 				TRACE_WARNING("Hit maximum on ch%u (%c)\n", channel[next].num, CHANNEL_NAME(next));
 			send_error(EMAX);
 		}
-		else if (channel[next].latest <= channel[next].min) {
+		else if (reading[next].latest <= channel[next].min) {
 			if (get_error() != EMIN)
 				TRACE_WARNING("Hit minimum on ch%u (%c)\n", channel[next].num, CHANNEL_NAME(next));
 			send_error(EMIN);
 		}
-		else if (next == F && channel[next].latest < channel[next].previous/PAR_PEAK)
+		else if (next == F && reading[next].latest < reading[next].previous/PAR_PEAK)
 			send_event(EV_FTRIG);
-		else if (next == p && channel[next].latest > PAR_PSET)
+		else if (next == p && reading[next].latest > PAR_PSET)
 			send_event(EV_PTRIG);
 
 		if (++next == CHANNELS)

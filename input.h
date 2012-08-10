@@ -1,6 +1,7 @@
 #ifndef _INPUT_
 #define _INPUT_
 
+/* Input Channels */
 #define F 0
 #define p 1
 #define s 2
@@ -11,6 +12,9 @@
 
 void setup_channel(int id, int num, int gain, int min, int max);
 void get_channel(int id, int *num, int *gain, int *min, int *max);
+
+void store_conf();
+void load_conf();
 
 void stop_sampling();
 void start_sampling();
