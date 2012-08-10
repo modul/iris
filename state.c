@@ -155,12 +155,18 @@ static void do_conf()
 			printf("%c %u %u %i %i\n", c, channel->num, channel->gain, channel->min, channel->max);
 		}
 		else if (args == 5) {
+			int tmp;
 			stop_sampling();
 			channel = conf_get(id);
+			tmp = channel->gain;
+
 			channel->num = limit(num, 0, AD_CHANNELS);
 			channel->gain = limit(gain, AD_GAIN_MIN, AD_GAIN_MAX);
 			channel->min = limit(min, AD_VMIN, AD_VMAX);
 			channel->max = limit(max, channel->min, AD_VMAX);
+
+			if (tmp != channel->gain)
+				calibrate(id);
 			
 			printf("ok %c %u %u %i %i\n", c, channel->num, channel->gain, channel->min, channel->max);
 			start_sampling();
