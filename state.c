@@ -5,6 +5,9 @@
 #define OK()  puts("ok")
 #define NOK() puts("nok")
 
+#define limit(x, min, max) (x < min? min : (x > max? max : x))
+
+
 unsigned state = IDLE;
 unsigned error = EOK;
 
@@ -100,15 +103,16 @@ static void do_log()
 static void do_load()
 {
 	stop_sampling();
-	load_conf();
-	start_sampling();
+	conf_load();
 	OK();
+	calibrate(CHANNELS);
+	start_sampling();
 }
 
 static void do_stor()
 {
 	stop_sampling();
-	store_conf();
+	conf_store();
 	start_sampling();
 	OK();
 }
@@ -117,8 +121,8 @@ static void do_info()
 {
 	int avdd = 0;
 	int temp = 0;
-	int num, gain, min, max;
 	int i;
+	struct chan *channel;
 	
 	stop_sampling();
 
@@ -126,8 +130,8 @@ static void do_info()
 	temp = AD7793_temperature();
 	printf("AVdd: %uuV T: %u.%uC\n", avdd, temp/10000, temp%10000);
 	for (i=0; i<CHANNELS; i++) {
-		get_channel(i, &num, &gain, &min, &max);
-		printf("%c: ch%u %ux >%i <%i\n", CHANNEL_NAME(i), num, 1<<gain, min, max);
+		channel = conf_get(i);
+		printf("%c: ch%u %ux >%i <%i\n", CHANNEL_NAME(i), channel->num, 1<<channel->gain, channel->min, channel->max);
 	}
 
 	start_sampling();
@@ -138,6 +142,7 @@ static void do_conf()
 	char c = 0;
 	char line[64];
 	int args, id, num, gain, min, max;
+	struct chan *channel;
 
 	gets(line);
 	args = sscanf(line, "%c %u %u %i %i", &c, &num, &gain, &min, &max);
@@ -146,14 +151,18 @@ static void do_conf()
 		if (id >= CHANNELS)
 			NOK();
 		else if (args == 1) {
-			get_channel(id, &num, &gain, &min, &max);
-			printf("%c %u %u %i %i\n", c, num, gain, min, max);
+			channel = conf_get(id);
+			printf("%c %u %u %i %i\n", c, channel->num, channel->gain, channel->min, channel->max);
 		}
 		else if (args == 5) {
 			stop_sampling();
-			setup_channel(id, num, gain, min, max);
-			get_channel(id, &num, &gain, &min, &max);
-			printf("ok %c %u %u %i %i\n", c, num, gain, min, max);
+			channel = conf_get(id);
+			channel->num = limit(num, 0, AD_CHANNELS);
+			channel->gain = limit(gain, AD_GAIN_MIN, AD_GAIN_MAX);
+			channel->min = limit(min, AD_VMIN, AD_VMAX);
+			channel->max = limit(max, channel->min, AD_VMAX);
+			
+			printf("ok %c %u %u %i %i\n", c, channel->num, channel->gain, channel->min, channel->max);
 			start_sampling();
 		}
 		else NOK();
