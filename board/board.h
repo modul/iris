@@ -10,10 +10,10 @@
 #include "timetick.h"
 #include "uart_console.h"
 #include "usb_console.h"
+#include "ad7793.h"
 
 #define LEDS_ACTIVE_LOW
 #include "led.h"
-#include "ad7793.h"
 
 /* Name of the board */
 #define BOARD_NAME "IRIS"
@@ -76,8 +76,5 @@
 #define ADC_CS          1
 #define ADC_BAUD        1000000
 #define ADC_SPICONF     SPI_SCBR(ADC_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_8_BIT|SPI_CSR_CPOL
-#define MEMORY_CS       2
-#define MEMORY_BAUD     1000000
-#define MEMORY_SPICONF  SPI_SCBR(MEMORY_BAUD, BOARD_MCK)|SPI_CSR_CSAAT|SPI_CSR_BITS_16_BIT
 
 #endif
