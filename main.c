@@ -52,12 +52,10 @@ int main()
 			
 		}
 
-		/* Display state & error */
+		/* Display state */
 		if (timetick() % 1000 == 0) {
 			if (!LED_blinking(STATUS))
 				LED_blink(STATUS, state_getState());
-			if (!LED_blinking(ALARM))
-				LED_blink(ALARM, state_getError(CHANNELS));
 		}
 	}
 	return 0;

@@ -28,13 +28,11 @@
 
 /* LED pins **/
 #define PIN_STATUS {PIO_PA8, PIOA, ID_PIOA, PIO_OUTPUT_1, PIO_DEFAULT}
-#define PIN_ALARM {PIO_PA31, PIOA, ID_PIOA, PIO_OUTPUT_1, PIO_DEFAULT}
-#define PINS_LEDS PIN_STATUS, PIN_ALARM
+#define PINS_LEDS PIN_STATUS
 
 /* Blinker configuration (LED Flashing) **/
-#define LEDS_NUM 2
+#define LEDS_NUM 1
 #define STATUS 0
-#define ALARM 1
 #define BLINK_TIME 100
 
 /* USB configuration **/

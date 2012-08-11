@@ -6,7 +6,6 @@
 #define NOK() puts("nok")
 
 #define limit(x, min, max) (x < min? min : (x > max? max : x))
-#define maxerr(a, b, c) (a > b? (a > c? a : c) : (b > c? b : c))
 
 unsigned state = IDLE;
 unsigned error[CHANNELS] = {EOK};
@@ -72,11 +71,8 @@ void state_setError(int id, unsigned err)
 
 unsigned state_getError(int id)
 {
-	assert(id <= CHANNELS);
-	if (id == CHANNELS)
-		return maxerr(error[F], error[p], error[s]);
-	else
-		return error[id];
+	assert(id < CHANNELS);
+	return error[id];
 }
 
 static void do_nok()
@@ -93,8 +89,6 @@ static void do_abort()
 			error[F] = EOK;
 			error[p] = EOK;
 			error[s] = EOK;
-			LED_blinkstop(ALARM);
-			LED_off(ALARM);
 			OK();
 		}
 		else NOK();
