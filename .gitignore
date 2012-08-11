@@ -1,4 +1,6 @@
 *.swp
+*~
+.directory
 build/
 libchip/build/
 libusb/build/

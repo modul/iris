@@ -1,13 +1,9 @@
 /*
  * USB CDC Serial Console
- * Based on ATMEL's USB CDC Serial example.
+ * Inspired by ATMEL's USB CDC Serial example.
  *
  * (2012) Remo Giermann
  */
-
-/*----------------------------------------------------------------------------
- *         Headers
- *----------------------------------------------------------------------------*/
 
 #include <string.h>
 
@@ -16,22 +12,13 @@
 
 extern const USBDDriverDescriptors cdcdSerialDriverDescriptors;
 
-/*----------------------------------------------------------------------------
- *         Configuration
- *----------------------------------------------------------------------------*/
-
-/** Parameters **/
-
-static volatile uint32_t _rxCount = 0;
-static volatile uint32_t _txCount = 0;
-static volatile uint8_t _cfgdone = 0;
-
-/** Receive Buffer **/
+static volatile unsigned _rxCount = 0;
+static volatile unsigned _txCount = 0;
+static volatile unsigned _cfgdone = 0;
 
 #define RXBUFFERSIZE 256
 static char _rxBuffer[RXBUFFERSIZE];
 
-/** VBus pin instance. */
 static const Pin pinVbus = PIN_USB_VBUS;
 
 /**
@@ -41,12 +28,10 @@ static void ISR_Vbus(const Pin *pPin)
 {
     /* Check current level on VBus */
     if (PIO_Get(&pinVbus)) {
-
         TRACE_INFO("USB VBUS connected\n");
         USBD_Connect();
     }
     else {
-
         TRACE_INFO("USB VBUS disconnected\n");
         USBD_Disconnect();
     }
@@ -58,7 +43,6 @@ static void ISR_Vbus(const Pin *pPin)
  */
 static void VBus_Configure( void )
 {
-
     /* Configure PIO */
     PIO_Configure(&pinVbus, 1);
     PIO_ConfigureIt(&pinVbus, ISR_Vbus);
@@ -66,7 +50,6 @@ static void VBus_Configure( void )
 
     /* Check current level on VBus */
     if (PIO_Get(&pinVbus)) {
-
         /* if VBUS present, force the connect */
         USBD_Connect();
     }
@@ -92,8 +75,7 @@ static void ConfigureUsbClock(void)
 
 /** 
  * Callback re-implementation
- * Invoked after the USB driver has been initialized. By default, configures
- * the UDP/UDPHS interrupt.
+ * Invoked after the USB driver has been initialized. 
  */
 void USBDCallbacks_Initialized(void)
 {
@@ -102,8 +84,7 @@ void USBDCallbacks_Initialized(void)
 
 /** 
  * Callback re-implementation
- * Invoked when the configuration of the device changes. Parse used endpoints.
- * \param cfgnum New configuration number.
+ * Invoked when the configuration of the device changes. 
  */
 void USBDDriverCallbacks_ConfigurationChanged(unsigned char cfgnum)
 {
@@ -151,22 +132,17 @@ static void UsbReadDone(uint32_t unused,
         TRACE_WARNING("USBC Read unsuccessful.\n");
 }
 
-/*----------------------------------------------------------------------------
- *
- *         Exported Functions
- *----------------------------------------------------------------------------*/
-
 /*
  * Return 1 if USB Driver is configured,
  * return 0 otherwise.
  */
-uint8_t USBC_isConfigured(void)
+int USBC_isConfigured(void)
 {
 	if (USBD_GetState() == USBD_STATE_CONFIGURED) {
 		if (_cfgdone == 0) {
 			TRACE_INFO("USB Device Driver is configured\n");
 			_cfgdone = 1;
-			USBC_StartListening();
+			USBC_startListening();
 		}
 		return 1;
 	}
@@ -180,7 +156,7 @@ uint8_t USBC_isConfigured(void)
  * Return 1 if data present, 
  * return 0 otherwise.
  */
-uint8_t USBC_hasData()
+int USBC_hasData()
 {
 	return (_rxCount > 0);
 }
@@ -188,10 +164,10 @@ uint8_t USBC_hasData()
 /*
  * Configure USB serial.
  */
-void USBC_Configure(void)
+void USBC_configure(void)
 {
 	TRACE_INFO("USB Serial Console configuration\n");
-	PIO_InitializeInterrupts(0);
+	PIO_InitializeInterrupts(0); // should be called in main() when other IRQs needed
 	ConfigureUsbClock();
 	CDCDSerialDriver_Initialize(&cdcdSerialDriverDescriptors);
 	VBus_Configure();
@@ -202,7 +178,7 @@ void USBC_Configure(void)
  * Returns 1 on success,
  * returns 0 otherwise.
  */
-uint8_t USBC_StartListening()
+int USBC_startListening()
 {
 	if(CDCDSerialDriver_Read(_rxBuffer, RXBUFFERSIZE, (TransferCallback) UsbReadDone, 0)
 			!= USBD_STATUS_SUCCESS) {
@@ -231,16 +207,17 @@ int USBC_Gets(char *ptr, uint16_t len)
 		memcpy(ptr, _rxBuffer, done);
 		_rxCount -= done;
 		if (_rxCount == 0) // no data left
-			USBC_StartListening();
+			USBC_startListening();
 		else               // re-arrange data left
 			memmove(_rxBuffer, _rxBuffer+done, _rxCount); 
 	}
+	*(ptr+done) = '\0';
 	return done;
 }
 
 /*
  * Write output 
- * returns -1
+ * returns -1 on failure,
  * returns number of bytes that will be sent otherwise.
  */ 
 int USBC_Puts(char *ptr, uint16_t len)

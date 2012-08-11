@@ -1,31 +1,32 @@
 #ifndef _CONF_
 #define _CONF_
 
-#include "board.h"
+#include <board.h>
 
-#define SAMPLING_FREQ 2
-#define TIMER_FREQ (NUM_AIN * SAMPLING_FREQ)
+#define TIMER_FREQ 10
 
-#define RESOLUTION 12
-#define MAX (1 << RESOLUTION)
-#define VREF 3300
+/* Configuration Parameters */
+#define PAR_PSET   50
+#define PAR_PEAK   2
 
-/** ADC input pins **/
-#define PIN_ADC0 {PIO_PA17X1_AD0, PIOA, ID_PIOA, PIO_INPUT, PIO_DEFAULT}
-#define PIN_ADC1 {PIO_PA18X1_AD1, PIOA, ID_PIOA, PIO_INPUT, PIO_DEFAULT}
-#define PIN_ADC2 {PIO_PA19X1_AD2_WKUP9, PIOA, ID_PIOA, PIO_INPUT, PIO_DEFAULT}
-#define PINS_ADCIN PIN_ADC0, PIN_ADC1, PIN_ADC2
+/* Input Channels */
+#define F 0
+#define p 1
+#define s 2
 
-#define AIN0 0
-#define AIN1 1
-#define AIN2 2
-#define NUM_AIN 3
+#define CHANNELS 3
+#define CHANNEL_ID(c) (c == 'F'? F : (c == 'p'? p: (c == 's'? s : 0xFF)))
+#define CHANNEL_NAME(i) (i == F? 'F' : (i == p? 'p' : (i == s? 's' : 'x')))
 
-/** Valve output pins **/
-#define PIN_VAL_vent  {PIO_PA2, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
-#define PIN_VAL_press {PIO_PA3, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
-#define PINS_VAL PIN_VAL_vent, PIN_VAL_press
-#define VAL_vent  0
-#define VAL_press 1
+struct chan {
+	int min;
+	int max;
+	unsigned num:3;
+	unsigned gain:3;
+};
+
+void conf_store();
+void conf_load();
+struct chan * conf_get(int id);
 
 #endif

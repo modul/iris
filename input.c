@@ -1,64 +1,99 @@
 #include <string.h>
+
 #include "conf.h"
+#include "input.h"
+#include "state.h"
+#include "flashwrite.h"
 
-#define mV(b) ((b*VREF)>>RESOLUTION)
+static int next = 0;
 
-static uint16_t next[NUM_AIN] = {0};
+static struct {
+	int latest;
+	int previous;
+} reading[CHANNELS] = {{0}};
 
-uint16_t latest[NUM_AIN] = {0};   // latest ADC input in mV
-uint16_t previous[NUM_AIN] = {0};  // previous ADC input in mV
+void input_stop()
+{
+	NVIC_DisableIRQ(TC0_IRQn);
+}
+
+void input_start()
+{
+	struct chan *channel = conf_get(next);
+	AD7793_start(channel->num, channel->gain);
+	NVIC_EnableIRQ(TC0_IRQn);
+	NVIC_SetPriority(TC0_IRQn, 1);
+}
+
+int input_latest(int id)
+{
+	assert(id < CHANNELS);
+	return reading[id].latest;
+}
+
+int input_previous(int id)
+{
+	assert(id < CHANNELS);
+	return reading[id].previous;
+}
+
+void input_calibrate(int id)
+{
+	struct chan *channel;
+	
+	assert(id <= CHANNELS);
+	
+	if (id == CHANNELS) {
+		int i;
+		for (i=0; i < CHANNELS; i++) {
+			channel = conf_get(i);
+			AD7793_calibrate(channel->num, channel->gain);
+			TRACE_INFO("ADC ch%u calibrated\n", channel->num);
+		}
+	}
+	else {
+		channel = conf_get(id);
+		AD7793_calibrate(channel->num, channel->gain);
+		TRACE_INFO("ADC ch%u calibrated\n", channel->num);
+	}
+}
 
 void TC0_IrqHandler()
 {
 	uint32_t status = TC0->TC_CHANNEL[0].TC_SR;
-	status = status;
+	struct chan *channel = conf_get(next);
 
-	ADC_StartConversion(ADC);
-}
-
-void ADC_IrqHandler()
-{
-    uint32_t status;
-#ifdef TRACE_LEVEL_DEBUG
-	static uint32_t timestamp = 0;
-#endif
-
-    status = ADC_GetStatus(ADC);
-
-	if ((status & ADC_ISR_RXBUFF) == ADC_ISR_RXBUFF) {
-		memcpy(previous, latest, NUM_AIN*2);
-		memcpy(latest, next, NUM_AIN*2);
-		ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
-
-#ifdef TRACE_LEVEL_DEBUG
-		TRACE_DEBUG("[%u] Got samples. 0: %u, 1: %u, 2: %u\n", GetTickCount()-timestamp, latest[0], latest[1], latest[2]);
-		timestamp = GetTickCount();
-#endif
+	if ((status = AD7793_status()) & AD_STAT_NRDY) {
+		TRACE_DEBUG("ADC ch%u not ready\n", channel->num);
 	}
-}
+	else {
+		reading[next].previous = reading[next].latest;
+		reading[next].latest = AD7793_read();
 
-void start_sampling()
-{
-	NVIC_EnableIRQ(ADC_IRQn);
-	NVIC_SetPriority(ADC_IRQn, 0);
-	NVIC_EnableIRQ(TC0_IRQn);
-	NVIC_SetPriority(TC0_IRQn, 1);
+		if (status & AD_STAT_ERR) {
+			if (state_getError(next) != EOVL)
+				TRACE_WARNING("ADC overload ch%u\n", channel->num);
+			state_setError(next, EOVL);
+		}
+		else if (reading[next].latest >= channel->max) {
+			if (state_getError(next) != EMAX)
+				TRACE_WARNING("Hit maximum on ch%u (%c)\n", channel->num, CHANNEL_NAME(next));
+			state_setError(next, EMAX);
+		}
+		else if (reading[next].latest <= channel->min) {
+			if (state_getError(next) != EMIN)
+				TRACE_WARNING("Hit minimum on ch%u (%c)\n", channel->num, CHANNEL_NAME(next));
+			state_setError(next, EMIN);
+		}
+		else if (next == F && reading[next].latest < reading[next].previous/PAR_PEAK)
+			state_send(EV_FTRIG);
+		else if (next == p && reading[next].latest > PAR_PSET)
+			state_send(EV_PTRIG);
 
-	ADC_ReadBuffer(ADC, (int16_t*) next, NUM_AIN);
-}
+		if (++next == CHANNELS)
+			next = 0;
 
-void stop_sampling()
-{
-	NVIC_DisableIRQ(ADC_IRQn);
-	NVIC_DisableIRQ(TC0_IRQn);
-}
-
-uint16_t get_latest_volt(unsigned index) {
-	assert(index < NUM_AIN);
-	return mV(latest[index]);
-}
-
-uint16_t get_previous_volt(unsigned index) {
-	assert(index < NUM_AIN);
-	return mV(previous[index]);
+		channel = conf_get(next);
+		AD7793_start(channel->num, channel->gain);
+	}
 }

@@ -1,10 +1,12 @@
 #ifndef _INPUT_
 #define _INPUT_
 
-void stop_sampling();
-void start_sampling();
+void input_stop();
+void input_start();
 
-uint16_t get_latest_volt(unsigned index);
-uint16_t get_previous_volt(unsigned index);
+int input_latest(int id);
+int input_previous(int id);
+
+void input_calibrate(int id);
 
 #endif
