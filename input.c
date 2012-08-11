@@ -66,21 +66,12 @@ void TC0_IrqHandler()
 		reading[next].previous = reading[next].latest;
 		reading[next].latest = AD7793_read();
 
-		if (status & AD_STAT_ERR) {
-			if (state_getError(next) != EOVL)
-				TRACE_WARNING("ADC overload ch%u\n", channel->num);
+		if (status & AD_STAT_ERR)
 			state_setError(next, EOVL);
-		}
-		else if (reading[next].latest >= channel->max) {
-			if (state_getError(next) != EMAX)
-				TRACE_WARNING("Hit maximum on ch%u (%c)\n", channel->num, CHANNEL_NAME(next));
+		else if (reading[next].latest >= channel->max) 
 			state_setError(next, EMAX);
-		}
-		else if (reading[next].latest <= channel->min) {
-			if (state_getError(next) != EMIN)
-				TRACE_WARNING("Hit minimum on ch%u (%c)\n", channel->num, CHANNEL_NAME(next));
+		else if (reading[next].latest <= channel->min) 
 			state_setError(next, EMIN);
-		}
 		else if (next == F && reading[next].latest < reading[next].previous/PAR_PEAK)
 			state_send(EV_FTRIG);
 		else if (next == p && reading[next].latest > PAR_PSET)
