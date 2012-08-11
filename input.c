@@ -27,22 +27,18 @@ void input_start()
 
 int input_latest(int id)
 {
-	assert(id < CHANNELS);
-	return reading[id].latest;
+	return reading[id%CHANNELS].latest;
 }
 
 int input_previous(int id)
 {
-	assert(id < CHANNELS);
-	return reading[id].previous;
+	return reading[id%CHANNELS].previous;
 }
 
 void input_calibrate(int id)
 {
 	struct chan *channel;
-	
-	assert(id <= CHANNELS);
-	
+
 	if (id == CHANNELS) {
 		int i;
 		for (i=0; i < CHANNELS; i++) {
@@ -52,7 +48,7 @@ void input_calibrate(int id)
 		}
 	}
 	else {
-		channel = conf_get(id);
+		channel = conf_get(id%CHANNELS);
 		AD7793_calibrate(channel->num, channel->gain);
 		TRACE_INFO("ADC ch%u calibrated\n", channel->num);
 	}
