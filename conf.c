@@ -16,6 +16,5 @@ void conf_load()
 
 struct chan * conf_get(int id)
 {
-	assert(id < CHANNELS);
-	return (struct chan *) channel+id;
+	return (struct chan *) channel+(id%CHANNELS);
 }

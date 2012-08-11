@@ -38,7 +38,7 @@ void LED_tgl(uint8_t led)
 	uint32_t mask;
 	Pio *pio;
 
-	assert(led < LEDS_NUM);
+	led %= LEDS_NUM;
 
 	pio  = leds[led].pio;
 	mask = leds[led].mask;
@@ -54,7 +54,7 @@ void LED_set(uint8_t led)
 	Pio *pio;
 	uint32_t mask;
 
-	assert(led < LEDS_NUM);
+	led %= LEDS_NUM;
 
 	pio  = leds[led].pio;
 	mask = leds[led].mask;
@@ -66,7 +66,7 @@ void LED_clr(uint8_t led)
 	Pio *pio;
 	uint32_t mask;
 
-	assert(led < LEDS_NUM);
+	led %= LEDS_NUM;
 
 	pio  = leds[led].pio;
 	mask = leds[led].mask;
@@ -78,7 +78,7 @@ uint8_t LED_get(uint8_t led)
 	Pio *pio;
 	uint32_t mask;
 
-	assert(led < LEDS_NUM);
+	led %= LEDS_NUM;
 
 	pio  = leds[led].pio;
 	mask = leds[led].mask;
