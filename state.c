@@ -7,26 +7,29 @@
 
 #define limit(x, min, max) (x < min? min : (x > max? max : x))
 
-unsigned state = IDLE;
-unsigned error[CHANNELS] = {EOK};
-
-static void do_nok();
-static void do_log();
-static void do_abort();
-static void do_press();
-static void do_vent();
-static void do_stop();
-static void do_info();
-static void do_conf();
-static void do_load();
-static void do_stor();
-
 typedef void (*taction_t)();
 
 struct transition {
 	taction_t action;
 	unsigned next_state;
 };
+
+static volatile unsigned state = IDLE;
+static volatile unsigned error[CHANNELS] = {EOK};
+
+static void do_nok();
+static void do_abort();
+static void do_log();
+
+static void do_load();
+static void do_stor();
+static void do_info();
+static void do_conf();
+
+static void do_press();
+static void do_stop();
+static void do_vent();
+
 
 static struct transition table[NUMSTATES][NUMEVENTS] = {
 /* event/state EV_CONF,          EV_INFO,         EV_START,          EV_ABORT,         EV_LOG,          EV_LOAD,           EV_ESTOR          EV_ESTOP,        EV_PTRIG,          EV_FTRIG       */
