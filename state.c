@@ -32,12 +32,12 @@ static void do_vent();
 
 
 static struct transition table[NUMSTATES][NUMEVENTS] = {
-/* event/state EV_CONF,          EV_INFO,          EV_START,          EV_ABORT,         EV_LOG,          EV_LOAD,           EV_ESTOR          EV_ESTOP,        EV_PTRIG,          EV_FTRIG       */
-/* IDLE  */  {{do_conf,  IDLE}, {do_info,  IDLE},  {do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_load,   IDLE}, {do_stor,  IDLE}, {do_vent, STOP}, {   NULL,   IDLE}, {   NULL,  IDLE}},
-/* READY */  {{ do_nok, READY}, {do_info, READY},  {  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, { do_nok,  READY}, { do_nok, READY}, {do_vent, STOP}, {do_stop,    SET}, {   NULL,  READY}},
-/* SET   */  {{ do_nok,   SET}, {do_info,   SET},  {do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, { do_nok,    SET}, { do_nok,   SET}, {do_vent, STOP}, {   NULL,    SET}, {   NULL,  SET}},
-/* GO    */  {{ do_nok,    GO}, {do_info,    GO},  {  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, { do_nok,     GO}, { do_nok,    GO}, {do_vent, STOP}, {   NULL,     GO}, {do_vent,  IDLE}},
-/* STOP */  {{do_conf,   STOP}, {do_info,  STOP},  {  do_nok,  STOP}, {do_abort, IDLE}, {do_log,  STOP}, {do_load,   STOP}, {do_stor,  STOP}, {do_vent, STOP}, {   NULL,   STOP}, {   NULL,  STOP}},
+/* event/state EV_CONF,          EV_INFO,         EV_START,          EV_ABORT,         EV_LOG,          EV_LOAD,           EV_ESTOR          EV_ESTOP,        EV_PTRIG,          EV_FTRIG       */
+/* IDLE  */  {{do_conf,  IDLE}, {do_info, IDLE},  {do_press, READY}, {do_abort, IDLE}, {do_log,  IDLE}, {do_load,   IDLE}, {do_stor,  IDLE}, {do_vent, STOP}, {   NULL,   IDLE}, {   NULL,  IDLE}},
+/* READY */  {{ do_nok, READY}, {do_nok, READY},  {  do_nok, READY}, {do_abort, IDLE}, {do_log, READY}, { do_nok,  READY}, { do_nok, READY}, {do_vent, STOP}, {do_stop,    SET}, {   NULL,  READY}},
+/* SET   */  {{ do_nok,   SET}, {do_nok,   SET},  {do_press,    GO}, {do_abort, IDLE}, {do_log,   SET}, { do_nok,    SET}, { do_nok,   SET}, {do_vent, STOP}, {   NULL,    SET}, {   NULL,  SET}},
+/* GO    */  {{ do_nok,    GO}, {do_nok,    GO},  {  do_nok,    GO}, {do_abort, IDLE}, {do_log,    GO}, { do_nok,     GO}, { do_nok,    GO}, {do_vent, STOP}, {   NULL,     GO}, {do_vent,  IDLE}},
+/* STOP */  {{do_conf,   STOP}, {do_info, STOP},  {  do_nok,  STOP}, {do_abort, IDLE}, {do_log,  STOP}, {do_load,   STOP}, {do_stor,  STOP}, {do_vent, STOP}, {   NULL,   STOP}, {   NULL,  STOP}},
 /*              action    next                                                                                            */
 };
 
