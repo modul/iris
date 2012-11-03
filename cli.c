@@ -3,6 +3,7 @@
 #include "conf.h"
 #include "state.h"
 #include "input.h"
+#include "version.h"
 
 #define OK()  puts("ok")
 #define NOK() puts("nok")
@@ -16,6 +17,7 @@ static void do_info();
 static void do_conf();
 static void do_store();
 static void do_load();
+static void do_version();
 
 typedef void(*functionPointer)(void);
 
@@ -33,6 +35,7 @@ static const struct command commands[] = {
 	{'c', do_conf,  "conf"},
 	{'S', do_store, "store configuration"},
 	{'L', do_load,  "load configuration"},
+	{'v', do_version, "show version"},
 	{0,  0, ""}
 };
 
@@ -202,4 +205,9 @@ static void do_load()
 		input_start();
 	}
 	else NOK();
+}
+
+static void do_version()
+{
+	printf("%s %s %s\n", BOARD_NAME, VERSION, BUILD_DATE);
 }
