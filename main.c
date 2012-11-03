@@ -1,6 +1,7 @@
 #include "conf.h"
 #include "input.h"
 #include "state.h"
+#include "cli.h"
 
 void setup();
 
@@ -24,32 +25,7 @@ int main()
 		/* Parse command line */
 		if (USBC_hasData()) { 
 			cmd = getchar();
-			if (cmd == 's')
-				state_send(EV_START);
-			else if (cmd == 'l')
-				state_send(EV_LOG);
-			else if (cmd == 'a')
-				state_send(EV_ABORT);
-			else if (cmd == 'i')
-				state_send(EV_INFO);
-			else if (cmd == 'c')
-				state_send(EV_CONF);
-			else if (cmd == 'S')
-				state_send(EV_STOR);
-			else if (cmd == 'L')
-				state_send(EV_LOAD);
-			
-			else if (cmd == 'h') {
-				printf("s start\n");
-				printf("l log\n");
-				printf("a abort/ack\n");
-				printf("i info\n");
-				printf("c conf\n");
-				printf("S stor config\n");
-				printf("L load config\n");
-				printf("h this help message\n");
-			}
-			
+			command_invoke(cmd);
 		}
 
 		/* Display state */
