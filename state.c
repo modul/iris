@@ -59,13 +59,6 @@ unsigned state_getError(int id)
 	return error[id];
 }
 
-unsigned state_isSafe()
-{
-	if (state == STOP || state == IDLE) 
-		return 1;
-	return 0;
-}
-
 static void do_press() 
 {
 	const Pin pr = PIN_VAL_press;

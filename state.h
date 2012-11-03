@@ -13,6 +13,5 @@ void state_reset();
 void state_setError(int id, unsigned err);
 unsigned state_getError(int id);
 unsigned state_getState();
-unsigned state_isSafe();
 
 #endif
