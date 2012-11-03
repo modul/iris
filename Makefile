@@ -22,6 +22,8 @@ OPTFLAGS = -O0 -DDEBUG
 #-------------------------------------------------------------------------------
 #		Tools
 #-------------------------------------------------------------------------------
+GIT_VERSION=`git describe --abbrev=4 --dirty`
+BUILD_DATE=`date "+%D %H:%M"`
 
 # make will handle library linking, so no flags for that
 USBLIB = -lusb_$(SERIE)_rel
@@ -91,7 +93,7 @@ C_OBJECTS = $(addprefix $(OBJ)/, $(patsubst %.c, %.o, $(notdir $(C_SRC))))
 #		Rules
 #-------------------------------------------------------------------------------
 
-.PHONY: all clean target program size dist-clean install
+.PHONY: all clean target program size dist-clean install version
 
 all: target
 
@@ -100,7 +102,7 @@ $(BUILD):
 	-mkdir $(BIN)
 	-mkdir $(OBJ)
 
-target: $(BUILD) $(OUTPUT)
+target: version $(BUILD) $(OUTPUT)
 
 clean:
 	-rm $(OBJ)/*.o $(OBJ)/*.lst 
@@ -127,6 +129,12 @@ debug: target
 	$(OOCD) $(OOCDFLAGS) 2>/dev/null &
 	$(GDB) -ex "target remote localhost:3333" $(OUTPUT).elf
 	killall $(OOCD)
+
+version:
+	-@echo -e "#ifndef _VERSION_H_\n#define _VERSION_H_\n" > $@.h
+	-@echo -e "#define VERSION \"$(GIT_VERSION)\"" >> $@.h
+	-@echo -e "#define BUILD_DATE \"$(BUILD_DATE)\"" >> $@.h
+	-@echo -e "\n#endif" >> $@.h
 
 $(OUTPUT): $(ASM_OBJECTS) $(C_OBJECTS) $(LIBS)
 	@echo [LINKING $@]
