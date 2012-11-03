@@ -4,3 +4,4 @@
 build/
 libchip/build/
 libusb/build/
+version.h

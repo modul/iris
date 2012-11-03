@@ -1,6 +1,7 @@
 #include "conf.h"
 #include "input.h"
 #include "state.h"
+#include "version.h"
 
 void setup();
 
@@ -9,7 +10,7 @@ int main()
 	char cmd;
 	const Pin stop = PIN_STOP;
 
-	TRACE_INFO("Running at %i MHz\n", BOARD_MCK/1000000);
+	TRACE_INFO("IRIS %s %s\nRunning at %i MHz\n", VERSION, BUILD_DATE, BOARD_MCK/1000000);
 
 	setup();
 	conf_load();
@@ -38,6 +39,8 @@ int main()
 				state_send(EV_STOR);
 			else if (cmd == 'L')
 				state_send(EV_LOAD);
+			else if (cmd == 'v')
+				printf("IRIS %s %s\n", VERSION, BUILD_DATE);
 			
 			else if (cmd == 'h') {
 				printf("s start\n");
