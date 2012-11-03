@@ -11,7 +11,7 @@ int main()
 	char cmd;
 	const Pin stop = PIN_STOP;
 
-	TRACE_INFO("IRIS %s %s\nRunning at %i MHz\n", VERSION, BUILD_DATE, BOARD_MCK/1000000);
+	TRACE_INFO("%s %s %s\nRunning at %i MHz\n", BOARD_NAME, VERSION, BUILD_DATE, BOARD_MCK/1000000);
 
 	setup();
 	conf_load();
