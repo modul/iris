@@ -3,7 +3,6 @@
 #include "conf.h"
 #include "input.h"
 #include "state.h"
-#include "flashwrite.h"
 
 static int next = 0;
 

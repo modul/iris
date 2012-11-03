@@ -1,6 +1,5 @@
 #include "conf.h"
 #include "state.h"
-#include "input.h"
 
 static volatile unsigned state = IDLE;
 static volatile unsigned error[CHANNELS] = {EOK};
