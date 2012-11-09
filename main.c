@@ -8,7 +8,6 @@ void setup();
 
 int main() 
 {
-	char cmd;
 	const Pin stop = PIN_STOP;
 
 	TRACE_INFO("%s %s %s\nRunning at %i MHz\n", BOARD_NAME, VERSION, BUILD_DATE, BOARD_MCK/1000000);
@@ -25,7 +24,7 @@ int main()
 
 		/* Parse command line */
 		if (USBC_hasData()) { 
-			cmd = getchar();
+			char cmd = getchar();
 			command_invoke(cmd);
 		}
 
