@@ -1,17 +1,14 @@
 #include "conf.h"
+#include "output.h"
 #include "state.h"
 
 static volatile unsigned state = IDLE;
 static volatile unsigned error[CHANNELS] = {EOK};
 
-static void do_press();
-static void do_stop();
-static void do_vent();
-
 typedef void (*functionPointer)();
 
 static functionPointer actions[NUMSTATES] = {
-	do_vent, do_press, do_stop, do_press, do_vent
+	output_vent, output_press, output_stop, output_press, output_vent
 };
 
 static unsigned transitions[NUMSTATES][NUMEVENTS] = {
@@ -34,7 +31,7 @@ void state_send(unsigned event)
 
 void state_reset()
 {
-	do_vent();
+	output_vent();
 	state = IDLE;
 	error[F] = EOK;
 	error[p] = EOK;
@@ -57,24 +54,4 @@ unsigned state_getError(int id)
 {
 	assert(id < CHANNELS);
 	return error[id];
-}
-
-static void do_press() 
-{
-	const Pin pr = PIN_VAL_press;
-	const Pin vn = PIN_VAL_vent;
-	PIO_Clear(&vn); PIO_Set(&pr);
-}
-
-static void do_stop()
-{
-	const Pin pins[] = {PINS_VAL};
-	PIO_Clear(pins);
-}
-
-static void do_vent()
-{
-	const Pin pr = PIN_VAL_press;
-	const Pin vn = PIN_VAL_vent;
-	PIO_Clear(&pr); PIO_Set(&vn);
 }
