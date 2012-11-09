@@ -6,21 +6,6 @@
 #define NOK() puts("nok")
 
 #define limit(x, min, max) (x < min? min : (x > max? max : x))
-#define maxerr(a, b, c) (a > b? (a > c? a : c) : (b > c? b : c))
-
-unsigned state = IDLE;
-unsigned error[CHANNELS] = {EOK};
-
-static void do_nok();
-static void do_log();
-static void do_abort();
-static void do_press();
-static void do_vent();
-static void do_stop();
-static void do_info();
-static void do_conf();
-static void do_load();
-static void do_stor();
 
 typedef void (*taction_t)();
 
@@ -28,6 +13,23 @@ struct transition {
 	taction_t action;
 	unsigned next_state;
 };
+
+static volatile unsigned state = IDLE;
+static volatile unsigned error[CHANNELS] = {EOK};
+
+static void do_nok();
+static void do_abort();
+static void do_log();
+
+static void do_load();
+static void do_stor();
+static void do_info();
+static void do_conf();
+
+static void do_press();
+static void do_stop();
+static void do_vent();
+
 
 static struct transition table[NUMSTATES][NUMEVENTS] = {
 /* event/state EV_CONF,          EV_INFO,         EV_START,          EV_ABORT,         EV_LOG,          EV_LOAD,           EV_ESTOR          EV_ESTOP,        EV_PTRIG,          EV_FTRIG       */
@@ -72,11 +74,8 @@ void state_setError(int id, unsigned err)
 
 unsigned state_getError(int id)
 {
-	assert(id <= CHANNELS);
-	if (id == CHANNELS)
-		return maxerr(error[F], error[p], error[s]);
-	else
-		return error[id];
+	assert(id < CHANNELS);
+	return error[id];
 }
 
 static void do_nok()
@@ -93,8 +92,6 @@ static void do_abort()
 			error[F] = EOK;
 			error[p] = EOK;
 			error[s] = EOK;
-			LED_blinkstop(ALARM);
-			LED_off(ALARM);
 			OK();
 		}
 		else NOK();
