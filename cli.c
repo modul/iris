@@ -3,6 +3,7 @@
 #include "conf.h"
 #include "state.h"
 #include "input.h"
+#include "output.h"
 #include "version.h"
 
 #define OK()  puts("ok")
@@ -11,9 +12,11 @@
 #define limit(x, min, max) (x < min? min : (x > max? max : x))
 
 static void do_start();
-static void do_log();
 static void do_abort();
+static void do_log();
 static void do_info();
+static void do_up();
+static void do_down();
 static void do_conf();
 static void do_store();
 static void do_load();
@@ -29,10 +32,12 @@ struct command {
 };
 
 static const struct command commands[] = { // available commands and their actions
-	{'s', do_start, "start"},
-	{'l', do_log,   "log"},
+	{'s', do_start, "start/continue"},
 	{'a', do_abort, "abort/acknowledge"},
-	{'i', do_info,  "info"},
+	{'g', do_log,   "get data"},
+	{'i', do_info,  "get info"},
+	{'u', do_up,    "piston up"},
+	{'d', do_down,  "piston down"},
 	{'c', do_conf,  "conf"},
 	{'S', do_store, "store configuration"},
 	{'L', do_load,  "load configuration"},
@@ -41,11 +46,11 @@ static const struct command commands[] = { // available commands and their actio
 };
 
 static  char *cmask[NUMSTATES] = { // allowed commands per state
-	"vlsicSL",   // IDLE
-	"vla",       // READY
-	"vlas",      // SET
-	"vla",       // GO
-	"vlasicSL",  // STOP
+	"vgsicudSL", // IDLE
+	"vga",       // READY
+	"vgas",      // SET
+	"vga",       // GO
+	"vgasicudSL" // STOP
 };
 
 unsigned command_invoke(char c)
@@ -89,13 +94,6 @@ static void do_start()
 	OK();
 }
 
-static void do_log()
-{
-	printf("%u %u %u %u %i %i %i\n", 
-			state_getState(), state_getError(F), state_getError(p), state_getError(s), 
-			input_latest(F), input_latest(p), input_latest(s));
-}
-
 static void do_abort()
 {
 	if (state_getState() == STOP) { // acknowledge error
@@ -110,6 +108,13 @@ static void do_abort()
 		state_reset();
 		OK();
 	}
+}
+
+static void do_log()
+{
+	printf("%u %u %u %u %i %i %i\n", 
+			state_getState(), state_getError(F), state_getError(p), state_getError(s), 
+			input_latest(F), input_latest(p), input_latest(s));
 }
 
 static void do_info()
@@ -146,6 +151,20 @@ static void do_info()
 		}
 	}
 	input_start();
+}
+
+static void do_up()
+{
+	output_vent();
+	wait(500);
+	output_stop();
+}
+
+static void do_down()
+{
+	output_press();
+	wait(500);
+	output_stop();
 }
 
 static void do_conf()
