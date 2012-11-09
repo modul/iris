@@ -18,6 +18,7 @@ static void do_conf();
 static void do_store();
 static void do_load();
 static void do_version();
+static void do_help();
 
 typedef void(*functionPointer)(void);
 
@@ -49,15 +50,8 @@ static  char *cmask[NUMSTATES] = { // allowed commands per state
 
 unsigned command_invoke(char c)
 {
-	int i=0; 
-	struct command cmd = commands[0];
-
 	if (c == 'h' || c == '?' || c == 'H') {
-		while (cmd.action) {
-			printf("%c -- %s\n", cmd.c, cmd.help);
-			cmd = commands[++i];
-		}
-		printf("H, h, ? -- display this help text\n");
+		do_help();
 		return 1;
 	}
 	else if (strchr(cmask[state_getState()], c) == 0) {
@@ -65,6 +59,8 @@ unsigned command_invoke(char c)
 		return 0;
 	}
 	else {
+		int i = 0; 
+		struct command cmd = commands[0];
 		while (cmd.action) {
 			if (cmd.c == c) {
 				cmd.action();
@@ -74,6 +70,17 @@ unsigned command_invoke(char c)
 		}
 	}
 	return 0;
+}
+
+static void do_help()
+{
+	int i=0; 
+	struct command cmd = commands[0];
+
+	while (cmd.action) {
+		printf("%c -- %s\n", cmd.c, cmd.help);
+		cmd = commands[++i];
+	}
 }
 
 static void do_start()
