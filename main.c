@@ -42,7 +42,7 @@ void setup()
 {
 	uint32_t div;
 	uint32_t tcclks;
-	const Pin pins[] = {PINS_VAL, PIN_STOP, PINS_SPI};
+	const Pin pins[] = {PINS_OUT, PIN_STOP, PINS_SPI};
 
 	WDT_Disable(WDT);
 	TimeTick_Configure(BOARD_MCK);
