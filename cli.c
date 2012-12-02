@@ -130,11 +130,12 @@ static void do_info()
 		printf("%u.%uC\n", tmp/10000, tmp%10000);
 	}
 	else {
-		if ((i = CHANNEL_ID(c)) < CHANNELS)
+		if ((i = CHANNEL_ID(c)) < CHANNELS) // print only one channel
 			tmp = i+1;
-		else {
+		else { // print all channels and state information
 			i = 0;
 			tmp = CHANNELS;
+			printf("%s\n", STATE_NAME(state_getState()));
 		}
 		
 		while (i < tmp) {
