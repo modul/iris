@@ -55,9 +55,9 @@
 #define TRACE_OUT stderr
 
 /* Valve output pins */
-#define PIN_VAL_vent  {PIO_PA2, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
-#define PIN_VAL_press {PIO_PA3, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
-#define PINS_VAL PIN_VAL_vent, PIN_VAL_press
+#define PIN_OUT_pump  {PIO_PA2, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
+#define PIN_OUT_valv {PIO_PA3, PIOA, ID_PIOA, PIO_OUTPUT_0, PIO_DEFAULT}
+#define PINS_OUT PIN_OUT_pump, PIN_OUT_valv
 
 /* Input pins */
 #define PIN_STOP {PIO_PA0, PIOA, ID_PIOA, PIO_INPUT, PIO_PULLUP}
