@@ -23,7 +23,7 @@ OPTFLAGS = -O0 -DDEBUG
 #		Tools
 #-------------------------------------------------------------------------------
 GIT_VERSION=`git describe --abbrev=4 --dirty`
-BUILD_DATE=`date "+%D %H:%M"`
+BUILD_DATE=`date "+%y/%m/%d %H:%M"`
 
 # make will handle library linking, so no flags for that
 USBLIB = -lusb_$(SERIE)_rel
