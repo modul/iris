@@ -24,8 +24,9 @@ int main()
 
 		/* Parse command line */
 		if (USBC_hasData()) { 
-			char cmd = getchar();
-			command_invoke(cmd);
+			char cmd;
+			if ((cmd=getchar()) > '\r')
+				command_invoke(cmd);
 		}
 
 		/* Display state */

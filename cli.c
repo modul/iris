@@ -32,49 +32,46 @@ struct command {
 };
 
 static const struct command commands[] = { // available commands and their actions
-	{'s', do_start, "start/continue"},
-	{'a', do_abort, "abort/acknowledge"},
-	{'g', do_log,   "get data"},
-	{'i', do_info,  "get info"},
-	{'u', do_up,    "piston up"},
-	{'d', do_down,  "piston down"},
-	{'c', do_conf,  "conf"},
-	{'S', do_store, "store configuration"},
-	{'L', do_load,  "load configuration"},
+	{'s', do_start,   "start/continue"},
+	{'a', do_abort,   "abort/acknowledge"},
+	{'g', do_log,     "get data"},
+	{'i', do_info,    "get info"},
+	{'u', do_up,      "piston up"},
+	{'d', do_down,    "piston down"},
+	{'c', do_conf,    "configure"},
+	{'S', do_store,   "store configuration"},
+	{'L', do_load,    "load configuration"},
 	{'v', do_version, "show version"},
+	{'?', do_help,    "show help"},
 	{0,  0, ""}
 };
 
 static  char *cmask[NUMSTATES] = { // allowed commands per state
-	"vgsicudSL", // IDLE
-	"vga",       // READY
-	"vgas",      // SET
-	"vga",       // GO
-	"vgasicudSL" // STOP
+	"?vgsicudSL", // IDLE
+	"?vga",       // READY
+	"?vgas",      // SET
+	"?vga",       // GO
+	"?vgasicudSL" // STOP
 };
 
-unsigned command_invoke(char c)
+void command_invoke(char c)
 {
-	if (c == 'h' || c == '?' || c == 'H') {
-		do_help();
-		return 1;
-	}
-	else if (strchr(cmask[state_getState()], c) == 0) {
+	if (strchr(cmask[state_getState()], c) == 0) {
+		TRACE_DEBUG("CLI: command %c not accepted\n", c);
 		NOK();
-		return 0;
 	}
 	else {
 		int i = 0; 
 		struct command cmd = commands[0];
 		while (cmd.action) {
-			if (cmd.c == c) {
+			if (cmd.c == c)  {
+				TRACE_DEBUG("CLI: command %c invoked\n", c);
 				cmd.action();
-				return 1;
+				break;
 			}
 			cmd = commands[++i];
 		}
 	}
-	return 0;
 }
 
 static void do_help()
