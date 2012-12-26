@@ -47,7 +47,7 @@ void state_setError(int id, unsigned err)
 {
 	assert(id < CHANNELS);
 	error[id] = err;
-	state_send(EV_ESTOP);
+	state_send(EV_ERROR);
 }
 
 unsigned state_getError(int id)

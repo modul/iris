@@ -4,7 +4,7 @@
 #define ERROR_NAME(e) (e == EOK? "ok" : (e == EMIN? "min" : (e == EMAX? "max" : (e == EOVL? "ovl" : "?"))))
 #define STATE_NAME(s) (s == IDLE? "IDLE" : (s == READY? "READY" : (s == SET? "SET" : (s == GO? "GO" : (s == STOP? "STOP" : "?")))))
 
-enum events {EV_ESTOP, EV_START, EV_PTRIG, EV_FTRIG, EV_ABORT, NUMEVENTS};
+enum events {EV_ERROR, EV_START, EV_CONTACT, EV_BREAK, EV_ABORT, NUMEVENTS};
 enum states {IDLE, READY, SET, GO, STOP, NUMSTATES};
 enum errors {EOK, EMIN, EMAX, EOVL, NUMERRORS};
 
