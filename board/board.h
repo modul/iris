@@ -49,8 +49,8 @@
 
 /* standard IO configuration for syscalls **/
 #define read_stdin   USBC_Gets
-#define write_stdout USBC_Puts
 #define read_stderr  UART_Gets // For convenience, stderr is used both ways
+#define write_stdout USBC_Puts
 #define write_stderr UART_Puts
 #define TRACE_OUT stderr
 
