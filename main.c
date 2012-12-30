@@ -1,16 +1,16 @@
 #include "conf.h"
 #include "input.h"
 #include "state.h"
+#include "cli.h"
 #include "version.h"
 
 void setup();
 
 int main() 
 {
-	char cmd;
 	const Pin stop = PIN_STOP;
 
-	TRACE_INFO("IRIS %s %s\nRunning at %i MHz\n", VERSION, BUILD_DATE, BOARD_MCK/1000000);
+	TRACE_INFO("%s %s %s %i MHz\n", BOARD_NAME, VERSION, BUILD_DATE, BOARD_MCK/1000000);
 
 	setup();
 	conf_load();
@@ -20,39 +20,13 @@ int main()
 	while (1) {
 		/* Check emergency stop */
 		if (PIO_Get(&stop) == 0) 
-			state_send(EV_ESTOP);
+			state_send(EV_ERROR);
 
 		/* Parse command line */
 		if (USBC_hasData()) { 
-			cmd = getchar();
-			if (cmd == 's')
-				state_send(EV_START);
-			else if (cmd == 'l')
-				state_send(EV_LOG);
-			else if (cmd == 'a')
-				state_send(EV_ABORT);
-			else if (cmd == 'i')
-				state_send(EV_INFO);
-			else if (cmd == 'c')
-				state_send(EV_CONF);
-			else if (cmd == 'S')
-				state_send(EV_STOR);
-			else if (cmd == 'L')
-				state_send(EV_LOAD);
-			else if (cmd == 'v')
-				printf("IRIS %s %s\n", VERSION, BUILD_DATE);
-			
-			else if (cmd == 'h') {
-				printf("s start\n");
-				printf("l log\n");
-				printf("a abort/ack\n");
-				printf("i info\n");
-				printf("c conf\n");
-				printf("S stor config\n");
-				printf("L load config\n");
-				printf("h this help message\n");
-			}
-			
+			char cmd;
+			if ((cmd=getchar()) > '\r')
+				command_invoke(cmd);
 		}
 
 		/* Display state */
@@ -68,7 +42,7 @@ void setup()
 {
 	uint32_t div;
 	uint32_t tcclks;
-	const Pin pins[] = {PINS_VAL, PIN_STOP, PINS_SPI};
+	const Pin pins[] = {PINS_OUT, PIN_STOP, PINS_SPI};
 
 	WDT_Disable(WDT);
 	TimeTick_Configure(BOARD_MCK);

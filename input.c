@@ -3,7 +3,6 @@
 #include "conf.h"
 #include "input.h"
 #include "state.h"
-#include "flashwrite.h"
 
 static int next = 0;
 
@@ -73,9 +72,9 @@ void TC0_IrqHandler()
 		else if (reading[next].latest <= channel->min) 
 			state_setError(next, EMIN);
 		else if (next == F && reading[next].latest < reading[next].previous/PAR_PEAK)
-			state_send(EV_FTRIG);
+			state_send(EV_BREAK);
 		else if (next == p && reading[next].latest > PAR_PSET)
-			state_send(EV_PTRIG);
+			state_send(EV_CONTACT);
 
 		if (++next == CHANNELS)
 			next = 0;

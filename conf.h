@@ -6,7 +6,7 @@
 #define TIMER_FREQ 10
 
 /* Configuration Parameters */
-#define PAR_PSET   50
+#define PAR_PSET   16700 // 1bar with 10x attenuation
 #define PAR_PEAK   2
 
 /* Input Channels */
